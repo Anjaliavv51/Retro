@@ -33,7 +33,7 @@
 
 <h3><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/tarikul-islam-anik/main/assets/images/Writing%20Hand%20Light%20Skin%20Tone.png" alt="Rocket" width="40" height="40" />Project Overview</h3>
 <p style="font-family:var(--ff-philosopher);">
-It is an online platform which enables you to get information about your nearest hospitals and healthcare facilities including important information like blood availablity in emergency, Opds and beds availability in your nearest/desired hospitals. It aims to address health-related issues. It is a one-stop destination for all your medical needs.</p>
+It is an online platform which enables you to get information about your vintage collections and to place the orders.</p>
 
 ## <p style="font-family:var(--ff-philosopher);font-size:3rem;text-align:center;"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/High%20Voltage.png" alt="High Voltage" width="40" height="40" />Tech Stack</p>
 <center><a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5"><img src="https://img.shields.io/badge/HTML5-E34F26.svg?style=for-the-badge&logo=HTML5&logoColor=white"></a>
@@ -47,7 +47,7 @@ It is an online platform which enables you to get information about your nearest
 
 ### Setup and Installation
 
-<p style="font-family:var(--ff-philosopher);">To contribute to the RAPIDOC-HEALTHCARE-WEBSITE repository, follow these steps:</p>
+<p style="font-family:var(--ff-philosopher);">To contribute to the Retro repository, follow these steps:</p>
 
 1. **Fork the Repository:**
    Click on the "Fork" button on the repository's GitHub page to create a copy of the repository in your GitHub account.
@@ -88,45 +88,13 @@ It is an online platform which enables you to get information about your nearest
    Go to the GitHub page of your forked repository. You should see a prompt to create a pull request (PR). Click on it, compare the changes, and create the PR.
 <br><br>
 
-<h1 align="center"><b>To run the project locally in your System<b></h1>
 
-1. _Fork the Repository:_
-   Click on the "Fork" button on the repository's GitHub page to create a copy of the repository in your GitHub account.
-
-   ![Screenshot (127)](https://github.com/Anjaliavv51/Retro/assets/105973197/164ba1a7-d42e-4e4d-acbd-4bc81cf387d5)
-
-   ![Screenshot (128)](https://github.com/Anjaliavv51/Retro/assets/105973197/21a47905-69ee-448f-a5c0-71ceb3c694d5)
-
-2. _Clone the repository:_
-   Clone the forked repository to your local machine using the following command in your terminal.
-
-   ```bash
-   git clone https://github.com/<your-github-username>/RAPIDOC-HEALTHCARE-WEBSITE
-   ```
-   ![Screenshot (129)](https://github.com/Anjaliavv51/Retro/assets/105973197/88249cc4-5849-4472-b190-9d9bad2bb236)
-
-
-3. _Open the project in VS Code:_
-   Click on the open with vs code button , to make changes to the code using the text editor.
-
-   ![Screenshot (130)](https://github.com/Anjaliavv51/Retro/assets/105973197/10644887-eb4b-4471-98bb-26e0b1bb4f07)
-
-4. _Clearly read the contribution guidelines:_
-   Make sure to follow the guidelines to contribute to this project.
-
-   ![Screenshot (131)](https://github.com/Anjaliavv51/Retro/assets/105973197/342c364a-d908-48a4-9d12-2552298d87bd)
-
-5. _Find the Index.html file:_
-   Right click the file mentioned and click on "Open with Live Server"
-   This will redirect to the web-browser and load the landing page of the project
-
-   ![Screenshot (133)](https://github.com/Anjaliavv51/Retro/assets/105973197/62044e1a-a644-467d-98ac-eabfac970ed9)
 
 <p style="font-family:var(--ff-philosopher);font-size:3rem;text-align:center;"><b>Contributing
 
 <p style="font-family:var(--ff-philosopher);font-size:2rem;">We love your input! We want to make contributing to this project as easy and transparent as possible, whether it's.
 
-To contribute to the RAPIDOC-HEALTHCARE-WEBSITE repository using GitHub Desktop, follow these steps:
+To contribute to the Retro repository using GitHub Desktop, follow these steps:
 
 <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/tarikul-islam-anik/main/assets/images/Lady%20Beetle.png" width="20" height="20"> Reporting a bug<br>
 <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/tarikul-islam-anik/main/assets/images/Man%20Technologist%20Light%20Skin%20Tone.png" width="20" height="20" >Discussing the current state of the code<br>
