@@ -211,15 +211,30 @@ s
 .service .box a {
   text-decoration: none;
   background-color: brown;
-  border: 2px solid rgb(224, 224, 252);
-  padding: 5px;
-  border-radius: 10px;
+  border: 3px solid rgb(224, 224, 252);
+  padding: 15px;
+  border-radius: 15px;
+  display: inline-block;
+  color: white;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
 }
 
 .service .box a:hover {
-  background-color: hsl(304, 14%, 46%);
+  background-color: #ffffff;
+  color: brown !important;
+  border: 3px solid rgb(165, 42, 42);
+  transform: scale(1.01); 
+  animation: bounce 0.5s;
 }
 
+@keyframes bounce {
+  0%, 100% {
+      transform: translateY(0); 
+  }
+  50% {
+      transform: translateY(-10px); 
+  }
+}
 .menu_container {
   background-color: hsl(20, 43%,93%);
   padding: 100px 0px 100px 0px;
