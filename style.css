@@ -569,32 +569,6 @@ textarea {
   color: #dddddd;
 }
 
-@media screen and (max-width: 620px) {
-  .intro_container h1 {
-    font-size: 3.5rem;
-  }
-  
-  .menu_items .items {
-    max-width: fit-content;
-    max-height: fit-content;
-  }
-
-  #about .box {
-    padding: 30px;
-    margin: 2px 10px;
-    margin-bottom: 25px;
-    /* float: left; */
-  }
-  .pages {
-    height: fit-content;
-    padding: 8px;
-  }
-
-  .foot-panel2 {
-    padding: 20px;
-  }
-}
-
 /* responsiveness  */
 
 @media screen and (max-width: 1120px) {
@@ -680,6 +654,16 @@ textarea {
     padding: 3px;
     margin: 4px;
     width: 90%;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .intro_container h1 {
+    font-size: 3.5rem;
+  }
+  .intro_container img {
+    height: fit-content;
+    width: fit-content;
   }
 }
 
@@ -806,23 +790,6 @@ padding-left:2px;
 .contact_us>h1 {
   max-width: 60%;
   text-align: center;
-}
-
-@media (max-width: 800px) {
-  .contact_info {
-    width: 80vw;
-  }
-
-  .contact_us {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 440px) {
-  .intro_container {
-    height: fit-content;
-    padding: 100px;
-  }
 }
 
 .navbar li:hover a {
