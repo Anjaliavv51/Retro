@@ -1,7 +1,8 @@
 <div align = "center">
 
 <div align="center">
-
+ 
+ introduction
 # <p>Retro</p>
 
 <i><p>An online platform providing items of vintage collections!</p></i>
@@ -32,8 +33,18 @@
 <h3> <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Rocket.png" alt="Rocket" width="40" height="40" />Featured In</h3>
 
 <h3><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/tarikul-islam-anik/main/assets/images/Writing%20Hand%20Light%20Skin%20Tone.png" alt="Rocket" width="40" height="40" />Project Overview</h3>
+
+**Retro** is an e-commerce platform that celebrates vintage collections. Whether you're looking for antique treasures, classic fashion, or retro-themed decor, Retro allows users to explore, get detailed information about vintage items, and make purchases effortlessly.
+
+### Key Features
+- **Vintage Collection Categories**: Browse through a variety of vintage items including fashion, home decor, electronics, and more.
+- **Detailed Item Information**: Learn about the history, origin, and significance of each item.
+- **Secure Online Orders**: Place orders safely with our trusted payment gateway integration.
+- **User Reviews & Ratings**: Check out what others think before making a purchase.
+
 <p style="font-family:var(--ff-philosopher);">
 It is an online platform which enables you to get information about your vintage collections and to place the orders.</p>
+
 
 ## <p style="font-family:var(--ff-philosopher);font-size:3rem;text-align:center;"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/High%20Voltage.png" alt="High Voltage" width="40" height="40" />Tech Stack</p>
 <center><a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5"><img src="https://img.shields.io/badge/HTML5-E34F26.svg?style=for-the-badge&logo=HTML5&logoColor=white"></a>
