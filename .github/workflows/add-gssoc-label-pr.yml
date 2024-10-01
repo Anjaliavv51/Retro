@@ -42,4 +42,5 @@ jobs:
 
             if (prBody.includes('GSSOCEXTD')) {
               await addLabel('GSSOCEXTD');
+              await addLabel('Hacktoberfest Accepted')
             }

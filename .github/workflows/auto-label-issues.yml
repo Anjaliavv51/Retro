@@ -24,7 +24,7 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: issue.number,
-              labels: ['GSSOCEXTD']
+              labels: ['GSSOCEXTD','Hacktoberfest Accepted']
             });
             const addLabel = async (label) => {
               await github.rest.issues.addLabels({
