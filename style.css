@@ -569,7 +569,11 @@ textarea {
   color: #dddddd;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 620px) {
+  .intro_container h1 {
+    font-size: 3.5rem;
+  }
+  
   .menu_items .items {
     max-width: fit-content;
     max-height: fit-content;
@@ -642,7 +646,7 @@ textarea {
   }
 }
 
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 800px) {
   .app_download {
     padding: 40px 20px;
     height: fit-content;
