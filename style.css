@@ -547,8 +547,8 @@ textarea {
 }
 
 #butt {
-  background-color: rgb(66, 16, 16);
-  color: white;
+  background-color: brown;
+  color: white !important;
   padding: 3px;
   border: 1px solid white;
   border-radius: 4px;
@@ -790,7 +790,8 @@ padding-left:2px;
 }
 
 .contact_submit {
-  width: 30%;
+  width: 20%;
+
   color: white;
   background: linear-gradient(135deg,
       blue,
