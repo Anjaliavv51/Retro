@@ -125,6 +125,38 @@ body{
     text-shadow: 0px 0px 2px rgb(90, 90, 90), 0px 0px 5px gray;
     transform: translateZ(-40px);
 }
+.error-message {
+            color: red;
+            font-size: 0.9em;
+        }
+        .textfield {
+            margin-bottom: 15px;
+        }
+        /* Tooltip styling */
+        .tooltip {
+            position: relative;
+            display: inline-block;
+        }
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 200px;
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            border-radius: 5px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%; /* Position above the input field */
+            left: 50%;
+            margin-left: -100px; /* Center the tooltip */
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
 .area .way:nth-child(1):hover ~ .box{transform: rotateX(-20deg) rotateY(20deg);}
 .area .way:nth-child(2):hover ~ .box{transform: rotateX(-20deg) rotateY(0deg);}
 .area .way:nth-child(3):hover ~ .box{transform: rotateX(-20deg) rotateY(-20deg);}
@@ -186,15 +218,21 @@ body{
               <div class="textfield">
                 <label for="name" style="font-family:var(--ff-philosopher);color: black;">Name</label>
                 <input type="text" id="name" name="name" placeholder="Enter your name" required style="font-family: var(--ff-philosopher);">
+                <span id="name-error" class="error-message"></span>
               </div>
               <div class="textfield">
                 <label for="email" style="font-family: var(--ff-philosopher);color: black;">Email / User Name</label>
                 <input type="email" id="email" name="email" placeholder="Enter Email / UserName" required style="font-family: var(--ff-philosopher);">
+                <span id="email-error" class="error-message"></span>
               </div>
-              <div class="textfield">
-                <label for="password" style="font-family:var(--ff-philosopher);color: black;">Password</label>
-                <input type="password" id="password" name="password" placeholder="Enter Password" required style="font-family: var(--ff-philosopher);">
-              </div>
+
+              <div class="textfield tooltip">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter Password" title="Special characters are not allowed" required>
+                <span id="password-error" class="error-message"></span>
+                <span class="tooltiptext">Special characters such as /[<>"/]/  are not allowed</span>
+            </div>
+
               <button type="submit" class="btn-login" style="font-family: var(--ff-philosopher);color: #ddd;">Register</button>
             </form>
             <button id="google-login" style="font-family: var(--ff-philosopher);color: #ddd;">Signup with Google</button>

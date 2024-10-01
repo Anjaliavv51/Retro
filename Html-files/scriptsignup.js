@@ -34,7 +34,33 @@ document.getElementById("signup-form").addEventListener("submit", function(event
   const email = document.getElementById("email").value;
   const password = document.getElementById("password").value;
 
-  if (validateForm(name, email, password)) {
+  const nameError = document.getElementById("name-error");
+  const passwordError = document.getElementById("password-error");
+  const emailError = document.getElementById("email-error");
+
+  // Reset error messages
+  nameError.textContent = "";
+  passwordError.textContent = "";
+  emailError.textContent = "";
+
+  // Regex to prevent <, >, ", or / in the name and password
+  const spcharexp = /[<>"/]/;
+
+  let valid = true; // A flag to track validation status
+
+  // Name validation
+  if (spcharexp.test(name)) {
+      nameError.textContent = "Name cannot contain <, >, \", or /";
+      valid = false;
+  }
+
+  // Password validation
+  if (spcharexp.test(password)) {
+      passwordError.textContent = "Password cannot contain <, >, \", or /";
+      valid = false;
+  }
+
+  if (validateForm(name, email, password) && valid) {
     // Simulate a successful registration (Replace with actual Firebase sign-up logic)
     console.log("Form submitted with:", { name, email, password });
     window.location.href = "../Html-files/signed.html";
