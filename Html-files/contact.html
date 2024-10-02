@@ -179,6 +179,32 @@ body{
         transform: rotate(360deg);
     }
 }
+.social-icons a {
+  font-size: 1.2rem;
+  padding: 8px;
+  margin: 15px;
+  text-decoration: none;
+  color: rgb(18, 16, 16);
+}
+
+.social-icons a:hover {
+  color: brown;
+  background-color: hsl(22, 76%, 85%);
+  border-radius: 10px;
+  transform: scale(1.5); /* Increase size */
+  transition: transform 0.3s ease; /* Smooth transition effect */
+}
+.fa-brands.fa-facebook:hover {
+  color: #3B5998 !important;
+}
+
+.fa-brands.fa-instagram:hover {
+  color: #D62976 !important;
+}
+
+.fa-brands.fa-x-twitter:hover {
+  color: #181e20 !important;
+}
         </style>
 </head>
 
@@ -320,23 +346,23 @@ body{
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label for="form_name" style="font-family: Georgia;">Email *</label>
+                                                    <label for="form_email" style="font-family: Georgia;">Email *</label>
                                                     <div class="input-icon">
                                                         <i class="fas fa-envelope"></i>
-                                                        <input id="form_name" type="text" name="name" class="form-control"
-                                                            placeholder="     Please enter your Email*" required="required"
-                                                            data-error="  Valid Email is required.">
+                                                        <input id="form_email" type="email" name="email" class="form-control"
+                                                            placeholder="Please enter your email*" required="required"
+                                                            data-error="Valid Email is required.">
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label for="form_lastname" style="font-family: Georgia;">Phone number *</label>
+                                                    <label for="form_phone" style="font-family: Georgia;">Phone number *</label>
                                                     <div class="input-icon">
                                                         <i class="fas fa-phone"></i>
-                                                        <input id="form_lastname" type="text" name="surname" class="form-control"
-                                                            placeholder="     Please enter your Phone number*" required="required"
-                                                            data-error="  Phone number is required.">
+                                                        <input id="form_phone" type="tel" name="phone" class="form-control"
+                                                            placeholder="Please enter your phone number*" required="required"
+                                                            pattern="[0-9]{10}" data-error="Phone number is required.">
                                                     </div>
                                                 </div>
                                             </div>
@@ -347,8 +373,8 @@ body{
                                                     <label for="form_email" style="font-family: Georgia;">Name *</label>
                                                     <div class="input-icon">
                                                         <i class="fas fa-user"></i>
-                                                        <input id="form_email" type="email" name="email" class="form-control"
-                                                            placeholder="     Please enter your Name*" required="required"
+                                                        <input id="form_name" type="text" name="name" class="form-control"
+                                                            placeholder="Please enter your name*" required="required"
                                                             data-error="Name is required.">
                                                     </div>
                                                 </div>
@@ -460,12 +486,12 @@ body{
 
         <div class="foot_panel4" style="color: black;background-color: transparent;">
             <div class="pages" style="background-color: transparent;">
-                <h4>Follow Us</h4>
+                <h3>Follow Us</h3>
 
                 <div class="social-icons">
-                    <i class="fa-brands fa-facebook"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <i class="fa-brands fa-instagram"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <i class="fa-brands fa-x-twitter"></i>
+                    <a class="fa-brands fa-facebook" href="https://facebook.com" style="color: hsl(203, 30%, 26%);"></a>
+                    <a class="fa-brands fa-instagram" href="https://instagram.com" style="color: hsl(203, 30%, 26%);"></a>
+                    <a class="fa-brands fa-x-twitter" href="https://twitter.com" style="color: hsl(203, 30%, 26%);"></a>
                 </div>
                 <p style="margin-bottom:0;">Stay connected with us on social media for the latest updates, recipes, and foodie adventures.
                 </p>
