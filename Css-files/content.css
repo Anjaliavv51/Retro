@@ -499,6 +499,10 @@ textarea {
         transform: translateY(-50%); /* Center the icon vertically */
         color: gray; /* Icon color */
     }
+.input-icon input, 
+.input-icon textarea {
+      padding-left: 30px; /* Adjust padding to create space for the icon */
+}
 
 #contactForm {
   display: flex;
