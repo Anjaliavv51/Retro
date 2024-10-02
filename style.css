@@ -571,17 +571,19 @@ textarea {
   color: brown;
   background-color: hsl(20, 43%, 93%);
   border-radius: 50px;
+  transform: scale(1.5); /* Increase size */
+  transition: transform 0.3s ease; /* Smooth transition effect */
 }
-.fa-facebook:hover {
-  color:#3B5998;
-}
-
-.fa-instagram:hover {
-  color:#D62976;
+.fa-brands.fa-facebook:hover {
+  color: #3B5998 !important;
 }
 
-.fa-twitter:hover {
-  color:#00B6F1;
+.fa-brands.fa-instagram:hover {
+  color: #D62976 !important;
+}
+
+.fa-brands.fa-x-twitter:hover {
+  color: #181e20 !important;
 }
 
 #author {
