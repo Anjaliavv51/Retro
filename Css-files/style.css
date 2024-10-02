@@ -498,16 +498,16 @@ textarea {
 }
 
 #butt{
-    background-color:rgb(66, 16, 16);
-    color: white;
-    padding: 3px;
-    border: 1px solid white ;
-    border-radius: 4px;
-    cursor: pointer;
+background-color: brown;
+  color: white !important;
+  padding: 3px;
+  border: 1px solid white;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 #butt:hover {
-    background-color:rgb(196, 89, 89);
+    background-color: rgb(196, 89, 89);
 }
 
 .social-icons a{
