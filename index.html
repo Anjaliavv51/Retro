@@ -249,6 +249,40 @@ body{
 .moon{
     transform-origin: 50% 100%;
 }
+#about {
+    display: flex;
+    flex-wrap: wrap; /* Allow the boxes to wrap to the next line if necessary */
+    gap: 15px; /* Space between the boxes */
+    justify-content: center; /* Center align the items */
+}
+
+.box {
+    background-color:transparent; /* Optional for better visual separation */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column; /* Stack the content vertically */
+    align-items: center;
+    max-width: 370px; /* Ensures all boxes have the same maximum width */
+    flex: 1 1 300px; /* Allow the boxes to grow and shrink */
+    min-width: 250px; /* Set a minimum width for responsiveness */
+}
+
+.box img {
+    object-fit: cover; /* Ensures the image fills its container without distortion */
+}
+
+.box h2 {
+    margin-top: 10px;
+    text-align: center;
+}
+
+p {
+    flex-grow: 1; /* Ensures the paragraph grows to fill the available space */
+    text-align: center;
+}
+
 </style>
 </head>
 <body>
@@ -356,21 +390,21 @@ new google.translate.TranslateElement({
         <!-- changes -->
         <div id="about">
             <div class="box">
-                <img src="Images/biryani.jpg" style="height: 300px;border-radius: 10px;" alt="">
+                <img src="Images/biryani.jpg" style=" height: 330px; width: 300px;border-radius: 10px;" alt="">
                 <h2 class="h-secondary center" style="font-family:var(--ff-philosopher);">60s-style florals</h2>
                 <p class="center" style="font-family: var(--ff-poppins);">From aromatic curries to flavorful biryanis, our menu showcases the diversity and
                     deliciousness of Indian cuisine.
                 </p>
             </div>
             <div class="box">
-                <img src="Images/plate_mismatch.jpg" alt="" style="border-radius: 10px;height: 350px;width: 350px;">
+                <img src="Images/plate_mismatch.jpg" alt="" style="border-radius: 10px;height: 330px; width: 300px;">
                 <h2 class="h-secondary center" style="font-family: var(--ff-philosopher)">60's Dinning Items</h2>
                 <p class="center" style="font-family: var(--ff-poppins);">
                     Elegant porcelain plates with delicate floral patterns. Each plate tells a story of family gatherings and special occasions.
                 </p>
             </div>
             <div class="box">
-                <img src="Images/candy.jpg" alt="Images/bon-bon candy.jpg" style="border-radius: 10px;height: 200px;">
+                <img src="Images/candy.jpg" alt="Images/bon-bon candy.jpg" style="border-radius: 10px;height: 330px;width: 300px;">
                 <h2 class="h-secondary center" style="font-family: var(--ff-philosopher);">Whimsical Nostalgia: The Stardust Bonbon</h2>
                 <p class="center" style="font-family: var(--ff-poppins);">The Stardust Bonbon, a sweet relic from an era when the universe was our playground.</p>
             </div>
