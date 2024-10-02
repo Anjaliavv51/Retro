@@ -37,11 +37,23 @@ body {
   
 }
 
+/* Base navbar styles */
 .navbar {
   padding: 8px 10px;
+  overflow: hidden;
+  transition: background-color 0.3s ease; /* Smooth transition for background */
 }
+
+/* Styles for scrolled navbar */
+.navbar.scrolled {
+  background-color: rgba(20, 43, 93, 0.8); /* Darker background when scrolled */
+}
+
+/* Unchanged navbar styles */
 .navbar ul {
   overflow: hidden;
+  margin: 0; /* Reset margin */
+  padding: 0; /* Reset padding */
 }
 
 .navbar li {
@@ -49,6 +61,7 @@ body {
   list-style: none;
   padding: 8px 20px;
 }
+
 .navbar li:hover {
   opacity: 0.7;
 }
@@ -59,19 +72,20 @@ body {
   color: white;
   font-size: 1.3rem;
 }
+
 .navbarbg {
-  padding: 8px 0;
-  background-color: hsl(20, 43%, 93%); 
-  text-align: left; 
+  padding: 7px 0;
+  background-color: hsl(20, 43%, 93%);
+  text-align: left;
 }
 
 .navbarbg ul {
-  display: inline-block; 
-  padding-left: 0; 
+  display: inline-block;
+  padding-left: 0;
 }
 
 .navbarbg li {
-  display: inline-block; 
+  display: inline-block;
   list-style: none;
   margin: 0 10px;
 }
@@ -80,7 +94,7 @@ body {
   padding: 5px 10px;
   text-decoration: none;
   color: white;
-  font-size: 1.3rem;
+  font-size: 1rem;
 }
 
 .navbarbg li:hover {
