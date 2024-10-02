@@ -18,8 +18,8 @@ body {
   padding: 8px 0px;
   height: 60px;
   transition: background-color 0.3s, backdrop-filter 0.3s, color 0.3s;
-  backdrop-filter: blur(10px) brightness(150%);
-  background-color: rgba(229, 171, 171, 0.5);
+  backdrop-filter: blur(60px) brightness(150%);
+  background-color: rgba(210, 97, 97, 0.5);
   position: fixed;
   top: 0;
   left: 0;
@@ -27,6 +27,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 10px;
 }
 
 
