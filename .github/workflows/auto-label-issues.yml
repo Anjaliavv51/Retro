@@ -1,0 +1,47 @@
+name: Auto Label Issue
+
+on:
+  issues:
+    types: [opened, reopened, edited]
+
+jobs:
+  label_issue:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - name: Label Issue
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{secrets.GITHUB_TOKEN}}
+          script: |
+            const issue = context.payload.issue;
+            const issueBody = issue.body ? issue.body.toLowerCase() : '';
+            const issueTitle = issue.title.toLowerCase();
+            
+            // Add gssoc label to all issues
+            await github.rest.issues.addLabels({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: issue.number,
+              labels: ['GSSOCEXTD','hacktoberfest-accepted']
+            });
+            const addLabel = async (label) => {
+              await github.rest.issues.addLabels({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issue.number,
+                labels: [label]
+              });
+            };
+            if (issueBody.includes('documentation') || issueTitle.includes('doc') || issueBody.includes('readme')) {
+              await addLabel('documentation');
+            }
+            
+            if (issueBody.includes('feature') || issueBody.includes('enhancement') || issueTitle.includes('add') || issueTitle.includes('implement')) {
+              await addLabel('enhancement');
+
+            }
+            if (issueBody.includes('bug') || issueBody.includes('fix') || issueTitle.includes('fix') || issueTitle.includes('resolve')) {
+              await addLabel('bug');
+            }
