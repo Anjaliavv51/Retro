@@ -162,6 +162,34 @@ body{
             --ff-philosopher: "Philosopher", sans-serif;
             --ff-poppins: "Poppins", sans-serif;
         }
+
+  .social-icons a {
+  font-size: 1.2rem;
+  padding: 8px;
+  margin: 15px;
+  text-decoration: none;
+  color: rgb(17, 13, 13);
+}
+.social-icons a:hover {
+  color: brown;
+  background-color: hsl(22, 76%, 85%);
+  border-radius: 10px;
+  transform: scale(1.5); /* Increase size */
+  transition: transform 0.3s ease; /* Smooth transition effect */
+}
+.fa-brands.fa-facebook:hover {
+  color: #3B5998 !important;
+}
+
+.fa-brands.fa-instagram:hover {
+  color: #D62976 !important;
+}
+
+.fa-brands.fa-x-twitter:hover {
+  color: #151b1c !important;
+}
+
+        
     </style>
 </head>
 
@@ -295,15 +323,19 @@ body{
 
         <div class="foot_panel4">
             <div class="pages">
-                <h4 style="color: hsl(203, 30%,26%);font-family: var(--ff-philosopher);">Follow Us</h4>
+                <h4 style="color: hsl(203, 30%,26%);font-family: var(--ff-philosopher); margin: 10px;">Follow Us</h4>
                 <div class="social-icons">
-                    <i class="fa-brands fa-facebook"></i>&nbsp;&nbsp;&nbsp;&nbsp;
-                    <i class="fa-brands fa-instagram"></i>&nbsp;&nbsp;&nbsp;&nbsp;
-                    <i class="fa-brands fa-x-twitter"></i>&nbsp;&nbsp;&nbsp;
-                </div>
-                <p style="margin-bottom:0;font-family: var(--ff-philosopher);">Stay connected with us on social media for the latest updates, latest collection, and vintage adventures.
+
+
+                  <a class="fa-brands fa-facebook" href="https://facebook.com" style="color: hsl(203, 30%, 26%);"></a>
+                  <a class="fa-brands fa-instagram" href="https://instagram.com" style="color: hsl(203, 30%, 26%);"></a>
+                  <a class="fa-brands fa-x-twitter" href="https://twitter.com" style="color: hsl(203, 30%, 26%);"></a>
+
+              </div>
+              
+                <p style="margin-bottom:0;font-family: var(--ff-philosopher); margin-top: 5px;">Stay connected with us on social media for the latest updates, latest collection, and vintage adventures.
                 </p>
-                <div class="copyright" style="color: hsl(203, 30%,26%);font-family: var(--ff-philosopher);">
+                <div class="copyright" style="color: hsl(203, 30%,26%);font-family: var(--ff-philosopher); margin: 3px;">
                     © 2024 Retro . All Rights Reserved. | <span id="author">
                         <a href="https://www.linkedin.com" target="_blank" style="text-decoration: none;">Retro Team</a>
                     </span><p></p>

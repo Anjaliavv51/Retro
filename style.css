@@ -564,13 +564,13 @@ textarea {
   padding: 8px;
   margin: 15px;
   text-decoration: none;
-  color: white;
+  color: rgb(18, 16, 16);
 }
 
 .social-icons a:hover {
   color: brown;
-  background-color: hsl(20, 43%, 93%);
-  border-radius: 50px;
+  background-color: hsl(22, 76%, 85%);
+  border-radius: 10px;
   transform: scale(1.5); /* Increase size */
   transition: transform 0.3s ease; /* Smooth transition effect */
 }
