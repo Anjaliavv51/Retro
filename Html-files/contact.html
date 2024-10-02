@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 
     <link
         href="https://fonts.googleapis.com/css2?family=Fuggles&family=Mooli&family=Oswald:wght@600&family=Roboto:wght@100;300&display=swap"
@@ -208,7 +210,7 @@ body{
       <div id="loader"></div>
     </div>
 
-    <header style="font-family: Georgia;background-color: transparent;border-bottom-left-radius: 50px;border-bottom-right-radius: 50px;">
+    <header style=" font-family: Tahoma, sans-serif;background-color: transparent;border-bottom-left-radius: 50px;border-bottom-right-radius: 50px;">
         <nav class="navbarbg" style="background-color: transparent;border-bottom-left-radius: 100px;border-bottom-right-radius: 100px;">
             <ul id="header-items">
                 <li><a href="../index.html" style="color: hsl(203, 30%, 26%);">Home</a></li>
@@ -221,6 +223,7 @@ body{
 
     </header>
 
+    <!--
     <section>
         <div class="position-relative overflow-hidden p-0 m-0" style="background-color: transparent;">
             <div class="container">
@@ -228,7 +231,7 @@ body{
                     <h1 style="color: hsl(357, 82%,35%);font-family: Georgia;">Feel Free to Contact Us!</h1>
                 </div>
 
-                <div class="row ">
+                <div class="row">
                     <div class="col-lg-7 mx-auto">
                         <div class="card mt-2 mx-auto mb-5 p-4" style="background-color: transparent;">
                             <div class="card-body" style="background-color: transparent;">
@@ -289,15 +292,110 @@ body{
                         </div>
                     </div>
                 </div>
-            </div>
+            </div><br><br>
             <center>
             <iframe id="if" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3686.5834653201455!2d88.40974607348684!3d22.482281936278092!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0273c5411d60d7%3A0x5d6e57763593194b!2sSouthern%20Cleve%20Housing%2C%2012%2C%20Bhagat%20Singh%20Nagar%2C%20Nayabad%2C%20Kolkata%2C%20West%20Bengal%20700150!5e0!3m2!1sen!2sin!4v1716043813992!5m2!1sen!2sin" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </center>
           <br><br><br>
           </div>
     </section>
+    -->
+  
 
-    <footer style="font-family: Garamond;">
+<section>
+    <div class="position-relative overflow-hidden p-0 m-0" style="background-color: transparent;">
+        <div class="container">
+            <div class="text-center mt-5">
+                <h1 style="color: hsl(357, 53%, 8%); font-family: Tahoma, sans-serif;">Feel Free to Contact Us!</h1>
+            </div><br>
+
+            <div class="row mt-4">
+                <!-- Left Column - Contact Form -->
+                <div class="col-lg-7">
+                    <div class="card mt-2 mx-auto mb-5 p-4" style="background-color: transparent; border: 1px solid black;">
+                        <div class="card-body" style="background-color: transparent;">
+                            <div class="container" style="background-color: transparent;">
+                                <form action="/submit" method="POST" id="contact-form" role="form">
+                                    <div class="controls">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="form_name" style="font-family: Georgia;">Email *</label>
+                                                    <div class="input-icon">
+                                                        <i class="fas fa-envelope"></i>
+                                                        <input id="form_name" type="text" name="name" class="form-control"
+                                                            placeholder="     Please enter your Email*" required="required"
+                                                            data-error="  Valid Email is required.">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="form_lastname" style="font-family: Georgia;">Phone number *</label>
+                                                    <div class="input-icon">
+                                                        <i class="fas fa-phone"></i>
+                                                        <input id="form_lastname" type="text" name="surname" class="form-control"
+                                                            placeholder="     Please enter your Phone number*" required="required"
+                                                            data-error="  Phone number is required.">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><br>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="form_email" style="font-family: Georgia;">Name *</label>
+                                                    <div class="input-icon">
+                                                        <i class="fas fa-user"></i>
+                                                        <input id="form_email" type="email" name="email" class="form-control"
+                                                            placeholder="     Please enter your Name*" required="required"
+                                                            data-error="Name is required.">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><br>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label for="form_message" style="font-family: Georgia;">Message *</label>
+                                                        
+                                                        <textarea id="form_message" name="message" class="form-control"
+                                                            placeholder="Write your message here." style="height: 100px; width: 100%;" required="required"
+                                                            data-error="Please, leave us a message."></textarea>
+                                                    
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 mt-4">
+                                                <input type="submit" class="btn btn-send btn-block"
+                                                    value="Send Message" style="background-color: #ffc1b7; color: black; text-align: center; font-family: var(--ff-philosopher); padding: 12px 0; border: 1px solid black; height: 50px; line-height: 26px;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column - Google Maps -->
+                <div class="col-lg-5">
+                    <center>
+                        <iframe id="if" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3686.5834653201455!2d88.40974607348684!3d22.482281936278092!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0273c5411d60d7%3A0x5d6e57763593194b!2sSouthern%20Cleve%20Housing%2C%2012%2C%20Bhagat%20Singh%20Nagar%2C%20Nayabad%2C%20Kolkata%2C%20West%20Bengal%20700150!5e0!3m2!1sen!2sin!4v1716043813992!5m2!1sen!2sin"
+                            style="border:0; width: 100%; height: 440px;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </center>
+                </div>
+            </div>
+        </div>
+        <br><br>
+    </div>
+</section>
+
+<!-- CSS for the icon and border radius -->
+
+
+
+    <footer style="font-family: Tahoma, sans-serif;">
 
 
         <div class="foot-panel2">
@@ -332,14 +430,30 @@ body{
             </ul>
 
 
-            <form id="contactForm" style="color: black;">
-                <h3>Contact Us!</h3>
-                <input type="email" id="email" name="email" placeholder="Your Email" required>
+<div class="row">
+    <div class="col-12">
+        <form id="contactForm" style="color: black; border: 1px solid #ccc; padding: 20px; border-radius: 10px; width: 100%; margin-left: auto;">
+            <h3 style="text-align: center; margin-bottom: 15px;">Contact Us!</h3>
+            
+            <!-- Email Input -->
+            <input type="email" id="email" name="email" placeholder="Your Email" required 
+                   style="width: 100%; padding: 8px; margin-bottom: 10px; border-radius: 10px; border: 1px solid #ccc;">
 
-                <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+            <!-- Message Textarea -->
+            <textarea id="message" name="message" placeholder="Your Message" required 
+                      style="width: 100%; padding: 8px; margin-bottom: 10px; border-radius: 10px; border: 1px solid #ccc; height: 100px;"></textarea>
 
-                <button id="butt" type="submit">Send Message</button>
-            </form>
+            <!-- Submit Button -->
+            <button id="butt" type="submit" 
+                    style="width: 100%; padding: 10px; background-color: #ffe1d9; color: black; border: 1px; border-radius: 10px; cursor: pointer;">
+                Send Message
+            </button>
+        </form>
+    </div>
+</div>
+
+
+
 
         </div>
 
