@@ -512,6 +512,7 @@ ul a {
     justify-content: center;
 } */
 
+
 .foot_panel4 {
   background-color: rgb(66, 16, 16);
   color: white;
@@ -568,24 +569,43 @@ textarea {
   padding: 8px;
   margin: 15px;
   text-decoration: none;
-  color: white;
+  /* color: white; */
 }
 
 .social-icons a:hover {
-  color: brown;
-  background-color: hsl(20, 43%, 93%);
+  /* color: brown; */
+  /* background-color: hsl(20, 43%, 93%); */
   border-radius: 50px;
 }
+
+.fa-facebook{
+  color: hsl(203, 30%, 26%);
+}
+
 .fa-facebook:hover {
+  
+  transform: scale(1.5);
   color:#3B5998;
+  transition: transform 0.2s ease, color 0.2s ease;
 }
 
+.fa-instagram{
+  color: hsl(203, 30%, 26%);
+}
 .fa-instagram:hover {
+  transform: scale(1.5);
   color:#D62976;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+.fa-x-twitter{
+  color: hsl(203, 30%, 26%);
+
 }
 
-.fa-twitter:hover {
-  color:#00B6F1;
+.fa-x-twitter:hover {
+  color:black;
+  transform: scale(1.5);
+  transition: transform 0.2s ease, color 0.2s ease;
 }
 
 #author {
