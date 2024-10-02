@@ -555,3 +555,14 @@ textarea {
 .js-display-added-to-cart {
   opacity: 1;
 }
+
+#badgeCount {
+  position: relative;
+  top: -7px;
+  right: 1px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 5px 8px;
+  font-size: 12px;
+}

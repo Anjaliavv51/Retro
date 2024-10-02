@@ -239,7 +239,7 @@ border-radius: 100px;
                     <li style="font-family: var(--ff-philosopher);"><a href="menu.html" style="color: black;">About</a></li>
                     <li style="font-family: var(--ff-philosopher);"><a href="services.html" style="color: black;">Services</a></li>
                     <li style="font-family: var(--ff-philosopher);"><a href="contact.html" style="color: black;">Contact us</a></li>
-                    <li style="font-family: var(--ff-philosopher);"><a href="cart.html" style="color: black;">Cart</a></li>
+                    <li style="font-family: var(--ff-philosopher);"><a href="cart.html" style="color: black;">Cart <span class="badge-count" id="badgeCount"></span></a></li>
                 </ul>
             </nav>
         </header>
@@ -771,6 +771,23 @@ border-radius: 100px;
     });
     
       </script>
+      <script>
+        const buttons = document.getElementsByClassName('butt add-to-cart-button');
+        for (let i =0; i < buttons.length; i++) {
+            buttons[i].addEventListener('click', function() {
+                const badgeCountElement = document.getElementById('badgeCount');
+                let currentCount = parseInt(badgeCountElement.innerText);
+                badgeCountElement.innerText = currentCount + 1;
+            })
+        }
+        
+        // document.getElement('add-to-cart-button').addEventListener('click', function() {
+        //     const badgeCountElement = document.getElementById('badgeCount');
+        //     let currentCount = parseInt(badgeCountElement.innerText);
+        //     badgeCountElement.innerText = currentCount + 1;
+        // });
+      </script>
+      <script src="cart.js"></script>
       
 </body>
 

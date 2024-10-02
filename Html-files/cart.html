@@ -75,6 +75,17 @@
     animation: spin 1.5s linear infinite;
 }
 
+#badgeCount {
+  position: relative;
+  top: -7px;
+  right: 1px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 5px 8px;
+  font-size: 12px;
+}
+
 @keyframes spin {
     0% {
         transform: rotate(0deg);
@@ -199,7 +210,7 @@ body{
                     <li><a href="menu.html" style="color: black;font-family: var(--ff-philosopher);">About</a></li>
                     <li><a href="services.html" style="color: black;font-family: var(--ff-philosopher);">Services</a></li>
                     <li><a href="contact.html" style="color: black;font-family: var(--ff-philosopher);">Contact us</a></li>
-                    <li><a href="cart.html" style="color: black;font-family: var(--ff-philosopher);">Cart</a></li>
+                    <li><a href="cart.html" style="color: black;font-family: var(--ff-philosopher);">Cart <span class="badge-count" id="badgeCount"></span></a></li>
                 </ul>
             </nav>
         </header>
@@ -320,9 +331,7 @@ body{
             </div>
     </div>
   </footer>
-    <script src="cart.js">
-      
-    </script>
+    <script src="cart.js"></script>
 
 <script>
 
