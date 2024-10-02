@@ -15,9 +15,14 @@ body {
 }
 
 .navbar {
+  background-color: transparent; /* Initial transparent background */
+  transition: background-color 1s ease-in-out, backdrop-filter 0.3s, color 0.3s; /* Smooth transition for color change*/
   padding: 8px 0px;
-  height: 60px;
-  transition: background-color 0.3s, backdrop-filter 0.3s, color 0.3s; /* Added transitions for smooth color change */
+  position: fixed; /* Keep it at the top */
+  top: 0; 
+  width: 100%;
+  z-index: 1000; /* Ensure it stays above other elements */
+  height: 80px;
   backdrop-filter: blur(0); /* Initially no blur */
 }
 

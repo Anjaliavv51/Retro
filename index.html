@@ -327,6 +327,22 @@ new google.translate.TranslateElement({
     window.open('Html-files/menu.html', '_blank');
 });
     </script>
+
+    <!-- New additions for navbar -->
+    <script>
+        window.addEventListener('scroll', function() {
+          const navbar = document.getElementById('top');
+          if (window.scrollY > 250) { // Adjust value for when the navbar becomes solid
+            navbar.style.backgroundColor = 'rgb(176, 63, 63)'; // Add background color when scrolling
+            navbar.style.transition = 'background-color 1s ease-in-out';
+          } else {
+            navbar.style.backgroundColor = 'transparent'; // Make it transparent when scrolled to top
+            navbar.style.transition = 'background-color 0.3s ease-in-out';
+          }
+        });
+    </script>
+    
+
     <section class="about_us">
         <div class="move">
             <div id="marque">
