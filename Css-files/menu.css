@@ -49,19 +49,22 @@ section:nth-child(even){
 }
 
 .btn{
-    margin-top: 1rem;
-    display: inline-block;
-    font-size: 1.7rem;
-    color:#fff;
-    background: var(--black);
-    border-radius: .5rem;
-    cursor: pointer;
-    padding:.8rem 3rem;
+    text-decoration: none;
+        background-color: brown;
+        border: 3px solid rgb(255, 255, 255);
+        padding: 15px 5px;
+        border-radius: 15px;
+        display: inline-block;
+        color: white;
+        transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease; /* Smooth transition */   
 }
 
 .btn:hover{
-    background: var(--green);
-    letter-spacing: .1rem;
+    background-color: #ffffff;
+  color: brown !important;
+  border: 3px solid rgb(165, 42, 42);
+  transform: scale(1.01); 
+  animation: bounce 0.5s;
 }
 
 
