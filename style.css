@@ -925,3 +925,39 @@ padding-left:2px;
 }
 
 
+#contactForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 20rem;
+  height: max-content;
+}
+
+#contactForm input,
+#contactForm textarea {
+  width: 100%;
+  padding: 20px;
+  margin: 5px;
+  border-radius: 10px;
+  border: none;
+}
+
+#contactForm h3 {
+  height: 30px;
+  color: #141414;
+}
+#contactForm textarea {
+  height: 100px;
+  resize: none; 
+}
+
+#contactForm button {
+  padding: 10px 20px;
+  background-color:rgb(196, 74, 74);
+  color:rgb(15, 14, 14);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 5px;
+}
