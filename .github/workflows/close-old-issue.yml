@@ -1,0 +1,55 @@
+name: Close Old Issues
+on:
+  schedule:
+    - cron: "0 0 * * *" # Runs daily at midnight
+
+jobs:
+  manage-issues:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Manage Issues
+        run: |
+          open_issues=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            "https://api.github.com/repos/${{ github.repository }}/issues?state=open" \
+            | jq -r '.[] | .number')
+          for issue in $open_issues; do
+            # Get issue details
+            issue_details=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+              "https://api.github.com/repos/${{ github.repository }}/issues/$issue")
+            last_updated=$(echo $issue_details | jq -r '.updated_at')
+            labels=$(echo $issue_details | jq -r '.labels[].name')
+
+            days_since_update=$(( ( $(date +%s) - $(date -d "$last_updated" +%s) ) / 86400 ))
+
+            if [ $days_since_update -gt 7 ]; then
+              if echo "$labels" | grep -q "stale"; then
+                # If stale for more than 10 days, close the issue
+                if [ $days_since_update -gt 17 ]; then
+                  curl -s -X PATCH -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+                    -H "Accept: application/vnd.github.v3+json" \
+                    -d '{"state":"closed"}' \
+                    "https://api.github.com/repos/${{ github.repository }}/issues/$issue"
+                  
+                  curl -s -X POST -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+                    -H "Accept: application/vnd.github.v3+json" \
+                    -d '{"body":"This issue has been automatically closed because it has been inactive for more than 17 days (including 7 days marked as stale). If you believe this is still relevant, feel free to reopen it or create a new one. Thank you!"}' \
+                    "https://api.github.com/repos/${{ github.repository }}/issues/$issue/comments"
+                fi
+              else
+                # Mark as stale
+                curl -s -X POST -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+                  -H "Accept: application/vnd.github.v3+json" \
+                  -d '{"labels":["stale"]}' \
+                  "https://api.github.com/repos/${{ github.repository }}/issues/$issue/labels"
+                
+                curl -s -X POST -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+                  -H "Accept: application/vnd.github.v3+json" \
+                  -d '{"body":"This issue has been marked as stale because it has been inactive for more than 7 days. It will be closed if no further activity occurs in the next 10 days. Please update if you want to keep it open."}' \
+                  "https://api.github.com/repos/${{ github.repository }}/issues/$issue/comments"
+              fi
+            fi
+          done
