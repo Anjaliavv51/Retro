@@ -179,6 +179,32 @@ body{
         transform: rotate(360deg);
     }
 }
+.social-icons a {
+  font-size: 1.2rem;
+  padding: 8px;
+  margin: 15px;
+  text-decoration: none;
+  color: rgb(18, 16, 16);
+}
+
+.social-icons a:hover {
+  color: brown;
+  background-color: hsl(22, 76%, 85%);
+  border-radius: 10px;
+  transform: scale(1.5); /* Increase size */
+  transition: transform 0.3s ease; /* Smooth transition effect */
+}
+.fa-brands.fa-facebook:hover {
+  color: #3B5998 !important;
+}
+
+.fa-brands.fa-instagram:hover {
+  color: #D62976 !important;
+}
+
+.fa-brands.fa-x-twitter:hover {
+  color: #181e20 !important;
+}
         </style>
 </head>
 
@@ -460,12 +486,12 @@ body{
 
         <div class="foot_panel4" style="color: black;background-color: transparent;">
             <div class="pages" style="background-color: transparent;">
-                <h4>Follow Us</h4>
+                <h3>Follow Us</h3>
 
                 <div class="social-icons">
-                    <i class="fa-brands fa-facebook"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <i class="fa-brands fa-instagram"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <i class="fa-brands fa-x-twitter"></i>
+                    <a class="fa-brands fa-facebook" href="https://facebook.com" style="color: hsl(203, 30%, 26%);"></a>
+                    <a class="fa-brands fa-instagram" href="https://instagram.com" style="color: hsl(203, 30%, 26%);"></a>
+                    <a class="fa-brands fa-x-twitter" href="https://twitter.com" style="color: hsl(203, 30%, 26%);"></a>
                 </div>
                 <p style="margin-bottom:0;">Stay connected with us on social media for the latest updates, recipes, and foodie adventures.
                 </p>

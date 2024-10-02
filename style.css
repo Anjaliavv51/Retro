@@ -569,6 +569,26 @@ textarea {
   padding: 8px;
   margin: 15px;
   text-decoration: none;
+  color: rgb(18, 16, 16);
+}
+
+.social-icons a:hover {
+  color: brown;
+  background-color: hsl(22, 76%, 85%);
+  border-radius: 10px;
+  transform: scale(1.5); /* Increase size */
+  transition: transform 0.3s ease; /* Smooth transition effect */
+}
+.fa-brands.fa-facebook:hover {
+  color: #3B5998 !important;
+}
+
+.fa-brands.fa-instagram:hover {
+  color: #D62976 !important;
+}
+
+.fa-brands.fa-x-twitter:hover {
+  color: #181e20 !important;
   /* color: white; */
 }
 
