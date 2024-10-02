@@ -193,16 +193,38 @@ body{
     </div>
     <div class="head_container" style="background-color: transparent;font-family: Georgia;">
         <header>
-            <nav class="navbar">
-                <ul id="header-items">
-                    <li><a href="../index.html" style="color: black;font-family: var(--ff-philosopher);">Home</a></li>
-                    <li><a href="menu.html" style="color: black;font-family: var(--ff-philosopher);">About</a></li>
-                    <li><a href="services.html" style="color: black;font-family: var(--ff-philosopher);">Services</a></li>
-                    <li><a href="contact.html" style="color: black;font-family: var(--ff-philosopher);">Contact us</a></li>
-                    <li><a href="cart.html" style="color: black;font-family: var(--ff-philosopher);">Cart</a></li>
-                </ul>
-            </nav>
+          <nav class="navbar fixed-top" id="top" style="display: flex; flex-direction: row; background-color: rgb(223, 151, 151); border:0.5rem outset pink; border-radius: 150px; padding-left: 100px; margin-top: 20px;">
+            <a class="navbar-brand" href="/index.html" style="font-family: var(--ff-philosopher); color: black; font-size: 40px;">Retro</a>
+            <ul class="navbar-nav" style="display: flex;flex-direction: row;  flex-wrap: nowrap; justify-content: space-between; margin-left: 20px;">
+              <li class="nav-item" style="display: inline-block;">
+                <a class="nav-link" href="/Html-files/menu.html" style="font-family: var(--ff-philosopher); color: black;">Collection</a>
+              </li>
+              <li class="nav-item" style="display: inline-block;">
+                <a class="nav-link" href="/Html-files/services.html" style="font-family: var(--ff-philosopher); color: black;">Services</a>
+              </li>
+              <li class="nav-item" style="display: inline-block;">
+                <a class="nav-link" href="/Html-files/contact.html" style="font-family: var(--ff-philosopher); color: black;">Contact Us</a>
+              </li>
+              <!-- Google Translate Element -->
+              <li class="nav-item" style="display: inline-block;">
+                <div id="google_element" style="font-family: var(--ff-philosopher); color: black;"></div>
+              </li>
+            </ul>
+            <div class="d-flex" style="justify-content: flex-end;flex-direction: row;  margin-left: auto; padding-right: 50px;">
+              <li class="nav-item" style="list-style-type: none; display: inline-block;">
+                <a class="nav-btn" href="login.html" style="color: black;">Login</a>
+              </li>
+              <li class="nav-item" style="list-style-type: none; display: inline-block;">
+                <a class="nav-btn" href="signup.html" style="color: black;">Sign Up</a>
+              </li>
+              <li class="nav-item" style="list-style-type: none; display: inline-block;">
+                <a class="nav-btn" href="cart.html" style="color: black;"><i class="fa-solid fa-cart-shopping"></i></a>
+              </li>
+            </div>
+          </nav>
         </header>
+
+        
 
         <div class="mainhead">
             <h1 style="color: black;font-family: var(--ff-philosopher);">C A R T</h1>
