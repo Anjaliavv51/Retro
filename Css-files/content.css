@@ -62,7 +62,7 @@ body {
 .navbarbg {
   padding: 8px 0;
   background-color: hsl(20, 43%, 93%); 
-  text-align: center; 
+  text-align: left; 
 }
 
 .navbarbg ul {
