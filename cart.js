@@ -72,3 +72,30 @@ orderBtn.addEventListener("click", ()=>{
        alert("Order placed!");
    }
 })
+
+// Prioritizing Image Loading
+<script>
+  // Critical images
+  const criticalImages = document.querySelectorAll('.critical-image');
+
+  // Lazy load other images
+  const lazyImages = document.querySelectorAll('img[data-src]');
+
+  // Load critical images immediately
+  criticalImages.forEach(image => {
+    image.src = image.dataset.src;
+  });
+
+  // Use Intersection Observer for lazy loading
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.src = entry.target.dataset.src;
+        observer.unobserve(entry.target);
+      }
+    });
+  });
+
+  lazyImages.forEach(image => observer.observe(image));
+</script>
+
