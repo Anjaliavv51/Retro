@@ -17,14 +17,25 @@ body {
 .navbar {
   padding: 8px 0px;
   height: 60px;
-  transition: background-color 0.3s, backdrop-filter 0.3s, color 0.3s; /* Added transitions for smooth color change */
-  backdrop-filter: blur(0); /* Initially no blur */
+  transition: background-color 0.3s, backdrop-filter 0.3s, color 0.3s;
+  backdrop-filter: blur(10px) brightness(150%);
+  background-color: rgba(229, 171, 171, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+
 
 .navbar a {
   text-decoration: none;
   color: white;
   font-size: 1.3rem;
+  cursor: pointer;
 }
 /* Navbar link hover effect */
 .navbar a:hover,
@@ -39,6 +50,8 @@ s
   top: 0;
   width: 100%; 
   z-index: 1030; 
+  
+  
 }
 .navbar.scrolled {
   background-color: rgb(176, 63, 63); 
