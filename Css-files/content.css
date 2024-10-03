@@ -552,8 +552,8 @@ input
 
 #contactForm input,
 #contactForm textarea {
-  width: 50%;
-  padding: 20px;
+  width: 100%;
+  padding: 5px;
   margin: 5px;
   border-radius: 10px;
   border: none;
