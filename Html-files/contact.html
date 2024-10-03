@@ -345,37 +345,43 @@ body{
                                     <div class="controls">
                                         <div class="row">
                                             <div class="col-md-6">
+                                               <div class="form-group"
+
+                                                    <label for="form_email" style="font-family: Georgia;">Name *</label>
+                                                    <div class="input-icon">
+                                                        <i class="fas fa-user"></i>
+                                                        <input id="form_email" type="email" name="email" class="form-control"
+                                                            placeholder="     Enter your Name" required="required"
+                                                            data-error="Name is required.">
+
+                                                    
+                                                 </div>
+                                             </div>
+                                            <div class="col-md-6">
                                                 <div class="form-group">
+
                                                     <label for="form_email" style="font-family: Georgia;">Email *</label>
                                                     <div class="input-icon">
                                                         <i class="fas fa-envelope"></i>
                                                         <input id="form_email" type="email" name="email" class="form-control"
-                                                            placeholder="Please enter your email*" required="required"
+                                                            placeholder="     Enter your email" required="required"
                                                             data-error="Valid Email is required.">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <label for="form_phone" style="font-family: Georgia;">Phone number *</label>
-                                                    <div class="input-icon">
-                                                        <i class="fas fa-phone"></i>
-                                                        <input id="form_phone" type="tel" name="phone" class="form-control"
-                                                            placeholder="Please enter your phone number*" required="required"
-                                                            pattern="[0-9]{10}" data-error="Phone number is required.">
-                                                    </div>
+                                                
+                                                    
                                                 </div>
                                             </div>
                                         </div><br>
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label for="form_email" style="font-family: Georgia;">Name *</label>
+                                                    <label for="form_lastname" style="font-family: Georgia;">Phone number *</label>
                                                     <div class="input-icon">
-                                                        <i class="fas fa-user"></i>
-                                                        <input id="form_name" type="text" name="name" class="form-control"
-                                                            placeholder="Please enter your name*" required="required"
-                                                            data-error="Name is required.">
+
+                                                        <i class="fas fa-phone"></i>
+                                                        <input id="form_lastname" type="text" name="surname" class="form-control"
+                                                            placeholder="      Enter your Phone number" required="required"
+                                                            data-error="  Phone number is required.">
+                                                        
                                                     </div>
                                                 </div>
                                             </div>
@@ -386,14 +392,14 @@ body{
                                                     <label for="form_message" style="font-family: Georgia;">Message *</label>
                                                         
                                                         <textarea id="form_message" name="message" class="form-control"
-                                                            placeholder="Write your message here." style="height: 100px; width: 100%;" required="required"
+                                                            placeholder="Write your message here." style="height: 180px; width: 70%;" required="required"
                                                             data-error="Please, leave us a message."></textarea>
                                                     
                                                 </div>
                                             </div>
                                             <div class="col-md-4 mt-4">
                                                 <input type="submit" class="btn btn-send btn-block"
-                                                    value="Send Message" style="background-color: #ffc1b7; color: black; text-align: center; font-family: var(--ff-philosopher); padding: 12px 0; border: 1px solid black; height: 50px; line-height: 26px;">
+                                                    value="Send Message" style="background-color: #ffc1b7; color: black; text-align: center; font-family: var(--ff-philosopher); border: 1px solid black; height: 50px; line-height: 10px; ">
                                             </div>
                                         </div>
                                     </div>
