@@ -7,6 +7,10 @@
   --btn-color: #be367a; 
   --hover-color: #e75480; 
   --btn-text-color: #ffffff; 
+  --card-bg: rgba(255, 255, 255, 0.95); /* Semi-transparent white for card background */
+  --box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for card */
+  --transition-speed: 0.3s; /* Transition speed for effects */
+  --border-radius: 10px; /* Consistent border radius */
 }
 
 body {
@@ -15,38 +19,57 @@ body {
   background: linear-gradient(135deg, #ffb6c1, #ff69b4); 
   background-size: cover;
   background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  padding: 20px; /* Padding to avoid overflow */
+  overflow: hidden; /* Prevents overflow */
 }
 
 .main-login {
-  width: 100vw;
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.left-login, .right-login {
-  width: 50vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 100%;
 }
 
 .card-login {
-  width: 60%;
+  width: 100%; /* Use full width of parent */
+  max-width: 400px; /* Max width for better layout */
   padding: 30px;
-  border-radius: 20px;
-  box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.25);
-  background-color: #ffe6e9; 
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  background-color: var(--card-bg);
+  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+  display: flex; /* Flex to stack elements */
+  flex-direction: column; /* Column layout for the card */
+}
+
+.card-login:hover {
+  transform: translateY(-4px); /* Lift effect on hover */
+  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.15); /* More pronounced shadow on hover */
 }
 
 .card-login h1 {
-  font-size: 2rem;
-  color: #e13838; 
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); 
-  letter-spacing: 1px;
+  font-size: 2.5rem; /* Larger font size for the title */
+  color: var(--primary-color);
+  text-align: center; /* Centered title */
   margin-bottom: 20px;
+  text-transform: uppercase; /* Uppercase for modern touch */
+  letter-spacing: 1px; /* Spacing between letters */
+}
+
+.textfield {
+  margin-bottom: 15px; /* Add margin to space fields */
+  display: flex; /* Flex for better layout */
+  flex-direction: column; /* Column layout for input and label */
+}
+
+.textfield label {
+  font-weight: 700; /* Bold label for clarity */
+  margin-bottom: 5px; /* Space between label and input */
+  color: #555; /* Slightly darker color for the label */
 }
 
 .textfield > input {
@@ -54,13 +77,15 @@ body {
   padding: 15px;
   background-color: var(--input-bg);
   border: 2px solid transparent;
-  transition: border 0.3s ease;
+  border-radius: var(--border-radius); /* Consistent rounded corners */
+  transition: border var(--transition-speed), box-shadow var(--transition-speed);
   font-size: 1rem;
   color: #333;
 }
 
 .textfield > input:focus {
   border-color: var(--input-border);
+  box-shadow: 0 0 5px var(--input-border); /* Subtle glow effect */
 }
 
 .btn-login, #google-login {
@@ -70,15 +95,16 @@ body {
   color: var(--btn-text-color);
   font-weight: bold;
   border: none;
-  border-radius: 8px;
+  border-radius: var(--border-radius);
   cursor: pointer;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+  transition: background-color var(--transition-speed), box-shadow var(--transition-speed), transform var(--transition-speed);
   letter-spacing: 1.5px; 
+  width: 100%; /* Full width for buttons */
 }
 
 .btn-login:hover, #google-login:hover {
   background-color: var(--hover-color); 
-  box-shadow: 0px 15px 45px -10px #630c06; 
+  box-shadow: 0px 15px 45px -10px rgba(0, 0, 0, 0.2); 
   transform: scale(1.03); 
 }
 
