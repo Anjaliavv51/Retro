@@ -15,25 +15,29 @@ body {
 }
 
 .navbar {
-  padding: 8px 0px;
-  height: 60px;
-  transition: background-color 0.3s, backdrop-filter 0.3s, color 0.3s; /* Added transitions for smooth color change */
-  backdrop-filter: blur(0); /* Initially no blur */
+  padding: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1030;
+  padding: 15px 0;
+  background-color: rgba(245, 190, 190, 0.7);
+  backdrop-filter: blur(8px);
+  transition: background-color 0.5s ease, backdrop-filter 0.5s ease;
 }
 
 .navbar a {
   text-decoration: none;
-  color: white;
+  color: #333;
   font-size: 1.3rem;
+  transition: color 0.3s ease,border-bottom 0.3s ease;
 }
 /* Navbar link hover effect */
-.navbar a:hover,
-.navbar.scrolled a:hover {
-  color :#fff;
-  border-bottom: 1px solid #fff; /* Add bottom border on hover */
-  border-top: 1px solid #fff; /* Add top border on hover */
+.navbar a:hover{
+  color: #fff;
+  border-bottom: 1px solid #fff;
 }
-s
+
+
 .navbar.fixed-top {
   position: fixed; 
   top: 0;
@@ -42,7 +46,7 @@ s
 }
 .navbar.scrolled {
   background-color: rgb(176, 63, 63); 
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(15px);
   color: #fff;
 }
 .intro_container {
@@ -508,6 +512,7 @@ ul a {
     justify-content: center;
 } */
 
+
 .foot_panel4 {
   background-color: rgb(66, 16, 16);
   color: white;
@@ -564,24 +569,63 @@ textarea {
   padding: 8px;
   margin: 15px;
   text-decoration: none;
-  color: white;
+  color: rgb(18, 16, 16);
 }
 
 .social-icons a:hover {
   color: brown;
-  background-color: hsl(20, 43%, 93%);
+  background-color: hsl(22, 76%, 85%);
+  border-radius: 10px;
+  transform: scale(1.5); /* Increase size */
+  transition: transform 0.3s ease; /* Smooth transition effect */
+}
+.fa-brands.fa-facebook:hover {
+  color: #3B5998 !important;
+}
+
+.fa-brands.fa-instagram:hover {
+  color: #D62976 !important;
+}
+
+.fa-brands.fa-x-twitter:hover {
+  color: #181e20 !important;
+  /* color: white; */
+}
+
+.social-icons a:hover {
+  /* color: brown; */
+  /* background-color: hsl(20, 43%, 93%); */
   border-radius: 50px;
 }
+
+.fa-facebook{
+  color: hsl(203, 30%, 26%);
+}
+
 .fa-facebook:hover {
+  
+  transform: scale(1.5);
   color:#3B5998;
+  transition: transform 0.2s ease, color 0.2s ease;
 }
 
+.fa-instagram{
+  color: hsl(203, 30%, 26%);
+}
 .fa-instagram:hover {
+  transform: scale(1.5);
   color:#D62976;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+.fa-x-twitter{
+  color: hsl(203, 30%, 26%);
+
 }
 
-.fa-twitter:hover {
-  color:#00B6F1;
+.fa-x-twitter:hover {
+  color:black;
+  transform: scale(1.5);
+  transition: transform 0.2s ease, color 0.2s ease;
 }
 
 #author {
@@ -925,3 +969,39 @@ padding-left:2px;
 }
 
 
+#contactForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 20rem;
+  height: max-content;
+}
+
+#contactForm input,
+#contactForm textarea {
+  width: 100%;
+  padding: 20px;
+  margin: 5px;
+  border-radius: 10px;
+  border: none;
+}
+
+#contactForm h3 {
+  height: 30px;
+  color: #141414;
+}
+#contactForm textarea {
+  height: 100px;
+  resize: none; 
+}
+
+#contactForm button {
+  padding: 10px 20px;
+  background-color:rgb(196, 74, 74);
+  color:rgb(15, 14, 14);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 5px;
+}

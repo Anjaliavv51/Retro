@@ -1,6 +1,7 @@
 * {
   margin: 0px;
   padding: 0px;
+
 }
 p{
   color: hsl(208, 7%,46%);
@@ -36,6 +37,9 @@ body {
   z-index: -1;
   
 }
+.upper{
+  margin-top: -5rem;
+}
 
 .navbar {
   padding: 8px 10px;
@@ -62,7 +66,7 @@ body {
 .navbarbg {
   padding: 8px 0;
   background-color: hsl(20, 43%, 93%); 
-  text-align: center; 
+  text-align: left; 
 }
 
 .navbarbg ul {
@@ -254,9 +258,15 @@ input[type="submit"]:hover {
   background-color: transparent;
   background-blend-mode:lighten;
   background-repeat: no-repeat;
-  background-size: cover;
+  /* background-size: cover; */
+ 
 }
 
+.cards{
+  height: 480px;
+  width: 480px;
+  margin-left: 2rem;
+}
 .second_cont{
   display: flex;
   padding: 40px;
@@ -309,20 +319,30 @@ div.deals:hover{
   padding-top: 400px;
 }
 .testimonal__container{
+  width: 100%;
   display: flex;
-  padding: 3rem;
+  justify-content: center;
+  /* flex-direction: column; */
+  /* padding: 3rem; */
+  margin-top: 2rem;
 }
 .testimonal__card{
   text-align: center;
-  padding:2rem 3rem 2.5rem;
+
   border:2px solid rgba(224, 224, 252, 0.678);
-  transition:border .4s,background-color .4s;
+  transition:border .4s background-color .4s;
   background-color: white;
   box-shadow: 0 0 10px rgba(224, 224, 252, 0.678);
   border: 1px solid rgb(186, 186, 201);
   padding:40px 30px ;
   margin: 5px;
   color:rgb(107, 107, 122);
+  /* margin-left: 3rem; */
+}
+.testimonal__card:hover{
+  transform: translateY(-10px);
+  transition: 0.5s;
+  box-shadow: 2px 2px 20px black;
 }
 .testimonal__image{
   width:100px;
@@ -336,6 +356,8 @@ div.deals:hover{
 .testimonal__description{
   margin-bottom: 1.25rem;
 }
+
+
 .section__title{
   text-align: center;
   font-size: 2rem;
@@ -383,9 +405,9 @@ div.deals:hover{
 }
 
 form {
-    padding-top: 20px;
+    /*padding-top: 20px;*/
     display: grid;
-    padding-bottom: 100px;
+    /*padding-bottom: 100px;*/
 }
 
 label {
@@ -482,3 +504,62 @@ textarea {
 .menu_items .items {
   position: relative;
 }
+
+
+.form-control {
+        border-radius: 15px; /* Adjust the border radius */
+        padding-left: 40px; /* Space for the icon */
+    }
+  
+.input-icon {
+        position: relative;
+    }
+.input-icon i {
+        position: absolute;
+        left: 10px; /* Positioning the icon */
+        top: 50%;
+        transform: translateY(-50%); /* Center the icon vertically */
+        color: gray; /* Icon color */
+    }
+.input-icon input, 
+.input-icon textarea {
+      padding-left: 30px; /* Adjust padding to create space for the icon */
+}
+
+#contactForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 20rem;
+  height: max-content;
+}
+
+#contactForm input,
+#contactForm textarea {
+  width: 100%;
+  padding: 20px;
+  margin: 5px;
+  border-radius: 10px;
+  border: none;
+}
+
+#contactForm h3 {
+  height: 30px;
+  color: #141414;
+}
+#contactForm textarea {
+  height: 100px;
+  resize: none; 
+}
+
+#contactForm button {
+  padding: 10px 20px;
+  background-color:rgb(196, 74, 74);
+  color:rgb(15, 14, 14);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 5px;
+}
+

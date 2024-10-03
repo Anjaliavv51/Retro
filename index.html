@@ -27,7 +27,21 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="./style.css">
+
+    <style>
+       
+        .faq-container {
+            margin-top: 50px;
+            margin-left: auto;
+            margin-right: auto;
+            background: transparent;/* Container background */
+            border-radius: 8px; /* Rounded corners */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            padding: 20px; /* Padding inside the container */
+        }
+    </style>
+
     <style>
         :root{
             --ff-philosopher: "Philosopher", sans-serif;
@@ -235,6 +249,62 @@ body{
 .moon{
     transform-origin: 50% 100%;
 }
+
+#about {
+    display: flex;
+    flex-wrap: wrap; /* Allow boxes to wrap */
+    gap: 20px; /* Space between boxes */
+    justify-content: center; /* Center align items */
+}
+
+.box {
+    background-color:transparent; /* Optional for visual separation */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: center;
+    max-width: 350px; /* Maximum width of each card */
+    flex: 1 1 280px; /* Allow boxes to grow and shrink */
+    min-width: 300px; /* Minimum width for responsiveness */
+    min-height: 480px; /* Minimum height for the card */
+}
+
+.card-image {
+    width: auto; /* Set width to auto to allow centering */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 100%; /* Ensure image does not exceed card width */
+    max-height: 200px; /* Limit the max height to prevent overflow */
+    object-fit: cover; /* Ensure the image covers the card area without distorting */
+    border-radius: 10px; /* Match border radius of the box */
+    margin: 0 auto; /* Center the image horizontally */
+}
+
+.box h2 {
+    margin-top: 10px;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    margin: 10px 0; /* Add some margin for spacing */
+}
+
+/* Additional responsive adjustments */
+@media (max-width: 600px) {
+    .box {
+        max-width: 100%; /* Allow full width on small screens */
+        min-height: auto; /* Allow height to adjust for smaller screens */
+    }
+
+    .card-image {
+        max-height: 150px; /* Adjust max height for smaller screens */
+    }
+}
+
+
+
 </style>
 </head>
 <body>
@@ -270,7 +340,7 @@ body{
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link " aria-current="page" href="Home.html" style="color: black;font-family: var(--ff-philosopher);">Home</a>
+                        <a class="nav-link " aria-current="page" href="#" style="color: black;font-family: var(--ff-philosopher);">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="Html-files/menu.html" style="font-family: var(--ff-philosopher);color: black;">About</a>
@@ -342,25 +412,26 @@ new google.translate.TranslateElement({
         <!-- changes -->
         <div id="about">
             <div class="box">
-                <img src="https://tse3.mm.bing.net/th/id/OIG4.SIHan_hRN4UJPwUqG4XX?pid=ImgGn" style="height: 300px;border-radius: 10px;" alt="">
+                <img src="Images/biryani.jpg" alt="Biryani" class="card-image">
                 <h2 class="h-secondary center" style="font-family:var(--ff-philosopher);">60s-style florals</h2>
                 <p class="center" style="font-family: var(--ff-poppins);">From aromatic curries to flavorful biryanis, our menu showcases the diversity and
                     deliciousness of Indian cuisine.
                 </p>
             </div>
             <div class="box">
-                <img src="https://tse3.mm.bing.net/th/id/OIG4.z_1sqeDkCWDNKbz25AoQ?w=270&h=270&c=6&r=0&o=5&dpr=1.4&pid=ImgGn" alt="" style="border-radius: 10px;height: 350px;width: 350px;">
+                <img src="Images/plate_mismatch.jpg" alt="Plate" class="card-image">
                 <h2 class="h-secondary center" style="font-family: var(--ff-philosopher)">60's Dinning Items</h2>
                 <p class="center" style="font-family: var(--ff-poppins);">
                     Elegant porcelain plates with delicate floral patterns. Each plate tells a story of family gatherings and special occasions.
                 </p>
             </div>
             <div class="box">
-                <img src="https://tse2.mm.bing.net/th/id/OIG2.CyOiP72VYq.3vQSimbbp?w=270&h=270&c=6&r=0&o=5&dpr=1.4&pid=ImgGn" alt="" style="border-radius: 10px;height: 200px;">
+                <img src="Images/candy.jpg" alt="Candy" class="card-image">
                 <h2 class="h-secondary center" style="font-family: var(--ff-philosopher);">Whimsical Nostalgia: The Stardust Bonbon</h2>
                 <p class="center" style="font-family: var(--ff-poppins);">The Stardust Bonbon, a sweet relic from an era when the universe was our playground.</p>
             </div>
         </div>
+        
     </section>
 
     <section class="service_container" style="background-color: hsl(20, 43%, 93%);">
@@ -470,6 +541,99 @@ new google.translate.TranslateElement({
 
         </ul>
 
+
+              <!---------------------------------------------------- FAQ -->
+                   
+              <div class="container faq-container">
+                <h1 class="text-center mb-4">Frequently Asked Questions</h1>
+                <div class="accordion" id="faqAccordion">
+            
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                What is your return policy?
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Our return policy allows you to return items within 30 days of purchase.
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                How long does shipping take?
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Shipping typically takes 5-7 business days, depending on your location.
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Do you ship internationally?
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Yes, we offer international shipping to select countries.
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                Can I change my order after it's been placed?
+                            </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                If your order hasn't been processed yet, you can contact us to make changes.
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFive">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                What payment methods do you accept?
+                            </button>
+                        </h2>
+                        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                We accept all major credit cards, PayPal, and bank transfers.
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingSix">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                Do you offer discounts for bulk orders?
+                            </button>
+                        </h2>
+                        <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Yes, we provide discounts on bulk orders. Please contact our sales team for more details.
+                            </div>
+                        </div>
+                    </div>
+            
+                </div>
+            </div>
+
+
+            <br> <br>
+
+                         <!-- -------------------------------------------FAQ ENDED -->
+
     </section>
 
     <div class="app_download" style="background-color: hsl(20, 43%, 93%);">
@@ -519,7 +683,7 @@ new google.translate.TranslateElement({
                     
                     <input type="email" id="email" name="email" placeholder="Your Email" required>
 
-                    <textarea id="message" name="message" placeholder="Your Message" required style="font-family: Garamond;"></textarea>
+                    <textarea id="message" name="message" placeholder="Your Message" required></textarea>
 
                     <button id="butt" type="submit" style="font-family: Garamond;">Send Message</button>
                 </form>
@@ -531,12 +695,12 @@ new google.translate.TranslateElement({
                 <div class="pages">
                     <h4 style="font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%);">Follow Us</h4>
 
-                    <div class="social-icons" style="background-color: hsl(20, 43%, 93%);">
+                    <div class="social-icons">
 
 
-                        <a class="fa-brands fa-facebook" href="https://facebook.com" style="color: hsl(203, 30%, 26%);"></a>
-                        <a class="fa-brands fa-instagram" href="https://instagram.com" style="color: hsl(203, 30%, 26%);"></a>
-                        <a class="fa-brands fa-twitter" href="https://twitter.com" style="color: hsl(203, 30%, 26%);"></a>
+                        <a class="fa-brands fa-facebook" href="https://facebook.com" ></a>
+                        <a class="fa-brands fa-instagram" href="https://instagram.com" ></a>
+                        <a class="fa-brands fa-x-twitter" href="https://twitter.com" ></a>
 
                     </div>
                     <p style="font-family: var(--ff-philosopher);background-color: hsl(20, 43%, 93%);color: hsl(203, 30%, 26%);margin-bottom:0;">Stay connected with us on social media for the latest updates, latest collection, and vintage adventures.

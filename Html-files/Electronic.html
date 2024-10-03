@@ -243,14 +243,57 @@
               margin-top: 10px;
               color: #dddddd;
           }
+          .fa-facebook{
+                color: white;
+                font-size: 1.2rem;
+                padding: 8px;
+                margin: 15px;
+            }
+
+            .fa-facebook:hover {
+  
+                transform: scale(1.5);
+                color:#3B5998;
+                transition: transform 0.2s ease, color 0.2s ease;
+            }
+
+            .fa-instagram{
+                color: white;
+                font-size: 1.2rem;
+                padding: 8px;
+                margin: 15px;
+            }
+            .fa-instagram:hover {
+                transform: scale(1.5);
+                color:#D62976;
+                transition: transform 0.2s ease, color 0.2s ease;
+            }
+
+            .fa-x-twitter{
+                color: hsl(203, 30%, 26%);
+                font-size: 1.2rem;
+                padding: 8px;
+                margin: 15px;
+
+            }
+
+            .fa-x-twitter:hover {
+                color:black;
+                transform: scale(1.5);
+                transition: transform 0.2s ease, color 0.2s ease;
+            }
+
+            
   
           .foot_panel4 {
               background-color: transparent;
-              color: white;
+              /* color: white; */
               height: 160px;
               font-size: 0.9rem;
               text-align: center;
-          }
+            }
+
+            
   
           form {
               padding-top: 20px;
@@ -279,16 +322,33 @@
             background-color: rgb(196, 89, 89);
           }
   
-          .social-icons a {
-              font-size: 1.2rem;
-              padding: 15px;
-              text-decoration: none;
-              color: white;
-          }
-  
-          .fa-facebook:hover { color: #3B5998; }
-          .fa-instagram:hover { color: #D62976; }
-          .fa-twitter:hover { color: #00B6F1; }
+         
+.social-icons a {
+  font-size: 1.2rem;
+  padding: 8px;
+  margin: 15px;
+  text-decoration: none;
+  color: rgb(248, 243, 243);
+}
+
+.social-icons a:hover {
+  color: brown;
+  background-color: hsl(203%, 29%, 91%);
+  border-radius: 10px;
+  transform: scale(1.5); /* Increase size */
+  transition: transform 0.3s ease; /* Smooth transition effect */
+}
+.fa-brands.fa-facebook:hover {
+  color: #3B5998 !important;
+}
+
+.fa-brands.fa-instagram:hover {
+  color: #D62976 !important;
+}
+
+.fa-brands.fa-x-twitter:hover {
+  color: #181e20 !important;
+}
   
           #sr {
               display: none;
@@ -466,7 +526,7 @@
         <header style="font-family: var(--ff-philosopher);">
             <nav class="navbar">
                 <ul id="header-items" style="color: black;font-family: var(--ff-philosopher);justify-content: center;">
-                    <li><a href="../Home.html" style="color: black;">&nbsp;&nbsp;&nbsp;&nbsp;
+                    <li><a href="../index.html" style="color: black;">&nbsp;&nbsp;&nbsp;&nbsp;
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Home</a></li>
                     <li><a href="menu.html" style="color: black;">About</a></li>
                     <li><a href="services.html" style="color: black;">Services</a></li>
@@ -577,7 +637,7 @@
         <div class="foot-panel2" style="font-family: Garamond;">
             <ul class="footer-colums">
                 <p style="font-family: var(--ff-philosopher);color: black;">Our Pages</p>
-                <a href="../Home.html" style="text-decoration: none;font-family: var(--ff-poppins);color: white;">Home</a>
+                <a href="../index.html" style="text-decoration: none;font-family: var(--ff-poppins);color: white;">Home</a>
                 <a href="menu.html" style="text-decoration: none;font-family: var(--ff-poppins);color: white;">About</a>
                 <a href="services.html" style="text-decoration: none;font-family: var(--ff-poppins);color: white;">Services</a>
                 <a href="contact.html" style="text-decoration: none;font-family: var(--ff-poppins);color: white;">Contact</a>
@@ -616,14 +676,15 @@
 
         <div class="foot_panel4"  style="font-family: Garamond;">
             <div class="pages">
-                <h4 style="font-family: var(--ff-philosopher);color: black;">Follow Us</h4>
+                <h2 style="font-family: var(--ff-philosopher);color: black;">Follow Us</h2>
 
+               
                 <div class="social-icons">
-                    <div class="social-icons">
-                        <a class="fa-brands fa-facebook" href="https://facebook.com" target="_blank"></a>
-                        <a class="fa-brands fa-instagram" href="https://instagram.com" target="_blank"></a>
-                        <a class="fa-brands fa-twitter" href="https://twitter.com" target="_blank"></a>
-                    </div>
+                    <a class="fa-brands fa-facebook" href="https://facebook.com" style="color: hsl(203, 29%, 91%);"></a>
+                    <a class="fa-brands fa-instagram" href="https://instagram.com" style="color: hsl(203, 29%, 91%);"></a>
+                    <a class="fa-brands fa-x-twitter" href="https://twitter.com" style="color: hsl(203, 29%, 91%);"></a>
+                </div>
+
                 </div>
                 <p style="margin-bottom:0;font-family: var(--ff-philosopher);color: white;">Stay connected with us on social media for the latest updates, latest collection, and vintage adventures.
                 </p>
