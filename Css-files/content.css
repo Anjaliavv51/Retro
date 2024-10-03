@@ -62,7 +62,7 @@ body {
 .navbarbg {
   padding: 8px 0;
   background-color: hsl(20, 43%, 93%); 
-  text-align: center; 
+  text-align: left; 
 }
 
 .navbarbg ul {
@@ -555,6 +555,10 @@ input
         transform: translateY(-50%); /* Center the icon vertically */
         color: gray; /* Icon color */
     }
+.input-icon input, 
+.input-icon textarea {
+      padding-left: 30px; /* Adjust padding to create space for the icon */
+}
 
 #contactForm {
   display: flex;

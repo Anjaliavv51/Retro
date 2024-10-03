@@ -249,6 +249,62 @@ body{
 .moon{
     transform-origin: 50% 100%;
 }
+
+#about {
+    display: flex;
+    flex-wrap: wrap; /* Allow boxes to wrap */
+    gap: 20px; /* Space between boxes */
+    justify-content: center; /* Center align items */
+}
+
+.box {
+    background-color:transparent; /* Optional for visual separation */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: center;
+    max-width: 350px; /* Maximum width of each card */
+    flex: 1 1 280px; /* Allow boxes to grow and shrink */
+    min-width: 300px; /* Minimum width for responsiveness */
+    min-height: 480px; /* Minimum height for the card */
+}
+
+.card-image {
+    width: auto; /* Set width to auto to allow centering */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 100%; /* Ensure image does not exceed card width */
+    max-height: 200px; /* Limit the max height to prevent overflow */
+    object-fit: cover; /* Ensure the image covers the card area without distorting */
+    border-radius: 10px; /* Match border radius of the box */
+    margin: 0 auto; /* Center the image horizontally */
+}
+
+.box h2 {
+    margin-top: 10px;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    margin: 10px 0; /* Add some margin for spacing */
+}
+
+/* Additional responsive adjustments */
+@media (max-width: 600px) {
+    .box {
+        max-width: 100%; /* Allow full width on small screens */
+        min-height: auto; /* Allow height to adjust for smaller screens */
+    }
+
+    .card-image {
+        max-height: 150px; /* Adjust max height for smaller screens */
+    }
+}
+
+
+
 </style>
 </head>
 <body>
@@ -356,25 +412,26 @@ new google.translate.TranslateElement({
         <!-- changes -->
         <div id="about">
             <div class="box">
-                <img src="https://tse3.mm.bing.net/th/id/OIG4.SIHan_hRN4UJPwUqG4XX?pid=ImgGn" style="height: 300px;border-radius: 10px;" alt="">
+                <img src="Images/biryani.jpg" alt="Biryani" class="card-image">
                 <h2 class="h-secondary center" style="font-family:var(--ff-philosopher);">60s-style florals</h2>
                 <p class="center" style="font-family: var(--ff-poppins);">From aromatic curries to flavorful biryanis, our menu showcases the diversity and
                     deliciousness of Indian cuisine.
                 </p>
             </div>
             <div class="box">
-                <img src="https://tse3.mm.bing.net/th/id/OIG4.z_1sqeDkCWDNKbz25AoQ?w=270&h=270&c=6&r=0&o=5&dpr=1.4&pid=ImgGn" alt="" style="border-radius: 10px;height: 350px;width: 350px;">
+                <img src="Images/plate_mismatch.jpg" alt="Plate" class="card-image">
                 <h2 class="h-secondary center" style="font-family: var(--ff-philosopher)">60's Dinning Items</h2>
                 <p class="center" style="font-family: var(--ff-poppins);">
                     Elegant porcelain plates with delicate floral patterns. Each plate tells a story of family gatherings and special occasions.
                 </p>
             </div>
             <div class="box">
-                <img src="https://tse2.mm.bing.net/th/id/OIG2.CyOiP72VYq.3vQSimbbp?w=270&h=270&c=6&r=0&o=5&dpr=1.4&pid=ImgGn" alt="" style="border-radius: 10px;height: 200px;">
+                <img src="Images/candy.jpg" alt="Candy" class="card-image">
                 <h2 class="h-secondary center" style="font-family: var(--ff-philosopher);">Whimsical Nostalgia: The Stardust Bonbon</h2>
                 <p class="center" style="font-family: var(--ff-poppins);">The Stardust Bonbon, a sweet relic from an era when the universe was our playground.</p>
             </div>
         </div>
+        
     </section>
 
     <section class="service_container" style="background-color: hsl(20, 43%, 93%);">
@@ -626,7 +683,7 @@ new google.translate.TranslateElement({
                     
                     <input type="email" id="email" name="email" placeholder="Your Email" required>
 
-                    <textarea id="message" name="message" placeholder="Your Message" required style="font-family: Garamond;"></textarea>
+                    <textarea id="message" name="message" placeholder="Your Message" required></textarea>
 
                     <button id="butt" type="submit" style="font-family: Garamond;">Send Message</button>
                 </form>
