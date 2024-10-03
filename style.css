@@ -167,10 +167,12 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-  border: 0.5px solid black;
-    }
-
-    .service {
+        border: 0.5px solid black;
+      }
+      
+      .service {
+      justify-content: center;
+      align-items: center;
         display: flex;
         flex-wrap: wrap;
         gap: 30px;
@@ -189,6 +191,7 @@ body {
         flex: 0 0 49%;
         font-family: var(--ff-poppins);
         color: hsl(203, 30%, 26%);
+        text-align: center;
     }
 
     .service_text h1 {
@@ -220,6 +223,7 @@ body {
     .box {
         text-align: center;
         flex: 1;
+        padding: 15px;
     }
 
     .box h2 {
@@ -228,7 +232,9 @@ body {
         font-size: 1.5rem;
         margin-bottom: 10px;
     }
-
+    .box img{
+      padding: 15px;
+    }
     .order_btn {
         font-family: var(--ff-poppins);
         background-color: hsl(357, 82%, 35%);
@@ -322,8 +328,6 @@ body {
   display: inline-block;
   color: white;
   transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
-}
-*/
 
 /*
 .service .box a:hover {
