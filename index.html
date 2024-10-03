@@ -334,16 +334,15 @@ p {
         <div id="loader"></div>
     </div>
     <!--Navbar Start-->
-    <nav class="navbar navbar-expand-lg fixed-top" id="top">
+    <nav class="navbar navbar-expand-lg fixed-top" id="top" style="margin-top: 10px; background-color: rgb(223, 151, 151); border:0.5rem outset pink; border-radius: 150px; ">    
+        
         <div class="container-fluid">
-            <a class="navbar-brand" href="#"  style="font-family: var(--ff-philosopher);color: black;"><b>Retro</b></a>
+            <a class="navbar-brand" href="#"  style="font-family: var(--ff-philosopher);color: black; font-size: 40px; padding-left: 100px;"><b>Retro</b></a>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <ul class="navbar-nav  mb-2 mb-lg-0" style="justify-content: center; margin: auto; gap: 30px;">
+                    
                     <li class="nav-item">
-                        <a class="nav-link " aria-current="page" href="#" style="color: black;font-family: var(--ff-philosopher);">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Html-files/menu.html" style="font-family: var(--ff-philosopher);color: black;">About</a>
+                        <a class="nav-link" href="Html-files/menu.html" style="font-family: var(--ff-philosopher);color: black;">Collection</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="Html-files/services.html" style="font-family: var(--ff-philosopher);color: black;">Services</a>
@@ -358,11 +357,11 @@ p {
                 </ul>
 
             </div>
-            <div class="d-flex p-2">
-                <li class="nav-item" style="list-style-type: none;font-family: var(--ff-philosopher);"><a class="nav-btn" onclick="redirectLogin()" style="color: black;">Login</a></li>&nbsp;&nbsp;
-                <li class="nav-item" style="list-style-type: none;font-family: var(--ff-philosopher);"><a class="nav-btn" onclick="redirectSignup()" style="color: black;">Sign Up</a></li>&nbsp;&nbsp;
+            <div class="d-flex " style="padding-right: 100px; gap: 12px;">
+                <li class="nav-item" style="list-style-type: none;font-family: var(--ff-philosopher); "><a class="nav-btn" href="Html-files/login.html" style="color: black;">Login</a></li>&nbsp;&nbsp;
+                <li class="nav-item" style="list-style-type: none;font-family: var(--ff-philosopher);"><a class="nav-btn" href="Html-files/signup.html" style="color: black;">Sign Up</a></li>&nbsp;&nbsp;
                 <li class="nav-item" style="list-style-type: none;">
-                    <a class="nav-btn " href="Html-files/cart.html" style="color: black;"><i class="fa-solid fa-cart-shopping"></i></a>
+                    <a class="nav-btn " href="/Html-files/cart.html" style="color: black;"><i class="fa-solid fa-cart-shopping"></i></a>
                 </li>
             </div>
 
@@ -725,12 +724,7 @@ new google.translate.TranslateElement({
     </div>
 </body>
 <script>
-    function redirectLogin() {
-        window.location.href = "Html-files/login.html";
-    }
-    function redirectSignup() {
-        window.location.href = "Html-files/signup.html";
-    }
+    
 
      // Get the button element
 const scrollToTopBtn = document.getElementById("sr");
