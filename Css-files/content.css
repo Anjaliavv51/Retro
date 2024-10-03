@@ -149,7 +149,7 @@ input[type="submit"] {
 input[type="submit"]:hover {
   background-color: brown!important;
   color: white!important;
-  border: 3px solid rgb(165, 42, 42);
+  border: 3.5px solid rgb(165, 42, 42);
   transform: scale(1.01);
   /* animation: bounce 0.5s; */
 }
