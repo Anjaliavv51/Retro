@@ -202,6 +202,33 @@ border-radius: 100px;
         transform: rotate(360deg);
     }
 }
+
+.social-icons a {
+  font-size: 1.2rem;
+  padding: 8px;
+  margin: 15px;
+  text-decoration: none;
+  color: rgb(18, 16, 16);
+}
+
+.social-icons a:hover {
+  color: brown;
+  background-color: hsl(22, 76%, 85%);
+  border-radius: 10px;
+  transform: scale(1.5); /* Increase size */
+  transition: transform 0.3s ease; /* Smooth transition effect */
+}
+.fa-brands.fa-facebook:hover {
+  color: #3B5998 !important;
+}
+
+.fa-brands.fa-instagram:hover {
+  color: #D62976 !important;
+}
+
+.fa-brands.fa-x-twitter:hover {
+  color: #181e20 !important;
+}
     </style>
 </head>
 
@@ -239,7 +266,7 @@ border-radius: 100px;
                     <li style="font-family: var(--ff-philosopher);"><a href="menu.html" style="color: black;">About</a></li>
                     <li style="font-family: var(--ff-philosopher);"><a href="services.html" style="color: black;">Services</a></li>
                     <li style="font-family: var(--ff-philosopher);"><a href="contact.html" style="color: black;">Contact us</a></li>
-                    <li style="font-family: var(--ff-philosopher);"><a href="cart.html" style="color: black;">Cart</a></li>
+                    <li style="font-family: var(--ff-philosopher);"><a href="cart.html" style="color: black;">Cart <span class="badge-count" id="badgeCount"></span></a></li>
                 </ul>
             </nav>
         </header>
@@ -259,6 +286,10 @@ border-radius: 100px;
         <h2 style="font-family: var(--ff-philosopher);">Entertainment</h2>
         <div class="menu_items">
             <div class="items">
+                <div class="added-to-cart js-added-to-cart" data-product-id="1.01" >
+                    <img src="../Favicon image/check-mark.png" class="check-mark">
+                    <div style="margin-top: -3px; margin-left: 3px;">Added to cart</div>
+                  </div>
                 <img
                     src="https://i.pinimg.com/564x/59/aa/2e/59aa2edd369e1017039372ad860cfb8b.jpg">
                 
@@ -276,6 +307,10 @@ border-radius: 100px;
                 </div>
             </div>
             <div class="items">
+                <div class="added-to-cart js-added-to-cart" data-product-id="1.02">
+                    <img src="../Favicon image/check-mark.png" class="check-mark">
+                    <div style="margin-top: -3px; margin-left: 3px;">Added to cart</div>
+                </div>
                 <img
                     src="https://i.pinimg.com/736x/11/c1/c5/11c1c5ba22a14271bef63012dcaa0631.jpg">
                 <h3 style="font-family: var(--ff-philosopher);">Radio</h3>
@@ -292,6 +327,10 @@ border-radius: 100px;
 
             </div>
             <div class="items">
+                <div class="added-to-cart js-added-to-cart" data-product-id="1.03">
+                    <img src="../Favicon image/check-mark.png" class="check-mark">
+                    <div style="margin-top: -3px; margin-left: 3px;">Added to cart</div>
+                </div>
                 <img
                     src="https://i.pinimg.com/564x/18/b4/41/18b441458ac78e10345b720d9af453ef.jpg">
                 <h3 style="font-family: var(--ff-philosopher);">Television</h3>
@@ -307,6 +346,10 @@ border-radius: 100px;
                 </div>
             </div>
             <div class="items">
+                <div class="added-to-cart js-added-to-cart" data-product-id="1.04">
+                    <img src="../Favicon image/check-mark.png" class="check-mark">
+                    <div style="margin-top: -3px; margin-left: 3px;">Added to cart</div>
+                </div>
                 <img src="https://i.pinimg.com/564x/1f/58/7f/1f587fe0533c8b4671fa29685fcaa9c2.jpg">
                 <h3 style="font-family: var(--ff-philosopher);">Movie Screen Carpet</h3>
                 <p style="font-family: Garamond;">$10.20</p>
@@ -324,6 +367,10 @@ border-radius: 100px;
         </div>
         <div class="menu_items">
             <div class="items">
+                <div class="added-to-cart js-added-to-cart" data-product-id="1.05">
+                    <img src="../Favicon image/check-mark.png" class="check-mark">
+                    <div style="margin-top: -3px; margin-left: 3px;">Added to cart</div>
+                </div>
                 <img
                     src="https://i.pinimg.com/564x/33/10/f4/3310f46d5d8b689d844d11fc308a84f5.jpg">
                 <h3 style="font-family: var(--ff-philosopher);">Toys</h3>
@@ -339,6 +386,10 @@ border-radius: 100px;
                 </div>
             </div>
             <div class="items">
+                <div class="added-to-cart js-added-to-cart" data-product-id="1.06">
+                    <img src="../Favicon image/check-mark.png" class="check-mark">
+                    <div style="margin-top: -3px; margin-left: 3px;">Added to cart</div>
+                </div>
                 <img
                     src="https://i.pinimg.com/564x/b8/ba/6f/b8ba6fce89bff7963fa9e10d86062a29.jpg">
                 <h3 style="font-family: var(--ff-philosopher);">Puppet Show</h3>
@@ -354,6 +405,10 @@ border-radius: 100px;
                 </div>
             </div>
             <div class="items">
+                <div class="added-to-cart js-added-to-cart" data-product-id="1.07">
+                    <img src="../Favicon image/check-mark.png" class="check-mark">
+                    <div style="margin-top: -3px; margin-left: 3px;">Added to cart</div>
+                </div>
                 <img
                     src="https://i.pinimg.com/564x/56/5e/b4/565eb4a4263d6020ed2133b8a4b14991.jpg">
                 <h3 style="font-family: var(--ff-philosopher);">Marbles</h3>
@@ -369,6 +424,10 @@ border-radius: 100px;
                 </div>
             </div>
             <div class="items">
+                <div class="added-to-cart js-added-to-cart" data-product-id="1.08">
+                    <img src="../Favicon image/check-mark.png" class="check-mark">
+                    <div style="margin-top: -3px; margin-left: 3px;">Added to cart</div>
+                </div>
                 <img src="https://i.pinimg.com/564x/29/cb/76/29cb764ce3d9b2407a3dfa41c8b3ceeb.jpg">
                 <h3 style="font-family: var(--ff-philosopher);">Drinks</h3>
                 <p style="font-family: Garamond;">$10.20</p>
@@ -392,8 +451,15 @@ border-radius: 100px;
         <h2 style="font-family: var(--ff-philosopher);">Gadgets</h2>
         <div class="menu_items">
             <div class="items">
+                <div class="added-to-cart js-added-to-cart" data-product-id="2.01">
+                    <img src="../Favicon image/check-mark.png" class="check-mark">
+                    <div style="margin-top: -3px; margin-left: 3px;">Added to cart</div>
+
+                </div>
                 <img
-                    src="https://rawcdn.githack.com/Anjaliavv51/Phone/da17fc6093be416e31fe57e2581b69f71d1f0d6d/WhatsApp%20Image%202024-05-08%20at%2014.57.24_f2703544.jpg">
+
+                    src="https://i0.wp.com/www.printmag.com/wp-content/uploads/2011/11/2a34d8_8fd22c546762416496eb8ab0c88c3db4mv2.jpg">
+
                 <h3 style="font-family: var(--ff-philosopher);">Telephone</h3>
                 <p style="font-family: Garamond;">$5.10</p>
                 <button class="butt add-to-cart-button" data-product-id="2.01" data-product-name="Telephone"
@@ -407,6 +473,10 @@ border-radius: 100px;
                 </div>
             </div>
             <div class="items">
+                <div class="added-to-cart js-added-to-cart" data-product-id="2.02">
+                    <img src="../Favicon image/check-mark.png" class="check-mark">
+                    <div style="margin-top: -3px; margin-left: 3px;">Added to cart</div>
+                </div>
                 <img
                     src="https://i.pinimg.com/564x/22/dd/23/22dd2351b72eb11a7d5b040caa484188.jpg">
                 <h3 style="font-family: var(--ff-philosopher);">Pager</h3>
@@ -422,6 +492,10 @@ border-radius: 100px;
                 </div>
             </div>
             <div class="items">
+                <div class="added-to-cart js-added-to-cart" data-product-id="Snacks">
+                    <img src="../Favicon image/check-mark.png" class="check-mark">
+                    <div style="margin-top: -3px; margin-left: 3px;">Added to cart</div>
+                </div>
                 <img
                     src="https://i.pinimg.com/564x/0a/5f/a2/0a5fa201b0cdfd24323b07d9423b53ed.jpg">
                 <h3 style="font-family:var(--ff-philosopher);">Camera</h3>
@@ -437,6 +511,10 @@ border-radius: 100px;
                 </div>
             </div>
             <div class="items">
+                <div class="added-to-cart js-added-to-cart" data-product-id="2.04">
+                    <img src="../Favicon image/check-mark.png" class="check-mark">
+                    <div style="margin-top: -3px; margin-left: 3px;">Added to cart</div>
+                </div>
                 <img src="https://i.pinimg.com/564x/51/1b/f5/511bf5dad0334204d182a0828850ca35.jpg">
                 <h3 style="font-family: var(--ff-philosopher);">Type Writer</h3>
                 <p style="font-family: Garamond;">$5.10</p>
@@ -456,6 +534,10 @@ border-radius: 100px;
         <h2>Weapons & Transport</h2>
         <div class="menu_items">
             <div class="items">
+                <div class="added-to-cart js-added-to-cart" data-product-id="3.01">
+                    <img src="../Favicon image/check-mark.png" class="check-mark">
+                    <div style="margin-top: -3px; margin-left: 3px;">Added to cart</div>
+                </div>
                 <img
                     src="https://i.pinimg.com/564x/ca/83/ef/ca83ef07ebddf2e5b4a6210575342737.jpg">
                 <h3 style="font-family: var(--ff-philosopher);">Cross Bow</h3>
@@ -471,6 +553,10 @@ border-radius: 100px;
                 </div>
             </div>
             <div class="items">
+                <div class="added-to-cart js-added-to-cart" data-product-id="3.02">
+                    <img src="../Favicon image/check-mark.png" class="check-mark">
+                    <div style="margin-top: -3px; margin-left: 3px;">Added to cart</div>
+                </div>
                 <img
                     src="https://i.pinimg.com/564x/ec/27/3a/ec273a4e8ea84196a1bc4f3e5e0a8527.jpg">
                 <h3 style="font-family: var(--ff-philosopher);">Catapult</h3>
@@ -486,6 +572,10 @@ border-radius: 100px;
                 </div>
             </div>
             <div class="items">
+                <div class="added-to-cart js-added-to-cart" data-product-id="3.03">
+                    <img src="../Favicon image/check-mark.png" class="check-mark">
+                    <div style="margin-top: -3px; margin-left: 3px;">Added to cart</div>
+                </div>
                 <img
                     src="https://i.pinimg.com/564x/b1/c1/1c/b1c11cfdf073f1565d1546ee18f1028a.jpg">
                 <h3 style="font-family: var(--ff-philosopher);">Sedan Chair</h3>
@@ -501,6 +591,10 @@ border-radius: 100px;
                 </div>
             </div>
             <div class="items">
+                <div class="added-to-cart js-added-to-cart" data-product-id="3.04">
+                    <img src="../Favicon image/check-mark.png" class="check-mark">
+                    <div style="margin-top: -3px; margin-left: 3px;">Added to cart</div>
+                </div>
                 <img src="https://ahdictionary.com/application/resources/arts/A5palanquin.jpg">
                 <h3 style="font-family:var(--ff-philosopher);">Palsnkin</h3>
                 <p style="font-family: Garamond;">$15.80</p>
@@ -522,7 +616,7 @@ border-radius: 100px;
         <div class="foot-panel2">
             <ul class="footer-colums">
                 <p style="color: hsl(357, 82%,35%);font-family: var(--ff-philosopher);">Our Pages</p>
-                <a href="../Home.html" style="text-decoration: none;font-family: var(--ff-poppins);color: black;">Home</a>
+                <a href="../index.html" style="text-decoration: none;font-family: var(--ff-poppins);color: black;">Home</a>
                 <a href="#" style="text-decoration: none;font-family: var(--ff-poppins);color: black;">About</a>
                 <a href="services.html" style="text-decoration: none;font-family: var(--ff-poppins);color: black;">Services</a>
                 <a href="contact.html" style="text-decoration: none;font-family: var(--ff-poppins);color: black;">Contact</a>
@@ -568,9 +662,12 @@ border-radius: 100px;
                 <h4 style="font-family: var(--ff-philosopher);color: hsl(304, 14%, 46%);">Follow Us</h4>
 
                 <div class="social-icons">
+
+
                     <a class="fa-brands fa-facebook" href="https://facebook.com" style="color: hsl(203, 30%, 26%);"></a>
                     <a class="fa-brands fa-instagram" href="https://instagram.com" style="color: hsl(203, 30%, 26%);"></a>
-                    <a class="fa-brands fa-twitter" href="https://twitter.com" style="color: hsl(203, 30%, 26%);"></a>
+                    <a class="fa-brands fa-x-twitter" href="https://twitter.com" style="color: hsl(203, 30%, 26%);"></a>
+
                 </div>
                 <p style="font-family: var(--ff-philosopher);margin-bottom:0;">Stay connected with us on social media for the latest updates, latest collection, and vintage adventures.
                 </p>
@@ -706,6 +803,23 @@ border-radius: 100px;
     });
     
       </script>
+      <script>
+        const buttons = document.getElementsByClassName('butt add-to-cart-button');
+        for (let i =0; i < buttons.length; i++) {
+            buttons[i].addEventListener('click', function() {
+                const badgeCountElement = document.getElementById('badgeCount');
+                let currentCount = parseInt(badgeCountElement.innerText);
+                badgeCountElement.innerText = currentCount + 1;
+            })
+        }
+        
+        // document.getElement('add-to-cart-button').addEventListener('click', function() {
+        //     const badgeCountElement = document.getElementById('badgeCount');
+        //     let currentCount = parseInt(badgeCountElement.innerText);
+        //     badgeCountElement.innerText = currentCount + 1;
+        // });
+      </script>
+      <script src="cart.js"></script>
       
 </body>
 
