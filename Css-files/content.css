@@ -1,6 +1,7 @@
 * {
   margin: 0px;
   padding: 0px;
+
 }
 p{
   color: hsl(208, 7%,46%);
@@ -35,6 +36,9 @@ body {
   opacity: 0.4;
   z-index: -1;
   
+}
+.upper{
+  margin-top: -5rem;
 }
 
 /* Base navbar styles */
@@ -128,28 +132,73 @@ body {
   padding-top: 30px;
   padding-bottom: 210px;
 }
-.but {
-  border: 1.3px solid brown;
-  font-size: 1.1rem;
-  padding: 3px 25px;
-  border-radius: 4px;
-  font-family: "Bree Serif", serif;
-  color: brown;
-  background-color: hsl(20, 43%, 93%);
+.but{
+  background-color: transparent;
+  border: none;
 }
-.butt {
-  border: 1.3px solid brown;
+.but a {
+  text-decoration: none;
   font-size: 1.1rem;
-  padding: 3px 63px 5px 63px;
-  border-radius: 4px;
-  font-family: "Bree Serif", serif;
-  margin-top: 8px;
   background-color: brown;
   color: white;
+  border: 3px solid rgb(255, 255, 255);
+  padding: 10px;
+  border-radius: 10px;
+  display: inline-block;
+  
+  /* transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease; Smooth transition */
+}
+.but a:hover{
+  background-color: #ffffff;
+  color: brown;
+  border: 3px solid rgb(165, 42, 42);
+  transform: scale(1.01); 
+  /* animation: bounce 0.5s; */
+}
+input[type="submit"] {
+  background-color: brown;
+  color: brown !important ;
+  border: 3px solid rgb(255, 255, 255);
+  padding: 20px 10px !important;
+  border-radius: 10px;
+  /* transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease; */
+}
+
+input[type="submit"]:hover {
+  background-color: brown!important;
+  color: white!important;
+  border: 3.5px solid rgb(165, 42, 42);
+  transform: scale(1.01);
+  /* animation: bounce 0.5s; */
+}
+
+
+.butt {
+  text-decoration: none;
+  background-color: brown;
+  border: 3px solid rgb(255, 255, 255);
+  padding: 15px;
+  border-radius: 15px;
+  display: inline-block;
+  color: white;
+  /* transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease; Smooth transition */
 }
 
 .butt:hover {
-  background-color: hsl(304, 14%, 46%);
+  /* background-color: #ffffff; */
+  background-color: brown !important;
+  color:white !important;
+  border: 3px solid rgb(165, 42, 42);
+  transform: scale(1.01); 
+  /* animation: bounce 0.5s; */
+}
+@keyframes bounce {
+  0%, 100% {
+      transform: translateY(0); 
+  }
+  50% {
+      transform: translateY(-10px); 
+  }
 }
 
 .menu_items {
@@ -224,9 +273,15 @@ body {
   background-color: transparent;
   background-blend-mode:lighten;
   background-repeat: no-repeat;
-  background-size: cover;
+  /* background-size: cover; */
+ 
 }
 
+.cards{
+  height: 480px;
+  width: 480px;
+  margin-left: 2rem;
+}
 .second_cont{
   display: flex;
   padding: 40px;
@@ -238,13 +293,29 @@ body {
   justify-content: center;
 }
 
-.deals{
+div.deals {
   display: flex;
-  background-color: hsl(20, 43%, 93%);
-  border: 2px solid rgb(138, 37, 37);
-  border-radius: 10px;
+  border-radius: 15px;
   padding:15px 30px;
   margin:20px 50px;
+  text-decoration: none;
+  background-color: brown;
+  border: 3px solid rgb(255, 255, 255);
+  color: white !important;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+div.deals:hover{
+  background-color: #ffffff;
+  color: brown !important;
+  border: 3px solid rgb(165, 42, 42);
+  transform: scale(1.01); 
+  animation: bounce 0.5s;
+}
+.deals p a{
+  color: white !important;
+}
+.deals p a:hover{
+  color: brown !important;
 }
 
 .deals p{
@@ -263,20 +334,30 @@ body {
   padding-top: 400px;
 }
 .testimonal__container{
+  width: 100%;
   display: flex;
-  padding: 3rem;
+  justify-content: center;
+  /* flex-direction: column; */
+  /* padding: 3rem; */
+  margin-top: 2rem;
 }
 .testimonal__card{
   text-align: center;
-  padding:2rem 3rem 2.5rem;
+
   border:2px solid rgba(224, 224, 252, 0.678);
-  transition:border .4s,background-color .4s;
+  transition:border .4s background-color .4s;
   background-color: white;
   box-shadow: 0 0 10px rgba(224, 224, 252, 0.678);
   border: 1px solid rgb(186, 186, 201);
   padding:40px 30px ;
   margin: 5px;
   color:rgb(107, 107, 122);
+  /* margin-left: 3rem; */
+}
+.testimonal__card:hover{
+  transform: translateY(-10px);
+  transition: 0.5s;
+  box-shadow: 2px 2px 20px black;
 }
 .testimonal__image{
   width:100px;
@@ -290,6 +371,8 @@ body {
 .testimonal__description{
   margin-bottom: 1.25rem;
 }
+
+
 .section__title{
   text-align: center;
   font-size: 2rem;
@@ -346,25 +429,26 @@ label {
     font-weight: bold;
 }
 
-input,
-textarea {
-    height:30px;
-    width: 120%;
+input
+ {
+    height:40px;
+    width: 100%;
     padding: 2.5px;
     box-sizing: border-box;
     border-radius: 2px;
 }
 
 #butt{
-    background-color:rgb(66, 16, 16);
-    border-radius: 10px;
-    color: white;
-    border: 1px solid white ;
-    cursor: pointer;
+  background-color: brown;
+  color: white !important;
+  padding: 3px;
+  border: 1px solid white;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 #butt :hover {
-    background-color:hsl(304, 14%, 46%);
+  background-color: rgb(196, 89, 89);
 }
 
 .social-icons a{
@@ -436,6 +520,7 @@ textarea {
   position: relative;
 }
 
+
 .form-control {
         border-radius: 15px; /* Adjust the border radius */
         padding-left: 40px; /* Space for the icon */
@@ -451,3 +536,74 @@ textarea {
         transform: translateY(-50%); /* Center the icon vertically */
         color: gray; /* Icon color */
     }
+.input-icon input, 
+.input-icon textarea {
+      padding-left: 30px; /* Adjust padding to create space for the icon */
+}
+
+#contactForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 20rem;
+  height: max-content;
+}
+
+#contactForm input,
+#contactForm textarea {
+  width: 50%;
+  padding: 20px;
+  margin: 5px;
+  border-radius: 10px;
+  border: none;
+}
+
+#contactForm h3 {
+  height: 30px;
+  color: #141414;
+}
+#contactForm textarea {
+  height: 100px;
+  resize: none; 
+}
+
+#contactForm button {
+  padding: 10px 20px;
+  background-color:rgb(196, 74, 74);
+  color:rgb(15, 14, 14);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.added-to-cart {
+  position: absolute;
+  margin-top: -30px;
+  margin-left: 53px;
+  display: flex;
+  transition: opacity 0.5s ease, max-height 0.5s ease;
+  opacity: 0;
+}
+
+.check-mark{
+  width: 17px !important;
+  height : 17px !important;
+  font-size: 16.5px;
+}
+
+.js-display-added-to-cart {
+  opacity: 1;
+}
+
+#badgeCount {
+  position: relative;
+  top: -7px;
+  right: 1px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 5px 8px;
+  font-size: 12px;
+}

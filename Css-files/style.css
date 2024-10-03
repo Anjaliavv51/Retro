@@ -455,7 +455,7 @@ ul a{
 
 .foot_panel4{
     background-color: rgb(66, 16, 16);
-    color: white;
+    color: hsl(203, 30%, 26%);
     height: 160px;
     font-size: 0.9rem;
     text-align: center;
@@ -507,19 +507,21 @@ textarea {
 }
 
 #butt:hover {
-    background-color:rgb(196, 89, 89);
+    background-color: #ffffff;
+  color: brown !important;
+  border: 3px solid rgb(165, 42, 42);
+  transform: scale(1.01); 
+  animation: bounce 0.5s;
 }
 
 .social-icons a{
     font-size: 1.2rem;
     padding: 15px;
     text-decoration: none;
-    color: white;
+    color: hsl(203, 30%, 26%) ;
 }
-.fb{
-    color: #1877F2;
-    cursor: pointer;
-}
+
+
 
 .instagram{
     color: #dd4c8d;
@@ -777,3 +779,8 @@ input, textarea {
     }
 }
 
+
+fa-facebook:hover {
+    font-size: 2rem !important; /* Increase the size of the icon */
+    color: #4267B2;   /* Change the color to #4267B2 */
+}

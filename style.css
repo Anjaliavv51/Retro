@@ -15,25 +15,29 @@ body {
 }
 
 .navbar {
-  padding: 8px 0px;
-  height: 60px;
-  transition: background-color 0.3s, backdrop-filter 0.3s, color 0.3s; /* Added transitions for smooth color change */
-  backdrop-filter: blur(0); /* Initially no blur */
+  padding: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1030;
+  padding: 15px 0;
+  background-color: rgba(245, 190, 190, 0.7);
+  backdrop-filter: blur(8px);
+  transition: background-color 0.5s ease, backdrop-filter 0.5s ease;
 }
 
 .navbar a {
   text-decoration: none;
-  color: white;
+  color: #333;
   font-size: 1.3rem;
+  transition: color 0.3s ease,border-bottom 0.3s ease;
 }
 /* Navbar link hover effect */
-.navbar a:hover,
-.navbar.scrolled a:hover {
-  color :#fff;
-  border-bottom: 1px solid #fff; /* Add bottom border on hover */
-  border-top: 1px solid #fff; /* Add top border on hover */
+.navbar a:hover{
+  color: #fff;
+  border-bottom: 1px solid #fff;
 }
-s
+
+
 .navbar.fixed-top {
   position: fixed; 
   top: 0;
@@ -42,7 +46,7 @@ s
 }
 .navbar.scrolled {
   background-color: rgb(176, 63, 63); 
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(15px);
   color: #fff;
 }
 .intro_container {
@@ -83,19 +87,23 @@ s
   margin-top: 20px;
   background-color: brown;
   color: white;
-  border: 2px solid rgb(139, 36, 36);
-  width: 170px;
-  height: 35px;
-  border-radius: 4px;
+  border: 3px solid rgb(255, 255,255);
   font-size: 1.3rem;
   font-family: "Philosopher", sans-serif;
   padding-bottom: 4px;
+  text-decoration: none;
+  padding: 15px;
+  border-radius: 15px;
+  display: inline-block;
+  transition: transform 0.3s ease, background-color 0.3s
 }
 
 .intro_container button:hover {
-  background-color: white;
-  color: brown;
-  cursor: pointer;
+  background-color: #ffffff;
+  color: brown !important;
+  border: 3px solid rgb(165, 42, 42);
+  transform: scale(1.01); 
+  animation: bounce 0.5s;
 }
 
 .about_us {
@@ -308,19 +316,34 @@ s
 .service .box a {
   text-decoration: none;
   background-color: brown;
-  border: 2px solid rgb(224, 224, 252);
-  padding: 5px;
-  border-radius: 10px;
+  border: 3px solid rgb(224, 224, 252);
+  padding: 15px;
+  border-radius: 15px;
+  display: inline-block;
+  color: white;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
 }
 */
 
 /*
 .service .box a:hover {
-  background-color: hsl(304, 14%, 46%);
+  background-color: #ffffff;
+  color: brown !important;
+  border: 3px solid rgb(165, 42, 42);
+  transform: scale(1.01); 
+  animation: bounce 0.5s;
 }
 */
 
 
+@keyframes bounce {
+  0%, 100% {
+      transform: translateY(0); 
+  }
+  50% {
+      transform: translateY(-10px); 
+  }
+}
 .menu_container {
   background-color: hsl(20, 43%,93%);
   padding: 100px 0px 100px 0px;
@@ -343,21 +366,23 @@ s
 }
 
 .mainhead button {
-  border: 2px solid brown;
+  text-decoration: none;
   font-size: 1.4rem;
-  padding: 7px;
-  border-radius: 10px;
-  font-family: "Bree Serif", serif;
-  margin-bottom: 50px;
   background-color: brown;
+  border: 3px solid rgb(224, 224, 252);
+  padding: 15px;
+  border-radius: 15px;
+  display: inline-block;
   color: white;
+  transition: transform 0.3s ease, background-color 0.3s
 }
 
 .mainhead button:hover {
-  border: 2px solid brown;
-  color: hsl(304, 14%, 46%);
-  background-color: #f2f2f2;
-  cursor: pointer;
+  background-color: #ffffff;
+  color: brown !important;
+  border: 3px solid rgb(165, 42, 42);
+  transform: scale(1.01); 
+  animation: bounce 0.5s;
 }
 
 .menu_items {
@@ -588,6 +613,7 @@ ul a {
     justify-content: center;
 } */
 
+
 .foot_panel4 {
   background-color: rgb(66, 16, 16);
   color: white;
@@ -627,8 +653,8 @@ textarea {
 }
 
 #butt {
-  background-color: rgb(66, 16, 16);
-  color: white;
+  background-color: brown;
+  color: white !important;
   padding: 3px;
   border: 1px solid white;
   border-radius: 4px;
@@ -644,24 +670,63 @@ textarea {
   padding: 8px;
   margin: 15px;
   text-decoration: none;
-  color: white;
+  color: rgb(18, 16, 16);
 }
 
 .social-icons a:hover {
   color: brown;
-  background-color: hsl(20, 43%, 93%);
+  background-color: hsl(22, 76%, 85%);
+  border-radius: 10px;
+  transform: scale(1.5); /* Increase size */
+  transition: transform 0.3s ease; /* Smooth transition effect */
+}
+.fa-brands.fa-facebook:hover {
+  color: #3B5998 !important;
+}
+
+.fa-brands.fa-instagram:hover {
+  color: #D62976 !important;
+}
+
+.fa-brands.fa-x-twitter:hover {
+  color: #181e20 !important;
+  /* color: white; */
+}
+
+.social-icons a:hover {
+  /* color: brown; */
+  /* background-color: hsl(20, 43%, 93%); */
   border-radius: 50px;
 }
+
+.fa-facebook{
+  color: hsl(203, 30%, 26%);
+}
+
 .fa-facebook:hover {
+  
+  transform: scale(1.5);
   color:#3B5998;
+  transition: transform 0.2s ease, color 0.2s ease;
 }
 
+.fa-instagram{
+  color: hsl(203, 30%, 26%);
+}
 .fa-instagram:hover {
+  transform: scale(1.5);
   color:#D62976;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+.fa-x-twitter{
+  color: hsl(203, 30%, 26%);
+
 }
 
-.fa-twitter:hover {
-  color:#00B6F1;
+.fa-x-twitter:hover {
+  color:black;
+  transform: scale(1.5);
+  transition: transform 0.2s ease, color 0.2s ease;
 }
 
 #author {
@@ -837,7 +902,8 @@ padding-left:2px;
 }
 
 .contact_submit {
-  width: 30%;
+  width: 20%;
+
   color: white;
   background: linear-gradient(135deg,
       blue,
@@ -971,3 +1037,39 @@ padding-left:2px;
 }
 
 
+#contactForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 20rem;
+  height: max-content;
+}
+
+#contactForm input,
+#contactForm textarea {
+  width: 100%;
+  padding: 20px;
+  margin: 5px;
+  border-radius: 10px;
+  border: none;
+}
+
+#contactForm h3 {
+  height: 30px;
+  color: #141414;
+}
+#contactForm textarea {
+  height: 100px;
+  resize: none; 
+}
+
+#contactForm button {
+  padding: 10px 20px;
+  background-color:rgb(196, 74, 74);
+  color:rgb(15, 14, 14);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 5px;
+}
