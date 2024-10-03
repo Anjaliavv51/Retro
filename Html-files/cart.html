@@ -24,66 +24,80 @@
     rel="stylesheet">
   <style>
     /*Preloader CSS*/
-    #preloader {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: hsl(20, 43%, 93%);
-      /* Light background color */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      transition: opacity 2s ease-out, visibility 2s ease-out;
-      opacity: 1;
-      visibility: visible;
-      z-index: 9999;
-      /* Ensure the preloader is above all other content */
-    }
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: hsl(20, 43%, 93%); /* Light background color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 2s ease-out, visibility 2s ease-out;
+    opacity: 1;
+    visibility: visible;
+    z-index: 9999; /* Ensure the preloader is above all other content */
+}
 
 
-    /* When hidden, preloader transitions out */
-    #preloader.hidden {
-      opacity: 0;
-      visibility: hidden;
-    }
+/* When hidden, preloader transitions out */
+#preloader.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
 
-    #loader {
-      display: block;
-      position: relative;
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      border: 3px solid transparent;
-      border-top-color: hsl(304, 14%, 46%);
-      animation: spin 3s linear infinite;
-    }
+#loader {
+    display: block;
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: hsl(304, 14%, 46%);
+    animation: spin 3s linear infinite;
+}
 
-    #loader:before {
-      content: "";
-      position: absolute;
-      top: 5px;
-      left: 5px;
-      right: 5px;
-      bottom: 5px;
-      border-radius: 50%;
-      border: 3px solid transparent;
-      border-top-color: hsl(357, 37%, 62%);
-      animation: spin 2s linear infinite;
-    }
+#loader:before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: hsl(357, 37%, 62%);
+    animation: spin 2s linear infinite;
+}
 
-    #loader:after {
-      content: "";
-      position: absolute;
-      top: 15px;
-      left: 15px;
-      right: 15px;
-      bottom: 15px;
-      border-radius: 50%;
-      border: 3px solid transparent;
-      border-top-color: hsl(357, 93%, 84%);
-      animation: spin 1.5s linear infinite;
+#loader:after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: hsl(357, 93%, 84%);
+    animation: spin 1.5s linear infinite;
+}
+
+#badgeCount {
+  position: relative;
+  top: -7px;
+  right: 1px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 5px 8px;
+  font-size: 12px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
     }
 
     @keyframes spin {
@@ -247,44 +261,45 @@
 <body>
   <div id="preloader">
     <div id="loader"></div>
-  </div>
-  <div class="circle-container">
-    <div class="circle" style="background-color: rgb(255, 181, 107); left: 504px; top: 59px; scale: 1;"></div>
-    <div class="circle" style="background-color: rgb(253, 175, 105); left: 504px; top: 59px; scale: 0.95;"></div>
-    <div class="circle" style="background-color: rgb(248, 157, 99); left: 504px; top: 59px; scale: 0.9;"></div>
-    <div class="circle" style="background-color: rgb(245, 151, 97); left: 504px; top: 59px; scale: 0.85;"></div>
-    <div class="circle" style="background-color: rgb(239, 134, 94); left: 504px; top: 59px; scale: 0.8;"></div>
-    <div class="circle" style="background-color: rgb(236, 128, 93); left: 504px; top: 59px; scale: 0.75;"></div>
-    <div class="circle" style="background-color: rgb(227, 110, 92); left: 504px; top: 59px; scale: 0.7;"></div>
-    <div class="circle" style="background-color: rgb(223, 104, 92); left: 504px; top: 59px; scale: 0.65;"></div>
-    <div class="circle" style="background-color: rgb(213, 88, 92); left: 504px; top: 59px; scale: 0.6;"></div>
-    <div class="circle" style="background-color: rgb(209, 82, 92); left: 504px; top: 59px; scale: 0.55;"></div>
-    <div class="circle" style="background-color: rgb(197, 65, 93); left: 504px; top: 59px; scale: 0.5;"></div>
-    <div class="circle" style="background-color: rgb(192, 59, 93); left: 504px; top: 59px; scale: 0.45;"></div>
-    <div class="circle" style="background-color: rgb(178, 44, 94); left: 504px; top: 59px; scale: 0.4;"></div>
-    <div class="circle" style="background-color: rgb(172, 38, 94); left: 504px; top: 59px; scale: 0.35;"></div>
-    <div class="circle" style="background-color: rgb(156, 21, 95); left: 504px; top: 59px; scale: 0.3;"></div>
-    <div class="circle" style="background-color: rgb(149, 15, 95); left: 504px; top: 59px; scale: 0.25;"></div>
-    <div class="circle" style="background-color: rgb(131, 0, 96); left: 504px; top: 59px; scale: 0.2;"></div>
-    <div class="circle" style="background-color: rgb(124, 0, 96); left: 504px; top: 59px; scale: 0.15;"></div>
-    <div class="circle" style="background-color: rgb(104, 0, 96); left: 504px; top: 59px; scale: 0.1;"></div>
-    <div class="circle" style="background-color: rgb(96, 0, 95); left: 504px; top: 59px; scale: 0.05;"></div>
-  </div>
-  <div class="head_container" style="background-color: transparent;font-family: Georgia;">
-    <header>
-      <nav class="navbar">
-        <ul id="header-items">
-          <li><a href="../Home.html" style="color: black;font-family: var(--ff-philosopher);">Home</a></li>
-          <li><a href="menu.html" style="color: black;font-family: var(--ff-philosopher);">About</a></li>
-          <li><a href="services.html" style="color: black;font-family: var(--ff-philosopher);">Services</a></li>
-          <li><a href="contact.html" style="color: black;font-family: var(--ff-philosopher);">Contact us</a></li>
-          <li><a href="cart.html" style="color: black;font-family: var(--ff-philosopher);">Cart</a></li>
-        </ul>
-      </nav>
-    </header>
+</div>
+    <div class="circle-container">
+        <div class="circle" style="background-color: rgb(255, 181, 107); left: 504px; top: 59px; scale: 1;"></div>
+        <div class="circle" style="background-color: rgb(253, 175, 105); left: 504px; top: 59px; scale: 0.95;"></div>
+        <div class="circle" style="background-color: rgb(248, 157, 99); left: 504px; top: 59px; scale: 0.9;"></div>
+        <div class="circle" style="background-color: rgb(245, 151, 97); left: 504px; top: 59px; scale: 0.85;"></div>
+        <div class="circle" style="background-color: rgb(239, 134, 94); left: 504px; top: 59px; scale: 0.8;"></div>
+        <div class="circle" style="background-color: rgb(236, 128, 93); left: 504px; top: 59px; scale: 0.75;"></div>
+        <div class="circle" style="background-color: rgb(227, 110, 92); left: 504px; top: 59px; scale: 0.7;"></div>
+        <div class="circle" style="background-color: rgb(223, 104, 92); left: 504px; top: 59px; scale: 0.65;"></div>
+        <div class="circle" style="background-color: rgb(213, 88, 92); left: 504px; top: 59px; scale: 0.6;"></div>
+        <div class="circle" style="background-color: rgb(209, 82, 92); left: 504px; top: 59px; scale: 0.55;"></div>
+        <div class="circle" style="background-color: rgb(197, 65, 93); left: 504px; top: 59px; scale: 0.5;"></div>
+        <div class="circle" style="background-color: rgb(192, 59, 93); left: 504px; top: 59px; scale: 0.45;"></div>
+        <div class="circle" style="background-color: rgb(178, 44, 94); left: 504px; top: 59px; scale: 0.4;"></div>
+        <div class="circle" style="background-color: rgb(172, 38, 94); left: 504px; top: 59px; scale: 0.35;"></div>
+        <div class="circle" style="background-color: rgb(156, 21, 95); left: 504px; top: 59px; scale: 0.3;"></div>
+        <div class="circle" style="background-color: rgb(149, 15, 95); left: 504px; top: 59px; scale: 0.25;"></div>
+        <div class="circle" style="background-color: rgb(131, 0, 96); left: 504px; top: 59px; scale: 0.2;"></div>
+        <div class="circle" style="background-color: rgb(124, 0, 96); left: 504px; top: 59px; scale: 0.15;"></div>
+        <div class="circle" style="background-color: rgb(104, 0, 96); left: 504px; top: 59px; scale: 0.1;"></div>
+        <div class="circle" style="background-color: rgb(96, 0, 95); left: 504px; top: 59px; scale: 0.05;"></div>
+    </div>
+    <div class="head_container" style="background-color: transparent;font-family: Georgia;">
+        <header>
+            <nav class="navbar">
+                <ul id="header-items">
+                    <li><a href="../index.html" style="color: black;font-family: var(--ff-philosopher);">Home</a></li>
+                    <li><a href="menu.html" style="color: black;font-family: var(--ff-philosopher);">About</a></li>
+                    <li><a href="services.html" style="color: black;font-family: var(--ff-philosopher);">Services</a></li>
+                    <li><a href="contact.html" style="color: black;font-family: var(--ff-philosopher);">Contact us</a></li>
+                    <li><a href="cart.html" style="color: black;font-family: var(--ff-philosopher);">Cart <span class="badge-count" id="badgeCount"></span></a></li>
+                </ul>
+            </nav>
+        </header>
 
-    <div class="mainhead">
-      <h1 style="color: black;font-family: var(--ff-philosopher);">C A R T</h1>
+        <div class="mainhead">
+            <h1 style="color: black;font-family: var(--ff-philosopher);">C A R T</h1>
+        </div>
     </div>
   </div>
 
@@ -418,7 +433,7 @@
       </div>
     </div>
   </footer>
-  <script src="cart.js">
+    <script src="cart.js"></script>
 
   </script>
 

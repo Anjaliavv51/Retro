@@ -564,3 +564,32 @@ input
   margin-top: 5px;
 }
 
+.added-to-cart {
+  position: absolute;
+  margin-top: -30px;
+  margin-left: 53px;
+  display: flex;
+  transition: opacity 0.5s ease, max-height 0.5s ease;
+  opacity: 0;
+}
+
+.check-mark{
+  width: 17px !important;
+  height : 17px !important;
+  font-size: 16.5px;
+}
+
+.js-display-added-to-cart {
+  opacity: 1;
+}
+
+#badgeCount {
+  position: relative;
+  top: -7px;
+  right: 1px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 5px 8px;
+  font-size: 12px;
+}
