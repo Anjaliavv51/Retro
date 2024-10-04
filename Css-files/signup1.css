@@ -32,10 +32,11 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
+  overflow: hidden; /* Ensure nothing overflows from the flexbox */
 }
 
 .card-login {
-  width: 100%; /* Use full width of parent */
+  width: calc(100% - 40px); /* Full width minus padding */
   max-width: 400px; /* Max width for better layout */
   padding: 30px;
   border-radius: var(--border-radius);
@@ -44,6 +45,7 @@ body {
   transition: transform var(--transition-speed), box-shadow var(--transition-speed);
   display: flex; /* Flex to stack elements */
   flex-direction: column; /* Column layout for the card */
+  overflow: hidden; /* Added to ensure no content spills out */
 }
 
 .card-login:hover {
@@ -81,11 +83,12 @@ body {
   transition: border var(--transition-speed), box-shadow var(--transition-speed);
   font-size: 1rem;
   color: #333;
+  box-sizing: border-box; /* Ensures padding doesn't affect input width */
 }
 
 .textfield > input:focus {
   border-color: var(--input-border);
-  box-shadow: 0 0 5px var(--input-border); /* Subtle glow effect */
+  box-shadow: none; /* Remove unwanted glow or shadow */
 }
 
 .btn-login, #google-login {
@@ -117,9 +120,11 @@ body {
 @media only screen and (max-width: 600px) {
   .main-login {
     flex-direction: column;
+    padding: 0 20px; /* Added padding to avoid edge overflow */
   }
-  
+
   .card-login {
-    width: 90%;
+    width: 100%; /* Full width for mobile */
+    padding: 20px; /* Adjust padding */
   }
 }
