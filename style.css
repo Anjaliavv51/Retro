@@ -15,25 +15,29 @@ body {
 }
 
 .navbar {
-  padding: 8px 0px;
-  height: 60px;
-  transition: background-color 0.3s, backdrop-filter 0.3s, color 0.3s; /* Added transitions for smooth color change */
-  backdrop-filter: blur(0); /* Initially no blur */
+  padding: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1030;
+  padding: 15px 0;
+  background-color: rgba(245, 190, 190, 0.7);
+  backdrop-filter: blur(8px);
+  transition: background-color 0.5s ease, backdrop-filter 0.5s ease;
 }
 
 .navbar a {
   text-decoration: none;
-  color: white;
+  color: #333;
   font-size: 1.3rem;
+  transition: color 0.3s ease,border-bottom 0.3s ease;
 }
 /* Navbar link hover effect */
-.navbar a:hover,
-.navbar.scrolled a:hover {
-  color :#fff;
-  border-bottom: 1px solid #fff; /* Add bottom border on hover */
-  border-top: 1px solid #fff; /* Add top border on hover */
+.navbar a:hover{
+  color: #fff;
+  border-bottom: 1px solid #fff;
 }
-s
+
+
 .navbar.fixed-top {
   position: fixed; 
   top: 0;
@@ -42,7 +46,7 @@ s
 }
 .navbar.scrolled {
   background-color: rgb(176, 63, 63); 
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(15px);
   color: #fff;
 }
 .intro_container {
@@ -83,19 +87,23 @@ s
   margin-top: 20px;
   background-color: brown;
   color: white;
-  border: 2px solid rgb(139, 36, 36);
-  width: 170px;
-  height: 35px;
-  border-radius: 4px;
+  border: 3px solid rgb(255, 255,255);
   font-size: 1.3rem;
   font-family: "Philosopher", sans-serif;
   padding-bottom: 4px;
+  text-decoration: none;
+  padding: 15px;
+  border-radius: 15px;
+  display: inline-block;
+  transition: transform 0.3s ease, background-color 0.3s
 }
 
 .intro_container button:hover {
-  background-color: white;
-  color: brown;
-  cursor: pointer;
+  background-color: #ffffff;
+  color: brown !important;
+  border: 3px solid rgb(165, 42, 42);
+  transform: scale(1.01); 
+  animation: bounce 0.5s;
 }
 
 .about_us {
@@ -111,7 +119,7 @@ s
 }
 
 #about .box {
-  border: 2px solid brown;
+  border: 2px solid #000000;
   padding: 34px;
   margin: 2px 55px;
   border-radius: 28px;
@@ -154,9 +162,95 @@ s
 }
 
 .service_container {
+        background-color: hsl(20, 43%, 93%);
+        padding: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+  border: 0.5px solid black;
+    }
+
+    .service {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        max-width: 1200px;
+        width: 100%;
+    }
+
+    .column {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    /* Text Column - 60% */
+    .service_text {
+        flex: 0 0 49%;
+        font-family: var(--ff-poppins);
+        color: hsl(203, 30%, 26%);
+    }
+
+    .service_text h1 {
+        font-family: var(--ff-philosopher);
+        font-size: 3rem;
+        line-height: 1.2;
+        margin-bottom: 15px;
+    }
+
+    .service_text p {
+        font-family: var(--ff-poppins);
+        font-size: 1.2rem;
+        color: hsl(208, 7%, 46%);
+        margin-bottom: 20px;
+    }
+
+    /* Buttons Column - 40% */
+    .service_buttons {
+        flex: 0 0 40%;
+    }
+
+    .button_row {
+        display: flex;
+        justify-content: space-between;
+      /*border: 1px solid black;*/
+        gap: 20px;
+    }
+
+    .box {
+        text-align: center;
+        flex: 1;
+    }
+
+    .box h2 {
+        font-family: var(--ff-philosopher);
+        color: hsl(357, 82%, 35%);
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    .order_btn {
+        font-family: var(--ff-poppins);
+        background-color: hsl(357, 82%, 35%);
+        color: white;
+        padding: 12px 30px;
+        font-size: 1rem;
+        text-decoration: none;
+        border-radius: 10px;
+        transition: background-color 0.3s ease;
+    }
+
+    .order_btn:hover {
+        background-color: hsl(357, 82%, 45%);
+    }
+    
+
+
+/*
+.service_container {
   display: flex;
   flex-direction: column;
-  /* padding: 3px 200px; */
+   padding: 3px 200px; 
   height: 550px;
   width: auto;
   justify-content: center;
@@ -164,6 +258,7 @@ s
   color: white;
   background-color: transparent;
 }
+*/
 
 .service_container:before {
   background-color: transparent;
@@ -172,7 +267,6 @@ s
 
   /*  
     height: 560px;
-    */
   height: 800px;
   width: 100%;
   /* justify-items: center; */
@@ -181,45 +275,75 @@ s
   /* background-repeat: no-repeat; */
 }
 
+/*
 .service {
   display: flex;
   padding: 20px;
   box-sizing: fixed;
 }
+*/
 
+/*
 .service .box_main {
   padding-left: 20px;
   padding-right: 40px;
 }
+*/
 
+/*
 .service .box_main h1 {
   font-size: 4.5rem;
   font-family: "Oswald", sans-serif;
 }
+*/
+/*
 
 .service .box_main p {
   font-family: "Oswald", sans-serif;
 }
+*/
+/*
 
 .service .box {
   padding: 140px 20px;
-  /* border:2px solid rgb(224, 224, 252); */
+   border:2px solid rgb(224, 224, 252); 
   text-align: center;
   font-size: 1.3rem;
 }
+*/
 
+/*
 .service .box a {
   text-decoration: none;
   background-color: brown;
-  border: 2px solid rgb(224, 224, 252);
-  padding: 5px;
-  border-radius: 10px;
+  border: 3px solid rgb(224, 224, 252);
+  padding: 15px;
+  border-radius: 15px;
+  display: inline-block;
+  color: white;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
 }
+*/
 
+/*
 .service .box a:hover {
-  background-color: hsl(304, 14%, 46%);
+  background-color: #ffffff;
+  color: brown !important;
+  border: 3px solid rgb(165, 42, 42);
+  transform: scale(1.01); 
+  animation: bounce 0.5s;
 }
+*/
 
+
+@keyframes bounce {
+  0%, 100% {
+      transform: translateY(0); 
+  }
+  50% {
+      transform: translateY(-10px); 
+  }
+}
 .menu_container {
   background-color: hsl(20, 43%,93%);
   padding: 100px 0px 100px 0px;
@@ -242,21 +366,23 @@ s
 }
 
 .mainhead button {
-  border: 2px solid brown;
+  text-decoration: none;
   font-size: 1.4rem;
-  padding: 7px;
-  border-radius: 10px;
-  font-family: "Bree Serif", serif;
-  margin-bottom: 50px;
   background-color: brown;
+  border: 3px solid rgb(224, 224, 252);
+  padding: 15px;
+  border-radius: 15px;
+  display: inline-block;
   color: white;
+  transition: transform 0.3s ease, background-color 0.3s
 }
 
 .mainhead button:hover {
-  border: 2px solid brown;
-  color: hsl(304, 14%, 46%);
-  background-color: #f2f2f2;
-  cursor: pointer;
+  background-color: #ffffff;
+  color: brown !important;
+  border: 3px solid rgb(165, 42, 42);
+  transform: scale(1.01); 
+  animation: bounce 0.5s;
 }
 
 .menu_items {
@@ -487,6 +613,7 @@ ul a {
     justify-content: center;
 } */
 
+
 .foot_panel4 {
   background-color: rgb(66, 16, 16);
   color: white;
@@ -526,8 +653,8 @@ textarea {
 }
 
 #butt {
-  background-color: rgb(66, 16, 16);
-  color: white;
+  background-color: brown;
+  color: white !important;
   padding: 3px;
   border: 1px solid white;
   border-radius: 4px;
@@ -543,24 +670,63 @@ textarea {
   padding: 8px;
   margin: 15px;
   text-decoration: none;
-  color: white;
+  color: brown !important;
 }
 
 .social-icons a:hover {
   color: brown;
-  background-color: hsl(20, 43%, 93%);
+  background-color: hsl(22, 76%, 85%);
+  border-radius: 10px;
+  transform: scale(1.5); /* Increase size */
+  transition: transform 0.3s ease; /* Smooth transition effect */
+}
+.fa-brands.fa-facebook:hover {
+  color: #3B5998 !important;
+}
+
+.fa-brands.fa-instagram:hover {
+  color: #D62976 !important;
+}
+
+.fa-brands.fa-x-twitter:hover {
+  color: #181e20 !important;
+  /* color: white; */
+}
+
+.social-icons a:hover {
+  /* color: brown; */
+  /* background-color: hsl(20, 43%, 93%); */
   border-radius: 50px;
 }
+
+.fa-facebook{
+  color: hsl(203, 30%, 26%);
+}
+
 .fa-facebook:hover {
+  
+  transform: scale(1.5);
   color:#3B5998;
+  transition: transform 0.2s ease, color 0.2s ease;
 }
 
+.fa-instagram{
+  color: hsl(203, 30%, 26%);
+}
 .fa-instagram:hover {
+  transform: scale(1.5);
   color:#D62976;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+.fa-x-twitter{
+  color: hsl(203, 30%, 26%);
+
 }
 
-.fa-twitter:hover {
-  color:#00B6F1;
+.fa-x-twitter:hover {
+  color:black;
+  transform: scale(1.5);
+  transition: transform 0.2s ease, color 0.2s ease;
 }
 
 #author {
@@ -592,55 +758,22 @@ textarea {
 }
 
 /* responsiveness  */
+@media (max-width: 768px) {
+        .service {
+            flex-direction: column;
+            text-align: center;
+        }
 
-@media screen and (max-width: 1120px) {
-  #about {
-    /* margin: 34px; */
-    flex-direction: column-reverse;
-  }
+        .service_text, .service_buttons {
+            flex: 1 1 100%;
+        }
 
-  .service {
-    flex-direction: column;
-    padding: 5px;
-    /* box-sizing: fixed; */
-  }
+        .button_row {
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
 
-  .service .box {
-    padding: 20px 20px;
-    /* border: 2px solid rgb(224, 224, 252); */
-    text-align: center;
-    font-size: 1.3rem;
-  }
-
-  .service_container {
-    height: fit-content;
-    /* height: 1000px; */
-  }
-
-  .service .box_main h1 {
-    font-size: 3.5rem;
-  }
-
-  .service_container:before {
-    /*  
-        height: 560px;
-        */
-    /* height: 800px; */
-    /* height: fit-content; */
-    background-size: cover;
-    width: 100%;
-    /* background-repeat: no-repeat; */
-    /* justify-items: center; */
-    opacity: 0.4;
-    z-index: -1;
-    /* background-repeat: no-repeat; */
-  }
-
-  .menu_items {
-    flex-direction: column;
-    align-items: center;
-  }
-}
 
 @media screen and (max-width: 780px) {
   .app_download {
@@ -769,7 +902,8 @@ padding-left:2px;
 }
 
 .contact_submit {
-  width: 30%;
+  width: 20%;
+
   color: white;
   background: linear-gradient(135deg,
       blue,
@@ -903,3 +1037,39 @@ padding-left:2px;
 }
 
 
+#contactForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 20rem;
+  height: max-content;
+}
+
+#contactForm input,
+#contactForm textarea {
+  width: 100%;
+  padding: 20px;
+  margin: 5px;
+  border-radius: 10px;
+  border: none;
+}
+
+#contactForm h3 {
+  height: 30px;
+  color: #141414;
+}
+#contactForm textarea {
+  height: 100px;
+  resize: none; 
+}
+
+#contactForm button {
+  padding: 10px 20px;
+  background-color:rgb(196, 74, 74);
+  color:rgb(15, 14, 14);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 5px;
+}

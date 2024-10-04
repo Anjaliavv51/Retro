@@ -432,9 +432,18 @@ s
   justify-content: space-evenly;
 }
 
+
 .foot-panel2 ul {
   margin-top: 20px;
 }
+
+.foot_panel4{
+    background-color: rgb(66, 16, 16);
+    color: hsl(203, 30%, 26%);
+    height: 160px;
+    font-size: 0.9rem;
+    text-align: center;
+
 
 ul p {
   font-weight: 700;
@@ -512,6 +521,26 @@ textarea {
   color: brown;
   background-color: hsl(20, 43%, 93%);
   border-radius: 50px;
+
+    background-color: #ffffff;
+  color: brown !important;
+  border: 3px solid rgb(165, 42, 42);
+  transform: scale(1.01); 
+  animation: bounce 0.5s;
+}
+
+.social-icons a{
+    font-size: 1.2rem;
+    padding: 15px;
+    text-decoration: none;
+    color: brown !important ;
+}
+
+
+
+.instagram{
+    color: #dd4c8d;
+    cursor: pointer
 }
 .fa-facebook:hover {
   color:#3B5998;
@@ -831,4 +860,11 @@ padding-left:2px;
     }
 }
 
+
+
+
+fa-facebook:hover {
+    font-size: 2rem !important; /* Increase the size of the icon */
+    color: #4267B2;   /* Change the color to #4267B2 */
+}
 

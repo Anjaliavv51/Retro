@@ -86,6 +86,10 @@ It is an online platform which enables you to get information about your vintage
    ```
 9. **Create a Pull Request:**
    Go to the GitHub page of your forked repository. You should see a prompt to create a pull request (PR). Click on it, compare the changes, and create the PR.
+10. **Update Branch**
+    Always remember to update the branch by clikcing below sync fork in your forked repo , which is loctaed in your github repo's.
+    ![image](https://github.com/user-attachments/assets/2ada077c-5d49-4d85-8a92-6b687b50900e)
+
 <br><br>
 
 
@@ -101,15 +105,15 @@ To contribute to the Retro repository using GitHub Desktop, follow these steps:
 <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Axe.png" width="20" height="20" >Submitting a fix<br>
 <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/tarikul-islam-anik/main/assets/images/Rocket.png" width="20" height="20" >Proposing new features
 
+To get started with contributing, please follow the steps outlined in the [Contributing.md](Contributing.md).
+
 <div align="center">
   <h2 style="font-size:3rem;">Our Contributors <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Red%20Heart.png" alt="Red Heart" width="40" height="40" /></h2>
   <h3>Thank you for contributing to our repository</h3>
-
-<a href="https://github.com/Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-/graphs/contributors">
-<img src="https://contributors-img.web.app/image?repo=Anjaliavv51/Retro"/>
+<a href="https://github.com/anjaliavv51/Retro/graphs/contributors">
+<img src="https://contributors-img.web.app/image?repo=anjaliavv51/Retro"/>
 
   </a>
-
 <p style="font-family:var(--ff-philosopher);font-size:3rem;"><b> Show some <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Red%20Heart.png" alt="Red Heart" width="40" height="40" /> by starring this awesome repository!
 
 </div>
