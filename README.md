@@ -86,6 +86,10 @@ It is an online platform which enables you to get information about your vintage
    ```
 9. **Create a Pull Request:**
    Go to the GitHub page of your forked repository. You should see a prompt to create a pull request (PR). Click on it, compare the changes, and create the PR.
+10. **Update Branch**
+    Always remember to update the branch by clikcing below sync fork in your forked repo , which is loctaed in your github repo's.
+    ![image](https://github.com/user-attachments/assets/2ada077c-5d49-4d85-8a92-6b687b50900e)
+
 <br><br>
 
 
