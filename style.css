@@ -1073,3 +1073,6 @@ padding-left:2px;
   cursor: pointer;
   margin-top: 5px;
 }
+.foot-panel2 ul a:hover{
+    color: hsl(357, 82%, 35%) !important;
+}
