@@ -241,7 +241,7 @@ body{
       <div id="loader"></div>
     </div>
 
-    <header style=" font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%);position: fixed; width: 100%; top: 0; background-color:rgba(245, 190, 190, 0.7) ; z-index: 1000;">
+    <header style=" font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%); background-color:rgba(245, 190, 190, 0.7) ;">
         <nav class="navbarbg" style="background-color: transparent;border-bottom-left-radius: 100px;border-bottom-right-radius: 100px;">
             <ul id="header-items">
                 <li><a href="../index.html" style="color: hsl(203, 30%, 26%);">Home</a></li>
@@ -333,7 +333,7 @@ body{
     -->
   
 
-<section style= "font-family: (--ff-philosopher);color: hsl(203, 30%, 26%); margin-top: 5rem;">
+<section style= "font-family: (--ff-philosopher);color: hsl(203, 30%, 26%); margin-top: 4rem;">
     <div class="position-relative overflow-hidden p-0 m-0" style="background-color: transparent;">
         <div class="container">
             <div class="text-center mt-5">
@@ -351,7 +351,7 @@ body{
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label for="form_email" style="font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%);">Email *</label>
+                                                    <label for="form_email" >Email *</label>
                                                     <div class="input-icon">
                                                         <i class="fas fa-envelope"></i>
                                                         <input id="form_email" type="email" name="email" class="form-control"
@@ -362,7 +362,7 @@ body{
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label for="form_phone" style="font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%);">Phone number *</label>
+                                                    <label for="form_phone" ">Phone number *</label>
                                                     <div class="input-icon">
                                                         <i class="fas fa-phone"></i>
                                                         <input id="form_phone" type="tel" name="phone" class="form-control"
@@ -375,7 +375,7 @@ body{
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label for="form_email" style="font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%);">Name *</label>
+                                                    <label for="form_email">Name *</label>
                                                     <div class="input-icon">
                                                         <i class="fas fa-user"></i>
                                                         <input id="form_name" type="text" name="name" class="form-control"
@@ -388,7 +388,7 @@ body{
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="form-group">
-                                                    <label for="form_message" style="font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%);">Message *</label>
+                                                    <label for="form_message">Message *</label>
                                                         
                                                         <textarea id="form_message" name="message" class="form-control"
                                                             placeholder="Write your message here." style="height: 100px; width: 100%;" required="required"
@@ -396,11 +396,12 @@ body{
                                                     
                                                 </div>
                                             </div>
-                                            <div class="col-md-4 mt-4">
-                                                <input type="submit" class="btn btn-send btn-block"
-                                                    value="Send Message" style="background-color: brown; color: black; text-align: center; font-family: var(--ff-philosopher); padding: 12px 0; border:none; border-radius: 5px; height: 50px; line-height: 26px;">
-                                            </div>
+                                            
                                         </div>
+                                        <button id="butt" type="submit" 
+                    style="width: 50%; padding: 10px; background-color: brown;  border: none; border-radius: 10px; cursor: pointer; margin-top: 2rem;">
+                Send Message
+            </button>
                                     </div>
                                 </form>
                             </div>
