@@ -1,225 +1,335 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Retro</title>
-  <link rel="shortcut icon" type="image/x-icon" href="../Favicon image/favicon-32x32.png">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: Arial, sans-serif;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpath fill='%23ffb9b0' d='M486 705.8c-109.3-21.8-223.4-32.2-335.3-19.4C99.5 692.1 49 703 0 719.8V800h843.8c-115.9-33.2-230.8-68.1-347.6-92.2C492.8 707.1 489.4 706.5 486 705.8z'/%3E%3Cpath fill='%23ffc1b7' d='M1600 0H0v719.8c49-16.8 99.5-27.8 150.7-33.5c111.9-12.7 226-2.4 335.3 19.4c3.4 0.7 6.8 1.4 10.2 2c116.8 24 231.7 59 347.6 92.2H1600V0z'/%3E%3Cpath fill='%23ffc8bf' d='M478.4 581c3.2 0.8 6.4 1.7 9.5 2.5c196.2 52.5 388.7 133.5 593.5 176.6c174.2 36.6 349.5 29.2 518.6-10.2V0H0v574.9c52.3-17.6 106.5-27.7 161.1-30.9C268.4 537.4 375.7 554.2 478.4 581z'/%3E%3Cpath fill='%23ffcfc6' d='M0 0v429.4c55.6-18.4 113.5-27.3 171.4-27.7c102.8-0.8 203.2 22.7 299.3 54.5c3 1 5.9 2 8.9 3c183.6 62 365.7 146.1 562.4 192.1c186.7 43.7 376.3 34.4 557.9-12.6V0H0z'/%3E%3Cpath fill='%23FFD6CE' d='M181.8 259.4c98.2 6 191.9 35.2 281.3 72.1c2.8 1.1 5.5 2.3 8.3 3.4c171 71.6 342.7 158.5 531.3 207.7c198.8 51.8 403.4 40.8 597.3-14.8V0H0v283.2C59 263.6 120.6 255.7 181.8 259.4z'/%3E%3Cpath fill='%23ffdcd4' d='M1600 0H0v136.3c62.3-20.9 127.7-27.5 192.2-19.2c93.6 12.1 180.5 47.7 263.3 89.6c2.6 1.3 5.1 2.6 7.7 3.9c158.4 81.1 319.7 170.9 500.3 223.2c210.5 61 430.8 49 636.6-16.6V0z'/%3E%3Cpath fill='%23ffe1d9' d='M454.9 86.3C600.7 177 751.6 269.3 924.1 325c208.6 67.4 431.3 60.8 637.9-5.3c12.8-4.1 25.4-8.4 38.1-12.9V0H288.1c56 21.3 108.7 50.6 159.7 82C450.2 83.4 452.5 84.9 454.9 86.3z'/%3E%3Cpath fill='%23ffe6df' d='M1600 0H498c118.1 85.8 243.5 164.5 386.8 216.2c191.8 69.2 400 74.7 595 21.1c40.8-11.2 81.1-25.2 120.3-41.7V0z'/%3E%3Cpath fill='%23ffebe4' d='M1397.5 154.8c47.2-10.6 93.6-25.3 138.6-43.8c21.7-8.9 43-18.8 63.9-29.5V0H643.4c62.9 41.7 129.7 78.2 202.1 107.4C1020.4 178.1 1214.2 196.1 1397.5 154.8z'/%3E%3Cpath fill='%23FFF0EA' d='M1315.3 72.4c75.3-12.6 148.9-37.1 216.8-72.4h-723C966.8 71 1144.7 101 1315.3 72.4z'/%3E%3C/g%3E%3C/svg%3E");
-      background-size: cover;
-      background-attachment: fixed;
-    }
-    .container {
-      max-width: 800px;
-      margin-top: 100px;
-      margin-bottom: 100px;
-      margin-left: 350px;
-      margin-right: 10px;
-      padding: 20px;
-      background-color: #fff;
-      border-radius: 10px;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    }
-    h1 {
-      text-align: center;
-      margin-bottom: 20px;
-      color: #333;
-    }
-    form {
-      padding: 30px;
-      border-radius: 8px;
-      background-color: #f9f9f9;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-    h3 {
-      font-size: 24px;
-      margin-bottom: 20px;
-      color: #333;
-    }
-    hr {
-      border: none;
-      border-top: 1px solid #ddd;
-      margin: 20px 0;
-    }
-    label {
-      display: block;
-      margin-bottom: 5px;
-      font-weight: bold;
-    }
-    input[type="text"],
-    input[type="email"] {
-      width: calc(100% - 20px);
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      margin-bottom: 15px;
-    }
-    input[type="radio"] {
-      margin-right: 5px;
-    }
-    button {
-      background-color: #FFBDB4;
-      border: none;
-      color: white;
-      padding: 15px 60px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      border-radius: 5px;
-      cursor: pointer;
-      margin-top: 20px;
-      width: 100%;
-      max-width: 200px;
-      transition: background-color 0.3s;
-    }
-    button:hover {
-      background-color: white;
-      color: black;
-    }
-    .payment-method {
-      margin-bottom: 20px;
-    }
-    .payment-method label {
-      font-weight: bold;
-    }
-    .payment-method div {
-      margin-left: 20px;
-    }
-    .coupon-section {
-      margin-bottom: 20px;
-    }
-    .coupon-section input[type="text"] {
-      width: calc(100% - 110px);
-      display: inline-block;
-    }
-    .coupon-section button {
-      width: auto;
-      margin-left: 10px;
-      padding: 10px 20px;
-      max-width: none;
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <h1>Secure Payment Page</h1>
-    <form action="cart.html" method="post" id="paymentForm">
-      <!--h3 id="totalPriceDisplay">Total Price: $100</h3-->
-      <!--script>localStorage.setItem('totalPrice', total)</script-->
-      <hr>
-      <div class="coupon-section">
-        <h2>Apply Coupon Code</h2>
-        <input type="text" id="couponCode" placeholder="Enter coupon code">
-        <button type="button" id="applyCouponBtn">Apply</button>
-      </div>
-      <hr>
-      <h2>Choose Payment Method</h2>
-      <div class="payment-method">
-        <input type="radio" id="credit_card" name="payment_method" value="credit_card" checked>
-        <label for="credit_card">Credit Card</label>
-        <div id="credit_card_fields">
-          <h2>Credit Card Information</h2>
-          <label for="card_number">Credit Card Number:</label>
-          <input type="text" id="card_number" name="card_number" required>
-          <br>
-          <label for="expiry_date">Expiry Date (MM/YY):</label>
-          <input type="text" id="expiry_date" name="expiry_date" required maxlength="5">
-          <br>
-          <label for="cvv">CVV:</label>
-          <input type="text" id="cvv" name="cvv" required maxlength="3">
-          <br>
-        </div>
-      </div>
-      <div class="payment-method">
-        <input type="radio" id="phonepe" name="payment_method" value="phonepe">
-        <label for="phonepe">Phone Pe</label>
-        <div id="phonepeDetails" style="display: none;">
-          <h2>Phone Pe Information</h2>
-          <label for="phonepe_upi">UPI ID:</label>
-          <input type="text" id="phonepe_upi" name="phonepe_upi" required>
-          <br>
-        </div>
-      </div>
-      <div class="payment-method">
-        <input type="radio" id="googlepay" name="payment_method" value="googlepay">
-        <label for="googlepay">Google Pay</label>
-        <div id="googlepayDetails" style="display: none;">
-          <h2>Google Pay Information</h2>
-          <label for="googlepay_upi">UPI ID:</label>
-          <input type="text" id="googlepay_upi" name="googlepay_upi" required>
-          <br>
-        </div>
-      </div>
-      <div class="payment-method">
-        <input type="radio" id="upi" name="payment_method" value="upi">
-        <label for="upi">Other UPI ID</label>
-        <div id="upiDetails" style="display: none;">
-          <h2>UPI ID Information</h2>
-          <label for="upi_id">UPI ID:</label>
-          <input type="text" id="upi_id" name="upi_id" required>
-          <br>
-        </div>
-      </div>
-      <hr>
-      <button type="submit">Proceed to Payment</button>
-    </form>
-  </div>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      var totalPrice = localStorage.getItem('totalPrice');
-      document.getElementById('totalPriceDisplay').innerHTML = `Total Price: ₹${totalPrice}.00`;
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Retro - Secure Payment</title>
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="../Favicon image/favicon-32x32.png"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpath fill='%23ffb9b0' d='M486 705.8c-109.3-21.8-223.4-32.2-335.3-19.4C99.5 692.1 49 703 0 719.8V800h843.8c-115.9-33.2-230.8-68.1-347.6-92.2C492.8 707.1 489.4 706.5 486 705.8z'/%3E%3Cpath fill='%23ffc1b7' d='M1600 0H0v719.8c49-16.8 99.5-27.8 150.7-33.5c111.9-12.7 226-2.4 335.3 19.4c3.4 0.7 6.8 1.4 10.2 2c116.8 24 231.7 59 347.6 92.2H1600V0z'/%3E%3Cpath fill='%23ffc8bf' d='M478.4 581c3.2 0.8 6.4 1.7 9.5 2.5c196.2 52.5 388.7 133.5 593.5 176.6c174.2 36.6 349.5 29.2 518.6-10.2V0H0v574.9c52.3-17.6 106.5-27.7 161.1-30.9C268.4 537.4 375.7 554.2 478.4 581z'/%3E%3Cpath fill='%23ffcfc6' d='M0 0v429.4c55.6-18.4 113.5-27.3 171.4-27.7c102.8-0.8 203.2 22.7 299.3 54.5c3 1 5.9 2 8.9 3c183.6 62 365.7 146.1 562.4 192.1c186.7 43.7 376.3 34.4 557.9-12.6V0H0z'/%3E%3Cpath fill='%23FFD6CE' d='M181.8 259.4c98.2 6 191.9 35.2 281.3 72.1c2.8 1.1 5.5 2.3 8.3 3.4c171 71.6 342.7 158.5 531.3 207.7c198.8 51.8 403.4 40.8 597.3-14.8V0H0v283.2C59 263.6 120.6 255.7 181.8 259.4z'/%3E%3Cpath fill='%23ffdcd4' d='M1600 0H0v136.3c62.3-20.9 127.7-27.5 192.2-19.2c93.6 12.1 180.5 47.7 263.3 89.6c2.6 1.3 5.1 2.6 7.7 3.9c158.4 81.1 319.7 170.9 500.3 223.2c210.5 61 430.8 49 636.6-16.6V0z'/%3E%3Cpath fill='%23ffe1d9' d='M454.9 86.3C600.7 177 751.6 269.3 924.1 325c208.6 67.4 431.3 60.8 637.9-5.3c12.8-4.1 25.4-8.4 38.1-12.9V0H288.1c56 21.3 108.7 50.6 159.7 82C450.2 83.4 452.5 84.9 454.9 86.3z'/%3E%3Cpath fill='%23ffe6df' d='M1600 0H498c118.1 85.8 243.5 164.5 386.8 216.2c191.8 69.2 400 74.7 595 21.1c40.8-11.2 81.1-25.2 120.3-41.7V0z'/%3E%3Cpath fill='%23ffebe4' d='M1397.5 154.8c47.2-10.6 93.6-25.3 138.6-43.8c21.7-8.9 43-18.8 63.9-29.5V0H643.4c62.9 41.7 129.7 78.2 202.1 107.4C1020.4 178.1 1214.2 196.1 1397.5 154.8z'/%3E%3Cpath fill='%23FFF0EA' d='M1315.3 72.4c75.3-12.6 148.9-37.1 216.8-72.4h-723C966.8 71 1144.7 101 1315.3 72.4z'/%3E%3C/g%3E%3C/svg%3E");
+        background-size: cover;
+        background-attachment: fixed;
+      }
+      .container {
+        max-width: 800px;
+        margin: 100px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      }
+      h1,
+      h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333;
+      }
+      form {
+        padding: 30px;
+        border-radius: 8px;
+        background-color: #f9f9f9;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      hr {
+        border: none;
+        border-top: 1px solid #ddd;
+        margin: 20px 0;
+      }
+      label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+      input[type="text"],
+      input[type="email"] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-bottom: 15px;
+        
+      }
+      button {
+        background-color: #ffbdb4;
+        border: none;
+        color: white;
+        padding: 15px 60px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 20px;
+        width: 100%;
+        max-width: 200px;
+        transition: background-color 0.3s;
+      }
+      button:hover {
+        background-color: #ff9a8f;
+      }
+      .payment-method {
+        margin-bottom: 20px;
+      }
+      .payment-option {
+        display: flex;
+        align-items: center;
+        padding: 15px;
+        border: 2px solid #ffccc7;
+        border-radius: 8px;
+        margin-bottom: 15px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        background-color: #fff;
+        cursor: pointer;
 
-      var paymentMethods = document.getElementsByName('payment_method');
-      paymentMethods.forEach(function(method) {
-        method.addEventListener('change', function() {
-          handlePaymentDetailsDisplay(this.value);
+      }
+      .payment-option:hover {
+        background-color: #fff0ee;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(255, 155, 155, 0.2);
+        cursor: pointer;
+
+      }
+      .payment-option input[type="radio"] {
+        margin-right: 15px;
+        transform: scale(1.2);
+      }
+      .payment-option img {
+        width: 50px;
+        height: 50px;
+        margin-right: 15px;
+        object-fit: contain;
+      }
+      .payment-option label {
+        flex-grow: 1;
+        font-weight: 600;
+        font-size: 16px;
+        color: #333;
+      }
+      .payment-details {
+    display: none;
+    margin-top: 15px;
+    padding: 20px;
+    background-color: #fff0ee;
+    border-radius: 8px;
+    border: 1px solid #ffccc7;
+    cursor: pointer;
+
+    
+  }
+
+  .payment-details h3 {
+    margin-bottom: 15px;
+    color: #ff7b6b;
+    font-size: 18px;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  .form-row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .form-row .form-group {
+    width: 48%;
+  }
+  .payment-details label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #333;
+  }
+
+  .payment-details input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ffccc7;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+  }
+
+  .payment-details input[type="text"]:focus {
+    outline: none;
+    border-color: #ff7b6b;
+    box-shadow: 0 0 0 2px rgba(255, 123, 107, 0.2);
+  }
+
+  .payment-details input[type="text"]::placeholder {
+    color: #ccc;
+  }
+
+      .payment-method input[type="radio"]:checked + .payment-option {
+        background-color: #ffe5e2;
+        border-color: #ffb3aa;
+      }
+      .coupon-section {
+        margin-bottom: 20px;
+      }
+      .coupon-section input[type="text"] {
+        width: calc(100% - 110px);
+        display: inline-block;
+      }
+      .coupon-section button {
+        width: auto;
+        margin-left: 10px;
+        padding: 10px 20px;
+        max-width: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Secure Payment Page</h1>
+      <form action="cart.html" method="post" id="paymentForm">
+        <!-- <h3 id="totalPriceDisplay">Total Price: ₹0.00</h3> -->
+        <div class="coupon-section">
+          <h2>Apply Coupon Code</h2>
+          <input type="text" id="couponCode" placeholder="Enter coupon code" />
+          <button type="button" id="applyCouponBtn">Apply</button>
+        </div>
+        <h2>Choose Payment Method</h2>
+        <div class="payment-method">
+          <div class="payment-option">
+            <input
+              type="radio"
+              id="credit_card"
+              name="payment_method"
+              value="credit_card"
+              checked
+            />
+            <img src="/Favicon image/credit.avif" alt="Credit Card" />
+            <label for="credit_card">Credit Card</label>
+          </div>
+          <div id="credit_card_fields" class="payment-details">
+            <h3>Credit Card Information</h3>
+            <div class="form-group">
+              <label for="card_number">Credit Card Number:</label>
+              <input type="text" id="card_number" name="card_number" required placeholder="1234 5678 9012 3456" />
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="expiry_date">Expiry Date:</label>
+                <input type="text" id="expiry_date" name="expiry_date" required maxlength="5" placeholder="MM/YY" />
+              </div>
+              <div class="form-group">
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" name="cvv" required maxlength="3" placeholder="123" />
+              </div>
+            </div>
+          </div>
+        <div class="payment-method">
+          <div class="payment-option">
+            <input
+              type="radio"
+              id="phonepe"
+              name="payment_method"
+              value="phonepe"
+            />
+            <img src="/Favicon image/phonepe-icon.svg" alt="PhonePe" />
+            <label for="phonepe">PhonePe</label>
+          </div>
+          <div id="phonepeDetails" class="payment-details">
+            <h3>PhonePe Information</h3>
+            <label for="phonepe_upi">UPI ID:</label>
+            <input type="text" id="phonepe_upi" name="phonepe_upi" required />
+          </div>
+        </div>
+        <div class="payment-method">
+          <div class="payment-option">
+            <input
+              type="radio"
+              id="googlepay"
+              name="payment_method"
+              value="googlepay"
+            />
+            <img
+              src="/Favicon image/google-pay-logo-2020.svg"
+              alt="Google Pay"
+            />
+            <label for="googlepay">Google Pay</label>
+          </div>
+          <div id="googlepayDetails" class="payment-details">
+            <h3>Google Pay Information</h3>
+            <label for="googlepay_upi">UPI ID:</label>
+            <input
+              type="text"
+              id="googlepay_upi"
+              name="googlepay_upi"
+              required
+            />
+          </div>
+        </div>
+        <div class="payment-method">
+          <div class="payment-option">
+            <input type="radio" id="upi" name="payment_method" value="upi" />
+            <label for="upi">Other UPI</label>
+          </div>
+          <div id="upiDetails" class="payment-details">
+            <h3>UPI Information</h3>
+            <label for="upi_id">UPI ID:</label>
+            <input type="text" id="upi_id" name="upi_id" required />
+          </div>
+        </div>
+        <hr />
+        <button type="submit">Proceed to Payment</button>
+      </form>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var paymentMethods = document.getElementsByName("payment_method");
+        var paymentDetails = document.querySelectorAll(".payment-details");
+    
+        function handlePaymentDetailsDisplay() {
+          var selectedMethod = document.querySelector('input[name="payment_method"]:checked').value;
+          paymentDetails.forEach(function (detail) {
+            detail.style.display = "none";
+          });
+    
+          var selectedDetail = document.getElementById(selectedMethod + "_fields");
+          if (selectedDetail) {
+            selectedDetail.style.display = "block";
+          }
+        }
+    
+        paymentMethods.forEach(function (method) {
+          method.addEventListener("change", handlePaymentDetailsDisplay);
+        });
+    
+        // Show default payment details
+        handlePaymentDetailsDisplay();
+    
+        // Display total price
+        var totalPrice = localStorage.getItem("totalPrice");
+        document.getElementById("totalPriceDisplay").innerHTML = `Total Price: ₹${totalPrice}.00`;
+    
+        // Handle coupon application
+        document.getElementById("applyCouponBtn").addEventListener("click", function () {
+          var couponCode = document.getElementById("couponCode").value;
+          if (couponCode === "DISCOUNT10") {
+            var discountedPrice = totalPrice * 0.9;
+            document.getElementById("totalPriceDisplay").innerHTML = `Total Price: ₹${discountedPrice.toFixed(2)}`;
+            alert("Coupon applied successfully! 10% discount applied.");
+          } else {
+            alert("Invalid coupon code.");
+          }
         });
       });
-
-      function handlePaymentDetailsDisplay(method) {
-        var creditCardFields = document.getElementById('credit_card_fields');
-        var phonepeDetails = document.getElementById('phonepeDetails');
-        var googlepayDetails = document.getElementById('googlepayDetails');
-        var upiDetails = document.getElementById('upiDetails');
-
-        creditCardFields.style.display = 'none';
-        phonepeDetails.style.display = 'none';
-        googlepayDetails.style.display = 'none';
-        upiDetails.style.display = 'none';
-
-        if (method === 'credit_card') {
-          creditCardFields.style.display = 'block';
-        } else if (method === 'phonepe') {
-          phonepeDetails.style.display = 'block';
-        } else if (method === 'googlepay') {
-          googlepayDetails.style.display = 'block';
-        } else if (method === 'upi') {
-          upiDetails.style.display = 'block';
-        }
-      }
-
-      handlePaymentDetailsDisplay(document.querySelector('input[name="payment_method"]:checked').value);
-
-      document.getElementById('applyCouponBtn').addEventListener('click', function() {
-        var couponCode = document.getElementById('couponCode').value;
-        if (couponCode === 'DISCOUNT10') {
-          var discountedPrice = totalPrice * 0.9;
-          document.getElementById('totalPriceDisplay').innerHTML = `Total Price: ₹${discountedPrice.toFixed(2)}`;
-          alert('Coupon applied successfully! 10% discount applied.');
-        } else {
-          alert('Invalid coupon code.');
-        }
-      });
-    });
-  </script>
-</body>
+    </script>
+  </body>
 </html>
