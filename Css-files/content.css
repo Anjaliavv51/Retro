@@ -607,3 +607,195 @@ input
   padding: 5px 8px;
   font-size: 12px;
 }
+
+/* Media query for devices with a max-width of 768px (tablets, phones, etc.) */
+@media (max-width: 768px) {
+  /* Navbar adjustments */
+  .navbar li {
+    padding: 5px 10px;
+    font-size: 1rem;
+  }
+  .menu_container h2 {
+    text-align: center;
+    padding-left: 0; /* Reset padding to center the text */
+  }
+
+
+  /* Head container adjustments */
+  .head_container_service {
+    height: auto; /* Adjust height to fit content */
+    padding: 20px;
+  }
+  .upper {
+    margin-top: -3rem;
+  }
+
+  /* Menu container */
+  .menu_container {
+    padding: 30px 40px 20px 40px;
+  }
+  .menu_items .items {
+    width: 90%;
+    padding: 20px;
+    margin: 10px;
+    height: auto;
+  }
+  .menu_items .items img {
+    height: 140px;
+    width: 180px;
+  }
+
+  /* Main header text */
+  .mainhead h1 {
+    font-size: 2.5rem;
+  }
+
+  /* Buttons and input fields */
+  .but a,
+  .butt,
+  input[type="submit"] {
+    padding: 8px 12px;
+    font-size: 1rem;
+  }
+
+  /* Testimonial section adjustments */
+  .testimonalsection {
+    padding-top: 200px;
+  }
+  .testimonal__card {
+    padding: 20px;
+    margin: 10px;
+  }
+  .testimonal__image {
+    width: 80px;
+    height: 80px;
+  }
+
+  /* Footer adjustments */
+  .foot-panel2 {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+  .footer-colums {
+    margin-top: 10px;
+  }
+  
+  /* Cart section */
+  .cart {
+    width: 100%;
+    padding: 10%;
+    font-size: 1rem;
+  }
+  .cart table {
+    width: 90%;
+    font-size: 0.9rem;
+  }
+  
+  /* Contact Form */
+  #contactForm {
+    width: 100%;
+    padding: 20px;
+  }
+  #contactForm input, #contactForm textarea {
+    width: 90%;
+    padding: 10px;
+  }
+
+  /* Adjusting the deals section */
+  .deals {
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    padding: 10px;
+  }
+  
+  /* Cards section */
+  .cards {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+  }
+
+  /* Added to cart animation */
+  .added-to-cart {
+    margin-left: 10px;
+  }
+
+  /* Icon adjustments */
+  .social-icons a {
+    font-size: 1rem;
+    padding: 10px;
+  }
+}
+
+/* Media query for devices with a max-width of 480px (smaller phones) */
+@media (max-width: 480px) {
+  /* Navbar adjustments */
+  .navbar li {
+    padding: 3px 5px;
+    font-size: 0.9rem;
+  }
+  .menu_container h2 {
+    text-align: center;
+    padding-left: 0; /* Ensure it's centered even on smaller screens */
+  }
+
+  /* Menu items */
+  .menu_items .items {
+    width: 90%;
+    padding: 10px;
+    height: auto;
+  }
+  .menu_items .items img {
+    height: 120px;
+    width: 150px;
+  }
+
+  /* Main header text */
+  .mainhead h1 {
+    font-size: 2rem;
+  }
+
+  /* Buttons and input fields */
+  .but a,
+  .butt,
+  input[type="submit"] {
+    padding: 5px 8px;
+    font-size: 0.9rem;
+  }
+
+  /* Testimonial section adjustments */
+  .testimonal__card {
+    padding: 15px;
+    margin: 5px;
+  }
+  .testimonal__image {
+    width: 60px;
+    height: 60px;
+  }
+
+  /* Footer adjustments */
+  .foot-panel2 {
+    height: auto;
+    text-align: center;
+  }
+
+  /* Cart section */
+  .cart table {
+    font-size: 0.8rem;
+  }
+
+  /* Deals section */
+  .deals {
+    padding: 5px;
+    margin: 15px;
+  }
+
+  /* Cards section */
+  .cards {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+  }
+}
