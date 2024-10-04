@@ -100,8 +100,9 @@
   }
   .mainhead {
     text-align: center;
-    padding-top: 30px;
-    /* padding-bottom: 50px; */
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px; 
   }
   .mainhead h1 {
     font-family: Georgia;
