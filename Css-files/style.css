@@ -258,40 +258,43 @@ body {
 }
 
 .menu_items {
-    display: flex;
-
+  display: flex;
+  overflow: hidden;
 }
 
 .menu_items .items {
-    background-color:#f2f2f2;
-    border: 3px solid brown;
-    padding: 0;
-    margin: 15px;
-    height: 400px;
-    width: 400px;
-    border-radius: 10px;
-    text-align: center;
-    font-family: 'Bree Serif', serif;
-    transition: 0.3s all ease-in;
-}
-
-.menu_items .items:hover{
-    box-shadow: #212123 1px 1px 8px;
-    cursor: pointer;
-    scale: 1.02;
-
+  background-color: #f2f2f2;
+  border: 3px solid black;
+  padding: 15px; /* Reduced padding */
+  margin: 15px;
+  height: 400px;
+  width: 400px;
+  border-radius: 10px;
+  text-align: center;
+  font-family: "Bree Serif", serif;
+  transition: 0.3s all ease-in;
 }
 
 .menu_items .items img {
-    justify-content: center;
-    height: 270px;
-    width: 250px;
+  width: 100%; 
+  height: 250px; /* Set a fixed height for all images */
+  border-radius: 10px;
+  object-fit: cover; /* Ensures the image covers the area without distortion */
 }
 
 .menu_items .items h3 {
-    font-size: 1.4rem;
-    margin-top: 10px;
+  font-family: var(--ff-philosopher);
+  color: hsl(203, 30%, 26%);
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 15px;
 }
+
+.menu_items .items p {
+  font-family: var(--ff-poppins);
+  color: hsl(208, 7%, 46%);
+}
+
 
 
 
