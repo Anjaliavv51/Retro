@@ -9,8 +9,11 @@
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
-
+    <link rel="stylesheet" href="../Css-files/content.css">
+  
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link
         href="https://fonts.googleapis.com/css2?family=Fuggles&family=Mooli&family=Oswald:wght@600&family=Roboto:wght@100;300&display=swap"
         rel="stylesheet">
@@ -20,6 +23,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
         <style>
+             :root{
+            --ff-philosopher: "Philosopher", sans-serif;
+            --ff-poppins: "Poppins", sans-serif;
+        }
             @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');  
             @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');  
 #sr {
@@ -236,18 +243,18 @@ body{
       <div id="loader"></div>
     </div>
 
-    <header style=" font-family: Tahoma, sans-serif;background-color: transparent;border-bottom-left-radius: 50px;border-bottom-right-radius: 50px;">
-        <nav class="navbarbg" style="background-color: transparent;border-bottom-left-radius: 100px;border-bottom-right-radius: 100px;">
-            <ul id="header-items">
-                <li><a href="../index.html" style="color: hsl(203, 30%, 26%);">Home</a></li>
-                <li><a href="menu.html" style="color: hsl(203, 30%, 26%);">About</a></li>
-                <li><a href="services.html" style="color: hsl(203, 30%, 26%);">Services</a></li>
-                <li><a href="contact.html" style="color: hsl(203, 30%, 26%);">Contact us</a></li>
-                <li><a href="cart.html" style="color: hsl(203, 30%, 26%);">Cart</a></li>
-            </ul>
-        </nav>
-
-    </header>
+    <div class="head_container_service" style="color: black;font-family: var(--ff-philosopher);">
+        <header style="font-family: var(--ff-philosopher); position: fixed; top: 0; z-index: 1008; width: 100%; background-color: rgba(245, 190, 190, 0.7);">
+            <nav class="navbar">
+                <ul id="header-items" style="color: black;font-family: var(--ff-philosopher);">
+                    <li><a href="../index.html" style="color: black;">Home</a></li>
+                    <li><a href="menu.html" style="color: black;">About</a></li>
+                    <li><a href="services.html" style="color: black;">Services</a></li>
+                   <li><a href="cart.html" style="color: black;">Cart</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>    
 
     <!--
     <section>
@@ -328,11 +335,11 @@ body{
     -->
   
 
-<section>
+<section style="margin-top: -400px;">
     <div class="position-relative overflow-hidden p-0 m-0" style="background-color: transparent;">
         <div class="container">
             <div class="text-center mt-5">
-                <h1 style="color: hsl(357, 53%, 8%); font-family: Tahoma, sans-serif;">Feel Free to Contact Us!</h1>
+                <h1  style="font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%);">Feel Free to Contact Us!</h1>
             </div><br>
 
             <div class="row mt-4">
@@ -391,9 +398,9 @@ body{
                                                     
                                                 </div>
                                             </div>
-                                            <div class="col-md-4 mt-4">
-                                                <input type="submit" class="btn btn-send btn-block"
-                                                    value="Send Message" style="background-color: #ffc1b7; color: black; text-align: center; font-family: var(--ff-philosopher); padding: 12px 0; border: 1px solid black; height: 50px; line-height: 26px;">
+                                            <div class="col-md-4 mt-4 ">
+                                                <input  id="butt" type="submit" class="btn btn-send btn-block"
+                                                    value="Send Message" style="background-color: brown; color: black; padding-top: -8rem; text-align: center; font-family: var(--ff-philosopher);  border: none; border-radius: 5px; height: 50px; line-height: 26px;">
                                             </div>
                                         </div>
                                     </div>
@@ -421,87 +428,76 @@ body{
 
 
 
-    <footer style="font-family: Tahoma, sans-serif;">
+    <!-- footer -->
+    <footer>
 
 
-        <div class="foot-panel2">
-            <ul class="footer-colums" style="color: black;">
-                <p>Our Pages</p>
-                <a href="../index.html" style="text-decoration: none;color: black;">Home</a>
-                <a href="menu.html" style="text-decoration: none;color: black;">About</a>
-                <a href="services.html" style="text-decoration: none;color: black;">Services</a>
-                <a href="contact.html" style="text-decoration: none;color: black;">Contact us</a>
-                <a href="cart.html" style="text-decoration: none;color: black;">Cart</a>
+        <div class="foot-panel2" style="font-family: Garamond;">
+            <ul class="footer-colums">
+                <p style="font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%);">Our Pages</p>
+                <a href="../index.html" style="text-decoration: none;font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">Home</a>
+                <a href="menu.html" style="text-decoration: none;font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">About</a>
+                <a href="#" style="text-decoration: none;font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">Services</a>
+                <a href="contact.html" style="text-decoration: none;font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">Contact</a>
+                <a href="cart.html" style="text-decoration: none;font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">Cart</a>
             </ul>
 
-            <ul class="footer-colums" style="color: black;">
-                <p>Exclusive Offers</p>
-                <a>Retro Discounts</a>
-                <a>Limited-Time Promotions</a>
-                <a>Special Event Packages</a>
-                <a>Membership Benefits</a>
-                <a>Early Access to New Collections</a>
-                <a>VIP Retro Events</a>
-                <a>Personalized Culinary Experiences</a>
+            <ul class="footer-colums">
+                <p style="font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%);"> Exclusive Offers</p>
+                <a style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">Retro Discounts</a>
+                <a style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">Limited-Time Promotions</a>
+                <a style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">Special Event Packages</a>
+                <a style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">Membership Benefits</a>
+                <a style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">Early Access to New Collections</a>
+                <a style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">VIP Retro Events</a>
+                <a style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">Personalized Culinary Experiences</a>
 
             </ul>
 
-            <ul class="footer-colums" style="color: black;">
-                <p>Payment Products</p>
-                <a>Secure Checkout</a>
-                <a>Credit/Debit Cards</a>
-                <a>Online Payment</a>
-                <a>Mobile Wallets</a>
-                <a>Contactless Payments</a>
+            <ul class="footer-colums">
+                <p style="font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%);">Payment Products</p>
+                <a style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">Secure Checkout</a>
+                <a style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">Credit/Debit Cards</a>
+                <a style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">Online Payment</a>
+                <a style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">Mobile Wallets</a>
+                <a style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">Contactless Payments</a>
             </ul>
 
 
-<div class="row">
-    <div class="col-12">
-        <form id="contactForm" style="color: black; border: 1px solid #ccc; padding: 20px; border-radius: 10px; width: 100%; margin-left: auto;">
-            <h3 style="text-align: center; margin-bottom: 15px;">Contact Us!</h3>
-            
-            <!-- Email Input -->
-            <input type="email" id="email" name="email" placeholder="Your Email" required 
-                   style="width: 100%; padding: 8px; margin-bottom: 10px; border-radius: 10px; border: 1px solid #ccc;">
+            <form id="contactForm">
+                <h3 style="font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%);">Contact Us!</h3>
+                <input type="email" id="email" name="email" placeholder="Your Email" required style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                <textarea id="message" name="message" placeholder="Your Message" required style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);"></textarea>
 
-            <!-- Message Textarea -->
-            <textarea id="message" name="message" placeholder="Your Message" required 
-                      style="width: 100%; padding: 8px; margin-bottom: 10px; border-radius: 10px; border: 1px solid #ccc; height: 100px;"></textarea>
-
-            <!-- Submit Button -->
-            <button id="butt" type="submit" 
-                    style="width: 100%; padding: 10px; background-color: #ffe1d9; color: black; border: 1px; border-radius: 10px; cursor: pointer;">
-                Send Message
-            </button>
-        </form>
-    </div>
-</div>
-
-
-
+                <button id="butt" type="submit" style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">Send Message</button>
+            </form>
 
         </div>
 
 
-        <div class="foot_panel4" style="color: black;background-color: transparent;">
-            <div class="pages" style="background-color: transparent;">
-                <h3>Follow Us</h3>
+        <div class="foot_panel4"  style="font-family: Garamond;">
+            <div class="pages">
+                <h4 style="font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%);">Follow Us</h4>
 
                 <div class="social-icons">
-                    <a class="fa-brands fa-facebook" href="https://facebook.com" style="color: hsl(203, 30%, 26%);"></a>
-                    <a class="fa-brands fa-instagram" href="https://instagram.com" style="color: hsl(203, 30%, 26%);"></a>
-                    <a class="fa-brands fa-x-twitter" href="https://twitter.com" style="color: hsl(203, 30%, 26%);"></a>
-                </div>
-                <p style="margin-bottom:0;">Stay connected with us on social media for the latest updates, recipes, and foodie adventures.
-                </p>
-                <div class="copyright" style="background-color: transparent;">
+                    <div class="social-icons">
 
-                    &copy; 2024 Foodies . All Rights Reserved. | Developed by <span id="author">
+
+                        <a class="fa-brands fa-facebook" href="https://facebook.com" style="color: hsl(203, 30%, 26%);"></a>
+                        <a class="fa-brands fa-instagram" href="https://instagram.com" style="color: hsl(203, 30%, 26%);"></a>
+                        <a class="fa-brands fa-x-twitter" href="https://twitter.com" style="color: hsl(203, 30%, 26%);"></a>
+
+                    </div>
+                </div>
+                <p style="margin-bottom:0;font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%);">Stay connected with us on social media for the latest updates, latest collection, and vintage adventures.
+                </p>
+                <div class="copyright">
+                   <p style="font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%);">
+                    &copy; 2024 Retro . All Rights Reserved. | <span id="author">
                         <a href="https://www.linkedin.com" target="_blank" style="text-decoration: none;">Retro Team</a>
                     </span></p>
-                </div>
-                   
+
+                  
 
 
                 </div>
