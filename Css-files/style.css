@@ -292,38 +292,73 @@ s
 
 .menu_items {
   display: flex;
+  justify-content: center; /* Centers the cards horizontally */
+  align-items: center; /* Centers the items vertically if needed */
+  flex-wrap: wrap; /* Allows wrapping if there are too many items */
+  width: 100%; /* Ensure the container takes full width */
+  margin: 0 auto; /* Horizontally center the container itself */
   overflow: hidden;
 }
 
 .menu_items .items {
   background-color: #f2f2f2;
-  border: 3px solid brown;
-  padding: 25px;
+  border: 3px solid black;
+  padding: 5px;  
   margin: 15px;
   height: 400px;
-  width: 400px;
+  width: 300px;
   border-radius: 10px;
   text-align: center;
   font-family: "Bree Serif", serif;
   transition: 0.3s all ease-in;
 }
 
-.menu_items .items:hover {
-  box-shadow: #212123 1px 1px 8px;
-  cursor: pointer;
-  scale: 1.02;
-}
-
 .menu_items .items img {
-  justify-content: center;
-  height: 270px;
-  width: 250px;
+  width: 100%; 
+  height: 250px; /* Set a fixed height for all images */
+  border-radius: 10px;
+  object-fit: cover; /* Ensures the image covers the area without distortion */
 }
 
+/* Style for the dish name */
 .menu_items .items h3 {
-  font-size: 1.4rem;
-  margin-top: 10px;
+  font-family: var(--ff-philosopher);
+  color: hsl(0, 0%, 0%);
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-top: 15px;
+  padding: 5px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  letter-spacing: 1px; /* Slight letter spacing for uniqueness */
+  transition: transform 0.3s ease;
 }
+
+/* Hover effect to scale the title */
+.menu_items .items h3:hover {
+  transform: scale(1.05); /* Slightly increase the size on hover */
+  color: hsl(357, 82%, 45%); /* Change color on hover */
+}
+
+/* Style for the description */
+.menu_items .items p {
+  font-family: var(--ff-poppins);
+  color: hsl(208, 7%, 36%); /* Darker shade for better contrast */
+  font-size: 1rem;
+  line-height: 1.5;
+  padding: 10px;
+  background-color: hsl(203, 30%, 96%); /* Light background behind text */
+  border-radius: 5px;
+  box-shadow: inset 0px 2px 6px rgba(0, 0, 0, 0.1); /* Subtle inner shadow */
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect for the description */
+.menu_items .items p:hover {
+  background-color: hsl(203, 30%, 90%);
+  color: hsl(357, 82%, 45%); /* Color change on hover */
+}
+
+
 
 .meals-showcase {
   list-style: none;
@@ -357,7 +392,6 @@ s
   transform: scale(1.03);
   opacity: 1;
 }
-
 .clearfix {
   zoom: 1;
 }
