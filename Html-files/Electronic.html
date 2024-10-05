@@ -328,7 +328,7 @@
   padding: 8px;
   margin: 15px;
   text-decoration: none;
-  color: rgb(248, 243, 243);
+  color: brown !important;
 }
 
 .social-icons a:hover {
@@ -390,6 +390,18 @@
 ::-webkit-scrollbar-button {
   display: none;
 }
+
+#badgeCount {
+  position: relative;
+  top: -7px;
+  right: 1px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 5px 8px;
+  font-size: 12px;
+}
+
 /*Animation sliders*/
           .wrapper{
             width: 100%;
@@ -531,7 +543,7 @@
                     <li><a href="menu.html" style="color: black;">About</a></li>
                     <li><a href="services.html" style="color: black;">Services</a></li>
                     <li><a href="contact.html" style="color: black;">Contact us</a></li>
-                    <li><a href="cart.html" style="color: black;">Cart</a></li>
+                    <li><a href="cart.html" style="color: black;">Cart <span class="badge-count" id="badgeCount"></span></a></li>
                 </ul>
             </nav>
         </header>
@@ -827,5 +839,6 @@ prev.addEventListener('click', function(){
     document.querySelector('.slide').prepend(items[items.length - 1]) 
 })
     </script>
+    <script src="cart.js"></script>
 </body>
 </html>
