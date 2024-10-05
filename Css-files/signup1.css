@@ -118,23 +118,6 @@ body {
   box-shadow: none; /* Remove unwanted glow or shadow */
 }
 
-/* Apply the same styles to the password field */
-.textfield > input[type="password"] {
-  background-color: var(--input-bg); /* Same background as other input fields */
-  border-radius: var(--border-radius); /* Same border-radius for consistency */
-  padding: 15px;
-  border: 2px solid transparent; /* Match the border styles */
-  transition: border var(--transition-speed), box-shadow var(--transition-speed); /* Same transition */
-  font-size: 1rem;
-  color: #333; /* Text color */
-  box-sizing: border-box; /* Consistent padding effect */
-}
-
-.textfield > input[type="password"]:focus {
-  border-color: var(--input-border); /* Same border color on focus */
-  box-shadow: none; /* No shadow */
-}
-
 .btn-login, #google-login {
   padding: 16px;
   margin: 10px 0;
@@ -172,3 +155,4 @@ body {
     padding: 20px; /* Adjust padding */
   }
 }
+
