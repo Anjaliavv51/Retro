@@ -1,0 +1,75 @@
+.circle {
+  z-index: 998;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: colors 5s infinite;
+  position: fixed;
+  transform: translate(-50%, -50%);
+}
+.circle::before {
+  content: "";
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  opacity: 0.2;
+  transform: translate(-30%, -30%);
+  border-radius: 50%;
+}
+.container {
+  width: 350px;
+  height: 500px;
+  perspective: 800px;
+}
+
+.container:hover > .card {
+  cursor: pointer;
+  transform: rotateY(180deg);
+}
+
+.card {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  transition: transform 1500ms;
+  transform-style: preserve-3d;
+  border-radius: 40px;
+}
+
+.front,
+.back {
+  height: 100%;
+  width: 100%;
+  border-radius: 2rem;
+  box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.front {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.back {
+  background-color: #3a3a3a;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+}
+:root {
+  --ff-philosopher: "Philosopher", sans-serif;
+  --ff-poppins: "Poppins", sans-serif;
+}
+
+.btnNext {
+  display: flex;
+  gap: 10px;
+    justify-content: center;
+}
