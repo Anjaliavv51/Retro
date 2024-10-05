@@ -11,6 +11,10 @@ body {
     padding: 8px 0px;
   }
 
+  .collapse navbar-collapse{
+    margin: 350px;
+  }
+
 .navbar ul {
     overflow: auto;
     /* background-color: black; */
