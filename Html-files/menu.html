@@ -5,6 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Retro</title>
+
+    <link rel="stylesheet" href="/Css-files/navbarstyles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
     <link rel="shortcut icon" type="image/x-icon" href="../Favicon image/favicon-32x32.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,6 +26,17 @@
         <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../Css-files/content.css">
     <style>
+    /* Initial styling for the image */
+.menu {
+  transition: transform 0.3s ease; /* Smooth transition for the zoom effect */
+}
+
+/* Zoom effect on hover */
+.menu:hover {
+  transform: scale(1.1); /* Scale the image to 110% of its original size */
+}
+
+
       @media (max-width: 768px) {
     .items {
         width: 100%;
@@ -208,7 +224,7 @@ border-radius: 100px;
   padding: 8px;
   margin: 15px;
   text-decoration: none;
-  color: rgb(18, 16, 16);
+  color: brown !important;
 }
 
 .social-icons a:hover {
@@ -260,17 +276,56 @@ border-radius: 100px;
     </div>
     <div class="head_container" style="background-color: hsl(20, 43%, 93%);">
         <header>
-            <nav class="navbar">
-                <ul id="header-items">
-                    <li style="font-family: var(--ff-philosopher);"><a href="../index.html" style="color: black;">Home</a></li>
-                    <li style="font-family: var(--ff-philosopher);"><a href="menu.html" style="color: black;">About</a></li>
-                    <li style="font-family: var(--ff-philosopher);"><a href="services.html" style="color: black;">Services</a></li>
-                    <li style="font-family: var(--ff-philosopher);"><a href="contact.html" style="color: black;">Contact us</a></li>
-                    <li style="font-family: var(--ff-philosopher);"><a href="cart.html" style="color: black;">Cart <span class="badge-count" id="badgeCount"></span></a></li>
-                </ul>
+            <nav class="navbar navbar-expand-lg fixed-top" id="top">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="../index.html" style="font-family: var(--ff-philosopher); color: black;">
+                        <b>Retro</b>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                        aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="header-items">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../index.html" style="color: black;">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html" style="color: black;">About Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" style="color: black;">Collections</a>
+                            <li class="nav-item">
+                                <a class="nav-link" href="services.html" style="color: black;">Services</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html" style="color: black;">Contact us</a>
+                            </li>
+                            <li class="nav-item" style="list-style-type: none;">
+                                <a class="nav-link" href="cart.html" style="color: black;">
+                                    <i class="fa-solid fa-cart-shopping"></i><span class="badge-count" id="badgeCount"></span>
+                                </a>
+                            </li>
+
+                        </ul>
+<!--                        <div class="nav-right ms-auto">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="login.html" style="color: black;">Login</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="signup.html" style="color: black;">Signup</a>
+                                </li>
+                            </ul>
+-->
+                        </div>
+                    </div>
+                </div>
             </nav>
         </header>
+    </div>
 
+<br><br><br><br>
         <div class="mainhead">
             <h1 style="font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%);">O U R &nbsp; C O L L E C T I O N</h1>
             <h1 style="font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%);">
@@ -291,7 +346,7 @@ border-radius: 100px;
                     <div style="margin-top: -3px; margin-left: 3px;">Added to cart</div>
                   </div>
                 <img
-                    src="https://i.pinimg.com/564x/59/aa/2e/59aa2edd369e1017039372ad860cfb8b.jpg">
+                    src="https://i.pinimg.com/564x/59/aa/2e/59aa2edd369e1017039372ad860cfb8b.jpg" class="menu" id="menu1">
                 
                     <h3 style="font-family: var(--ff-philosopher);">Phonograph</h3>
                     <p style="font-family: Garamond;">$10.20</p>
@@ -312,7 +367,7 @@ border-radius: 100px;
                     <div style="margin-top: -3px; margin-left: 3px;">Added to cart</div>
                 </div>
                 <img
-                    src="https://i.pinimg.com/736x/11/c1/c5/11c1c5ba22a14271bef63012dcaa0631.jpg">
+                    src="https://i.pinimg.com/736x/11/c1/c5/11c1c5ba22a14271bef63012dcaa0631.jpg" class="menu" id="menu2">
                 <h3 style="font-family: var(--ff-philosopher);">Radio</h3>
                 <p style="font-family: Garamond;">$10.20</p>
                 <button class="butt add-to-cart-button" data-product-id="1.02" data-product-name="Radio"
@@ -332,7 +387,7 @@ border-radius: 100px;
                     <div style="margin-top: -3px; margin-left: 3px;">Added to cart</div>
                 </div>
                 <img
-                    src="https://i.pinimg.com/564x/18/b4/41/18b441458ac78e10345b720d9af453ef.jpg">
+                    src="https://i.pinimg.com/564x/18/b4/41/18b441458ac78e10345b720d9af453ef.jpg" class="menu" id="menu3">
                 <h3 style="font-family: var(--ff-philosopher);">Television</h3>
                 <p style="font-family: Garamond;">$10.20</p>
                 <button class="butt add-to-cart-button" data-product-id="1.03" data-product-name="Television"
@@ -350,7 +405,7 @@ border-radius: 100px;
                     <img src="../Favicon image/check-mark.png" class="check-mark">
                     <div style="margin-top: -3px; margin-left: 3px;">Added to cart</div>
                 </div>
-                <img src="https://i.pinimg.com/564x/1f/58/7f/1f587fe0533c8b4671fa29685fcaa9c2.jpg">
+                <img src="https://i.pinimg.com/564x/1f/58/7f/1f587fe0533c8b4671fa29685fcaa9c2.jpg" class="menu" id="menu4">
                 <h3 style="font-family: var(--ff-philosopher);">Movie Screen Carpet</h3>
                 <p style="font-family: Garamond;">$10.20</p>
                 <button class="butt add-to-cart-button" data-product-id="1.04" data-product-name="Movie Screen Carpet"
@@ -372,7 +427,7 @@ border-radius: 100px;
                     <div style="margin-top: -3px; margin-left: 3px;">Added to cart</div>
                 </div>
                 <img
-                    src="https://i.pinimg.com/564x/33/10/f4/3310f46d5d8b689d844d11fc308a84f5.jpg">
+                    src="https://i.pinimg.com/564x/33/10/f4/3310f46d5d8b689d844d11fc308a84f5.jpg" class="menu" id="menu5">
                 <h3 style="font-family: var(--ff-philosopher);">Toys</h3>
                 <p style="font-family: Garamond;">$10.20</p>
                 <button class="butt add-to-cart-button" data-product-id="1.05" data-product-name="Toys"
@@ -391,7 +446,7 @@ border-radius: 100px;
                     <div style="margin-top: -3px; margin-left: 3px;">Added to cart</div>
                 </div>
                 <img
-                    src="https://i.pinimg.com/564x/b8/ba/6f/b8ba6fce89bff7963fa9e10d86062a29.jpg">
+                    src="https://i.pinimg.com/564x/b8/ba/6f/b8ba6fce89bff7963fa9e10d86062a29.jpg" class="menu" id="menu6">
                 <h3 style="font-family: var(--ff-philosopher);">Puppet Show</h3>
                 <p style="font-family: Garamond;">$10.20</p>
                 <button class="butt add-to-cart-button" data-product-id="1.06" data-product-name="Puppet Show"
@@ -410,7 +465,7 @@ border-radius: 100px;
                     <div style="margin-top: -3px; margin-left: 3px;">Added to cart</div>
                 </div>
                 <img
-                    src="https://i.pinimg.com/564x/56/5e/b4/565eb4a4263d6020ed2133b8a4b14991.jpg">
+                    src="https://i.pinimg.com/564x/56/5e/b4/565eb4a4263d6020ed2133b8a4b14991.jpg" class="menu" id="menu7">
                 <h3 style="font-family: var(--ff-philosopher);">Marbles</h3>
                 <p style="font-family: Garamond;">$10.20</p>
                 <button class="butt add-to-cart-button" data-product-id="1.07" data-product-name="Marbles"
@@ -428,7 +483,7 @@ border-radius: 100px;
                     <img src="../Favicon image/check-mark.png" class="check-mark">
                     <div style="margin-top: -3px; margin-left: 3px;">Added to cart</div>
                 </div>
-                <img src="https://i.pinimg.com/564x/29/cb/76/29cb764ce3d9b2407a3dfa41c8b3ceeb.jpg">
+                <img src="https://i.pinimg.com/564x/29/cb/76/29cb764ce3d9b2407a3dfa41c8b3ceeb.jpg" class="menu" id="menu8">
                 <h3 style="font-family: var(--ff-philosopher);">Drinks</h3>
                 <p style="font-family: Garamond;">$10.20</p>
                 <button class="butt add-to-cart-button" data-product-id="1.08" data-product-name="Drinks"
@@ -458,7 +513,7 @@ border-radius: 100px;
                 </div>
                 <img
 
-                    src="https://i0.wp.com/www.printmag.com/wp-content/uploads/2011/11/2a34d8_8fd22c546762416496eb8ab0c88c3db4mv2.jpg">
+                    src="https://i0.wp.com/www.printmag.com/wp-content/uploads/2011/11/2a34d8_8fd22c546762416496eb8ab0c88c3db4mv2.jpg" class="menu" id="menu16">
 
                 <h3 style="font-family: var(--ff-philosopher);">Telephone</h3>
                 <p style="font-family: Garamond;">$5.10</p>
@@ -478,7 +533,7 @@ border-radius: 100px;
                     <div style="margin-top: -3px; margin-left: 3px;">Added to cart</div>
                 </div>
                 <img
-                    src="https://i.pinimg.com/564x/22/dd/23/22dd2351b72eb11a7d5b040caa484188.jpg">
+                    src="https://i.pinimg.com/564x/22/dd/23/22dd2351b72eb11a7d5b040caa484188.jpg"  class="menu" id="menu9">
                 <h3 style="font-family: var(--ff-philosopher);">Pager</h3>
                 <p style="font-family: Garamond;">$5.10</p>
                 <button class="butt add-to-cart-button" data-product-id="2.02" data-product-name="Pager"
@@ -497,7 +552,7 @@ border-radius: 100px;
                     <div style="margin-top: -3px; margin-left: 3px;">Added to cart</div>
                 </div>
                 <img
-                    src="https://i.pinimg.com/564x/0a/5f/a2/0a5fa201b0cdfd24323b07d9423b53ed.jpg">
+                    src="https://i.pinimg.com/564x/0a/5f/a2/0a5fa201b0cdfd24323b07d9423b53ed.jpg"  class="menu" id="menu10">
                 <h3 style="font-family:var(--ff-philosopher);">Camera</h3>
                 <p style="font-family: Garamond;">$5.10</p>
                 <button class="butt add-to-cart-button" data-product-id="Snacks" data-product-name="Camera"
@@ -515,7 +570,7 @@ border-radius: 100px;
                     <img src="../Favicon image/check-mark.png" class="check-mark">
                     <div style="margin-top: -3px; margin-left: 3px;">Added to cart</div>
                 </div>
-                <img src="https://i.pinimg.com/564x/51/1b/f5/511bf5dad0334204d182a0828850ca35.jpg">
+                <img src="https://i.pinimg.com/564x/51/1b/f5/511bf5dad0334204d182a0828850ca35.jpg"  class="menu" id="menu11">
                 <h3 style="font-family: var(--ff-philosopher);">Type Writer</h3>
                 <p style="font-family: Garamond;">$5.10</p>
                 <button class="butt add-to-cart-button" data-product-id="2.04" data-product-name="Type Writer" style="font-family: Garamond;" 
@@ -539,7 +594,7 @@ border-radius: 100px;
                     <div style="margin-top: -3px; margin-left: 3px;">Added to cart</div>
                 </div>
                 <img
-                    src="https://i.pinimg.com/564x/ca/83/ef/ca83ef07ebddf2e5b4a6210575342737.jpg">
+                    src="https://i.pinimg.com/564x/ca/83/ef/ca83ef07ebddf2e5b4a6210575342737.jpg" class="menu" id="menu12">
                 <h3 style="font-family: var(--ff-philosopher);">Cross Bow</h3>
                 <p style="font-family: Garamond;">$15.80</p>
                 <button class="butt add-to-cart-button" data-product-id="3.01" data-product-name="Cross Bow"
@@ -558,7 +613,7 @@ border-radius: 100px;
                     <div style="margin-top: -3px; margin-left: 3px;">Added to cart</div>
                 </div>
                 <img
-                    src="https://i.pinimg.com/564x/ec/27/3a/ec273a4e8ea84196a1bc4f3e5e0a8527.jpg">
+                    src="https://i.pinimg.com/564x/ec/27/3a/ec273a4e8ea84196a1bc4f3e5e0a8527.jpg"  class="menu" id="menu13">
                 <h3 style="font-family: var(--ff-philosopher);">Catapult</h3>
                 <p style="font-family: Garamond;">$15.80</p>
                 <button class="butt add-to-cart-button" data-product-id="3.02" data-product-name="Catapult"
@@ -577,7 +632,7 @@ border-radius: 100px;
                     <div style="margin-top: -3px; margin-left: 3px;">Added to cart</div>
                 </div>
                 <img
-                    src="https://i.pinimg.com/564x/b1/c1/1c/b1c11cfdf073f1565d1546ee18f1028a.jpg">
+                    src="https://i.pinimg.com/564x/b1/c1/1c/b1c11cfdf073f1565d1546ee18f1028a.jpg" class="menu" id="menu14">
                 <h3 style="font-family: var(--ff-philosopher);">Sedan Chair</h3>
                 <p style="font-family: Garamond;">$15.80</p>
                 <button class="butt add-to-cart-button" data-product-id="3.03" data-product-name="Sedan Chair"
@@ -595,7 +650,7 @@ border-radius: 100px;
                     <img src="../Favicon image/check-mark.png" class="check-mark">
                     <div style="margin-top: -3px; margin-left: 3px;">Added to cart</div>
                 </div>
-                <img src="https://ahdictionary.com/application/resources/arts/A5palanquin.jpg">
+                <img src="https://ahdictionary.com/application/resources/arts/A5palanquin.jpg" class="menu" id="menu15">
                 <h3 style="font-family:var(--ff-philosopher);">Palsnkin</h3>
                 <p style="font-family: Garamond;">$15.80</p>
                 <button class="butt add-to-cart-button" data-product-id="3.04" data-product-name="Palsnkin"
