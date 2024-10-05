@@ -34,7 +34,6 @@ body {
     opacity: 0.7;
 }
 
-
 .intro_container {
     display: flex;
     flex-direction: column;
@@ -576,25 +575,25 @@ textarea {
 
 @media screen and (max-width:1120px) {
     #about {
-        /* margin: 34px; */
+        
         flex-direction: column-reverse;
     
-    }
+    } 
 
     .service {
         flex-direction: column;
         padding: 5px;
-        /* box-sizing: fixed; */
+       
     }
     .service .box {
         padding: 20px 20px;
-        /* border: 2px solid rgb(224, 224, 252); */
+        
         text-align: center;
         font-size: 1.3rem;
     }
     .service_container{
        height: fit-content;
-       /* height: 1000px; */
+       
     }
     .service .box_main h1 {
         font-size: 3.5rem;
@@ -602,18 +601,14 @@ textarea {
 
     .service_container:before {
 
-        /*  
-        height: 560px;
-        */
-        /* height: 800px; */
-        /* height: fit-content; */
+       
+        
         background-size: cover;
         width: 100%;
-        /* background-repeat: no-repeat; */
-        /* justify-items: center; */
+       
         opacity: 0.4;
         z-index: -1;
-        /* background-repeat: no-repeat; */
+      
     }
     
 
@@ -784,3 +779,13 @@ fa-facebook:hover {
     font-size: 2rem !important; /* Increase the size of the icon */
     color: #4267B2;   /* Change the color to #4267B2 */
 }
+@media screen and (max-width: 995px) {
+    .collapse-navbar-collapse{
+        background-color: red; /* visual indicator */
+        display: flex !important;
+        flex-direction: column !important;
+    }
+}
+
+
+
