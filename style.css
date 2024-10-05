@@ -515,7 +515,7 @@ body {
   padding-top: 10px;
 }
 
-/* .footer {
+/* .-paneler {
     background-color:  rgb(224, 224, 252);;
     height: 700px;
 } */
@@ -585,6 +585,7 @@ body {
   /* height: fit-content; */
   display: flex;
   /* padding: 10px; */
+  text-align: center;
   justify-content: space-evenly;
 }
 
@@ -783,7 +784,8 @@ textarea {
 
   .foot-panel2 {
     height: fit-content;
-    display: grid;
+    display: flex;
+    flex-direction: column;
     grid-template-columns: repeat(2, minmax(20px, 1fr));
 
     /* flex-direction: column; */
@@ -1042,7 +1044,7 @@ padding-left:2px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 20rem;
+  width: content;
   height: max-content;
 }
 
