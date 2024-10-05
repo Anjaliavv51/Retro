@@ -31,6 +31,23 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="./style.css">
+    <style>
+         /* Styling for the animated elements */
+        .moving-element {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: #ff6347;
+            border-radius: 50%;
+            transition: transform 0.2s ease-out;
+        }
+        
+        body {
+            height: 100vh;
+            background-color: #ffdddd;
+            overflow: hidden;
+        }
+    </style>
 
     <style>
 
@@ -308,8 +325,6 @@ p {
     }
 }
 
-
-
 </style>
 </head>
 <body>
@@ -442,26 +457,52 @@ new google.translate.TranslateElement({
 }, 'google_element');
 }
 </script>
+<section class="intro_container"></section>
+    <h1 style="font-family: var(--ff-philosopher);color: brown;z-index: 99;">Welcome to Retro!</h1>
+    <p style="font-family: var(--ff-poppins);z-index: 99;color: hsl(208, 7%, 46%);">
+        Step back in time and experience the nostalgic charm of vintage tech, classic designs, and timeless memories. Get ready to embark on a journey through the ages, where innovation meets tradition, and the past inspires the future.
+    </p>
+    <button class="btn" id="openButton" style="z-index: 99;">Order Now</button>
+    
+    <!-- Add the animation-triggered images -->
+    <img src="stars.png" class="stars" alt="">
+    <img src="mountain.png" class="mountain" alt="">
+    <img src="trees.png" class="trees" alt="">
+    <img src="layer.png" class="layer" alt="">
+</section>
+<style>
+    /* Scale-up animation for images when clicked */
+    .scale-up {
+      transform: scale(1.1); /* Scale up by 10% */
+      transition: transform 0.5s ease-in-out; /* Smooth transition */
+    }
+  
+    /* Optional hover effect */
+    .intro_container img:hover {
+      transform: scale(1.05); /* Slight scale on hover */
+    }
+  </style>
+  
+</script>
 
-    <section class="intro_container">
-        <h1 style="font-family: var(--ff-philosopher);color: brown;z-index: 99;">Welcome to Retro!</h1>
-        <p style="font-family: var(--ff-poppins);z-index: 99;color: white;">Step back in time and experience the nostalgic charm of days gone by. 
-            Immerse yourself in the world of vintage tech, classic designs, and timeless memories. 
-            Get ready to embark on a journey through the ages, where innovation meets tradition, and the past inspires the future.</p>
-        <button class="btn" id="openButton" style="z-index: 99;">Order Now</button>
-        <img src="stars.png" class="stars" alt="">
+<section class="intro_container">
+    <h1 style="font-family: var(--ff-philosopher); color: brown; z-index: 99;">Welcome to Retro!</h1>
+    <p style="font-family: var(--ff-poppins); z-index: 99; color: white;">Step back in time and experience the nostalgic charm of days gone by. 
+        Immerse yourself in the world of vintage tech, classic designs, and timeless memories. 
+        Get ready to embark on a journey through the ages, where innovation meets tradition, and the past inspires the future.</p>
+    <button class="btn" id="openButton" style="z-index: 99;">Order Now</button>
+    <img src="stars.png" class="stars" alt="">
+    <img src="mountain.png" class="mountain" alt="">
+    <img src="trees.png" class="trees" alt="">
+    <img src="layer.png" class="layer" alt="">
+</section>
+<script>
+    document.getElementById('openButton').addEventListener('click', function() {
+        // Replace 'target_page.html' with the actual path to the page you want to open
+        window.open('Html-files/menu.html', '_blank');
+    });
+</script>
 
-        <img src="mountain.png" class="mountain" alt="">
-
-        <img src="trees.png" class="trees" alt="">
-
-        <img src="layer.png" class="layer" alt="">
-    </section>
-    <script>
-        document.getElementById('openButton').addEventListener('click', function() {
-    // Replace 'target_page.html' with the actual path to the page you want to open
-    window.open('Html-files/menu.html', '_blank');
-});
     </script>
     <section class="about_us">
         <div class="move">
@@ -499,6 +540,20 @@ new google.translate.TranslateElement({
         </div>
         
     </section>
+    <section class="service_container" style="background-color: hsl(20, 43%, 93%);">
+        <div class="service">
+            <div class="box_main">
+                <h1 style="font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%);">Bringing happiness<br> to you</h1>
+                <p style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">Order your favourite vintage collections!</p>
+            </div>
+            <div class="box">
+                <h1 style="font-family: var(--ff-philosopher);color: hsl(357, 82%,35%);">Online Delivery</h1><br>
+                <a href="./Html-files/menu.html" style="font-family: var(--ff-poppins);color: white;">Order Online</a>
+
+            </div>
+            <div class="box">
+                <h1 style="font-family: var(--ff-philosopher);color: hsl(357, 82%,35%);">Click & Collect</h1><br>
+                <a href="./Html-files/cart.html" style="font-family: var(--ff-poppins);color: white;">Take out Order</a>
 
  <section class="service_container">
     <div class="service">

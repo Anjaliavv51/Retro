@@ -3,6 +3,17 @@
     padding: 0px;
 }
 
+  #animated-element {
+    position: relative;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0.8;
+  }
+  
+  body:hover #animated-element {
+    transform: translateX(50px) translateY(-30px); /* Move on hover */
+    opacity: 1;
+  }
+  
 body {
     background-color: black;
     background-attachment: fixed;
