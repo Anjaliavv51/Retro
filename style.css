@@ -926,6 +926,21 @@ padding-left:2px;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.floating {
+  animation: float 3s ease-in-out infinite;
+}
 
 @keyframes marquee {
   0% {
