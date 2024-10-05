@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
+:root {
+  --primary-color: #e13838;
+  --input-bg: #ffe6e9; 
+  --input-border: #ff8ca1; 
+  --btn-color: #be367a; 
+  --hover-color: #e75480; 
+  --btn-text-color: #ffffff; 
+  --card-bg: rgba(255, 255, 255, 0.95); /* Semi-transparent white for card background */
+  --box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for card */
+  --transition-speed: 0.3s; /* Transition speed for effects */
+  --border-radius: 10px; /* Consistent border radius */
+}
+
+body {
+  margin: 0;
+  font-family: 'Noto Sans', sans-serif;
+  background: linear-gradient(135deg, #ffb6c1, #ff69b4); 
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  padding: 20px; /* Padding to avoid overflow */
+  overflow: hidden; /* Prevents overflow */
+}
+
+.main-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  overflow: hidden; /* Ensure nothing overflows from the flexbox */
+}
+
+.card-login {
+  width: calc(100% - 40px); /* Full width minus padding */
+  max-width: 400px; /* Max width for better layout */
+  padding: 30px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  background-color: var(--card-bg);
+  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+  display: flex; /* Flex to stack elements */
+  flex-direction: column; /* Column layout for the card */
+  overflow: hidden; /* Added to ensure no content spills out */
+}
+
+.card-login:hover {
+  transform: translateY(-4px); /* Lift effect on hover */
+  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.15); /* More pronounced shadow on hover */
+}
+
+.card-login h1 {
+  font-size: 2.5rem; /* Larger font size for the title */
+  color: var(--primary-color);
+  text-align: center; /* Centered title */
+  margin-bottom: 20px;
+  text-transform: uppercase; /* Uppercase for modern touch */
+  letter-spacing: 1px; /* Spacing between letters */
+}
+
+.textfield {
+  margin-bottom: 15px; /* Add margin to space fields */
+  display: flex; /* Flex for better layout */
+  flex-direction: column; /* Column layout for input and label */
+}
+
+.textfield label {
+  font-weight: 700; /* Bold label for clarity */
+  margin-bottom: 5px; /* Space between label and input */
+  color: #555; /* Slightly darker color for the label */
+}
+
+.textfield > input {
+  width: 100%;
+  padding: 15px;
+  background-color: var(--input-bg);
+  border: 2px solid transparent;
+  border-radius: var(--border-radius); /* Consistent rounded corners */
+  transition: border var(--transition-speed), box-shadow var(--transition-speed);
+  font-size: 1rem;
+  color: #333;
+  box-sizing: border-box; /* Ensures padding doesn't affect input width */
+}
+
+.textfield > input:focus {
+  border-color: var(--input-border);
+  box-shadow: none; /* Remove unwanted glow or shadow */
+}
+
+.btn-login, #google-login {
+  padding: 16px;
+  margin: 10px 0;
+  background-color: var(--btn-color); 
+  color: var(--btn-text-color);
+  font-weight: bold;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color var(--transition-speed), box-shadow var(--transition-speed), transform var(--transition-speed);
+  letter-spacing: 1.5px; 
+  width: 100%; /* Full width for buttons */
+}
+
+.btn-login:hover, #google-login:hover {
+  background-color: var(--hover-color); 
+  box-shadow: 0px 15px 45px -10px rgba(0, 0, 0, 0.2); 
+  transform: scale(1.03); 
+}
+
+.btn-login:focus, #google-login:focus {
+  outline: 2px solid var(--hover-color); /* Add focus outline */
+  outline-offset: 3px;
+}
+
+/* Responsive design for smaller screens */
+@media only screen and (max-width: 600px) {
+  .main-login {
+    flex-direction: column;
+    padding: 0 20px; /* Added padding to avoid edge overflow */
+  }
+
+  .card-login {
+    width: 100%; /* Full width for mobile */
+    padding: 20px; /* Adjust padding */
+  }
+}

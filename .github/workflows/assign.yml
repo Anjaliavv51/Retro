@@ -1,0 +1,57 @@
+name: Assign Issue to Creator
+
+on:
+  issue_comment:
+    types: [created]
+
+jobs:
+  assign-issue:
+    runs-on: ubuntu-latest
+    if: contains(github.event.comment.body, '/assign')
+    steps:
+      - name: Check commenter permissions
+        id: check-permissions
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{secrets.GITHUB_TOKEN}}
+          script: |
+            const { owner, repo } = context.repo;
+            const commenter = context.payload.comment.user.login;
+            
+            const { data: repoPermission } = await github.rest.repos.getCollaboratorPermissionLevel({
+              owner,
+              repo,
+              username: commenter,
+            });
+            
+            const allowedPermissions = ['admin', 'maintain', 'write'];
+            const hasPermission = allowedPermissions.includes(repoPermission.permission);
+            
+            console.log(`Commenter ${commenter} has permission: ${hasPermission}`);
+            return hasPermission;
+
+      - name: Assign issue to creator
+        if: steps.check-permissions.outputs.result == 'true'
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{secrets.GITHUB_TOKEN}}
+          script: |
+            const { owner, repo } = context.repo;
+            const issue_number = context.issue.number;
+            
+            const { data: issue } = await github.rest.issues.get({
+              owner,
+              repo,
+              issue_number,
+            });
+            
+            const creator = issue.user.login;
+            
+            await github.rest.issues.addAssignees({
+              owner,
+              repo,
+              issue_number,
+              assignees: [creator],
+            });
+            
+            console.log(`Assigned issue #${issue_number} to creator ${creator}`);
