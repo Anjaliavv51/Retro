@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Retro</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -23,180 +26,247 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <style>
+
+        /*  */
+        section {
+            background-color: white;
+            color: black;
+        }
+        #headConatiner{
+            background-color:hsl(20, 43%, 93%);
+        }
+        #footer{
+            background-color:hsl(20, 43%, 93%);
+        }
+        footer .text{
+            color: hsl(208, 7%,46%);
+        }
+        
+        body {
+            transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+        }
+        
+        [data-bs-theme='light'] {
+            background-color: #ffffff; /* Light background */
+            color: #000000; /* Light text color */
+        }
+        
+        [data-bs-theme='dark'] {
+            background-color: #000000; /* Dark background */
+            color: #ffffff; /* Light text color */
+        }
+        
+        .section {
+            transition: background-color 0.3s ease; /* Smooth transition for sections */
+        }
+        
+        /* for navbar */
+        [data-bs-theme='light'] #headContainer{
+            background-color: hsl(20, 43%, 93%);
+        }
+        /* for footer */
+        [data-bs-theme='light'] #footer{
+            background-color: hsl(20, 43%, 93%);
+        }
+
+
+        [data-bs-theme='light'] .section {
+            background-color: transparent; /* Light section background */
+        }
+
+        /* for navbar */
+        [data-bs-theme='dark'] #headContainer{
+            background-color: rgb(136, 136, 136);
+            color: #ffffff;
+        }
+        /* for footer */
+        [data-bs-theme='dark'] #footer{
+            background-color: rgb(136, 136, 136);
+            .text{
+                color: #ffffff;
+            }
+        }
+
+        [data-bs-theme='dark'] .section {
+            background-color: rgb(48, 48, 48); /* Dark section background */
+        }
+        /*  */
+        
+
         @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');  
         @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');  
-#sr {
-display: none; 
-position: fixed; 
-bottom: 20px; 
-right: 30px; 
-z-index: 99; 
-font-size: 18px;
-border: none;
-outline: none;
-background-color: transparent; 
-color: white; 
-cursor: pointer; 
-padding: 15px; 
-border-radius: 4px; 
-}
+        #sr {
+            display: none; 
+            position: fixed; 
+            bottom: 20px; 
+            right: 30px; 
+            z-index: 99; 
+            font-size: 18px;
+            border: none;
+            outline: none;
+            background-color: transparent; 
+            color: white; 
+            cursor: pointer; 
+            padding: 15px; 
+            border-radius: 4px; 
+        }
 
-#sr:hover {
-background-color: transparent; 
-color: black;
-border-radius: 100px;
-}
-.circle{
-   z-index: 10000;
-   width: 20px;
-   height: 20px;
-   border-radius: 50%;
-   pointer-events: none;
-    animation: colors 5s infinite;
-    position: fixed;
-  transform: translate(-50%,-50%);
-}
-.circle::before {
-    content: "";
-    position: fixed;
-  width: 50px;
-  height: 50px;
-  opacity: 0.2;
-  transform: translate(-30%,-30%);
-  border-radius: 50%;
-}
-body{
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpath fill='%23ffb9b0' d='M486 705.8c-109.3-21.8-223.4-32.2-335.3-19.4C99.5 692.1 49 703 0 719.8V800h843.8c-115.9-33.2-230.8-68.1-347.6-92.2C492.8 707.1 489.4 706.5 486 705.8z'/%3E%3Cpath fill='%23ffc1b7' d='M1600 0H0v719.8c49-16.8 99.5-27.8 150.7-33.5c111.9-12.7 226-2.4 335.3 19.4c3.4 0.7 6.8 1.4 10.2 2c116.8 24 231.7 59 347.6 92.2H1600V0z'/%3E%3Cpath fill='%23ffc8bf' d='M478.4 581c3.2 0.8 6.4 1.7 9.5 2.5c196.2 52.5 388.7 133.5 593.5 176.6c174.2 36.6 349.5 29.2 518.6-10.2V0H0v574.9c52.3-17.6 106.5-27.7 161.1-30.9C268.4 537.4 375.7 554.2 478.4 581z'/%3E%3Cpath fill='%23ffcfc6' d='M0 0v429.4c55.6-18.4 113.5-27.3 171.4-27.7c102.8-0.8 203.2 22.7 299.3 54.5c3 1 5.9 2 8.9 3c183.6 62 365.7 146.1 562.4 192.1c186.7 43.7 376.3 34.4 557.9-12.6V0H0z'/%3E%3Cpath fill='%23FFD6CE' d='M181.8 259.4c98.2 6 191.9 35.2 281.3 72.1c2.8 1.1 5.5 2.3 8.3 3.4c171 71.6 342.7 158.5 531.3 207.7c198.8 51.8 403.4 40.8 597.3-14.8V0H0v283.2C59 263.6 120.6 255.7 181.8 259.4z'/%3E%3Cpath fill='%23ffdcd4' d='M1600 0H0v136.3c62.3-20.9 127.7-27.5 192.2-19.2c93.6 12.1 180.5 47.7 263.3 89.6c2.6 1.3 5.1 2.6 7.7 3.9c158.4 81.1 319.7 170.9 500.3 223.2c210.5 61 430.8 49 636.6-16.6V0z'/%3E%3Cpath fill='%23ffe1d9' d='M454.9 86.3C600.7 177 751.6 269.3 924.1 325c208.6 67.4 431.3 60.8 637.9-5.3c12.8-4.1 25.4-8.4 38.1-12.9V0H288.1c56 21.3 108.7 50.6 159.7 82C450.2 83.4 452.5 84.9 454.9 86.3z'/%3E%3Cpath fill='%23ffe6df' d='M1600 0H498c118.1 85.8 243.5 164.5 386.8 216.2c191.8 69.2 400 74.7 595 21.1c40.8-11.2 81.1-25.2 120.3-41.7V0z'/%3E%3Cpath fill='%23ffebe4' d='M1397.5 154.8c47.2-10.6 93.6-25.3 138.6-43.8c21.7-8.9 43-18.8 63.9-29.5V0H643.4c62.9 41.7 129.7 78.2 202.1 107.4C1020.4 178.1 1214.2 196.1 1397.5 154.8z'/%3E%3Cpath fill='%23FFF0EA' d='M1315.3 72.4c75.3-12.6 148.9-37.1 216.8-72.4h-723C966.8 71 1144.7 101 1315.3 72.4z'/%3E%3C/g%3E%3C/svg%3E");
-  background-size: cover;
-  background-attachment: fixed;
-}
-::-webkit-scrollbar {
-  width: 10px; 
-}
-::-webkit-scrollbar-track {
-  background-color: #feaea5; 
-  border-radius: 10px;
-}
+        #sr:hover {
+            background-color: transparent; 
+            color: black;
+            border-radius: 100px;
+        }
+        .circle{
+            z-index: 10000;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            pointer-events: none;
+            animation: colors 5s infinite;
+            position: fixed;
+            transform: translate(-50%,-50%);
+        }
+        .circle::before {
+            content: "";
+            position: fixed;
+            width: 50px;
+            height: 50px;
+            opacity: 0.2;
+            transform: translate(-30%,-30%);
+            border-radius: 50%;
+        }
+        body{
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpath fill='%23ffb9b0' d='M486 705.8c-109.3-21.8-223.4-32.2-335.3-19.4C99.5 692.1 49 703 0 719.8V800h843.8c-115.9-33.2-230.8-68.1-347.6-92.2C492.8 707.1 489.4 706.5 486 705.8z'/%3E%3Cpath fill='%23ffc1b7' d='M1600 0H0v719.8c49-16.8 99.5-27.8 150.7-33.5c111.9-12.7 226-2.4 335.3 19.4c3.4 0.7 6.8 1.4 10.2 2c116.8 24 231.7 59 347.6 92.2H1600V0z'/%3E%3Cpath fill='%23ffc8bf' d='M478.4 581c3.2 0.8 6.4 1.7 9.5 2.5c196.2 52.5 388.7 133.5 593.5 176.6c174.2 36.6 349.5 29.2 518.6-10.2V0H0v574.9c52.3-17.6 106.5-27.7 161.1-30.9C268.4 537.4 375.7 554.2 478.4 581z'/%3E%3Cpath fill='%23ffcfc6' d='M0 0v429.4c55.6-18.4 113.5-27.3 171.4-27.7c102.8-0.8 203.2 22.7 299.3 54.5c3 1 5.9 2 8.9 3c183.6 62 365.7 146.1 562.4 192.1c186.7 43.7 376.3 34.4 557.9-12.6V0H0z'/%3E%3Cpath fill='%23FFD6CE' d='M181.8 259.4c98.2 6 191.9 35.2 281.3 72.1c2.8 1.1 5.5 2.3 8.3 3.4c171 71.6 342.7 158.5 531.3 207.7c198.8 51.8 403.4 40.8 597.3-14.8V0H0v283.2C59 263.6 120.6 255.7 181.8 259.4z'/%3E%3Cpath fill='%23ffdcd4' d='M1600 0H0v136.3c62.3-20.9 127.7-27.5 192.2-19.2c93.6 12.1 180.5 47.7 263.3 89.6c2.6 1.3 5.1 2.6 7.7 3.9c158.4 81.1 319.7 170.9 500.3 223.2c210.5 61 430.8 49 636.6-16.6V0z'/%3E%3Cpath fill='%23ffe1d9' d='M454.9 86.3C600.7 177 751.6 269.3 924.1 325c208.6 67.4 431.3 60.8 637.9-5.3c12.8-4.1 25.4-8.4 38.1-12.9V0H288.1c56 21.3 108.7 50.6 159.7 82C450.2 83.4 452.5 84.9 454.9 86.3z'/%3E%3Cpath fill='%23ffe6df' d='M1600 0H498c118.1 85.8 243.5 164.5 386.8 216.2c191.8 69.2 400 74.7 595 21.1c40.8-11.2 81.1-25.2 120.3-41.7V0z'/%3E%3Cpath fill='%23ffebe4' d='M1397.5 154.8c47.2-10.6 93.6-25.3 138.6-43.8c21.7-8.9 43-18.8 63.9-29.5V0H643.4c62.9 41.7 129.7 78.2 202.1 107.4C1020.4 178.1 1214.2 196.1 1397.5 154.8z'/%3E%3Cpath fill='%23FFF0EA' d='M1315.3 72.4c75.3-12.6 148.9-37.1 216.8-72.4h-723C966.8 71 1144.7 101 1315.3 72.4z'/%3E%3C/g%3E%3C/svg%3E");
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        ::-webkit-scrollbar {
+            width: 10px; 
+        }
+        ::-webkit-scrollbar-track {
+            background-color: #feaea5; 
+            border-radius: 10px;
+        }
 
-::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    background: linear-gradient(
-    to bottom,
-    hsl(357, 37%, 62%),
-    hsl(304, 14%, 46%)
-  );
-  border-radius: 6px; 
-}
+        ::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            background: linear-gradient(
+                to bottom,
+                hsl(357, 37%, 62%),
+                hsl(304, 14%, 46%)
+            );
+            border-radius: 6px; 
+        }
 
-::-webkit-scrollbar-thumb:hover {
-  background-color: rgb(172, 38, 94); 
-}
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgb(172, 38, 94); 
+        }
 
-* {
-  scrollbar-width: thick; 
-}
-::-webkit-scrollbar-button {
-  display: none;
-}
+        * {
+            scrollbar-width: thick; 
+        }
+        ::-webkit-scrollbar-button {
+            display: none;
+        }
 
-:root{
-    --ff-philosopher: "Philosopher", sans-serif;
-    --ff-poppins: "Poppins", sans-serif;
-}
+        :root{
+            --ff-philosopher: "Philosopher", sans-serif;
+            --ff-poppins: "Poppins", sans-serif;
+        }
 
-#preloader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: hsl(20, 43%, 93%); 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: opacity 2s ease-out, visibility 2s ease-out;
-    opacity: 1;
-    visibility: visible;
-    z-index: 9999; 
-}
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: hsl(20, 43%, 93%); 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 2s ease-out, visibility 2s ease-out;
+            opacity: 1;
+            visibility: visible;
+            z-index: 9999; 
+        }
 
 
-#preloader.hidden {
-    opacity: 0;
-    visibility: hidden;
-}
+        #preloader.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
 
-#loader {
-    display: block;
-    position: relative;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 3px solid transparent;
-    border-top-color: hsl(304, 14%, 46%);
-    animation: spin 3s linear infinite;
-}
+        #loader {
+            display: block;
+            position: relative;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid transparent;
+            border-top-color: hsl(304, 14%, 46%);
+            animation: spin 3s linear infinite;
+        }
 
-#loader:before {
-    content: "";
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    right: 5px;
-    bottom: 5px;
-    border-radius: 50%;
-    border: 3px solid transparent;
-    border-top-color: hsl(357, 37%, 62%);
-    animation: spin 3s linear infinite;
-}
+        #loader:before {
+            content: "";
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            right: 5px;
+            bottom: 5px;
+            border-radius: 50%;
+            border: 3px solid transparent;
+            border-top-color: hsl(357, 37%, 62%);
+            animation: spin 3s linear infinite;
+        }
 
-#loader:after {
-    content: "";
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    right: 15px;
-    bottom: 15px;
-    border-radius: 50%;
-    border: 3px solid transparent;
-    border-top-color: hsl(357, 93%, 84%);
-    animation: spin 1.5s linear infinite;
-}
+        #loader:after {
+            content: "";
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            right: 15px;
+            bottom: 15px;
+            border-radius: 50%;
+            border: 3px solid transparent;
+            border-top-color: hsl(357, 93%, 84%);
+            animation: spin 1.5s linear infinite;
+        }
 
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
-.social-icons a {
-  font-size: 1.2rem;
-  padding: 8px;
-  margin: 15px;
-  text-decoration: none;
-  color: rgb(18, 16, 16);
-}
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        .social-icons a {
+            font-size: 1.2rem;
+            padding: 8px;
+            margin: 15px;
+            text-decoration: none;
+            color: rgb(18, 16, 16);
+        }
 
-.social-icons a:hover {
-  color: brown;
-  background-color: hsl(22, 76%, 85%);
-  border-radius: 10px;
-  transform: scale(1.5); /* Increase size */
-  transition: transform 0.3s ease; /* Smooth transition effect */
-}
-.fa-brands.fa-facebook:hover {
-  color: #3B5998 !important;
-}
+        .social-icons a:hover {
+            color: brown;
+            background-color: hsl(22, 76%, 85%);
+            border-radius: 10px;
+            transform: scale(1.5); /* Increase size */
+            transition: transform 0.3s ease; /* Smooth transition effect */
+        }
+        .fa-brands.fa-facebook:hover {
+            color: #3B5998 !important;
+        }
 
-.fa-brands.fa-instagram:hover {
-  color: #D62976 !important;
-}
+        .fa-brands.fa-instagram:hover {
+            color: #D62976 !important;
+        }
 
-.fa-brands.fa-x-twitter:hover {
-  color: #181e20 !important;
-}
+        .fa-brands.fa-x-twitter:hover {
+            color: #181e20 !important;
+        }
     </style>
 </head>
 
@@ -228,10 +298,19 @@ body{
       <div id="loader"></div>
     </div>
 
-    <div class="head_container_service" style="color: black;font-family: var(--ff-philosopher);">
+    <div id="headContainer" class="head_container_service" style="font-family: var(--ff-philosopher);">
         <header style="font-family: var(--ff-philosopher);">
             <nav class="navbar">
                 <ul id="header-items" style="color: black;font-family: var(--ff-philosopher);">
+                    <li>
+                        <!-- Bootstrap 5 switch -->
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" id="darkModeSwitch" checked>
+                            <label class="form-check-label" for="darkModeSwitch">Dark Mode</label>
+                            <script src="../script.js"></script> <!-- Link to your JavaScript -->
+                            <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>  -->
+                        </div>
+                    </li>
                     <li><a href="../index.html" style="color: black;">Home</a></li>
                     <li><a href="menu.html" style="color: black;">About</a></li>
                     <li><a href="services.html" style="color: black;">Services</a></li>
@@ -264,9 +343,9 @@ body{
 
 
 
-    <section class="service_container">
+    <section id="section1" class="section service_container">
 
-        <section class="testimonalsection" id="testimonal">
+        <section class="section testimonalsection" id="testimonal">
             <h2 class=section__title style="font-family: var(--ff-philosopher);color: hsl(357, 82%,35%);">Customer Opinion</h2>
 
             <div class="testimonal__container">
@@ -354,7 +433,7 @@ body{
 
 
         </section>
-        <div class="second_cont" style="font-family: Garamond;">
+        <div class="section second_cont" style="font-family: Garamond;">
             <div class="deals">
                 <i class="fa-solid fa-gift"></i>
                 <p style="font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%);"><a href="./payment2.html" style="text-decoration: none;color: black;">Gift Card and Voucher Redemption</a></p>
@@ -371,38 +450,38 @@ body{
 
 
     <!-- footer -->
-    <footer>
+    <footer id="footer">
 
 
         <div class="foot-panel2" style="font-family: Garamond;">
             <ul class="footer-colums">
                 <p style="font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%);">Our Pages</p>
-                <a href="../index.html" style="text-decoration: none;font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">Home</a>
-                <a href="menu.html" style="text-decoration: none;font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">About</a>
-                <a href="#" style="text-decoration: none;font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">Services</a>
-                <a href="contact.html" style="text-decoration: none;font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">Contact</a>
-                <a href="cart.html" style="text-decoration: none;font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">Cart</a>
+                <a class="text" href="../index.html" style="text-decoration: none;font-family: var(--ff-poppins);;">Home</a>
+                <a class="text" href="menu.html" style="text-decoration: none;font-family: var(--ff-poppins);">About</a>
+                <a class="text" href="#" style="text-decoration: none;font-family: var(--ff-poppins);">Services</a>
+                <a class="text" href="contact.html" style="text-decoration: none;font-family: var(--ff-poppins);">Contact</a>
+                <a class="text" href="cart.html" style="text-decoration: none;font-family: var(--ff-poppins);">Cart</a>
             </ul>
 
             <ul class="footer-colums">
                 <p style="font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%);"> Exclusive Offers</p>
-                <a style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">Retro Discounts</a>
-                <a style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">Limited-Time Promotions</a>
-                <a style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">Special Event Packages</a>
-                <a style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">Membership Benefits</a>
-                <a style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">Early Access to New Collections</a>
-                <a style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">VIP Retro Events</a>
-                <a style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">Personalized Culinary Experiences</a>
+                <a class="text" style="font-family: var(--ff-poppins);">Retro Discounts</a>
+                <a class="text" style="font-family: var(--ff-poppins);">Limited-Time Promotions</a>
+                <a class="text" style="font-family: var(--ff-poppins);">Special Event Packages</a>
+                <a class="text" style="font-family: var(--ff-poppins);">Membership Benefits</a>
+                <a class="text" style="font-family: var(--ff-poppins);">Early Access to New Collections</a>
+                <a class="text" style="font-family: var(--ff-poppins);">VIP Retro Events</a>
+                <a class="text" style="font-family: var(--ff-poppins);">Personalized Culinary Experiences</a>
 
             </ul>
 
             <ul class="footer-colums">
                 <p style="font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%);">Payment Products</p>
-                <a style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">Secure Checkout</a>
-                <a style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">Credit/Debit Cards</a>
-                <a style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">Online Payment</a>
-                <a style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">Mobile Wallets</a>
-                <a style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">Contactless Payments</a>
+                <a class="text" style="font-family: var(--ff-poppins);">Secure Checkout</a>
+                <a class="text" style="font-family: var(--ff-poppins);">Credit/Debit Cards</a>
+                <a class="text" style="font-family: var(--ff-poppins);">Online Payment</a>
+                <a class="text" style="font-family: var(--ff-poppins);">Mobile Wallets</a>
+                <a class="text" style="font-family: var(--ff-poppins);">Contactless Payments</a>
             </ul>
 
 
