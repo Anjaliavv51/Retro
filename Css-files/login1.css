@@ -29,8 +29,31 @@ body * {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  position: relative;
 }
-
+.home-btn{
+  position: absolute;
+  top:32px;
+  left:30px;
+}
+.home-btn a{
+  font-size: 30px;
+  text-decoration: none;
+  color:rgb(149, 15, 95);
+}
+.home-btn a::after {
+  content: ''; /* Creates a pseudo-element */
+  position: absolute;
+  width: 100%; /* Full width of the link */
+  height: 1.5px; /* Thickness of the underline */
+  bottom: -5px;
+  left: 0;
+  background-color: transparent; /* Default background (invisible) */
+  transition: background-color 0.1s ease; /* Smooth transition */
+}
+.home-btn a:hover::after{
+  background-color:white;
+}
 .left-login > h1 {
   color: #e13838;
   font-size: 2.5vw;
