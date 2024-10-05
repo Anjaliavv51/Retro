@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-      
+    <link rel="stylesheet" href="/Css-files/navbarstyles.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Fuggles&family=Mooli&family=Oswald:wght@600&family=Roboto:wght@100;300&display=swap"
         rel="stylesheet">
@@ -536,18 +536,42 @@
 
     <div class="head_container_service" style="color: black;font-family: var(--ff-philosopher);">
         <header style="font-family: var(--ff-philosopher);">
-            <nav class="navbar">
-                <ul id="header-items" style="color: black;font-family: var(--ff-philosopher);justify-content: center;">
-                    <li><a href="../index.html" style="color: black;">&nbsp;&nbsp;&nbsp;&nbsp;
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Home</a></li>
-                    <li><a href="menu.html" style="color: black;">About</a></li>
-                    <li><a href="services.html" style="color: black;">Services</a></li>
-                    <li><a href="contact.html" style="color: black;">Contact us</a></li>
-                    <li><a href="cart.html" style="color: black;">Cart <span class="badge-count" id="badgeCount"></span></a></li>
-                </ul>
+            <nav class="navbar navbar-expand-lg fixed-top" id="top">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="../index.html" style="font-family: var(--ff-philosopher); color: black;">
+                        <b>Retro</b>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../index.html" style="color: black;">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="menu.html" style="color: black;">About Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="services.html" style="color: black;">Services</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html" style="color: black;">Contact us</a>
+                            </li>
+                            <li class="nav-item" style="list-style-type: none;">
+                                <a class="nav-link" href="cart.html" style="color: black;">
+                                    <i class="fa-solid fa-cart-shopping"></i><span class="badge-count" id="badgeCount"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </nav>
         </header>
     </div>
+
     <div class="wrapper">
         <div class="container">
             <input type="radio" name="slide" id="c1">
