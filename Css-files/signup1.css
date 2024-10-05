@@ -25,6 +25,7 @@ body {
   height: 100vh; /* Full viewport height */
   padding: 20px; /* Padding to avoid overflow */
   overflow: hidden; /* Prevents overflow */
+  position: relative;
 }
 
 .main-login {
@@ -33,6 +34,32 @@ body {
   align-items: center;
   width: 100%;
   overflow: hidden; /* Ensure nothing overflows from the flexbox */
+}
+
+.homebtn {
+  position: absolute;
+  top: 30px;
+  left: 25px;
+}
+
+.homebtn a {
+  font-size: 30px;
+  text-decoration: none;
+}
+
+.homebtn a::after {
+  content: ''; /* Creates a pseudo-element */
+  position: absolute;
+  width: 100%; /* Full width of the link */
+  height: 1.5px; /* Thickness of the underline */
+  bottom: -5px;
+  left: 0;
+  background-color: transparent; /* Default background (invisible) */
+  transition: background-color 0.1s ease; /* Smooth transition */
+}
+
+.homebtn a:hover::after {
+  background-color: white;
 }
 
 .card-login {
