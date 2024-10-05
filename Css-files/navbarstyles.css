@@ -6,61 +6,56 @@ body {
 
 /* Navbar styles */
 .navbar {
-    background-color: rgba(255, 255, 245, 0.8);
+    background-color: #ffcd9f; /* Solid background color */
+    position: sticky;
+    top: 0;
     padding: 1rem;
     display: flex;
     width: 100%;
     justify-content: space-between;
-    margin: 10px 1px!important;
-    border-radius: 20px;
+    margin: 10px 4rem!important;
+    margin-left: 4.5rem!important;
+    border-radius: 25px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    z-index: 100; /* Ensures it stays on top */
 }
 
 .nav-right {
     margin-left: auto;
-    /* Pushes the login/signup to the right side */
     display: flex;
-    gap: 15px;
-    /* Space between login and signup */
-}
-
-.ms-auto {
-    margin-left: auto;
-    /* Pushes to the right */
+    gap: 20px;
+    align-items: center;
 }
 
 .navbar-brand {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     color: black;
     font-weight: bold;
     transition: transform 0.3s ease;
+    font-family: 'Philosopher', sans-serif;
 }
 
 .navbar-brand:hover {
-    transform: scale(1.6);
-}
-
-.navbar-nav .nav-item {
-    margin-right: 15px;
+    transform: scale(1.2);
+    color: #e06b6b;
 }
 
 .nav-link {
     color: black;
-    font-size: 1rem;
-    font-family: var(--ff-philosopher);
+    font-size: 1.1rem;
+    font-family: 'Philosopher', sans-serif;
     text-decoration: none;
-    /* Remove default underline */
     position: relative;
     transition: all 0.3s ease;
+    padding: 0 10px;
 }
 
-.nav-item.dropdown .nav-link {
-    text-decoration: none;
-    /* No underline for dropdown toggle */
+.cart-shopping{
+    margin-right: 1rem;
 }
 
 .nav-link:hover {
-    text-decoration: none;
-    /* Prevent default underline on hover */
+    color: #e06b6b;
 }
 
 .nav-link::after {
@@ -69,15 +64,10 @@ body {
     left: 0;
     bottom: -5px;
     width: 0%;
-    height: 3.5px;
-    /* Thicker underline */
+    height: 2px;
     background: transparent;
     transition: all 0.3s ease-in-out;
-    box-shadow:
-        0 0 30px rgba(255, 159, 128, 1),
-        /* Initial glow effect with bright peach color */
-        0 0 60px rgba(255, 159, 128, 1);
-    /* Increased glow effect */
+    box-shadow: 0 0 15px rgba(255, 159, 128, 0.8);
 }
 
 .nav-link:hover::after {
@@ -94,10 +84,11 @@ body {
     color: black;
     text-decoration: none;
     position: relative;
+    padding: 0 10px;
 }
 
 .nav-btn:hover {
-    color: #d2691e;
+    color: #e06b6b;
 }
 
 .nav-btn::after {
@@ -108,24 +99,18 @@ body {
     width: 0%;
     height: 2px;
     background: #ffb6c1;
-    /* Adjust to match background color */
     transition: all 0.3s ease-in-out;
-    box-shadow: 0 20px #ffb6c1;
-    /* Glow effect */
 }
 
-.nav-link:hover::after {
+.nav-btn:hover::after {
     background: rgba(255, 159, 128, 1);
     width: 100%;
-    box-shadow:
-        0 0 25px rgba(255, 159, 128, 1),
-        0 0 50px rgba(255, 159, 128, 1);
-    /* Glow effect with bright peach color */
+    box-shadow: 0 0 25px rgba(255, 159, 128, 0.8);
 }
 
 .nav-link:hover,
 .nav-btn:hover {
-    color: hwb(327 21% 3%) !important;
+    color: #d2691e !important;
 }
 
 .dropdown-menu {
@@ -134,8 +119,7 @@ body {
 }
 
 .dropdown-item {
-    /*color: black;*/
-    font-family: var(--ff-philosopher);
+    font-family: 'Philosopher', sans-serif;
 }
 
 .dropdown-item:hover {
@@ -143,25 +127,35 @@ body {
     color: #d2691e;
 }
 
+.nav-right a, .nav-right button {
+    padding: 0 15px;
+}
+
+.nav-right .cart-btn {
+    font-size: 1.2rem;
+    position: relative;
+}
+
+.cart-btn:hover {
+    color: #e06b6b;
+}
+
 /* Mobile Styles */
 @media (max-width: 768px) {
     .navbar-brand {
         margin-left: 10px;
+        font-size: 1.5rem;
     }
 
     .navbar-nav {
         text-align: center;
     }
 
-    .navbar-toggler {
-        border: none;
-    }
-
-    .navbar-toggler-icon {
-        color: black;
-    }
-
     .nav-item {
         margin-bottom: 1rem;
+    }
+
+    .nav-right {
+        gap: 10px;
     }
 }

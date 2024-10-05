@@ -40,10 +40,16 @@ body {
 }
 */
 
+.navbar-brand{
+  color: #a42b2a !important;
+  font-size: 1.7rem !important;
+  margin-left: 1rem;
+}
+
 .navbar.fixed-top {
   position: fixed; 
-  top: 0;
-  width: 100%; 
+  top: 0.6rem;
+  width: 90%; 
   z-index: 1030; 
 }
 .navbar.scrolled {
@@ -601,7 +607,7 @@ ul p {
 ul a {
   display: block;
   font-size: 0.85rem;
-  margin-top: 10px;
+  /* margin-top: 10px; */
   color: #dddddd;
   text-decoration: none;
 }
@@ -681,6 +687,9 @@ textarea {
   border-radius: 10px;
   transform: scale(1.5); /* Increase size */
   transition: transform 0.3s ease; /* Smooth transition effect */
+}
+.fa-cart-shopping {
+  margin-left: 1.5rem;
 }
 .fa-brands.fa-facebook:hover {
   color: #3B5998 !important;
