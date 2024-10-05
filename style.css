@@ -1073,3 +1073,35 @@ padding-left:2px;
   cursor: pointer;
   margin-top: 5px;
 }
+:root {
+  --ff-philosopher: 'Philosopher', sans-serif;
+}
+
+.navbar-nav .nav-link, .nav-btn {
+  color: black;
+  font-family: var(--ff-philosopher);
+}
+
+.burger-menu {
+  display: none;
+}
+
+@media (max-width: 995px) {
+  .burger-menu {
+      display: block !important;
+
+  }
+  #navbarSupportContent {
+      display: none !important;
+  }
+
+}
+
+@media (min-width: 996px) {
+  .burger-menu {
+      display: none !important;
+  }
+  #navbarNav, .d-flex {
+      display: flex !important;
+  }
+}
