@@ -25,7 +25,7 @@ body {
   height: 100vh; /* Full viewport height */
   padding: 20px; /* Padding to avoid overflow */
   overflow: hidden; /* Prevents overflow */
-  position:relative;
+  position: relative;
 }
 
 .main-login {
@@ -35,15 +35,18 @@ body {
   width: 100%;
   overflow: hidden; /* Ensure nothing overflows from the flexbox */
 }
-.homebtn{
+
+.homebtn {
   position: absolute;
-  top:30px;
-  left:25px;
+  top: 30px;
+  left: 25px;
 }
-.homebtn a{
+
+.homebtn a {
   font-size: 30px;
   text-decoration: none;
 }
+
 .homebtn a::after {
   content: ''; /* Creates a pseudo-element */
   position: absolute;
@@ -54,8 +57,9 @@ body {
   background-color: transparent; /* Default background (invisible) */
   transition: background-color 0.1s ease; /* Smooth transition */
 }
-.homebtn a:hover::after{
-  background-color:white;
+
+.homebtn a:hover::after {
+  background-color: white;
 }
 
 .card-login {
@@ -151,3 +155,4 @@ body {
     padding: 20px; /* Adjust padding */
   }
 }
+
