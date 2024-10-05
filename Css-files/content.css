@@ -318,9 +318,6 @@ div.deals:hover{
   color: brown !important;
 }
 
-.deals:hover p a{
-  color: brown !important;
-}
 .deals p{
   font-size: 1.1rem;
   padding-top: 2px;
