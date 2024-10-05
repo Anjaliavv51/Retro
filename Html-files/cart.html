@@ -7,6 +7,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Fuggles&amp;family=Mooli&amp;family=Oswald:wght@600&amp;family=Roboto:wght@100;300&amp;display=swap"
     rel="stylesheet">
+  <link rel="stylesheet" href="/Css-files/navbarstyles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
     crossorigin="anonymous" referrerpolicy="no-referrer">
@@ -257,7 +258,7 @@
   <div id="preloader">
     <div id="loader"></div>
   </div>
-  <div class="circle-container">
+<!--  <div class="circle-container">
     <div class="circle" style="background-color: rgb(255, 181, 107); left: 504px; top: 59px; scale: 1;"></div>
     <div class="circle" style="background-color: rgb(253, 175, 105); left: 504px; top: 59px; scale: 0.95;"></div>
     <div class="circle" style="background-color: rgb(248, 157, 99); left: 504px; top: 59px; scale: 0.9;"></div>
@@ -296,6 +297,7 @@
     <div class="mainhead">
       <h1 style="color: black;font-family: var(--ff-philosopher);">C A R T</h1>
 </div>
+-->
     <div class="circle-container">
         <div class="circle" style="background-color: rgb(255, 181, 107); left: 504px; top: 59px; scale: 1;"></div>
         <div class="circle" style="background-color: rgb(253, 175, 105); left: 504px; top: 59px; scale: 0.95;"></div>
@@ -318,18 +320,43 @@
         <div class="circle" style="background-color: rgb(104, 0, 96); left: 504px; top: 59px; scale: 0.1;"></div>
         <div class="circle" style="background-color: rgb(96, 0, 95); left: 504px; top: 59px; scale: 0.05;"></div>
     </div>
-    <div class="head_container" style="background-color: transparent;font-family: Georgia;">
-        <header>
-            <nav class="navbar">
-                <ul id="header-items">
-                    <li><a href="../index.html" style="color: black;font-family: var(--ff-philosopher);">Home</a></li>
-                    <li><a href="menu.html" style="color: black;font-family: var(--ff-philosopher);">About</a></li>
-                    <li><a href="services.html" style="color: black;font-family: var(--ff-philosopher);">Services</a></li>
-                    <li><a href="contact.html" style="color: black;font-family: var(--ff-philosopher);">Contact us</a></li>
-                    <li><a href="cart.html" style="color: black;font-family: var(--ff-philosopher);">Cart <span class="badge-count" id="badgeCount"></span></a></li>
-                </ul>
-            </nav>
-        </header>
+  <div class="head_container" style="background-color: transparent; font-family: var(--ff-philosopher);">
+    <header>
+      <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="../index.html" style="color: black;">
+            <b>Retro</b>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="../index.html" style="color: black;">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="menu.html" style="color: black;">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="services.html" style="color: black;">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html" style="color: black;">Contact us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="cart.html" style="color: black;">
+                  Cart <span class="badge-count" id="badgeCount"></span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+  </div>
+
 
         <div class="mainhead">
             <h1 style="color: black;font-family: var(--ff-philosopher);">C A R T</h1>
