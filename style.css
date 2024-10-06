@@ -1087,11 +1087,13 @@ padding-left:2px;
   margin: 5px;
   border-radius: 10px;
   border: none;
+  background-color: #f9e2c4;
 }
 
 #contactForm h3 {
   height: 30px;
   color: #141414;
+  font-size: calc(1.0rem + .6vw);
 }
 #contactForm textarea {
   height: 100px;
@@ -1106,4 +1108,5 @@ padding-left:2px;
   border-radius: 5px;
   cursor: pointer;
   margin-top: 5px;
+  width: 60%;
 }

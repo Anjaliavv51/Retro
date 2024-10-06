@@ -176,9 +176,32 @@
         <div class="homebtn">
             <a href="../index.html"><b>Retro</b></a>
         </div>
+
         <div class="container">
             <div class="image-column">
                 <img src="signup_screen.jpg" alt="Signup Image" />
+
+        <div class="right-login">
+          <div class="card-login">
+            <h1 style="font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%);">SIGN UP</h1>
+            <form id="signup-form">
+              <div class="textfield">
+                <label for="name" style="font-family:var(--ff-philosopher);color: black;">Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required style="font-family: var(--ff-philosopher);">
+                <span id="name-error" class="error-message"></span>
+              </div>
+              <div class="textfield">
+                <label for="email" style="font-family: var(--ff-philosopher);color: black;">Email / User Name</label>
+                <input type="email" id="email" name="email" placeholder="Enter Email / UserName" required style="font-family: var(--ff-philosopher);">
+                <span id="email-error" class="error-message"></span>
+              </div>
+
+              <div class="textfield ">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter Password" title="Special characters are not allowed" required>
+                <span id="password-error" class="error-message"></span>
+                <span class="tooltiptext">Special characters such as /[<>"/]/  are not allowed</span>
+
             </div>
             <div class="form-column">
                 <h1>Sign Up</h1>
@@ -204,6 +227,7 @@
                         <input type="tel" id="phone" placeholder="Phone Number" required />
                     </div>
 
+
                     <div class="form-group">
                         <label for="password">Password*</label>
                         <input type="password" id="password" placeholder="Password" required />
@@ -217,6 +241,13 @@
                     <button type="submit">Submit</button>
                 </form>
             </div>
+
+              
+            </form>
+            <div class="btnNext"><button type="submit" class="btn-login" style="font-family: var(--ff-philosopher);color: #ddd;">Register</button>
+              <button id="google-login" style="font-family: var(--ff-philosopher);color: #ddd;">Signup with Google</button></div>
+          </div>
+
         </div>
          <script>
             const coords = { x: 0, y: 0 };
