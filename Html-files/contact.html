@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Retro</title>
-    <link rel="stylesheet" href="/Css-files/navbarstyles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap"
@@ -507,9 +506,223 @@ body{
 
 .fa-brands.fa-x-twitter:hover {
   color: #181e20 !important;
-}
-        </style>
 
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        #sr {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            background-color: transparent;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 4px;
+        }
+        #sr:hover {
+            background-color: transparent;
+            color: black;
+            border-radius: 100px;
+        }
+
+        .circle {
+            z-index: 10000;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            pointer-events: none;
+            animation: colors 5s infinite;
+            position: fixed;
+            transform: translate(-50%, -50%);
+        }
+
+        .circle::before {
+            content: "";
+            position: fixed;
+            width: 50px;
+            height: 50px;
+            opacity: 0.2;
+            transform: translate(-30%, -30%);
+            border-radius: 50%;
+        }
+
+        @media only screen and (max-width: 900px) {
+            #iframe {
+                width: 350px;
+                height: 300px;
+            }
+        }
+
+        #if {
+            width: 800px;
+            height: 450px;
+            border-radius: 5px;
+            overflow: clip !important;
+            border-width: 2px;
+            border-style: inset;
+            border-color: initial;
+            border-image: initial;
+        }
+
+        body {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpath fill='%23ffb9b0' d='M486 705.8c-109.3-21.8-223.4-32.2-335.3-19.4C99.5 692.1 49 703 0 719.8V800h843.8c-115.9-33.2-230.8-68.1-347.6-92.2C492.8 707.1 489.4 706.5 486 705.8z'/%3E%3Cpath fill='%23ffc1b7' d='M1600 0H0v719.8c49-16.8 99.5-27.8 150.7-33.5c111.9-12.7 226-2.4 335.3 19.4c3.4 0.7 6.8 1.4 10.2 2c116.8 24 231.7 59 347.6 92.2H1600V0z'/%3E%3Cpath fill='%23ffc8bf' d='M478.4 581c3.2 0.8 6.4 1.7 9.5 2.5c196.2 52.5 388.7 133.5 593.5 176.6c174.2 36.6 349.5 29.2 518.6-10.2V0H0v574.9c52.3-17.6 106.5-27.7 161.1-30.9C268.4 537.4 375.7 554.2 478.4 581z'/%3E%3Cpath fill='%23ffcfc6' d='M0 0v429.4c55.6-18.4 113.5-27.3 171.4-27.7c102.8-0.8 203.2 22.7 299.3 54.5c3 1 5.9 2 8.9 3c183.6 62 365.7 146.1 562.4 192.1c186.7 43.7 376.3 34.4 557.9-12.6V0H0z'/%3E%3Cpath fill='%23FFD6CE' d='M181.8 259.4c98.2 6 191.9 35.2 281.3 72.1c2.8 1.1 5.5 2.3 8.3 3.4c171 71.6 342.7 158.5 531.3 207.7c198.8 51.8 403.4 40.8 597.3-14.8V0H0v283.2C59 263.6 120.6 255.7 181.8 259.4z'/%3E%3Cpath fill='%23ffdcd4' d='M1600 0H0v136.3c62.3-20.9 127.7-27.5 192.2-19.2c93.6 12.1 180.5 47.7 263.3 89.6c2.6 1.3 5.1 2.6 7.7 3.9c158.4 81.1 319.7 170.9 500.3 223.2c210.5 61 430.8 49 636.6-16.6V0z'/%3E%3Cpath fill='%23ffe1d9' d='M454.9 86.3C600.7 177 751.6 269.3 924.1 325c208.6 67.4 431.3 60.8 637.9-5.3c12.8-4.1 25.4-8.4 38.1-12.9V0H288.1c56 21.3 108.7 50.6 159.7 82C450.2 83.4 452.5 84.9 454.9 86.3z'/%3E%3Cpath fill='%23ffe6df' d='M1600 0H498c118.1 85.8 243.5 164.5 386.8 216.2c191.8 69.2 400 74.7 595 21.1c40.8-11.2 81.1-25.2 120.3-41.7V0z'/%3E%3Cpath fill='%23ffebe4' d='M1397.5 154.8c47.2-10.6 93.6-25.3 138.6-43.8c21.7-8.9 43-18.8 63.9-29.5V0H643.4c62.9 41.7 129.7 78.2 202.1 107.4C1020.4 178.1 1214.2 196.1 1397.5 154.8z'/%3E%3Cpath fill='%23FFF0EA' d='M1315.3 72.4c75.3-12.6 148.9-37.1 216.8-72.4h-723C966.8 71 1144.7 101 1315.3 72.4z'/%3E%3C/g%3E%3C/svg%3E");
+            background-size: cover;
+        }
+
+.contact-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 2ß0px;
+    max-width: 1000px;
+    margin-left: 200px;  /* Adjust margin-left */
+    margin-right: 200px; /* Adjust margin-right */
+    gap: 60px;
+}
+.contact-container {
+    background-color: #ffe5b4;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.3);
+    width: 50%;
+    text-align: center;
+    border: 2px solid brown;
+    font-family: 'Bungee', cursive;
+}
+
+.contact-container h1 {
+    margin-bottom: 30px;
+    font-size: 28px;
+    color: brown;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.contact-container .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.contact-container label {
+    display: block;
+    font-size: 16px;
+    color: #2c3e50;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.contact-container input[type="text"], 
+.contact-container textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid brown;
+    border-radius: 10px;
+    font-size: 16px;
+    outline: none;
+    background-color: #fafafa;
+    transition: all 0.3s ease;
+}
+
+.contact-container input[type="text"]:focus, 
+.contact-container textarea:focus {
+    background-color: white;
+    border-color: brown;
+}
+
+.contact-container textarea {
+    resize: vertical;
+}
+
+.contact-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: brown;
+    color: #fff;
+    border: 2px solid white;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.contact-container button:hover {
+    background-color: white;
+    color: brown;
+    border: 2px solid brown;
+    transform: scale(1.05); /* Slightly grow the button */
+}
+
+/* Ripple effect on click */
+.contact-container button::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.3);
+    opacity: 0;
+    transition: opacity 0.6s ease;
+    transform: scale(0);
+}
+
+.contact-container button:active::after {
+    opacity: 1;
+    transform: scale(1.5);
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+.gif-container {
+    width: 55%;
+    text-align: center;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.gif-container iframe {
+    max-width: 170%;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    margin-bottom: 10px;
+
+}
+.gif-container h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: brown;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-family: 'Bungee', cursive;
+    text-align: center;
+}
+@media (max-width: 768px) {
+    .contact-wrapper {
+        flex-direction: column;
+    }
+
+    .contact-container, .gif-container {
+        width: 100%;
+    }
+
+    .gif-container iframe {
+        width: 80%;
+    }
+}
+.contact-section{
+    margin-bottom: 50px;
+}
+
+        </style>
 </head>
 
 <body class="contact_page">
@@ -540,309 +753,55 @@ body{
         <div id="loader"></div>
     </div>
 
-    <div class="head_container" style="background-color: transparent; font-family: var(--ff-philosopher);">
-        <header>
-            <nav class="navbar navbar-expand-lg fixed-top">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="../index.html" style="color: black;">
-                        <b>Retro</b>
-                    </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link" href="../index.html" style="color: black;">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="about.html" style="color: black;">About Us</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="menu.html" style="color: black;">Collections</a>
-                            <li class="nav-item">
-                                <a class="nav-link" href="services.html" style="color: black;">Services</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#" style="color: black;">Contact us</a>
-                            </li>
-                            <li class="nav-item" style="list-style-type: none;">
-                                <a class="nav-link" href="cart.html" style="color: black;">
-                                    <i class="fa-solid fa-cart-shopping"></i><span class="badge-count" id="badgeCount"></span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
+    <header
+        style=" font-family: Tahoma, sans-serif;background-color: transparent;border-bottom-left-radius: 50px;border-bottom-right-radius: 50px;">
+        <nav class="navbarbg"
+            style="background-color: transparent;border-bottom-left-radius: 100px;border-bottom-right-radius: 100px;">
+            <ul id="header-items">
+                <li><a href="../index.html" style="color: hsl(203, 30%, 26%);">Home</a></li>
+                <li><a href="menu.html" style="color: hsl(203, 30%, 26%);">About</a></li>
+                <li><a href="services.html" style="color: hsl(203, 30%, 26%);">Services</a></li>
+                <li><a href="contact.html" style="color: hsl(203, 30%, 26%);">Contact us</a></li>
+                <li><a href="cart.html" style="color: hsl(203, 30%, 26%);">Cart <span class="badge-count" id="badgeCount"></span></a></li>
+            </ul>
+        </nav>
+
+    </header>
+    <section class="contact-section">
+    <div class="contact-wrapper">
+        <div class="contact-container">
+            <h1>Contact Us</h1>
+            <form action="/submit" method="POST" id="contact-form">
+                <div class="form-group">
+                    <label for="form_name">Firstname *</label>
+                    <input id="form_name" type="text" name="name" placeholder="Please enter your firstname *" required>
                 </div>
-            </nav>
-        </header>
-    </div>
-
-
-
-    <!--
-    <section>
-        <div class="position-relative overflow-hidden p-0 m-0" style="background-color: transparent;">
-            <div class="container">
-                <div class=" text-center mt-5 ">
-                    <h1 style="color: hsl(357, 82%,35%);font-family: Georgia;">Feel Free to Contact Us!</h1>
+                <div class="form-group">
+                    <label for="form_lastname">Lastname *</label>
+                    <input id="form_lastname" type="text" name="surname" placeholder="Please enter your lastname *" required>
                 </div>
-
-                <div class="row">
-                    <div class="col-lg-7 mx-auto">
-                        <div class="card mt-2 mx-auto mb-5 p-4" style="background-color: transparent;">
-                            <div class="card-body" style="background-color: transparent;">
-                                <div class="container" style="background-color: transparent;">
-                                    <form action="/submit" method="POST" id="contact-form" role="form">
-                                        <div class="controls">
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <div class="form-group">
-                                                        <label for="form_name" style="font-family: Georgia;">Firstname *</label>
-                                                        <input id="form_name" type="text" name="name"
-                                                            class="form-control"
-                                                            placeholder="Please enter your firstname *"
-                                                            required="required" data-error="Firstname is required.">
-
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <div class="form-group">
-                                                        <label for="form_lastname" style="font-family: Georgia;">Lastname *</label>
-                                                        <input id="form_lastname" type="text" name="surname"
-                                                            class="form-control"
-                                                            placeholder="Please enter your lastname *"
-                                                            required="required" data-error="Lastname is required.">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <div class="form-group">
-                                                        <label for="form_email" style="font-family: Georgia;">Email *</label>
-                                                        <input id="form_email" type="email" name="email"
-                                                            class="form-control" placeholder="Please enter your email *"
-                                                            required="required" data-error="Valid email is required.">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-md-12">
-                                                    <div class="form-group">
-                                                        <label for="form_message" style="font-family: Georgia;">Message *</label>
-                                                        <textarea id="form_message" name="message" class="form-control"
-                                                            placeholder="Write your message here." rows="4"
-                                                            required="required"
-                                                            data-error="Please, leave us a message."></textarea>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-10 mt-3">
-                                                    <input type="submit"
-                                                        class="btn btn-outline-dark btn-send  pt-2 btn-block"
-                                                        value="Send Message" style="font-family: var(--ff-philosopher);justify-content: center;">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="form-group">
+                    <label for="form_message">Message *</label>
+                    <textarea id="form_message" name="message" rows="4" placeholder="Write your message here." required></textarea>
                 </div>
-            </div><br><br>
-            <center>
-            <iframe id="if" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3686.5834653201455!2d88.40974607348684!3d22.482281936278092!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0273c5411d60d7%3A0x5d6e57763593194b!2sSouthern%20Cleve%20Housing%2C%2012%2C%20Bhagat%20Singh%20Nagar%2C%20Nayabad%2C%20Kolkata%2C%20West%20Bengal%20700150!5e0!3m2!1sen!2sin!4v1716043813992!5m2!1sen!2sin" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </center>
-          <br><br><br>
-          </div>
-    </section>
-    -->
-
-
-<br><br><br>
-<br><br><br>
-    <section>
-        <div class="position-relative overflow-hidden p-0 m-0" style="background-color: transparent;">
-            <div class="container">
-                <div class="text-center mt-5">
-                    <h1 style="color: hsl(357, 53%, 8%); font-family: Tahoma, sans-serif;">Feel Free to Contact Us!</h1>
-                </div><br>
-
-                <div class="row mt-4">
-                    <!-- Left Column - Contact Form -->
-                    <div class="col-lg-7">
-                        <div class="card mt-2 mx-auto mb-5 p-4"
-                            style="background-color: transparent; border: 1px solid black;">
-                            <div class="card-body" style="background-color: transparent;">
-                                <div class="container" style="background-color: transparent;">
-                                    <form action="/submit" method="POST" id="contact-form" role="form">
-                                        <div class="controls">
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <div class="form-group">
-                                                        <label for="form_email" style="font-family: Georgia;">Email
-                                                            *</label>
-                                                        <div class="input-icon">
-                                                            <i class="fas fa-envelope"></i>
-                                                            <input id="form_email" type="email" name="email"
-                                                                class="form-control"
-                                                                placeholder="Please enter your email*"
-                                                                required="required"
-                                                                data-error="Valid Email is required.">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <div class="form-group">
-                                                        <label for="form_phone" style="font-family: Georgia;">Phone
-                                                            number *</label>
-                                                        <div class="input-icon">
-                                                            <i class="fas fa-phone"></i>
-                                                            <input id="form_phone" type="tel" name="phone"
-                                                                class="form-control"
-                                                                placeholder="Please enter your phone number*"
-                                                                required="required" pattern="[0-9]{10}"
-                                                                data-error="Phone number is required.">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div><br>
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <div class="form-group">
-                                                        <label for="form_email" style="font-family: Georgia;">Name
-                                                            *</label>
-                                                        <div class="input-icon">
-                                                            <i class="fas fa-user"></i>
-                                                            <input id="form_name" type="text" name="name"
-                                                                class="form-control"
-                                                                placeholder="Please enter your name*"
-                                                                required="required" data-error="Name is required.">
-                                                        </div>
-
-  
-
-<section>
-    <div class="position-relative overflow-hidden p-0 m-0" style="background-color: transparent;">
-        <div class="container">
-            <div class="text-center mt-5">
-                <h1 style="color: hsl(357, 53%, 8%); font-family: Tahoma, sans-serif;">Feel Free to Contact Us!</h1>
-            </div><br>
-
-            <div class="row mt-4">
-                <!-- Left Column - Contact Form -->
-                <div class="col-lg-7">
-                    <div class="card mt-2 mx-auto mb-5 p-4" style="background-color: transparent; border: 1px solid black;">
-                        <div class="card-body" style="background-color: transparent;">
-                            <div class="container" style="background-color: transparent;">
-                                <form action="" method="POST" id="contact-form" role="form">
-                                    <div class="controls">
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                               <div class="form-group"
-
-                                                    <label for="form_email" style="font-family: Georgia;">Name *</label>
-                                                    <div class="input-icon">
-                                                        <i class="fas fa-user"></i>
-                                                        <input id="form_email" type="email" name="email" class="form-control"
-                                                            placeholder="     Enter your Name" required="required"
-                                                            data-error="Name is required.">
-
-                                                    
-                                                 </div>
-                                             </div>
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-
-                                                    <label for="form_email" style="font-family: Georgia;">Email *</label>
-                                                    <div class="input-icon">
-                                                        <i class="fas fa-envelope"></i>
-                                                        <input id="form_email" type="email" name="email" class="form-control"
-                                                            placeholder="     Enter your email" required="required"
-                                                            data-error="Valid Email is required.">
-                                                
-                                                    
-                                                </div>
-                                            </div>
-                                        </div><br>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <label for="form_lastname" style="font-family: Georgia;">Phone number *</label>
-                                                    <div class="input-icon">
-
-                                                        <i class="fas fa-phone"></i>
-                                                        <input id="form_lastname" type="text" name="surname" class="form-control"
-                                                            placeholder="      Enter your Phone number" required="required"
-                                                            data-error="  Phone number is required.">
-                                                        
-
-                                                    </div>
-                                                </div>
-                                            </div><br>
-                                            <div class="row">
-                                                <div class="col-md-12">
-                                                    <div class="form-group">
-                                                        <label for="form_message" style="font-family: Georgia;">Message
-                                                            *</label>
-
-                                                        <textarea id="form_message" name="message" class="form-control"
- features-branch
-                                                            placeholder="Write your message here."
-                                                            style="height: 100px; width: 100%;" required="required"
-
-                                                            placeholder="Write your message here." style="height: 180px; width: 70%;" required="required"
- main
-                                                            data-error="Please, leave us a message."></textarea>
-
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-4 mt-4">
-                                                    <input type="submit" class="btn btn-send btn-block"
-                                                        value="Send Message"
-                                                        style="background-color: #ffc1b7; color: black; text-align: center; font-family: var(--ff-philosopher); padding: 12px 0; border: 1px solid black; height: 50px; line-height: 26px;">
-                                                </div>
- features-branch
-
-                                            </div>
-                                            <div class="col-md-4 mt-4">
-                                                <input type="submit" class="btn btn-send btn-block"
-                                                    value="Send Message" style="background-color: #ffc1b7; color: black; text-align: center; font-family: var(--ff-philosopher); border: 1px solid black; height: 50px; line-height: 10px; ">
- main
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Right Column - Google Maps -->
-                    <div class="col-lg-5">
-                        <center>
-                            <iframe id="if"
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3686.5834653201455!2d88.40974607348684!3d22.482281936278092!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0273c5411d60d7%3A0x5d6e57763593194b!2sSouthern%20Cleve%20Housing%2C%2012%2C%20Bhagat%20Singh%20Nagar%2C%20Nayabad%2C%20Kolkata%2C%20West%20Bengal%20700150!5e0!3m2!1sen!2sin!4v1716043813992!5m2!1sen!2sin"
-                                style="border:0; width: 100%; height: 440px;" allowfullscreen="" loading="lazy"
-                                referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        </center>
-                    </div>
+                <button type="submit">Send Message</button>
+                <div id="success-message" style="display:none; color: green; margin-top: 20px;">
+                    Your message has been sent successfully!
                 </div>
-            </div>
-            <br><br>
+            </form>
         </div>
+        <div class="gif-container">
+            <h2> GIF of the Day !!</h2>
+            <iframe src="https://giphy.com/embed/xTiN0jHuzhUAo7yGsM" width="480" height="360" style="justify-items:auto;" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+            <br>
+            <h2>Feel free to contact us anytime. In the meanwhile, enjoy free Retro GIFs!</h2>
+        </div>
+    </div>
     </section>
-
-    <!-- CSS for the icon and border radius -->
-
-
-
+    
     <div class="footer" style="background-color: hsl(20, 43%, 93%);">
-
         <footer>
-            <div class="foot-panel2"
-                style="background-color:hsl(20, 43%, 93%);font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+            <div class="foot-panel2" style="background-color:hsl(20, 43%, 93%);font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
                 <ul>
                     <p style="color: hsl(357, 82%,35%);font-family: var(--ff-philosopher);">Our Pages</p>
                     <a href="#" style="color: black;">Home</a>
@@ -851,7 +810,6 @@ body{
                     <a href="Html-files/contact.html" style="color: black;">Contact us</a>
                     <a href="Html-files/cart.html" style="color: black;">Cart</a>
                 </ul>
-
                 <ul>
                     <p style="color: hsl(357, 82%,35%);font-family: var(--ff-philosopher);"> Exclusive Offers</p>
                     <a href="#" style="color: black;">Retro Discounts</a>
@@ -863,7 +821,6 @@ body{
                     <a href="#" style="color: black;">Personalized Culinary Experiences</a>
 
                 </ul>
-
                 <ul>
                     <p style="color: hsl(357, 82%,35%);font-family: var(--ff-philosopher);">Payment Products</p>
                     <a href="./Html-files/payment2.html" style="color: black;">Secure Checkout</a>
@@ -872,113 +829,52 @@ body{
                     <a href="./Html-files/payment2.html" style="color: black;">Mobile Wallets</a>
                     <a href="./Html-files/payment2.html" style="color: black;">Contactless Payments</a>
                 </ul>
+                <form id="contactForm">
+                    <h3 style="font-family: var(--ff-philosopher);color: hsl(357, 82%,35%);font-family: var(--ff-philosopher);">Contact Us!</h3>
+                    
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
 
+                    <textarea id="message" name="message" placeholder="Your Message" required></textarea>
 
-                <div class="row">
-                    <div class="col-12">
-                        <form id="contactForm">
+                    <button id="butt" type="submit" style="font-family: Garamond;">Send Message</button>
+                </form>
 
- features-branch
-                            <h3
-                                style="font-family: var(--ff-philosopher);color: hsl(357, 82%,35%);font-family: var(--ff-philosopher);">
-                                Contact Us!</h3>
-
-<div class="row">
-    <div class="col-12">
-        <form id="contactForm" style="color: black; border: 1px solid #ccc; padding: 20px; border-radius: 10px; width: 100%; margin-left: auto;">
-            <h3 style="text-align: center; margin-bottom: 15px;">Contact Us!</h3>
-            
-            <!-- Email Input -->
-            <input type="email" id="email" name="email" placeholder="Your Email" required 
-                   style="width: 100%; padding: 8px; margin-bottom: 10px; border-radius: 10px; border: 1px solid #ccc;">
-
-            <!-- Message Textarea -->
-            <textarea id="message" name="message" placeholder="Your Message" required 
-                      style="width: 100%; padding: 8px; margin-bottom: 10px; border-radius: 10px; border: 1px solid #ccc; height: 100px;"></textarea>
-
-            <!-- Submit Button -->
-            <button id="butt" type="submit" 
-                    style="width: 100%; padding: 10px; background-color: hsl(357, 82%,35%); color: black; border: 1px; border-radius: 10px; cursor: pointer;">
-                Send Message
-            </button>
-        </form>
-    </div>
-</div>
- main
-
-                            <input type="email" id="email" name="email" placeholder="Your Email" required>
-
-                            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
-
-                            <button id="butt" type="submit" style="font-family: Garamond;">Send Message</button>
-                        </form>
-                    </div>
-                </div>
-
-
-
-
- features-branch
             </div>
 
-
-        <div class="foot_panel4" style="color: black;background-color: transparent;">
-            <div class="pages" style="background-color: transparent;">
-                <h3>Follow Us</h3>
-
-                <div class="social-icons">
-                    <a class="fa-brands fa-facebook" href="https://facebook.com" style="color: hsl(203, 30%, 26%);"></a>
-                    <a class="fa-brands fa-instagram" href="https://instagram.com" style="color: hsl(203, 30%, 26%);"></a>
-                    <a class="fa-brands fa-x-twitter" href="https://twitter.com" style="color: hsl(203, 30%, 26%);"></a>
-                </div>
-                <p style="margin-bottom:0;">Stay connected with us on social media for the latest updates, recipes, and foodie adventures.
-                </p>
-                <div class="copyright" style="background-color: transparent;">
- main
 
             <div class="foot_panel4" style="background-color: transparent;">
                 <div class="pages">
                     <h4 style="font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%);">Follow Us</h4>
 
-                    <div class="social-icons" style="background-color: hsl(20, 43%, 93%);">
-                        <a class="fa-brands fa-facebook" href="https://facebook.com"
-                            style="color: hsl(203, 30%, 26%);"></a>
-                        <a class="fa-brands fa-instagram" href="https://instagram.com"
-                            style="color: hsl(203, 30%, 26%);"></a>
-                        <a class="fa-brands fa-x-twitter" href="https://twitter.com"
-                            style="color: hsl(203, 30%, 26%);"></a>
+                    <div class="social-icons">
+
+
+                        <a class="fa-brands fa-facebook" href="https://facebook.com" ></a>
+                        <a class="fa-brands fa-instagram" href="https://instagram.com" ></a>
+                        <a class="fa-brands fa-x-twitter" href="https://twitter.com" ></a>
+
                     </div>
-                    <p
-                        style="font-family: var(--ff-philosopher);background-color: hsl(20, 43%, 93%);color: hsl(203, 30%, 26%);margin-bottom:0;">
-                        Stay connected with us on social media for the latest updates, latest collection, and vintage
-                        adventures.
+                    <p style="font-family: var(--ff-philosopher);background-color: hsl(20, 43%, 93%);color: hsl(203, 30%, 26%);margin-bottom:0;">Stay connected with us on social media for the latest updates, latest collection, and vintage adventures.
                     </p>
-                    <div class="copyright"
-                        style="font-family: var(--ff-philosopher);background-color: hsl(20, 43%, 93%);color: black;">
+                    <div class="copyright" style="font-family: var(--ff-philosopher);background-color: hsl(20, 43%, 93%);color: black;">
 
                         &copy; 2024 Retro . All Rights Reserved. | Developed by <span id="author">
-                            <a href="https://www.linkedin.com" target="_blank" style="text-decoration: none;">Retro
-                                Team</a>
+                            <a href="https://www.linkedin.com" target="_blank" style="text-decoration: none;">Retro Team</a>
                     </div>
-
-
-
-                </div>
-                <div>
-                    <button id="sr" style="z-index: 1000;">
+                    <div>
+                        <button id="sr" style="z-index: 1000; display: block;">
                         <div class="circle1">
-                            <svg id="back-to-top" xmlns="http://www.w3.org/2000/svg" width="30" height="30"
-                                fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
-                                <path
-                                    d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z">
-                                </path>
-                            </svg>
+                          <svg id="back-to-top" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
+                            <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z"></path>
+                          </svg>
                         </div>
-                    </button>
+                        </button>
+                    </div>
                 </div>
-            </div>
         </footer>
-    </div>
+
+
+
     <script>
         const coords = { x: 0, y: 0 };
         const circles = document.querySelectorAll(".circle");
@@ -1084,6 +980,18 @@ body{
                 }, 3000);
             });
         });
+
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+        
+            // Show success message
+            document.getElementById('success-message').style.display = 'block';
+        
+            // Optionally, you can reset the form fields after submission
+            this.reset();
+        });
+        
+
     </script>
 
    
