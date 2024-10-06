@@ -1074,11 +1074,9 @@ padding-left:2px;
   cursor: pointer;
   margin-top: 5px;
 }
-.foot-panel2 ul a:hover{
+.foot-panel2 ul a:hover {
     text-decoration: underline;
     text-decoration-color: hsl(357, 82%, 35%);
+    text-decoration-thickness: 2px;
+    transition: text-decoration-thickness 0.3s ease;
 }
-
-
-
-
