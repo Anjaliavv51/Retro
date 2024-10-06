@@ -25,6 +25,7 @@ body {
   height: 100vh; /* Full viewport height */
   padding: 20px; /* Padding to avoid overflow */
   overflow: hidden; /* Prevents overflow */
+  position:relative;
 }
 
 .main-login {
@@ -33,6 +34,31 @@ body {
   align-items: center;
   width: 100%;
   overflow: hidden; /* Ensure nothing overflows from the flexbox */
+  gap: 20px; /* Spacing between the card and image */
+  
+}
+.homebtn{
+  position: absolute;
+  top:30px;
+  left:25px;
+  
+}
+.homebtn a{
+  font-size: 30px;
+  text-decoration: none;
+}
+.homebtn a::after {
+  content: ''; /* Creates a pseudo-element */
+  position: absolute;
+  width: 100%; /* Full width of the link */
+  height: 1.5px; /* Thickness of the underline */
+  bottom: -5px;
+  left: 0;
+  background-color: transparent; /* Default background (invisible) */
+  transition: background-color 0.1s ease; /* Smooth transition */
+}
+.homebtn a:hover::after{
+  background-color:white;
 }
 
 .card-login {
@@ -46,6 +72,10 @@ body {
   display: flex; /* Flex to stack elements */
   flex-direction: column; /* Column layout for the card */
   overflow: hidden; /* Added to ensure no content spills out */
+  border-radius: 50px;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
 }
 
 .card-login:hover {
@@ -66,23 +96,26 @@ body {
   margin-bottom: 15px; /* Add margin to space fields */
   display: flex; /* Flex for better layout */
   flex-direction: column; /* Column layout for input and label */
+  border-radius: 50px;
 }
 
 .textfield label {
   font-weight: 700; /* Bold label for clarity */
   margin-bottom: 5px; /* Space between label and input */
   color: #555; /* Slightly darker color for the label */
+  border-radius: 50px;
 }
 
 .textfield > input {
   width: 100%;
-  padding: 15px;
+  padding: 10px;
   background-color: var(--input-bg);
   border: 2px solid transparent;
   border-radius: var(--border-radius); /* Consistent rounded corners */
   transition: border var(--transition-speed), box-shadow var(--transition-speed);
   font-size: 1rem;
   color: #333;
+  border-radius: 50px;
   box-sizing: border-box; /* Ensures padding doesn't affect input width */
 }
 
@@ -102,9 +135,13 @@ body {
   cursor: pointer;
   transition: background-color var(--transition-speed), box-shadow var(--transition-speed), transform var(--transition-speed);
   letter-spacing: 1.5px; 
-  width: 100%; /* Full width for buttons */
+  border-radius: 500px;
+  min-width: 50%;
 }
-
+.btnNext{
+  display: flex;
+  gap: 10px;
+}
 .btn-login:hover, #google-login:hover {
   background-color: var(--hover-color); 
   box-shadow: 0px 15px 45px -10px rgba(0, 0, 0, 0.2); 
