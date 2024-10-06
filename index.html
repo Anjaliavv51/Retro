@@ -8,6 +8,7 @@
     <title>Retro</title>
     
     
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
@@ -236,6 +237,7 @@ body{
     transform-origin: 50% 100%;
 }
 </style>
+
 </head>
 <body>
     <div class="circle-container">
@@ -264,49 +266,64 @@ body{
         <div id="loader"></div>
     </div>
     <!--Navbar Start-->
-    <nav class="navbar navbar-expand-lg fixed-top" id="top">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#"  style="font-family: var(--ff-philosopher);color: black;"><b>Retro</b></a>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link " aria-current="page" href="#" style="color: black;font-family: var(--ff-philosopher);">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Html-files/menu.html" style="font-family: var(--ff-philosopher);color: black;">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Html-files/services.html" style="font-family: var(--ff-philosopher);color: black;">Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Html-files/contact.html" style="font-family: var(--ff-philosopher);color: black;">Contact Us</a>
-                    </li>
-                    <!-- Google Translate Element -->
-                   <li class="nav-item">
-                        <div id="google_element" style="font-family: var(--ff-philosopher);color: black;" class="nav-link"></div>
-                   </li>
-                </ul>
+    <header id="header">
+        <a href="#" class="logo" style="color: black; font-family: var(--ff-philosopher);">Retro</a>
+        <ul>
+            <li><a class="nav-link" aria-current="page" href="#" style="color: black; font-family: var(--ff-philosopher);">Home</a></li>
+            <li><a class="nav-link" href="Html-files/menu.html" style="font-family: var(--ff-philosopher); color: black;">About</a></li>
+            <li><a class="nav-link" href="Html-files/services.html" style="font-family: var(--ff-philosopher); color: black;">Services</a></li>
+            <li><a class="nav-link" href="Html-files/contact.html" style="font-family: var(--ff-philosopher); color: black;">Contact Us</a></li>
+            <li class="nav-item" style="font-family: var(--ff-philosopher);"><a class="nav-link" onclick="redirectLogin()" style="color: black;">Login</a></li>
+            <li class="nav-item" style="font-family: var(--ff-philosopher);"><a class="nav-link" onclick="redirectSignup()" style="color: black;">Sign Up</a></li>
+            <li class="nav-item">
+                <a class="nav-link" href="Html-files/cart.html" style="color: black;"><i class="fa-solid fa-cart-shopping"></i></a>
+            </li>
+        </ul>
+       
+        <div class="toggle active" onclick="toggle()"></div>
+       
+        <button id="translate_button" title="Translate">
+            <i class="fa fa-globe"></i>
+        </button>
+        <div id="google_element"></div>
+    
+    </header>
+    <script src="//translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+    <script src="//translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+    <script>
+        function loadGoogleTranslate() {
+            new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_element');
+        }
 
-            </div>
-            <div class="d-flex p-2">
-                <li class="nav-item" style="list-style-type: none;font-family: var(--ff-philosopher);"><a class="nav-btn" onclick="redirectLogin()" style="color: black;">Login</a></li>&nbsp;&nbsp;
-                <li class="nav-item" style="list-style-type: none;font-family: var(--ff-philosopher);"><a class="nav-btn" onclick="redirectSignup()" style="color: black;">Sign Up</a></li>&nbsp;&nbsp;
-                <li class="nav-item" style="list-style-type: none;">
-                    <a class="nav-btn " href="Html-files/cart.html" style="color: black;"><i class="fa-solid fa-cart-shopping"></i></a>
-                </li>
-            </div>
+        // Ensure the event listener for the translate button runs after the translation element is initialized
+        document.getElementById("translate_button").addEventListener("click", function() {
+            // Wait a moment for Google Translate to initialize
+            setTimeout(() => {
+                let select = document.querySelector("#google_element select");
+                
+                // Check if the translate select element exists
+                if (select) {
+                    // Toggle visibility using class
+                    select.classList.toggle('visible');
+                } else {
+                    console.warn('Google Translate select element not found');
+                }
+            }, 100); // Adjust the delay if needed
+        });
+    </script>
+      
+    <script>
+        window.addEventListener('scroll', function(){
+            var header =document.querySelector('header');
+            header.classList.toggle('sticky', window.scrollY > 0);
+        });
+        function toggle(){
+        var header =document.getElementById('header');
+        header.classList.toggle('active');
 
-        </div>
-    </nav>
-    <script src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
-<script>
-function loadGoogleTranslate() {
-new google.translate.TranslateElement({
-  pageLanguage: 'en'
-}, 'google_element');
-}
-</script>
-
+    };
+    </script>
+    
     <section class="intro_container">
         <h1 style="font-family: var(--ff-philosopher);color: brown;z-index: 99;">Welcome to Retro!</h1>
         <p style="font-family: var(--ff-poppins);z-index: 99;color: hsl(208, 7%,46%);">Step back in time and experience the nostalgic charm of days gone by. 
