@@ -20,6 +20,7 @@ body * {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: row;
 }
 
 .left-login {
@@ -31,16 +32,19 @@ body * {
   flex-direction: column;
   position: relative;
 }
-.home-btn{
+
+.home-btn {
   position: absolute;
-  top:32px;
-  left:30px;
+  top: 32px;
+  left: 30px;
 }
-.home-btn a{
+
+.home-btn a {
   font-size: 30px;
   text-decoration: none;
-  color:rgb(149, 15, 95);
+  color: rgb(149, 15, 95);
 }
+
 .home-btn a::after {
   content: ''; /* Creates a pseudo-element */
   position: absolute;
@@ -51,9 +55,11 @@ body * {
   background-color: transparent; /* Default background (invisible) */
   transition: background-color 0.1s ease; /* Smooth transition */
 }
-.home-btn a:hover::after{
-  background-color:white;
+
+.home-btn a:hover::after {
+  background-color: white;
 }
+
 .left-login > h1 {
   color: #e13838;
   font-size: 2.5vw;
@@ -151,19 +157,20 @@ body * {
   box-shadow: 0px 10px 40px -12px black;
 }
 
-@media only screen and (max-width: 950px){
-  .card-login{
+/* Responsive styles */
+@media only screen and (max-width: 950px) {
+  .card-login {
     width: 85%;
+  }
+
+  .left-login-image {
+    width: 30vw;
   }
 }
 
-@media only screen and (max-width: 600px){
-  .main-login{
+@media only screen and (max-width: 600px) {
+  .main-login {
     flex-direction: column;
-  }
-
-  .left-login > h1 {
-    display: none;
   }
 
   .left-login {
@@ -182,5 +189,35 @@ body * {
 
   .card-login {
     width: 90%;
+  }
+
+  .left-login > h1 {
+    display: none;
+  }
+  .login-form{
+    width: 100%;
+    padding-top: 20Px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .home-btn a {
+    font-size: 25px;
+  }
+
+  .left-login-image {
+    width: 35vh;
+  }
+
+  .card-login {
+    width: 95%;
+  }
+
+  .textfield > input {
+    font-size: 10pt;
+  }
+
+  .btn-login, #google-login {
+    padding: 12px 0;
   }
 }

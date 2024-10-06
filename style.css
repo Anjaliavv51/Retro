@@ -324,8 +324,8 @@ body {
   display: inline-block;
   color: white;
   transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
-}
-*/
+
+
 
 /*
 .service .box a:hover {
@@ -783,15 +783,13 @@ textarea {
     height: fit-content;
   }
 
-  .foot-panel2 {
-    height: fit-content;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(20px, 1fr));
 
-    /* flex-direction: column; */
-    grid-template-columns: 2;
+  .foot-panel-main{
+    height: fit-content;
+    display:block !important;
+    align-items:center;
     padding: 30px;
-  }
+}
 
   .foot-panel2 ul {
     margin-top: 20px;

@@ -143,11 +143,13 @@ body {
 @media only screen and (max-width: 600px) {
   .main-login {
     flex-direction: column;
-    padding: 0 20px; /* Added padding to avoid edge overflow */
+    padding: 0 15px; /* Added padding to avoid edge overflow */
   }
 
   .card-login {
-    width: 100%; /* Full width for mobile */
-    padding: 20px; /* Adjust padding */
+    justify-content: center;
+    width: 90%;
+    padding: 17px;
+    margin-top: 20px;
   }
 }
