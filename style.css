@@ -1,3 +1,4 @@
+
 * {
   margin: 0px;
   padding: 0px;
@@ -13,18 +14,17 @@
 body {
   background-color: black;
 }
-/*
+
 .navbar {
   padding: fixed;
   top: 0;
   width: 100%;
   z-index: 1030;
   padding: 15px 0;
-  /*background-color: rgba(245, 245, 245, 0.7);
+  background-color: rgba(245, 190, 190, 0.7);
   backdrop-filter: blur(8px);
   transition: background-color 0.5s ease, backdrop-filter 0.5s ease;
 }
-*/
 
 .navbar a {
   text-decoration: none;
@@ -32,13 +32,12 @@ body {
   font-size: 1.3rem;
   transition: color 0.3s ease,border-bottom 0.3s ease;
 }
-
 /* Navbar link hover effect */
-/*.navbar a:hover{
+.navbar a:hover{
   color: #fff;
   border-bottom: 1px solid #fff;
 }
-*/
+
 
 .navbar.fixed-top {
   position: fixed; 
@@ -1074,4 +1073,16 @@ padding-left:2px;
   border-radius: 5px;
   cursor: pointer;
   margin-top: 5px;
+}
+.foot-panel2 ul a {
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    text-decoration-thickness: 1px;
+    transition: text-decoration-thickness 3s ease-in-out, text-decoration-color 3s ease-in-out;
+}
+
+.foot-panel2 ul a:hover {
+    text-decoration: underline;
+    text-decoration-color: hsl(357, 82%, 35%);
+    text-decoration-thickness: 2px;
 }
