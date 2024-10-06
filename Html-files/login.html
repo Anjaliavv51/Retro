@@ -128,20 +128,21 @@ border-radius: 50%;
         </div>
       </div>
     </div>
-  <form action="">
+  <form id="loginForm" action="logged.html">
     <div class="right-login">
       <div class="card-login">
         <h1 style="color: hsl(203, 30%,26%);font-family: var(--ff-philosopher);">LOGIN</h1>
         <div class="textfield">
           <label for="usuario" style="color: black;font-family:var(--ff-poppins);">Email / User Name</label>
-          <input required type="text" name="email" placeholder="Enter Email / UserName" style="font-family:var(--ff-poppins);">
+          <input required type="text" id="email" name="email" placeholder="Enter Email / UserName" style="font-family:var(--ff-poppins);">
         </div>
         <div class="textfield">
           <label required for="password" style="color: black;font-family:var(--ff-poppins);">Password</label>
-          <input required type="password" name="password" placeholder="Enter Password" style="font-family:var(--ff-poppins);">
+          <input required type="password" id="password" name="password" placeholder="Enter Password" style="font-family:var(--ff-poppins);">
         </div>
-        <button class="btn-login" style="color: black;font-family:var(--ff-poppins);"><a style="text-decoration: none;color: black;" href="logged.html">Login</a></button>
+        <button type="submit" class="btn-login" style="color: black;font-family:var(--ff-poppins);">Login</button>
         <button id="google-login" style="color: black;font-family:var(--ff-poppins);">Login with google</button>
+        <p id="error-message" style="color: red; font-family: var(--ff-poppins);"></p>
       </div>
     </div>
 </form>
@@ -211,6 +212,29 @@ border-radius: 50%;
     }
 
     animateCircles();
+    
+document.getElementById('loginForm').addEventListener('submit', function(event) {
+  
+    event.preventDefault();
+
+    const emailInput = document.getElementById('email').value;
+    const passwordInput = document.getElementById('password').value;
+
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    const isValidPassword = passwordInput.length >= 8;
+
+    document.getElementById('error-message').textContent = '';
+
+    if (!emailPattern.test(emailInput)) {
+        document.getElementById('error-message').textContent = 'Invalid email format.';
+    } else if (!isValidPassword) {
+        document.getElementById('error-message').textContent = 'Password must be at least 8 characters.';
+    } else {
+        window.location.assign('logged.html');
+    }
+});
+
   </script>
 </body>
 </html>
