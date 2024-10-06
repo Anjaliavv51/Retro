@@ -213,24 +213,33 @@ border-radius: 50%;
 
     animateCircles();
     
+// Form submission event listener
 document.getElementById('loginForm').addEventListener('submit', function(event) {
-  
+    // Prevent form submission
     event.preventDefault();
 
+    // Get the input values
     const emailInput = document.getElementById('email').value;
     const passwordInput = document.getElementById('password').value;
 
+    // Regular expression for email validation (simple check)
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+    // Password validation (at least 8 characters)
     const isValidPassword = passwordInput.length >= 8;
 
+    // Clear previous error message
     document.getElementById('error-message').textContent = '';
 
+    // Validate the email and password separately
     if (!emailPattern.test(emailInput)) {
+        // Display an error message if the email format is incorrect
         document.getElementById('error-message').textContent = 'Invalid email format.';
     } else if (!isValidPassword) {
+        // Display an error message if the password is too short
         document.getElementById('error-message').textContent = 'Password must be at least 8 characters.';
     } else {
+        // If both are valid, redirect to logged.html
         window.location.assign('logged.html');
     }
 });
