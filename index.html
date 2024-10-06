@@ -10,7 +10,10 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="/Css-files/navbarstyles.css">
     <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
@@ -30,7 +33,9 @@
         <link rel="stylesheet" href="./style.css">
 
     <style>
-       
+
+
+
         .faq-container {
             margin-top: 50px;
             margin-left: auto;
@@ -333,8 +338,72 @@ p {
     <div id="preloader">
         <div id="loader"></div>
     </div>
+
+    
     <!--Navbar Start-->
     <nav class="navbar navbar-expand-lg fixed-top" id="top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#" style="font-family: var(--ff-philosopher); color: black;">
+                <b>Retro</b>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#"
+                            style="color: black; font-family: var(--ff-philosopher);">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Html-files/about.html"
+                            style="font-family: var(--ff-philosopher); color: black;">About Us</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="Html-files/menu.html"
+                            style="font-family: var(--ff-philosopher);color: black;">Collections</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="Html-files/services.html"
+                            style="font-family: var(--ff-philosopher);color: black;">Services</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="Html-files/contact.html" style="font-family: var(--ff-philosopher); color: black">Contact Us</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                    <a class="nav-link" href="#" style="font-family: var(--ff-philosopher); color: black;">More</a>
+                    </li>
+
+                </ul>
+
+                <div class="navbar-right">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" onclick="redirectLogin()"
+                                style="color: black; font-family: var(--ff-philosopher);">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" onclick="redirectSignup()"
+                                style="color: black; font-family: var(--ff-philosopher);">Signup</a>
+                        </li>
+                        <li class="nav-item" style="list-style-type: none;">
+                            <a class="nav-link" href="Html-files/cart.html" style="color: black;"><i
+                                    class="fa-solid fa-cart-shopping"></i>Cart</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!--Navbar End-->
+
+<!--    <nav class="navbar navbar-expand-lg fixed-top" id="top">
         <div class="container-fluid">
             <a class="navbar-brand" href="#"  style="font-family: var(--ff-philosopher);color: black;"><b>Retro</b></a>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -342,17 +411,16 @@ p {
                     <li class="nav-item">
                         <a class="nav-link " aria-current="page" href="#" style="color: black;font-family: var(--ff-philosopher);">Home</a>
                     </li>
+                    
                     <li class="nav-item">
-                        <a class="nav-link" href="Html-files/menu.html" style="font-family: var(--ff-philosopher);color: black;">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Html-files/services.html" style="font-family: var(--ff-philosopher);color: black;">Services</a>
+                        <a class="nav-link" href="Html-files/about.html" style="font-family: var(--ff-philosopher);color: black;">About</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="Html-files/contact.html" style="font-family: var(--ff-philosopher);color: black;">Contact Us</a>
                     </li>
-                    <!-- Google Translate Element -->
-                   <li class="nav-item">
+-->
+                 <!-- Google Translate Element -->
+<!--                  <li class="nav-item">
                         <div id="google_element" style="font-family: var(--ff-philosopher);color: black;" class="nav-link"></div>
                    </li>
                 </ul>
@@ -361,13 +429,11 @@ p {
             <div class="d-flex p-2">
                 <li class="nav-item" style="list-style-type: none;font-family: var(--ff-philosopher);"><a class="nav-btn" onclick="redirectLogin()" style="color: black;">Login</a></li>&nbsp;&nbsp;
                 <li class="nav-item" style="list-style-type: none;font-family: var(--ff-philosopher);"><a class="nav-btn" onclick="redirectSignup()" style="color: black;">Sign Up</a></li>&nbsp;&nbsp;
-                <li class="nav-item" style="list-style-type: none;">
-                    <a class="nav-btn " href="Html-files/cart.html" style="color: black;"><i class="fa-solid fa-cart-shopping"></i></a>
-                </li>
             </div>
 
         </div>
     </nav>
+-->
     <script src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
 <script>
 function loadGoogleTranslate() {
