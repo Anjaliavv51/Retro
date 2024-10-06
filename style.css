@@ -20,7 +20,7 @@ body {
   width: 100%;
   z-index: 1030;
   padding: 15px 0;
-  background-color: rgba(245, 190, 190, 0.7);
+   background-color: rgba(245, 190, 190, 0.7);
   backdrop-filter: blur(8px);
   transition: background-color 0.5s ease, backdrop-filter 0.5s ease;
 }
@@ -1058,11 +1058,13 @@ padding-left:2px;
   margin: 5px;
   border-radius: 10px;
   border: none;
+  background-color: #f9e2c4;
 }
 
 #contactForm h3 {
   height: 30px;
   color: #141414;
+  font-size: calc(1.0rem + .6vw);
 }
 #contactForm textarea {
   height: 100px;
