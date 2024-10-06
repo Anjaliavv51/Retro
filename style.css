@@ -1074,9 +1074,15 @@ padding-left:2px;
   cursor: pointer;
   margin-top: 5px;
 }
+.foot-panel2 ul a {
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    text-decoration-thickness: 1px;
+    transition: text-decoration-thickness 0.3s ease-in-out, text-decoration-color 0.3s ease-in-out;
+}
+
 .foot-panel2 ul a:hover {
     text-decoration: underline;
     text-decoration-color: hsl(357, 82%, 35%);
     text-decoration-thickness: 2px;
-    transition: text-decoration-thickness 0.3s ease;
 }
