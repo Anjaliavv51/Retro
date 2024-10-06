@@ -3,6 +3,12 @@
 body {
   margin: 0;
   font-family: 'Noto Sans', sans-serif;
+}
+
+body * {
+  box-sizing: border-box;
+  background-attachment: fixed;
+  cursor: url('/Images/custom_cursor.gif'), auto;
   overflow: hidden;
   display: flex;
   justify-content: center;
