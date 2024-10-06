@@ -25,6 +25,65 @@ body {
   transition: background-color 0.5s ease, backdrop-filter 0.5s ease;
 }
 */
+.navbar {
+  padding: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1030;
+  padding: 15px 28px 0;
+  background-color: rgba(245, 190, 190, 0.7);
+  backdrop-filter: blur(8px);
+  transition: background-color 0.5s ease, backdrop-filter 0.5s ease;
+  /* overflow: hidden; */
+} 
+.navbar-nav{
+  align-items: center;
+}
+.navbar-collapse{
+  margin-left: 450px;
+}
+
+.nav-item:nth-child(6){
+  margin-left: 268px;
+}
+
+.dropdown{
+  float: left;
+  color: black;
+}
+
+.dropbtn{
+  padding-right: 13px;
+}
+.dropdown .dropbtn{
+  border: none;
+  background-color: rgba(245, 190, 190, 0.7);
+
+}
+.dropdown:hover .dropbtn{
+  border-bottom: 1px solid #fff;
+}
+.dropdown-content{
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown-content a{
+  float: none;
+  padding: 12px;
+  color: black;
+  display: block;
+  text-align: left;
+}
+.dropdown-content a:hover{
+  background-color: #dddddd;
+}
+.dropdown:hover .dropdown-content{
+  display: block;
+}
 
 .navbar a {
   text-decoration: none;
@@ -34,11 +93,11 @@ body {
 }
 
 /* Navbar link hover effect */
-/*.navbar a:hover{
-  color: #fff;
+.navbar a:hover{
+   color: #c83072; 
   border-bottom: 1px solid #fff;
 }
-*/
+
 
 .navbar.fixed-top {
   position: fixed; 
