@@ -24,6 +24,9 @@ section {
 .footer{
   background-color: hsl(20, 43%, 93%);
 }
+.navbar a{
+  color: black;
+}
 
 
 body {
