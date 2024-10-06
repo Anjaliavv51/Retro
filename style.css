@@ -1162,8 +1162,8 @@ padding-left:2px;
 
 #contactForm button {
   padding: 10px 20px;
-  background-color:rgba(196, 74, 74);
-  color:rgba(15, 14, 14);
+  background-color:rgb(196, 74, 74);
+  color:rgb(15, 14, 14);
   border: none;
   border-radius: 5px;
   cursor: pointer;

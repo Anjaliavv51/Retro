@@ -1,39 +1,43 @@
 //CODE FOR TABLE OF ADD TO CART
 document.addEventListener('DOMContentLoaded', () => {
     loadCartFromLocalStorage();
-
-    document.getElementById('cart-items').addEventListener('click', (event) => {
-        if (event.target.classList.contains('increase-quantity')) {
-            updateQuantity(event.target, 1);
-        } else if (event.target.classList.contains('decrease-quantity')) {
-            updateQuantity(event.target, -1);
-        }
-    });
+    updateBadgeCount() ; // update badge on load
+    if (document.getElementById('cart-items')){
+        document.getElementById('cart-items').addEventListener('click', (event) => {
+            if (event.target.classList.contains('increase-quantity')) {
+                updateQuantity(event.target, 1);
+            } else if (event.target.classList.contains('decrease-quantity')) {
+                updateQuantity(event.target, -1);
+            }
+        });
+    }
 });
 
 function loadCartFromLocalStorage() {
     const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
     const cartItemsContainer = document.getElementById('cart-items');
-    cartItemsContainer.innerHTML = ''; // Clear existing items
+    if(cartItemsContainer){
+        cartItemsContainer.innerHTML = ''; // Clear existing items
 
-    cartItems.forEach(item => {
-        const cartItemRow = document.createElement('tr');
-        cartItemRow.className = 'cart-item';
-        cartItemRow.setAttribute('data-product-id', item.id);
-        cartItemRow.setAttribute('data-product-price', item.price);
-        cartItemRow.innerHTML = `
-            <td>${item.name}</td>
-            <td>$${item.price.toFixed(2)}</td>
-            <td class="quantity">${item.quantity}</td>
-            <td>
-                <button class="decrease-quantity">-</button>
-                <button class="increase-quantity">+</button>
-            </td>
-        `;
-        cartItemsContainer.appendChild(cartItemRow);
-    });
+        cartItems.forEach(item => {
+            const cartItemRow = document.createElement('tr');
+            cartItemRow.className = 'cart-item';
+            cartItemRow.setAttribute('data-product-id', item.id);
+            cartItemRow.setAttribute('data-product-price', item.price);
+            cartItemRow.innerHTML = `
+                <td>${item.name}</td>
+                <td>$${item.price.toFixed(2)}</td>
+                <td class="quantity">${item.quantity}</td>
+                <td>
+                    <button class="decrease-quantity">-</button>
+                    <button class="increase-quantity">+</button>
+                </td>
+            `;
+            cartItemsContainer.appendChild(cartItemRow);
+        });
 
-    updateTotal();
+        updateTotal();
+    }
 }
 
 function updateQuantity(button, change) {
@@ -70,6 +74,7 @@ function saveCartToLocalStorage() {
         });
     });
     localStorage.setItem('cartItems', JSON.stringify(cartItems));
+    updateBadgeCount(); // update badge count after saving
 }
 //CODE FOR COUPON RECEIVED ON CLICKING ORDER NOW
   // Function to generate a random coupon code
@@ -88,7 +93,16 @@ const applyFirstTimeDiscount = () => {
         couponCode = generateCouponCode();
         localStorage.setItem('couponCode', couponCode);
     }
-    document.getElementById('couponCode').innerHTML = `Use coupon code <span style="font-weight: bold;"> ${couponCode} </span> for 30% off!`;
-    alert(`Congratulations! Your coupon code is ${couponCode}. You've received a 30% discount on your first order.`);
+    if(document.getElementById('couponCode')){
+        document.getElementById('couponCode').innerHTML = `Use coupon code <span style="font-weight: bold;"> ${couponCode} </span> for 30% off!`;
+        alert(`Congratulations! Your coupon code is ${couponCode}. You've received a 30% discount on your first order.`);
+    }
+    
 }
 window.onload = applyFirstTimeDiscount;
+
+function updateBadgeCount() {
+    const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+    const totalQuantity = cartItems.reduce((total, item) => total + item.quantity, 0);
+    document.getElementById('badgeCount').innerText = totalQuantity;
+}
