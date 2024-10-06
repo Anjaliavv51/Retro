@@ -1044,13 +1044,13 @@ padding-left:2px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 14rem;
+  width: 20rem;
   height: max-content;
 }
 
 #contactForm input,
 #contactForm textarea {
-  width: 60%;
+  width: 100%;
   padding: 20px;
   margin: 5px;
   border-radius: 10px;
@@ -1069,11 +1069,11 @@ padding-left:2px;
 }
 
 #contactForm button {
-  padding:20px;
+  padding: 10px 20px;
   background-color:rgb(196, 74, 74);
   color:rgb(15, 14, 14);
   border: none;
-  border-radius: 10px;
+  border-radius: 5px;
   cursor: pointer;
   margin-top: 5px;
   width: 60%;
