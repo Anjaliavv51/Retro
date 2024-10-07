@@ -465,3 +465,30 @@ footer a {
   color: white;
   text-decoration: none;
 }
+=======
+  margin: 5px;
+  border-radius: 10px;
+  border: none;
+  background-color: #f9e2c4;
+}
+
+#contactForm h3 {
+  height: 30px;
+  color: #141414;
+  font-size: calc(1.0rem + .6vw);
+}
+#contactForm textarea {
+  height: 100px;
+  resize: none; 
+}
+
+#contactForm button {
+  padding: 10px 20px;
+  background-color:rgb(196, 74, 74);
+  color:rgb(15, 14, 14);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 5px;
+  width: 60%;
+}
