@@ -148,7 +148,7 @@ body {
   height: 45px;
   border-radius: 15px;
   border: none;
-  margin: 10px;
+  margin: 10px;   /*Margin added so that they do not overlap*/
   background-color: #aa6a6a;
   color: rgb(190, 135, 135);
   font-size: 16px;
