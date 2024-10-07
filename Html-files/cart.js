@@ -1,9 +1,11 @@
-//CODE FOR TABLE OF ADD TO CART
 document.addEventListener('DOMContentLoaded', () => {
     loadCartFromLocalStorage();
-    updateBadgeCount() ; // update badge on load
-    if (document.getElementById('cart-items')){
-        document.getElementById('cart-items').addEventListener('click', (event) => {
+    updateBadgeCount(); // update badge on load
+
+    // Event delegation for handling quantity changes
+    const cartItemsContainer = document.getElementById('cart-table').getElementsByTagName('tbody')[0];
+    if (cartItemsContainer) {
+        cartItemsContainer.addEventListener('click', (event) => {
             if (event.target.classList.contains('increase-quantity')) {
                 updateQuantity(event.target, 1);
             } else if (event.target.classList.contains('decrease-quantity')) {
@@ -15,8 +17,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function loadCartFromLocalStorage() {
     const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
-    const cartItemsContainer = document.getElementById('cart-items');
-    if(cartItemsContainer){
+    const cartItemsContainer = document.getElementById('cart-table').getElementsByTagName('tbody')[0];
+    
+    if (cartItemsContainer) {
         cartItemsContainer.innerHTML = ''; // Clear existing items
 
         cartItems.forEach(item => {
@@ -41,7 +44,7 @@ function loadCartFromLocalStorage() {
 }
 
 function updateQuantity(button, change) {
-    const cartItemRow = button.parentElement.parentElement;
+    const cartItemRow = button.closest('tr');
     const quantityElement = cartItemRow.querySelector('.quantity');
     const newQuantity = parseInt(quantityElement.textContent) + change;
     if (newQuantity > 0) {
@@ -70,15 +73,16 @@ function saveCartToLocalStorage() {
         cartItems.push({
             id: item.getAttribute('data-product-id'),
             price: parseFloat(item.getAttribute('data-product-price')),
-            quantity: parseInt(item.querySelector('.quantity').textContent)
+            quantity: parseInt(item.querySelector('.quantity').textContent),
+            name: item.cells[0].textContent // Get the item name from the first cell
         });
     });
     localStorage.setItem('cartItems', JSON.stringify(cartItems));
     updateBadgeCount(); // update badge count after saving
 }
-//CODE FOR COUPON RECEIVED ON CLICKING ORDER NOW
-  // Function to generate a random coupon code
-  const generateCouponCode = () => {
+
+// Function to generate a random coupon code
+const generateCouponCode = () => {
     const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
     let couponCode = '';
     for (let i = 0; i < 8; i++) {
@@ -86,6 +90,7 @@ function saveCartToLocalStorage() {
     }
     return couponCode;
 }
+
 // Check if it's the user's first order and apply discount
 const applyFirstTimeDiscount = () => {
     let couponCode = localStorage.getItem('couponCode');
@@ -93,11 +98,11 @@ const applyFirstTimeDiscount = () => {
         couponCode = generateCouponCode();
         localStorage.setItem('couponCode', couponCode);
     }
-    if(document.getElementById('couponCode')){
-        document.getElementById('couponCode').innerHTML = `Use coupon code <span style="font-weight: bold;"> ${couponCode} </span> for 30% off!`;
+    const couponCodeElement = document.getElementById('couponCode');
+    if (couponCodeElement) {
+        couponCodeElement.innerHTML = `Use coupon code <span style="font-weight: bold;">${couponCode}</span> for 30% off!`;
         alert(`Congratulations! Your coupon code is ${couponCode}. You've received a 30% discount on your first order.`);
     }
-    
 }
 window.onload = applyFirstTimeDiscount;
 
@@ -105,4 +110,4 @@ function updateBadgeCount() {
     const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
     const totalQuantity = cartItems.reduce((total, item) => total + item.quantity, 0);
     document.getElementById('badgeCount').innerText = totalQuantity;
-}
+} 
