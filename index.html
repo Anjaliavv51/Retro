@@ -310,6 +310,11 @@ p {
 </style>
 </head>
 <body>
+
+    <div id="progressBarContainer">
+        <div id="progressBar"></div>
+    </div>
+
     <div class="circle-container">
         <div class="circle" style="background-color: rgb(255, 181, 107); left: 504px; top: 59px; scale: 1;"></div>
         <div class="circle" style="background-color: rgb(253, 175, 105); left: 504px; top: 59px; scale: 0.95;"></div>
@@ -857,5 +862,22 @@ scrollToTopBtn.addEventListener("click", function() {
 
     document.querySelector(".Home h1").style.opacity = (200 - scrollY) / 200;
 };
+</script>
+
+<script>
+
+window.onscroll = function() {
+  updateProgressBar();
+};
+
+
+function updateProgressBar() {
+    var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+    var scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    var scrollPercent = (scrollTop / scrollHeight) * 100;
+
+    document.getElementById("progressBar").style.width = scrollPercent + "%";
+}
+
 </script>
 </html>
