@@ -414,7 +414,7 @@ p {
                 </div>
                 <button id="darkModeToggle" class="btn btn-secondary" style="margin-left: 10px;">
                     <i class="fas fa-sun" id="toggleIcon" style="font-size: 20px;"></i>
-                    <span id="toggleText">Dark Mode</span>
+                    <span id="toggleText">Light Mode</span>
                 </button>
             </div>
         </div>
@@ -501,11 +501,11 @@ p {
     if (document.body.classList.contains('dark-mode')) {
         toggleIcon.classList.remove('fa-sun');
         toggleIcon.classList.add('fa-moon');
-        toggleText.textContent = '  Light Mode';
+        toggleText.textContent = ' Dark Mode';
     } else {
         toggleIcon.classList.remove('fa-moon');
         toggleIcon.classList.add('fa-sun');
-        toggleText.textContent = ' Dark Mode';
+        toggleText.textContent = 'Light Mode';
     }
 });
 
