@@ -89,6 +89,26 @@
                   --ff-poppins: "Poppins", sans-serif;
               }
       </style>
+      <style>
+        /* Styles for the switch link */
+        .switch-link {
+          margin-top: 20px;
+          font-family: var(--ff-poppins);
+          text-align: center;
+          color: hsl(203, 30%, 26%);
+        }
+    
+        .switch-link a {
+          color: hsl(0, 100%, 50%);
+          text-decoration: none;
+          font-weight: bold;
+          transition: color 0.3s ease;
+        }
+    
+        .switch-link a:hover {
+          color: hsl(203, 30%, 26%);
+        }
+      </style>
 </head>
 <body>
   <div class="circle-container">
@@ -142,6 +162,8 @@
         <button type="submit" class="btn-login" style="color: black;font-family:var(--ff-poppins);">Login</button>
         <button id="google-login" style="color: black;font-family:var(--ff-poppins);">Login with google</button>
         <p id="error-message" style="color: red; font-family: var(--ff-poppins);"></p>
+
+        <p class="switch-link">Don’t have an account? <a href="signup.html">Sign Up</a></p>
       </div>
     </div>
 </form>
