@@ -219,6 +219,32 @@ body{
 .fa-brands.fa-x-twitter:hover {
   color: #181e20 !important;
 }
+
+.hero-image {
+  position: relative;
+  text-align: center;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 500px; 
+  border: 5px solid #ccc;
+  border-radius: 10px;
+  object-fit: cover; 
+  filter: brightness(1.2); 
+}
+
+.hero-image::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 10px;
+}
+
 /* Testimonial Container */
 .testimonal__container {
     display: flex;
@@ -358,7 +384,9 @@ body{
         </header>
     
 
-
+      <div class="hero-image" >
+        <img src="/Images/retro3.png" alt="hero-image">
+      </div>
         <div class="mainhead">
             <h1  style="font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%); margin-top: 10vh;">S E R V I C E S</h1>
 
