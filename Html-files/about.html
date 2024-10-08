@@ -525,7 +525,22 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* Social Icons Hover Color */
+
+.social-icons a {
+  font-size: 1.2rem;
+  padding: 8px;
+  margin: 15px;
+  text-decoration: none;
+  color: brown !important;
+}
+
+.social-icons a:hover {
+  color: brown;
+  background-color: hsl(22, 76%, 85%);
+  border-radius: 10px;
+  transform: scale(1.5); /* Increase size */
+  transition: transform 0.3s ease; /* Smooth transition effect */
+}
 .fa-brands.fa-facebook:hover {
   color: #3B5998 !important;
 }
@@ -701,11 +716,11 @@ h1, h2, h3, h4, h5, h6 {
             <div class="col-lg-3 col-md-6">
               <div class="f_widget social-widget">
                 <h3 class="f-title f_600 t_color f_size_18">Follow Us</h3>
-                <div class="f_social_icon">
-                  <a href="https://facebook.com" class="fab fa-facebook"></a>
-                  <a href="https://instagram.com" class="fab fa-instagram"></a>
-                  <a href="https://twitter.com" class="fab fa-twitter"></a>
-                </div>
+                <div class="social-icons">
+                  <a class="fa-brands fa-facebook" href="https://facebook.com" style="color: hsl(203, 30%, 26%);"></a>
+                  <a class="fa-brands fa-instagram" href="https://instagram.com" style="color: hsl(203, 30%, 26%);"></a>
+                  <a class="fa-brands fa-x-twitter" href="https://twitter.com" style="color: hsl(203, 30%, 26%);"></a>
+              </div>
                 <p>Stay connected with us on social media for the latest updates and vintage adventures.</p>
               </div>
             </div>
