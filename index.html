@@ -323,6 +323,14 @@ p {
 </style>
 </head>
 <body>
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Welcome to Our Visual Experience</h1>
+            <p>Your one-stop platform for amazing experiences</p>
+            <a href="#about" class="hero-btn">Learn More</a>
+        </div>
+    </section>
+    
     <div class="circle-container">
         <div class="circle" style="background-color: rgb(255, 181, 107); left: 504px; top: 59px; scale: 1;"></div>
         <div class="circle" style="background-color: rgb(253, 175, 105); left: 504px; top: 59px; scale: 0.95;"></div>
@@ -347,6 +355,10 @@ p {
     </div>
     <div id="preloader">
         <div id="loader"></div>
+        <div class="parallax-section">
+            <!-- Your content here -->
+        </div>
+        
     </div>
 
     
@@ -466,6 +478,9 @@ new google.translate.TranslateElement({
         <img src="trees.png" class="trees" alt="">
 
         <img src="layer.png" class="layer" alt="">
+        <img src="image1.jpg" alt="Image 1">
+       <img src="image2.jpg" alt="Image 2">
+    <!-- Add more images as needed -->
     </section>
     <script>
         document.getElementById('openButton').addEventListener('click', function() {
@@ -694,6 +709,8 @@ new google.translate.TranslateElement({
             
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingSix">
+                            <button class="animated-button">Click Me</button>
+
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
                                 Do you offer discounts for bulk orders?
                             </button>
