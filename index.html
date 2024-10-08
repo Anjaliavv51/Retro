@@ -34,30 +34,52 @@
         
         <link rel="stylesheet" href="./style.css">
 
-    <style>
-        .retro-heading {
-          font-family: var(--ff-philosopher);
-          color: brown;
-          z-index: 99;
-          transition: all 0.3s ease;
-        }
-
-        .retro-heading:hover {
-           color: #5d095c;
-           text-shadow: 0 0 15px rgba(214, 30, 171, 0.9), 0 0 30px rgba(138, 38, 88, 0.7);
-           transform: scale(1.3); 
-        }
-
-        .faq-container {
-            margin-top: 50px;
-            margin-left: auto;
-            margin-right: auto;
-            background: transparent;/* Container background */
-            border-radius: 8px; /* Rounded corners */
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-            padding: 20px; /* Padding inside the container */
-        }
-    </style>
+        <style>
+            /* Modal styles */
+            #modal {
+                display: none; /* Hidden by default */
+                position: fixed; /* Stay in place */
+                z-index: 1000; /* Sit on top */
+                left: 0;
+                top: 0;
+                width: 100%; /* Full width */
+                height: 100%; /* Full height */
+                overflow: auto; /* Enable scroll if needed */
+                background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+            }
+    
+            /* Modal Content */
+            .modal-content {
+                background-color: white;
+                margin: 15% auto; /* 15% from the top and centered */
+                padding: 20px;
+                border: 1px solid #888;
+                width: 80%; /* Could be more or less, depending on screen size */
+                text-align: center;
+                border-radius: 8px;
+            }
+    
+            /* Close button */
+            .close {
+                color: #aaa;
+                float: right;
+                font-size: 28px;
+                font-weight: bold;
+            }
+    
+            .close:hover,
+            .close:focus {
+                color: black;
+                text-decoration: none;
+                cursor: pointer;
+            }
+    
+            /* Success tick styles */
+            .success-icon {
+                font-size: 40px; /* Size of the tick */
+                color: green; /* Color of the tick */
+            }
+        </style>
 
     <style>
         :root{
@@ -768,6 +790,13 @@ new google.translate.TranslateElement({
 
                     <button id="butt" type="submit" style="font-family: ui-serif;">Send Message</button>
                 </form>
+                <div id="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <div class="success-icon">✔️</div> <!-- Green tick icon -->
+                        <p>Message sent!</p>
+                    </div>
+                </div>
 
             </div>
 
@@ -806,6 +835,34 @@ new google.translate.TranslateElement({
     </div>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+<script>
+    // Get the modal
+    var modal = document.getElementById("modal");
+    var closeButton = document.getElementsByClassName("close")[0];
+
+    // When the user submits the form
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevents default form submission
+        modal.style.display = "block"; // Show the modal
+
+        // Optionally clear the form fields
+        document.getElementById("email").value = "";
+        document.getElementById("message").value = "";
+    });
+
+    // When the user clicks on <span> (x), close the modal
+    closeButton.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
 </body>
 <script>
  
