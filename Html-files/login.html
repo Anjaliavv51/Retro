@@ -13,83 +13,102 @@
     <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    
-  <style>
- 
-.circle{
-z-index: 998;
-width: 20px;
-height: 20px;
-border-radius: 50%;
-pointer-events: none;
-animation: colors 5s infinite;
-position: fixed;
-transform: translate(-50%,-50%);
-}
-.circle::before {
-content: "";
-position: fixed;
-width: 50px;
-height: 50px;
-opacity: 0.2;
-transform: translate(-30%,-30%);
-border-radius: 50%;
-}
-</style>
-<style>
-  .container {
-  width: 350px;
-  height: 500px;
-  perspective: 800px;
-}
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <style>
 
-.container:hover > .card {
-  cursor: pointer;
-  transform: rotateY(180deg);
-}
-
-.card {
-  height: 100%;
-  width: 100%;
-  position: relative;
-  transition: transform 1500ms;
-  transform-style: preserve-3d;
-  border-radius: 40px;
-}
-
-.front,
-.back {
-  height: 100%;
-  width: 100%;
-  border-radius: 2rem;
-  box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
-  position: absolute;
-  backface-visibility: hidden;
-}
-
-.front {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.back {
-  background-color: #3a3a3a;
-  transform: rotateY(180deg);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 5rem;
-}
-:root{
-            --ff-philosopher: "Philosopher", sans-serif;
-            --ff-poppins: "Poppins", sans-serif;
+      .circle{
+      z-index: 998;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      pointer-events: none;
+      animation: colors 5s infinite;
+      position: fixed;
+      transform: translate(-50%,-50%);
+      }
+      .circle::before {
+      content: "";
+      position: fixed;
+      width: 50px;
+      height: 50px;
+      opacity: 0.2;
+      transform: translate(-30%,-30%);
+      border-radius: 50%;
+      }
+      </style>
+      <style>
+        .container {
+        width: 350px;
+        height: 500px;
+        perspective: 800px;
+      }
+      
+      .container:hover > .card {
+        cursor: pointer;
+        transform: rotateY(180deg);
+      }
+      
+      .card {
+        height: 100%;
+        width: 100%;
+        position: relative;
+        transition: transform 1500ms;
+        transform-style: preserve-3d;
+        border-radius: 40px;
+      }
+      
+      .front,
+      .back {
+        height: 100%;
+        width: 100%;
+        border-radius: 2rem;
+        box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
+        position: absolute;
+        backface-visibility: hidden;
+      }
+      
+      .front {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      .back {
+        background-color: #3a3a3a;
+        transform: rotateY(180deg);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5rem;
+      }
+      :root{
+                  --ff-philosopher: "Philosopher", sans-serif;
+                  --ff-poppins: "Poppins", sans-serif;
+              }
+      </style>
+      <style>
+        /* Styles for the switch link */
+        .switch-link {
+          margin-top: 20px;
+          font-family: var(--ff-poppins);
+          text-align: center;
+          color: hsl(203, 30%, 26%);
         }
-</style>
+    
+        .switch-link a {
+          color: hsl(0, 100%, 50%);
+          text-decoration: none;
+          font-weight: bold;
+          transition: color 0.3s ease;
+        }
+    
+        .switch-link a:hover {
+          color: hsl(203, 30%, 26%);
+        }
+      </style>
 </head>
 <body>
   <div class="circle-container">
@@ -116,6 +135,7 @@ border-radius: 50%;
   </div>
   <div class="main-login">
     <div class="left-login" style="background-color: transparent;">
+      <div class="home-btn"><a href="../index.html" style="font-family: var(--ff-philosopher);"><b>Retro</b></a></div>
       <div class="container">
         <div class="card">
           <div class="front" style="align-content: center;font-family: var(--ff-philosopher);">
@@ -127,20 +147,23 @@ border-radius: 50%;
         </div>
       </div>
     </div>
-  <form action="">
+  <form id="loginForm" action="logged.html">
     <div class="right-login">
       <div class="card-login">
         <h1 style="color: hsl(203, 30%,26%);font-family: var(--ff-philosopher);">LOGIN</h1>
         <div class="textfield">
           <label for="usuario" style="color: black;font-family:var(--ff-poppins);">Email / User Name</label>
-          <input required type="text" name="email" placeholder="Enter Email / UserName" style="font-family:var(--ff-poppins);">
+          <input required type="text" id="email" name="email" placeholder="Enter Email / UserName" style="font-family:var(--ff-poppins);">
         </div>
         <div class="textfield">
           <label required for="password" style="color: black;font-family:var(--ff-poppins);">Password</label>
-          <input required type="password" name="password" placeholder="Enter Password" style="font-family:var(--ff-poppins);">
+          <input required type="password" id="password" name="password" placeholder="Enter Password" style="font-family:var(--ff-poppins);">
         </div>
-        <button class="btn-login" style="color: black;font-family:var(--ff-poppins);"><a style="text-decoration: none;color: black;" href="logged.html">Login</a></button>
+        <button type="submit" class="btn-login" style="color: black;font-family:var(--ff-poppins);">Login</button>
         <button id="google-login" style="color: black;font-family:var(--ff-poppins);">Login with google</button>
+        <p id="error-message" style="color: red; font-family: var(--ff-poppins);"></p>
+
+        <p class="switch-link">Don’t have an account? <a href="signup.html">Sign Up</a></p>
       </div>
     </div>
 </form>
@@ -210,6 +233,38 @@ border-radius: 50%;
     }
 
     animateCircles();
+    
+// Form submission event listener
+document.getElementById('loginForm').addEventListener('submit', function(event) {
+    // Prevent form submission
+    event.preventDefault();
+
+    // Get the input values
+    const emailInput = document.getElementById('email').value;
+    const passwordInput = document.getElementById('password').value;
+
+    // Regular expression for email validation (simple check)
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    // Password validation (at least 8 characters)
+    const isValidPassword = passwordInput.length >= 8;
+
+    // Clear previous error message
+    document.getElementById('error-message').textContent = '';
+
+    // Validate the email and password separately
+    if (!emailPattern.test(emailInput)) {
+        // Display an error message if the email format is incorrect
+        document.getElementById('error-message').textContent = 'Invalid email format.';
+    } else if (!isValidPassword) {
+        // Display an error message if the password is too short
+        document.getElementById('error-message').textContent = 'Password must be at least 8 characters.';
+    } else {
+        // If both are valid, redirect to logged.html
+        window.location.assign('logged.html');
+    }
+});
+
   </script>
 </body>
 </html>

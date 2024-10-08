@@ -10,7 +10,11 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="/Css-files/navbarstyles.css">
     <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> -->
+    
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
@@ -21,17 +25,28 @@
         rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script> -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        
         <link rel="stylesheet" href="./style.css">
 
     <style>
+        .retro-heading {
+          font-family: var(--ff-philosopher);
+          color: brown;
+          z-index: 99;
+          transition: all 0.3s ease;
+        }
 
-
+        .retro-heading:hover {
+           color: #5d095c;
+           text-shadow: 0 0 15px rgba(214, 30, 171, 0.9), 0 0 30px rgba(138, 38, 88, 0.7);
+           transform: scale(1.3); 
+        }
 
         .faq-container {
             margin-top: 50px;
@@ -335,8 +350,72 @@ p {
     <div id="preloader">
         <div id="loader"></div>
     </div>
+
+    
     <!--Navbar Start-->
     <nav class="navbar navbar-expand-lg fixed-top" id="top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#" style="font-family: var(--ff-philosopher); color: black;">
+                <b>Retro</b>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#"
+                            style="color: black; font-family: var(--ff-philosopher);">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Html-files/about.html"
+                            style="font-family: var(--ff-philosopher); color: black;">About Us</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="Html-files/menu.html"
+                            style="font-family: var(--ff-philosopher);color: black;">Collections</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="Html-files/services.html"
+                            style="font-family: var(--ff-philosopher);color: black;">Services</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="Html-files/contact.html" style="font-family: var(--ff-philosopher); color: black">Contact Us</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                    <a class="nav-link" href="#" style="font-family: var(--ff-philosopher); color: black;">More</a>
+                    </li>
+
+                </ul>
+
+                <div class="navbar-right">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" onclick="redirectLogin()"
+                                style="color: black; font-family: var(--ff-philosopher);">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" onclick="redirectSignup()"
+                                style="color: black; font-family: var(--ff-philosopher);">Signup</a>
+                        </li>
+                        <li class="nav-item" style="list-style-type: none;">
+                            <a class="nav-link" href="Html-files/cart.html" style="color: black;"><i
+                                    class="fa-solid fa-cart-shopping"></i>Cart</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!--Navbar End-->
+
+<!--    <nav class="navbar navbar-expand-lg fixed-top" id="top">
         <div class="container-fluid">
             <a class="navbar-brand" href="#"  style="font-family: var(--ff-philosopher);color: black;"><b>Retro</b></a>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -344,20 +423,16 @@ p {
                     <li class="nav-item">
                         <a class="nav-link " aria-current="page" href="#" style="color: black;font-family: var(--ff-philosopher);">Home</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Html-files/menu.html" style="font-family: var(--ff-philosopher);color: black;">Collections</a>
-                    </li>
+                    
                     <li class="nav-item">
                         <a class="nav-link" href="Html-files/about.html" style="font-family: var(--ff-philosopher);color: black;">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Html-files/services.html" style="font-family: var(--ff-philosopher);color: black;">Services</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="Html-files/contact.html" style="font-family: var(--ff-philosopher);color: black;">Contact Us</a>
                     </li>
-                    <!-- Google Translate Element -->
-                   <li class="nav-item">
+-->
+                 <!-- Google Translate Element -->
+<!--                  <li class="nav-item">
                         <div id="google_element" style="font-family: var(--ff-philosopher);color: black;" class="nav-link"></div>
                    </li>
                 </ul>
@@ -366,13 +441,11 @@ p {
             <div class="d-flex p-2">
                 <li class="nav-item" style="list-style-type: none;font-family: var(--ff-philosopher);"><a class="nav-btn" onclick="redirectLogin()" style="color: black;">Login</a></li>&nbsp;&nbsp;
                 <li class="nav-item" style="list-style-type: none;font-family: var(--ff-philosopher);"><a class="nav-btn" onclick="redirectSignup()" style="color: black;">Sign Up</a></li>&nbsp;&nbsp;
-                <li class="nav-item" style="list-style-type: none;">
-                    <a class="nav-btn " href="Html-files/cart.html" style="color: black;"><i class="fa-solid fa-cart-shopping"></i></a>
-                </li>
             </div>
 
         </div>
     </nav>
+-->
     <script src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
 <script>
 function loadGoogleTranslate() {
@@ -383,8 +456,8 @@ new google.translate.TranslateElement({
 </script>
 
     <section class="intro_container">
-        <h1 style="font-family: var(--ff-philosopher);color: brown;z-index: 99;">Welcome to Retro!</h1>
-        <p style="font-family: var(--ff-poppins);z-index: 99;color: white;">Step back in time and experience the nostalgic charm of days gone by. 
+        <h1 class="retro-heading" style="font-family: var(--ff-philosopher);color: brown;z-index: 99;">Welcome to Retro!</h1>
+        <p style="font-family: cursive;z-index: 99;color: white;font-size: x-large;">Step back in time and experience the nostalgic charm of days gone by. 
             Immerse yourself in the world of vintage tech, classic designs, and timeless memories. 
             Get ready to embark on a journey through the ages, where innovation meets tradition, and the past inspires the future.</p>
         <button class="btn" id="openButton" style="z-index: 99;">Order Now</button>
@@ -405,9 +478,9 @@ new google.translate.TranslateElement({
     <section class="about_us">
         <div class="move">
             <div id="marque">
-                <h1 class="poppins-light"  style="font-family: var(--ff-philosopher);">Get <span> 30% OFF </span> on your first order!</h1>
-                <h1 class="poppins-light" style="font-family: var(--ff-philosopher);">Get <span> 30% OFF </span> on your first order!</h1>
-                <h1 class="poppins-light" style="font-family: var(--ff-philosopher);">Get <span> 30% OFF </span> on your first order!</h1>
+                 <a href="Html-files/cart.html"> <h1 class="poppins-light"  style="font-family: var(--ff-philosopher);">Get <span> 30% OFF </span> on your first order!</h1></a>
+                 <a href="Html-files/cart.html"><h1 class="poppins-light" style="font-family: var(--ff-philosopher);">Get <span> 30% OFF </span> on your first order!</h1></a>
+                 <a href="Html-files/cart.html"><h1 class="poppins-light" style="font-family: var(--ff-philosopher);">Get <span> 30% OFF </span> on your first order!</h1></a>
             </div>
         </div>
 
@@ -558,11 +631,11 @@ new google.translate.TranslateElement({
             
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingOne">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                                 What is your return policy?
                             </button>
                         </h2>
-                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                        <div id="collapseOne" class="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
                             <div class="accordion-body">
                                 Our return policy allows you to return items within 30 days of purchase.
                             </div>
@@ -648,7 +721,7 @@ new google.translate.TranslateElement({
         <h4 style="font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%);">Free Delivery!</h4>
         <h2 style="font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%);">Download the App now!</h2>
         <br>
-        <p style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">For best discounts and free delivery download the app now from your Google Play Store or App Store.</p>
+        <p style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);text-align:left;">For best discounts and free delivery download the app now from your Google Play Store or App Store.</p>
         <a href="https://play.google.com/store/games?device=windows"><img src="./Images/get_it_on_google_play_store.png" class="app-download-img"
                 alt="Get it on Google Play Store"></a>
         <a href="https://www.apple.com/in/app-store/"><img src="./Images/download-on-the-app-store.png" class="app-download-img"
@@ -660,7 +733,7 @@ new google.translate.TranslateElement({
         <footer>
             <div class="foot-panel2" style="background-color:hsl(20, 43%, 93%);font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
                 <ul>
-                    <p style="color: hsl(357, 82%,35%);font-family: var(--ff-philosopher);">Our Pages</p>
+                    <p style="color: hsl(357, 82%,35%);font-family: var(--ff-philosopher);text-align: left;">Our Pages</p>
                     <a href="#" style="color: black;">Home</a>
                     <a href="Html-files/menu.html" style="color: black;">About</a>
                     <a href="Html-files/services.html" style="color: black;">Services</a>
@@ -668,7 +741,7 @@ new google.translate.TranslateElement({
                     <a href="Html-files/cart.html" style="color: black;">Cart</a>
                 </ul>
                 <ul>
-                    <p style="color: hsl(357, 82%,35%);font-family: var(--ff-philosopher);"> Exclusive Offers</p>
+                    <p style="color: hsl(357, 82%,35%);font-family: var(--ff-philosopher); text-align:left"> Exclusive Offers</p>
                     <a href="#" style="color: black;">Retro Discounts</a>
                     <a href="#" style="color: black;">Limited-Time Promotions</a>
                     <a href="#" style="color: black;">Special Event Packages</a>
@@ -679,7 +752,7 @@ new google.translate.TranslateElement({
 
                 </ul>
                 <ul>
-                    <p style="color: hsl(357, 82%,35%);font-family: var(--ff-philosopher);">Payment Products</p>
+                    <p style="color: hsl(357, 82%,35%);font-family: var(--ff-philosopher);text-align:left">Payment Products</p>
                     <a href="./Html-files/payment2.html" style="color: black;">Secure Checkout</a>
                     <a href="./Html-files/payment2.html" style="color: black;">Credit/Debit Cards</a>
                     <a href="./Html-files/payment2.html" style="color: black;">Online Payment</a>
@@ -693,7 +766,10 @@ new google.translate.TranslateElement({
 
                     <textarea id="message" name="message" placeholder="Your Message" required></textarea>
 
-                    <button id="butt" type="submit" style="font-family: var(--ff-poppins);">Send Message</button>
+
+
+                    <button id="butt" type="submit" style="font-family: ui-serif;">Send Message</button>
+
                 </form>
 
             </div>
@@ -731,10 +807,13 @@ new google.translate.TranslateElement({
                     </div>
                 </div>
         </footer>
-        <button onclick="window.print()">Print this page</button>
+        <button onclick="window.print()" style="font-family:Georgia; font-size:medium; line-height: inherit;border-radius:5px ;background-color: #f9e2c4;padding:5px 5px;">Print this page</button>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 </body>
 <script>
+ 
     function redirectLogin() {
         window.location.href = "Html-files/login.html";
     }
@@ -860,4 +939,7 @@ scrollToTopBtn.addEventListener("click", function() {
     document.querySelector(".Home h1").style.opacity = (200 - scrollY) / 200;
 };
 </script>
+
+
+
 </html>

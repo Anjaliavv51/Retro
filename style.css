@@ -13,17 +13,18 @@
 body {
   background-color: black;
 }
-
+/*
 .navbar {
   padding: fixed;
   top: 0;
   width: 100%;
   z-index: 1030;
   padding: 15px 0;
-  background-color: rgba(245, 190, 190, 0.7);
+  /*background-color: rgba(245, 245, 245, 0.7);
   backdrop-filter: blur(8px);
   transition: background-color 0.5s ease, backdrop-filter 0.5s ease;
 }
+*/
 
 .navbar a {
   text-decoration: none;
@@ -31,11 +32,14 @@ body {
   font-size: 1.3rem;
   transition: color 0.3s ease,border-bottom 0.3s ease;
 }
+
 /* Navbar link hover effect */
-.navbar a:hover{
+/*.navbar a:hover{
   color: #fff;
   border-bottom: 1px solid #fff;
 }
+
+*/
 
 
 .navbar.fixed-top {
@@ -321,8 +325,6 @@ body {
   border-radius: 15px;
   display: inline-block;
   color: white;
-  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
-
 
 
 /*
@@ -1004,6 +1006,14 @@ padding-left:2px;
   -webkit-text-fill-color: transparent;
 }
 
+#marque h1:hover {
+  animation: marquee 10s linear infinite;
+  color: brown;;
+  -webkit-text-fill-color: brown;;
+  cursor: pointer;
+} 
+
+
 @keyframes marquee {
   0% {
       transform: translateX(0);
@@ -1062,11 +1072,13 @@ padding-left:2px;
   margin: 5px;
   border-radius: 10px;
   border: none;
+  background-color: #f9e2c4;
 }
 
 #contactForm h3 {
   height: 30px;
   color: #141414;
+  font-size: calc(1.0rem + .6vw);
 }
 #contactForm textarea {
   height: 100px;
@@ -1081,4 +1093,5 @@ padding-left:2px;
   border-radius: 5px;
   cursor: pointer;
   margin-top: 5px;
+  width: 60%;
 }
