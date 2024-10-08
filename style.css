@@ -38,8 +38,11 @@ body {
   color: #fff;
   border-bottom: 1px solid #fff;
 }
+<<<<<<< HEAD
 */
 
+=======
+>>>>>>> feature/marquee-hover
 .navbar.fixed-top {
   position: fixed; 
   top: 0;
@@ -323,9 +326,8 @@ body {
   border-radius: 15px;
   display: inline-block;
   color: white;
-  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
-}
-*/
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease; 
+}*/
 
 /*
 .service .box a:hover {
@@ -996,6 +998,14 @@ padding-left:2px;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+#marque h1:hover {
+  animation: marquee 10s linear infinite;
+  color: brown;;
+  -webkit-text-fill-color: brown;;
+  cursor: pointer;
+} 
+
 
 @keyframes marquee {
   0% {
