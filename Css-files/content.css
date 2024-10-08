@@ -223,7 +223,8 @@ input[type="submit"]:hover {
 .menu_items .items img {
   justify-content: center;
   height: 190px;
-  width: 230px;
+  width: 228px;
+  border-radius: 10px 10px 0 0;
 }
 
 .menu_items .items h3 {
