@@ -322,8 +322,8 @@ body {
   display: inline-block;
   color: white;
   transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
-}
-*/
+
+
 
 /*
 .service .box a:hover {
@@ -666,9 +666,9 @@ textarea {
 }
 
 .social-icons a {
-  font-size: 1.2rem;
-  padding: 8px;
-  margin: 15px;
+  font-size: 1rem;
+  padding: 7px;
+  margin: 7px 6px 0 8px; 
   text-decoration: none;
   color: brown !important;
 }
@@ -691,6 +691,15 @@ textarea {
 .fa-brands.fa-x-twitter:hover {
   color: #181e20 !important;
   /* color: white; */
+}
+.fa-brands.fa-twitter:hover {
+  color:#00B6F1;
+}
+.fa-brands.fa-youtube:hover {
+  color: #FF0000; 
+}
+.fa-brands.fa-snapchat:hover {
+  color: #FFFC00; 
 }
 
 .social-icons a:hover {
