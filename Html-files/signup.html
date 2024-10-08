@@ -169,6 +169,26 @@ body{
 .area .way:nth-child(8):hover ~ .box{transform: rotateX(20deg) rotateY(0deg);}
 .area .way:nth-child(9):hover ~ .box{transform: rotateX(20deg) rotateY(-20deg);}
   </style>
+  <style>
+    /* Styles for the switch link */
+    .switch-link {
+      margin-top: 20px;
+      font-family: var(--ff-poppins);
+      text-align: center;
+      color: hsl(203, 30%, 26%);
+    }
+
+    .switch-link a {
+      color: hsl(0, 100%, 50%);
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    .switch-link a:hover {
+      color: hsl(203, 30%, 26%);
+    }
+  </style>
 </head>
 <body>
   <div class="circle-container">
@@ -229,17 +249,20 @@ body{
                 <span id="email-error" class="error-message"></span>
               </div>
 
-              <div class="textfield tooltip">
+              <div class="textfield ">
                 <label for="password">Password</label>
                 <input type="password" id="password" name="password" placeholder="Enter Password" title="Special characters are not allowed" required>
                 <span id="password-error" class="error-message"></span>
                 <span class="tooltiptext">Special characters such as /[<>"/]/  are not allowed</span>
             </div>
 
-              <button type="submit" class="btn-login" style="font-family: var(--ff-philosopher);color: #ddd;">Register</button>
+              
             </form>
-            <button id="google-login" style="font-family: var(--ff-philosopher);color: #ddd;">Signup with Google</button>
+            <div class="btnNext"><button type="submit" class="btn-login" style="font-family: var(--ff-philosopher);color: #ddd;">Register</button>
+              <button id="google-login" style="font-family: var(--ff-philosopher);color: #ddd;">Signup with Google</button></div>
           </div>
+
+          <p class="switch-link">Already have an account? <a href="login.html">Login</a></p>
         </div>
       </div>
       <script>

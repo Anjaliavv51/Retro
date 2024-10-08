@@ -9,7 +9,7 @@
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     
-    <link rel="stylesheet" href="/Css-files/navbarstyles.css">
+        <link rel="stylesheet" href="/Css-files/navbarstyles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
@@ -71,8 +71,7 @@ border-radius: 100px;
 }
 body{
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpath fill='%23ffb9b0' d='M486 705.8c-109.3-21.8-223.4-32.2-335.3-19.4C99.5 692.1 49 703 0 719.8V800h843.8c-115.9-33.2-230.8-68.1-347.6-92.2C492.8 707.1 489.4 706.5 486 705.8z'/%3E%3Cpath fill='%23ffc1b7' d='M1600 0H0v719.8c49-16.8 99.5-27.8 150.7-33.5c111.9-12.7 226-2.4 335.3 19.4c3.4 0.7 6.8 1.4 10.2 2c116.8 24 231.7 59 347.6 92.2H1600V0z'/%3E%3Cpath fill='%23ffc8bf' d='M478.4 581c3.2 0.8 6.4 1.7 9.5 2.5c196.2 52.5 388.7 133.5 593.5 176.6c174.2 36.6 349.5 29.2 518.6-10.2V0H0v574.9c52.3-17.6 106.5-27.7 161.1-30.9C268.4 537.4 375.7 554.2 478.4 581z'/%3E%3Cpath fill='%23ffcfc6' d='M0 0v429.4c55.6-18.4 113.5-27.3 171.4-27.7c102.8-0.8 203.2 22.7 299.3 54.5c3 1 5.9 2 8.9 3c183.6 62 365.7 146.1 562.4 192.1c186.7 43.7 376.3 34.4 557.9-12.6V0H0z'/%3E%3Cpath fill='%23FFD6CE' d='M181.8 259.4c98.2 6 191.9 35.2 281.3 72.1c2.8 1.1 5.5 2.3 8.3 3.4c171 71.6 342.7 158.5 531.3 207.7c198.8 51.8 403.4 40.8 597.3-14.8V0H0v283.2C59 263.6 120.6 255.7 181.8 259.4z'/%3E%3Cpath fill='%23ffdcd4' d='M1600 0H0v136.3c62.3-20.9 127.7-27.5 192.2-19.2c93.6 12.1 180.5 47.7 263.3 89.6c2.6 1.3 5.1 2.6 7.7 3.9c158.4 81.1 319.7 170.9 500.3 223.2c210.5 61 430.8 49 636.6-16.6V0z'/%3E%3Cpath fill='%23ffe1d9' d='M454.9 86.3C600.7 177 751.6 269.3 924.1 325c208.6 67.4 431.3 60.8 637.9-5.3c12.8-4.1 25.4-8.4 38.1-12.9V0H288.1c56 21.3 108.7 50.6 159.7 82C450.2 83.4 452.5 84.9 454.9 86.3z'/%3E%3Cpath fill='%23ffe6df' d='M1600 0H498c118.1 85.8 243.5 164.5 386.8 216.2c191.8 69.2 400 74.7 595 21.1c40.8-11.2 81.1-25.2 120.3-41.7V0z'/%3E%3Cpath fill='%23ffebe4' d='M1397.5 154.8c47.2-10.6 93.6-25.3 138.6-43.8c21.7-8.9 43-18.8 63.9-29.5V0H643.4c62.9 41.7 129.7 78.2 202.1 107.4C1020.4 178.1 1214.2 196.1 1397.5 154.8z'/%3E%3Cpath fill='%23FFF0EA' d='M1315.3 72.4c75.3-12.6 148.9-37.1 216.8-72.4h-723C966.8 71 1144.7 101 1315.3 72.4z'/%3E%3C/g%3E%3C/svg%3E");
-  background-size: cover;
-  background-attachment: fixed;
+            background-size: cover;
 }
 ::-webkit-scrollbar {
   width: 10px; 
@@ -175,12 +174,364 @@ body{
         transform: rotate(360deg);
     }
 }
+.header {
+    background: radial-gradient(circle at bottom left, #FED6D6, #FFE4E1 60%, transparent 80%);
+    /* padding: 2rem; */
+    text-align: center;
+    font-family: 'Philosopher', sans-serif;
+}
+
+.animated-header {
+    font-family: Arial, sans-serif; /* Use a basic font for testing */
+    color: #dc3545;
+    display: inline-block; /* Allow individual letters to be styled separately */
+    overflow: hidden; /* Ensures text appears only when animated */
+}
+
+/* Animation for each letter */
+.letter {
+    display: inline-block; /* Allows each letter to be animated individually */
+    opacity: 0; /* Start invisible */
+    transform: translateY(20px); /* Start slightly below */
+    animation: appear 1.0s forwards; /* Animation for appearance */
+}
+
+/* Keyframes for letter appearance */
+@keyframes appear {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.spacer {
+    display: inline-block; /* Allows it to take up space */
+    width: 40px; /* Adjust the width for more or less space */
+}
+
+/* Add animation delay for each letter */
+.letter:nth-child(1) { animation-delay: 0s; }
+.letter:nth-child(2) { animation-delay: 0.2s; }
+.letter:nth-child(3) { animation-delay: 0.4s; }
+.letter:nth-child(4) { animation-delay: 0.6s; }
+.letter:nth-child(5) { animation-delay: 0.8s; }
+.letter:nth-child(6) { animation-delay: 01.0s; }
+.letter:nth-child(7) { animation-delay: 01.2s; }
+.letter:nth-child(8) { animation-delay: 01.4s; }
+.letter:nth-child(9) { animation-delay: 01.6s; }
+.letter:nth-child(10) { animation-delay: 01.8s; }
+.letter:nth-child(11) { animation-delay: 2.0s; }
+.letter:nth-child(12) { animation-delay: 2.1s; }
+/* .letter:nth-child(13) { animation-delay: 1.2s; } */
+
+
 .social-icons a {
   font-size: 1.2rem;
   padding: 8px;
   margin: 15px;
   text-decoration: none;
   color: rgb(18, 16, 16);
+}
+
+.social-icons a:hover {
+  color: brown;
+  background-color: hsl(22, 76%, 85%);
+  border-radius: 10px;
+  transform: scale(1.5); /* Increase size */
+  transition: transform 0.3s ease; /* Smooth transition effect */
+}
+
+
+
+ .about_container {
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 40px 20px; 
+    background-color: hsl(203, 30%, 96%); 
+    border-radius: 10px; 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+} 
+/* .aboutcontainer {
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 40px 20px; 
+    background-color: hsl(203, 30%, 96%); 
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); 
+} */
+.about_container:hover {
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3); /* Adds a shadow to the outer container */
+  transform: scale(1.05); /* Slightly enlarges the outer box */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.about_container > * { 
+  /* Prevent hover effect on inner elements */
+  transition: none; 
+  transform: none;
+}
+
+
+.about1 {
+    font-family: var(--ff-poppins); /* Use your defined font */
+    color: hsl(208, 7%, 46%); /* Text color */
+    line-height: 1.6; /* Increase line height for readability */
+    margin-bottom: 20px; /* Spacing below this paragraph */
+}
+
+
+.about2,
+.about3 {
+    margin-bottom: 40px; /* Spacing between sections */
+}
+
+.section__title {
+    font-family: var(--ff-philosopher); /* Use your defined font */
+    color: hsl(357, 82%, 35%); /* Title color */
+    font-size: 1.8rem; /* Font size for headings */
+    margin-bottom: 15px; /* Spacing below headings */
+    border-bottom: 2px solid hsl(357, 82%, 35%); /* Underline for headings */
+    padding-bottom: 5px; /* Padding below the heading */
+}
+.section__titlestyle{
+  font-family: var(--ff-philosopher); /* Use your defined font */
+    color: hsl(357, 82%, 35%); /* Title color */
+    font-size: 1.8rem; /* Font size for headings */
+    margin-bottom: 15px; /* Spacing below headings */
+    border-bottom: 2px solid hsl(357, 82%, 35%); /* Underline for headings */
+    padding-bottom: 5px; 
+    text-align: center;
+}
+
+.about2 p,
+.about3 p {
+    font-family: var(--ff-poppins); /* Use your defined font */
+    color: hsl(208, 7%, 46%); /* Paragraph color */
+    line-height: 1.6; /* Increase line height for readability */
+    margin-bottom: 20px; /* Spacing below paragraphs */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .about_container {
+        padding: 20px; /* Adjust padding for smaller screens */
+    }
+
+    .section__title {
+        font-size: 1.5rem; /* Adjust heading size for smaller screens */
+    }
+
+    .about1, .about2 p, .about3 p {
+        font-size: 0.9rem; /* Adjust font size for paragraphs */
+    }
+}
+
+   
+
+
+.new_footer_area {
+    background: hsl(203, 30%, 96%);
+    margin-top: 20px;
+}
+
+.new_footer_top {
+    padding: 80px 0px 150px;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Footer Bottom */
+.new_footer_area .footer_bottom {
+    padding-top: 5px;
+    padding-bottom: 50px;
+}
+.footer_bottom {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 20px;
+    color: #7f88a6;
+    padding: 27px 0px;
+}
+
+/* Company Widget Styling */
+.new_footer_top .company_widget p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 28px;
+    color: #6a7695;
+    margin-bottom: 20px;
+}
+.new_footer_top .company_widget .f_subscribe_two .btn_get {
+    border-width: 1px;
+    margin-top: 20px;
+}
+
+/* Contact Form Styling */
+.f_subscribe_two {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Ensure enough space between input fields */
+}
+
+.f_subscribe_two input[type="email"],
+.f_subscribe_two textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #e2e2eb;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333;
+    background-color: #f7f7f7;
+    margin-bottom: 10px; /* Spacing between inputs */
+}
+
+.f_subscribe_two input[type="email"]::placeholder,
+.f_subscribe_two textarea::placeholder {
+    color: #b3b3b3;
+}
+
+.f_subscribe_two textarea {
+    height: 120px;
+    resize: none;
+}
+
+/* Button Styling */
+.f_subscribe_two button#butt {
+    background-color: #5e2ced;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.f_subscribe_two button#butt:hover {
+    background-color: #3d1bb0;
+}
+
+/* General Hover Effects */
+a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
+    text-decoration: none;
+    outline: none;
+}
+
+/* Widget and List Styling */
+.new_footer_top .f_widget.about-widget .f_list li a:hover {
+    color: #5e2ced;
+}
+.new_footer_top .f_widget.about-widget .f_list li {
+    margin-bottom: 11px;
+}
+.f_widget.about-widget .f_list li:last-child {
+    margin-bottom: 0px;
+}
+.f_widget.about-widget .f_list li {
+    margin-bottom: 15px;
+}
+.f_widget.about-widget .f_list {
+    margin-bottom: 0px;
+}
+
+/* Social Icon Styling */
+.new_footer_top .f_social_icon a {
+    width: 44px;
+    height: 44px;
+    line-height: 43px;
+    background: transparent;
+    border: 1px solid #e2e2eb;
+    font-size: 24px;
+}
+.f_social_icon a {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    font-size: 14px;
+    line-height: 45px;
+    color: #858da8;
+    display: inline-block;
+    background: #ebeef5;
+    text-align: center;
+    transition: all 0.2s linear;
+}
+.new_footer_top .f_social_icon a:hover {
+    background: #5e2ced;
+    border-color: #5e2ced;
+    color: white;
+}
+.new_footer_top .f_social_icon a + a {
+    margin-left: 4px;
+}
+
+/* Heading and Title Styling */
+.new_footer_top .f-title {
+    margin-bottom: 30px;
+    color: #263b5e;
+}
+.f_600 {
+    font-weight: 600;
+}
+.f_size_18 {
+    font-size: 18px;
+}
+h1, h2, h3, h4, h5, h6 {
+    color: #4b505e;
+}
+.new_footer_top .f_widget.about-widget .f_list li a {
+    color: #6a7695;
+}
+
+/* Background Animations */
+.new_footer_top .footer_bg {
+    position: absolute;
+    bottom: 0;
+    /* background: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEigB8iI5tb8WSVBuVUGc9UjjB8O0708X7Fdic_4O1LT4CmLHoiwhanLXiRhe82yw0R7LgACQ2IhZaTY0hhmGi0gYp_Ynb49CVzfmXtYHUVKgXXpWvJ_oYT8cB4vzsnJLe3iCwuzj-w6PeYq_JaHmy_CoGoa6nw0FBo-2xLdOPvsLTh_fmYH2xhkaZ-OGQ/s16000/footer_bg.png") no-repeat scroll center 0; */
+    width: 100%;
+    height: 266px;
+}
+
+.new_footer_top .footer_bg .footer_bg_one {
+    /* background: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEia0PYPxwT5ifToyP3SNZeQWfJEWrUENYA5IXM6sN5vLwAKvaJS1pQVu8mOFFUa_ET4JuHNTFAxKURFerJYHDUWXLXl1vDofYXuij45JZelYOjEFoCOn7E6Vxu0fwV7ACPzArcno1rYuVxGB7JY6G7__e4_KZW4lTYIaHSLVaVLzklZBLZnQw047oq5-Q/s16000/volks.gif") no-repeat center center; */
+    width: 330px;
+    height: 105px;
+    background-size: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 30%;
+    animation: myfirst 22s linear infinite;
+}
+
+.new_footer_top .footer_bg .footer_bg_two {
+    background: url("https://cdn.pixabay.com/animation/2023/02/07/13/30/13-30-08-292_512.gif") no-repeat center center;
+    width: 330px;
+    height: 105px;
+    background-size: 100%;
+    bottom: 0;
+    left: 38%;
+    position: absolute;
+    animation: myfirst 30s linear infinite;
+}
+
+/* Animation Keyframes */
+@keyframes myfirst {
+  0% {
+    left: -25%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+
+.social-icons a {
+  font-size: 1.2rem;
+  padding: 8px;
+  margin: 15px;
+  text-decoration: none;
+  color: brown !important;
 }
 
 .social-icons a:hover {
@@ -201,6 +552,7 @@ body{
 .fa-brands.fa-x-twitter:hover {
   color: #181e20 !important;
 }
+
     </style>
 </head>
 
@@ -276,8 +628,21 @@ body{
   </header>
 
   <br><br><br><br>
-  <div class="mainhead">
-    <h1 style="font-family: var(--ff-philosopher); color: hsl(203, 30%, 26%);">About Retro</h1>
+  <div class="mainhead" >
+    <h1 class="animated-header" style="color: #dc3545;">
+    <span class="letter">A</span>
+    <span class="letter">B</span>
+    <span class="letter">O</span>
+    <span class="letter">U</span>
+    <span class="letter">T</span>
+    <span class="letter"> </span>
+    <span class="spacer">&nbsp;</span>
+    <span class="letter">R</span>
+    <span class="letter">E</span>
+    <span class="letter">T</span>
+    <span class="letter">R</span>
+    <span class="letter">O</span>
+    </h1>
   </div>
 </div>
 
@@ -285,104 +650,105 @@ body{
 
 
     <section class="about_container">
-        <p class="about1" style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">At Retro, we celebrate the essence of timeless moments, where the charm of vintage design meets the warmth of nostalgia. Our love for the past inspires us to create an experience that connects the beauty of bygone eras with today’s world. Whether it's 60s-style floral patterns or classic tech from yesteryear, Retro brings back the simplicity, elegance, and innovation of those unforgettable days.
+     
+        <p class="about1" >At Retro, we celebrate the essence of timeless moments, where the charm of vintage design meets the warmth of nostalgia. Our love for the past inspires us to create an experience that connects the beauty of bygone eras with today’s world. Whether it's 60s-style floral patterns or classic tech from yesteryear, Retro brings back the simplicity, elegance, and innovation of those unforgettable days.
         </p>
         <div class="about2">
-            <h2 class=section__title style="font-family: var(--ff-philosopher);color: hsl(357, 82%,35%);">Our Story</h2>
+            <h2 class=section__titlestyle style="font-family: var(--ff-philosopher);color: hsl(357, 82%,35%);">Our Story</h2>
             <p style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">Retro was born from a desire to relive and share the joy of the past. We believe that every era has something special to offer, whether it’s the bold designs of the 60s, the innovative spirit of the 70s, or the tech revolutions of the 80s and 90s. Our journey began with a passion for collecting vintage items and a dream to create a space where people could immerse themselves in a world that captures the essence of different generations.</p>
         </div>
         <div class="about3">
-            <h2 class=section__title style="font-family: var(--ff-philosopher);color: hsl(357, 82%,35%);">Why Choose Retro?</h2>
+            <h2 class=section__title>Why Choose Retro?</h2>
             <p style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">We’re not just about products – we’re about creating a lifestyle that honors the beauty and inspiration of the past. Each item we offer is carefully selected to bring nostalgia to life, allowing you to embrace the timeless designs, flavors, and stories that have shaped history. Whether you're a vintage enthusiast or simply love the look and feel of classic designs, Retro is your gateway to a world that values tradition as much as it does innovation.</p>
         </div>
+
     </section>
 
-
-
-    <!-- footer -->
-    <footer>
-
-
-        <div class="foot-panel2" style="font-family: Garamond;">
-            <ul class="footer-colums">
-                <p style="font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%);">Our Pages</p>
-                <a href="../index.html" style="text-decoration: none;font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">Home</a>
-                <a href="menu.html" style="text-decoration: none;font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">About</a>
-                <a href="#" style="text-decoration: none;font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">Services</a>
-                <a href="contact.html" style="text-decoration: none;font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">Contact</a>
-                <a href="cart.html" style="text-decoration: none;font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">Cart</a>
-            </ul>
-
-            <ul class="footer-colums">
-                <p style="font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%);"> Exclusive Offers</p>
-                <a style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">Retro Discounts</a>
-                <a style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">Limited-Time Promotions</a>
-                <a style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">Special Event Packages</a>
-                <a style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">Membership Benefits</a>
-                <a style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">Early Access to New Collections</a>
-                <a style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">VIP Retro Events</a>
-                <a style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">Personalized Culinary Experiences</a>
-
-            </ul>
-
-            <ul class="footer-colums">
-                <p style="font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%);">Payment Products</p>
-                <a style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">Secure Checkout</a>
-                <a style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">Credit/Debit Cards</a>
-                <a style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">Online Payment</a>
-                <a style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">Mobile Wallets</a>
-                <a style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">Contactless Payments</a>
-            </ul>
-
-
-            <form id="contactForm">
-                <h3 style="font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%);">Contact Us!</h3>
-                <input type="email" id="email" name="email" placeholder="Your Email" required style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
-                <textarea id="message" name="message" placeholder="Your Message" required style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);"></textarea>
-
-                <button id="butt" type="submit" style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">Send Message</button>
-            </form>
-
-        </div>
-
-
-        <div class="foot_panel4"  style="font-family: Garamond;">
-            <div class="pages">
-                <h4 style="font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%);">Follow Us</h4>
-
-                <div class="social-icons">
-                    <div class="social-icons">
-
-
-                        <a class="fa-brands fa-facebook" href="https://facebook.com" style="color: hsl(203, 30%, 26%);"></a>
-                        <a class="fa-brands fa-instagram" href="https://instagram.com" style="color: hsl(203, 30%, 26%);"></a>
-                        <a class="fa-brands fa-x-twitter" href="https://twitter.com" style="color: hsl(203, 30%, 26%);"></a>
-
-                    </div>
-                </div>
-                <p style="margin-bottom:0;font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%);">Stay connected with us on social media for the latest updates, latest collection, and vintage adventures.
-                </p>
-                <div class="copyright">
-                   <p style="font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%);">
-                    &copy; 2024 Retro . All Rights Reserved. | <span id="author">
-                        <a href="https://www.linkedin.com" target="_blank" style="text-decoration: none;">Retro Team</a>
-                    </span></p>
-
-                  
-
-
-                </div>
-                <div>
-                    <button id="sr" style="z-index: 1000;">
-                    <div class="circle1">
-                      <svg id="back-to-top" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
-                        <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z"></path>
-                      </svg>
-                    </div>
-                    </button>
-                </div>
+                
+    <footer class="new_footer_area bg_color">
+      <div class="new_footer_top">
+        <div class="container">
+          <div class="row">
+            <!-- Get in Touch Section -->
+            <div class="col-lg-3 col-md-6">
+              <div class="f_widget company_widget">
+                <h3 class="f-title f_600 t_color f_size_18">Contact US</h3>
+                <!-- <p>Don’t miss any updates of our new templates and extensions.!</p> -->
+                <form action="#" class="f_subscribe_two mailchimp" method="post">
+                  <input type="email" id="email" name="email" placeholder="Your Email" required>
+                  <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                  <button id="butt" type="submit">Send Message</button>
+                </form>
+              </div>
             </div>
+            
+            <!-- Our Pages Section -->
+            <div class="col-lg-3 col-md-6">
+              <div class="f_widget about-widget">
+                <h3 class="f-title f_600 t_color f_size_18">Our Pages</h3>
+                <ul class="list-unstyled f_list">
+                  <li><a href="../index.html">Home</a></li>
+                  <li><a href="menu.html">About</a></li>
+                  <li><a href="#">Services</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                  <li><a href="cart.html">Cart</a></li>
+                </ul>
+              </div>
+            </div>
+    
+            <!-- Exclusive Offers Section -->
+            <div class="col-lg-3 col-md-6">
+              <div class="f_widget about-widget">
+                <h3 class="f-title f_600 t_color f_size_18">Exclusive Offers</h3>
+                <ul class="list-unstyled f_list">
+                  <li><a>Retro Discounts</a></li>
+                  <li><a>Limited-Time Promotions</a></li>
+                  <li><a>Special Event Packages</a></li>
+                  <li><a>Membership Benefits</a></li>
+                  <li><a>Early Access to New Collections</a></li>
+                  <li><a>VIP Retro Events</a></li>
+                  <li><a>Personalized Culinary Experiences</a></li>
+                </ul>
+              </div>
+            </div>
+    
+            <!-- Follow Us Section -->
+            <div class="col-lg-3 col-md-6">
+              <div class="f_widget social-widget">
+                <h3 class="f-title f_600 t_color f_size_18">Follow Us</h3>
+                <div class="social-icons">
+                  <a class="fa-brands fa-facebook" href="https://facebook.com" style="color: hsl(203, 30%, 26%);"></a>
+                  <a class="fa-brands fa-instagram" href="https://instagram.com" style="color: hsl(203, 30%, 26%);"></a>
+                  <a class="fa-brands fa-x-twitter" href="https://twitter.com" style="color: hsl(203, 30%, 26%);"></a>
+              </div>
+                <p>Stay connected with us on social media for the latest updates and vintage adventures.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Decorative Backgrounds -->
+        <div class="footer_bg">
+          <div class="footer_bg_one"></div>
+          <div class="footer_bg_two"></div>
+        </div>
+      </div>
+    
+      <!-- Footer Bottom -->
+      <div class="footer_bottom">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-6 col-sm-7">
+              <p class="mb-0 f_400">&copy; 2024 Retro. All Rights Reserved.</p>
+            </div>
+            <div class="col-lg-6 col-sm-5 text-right">
+              <p>Made with <i class="icon_heart"></i> by <a href="https://www.linkedin.com" target="_blank">Retro Team</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
     </footer>
+    
 
     <script>
 
@@ -493,6 +859,27 @@ body{
     });
 });
     </script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+    console.log("DOM fully loaded and parsed"); // Check if script runs
+    const header = document.querySelector('.animated-header');
+    if (!header) {
+        console.error("Animated header not found!");
+        return; // Exit if header is not found
+    }
+    const text = header.textContent; // Get the original text
+    header.textContent = ''; // Clear the original text
+
+    text.split('').forEach((letter, index) => {
+        const span = document.createElement('span');
+        span.textContent = letter;
+        span.classList.add('letter');
+        span.style.animationDelay = `${index * 0.1}s`;
+        header.appendChild(span);
+    });
+});
+
+</script>
 </body>
 
 </html>
