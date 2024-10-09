@@ -108,6 +108,15 @@
         .switch-link a:hover {
           color: hsl(203, 30%, 26%);
         }
+        .forgot-link{
+          text-decoration: none;
+          color: #3a3a3a;
+          margin-bottom: 10px;
+        }
+        .forgot-link:hover{
+          text-decoration: underline;
+          color: #000;
+        }
       </style>
 </head>
 <body>
@@ -159,7 +168,9 @@
           <label required for="password" style="color: black;font-family:var(--ff-poppins);">Password</label>
           <input required type="password" id="password" name="password" placeholder="Enter Password" style="font-family:var(--ff-poppins);">
         </div>
+        <a href="forgot-pass.html" class="forgot-link">Forgot Password ?</a>
         <button type="submit" class="btn-login" style="color: black;font-family:var(--ff-poppins);">Login</button>
+        <span>or</span>
         <button id="google-login" style="color: black;font-family:var(--ff-poppins);">Login with google</button>
         <p id="error-message" style="color: red; font-family: var(--ff-poppins);"></p>
 
