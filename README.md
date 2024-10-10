@@ -8,6 +8,24 @@
 
 </div>
 
+## <p style="font-size:3rem;">Live Demo</p>
+
+<p>Experience the application live by clicking the link below:</p>
+
+[Live Demo Link](https://example.com)
+
+<br><br>
+
+## <p style="font-size:3rem;">Features</p>
+
+- 🛒 Browse vintage collections
+- 🕰️ Detailed information about each item
+- 🏷️ Place orders for vintage items
+- 📦 Track the status of your orders
+- 💬 Engage with other collectors through the platform
+- 📱 Responsive design for mobile devices
+
+<br><br>
 <table align="center">
     <thead align="center">
         <tr border: 1px;>
@@ -93,6 +111,20 @@ It is an online platform which enables you to get information about your vintage
 <br><br>
 
 
+
+<div align="center">
+
+## <p style="font-size:3rem;">Contact Information</p>
+
+For any queries or suggestions, feel free to reach out to us:
+
+- 📧 Email: support@retroplatform.com
+- 🌐 Website: [Retro Official Site](https://example.com)
+- 🐦 Twitter: [@RetroPlatform](https://twitter.com/RetroPlatform)
+
+<br><br>
+
+</div>
 
 <p style="font-family:var(--ff-philosopher);font-size:3rem;text-align:center;"><b>Contributing
 
