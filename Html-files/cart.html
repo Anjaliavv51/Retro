@@ -591,8 +591,20 @@
         }, 3000);
       });
     });
-
   </script>
+  <script>
+    // Check if the user is logged in
+    const isLoggedIn = localStorage.getItem('isLoggedIn');
+
+    if (isLoggedIn !== 'true') {
+        // If the user is not logged in, redirect to the login page
+        alert('You must be logged in to access the cart.');
+        window.location.href = 'login.html';
+    } else {
+        // Render the cart or any other content as normal
+        document.body.innerHTML += '<p>Here is your cart content.</p>';
+    }
+</script>
 </body>
 
 </html>
