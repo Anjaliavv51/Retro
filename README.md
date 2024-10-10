@@ -29,9 +29,13 @@
     </tbody>
 </table>
 </div>
-<h3> <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Rocket.png" alt="Rocket" width="40" height="40" />Featured In</h3>
 
-<h3><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/tarikul-islam-anik/main/assets/images/Writing%20Hand%20Light%20Skin%20Tone.png" alt="Rocket" width="40" height="40" />Project Overview</h3>
+<h3> <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Rocket.png" alt="Rocket" width="40" height="40" />Featured In</h3>
+<img src="https://github.com/neeru24/Connect_icons/blob/main/newgssoc.png" alt="gssoc">
+<img src="https://github.com/neeru24/Connect_icons/blob/main/hacktober.png" alt="hactober fest">
+
+
+<h3><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/tarikul-islam-anik/main/assets/images/Writing%20Hand%20Light%20Skin%20Tone.png" alt="Rocket" width="40" height="40" /> Project Overview</h3>
 <p style="font-family:var(--ff-philosopher);">
 It is an online platform which enables you to get information about your vintage collections and to place the orders.</p>
 
