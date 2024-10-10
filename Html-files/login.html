@@ -260,7 +260,10 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
         // Display an error message if the password is too short
         document.getElementById('error-message').textContent = 'Password must be at least 8 characters.';
     } else {
-        // If both are valid, redirect to logged.html
+      // Save the login status in the local storage
+      localStorage.setItem('isLoggedIn', 'true');
+      
+      // If both are valid, redirect to logged.html
         window.location.assign('logged.html');
     }
 });
