@@ -36,6 +36,10 @@
   transform: scale(1.1); /* Scale the image to 110% of its original size */
 }
 
+.footer{
+    display:flex;
+    flex-direction: column;
+}
 
       @media (max-width: 768px) {
     .items {
@@ -52,11 +56,19 @@
     }
     .foot-panel2{
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
+      height:auto;
     }
-    .foot_panel4{
+    .foot-panel14{
       display: flex;
       flex-direction: column;
+    }
+}
+@media (max-width:500px){
+    .foot-panel2{
+      display: flex;
+      flex-direction: column;
+      height:auto;
     }
 }
     </style>
@@ -665,8 +677,7 @@ border-radius: 100px;
             </div>
     </section>
     <!-- footer -->
-    <footer style="background-color: hsl(20, 43%, 93%);">
-        <br><br><br>
+    <footer style="background-color: hsl(20, 43%, 93%);" class="footer">
 
         <div class="foot-panel2">
             <ul class="footer-colums">
@@ -746,6 +757,7 @@ border-radius: 100px;
                     </button>
                 </div>
             </div>
+        </div>
     </footer>
 
     <script src="menu.js"></script>
