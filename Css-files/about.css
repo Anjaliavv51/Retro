@@ -562,3 +562,82 @@
   }
   
   
+  @media only screen and (max-width: 768px) {
+    .menu_container, .first_cont, .cart-section {
+      padding: 20px;
+      flex-direction: column;
+    }
+  
+    .menu_items .items, .first_cont .items {
+      width: 90%;
+      margin: 10px auto;
+    }
+  
+    .cart {
+      flex-direction: column;
+      width: 100%;
+    }
+  
+    .footer-colums {
+      flex-direction: column;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  
+    #contactForm {
+      width: 100%;
+      padding: 10px;
+    }
+  }
+/* Media Queries for Responsive Footer */
+
+/* For tablets and smaller devices (screen width 768px or less) */
+@media only screen and (max-width: 768px) {
+  .foot-panel2 {
+    flex-direction: column;  /* Stack the footer columns vertically */
+    text-align: center;  /* Center align the text */
+    height: auto;  /* Adjust the height to fit the content */
+    padding: 20px;
+  }
+  
+  .footer-colums {
+    margin: 10px 0;  /* Add margin between stacked columns */
+  }
+
+  .social-icons {
+    justify-content: center; /* Center align the social icons */
+  }
+
+  .social-icons a {
+    margin: 5px 10px;  /* Reduce spacing around the icons */
+    font-size: 1.2rem;  /* Adjust icon size for smaller screens */
+  }
+  
+  .foot_panel4 {
+    height: auto;
+    padding: 10px;
+    font-size: 0.8rem;  /* Reduce font size */
+  }
+}
+
+/* For mobile devices (screen width 480px or less) */
+@media only screen and (max-width: 480px) {
+  .foot-panel2 {
+    padding: 15px;
+  }
+  
+  .footer-colums p, 
+  .footer-colums a {
+    font-size: 1rem;  /* Smaller font size for links and text */
+  }
+  
+  .social-icons a {
+    margin: 5px;  /* Reduce margin between social icons */
+    font-size: 1rem;  /* Further reduce icon size */
+  }
+  
+  .foot_panel4 {
+    font-size: 0.7rem;  /* Even smaller text for copyright or bottom info */
+  }
+}
+  
