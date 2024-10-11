@@ -181,16 +181,16 @@ input[type="submit"]:hover {
   border-radius: 15px;
   display: inline-block;
   color: white;
-  /* transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease; Smooth transition */
+  transition:  0.3s ease-in-out;
 }
 
 .butt:hover {
-  /* background-color: #ffffff; */
-  background-color: brown !important;
-  color:white !important;
+  background-color: white !important;
+ 
+  color: brown !important;
   border: 3px solid rgb(165, 42, 42);
   transform: scale(1.01); 
-  /* animation: bounce 0.5s; */
+ 
 }
 @keyframes bounce {
   0%, 100% {
@@ -210,19 +210,23 @@ input[type="submit"]:hover {
   background-color: #f2f2f2;
   box-shadow: 0 0 10px rgba(224, 224, 252, 0.678);
   border: 1px solid rgb(186, 186, 201);
-  padding: 40px;
-  margin: 5px;
+  margin: 50px 10px;
   height: 310px;
   width: 230px;
   border-radius: 10px;
   text-align: center;
   font-family: "Bree Serif", serif;
+ /* transition: 0.5s ease-in-out; */
+}
+.menu_items :hover{
+  background-color:#fff4f4 ;
 }
 
 .menu_items .items img {
   justify-content: center;
   height: 190px;
-  width: 230px;
+  width: 228px;
+  border-radius: 10px 10px 0 0;
 }
 
 .menu_items .items h3 {
@@ -318,6 +322,9 @@ div.deals:hover{
   color: brown !important;
 }
 
+.deals:hover p a{
+  color: brown !important;
+}
 .deals p{
   font-size: 1.1rem;
   padding-top: 2px;

@@ -10,6 +10,10 @@
             integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
             crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+        <link rel="stylesheet" href="/Css-files/navbarstyles.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
         <link
             href="https://fonts.googleapis.com/css2?family=Fuggles&family=Mooli&family=Oswald:wght@600&family=Roboto:wght@100;300&display=swap"
             rel="stylesheet">
@@ -179,6 +183,117 @@ body{
         transform: rotate(360deg);
     }
 }
+
+.deals:hover {
+    background-color: hsl(203, 30%, 95%); /* Optional: change background on hover */
+}
+
+.deals:hover p {
+    color: hsl(203, 30%, 50%); /* Change to a darker color for contrast on hover */
+ color: hsl(203, 30%, 50%); 
+}
+
+.social-icons a {
+  font-size: 1.2rem;
+  padding: 8px;
+  margin: 15px;
+  text-decoration: none;
+  color: brown !important;
+}
+
+.social-icons a:hover {
+  color: brown;
+  background-color: hsl(22, 76%, 85%);
+  border-radius: 10px;
+  transform: scale(1.5); /* Increase size */
+  transition: transform 0.3s ease; /* Smooth transition effect */
+}
+.fa-brands.fa-facebook:hover {
+  color: #3B5998 !important;
+}
+
+.fa-brands.fa-instagram:hover {
+  color: #D62976 !important;
+}
+
+.fa-brands.fa-x-twitter:hover {
+  color: #181e20 !important;
+}
+/* Testimonial Container */
+.testimonal__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+/* Testimonial Card */
+.testimonal__card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.testimonal__card:hover {
+    transform: translateY(-10px);
+    background-color: #ffaba1;
+}
+
+
+
+/* Testimonial Title */
+.testimonal__title {
+    font-family: var(--ff-philosopher);
+    font-size: 1.5rem;
+    color: hsl(203, 30%, 26%);
+    margin-top: 1rem;
+}
+
+/* Testimonial Description */
+.testimonal__description {
+    font-family: var(--ff-poppins);
+    font-size: 1rem;
+    color: hsl(208, 7%, 46%);
+    padding: 0.75rem 1rem;
+}
+
+/* Testimonial Stars */
+.testimonal__stars {
+    margin-top: 0.5rem;
+    color: #ffcc00; 
+    font-size: 1.4rem; 
+}
+
+.testimonal__stars i {
+    margin-right: 0.15rem; 
+}
+
+.testimonal__swiper {
+    display: flex;
+    justify-content: center;
+}
+
+/* Cards Wrapper */
+.cards {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.items {
+    transition: transform 0.3s ease;
+}
+
+.items:hover {
+    transform: scale(1.1);
+}
+
     </style>
 
 </head>
@@ -211,25 +326,53 @@ body{
       <div id="loader"></div>
     </div>
 
-    <div class="head_container_service" style="color: black;font-family: var(--ff-philosopher);">
-        <header style="font-family: var(--ff-philosopher);">
-            <nav class="navbar">
-                <ul id="header-items" style="color: black;font-family: var(--ff-philosopher);">
-                    <li><a href="../index.html" style="color: black;">Home</a></li>
-                    <li><a href="menu.html" style="color: black;">About</a></li>
-                    <li><a href="services.html" style="color: black;">Services</a></li>
-                    <li><a href="contact.html" style="color: black;">Contact us</a></li>
-                    <li><a href="cart.html" style="color: black;">Cart <span class="badge-count" id="badgeCount"></span></a></li>
-                </ul>
+   
+        <header>
+            <nav class="navbar navbar-expand-lg fixed-top">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="../index.html" style="color: black;">
+                        <b>Retro</b>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../index.html" style="color: black;">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html" style="color: black;">About Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="menu.html" style="color: black;">Collections</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" style="color: black;">Services</a>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html" style="color: black;">Contact us</a>
+                            </li>
+                            <li class="nav-item" style="list-style-type: none;">
+                                <a class="nav-link" href="cart.html" style="color: black;">
+                                    <i class="fa-solid fa-cart-shopping"></i><span class="badge-count" id="badgeCount"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </nav>
         </header>
+    
+
 
         <div class="mainhead">
-            <h1  style="font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%);">S E R V I C E S</h1>
+            <h1  style="font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%); margin-top: 10vh;">S E R V I C E S</h1>
 
         </div>
-            <div class="first_cont">
-                <div class="items" style="align-content: center;">
+            <div class="first_cont" style="gap:3rem">
+                <div class="items" style="align-content: center; background-color: #fae2cf ;">
                     <h3
                         style="font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%);">Vintage
                         Vibe!</h3>
@@ -239,7 +382,7 @@ body{
                             style="text-decoration: none;">Take
                             Experience</a></button>
                 </div>
-                <div class="items" style="align-content: center;">
+                <div class="items" style="align-content: center;  background-color: #fae2cf">
                     <h3
                         style="font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%);">Services
                         for Events</h3>
@@ -249,7 +392,7 @@ body{
                             style="text-decoration: none;">Book Now</a></button>
                 </div>
                 <div class="items"
-                    style="align-items: center;align-content: center;">
+                    style="align-items: center;align-content: center;  background-color: #fae2cf ">
                     <h3
                         style="font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%);">Retro
                         Delivery Subscription</h3>
@@ -265,10 +408,9 @@ body{
 
         <section class="service_container">
 
-            <section class="testimonalsection" id="testimonal">
-                <h2 class=section__title
-                    style="font-family: var(--ff-philosopher);color: hsl(357, 82%,35%);">Customer
-                    Opinion</h2>
+            
+                <h2 class=section__title 
+                  style="font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%); margin-top: 10vh;">CUSTOMER OPINIONS</h2>
                 <!-- <div class="main-cards"> -->
                 <div class="testimonal__container">
                     <div class="testimonal__swiper">
@@ -332,8 +474,7 @@ body{
                             <article class="testimonal__card">
                                 <img
                                     src="https://blogs.kcl.ac.uk/editlab/files/2017/04/Elena-2-Cropped-200x2801.jpg"
-                                    alt
-                                    class="testimonal__image">
+                                    alt class="testimonal__image">
                                 <h2 class="testimonal__title"
                                     style="font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%);">Angel
                                     Dravid</h2>
@@ -382,11 +523,10 @@ body{
                     </div>
                 </div>
 
-            </section>
             <div class="second_cont" style="font-family: Garamond;">
                 <div class="deals">
                     <i class="fa-solid fa-gift"></i>
-                    <p
+                    <p class="dealsp"
                         style="font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%);"><a
                             href="./payment2.html"
                             style="text-decoration: none;color: black;">Gift
@@ -394,7 +534,7 @@ body{
                 </div>
                 <div class="deals">
                     <i class="fa-solid fa-ticket"></i>
-                    <p
+                    <p class="dealsp"
                         style="font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%);"><a
                             href="./payment2.html"
                             style="text-decoration: none;color: black;">Exclusive
@@ -498,17 +638,11 @@ body{
                         style="font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%);">Follow
                         Us</h4>
 
-                    <div class="social-icons">
                         <div class="social-icons">
-                            <a class="fa-brands fa-facebook"
-                                href="https://facebook.com" target="_blank"></a>
-                            <a class="fa-brands fa-instagram"
-                                href="https://instagram.com"
-                                target="_blank"></a>
-                            <a class="fa-brands fa-x-twitter"
-                                href="https://twitter.com" target="_blank"></a>
+                            <a class="fa-brands fa-facebook" href="https://facebook.com" style="color: hsl(203, 30%, 26%);"></a>
+                            <a class="fa-brands fa-instagram" href="https://instagram.com" style="color: hsl(203, 30%, 26%);"></a>
+                            <a class="fa-brands fa-x-twitter" href="https://twitter.com" style="color: hsl(203, 30%, 26%);"></a>
                         </div>
-                    </div>
                     <p
                         style="margin-bottom:0;font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%);">Stay
                         connected with us on social media for the latest
