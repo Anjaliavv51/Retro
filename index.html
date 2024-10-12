@@ -411,6 +411,22 @@ p {
                 </div>
             </div>
         </div>
+        <div class="filter-container">
+            <button id="filterBtn" class="filter-btn">Filter Options</button>
+            <div id="filterOptions" class="filter-options">
+              <h3>Categories</h3>
+              <label><input type="checkbox" id="clothing" value="clothing"> Clothing</label><br>
+              <label><input type="checkbox" id="electronics" value="electronics"> Electronics</label><br>
+              <label><input type="checkbox" id="home-appliances" value="home-appliances"> Home Appliances</label><br>
+        
+              <h3>Price Range</h3>
+              <label for="priceRange">Price: <span id="priceValue">$0 - $500</span></label>
+              <input type="range" id="priceRange" min="0" max="500" step="10" value="500">
+              <!-- Submit Button -->
+              <button id="submitBtn" class="submit-btn">Submit</button>
+            </div>
+          </div>
+          <script src="menu.js"></script>
     </nav>
 
     <!--Navbar End-->
