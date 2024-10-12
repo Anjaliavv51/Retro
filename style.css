@@ -29,20 +29,8 @@ body {
 .navbar a {
   text-decoration: none;
   color: #333;
-  font-size: 1.3rem;
-  transition: color 0.3s ease,border-bottom 0.3s ease;
 }
 
-/* Navbar link hover effect */
-/*.navbar a:hover{
-  color: #fff;
-  border-bottom: 1px solid #fff;
-}
-<<<<<<< HEAD
-*/
-
-=======
->>>>>>> feature/marquee-hover
 .navbar.fixed-top {
   position: fixed; 
   top: 0;
