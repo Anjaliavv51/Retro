@@ -13,6 +13,12 @@
 body {
   background-color: black;
 }
+.navbar{
+  width: 80% !important;
+  margin: auto !important;
+  height: 120px;
+  margin-top: 5px !important;
+}
 /*
 .navbar {
   padding: fixed;
