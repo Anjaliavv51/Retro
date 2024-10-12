@@ -1,12 +1,11 @@
 from flask import Flask, render_template, request, jsonify
-from langchain.document_loaders import UnstructuredURLLoader
+from bs4 import BeautifulSoup
+import requests
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.vectorstores import FAISS
 from langchain.embeddings import HuggingFaceEmbeddings
 from langchain.llms import HuggingFaceHub
 from langchain.chains import RetrievalQA
-from bs4 import BeautifulSoup
-import requests
 import os
 
 app = Flask(__name__)
@@ -81,7 +80,6 @@ def ask_question(query):
         
         result = qa_chain({"query": query})
         answer = result.get("result", str(result))
-        print(answer)
         source_docs = result.get("source_documents", [])
         
         sources = [doc.metadata.get('source', 'Unknown source') for doc in source_docs]
