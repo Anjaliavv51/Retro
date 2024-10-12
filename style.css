@@ -40,6 +40,40 @@ body {
 }
 <<<<<<< HEAD
 */
+.filter-container {
+  margin: 20px;
+}
+
+.filter-btn, .submit-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.filter-btn:hover, .submit-btn:hover {
+  background-color: #0056b3;
+}
+
+.filter-options {
+  display: none;
+  margin-top: 10px;
+  border: 1px solid #ddd;
+  padding: 15px;
+  width: 250px;
+  background-color: #f9f9f9;
+}
+
+h3 {
+  margin: 10px 0;
+}
+
+input[type="range"] {
+  width: 100%;
+  margin: 5px 0;
+}
 
 =======
 >>>>>>> feature/marquee-hover
