@@ -1,3 +1,35 @@
+// Toggle filter options visibility
+document.getElementById('filterBtn').addEventListener('click', function() {
+    const filterOptions = document.getElementById('filterOptions');
+    if (filterOptions.style.display === 'none' || filterOptions.style.display === '') {
+      filterOptions.style.display = 'block';
+    } else {
+      filterOptions.style.display = 'none';
+    }
+  });
+  
+  // Update price range display value
+  const priceRange = document.getElementById('priceRange');
+  const priceValue = document.getElementById('priceValue');
+  
+  priceRange.addEventListener('input', function() {
+    priceValue.textContent = `$0 - $${priceRange.value}`;
+  });
+  
+  // Submit filter options
+  document.getElementById('submitBtn').addEventListener('click', function() {
+    const selectedCategories = [];
+    if (document.getElementById('clothing').checked) selectedCategories.push('Clothing');
+    if (document.getElementById('electronics').checked) selectedCategories.push('Electronics');
+    if (document.getElementById('home-appliances').checked) selectedCategories.push('Home Appliances');
+  
+    const selectedPriceRange = priceRange.value;
+  
+    // Process the selected filters (e.g., display them in the console)
+    console.log('Selected Categories:', selectedCategories);
+    console.log('Selected Price Range: $0 - $' + selectedPriceRange);
+  });
+  
 // adding items from menu to cart
 document.addEventListener('DOMContentLoaded', function () {
     var menuContainers = document.querySelectorAll('.menu_container');
