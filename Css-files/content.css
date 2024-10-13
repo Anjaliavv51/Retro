@@ -156,11 +156,16 @@ body {
   /* animation: bounce 0.5s; */
 }
 input[type="submit"] {
-  background-color: brown;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white !important;
   color: brown !important ;
   border: 3px solid rgb(255, 255, 255);
   padding: 20px 10px !important;
+  margin: 0px 0px 20px 200px ;
   border-radius: 10px;
+  width: auto;
   /* transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease; */
 }
 
@@ -531,6 +536,7 @@ input
 .form-control {
         border-radius: 15px; /* Adjust the border radius */
         padding-left: 40px; /* Space for the icon */
+        width: 400px !important;
     }
   
 .input-icon {
@@ -613,4 +619,22 @@ input
   border-radius: 50%;
   padding: 5px 8px;
   font-size: 12px;
+}
+
+.container{
+  display: flex;
+  /* justify-content: center; */
+  flex-direction: column;
+  align-items: center;
+  padding:0px 100px !important;
+}
+
+#mainbox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+iframe{
+  margin: 0px 75px;
 }
