@@ -372,10 +372,11 @@ div.deals:hover{
   box-shadow: 2px 2px 20px black;
 }
 .testimonal__image{
-  width:100px;
-  height:100px;
-  border-radius:50%;
-  margin:0 auto 1.5rem;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 1.5rem;
 }
 .testimonal__title{
   margin-bottom: .75rem;
@@ -383,7 +384,6 @@ div.deals:hover{
 .testimonal__description{
   margin-bottom: 1.25rem;
 }
-
 
 .section__title{
   text-align: center;
@@ -395,7 +395,6 @@ div.deals:hover{
 .foot-panel2{
     background-color: transparent;
     color:white;
-    height: 300px;
     display: flex;
     justify-content: space-evenly;
 }
@@ -418,7 +417,7 @@ div.deals:hover{
 .foot_panel4{
     background-color: transparent;
     color: white;
-    height: 160px;
+    height: auto;
     font-size: 0.9rem;
     text-align: center;
 }
@@ -510,7 +509,7 @@ input
 
 .cart table,th,td{
   text-align: center;
-  border: 2px solid black;
+  border: 2px solid whitesmoke;
   width: 75%;
 }
 td{
@@ -636,6 +635,7 @@ td{
   font-size: 12px;
 }
 
+
 .container{
   display: flex;
   /* justify-content: center; */
@@ -653,3 +653,4 @@ td{
 iframe{
   margin: 0px 75px;
 }
+

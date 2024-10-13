@@ -86,29 +86,31 @@
     </style>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
         #sr {
 
 display: none; 
 position: fixed; 
-bottom: 20px; 
-right: 30px; 
+bottom: 70px; 
+right: 15px; 
 z-index: 99; 
 font-size: 18px;
 border: none;
 outline: none;
 background-color: transparent; 
-color: #87A2FF; 
+color: rgb(17, 17, 17); 
 cursor: pointer; 
 padding: 15px; 
 border-radius: 4px; 
 }
 
-#sr:hover {
-background-color: transparent; 
-color: #C4D7FF;
-border-radius: 100px;
-}
+        #sr:hover {
+            background-color: transparent;
+            color: black;
+            border-radius: 100px;
+        }
+
+
+
 .circle{
    z-index: 10000;
    width: 20px;
@@ -360,7 +362,7 @@ border-radius: 100px;
 
     <section class="menu_container">
 
-        <h2 style="font-family: var(--ff-philosopher);">Entertainment</h2>
+        <h2 style="font-family: var(--ff-philosopher); text-align: center;">Entertainment</h2>
         <div class="menu_items">
             <div class="items">
                 <div class="added-to-cart js-added-to-cart" data-product-id="1.01">
@@ -526,9 +528,9 @@ border-radius: 100px;
     </section>
     <section class="menu_container">
         <a href="Electronic.html" style="color: black;"><button class="butt"
-                style="font-family:var(--ff-philosopher);">Latest Vintage Electronics Explore Now>></button></a>
+                style="font-family:var(--ff-philosopher); margin-left: 500px;">Latest Vintage Electronics Explore Now>></button></a>
         <br><br><br><br><br>
-        <h2 style="font-family: var(--ff-philosopher);">Gadgets</h2>
+        <h2 style="font-family: var(--ff-philosopher); text-align: center">Gadgets</h2>
         <div class="menu_items">
             <div class="items">
                 <div class="added-to-cart js-added-to-cart" data-product-id="2.01">
@@ -612,7 +614,7 @@ border-radius: 100px;
     </section>
 
     <section class="menu_container">
-        <h2>Weapons & Transport</h2>
+        <h2 style="text-align: center;">Weapons & Transport</h2>
         <div class="menu_items">
             <div class="items">
                 <div class="added-to-cart js-added-to-cart" data-product-id="3.01">
@@ -690,44 +692,47 @@ border-radius: 100px;
                 </div>
             </div>
     </section>
+    <div class="foot-panel2">
+        <ul class="footer-colums">
+            <p style="color: hsl(357, 82%,35%);font-family: var(--ff-philosopher);">Our Pages</p>
+            <a href="../index.html"
+                style="text-decoration: none;font-family: var(--ff-poppins);color: black;">Home</a>
+            <a href="#" style="text-decoration: none;font-family: var(--ff-poppins);color: black;">About</a>
+            <a href="services.html"
+                style="text-decoration: none;font-family: var(--ff-poppins);color: black;">Services</a>
+            <a href="contact.html"
+                style="text-decoration: none;font-family: var(--ff-poppins);color: black;">Contact</a>
+            <a href="cart.html" style="text-decoration: none;font-family: var(--ff-poppins);color: black;">Cart</a>
+        </ul>
+
+        <ul class="footer-colums">
+            <p style="color: hsl(357, 82%,35%);font-family: var(--ff-philosopher);"> Exclusive Offers</p>
+            <a style="font-family: var(--ff-poppins);color: black;">Retro Discounts</a>
+            <a style="font-family: var(--ff-poppins);color: black;">Limited-Time Promotions</a>
+            <a style="font-family: var(--ff-poppins);color: black;">Special Event Packages</a>
+            <a style="font-family: var(--ff-poppins);color: black;">Membership Benefits</a>
+            <a style="font-family: var(--ff-poppins);color: black;">Early Access to New Collections</a>
+            <a style="font-family: var(--ff-poppins);color: black;">VIP Retro Events</a>
+            <a style="font-family: var(--ff-poppins);color: black;">Personalized Culinary Experiences</a>
+
+        </ul>
+
+        <ul class="footer-colums">
+            <p style="color: hsl(357, 82%,35%);font-family: var(--ff-philosopher);">Payment Products</p>
+            <a style="font-family: var(--ff-poppins);color: black;">Secure Checkout</a>
+            <a style="font-family: var(--ff-poppins);color: black;">Credit/Debit Cards</a>
+            <a style="font-family: var(--ff-poppins);color: black;">Online Payment</a>
+            <a style="font-family: var(--ff-poppins);color: black;">Mobile Wallets</a>
+            <a style="font-family: var(--ff-poppins);color: black;">Contactless Payments</a>
+        </ul>
+        </div>
     <!-- footer -->
-    <footer style="background-color: hsl(20, 43%, 93%);">
+    <footer style="background-color: hsl(20, 43%, 93%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;">
         <br><br><br>
-
-        <div class="foot-panel2">
-            <ul class="footer-colums">
-                <p style="color: hsl(357, 82%,35%);font-family: var(--ff-philosopher);">Our Pages</p>
-                <a href="../index.html"
-                    style="text-decoration: none;font-family: var(--ff-poppins);color: black;">Home</a>
-                <a href="#" style="text-decoration: none;font-family: var(--ff-poppins);color: black;">About</a>
-                <a href="services.html"
-                    style="text-decoration: none;font-family: var(--ff-poppins);color: black;">Services</a>
-                <a href="contact.html"
-                    style="text-decoration: none;font-family: var(--ff-poppins);color: black;">Contact</a>
-                <a href="cart.html" style="text-decoration: none;font-family: var(--ff-poppins);color: black;">Cart</a>
-            </ul>
-
-            <ul class="footer-colums">
-                <p style="color: hsl(357, 82%,35%);font-family: var(--ff-philosopher);"> Exclusive Offers</p>
-                <a style="font-family: var(--ff-poppins);color: black;">Retro Discounts</a>
-                <a style="font-family: var(--ff-poppins);color: black;">Limited-Time Promotions</a>
-                <a style="font-family: var(--ff-poppins);color: black;">Special Event Packages</a>
-                <a style="font-family: var(--ff-poppins);color: black;">Membership Benefits</a>
-                <a style="font-family: var(--ff-poppins);color: black;">Early Access to New Collections</a>
-                <a style="font-family: var(--ff-poppins);color: black;">VIP Retro Events</a>
-                <a style="font-family: var(--ff-poppins);color: black;">Personalized Culinary Experiences</a>
-
-            </ul>
-
-            <ul class="footer-colums">
-                <p style="color: hsl(357, 82%,35%);font-family: var(--ff-philosopher);">Payment Products</p>
-                <a style="font-family: var(--ff-poppins);color: black;">Secure Checkout</a>
-                <a style="font-family: var(--ff-poppins);color: black;">Credit/Debit Cards</a>
-                <a style="font-family: var(--ff-poppins);color: black;">Online Payment</a>
-                <a style="font-family: var(--ff-poppins);color: black;">Mobile Wallets</a>
-                <a style="font-family: var(--ff-poppins);color: black;">Contactless Payments</a>
-            </ul>
-
 
 
             <form id="contactForm" >
@@ -740,8 +745,6 @@ border-radius: 100px;
 
                 <button id="butt" type="submit" style="font-family: var(--ff-poppins);">Send Message</button>
             </form>
-
-        </div>
 
 
         <div class="foot_panel4">
@@ -764,9 +767,11 @@ border-radius: 100px;
                     href="https://www.snapchat.com" ></a>
 
                 </div>
+                <div style="margin-bottom: 20px;">
                 <p style="font-family: var(--ff-philosopher);margin-bottom:0;">Stay connected with us on social media
                     for the latest updates, latest collection, and vintage adventures.
                 </p>
+            </div>
                 <div class="copyright">
                     <p style="font-family: var(--ff-philosopher);">
                         &copy; 2024 Retro . All Rights Reserved. | Developed by <span id="author">
@@ -790,7 +795,7 @@ border-radius: 100px;
                         </div>
                     </button>
                 </div>
-            </div>
+        </div>
     </footer>
 
     <script src="menu.js"></script>
@@ -921,6 +926,19 @@ border-radius: 100px;
     </script>
     <script src="cart.js"></script>
 
+    <script>
+        window.embeddedChatbotConfig = {
+        chatbotId: "dGlQ5bP-F7GodLWzgrVAx",
+        domain: "www.chatbase.co"
+        }
+        </script>
+        <script
+        src="https://www.chatbase.co/embed.min.js"
+        chatbotId="dGlQ5bP-F7GodLWzgrVAx"
+        domain="www.chatbase.co"
+        defer>
+        </script>
+    
 </body>
 
 </html>
