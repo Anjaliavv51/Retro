@@ -935,17 +935,27 @@ new google.translate.TranslateElement({
                     <a href="./Html-files/payment2.html" style="color: black;">Contactless Payments</a>
                 </ul>
                 <form id="contactForm">
-                    <h3 style="font-family: var(--ff-philosopher);color: hsl(357, 82%,35%);font-family: var(--ff-philosopher);">Contact Us!</h3>
-                    
-                    <input type="email" id="email" name="email" placeholder="Your Email" required>
-
-                    <textarea id="message" name="message" placeholder="Your Message" required></textarea>
-
-
-
+                    <h3 style="font-family: var(--ff-philosopher); color: hsl(357, 82%, 35%);">Contact Us!</h3>
+                
+                    <div style="position: relative; margin-bottom: 15px;">
+                        <i class="fas fa-envelope" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); font-size: 14px; color: gray;"></i>
+                        <input type="email" id="email" name="email" placeholder="Your Email" required 
+                               style="padding-left: 30px;">
+                    </div>
+                
+                    <div style="position: relative; margin-bottom: 15px;">
+                        <i class="fas fa-comment" style="position: absolute; left: 10px; top: 10px; font-size: 14px; color: gray;"></i>
+                        <textarea id="message" name="message" placeholder="Your Message" required 
+                                  style="padding-left: 30px;"></textarea>
+                    </div>
+                
                     <button id="butt" type="submit" style="font-family: ui-serif;">Send Message</button>
-
                 </form>
+                
+                
+                
+                  
+                
 
             </div>
 
