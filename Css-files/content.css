@@ -371,6 +371,8 @@ div.deals:hover{
   height:100px;
   border-radius:50%;
   margin:0 auto 1.5rem;
+  object-fit: cover;
+  object-position: 55% 0%;
 }
 .testimonal__title{
   margin-bottom: .75rem;
