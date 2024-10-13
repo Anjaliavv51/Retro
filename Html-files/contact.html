@@ -837,115 +837,173 @@ body{
     
             </div>
         </footer>
-    </div>
-    <div class="foot_panel4" style="color: black; background-color: transparent; height: 100vh; display: flex; justify-content: center; align-items: center;">
-        <div class="pages" style="background-color: transparent; text-align: center;">
-            <h3>Follow Us</h3>
-    
-            <div class="social-icons" style="display: flex; justify-content: center; gap: 15px;"> <!-- Center icons horizontally with gap -->
-                <a class="fa-brands fa-facebook" href="https://facebook.com" style="color: hsl(203, 30%, 26%); font-size: 1.5em;"></a>
-                <a class="fa-brands fa-instagram" href="https://instagram.com" style="color: hsl(203, 30%, 26%); font-size: 1.5em;"></a>
-                <a class="fa-brands fa-x-twitter" href="https://twitter.com" style="color: hsl(203, 30%, 26%); font-size: 1.5em;"></a>
-                <a class="fa-brands fa-youtube" href="https://www.youtube.com" style="color: hsl(203, 30%, 26%); font-size: 1.5em;"></a>
-                <a class="fa-brands fa-snapchat" href="https://www.snapchat.com" style="color: hsl(203, 30%, 26%); font-size: 1.5em;"></a>
+   
+   
+   
+        <div class="foot_panel4" style="background-color: transparent;">
+            <div class="pages">
+                <h4 style="font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%);">Follow Us</h4>
+
+                <div class="social-icons">
+
+
+                    <a class="fa-brands fa-facebook" href="https://facebook.com" ></a>
+                    <a class="fa-brands fa-instagram" href="https://instagram.com" ></a>
+                    <a class="fa-brands fa-x-twitter" href="https://twitter.com" ></a>
+                    <a class="fa-brands fa-youtube"   href="https://www.youtube.com" ></a>
+                    <a class="fa-brands fa-snapchat"  href="https://www.snapchat.com" ></a>
+
+                </div>
+                <p style="font-family: var(--ff-philosopher);background-color: hsl(20, 43%, 93%);color: hsl(203, 30%, 26%);margin-bottom:0;">Stay connected with us on social media for the latest updates, latest collection, and vintage adventures.
+                </p>
+                <div class="copyright" style="font-family: var(--ff-philosopher);background-color: hsl(20, 43%, 93%);color: black;">
+
+                    &copy; 2024 Retro . All Rights Reserved. | Developed by <span id="author">
+                        <a href="https://www.linkedin.com" target="_blank" style="text-decoration: none;">Retro Team</a>
+                </div>
+                <div>
+                    <button id="sr" style="z-index: 1000; display: block;">
+                    <div class="circle1">
+                      <svg id="back-to-top" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
+                        <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z"></path>
+                      </svg>
+                    </div>
+                    </button>
+                </div>
             </div>
-        </div>
-    </div>
+    </footer>
     
-    
-            <p style="margin-bottom: 0;">
-                Stay connected with us on social media for the latest updates, recipes, and foodie adventures.
-            </p>
-           
-    <script>
-        const coords = { x: 0, y: 0 };
-        const circles = document.querySelectorAll(".circle");
-    
-        const colors = [
-            "#ffb56b", "#fdaf69", "#f89d63", "#f59761", "#ef865e", "#ec805d",
-            "#e36e5c", "#df685c", "#d5585c", "#d1525c", "#c5415d", "#c03b5d",
-            "#b22c5e", "#ac265e", "#9c155f", "#950f5f", "#830060", "#7c0060",
-            "#680060", "#60005f", "#48005f", "#3d005e"
-        ];
-    
-        circles.forEach(function (circle, index) {
-            circle.x = 0;
-            circle.y = 0;
-            circle.style.backgroundColor = colors[index % colors.length];
-        });
-    
-        window.addEventListener("mousemove", function (e) {
-            coords.x = e.clientX;
-            coords.y = e.clientY;
-        });
-    
-        function animateCircles() {
-            let x = coords.x;
-            let y = coords.y;
-    
-            circles.forEach(function (circle, index) {
-                circle.style.left = x - 12 + "px";
-                circle.style.top = y - 12 + "px";
-    
-                circle.style.scale = (circles.length - index) / circles.length;
-    
-                circle.x = x;
-                circle.y = y;
-    
-                const nextCircle = circles[index + 1] || circles[0];
-                x += (nextCircle.x - x) * 0.3;
-                y += (nextCircle.y - y) * 0.3;
-            });
-    
-            requestAnimationFrame(animateCircles);
-        }
-    
-        animateCircles();
-    </script>
-    
-    <script>
-        function redirectLogin() {
-            window.location.href = "Html-files/login.html";
-        }
-    
-        function redirectSignup() {
-            window.location.href = "Html-files/signup.html";
-        }
-    
-        const scrollToTopBtn = document.getElementById("sr");
-    
-        window.onscroll = function () {
-            scrollFunction();
-        };
-    
-        function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                scrollToTopBtn.style.display = "block";
-            } else {
-                scrollToTopBtn.style.display = "none";
-            }
-        }
-    
-        scrollToTopBtn.addEventListener("click", function () {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-        });
-    </script>
-    
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const preloader = document.getElementById('preloader');
-            const mainContent = document.getElementById('main-content');
-    
-            window.addEventListener('load', function () {
-                setTimeout(function () {
-                    preloader.classList.add('hidden');
-                    mainContent.classList.remove('hidden');
-                    mainContent.classList.add('visible');
-                }, 3000);
-            });
-        });
-    </script>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+</body>
+<script>
+
+function redirectLogin() {
+    window.location.href = "Html-files/login.html";
+}
+function redirectSignup() {
+    window.location.href = "Html-files/signup.html";
+}
+
+ // Get the button element
+const scrollToTopBtn = document.getElementById("sr");
+
+window.onscroll = function() {
+scrollFunction();
+};
+
+function scrollFunction() {
+if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+scrollToTopBtn.style.display = "block";
+} else {
+scrollToTopBtn.style.display = "none";
+}
+}
+scrollToTopBtn.addEventListener("click", function() {
+document.body.scrollTop = 0;
+document.documentElement.scrollTop = 0;
+});
+</script>
+<script>
+
+const coords = { x: 0, y: 0 };
+const circles = document.querySelectorAll(".circle");
+
+const colors = [
+  "#ffb56b",
+  "#fdaf69",
+  "#f89d63",
+  "#f59761",
+  "#ef865e",
+  "#ec805d",
+  "#e36e5c",
+  "#df685c",
+  "#d5585c",
+  "#d1525c",
+  "#c5415d",
+  "#c03b5d",
+  "#b22c5e",
+  "#ac265e",
+  "#9c155f",
+  "#950f5f",
+  "#830060",
+  "#7c0060",
+  "#680060",
+  "#60005f",
+  "#48005f",
+  "#3d005e"
+];
+
+circles.forEach(function (circle, index) {
+  circle.x = 0;
+  circle.y = 0;
+  circle.style.backgroundColor = colors[index % colors.length];
+});
+
+window.addEventListener("mousemove", function (e) {
+  coords.x = e.clientX;
+  coords.y = e.clientY;
+
+});
+
+function animateCircles() {
+
+  let x = coords.x;
+  let y = coords.y;
+
+  circles.forEach(function (circle, index) {
+    circle.style.left = x - 2 + "px";
+    circle.style.top = y - 2 + "px";
+
+    circle.style.scale = (circles.length - index) / circles.length;
+
+    circle.x = x;
+    circle.y = y;
+
+    const nextCircle = circles[index + 1] || circles[0];
+    x += (nextCircle.x - x) * 0.3;
+    y += (nextCircle.y - y) * 0.3;
+  });
+
+  requestAnimationFrame(animateCircles);
+}
+
+animateCircles();
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+const preloader = document.getElementById('preloader');
+const mainContent = document.getElementById('main-content');
+
+// Listen for the window load event
+window.addEventListener('load', function() {
+    setTimeout(function() {
+        preloader.classList.add('hidden');
+        mainContent.classList.remove('hidden');
+        mainContent.classList.add('visible');
+    }, 3000); 
+});
+});
+
+</script>
+<script>
+window.onscroll = () => {
+document.querySelector(".mountain").style.marginTop = scrollY + "px";
+
+document.querySelector(".trees").style.marginTop = scrollY / 1.5 + "px";
+
+document.querySelector(".stars").style.marginTop = scrollY * 2 + "px";
+
+document.querySelector(".stars").style.marginRight = scrollY / 2 + "px";
+
+document.querySelector(".moon").style.transform = "rotate(-" + (scrollY / 5.5) + "deg)";
+
+document.querySelector(".Home h1").style.marginTop = scrollY + "px";
+
+document.querySelector(".Home h1").style.opacity = (200 - scrollY) / 200;
+};
+</script>
     
     <script src="cart.js"></script>
     
