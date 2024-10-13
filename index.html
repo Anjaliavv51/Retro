@@ -731,7 +731,7 @@ new google.translate.TranslateElement({
                     border-radius: 8px; /* Rounded corners */
                     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
                     padding: 20px; /* Padding inside the container */
-                    max-width: 60vw; 
+                    max-width: 600px; /* Max width for the container */
                 }
             
                 .faq-item {
@@ -741,6 +741,7 @@ new google.translate.TranslateElement({
                     padding: 15px; /* Padding inside each FAQ item */
                     background: #fff; /* Background for each FAQ item */
                     transition: background 0.3s ease; /* Smooth background transition */
+                    position: relative; /* Position relative for arrow */
                 }
             
                 .faq-item:hover {
@@ -752,6 +753,9 @@ new google.translate.TranslateElement({
                     font-size: 18px;
                     font-weight: bold;
                     cursor: pointer; /* Pointer cursor on hover */
+                    display: flex;
+                    justify-content: space-between; /* Space between text and arrow */
+                    align-items: center; /* Center vertically */
                 }
             
                 .faq-answer {
@@ -765,7 +769,14 @@ new google.translate.TranslateElement({
                 .faq-item:hover .faq-answer {
                     display: block;
                 }
-                
+            
+                .faq-arrow {
+                    transition: transform 0.3s ease; /* Smooth rotation transition */
+                }
+            
+                .faq-item:hover .faq-arrow {
+                    transform: rotate(90deg); /* Rotate arrow on hover */
+                }
             </style>
             
             <style>
@@ -777,27 +788,45 @@ new google.translate.TranslateElement({
             
             <div class="faq-container">
                 <div class="faq-item">
-                    <div class="faq-question">What is your return policy?</div>
+                    <div class="faq-question">
+                        What is your return policy?
+                        <span class="faq-arrow">➔</span>
+                    </div>
                     <div class="faq-answer">Our return policy lasts 30 days...</div>
                 </div>
                 <div class="faq-item">
-                    <div class="faq-question">How do I track my order?</div>
+                    <div class="faq-question">
+                        How do I track my order?
+                        <span class="faq-arrow">➔</span>
+                    </div>
                     <div class="faq-answer">You can track your order using the tracking number...</div>
                 </div>
                 <div class="faq-item">
-                    <div class="faq-question"> How long does shipping take?</div>
+                    <div class="faq-question">
+                        How long does shipping take?
+                        <span class="faq-arrow">➔</span>
+                    </div>
                     <div class="faq-answer">Shipping typically takes 5-7 business days, depending on your location.</div>
                 </div>
                 <div class="faq-item">
-                    <div class="faq-question"> Can I change my order after it's been placed?</div>
+                    <div class="faq-question">
+                        Can I change my order after it's been placed?
+                        <span class="faq-arrow">➔</span>
+                    </div>
                     <div class="faq-answer">If your order hasn't been processed yet, you can contact us to make changes.</div>
                 </div>
                 <div class="faq-item">
-                    <div class="faq-question">Do you ship internationally?</div>
+                    <div class="faq-question">
+                        Do you ship internationally?
+                        <span class="faq-arrow">➔</span>
+                    </div>
                     <div class="faq-answer">Yes, we offer international shipping to select countries.</div>
                 </div>
                 <div class="faq-item">
-                    <div class="faq-question"> Do you offer discounts for bulk orders?</div>
+                    <div class="faq-question">
+                        Do you offer discounts for bulk orders?
+                        <span class="faq-arrow">➔</span>
+                    </div>
                     <div class="faq-answer">Yes, we provide discounts on bulk orders. Please contact our sales team for more details.</div>
                 </div>
                 <!-- Add more FAQ items as needed -->
