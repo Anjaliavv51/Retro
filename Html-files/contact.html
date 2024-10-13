@@ -762,11 +762,11 @@ body{
         </section>
         
     <!-- CSS for the icon and border radius -->
-
     <div class="footer" style="background-color: hsl(20, 43%, 93%);">
         <footer>
             <div class="foot-panel2" style="background-color: hsl(20, 43%, 93%); font-family: var(--ff-poppins); color: hsl(208, 7%, 46%); display: flex; justify-content: space-around; padding: 20px;">
-    
+                
+                <!-- Existing content -->
                 <div class="footer-column" style="flex: 1; padding: 10px;">
                     <h3 style="color: hsl(357, 82%, 35%); font-family: var(--ff-philosopher);">Our Pages</h3>
                     <ul style="list-style-type: none; padding: 0;">
@@ -801,37 +801,39 @@ body{
                         <li><a href="./Html-files/payment2.html" style="color: black;">Contactless Payments</a></li>
                     </ul>
                 </div>
+    
+                <!-- Contact Us Form -->
+                <div class="footer-column" style="flex: 1; padding: 10px;">
+                    <h3 style="color: hsl(357, 82%, 35%); font-family: var(--ff-philosopher);">Contact Us</h3>
+                    <form id="contactForm" style="display: flex; flex-direction: column; color: black;">
+                        
+                        <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                            <span style="color: hsl(357, 82%, 35%); margin-right: 10px;">
+                                <i class="fas fa-user" style="font-size: 1.2em;"></i>
+                            </span>
+                            <input type="text" id="name" name="name" placeholder="Your Name" required 
+                                   style="width: 100%; padding: 8px; border-radius: 10px; border: 1px solid #ccc;">
+                        </div>
+    
+                        <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                            <span style="color: hsl(357, 82%, 35%); margin-right: 10px;">
+                                <i class="fas fa-envelope" style="font-size: 1.2em;"></i>
+                            </span>
+                            <input type="email" id="email" name="email" placeholder="Your Email" required 
+                                   style="width: 100%; padding: 8px; border-radius: 10px; border: 1px solid #ccc;">
+                        </div>
+                        
+                        <button type="submit" style="width: 100%; padding: 10px; background-color: hsl(357, 82%, 35%); color: white; border: none; border-radius: 10px; cursor: pointer;">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
             </div>
         </footer>
     </div>
     
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
-    <div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
-        <div class="contact-form" style="width: 100%; max-width: 400px; background-color: white; border: 1px solid #ccc; padding: 20px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
-            <h3 style="color: hsl(357, 82%, 35%); font-family: var(--ff-philosopher); text-align: center; margin-bottom: 15px;">Contact Us!</h3>
-            <form id="contactForm" style="color: black;">
-                <div style="display: flex; align-items: center; margin-bottom: 10px;">
-                    <span style="color: hsl(357, 82%, 35%); margin-right: 10px;"><i class="fas fa-envelope" style="font-size: 1.2em;"></i></span>
-                    <input type="email" id="email" name="email" placeholder="Your Email" required 
-                           style="width: 100%; padding: 8px; border-radius: 10px; border: 1px solid #ccc;">
-                </div>
-    
-                <div style="display: flex; align-items: flex-start; margin-bottom: 10px;">
-                    <span style="color: hsl(357, 82%, 35%); margin-right: 10px; margin-top: 10px;"><i class="fas fa-comment" style="font-size: 1.2em;"></i></span>
-                    <textarea id="message" name="message" placeholder="Your Message" required 
-                              style="width: 100%; padding: 8px; border-radius: 10px; border: 1px solid #ccc; height: 100px;"></textarea>
-                </div>
-            
-                <button id="butt" type="submit" 
-                        style="width: 100%; padding: 10px; background-color: hsl(357, 82%, 35%); color: white; border: none; border-radius: 10px; cursor: pointer;">
-                    Send Message
-                </button>
-            </form>
-        </div>
-    </div>
-    
+  
     
             </div>
         </footer>
@@ -942,6 +944,7 @@ body{
     </script>
     
     <script src="cart.js"></script>
+    
     
 
       
