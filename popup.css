@@ -1,0 +1,128 @@
+
+  /* Styling for the pop-up */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .popup-content {
+    display: flex;
+    background-color: #feaea5;
+    border-radius: 10px;
+    max-width: 800px;
+    height: 450px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  }
+
+  .popuplogo{
+    position: absolute;
+    top: 0;
+    right: 12px;
+    height: 50px;
+  }
+  
+  .popup-left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .popup-right {
+    padding: 20px;
+    width: 50%;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .popup h1 {
+    font-size: 31px;
+    color: #8B4513;
+    margin-bottom: 10px;
+    margin-top: 35px;
+    padding-top: 10px;
+  }
+
+  #h2{
+    font-size: 18px;
+    margin-bottom: 16px;
+    font-weight: bold;
+  }
+  
+  /* h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #4B3B2A;
+  } */
+  
+  .popup-right p{
+    margin-bottom: 26px;
+    color: #4B3B2A;
+    margin-bottom: 30px;
+  }
+  
+  input[type="email"] {
+    width: 100%;
+    padding: 18px;
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+    border: 1px solid #8B4513;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+
+  #emailForm{
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+  
+  .signup-btn {
+    width: 100%;
+    padding: 10px 0;
+    background-color: #8B4513;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 13px;
+  }
+  
+  .signup-btn:hover {
+    background-color: #6f3920;
+    font-size: 13.2px;
+  }
+  
+  .no-thanks {
+    display: block;
+    margin-top: 14px;
+    color: #4B3B2A;
+    text-decoration: none;
+    margin-bottom: 40px;
+  }
+  
+  .no-thanks:hover {
+    text-decoration: underline;
+    color: #381d0a;
+  }
+  
+  .terms {
+    margin-top: 15px;
+    font-size: 10px;
+    color: #4B3B2A;
+  }
+  
+  .terms a {
+    color: #8B4513;
+  }
+  

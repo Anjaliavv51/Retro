@@ -22,6 +22,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> -->
+     <link rel="stylesheet" href="./popup.css">
     
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -429,6 +430,32 @@ p {
     </nav>
 
     <!--Navbar End-->
+
+    <!-- Registration Pop up Starts Here -->
+
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <div class="popup-left">
+                <img src="Images/popup.jpg" alt="Retro Vintage Charm">
+            </div>
+            <a href="#" class="no-thanks popuplogo" style="font-family: var(--ff-philosopher); color: black;"><b>Retro</b></a>
+            <div class="popup-right">
+                <h1>Discover the Past!</h1>
+                <p id="h2">Sign Up for Exclusive Vintage Deals</p>
+                <p>Get a <strong>30% off</strong> on your first order when you join our Retro family.</p>
+                <form id="emailForm">
+                    <input type="email" id="popup-email" placeholder="Enter your email" required>
+                    <button type="submit" class="signup-btn">Sign Up Now</button>
+                </form>
+                <a href="#" class="no-thanks close-btn">No thanks, I’ll browse with Fullprice</a>
+                <p class="terms">By signing up, you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Registration Pop up HTML ends here -->
+
 
 <!--    <nav class="navbar navbar-expand-lg fixed-top" id="top">
         <div class="container-fluid">
@@ -1026,6 +1053,11 @@ scrollToTopBtn.addEventListener("click", function() {
   document.documentElement.scrollTop = 0;
 });
 </script>
+
+<!-- Pop Up JS starts Here  -->
+<script src="./script/popup.js">
+</script>
+
 <script>
 
     const coords = { x: 0, y: 0 };
