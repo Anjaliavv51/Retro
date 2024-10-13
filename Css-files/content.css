@@ -119,7 +119,7 @@ body {
 .mainhead {
   text-align: center;
   padding-top: 30px;
-  padding-bottom: 50px;
+  /* padding-bottom: 50px; */
 }
 .mainhead h1 {
   font-family: Georgia;
@@ -366,21 +366,12 @@ div.deals:hover{
   transition: 0.5s;
   box-shadow: 2px 2px 20px black;
 }
-.testimonal__image{
-  width:100px;
-  height:100px;
-  border-radius:50%;
-  margin:0 auto 1.5rem;
-  object-fit: cover;
-  object-position: 55% 0%;
-}
 .testimonal__title{
   margin-bottom: .75rem;
 }
 .testimonal__description{
   margin-bottom: 1.25rem;
 }
-
 
 .section__title{
   text-align: center;
@@ -392,7 +383,6 @@ div.deals:hover{
 .foot-panel2{
     background-color: transparent;
     color:white;
-    height: 300px;
     display: flex;
     justify-content: space-evenly;
 }
@@ -415,7 +405,7 @@ div.deals:hover{
 .foot_panel4{
     background-color: transparent;
     color: white;
-    height: 160px;
+    height: auto;
     font-size: 0.9rem;
     text-align: center;
 }
@@ -461,8 +451,9 @@ input
 }
 
 .social-icons a{
-    font-size: 1.2rem;
-    padding: 15px;
+    font-size: 1rem;
+    padding: 7px; 
+    margin: 7px 6px 0 8px; 
     text-decoration: none;
     color: brown !important;
 }
@@ -477,6 +468,12 @@ input
 
 .fa-twitter:hover {
   color:#00B6F1;
+}
+.fa-youtube:hover {
+  color: #FF0000; 
+}
+.fa-snapchat:hover {
+  color: #FFFC00; 
 }
 
 .cart-section{
@@ -500,8 +497,11 @@ input
 
 .cart table,th,td{
   text-align: center;
-  border: 2px solid black;
+  border: 2px solid whitesmoke;
   width: 75%;
+}
+td{
+  font-size: 20px;
 }
 
 #bill{
@@ -561,16 +561,21 @@ input
 
 #contactForm input,
 #contactForm textarea {
-  width: 50%;
+  width: 64%;
   padding: 20px;
+  font-size: 15px;
   margin: 5px;
   border-radius: 10px;
   border: none;
 }
+#contactForm input{
+  width: 76%;
+  font-size: 15px;
+}
 
 #contactForm h3 {
   height: 30px;
-  color: #141414;
+  color: hsl(357, 82%,35%);
 }
 #contactForm textarea {
   height: 100px;
