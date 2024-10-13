@@ -628,7 +628,7 @@ new google.translate.TranslateElement({
 
               <!---------------------------------------------------- FAQ -->
                    
-              <div class="container faq-container">
+              <!-- <div class="container faq-container">
                 <h1 class="text-center mb-4">Frequently Asked Questions</h1>
                 <div class="accordion" id="faqAccordion" data-aos="zoom-in">
             
@@ -711,7 +711,165 @@ new google.translate.TranslateElement({
                     </div>
             
                 </div>
+            </div> -->
+            <style>
+                .retro-heading {
+                    font-family: var(--ff-philosopher);
+                    color: brown;
+                    z-index: 99;
+                    transition: all 0.3s ease;
+                }
+            
+                .retro-heading:hover {
+                    color: #5d095c;
+                    text-shadow: 0 0 15px rgba(214, 30, 171, 0.9), 0 0 30px rgba(138, 38, 88, 0.7);
+                    transform: scale(1.3); 
+                }
+            
+                .faq-container {
+                    margin-top: 15px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    background: #f9f9f9; /* Container background */
+                    border-radius: 8px; /* Rounded corners */
+                    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+                    padding: 20px; /* Padding inside the container */
+                    max-width: 76vw; /* Increased max width for the container */
+                }
+            
+                .faq-item {
+                    margin-bottom: 20px;
+                    border: 1px solid #ddd; /* Border for each FAQ item */
+                    border-radius: 5px; /* Rounded corners for each FAQ item */
+                    padding: 15px; /* Padding inside each FAQ item */
+                    background: #fff; /* Background for each FAQ item */
+                    transition: background 0.3s ease; /* Smooth background transition */
+                    position: relative; /* Position relative for arrow */
+                }
+            
+                .faq-item:hover {
+                    background: #f1f1f1; /* Background color on hover */
+                }
+            
+                .faq-question {
+                    font-family: var(--ff-poppins);
+                    font-size: 18px;
+                    font-weight: bold;
+                    cursor: pointer; /* Pointer cursor on hover */
+                    display: flex;
+                    justify-content: space-between; /* Space between text and arrow */
+                    align-items: center; /* Center vertically */
+                }
+            
+                .faq-answer {
+                    display: none;
+                    margin-top: 10px;
+                    font-family: var(--ff-poppins);
+                    font-size: 16px;
+                    color: #333;
+                }
+            
+                .faq-item:hover .faq-answer {
+                    display: block;
+                }
+            
+                .faq-arrow {
+                    transition: transform 0.3s ease; /* Smooth rotation transition */
+                }
+            
+                .faq-item .faq-arrow {
+                    transform: rotate(0deg); /* Arrow pointing down by default */
+                }
+            
+                .faq-item:hover .faq-arrow {
+                    transform: rotate(180deg); /* Arrow pointing up when hovered */
+                }
+
+            </style>
+            
+            <style>
+                :root {
+                    --ff-philosopher: "Philosopher", sans-serif;
+                    --ff-poppins: "Poppins", sans-serif;
+                }
+            </style>
+            
+            <h2 style="display: flex; justify-content: center; align-items: center; margin-top: 50px;">Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        What is your return policy?
+                        <span class="faq-arrow">
+                            <svg width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M12 15l-8-8h16z"/>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="faq-answer">Our return policy lasts 30 days...</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How do I track my order?
+                        <span class="faq-arrow">
+                            <svg width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M12 15l-8-8h16z"/>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="faq-answer">You can track your order using the tracking number...</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How long does shipping take?
+                        <span class="faq-arrow">
+                            <svg width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M12 15l-8-8h16z"/>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="faq-answer">Shipping typically takes 5-7 business days, depending on your location.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Can I change my order after it's been placed?
+                        <span class="faq-arrow">
+                            <svg width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M12 15l-8-8h16z"/>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="faq-answer">If your order hasn't been processed yet, you can contact us to make changes.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Do you ship internationally?
+                        <span class="faq-arrow">
+                            <svg width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M12 15l-8-8h16z"/>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="faq-answer">Yes, we offer international shipping to select countries.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Do you offer discounts for bulk orders?
+                        <span class="faq-arrow">
+                            <svg width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M12 15l-8-8h16z"/>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="faq-answer">Yes, we provide discounts on bulk orders. Please contact our sales team for more details.</div>
+                </div>
+                <!-- Add more FAQ items as needed -->
             </div>
+            
+            <br> <br>
+            
+            <!-- -------------------------------------------FAQ ENDED -->
+            
+            <br> <br>
 
 
             <br> <br>
