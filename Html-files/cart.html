@@ -313,23 +313,21 @@
 
     @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
     #sr {
-      display: none;
-      position: fixed;
-      bottom: 20px;
-      right: 30px;
-      z-index: 99;
-      font-size: 18px;
-      border: none;
-      outline: none;
-      background-color: transparent;
-      color: white;
-      cursor: pointer;
-      padding: 15px;
-      border-radius: 4px;
-    }
-
+display: none; 
+position: fixed; 
+bottom: 70px; 
+right: 15px; 
+z-index: 99; 
+font-size: 18px;
+border: none;
+outline: none;
+background-color: transparent; 
+color: rgb(17, 17, 17); 
+cursor: pointer; 
+padding: 15px; 
+border-radius: 4px; 
+}
     #sr:hover {
       background-color: transparent;
       color: black;
@@ -484,85 +482,6 @@
   color: #181e20 !important;
 }
 
-  </style>
-  <style>
-    /* Modal styles */
-    .modal {
-      display: none; /* Hidden by default */
-      position: fixed; /* Stay in place */
-      z-index: 1000; /* Sit on top */
-      left: 0;
-      top: 0;
-      width: 100%; /* Full width */
-      height: 100%; /* Full height */
-      overflow: auto; /* Enable scroll if needed */
-      background-color: rgba(0, 0, 0, 0.7); /* Darker overlay for better contrast */
-      animation: fadeIn 0.5s; /* Animation for modal display */
-    }
-
-    .modal-content {
-      background-color: #ffffff; /* White background */
-      margin: 10% auto; /* 10% from the top and centered */
-      padding: 20px;
-      border-radius: 10px; /* Rounded corners */
-      width: 400px; /* Adjusted width for better visibility */
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Shadow */
-      animation: slideIn 0.5s; /* Animation for content */
-    }
-
-    .close {
-      color: #aaa;
-      float: right;
-      font-size: 28px;
-      font-weight: bold;
-    }
-
-    .close:hover,
-    .close:focus {
-      color: #e74c3c; /* Red color on hover */
-      text-decoration: none;
-      cursor: pointer;
-    }
-
-    h2 {
-      color: #2c3e50; /* Darker text color */
-    }
-
-    #couponDisplay {
-      font-weight: bold;
-      color: #27ae60; /* Green color for coupon code */
-    }
-
-    #okButton {
-      background-color: #3498db; /* Blue */
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      margin: 4px 2px;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s, transform 0.3s; /* Transition for hover effect */
-    }
-
-    #okButton:hover {
-      background-color: #2980b9; /* Darker blue on hover */
-      transform: scale(1.05); /* Slightly enlarge on hover */
-    }
-
-    /* Animation keyframes */
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    @keyframes slideIn {
-      from { transform: translateY(-50px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
-    }
   </style>
 </head>
 
@@ -754,10 +673,13 @@
                     </button>
                 </div>
             </div>
+
     </footer>
     <button onclick="window.print()" style="font-family:Georgia; font-size:medium; line-height: inherit;border-radius:5px ;background-color: #f9e2c4;padding:5px 5px;">Print this page</button>
 </div>
 
+
+        
     <script src="cart.js"></script>
 
   </script>
@@ -867,20 +789,21 @@
         }, 3000);
       });
     });
+
   </script>
   <script>
-    // Check if the user is logged in
-    const isLoggedIn = localStorage.getItem('isLoggedIn');
-
-    if (isLoggedIn !== 'true') {
-        // If the user is not logged in, redirect to the login page
-        alert('You must be logged in to access the cart.');
-        window.location.href = 'login.html';
-    } else {
-        // Render the cart or any other content as normal
-        document.body.innerHTML += '<p>Here is your cart content.</p>';
+    window.embeddedChatbotConfig = {
+    chatbotId: "dGlQ5bP-F7GodLWzgrVAx",
+    domain: "www.chatbase.co"
     }
-</script>
+    </script>
+    <script
+    src="https://www.chatbase.co/embed.min.js"
+    chatbotId="dGlQ5bP-F7GodLWzgrVAx"
+    domain="www.chatbase.co"
+    defer>
+    </script>
+
 </body>
 
 </html>
