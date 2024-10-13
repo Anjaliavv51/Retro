@@ -1,167 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+
+
+
 body {
-    font-family: 'Philosopher', sans-serif;
+    font-family: 'Press Start 2P', sans-serif; /* Retro pixel font */
+     /* Dark CRT-like background */
+    color: #00ff00; /* Neon green text, mimicking old terminals */
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
 }
 
 /* Navbar styles */
 .navbar {
-    background-color: rgba(255, 255, 245, 0.8);
-    padding: 1rem;
     display: flex;
     width: 100%;
-    justify-content: space-between;
-    margin: 10px 1px!important;
-    border-radius: 20px;
+    margin: 10px;
+    top: 5px;
+    background-color: #d4aeae; /* Darker background to simulate retro monitors */
+    padding: 10px 20px;
+    border: 2px solid #13141a; /* Neon pink border */
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px #e60d9d; /* Glow effect */
 }
+.nav-link {
+    background-color: white;
+}
+.navbar-brand {
+    font-size: 64px;
+    color: #d8baff; /* Light purple text */
+    background-color: #000; /* Black background */
+    padding: 10px 20px;
+    border: 4px solid #fff; /* White border */
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: bold;
+    text-shadow: 2px 2px 0px #6d6d6d, -2px -2px 0px #6d6d6d; /* 3D effect */
+    position: relative;
+    display: inline-block;
+  }
+  
+  .navbar-brand::before,
+  .navbar-brand::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 4px;
+    background-color: white;
+  }
+  
+  .navbar-brand::before {
+    left: -30px;
+  }
+  
+  .navbar-brand::after {
+    right: -30px;
+  }
+  
+  .navbar-brand .dots {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: white;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+  
+  
+  
+  
 
 .nav-right {
     margin-left: auto;
-    /* Pushes the login/signup to the right side */
     display: flex;
-    gap: 15px;
-    /* Space between login and signup */
+    gap: 10px;
 }
 
-.ms-auto {
-    margin-left: auto;
-    /* Pushes to the right */
+.nav-item {
+    margin-right: 10px;
 }
 
-.navbar-brand {
-    font-size: 1.5rem;
-    color: black;
+.nav-link{
+    background-color: #000; /* Tan color */
+    border: solid 4x #000; /* Dark brown border */
+    border-radius: 5px;
+    padding: 10px 20px;
+   // box-shadow: 15px 10px 0 -4px #fff,
+    //15px 15px #000;
+    box-shadow: 2px 2px 0 0 white,
+    4px 4px 0 0 #0f172a;
+    cursor: pointer;
+    font-family: sans-serif;
     font-weight: bold;
-    transition: transform 0.3s ease;
-}
-
-.navbar-brand:hover {
-    transform: scale(1.6);
-}
-
-.navbar-nav .nav-item {
-    margin-right: 15px;
-}
-
-.nav-link {
-    color: black;
-    font-size: 1rem;
-    font-family: var(--ff-philosopher);
-    text-decoration: none;
-    /* Remove default underline */
-    position: relative;
-    transition: all 0.3s ease;
-}
-
-.nav-item.dropdown .nav-link {
-    text-decoration: none;
-    /* No underline for dropdown toggle */
+    text-shadow: 1px 1px 1px #888888,
+               2px 2px 2px #666666,
+               3px 3px 3px #0c0707;
+    
 }
 
 .nav-link:hover {
-    text-decoration: none;
-    /* Prevent default underline on hover */
-}
-
-.nav-link::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -5px;
-    width: 0%;
-    height: 3.5px;
-    /* Thicker underline */
-    background: transparent;
-    transition: all 0.3s ease-in-out;
-    box-shadow:
-        0 0 30px rgba(255, 159, 128, 1),
-        /* Initial glow effect with bright peach color */
-        0 0 60px rgba(255, 159, 128, 1);
-    /* Increased glow effect */
-}
-
-.nav-link:hover::after {
-    background: rgba(243, 187, 183, 1);
-    width: 100%;
-    box-shadow: 0 0 20px rgba(243, 187, 183, 1);
+    background-color: #c96eba; /* Neon pink background */
+    box-shadow: inset 0px 0px 0px 2px #00ff00, 0px 0px 10px #00ff00; /* Glowing neon outline */
+    color: #000000; /* Black text on hover */
 }
 
 .nav-btn {
-    background: none;
-    border: none;
-    font-size: 1rem;
+    background-color: rgb(19, 15, 15);
+    margin: 10px;
+    border: 2px solid #00ff00; /* Neon green border */
+    padding: 5px 10px;
     cursor: pointer;
-    color: black;
-    text-decoration: none;
-    position: relative;
+    color: #00ffff; /* Neon cyan text */
+    transition: all 0.3s ease;
+    box-shadow: 0px 0px 10px #00ff00; /* Neon green glow */
 }
 
 .nav-btn:hover {
-    color: #d2691e;
+    background-color: #056c7e; /* Neon pink hover */
+    color: #ffffff;
+    border-color: #00ffff; /* Cyan border on hover */
 }
 
 .nav-btn::after {
     content: '';
     position: absolute;
     left: 0;
-    bottom: -5px;
+    bottom: 4px;
     width: 0%;
-    height: 2px;
-    background: #ffb6c1;
-    /* Adjust to match background color */
-    transition: all 0.3s ease-in-out;
-    box-shadow: 0 20px #ffb6c1;
-    /* Glow effect */
+    background: #00ff00; /* Green underline */
+    transition: all 0.3s ease;
 }
 
-.nav-link:hover::after {
-    background: rgba(255, 159, 128, 1);
+.nav-btn:hover::after {
     width: 100%;
-    box-shadow:
-        0 0 25px rgba(255, 159, 128, 1),
-        0 0 50px rgba(255, 159, 128, 1);
-    /* Glow effect with bright peach color */
 }
 
-.nav-link:hover,
-.nav-btn:hover {
-    color: hwb(327 21% 3%) !important;
-}
-
+/* Dropdown menu */
 .dropdown-menu {
-    background-color: #ffe5e5;
-    border: none;
+    background-color: #202020; /* Dark background */
+    border: 2px solid #00ff00; /* Neon green border */
 }
 
 .dropdown-item {
-    /*color: black;*/
-    font-family: var(--ff-philosopher);
+    color: #00ff00; /* Neon green text */
+    font-size: 0.8rem;
 }
 
 .dropdown-item:hover {
-    background-color: #f0c0a0;
-    color: #d2691e;
+    background-color: #5127c4; /* Neon pink background */
+    color: #ffffff;
+}
+
+/* Pixelated Hover Effect */
+.nav-link:hover::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background: #00ff00; /* Glowing green underline */
+    box-shadow: 0px 0px 5px #00ff00;
+}
+
+.nav-item.dropdown .nav-link {
+    text-decoration: none;
+}
+
+.nav-link:hover::after {
+    background: #2f88c4; /* Pink glow effect */
 }
 
 /* Mobile Styles */
 @media (max-width: 768px) {
-    .navbar-brand {
-        margin-left: 10px;
-    }
-
-    .navbar-nav {
+    .navbar {
+        flex-direction: column;
         text-align: center;
     }
 
-    .navbar-toggler {
-        border: none;
+    .nav-right {
+        justify-content: center;
     }
 
-    .navbar-toggler-icon {
-        color: black;
+    .navbar-brand {
+        margin-bottom: 10px;
     }
+}
 
-    .nav-item {
-        margin-bottom: 1rem;
-    }
+/* CRT Monitor Border (for containers or specific elements) */
+.crt-border {
+    border: 4px solid #00ff00; /* Neon green border */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0px 0px 20px #00ff00; /* Glowing CRT effect */
 }
