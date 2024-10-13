@@ -1,13 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-
+ 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+ 
     <title>Retro</title>
-    
-    
+
+    <style>
+        @media (min-width: 992px) {
+            .navbar-expand-lg .navbar-nav {
+                margin-top: -9px; /* Add this line */
+            }
+        }
+    </style>
+     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="/Css-files/navbarstyles.css">
@@ -34,21 +41,26 @@
         <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
         
         <link rel="stylesheet" href="./style.css">
-
+ 
     <style>
+
         .retro-heading {
-          font-family: var(--ff-philosopher);
-          color: brown;
+
+          font-family:  var(--ff-philosopher);
+          color:  brown;
           z-index: 99;
-          transition: all 0.3s ease;
-        }
+          transition:  all 0.3s ease;
 
+        }
+ 
         .retro-heading:hover {
-           color: #5d095c;
-           text-shadow: 0 0 15px rgba(214, 30, 171, 0.9), 0 0 30px rgba(138, 38, 88, 0.7);
-           transform: scale(1.3); 
-        }
 
+           color:  #5d095c;
+           text-shadow:  0 0 15px rgba(214, 30, 171, 0.9), 0 0 30px rgba(138, 38, 88, 0.7);
+           transform:  scale(1.3); 
+
+        }
+ 
         .faq-container {
             margin-top: 50px;
             margin-left: auto;
@@ -98,24 +110,26 @@
   display: none;
 }
     </style>
-    <style>
+    <style> 
         /*Preloader CSS*/
 #preloader {
+     
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    top:  0;
+    left:  0;
+    width:  100%;
+    height:  100%;
     background: hsl(20, 43%, 93%); /* Light background color */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: opacity 2s ease-out, visibility 2s ease-out;
-    opacity: 1;
-    visibility: visible;
-    z-index: 9999; /* Ensure the preloader is above all other content */
-}
+    display:  flex;
+    justify-content:  center;
+    align-items:  center;
+    transition:  opacity 2s ease-out, visibility 2s ease-out;
+    opacity:  1;
+    visibility:  visible;
+    z-index:  9999; /* Ensure the preloader is above all other content */
 
+}
+ 
 
 /* When hidden, preloader transitions out */
 #preloader.hidden {
@@ -825,9 +839,9 @@ new google.translate.TranslateElement({
                 }
             </style>
             
-            <h2 style="display: flex; justify-content: center; align-items: center; margin-top: 50px;">Frequently Asked Questions</h2>
-            <div class="faq-container">
-                <div class="faq-item">
+            <h2 style="display: flex; justify-content: center; align-items: center; margin-top: 50px; font-weight: 500;">Frequently Asked Questions</h2>
+            <div class="faq-container" style="padding: 50px;margin-top: 50px;">
+                <div class="faq-item" style="background-color: #f5dddb;">
                     <div class="faq-question">
                         What is your return policy?
                         <span class="faq-arrow">
@@ -838,7 +852,7 @@ new google.translate.TranslateElement({
                     </div>
                     <div class="faq-answer">Our return policy lasts 30 days...</div>
                 </div>
-                <div class="faq-item">
+                <div class="faq-item" style="background-color: #f5c0bb;">
                     <div class="faq-question">
                         How do I track my order?
                         <span class="faq-arrow">
@@ -849,7 +863,7 @@ new google.translate.TranslateElement({
                     </div>
                     <div class="faq-answer">You can track your order using the tracking number...</div>
                 </div>
-                <div class="faq-item">
+                <div class="faq-item" style="background-color: #f5dddb;">
                     <div class="faq-question">
                         How long does shipping take?
                         <span class="faq-arrow">
@@ -860,7 +874,7 @@ new google.translate.TranslateElement({
                     </div>
                     <div class="faq-answer">Shipping typically takes 5-7 business days, depending on your location.</div>
                 </div>
-                <div class="faq-item">
+                <div class="faq-item" style="background-color: #f5c0bb;">
                     <div class="faq-question">
                         Can I change my order after it's been placed?
                         <span class="faq-arrow">
@@ -871,7 +885,7 @@ new google.translate.TranslateElement({
                     </div>
                     <div class="faq-answer">If your order hasn't been processed yet, you can contact us to make changes.</div>
                 </div>
-                <div class="faq-item">
+                <div class="faq-item" style="background-color: #f5dddb;">
                     <div class="faq-question">
                         Do you ship internationally?
                         <span class="faq-arrow">
@@ -882,7 +896,7 @@ new google.translate.TranslateElement({
                     </div>
                     <div class="faq-answer">Yes, we offer international shipping to select countries.</div>
                 </div>
-                <div class="faq-item">
+                <div class="faq-item" style="background-color: #f5c0bb;">
                     <div class="faq-question">
                         Do you offer discounts for bulk orders?
                         <span class="faq-arrow">
@@ -931,9 +945,10 @@ new google.translate.TranslateElement({
                     <a href="Html-files/services.html" style="color: black;">Services</a>
                     <a href="Html-files/contact.html" style="color: black;">Contact us</a>
                     <a href="Html-files/cart.html" style="color: black;">Cart</a>
+                    <a href="Html-files/contributor.html" style="color: black;">Contributors</a>
                 </ul>
                 <ul>
-                    <p style="color: hsl(357, 82%,35%);font-family: var(--ff-philosopher); text-align:left"> Exclusive Offers</p>
+                    <p style="color: rgb(162, 16, 23);font-family: var(--ff-philosopher); text-align:left"> Exclusive Offers</p>
                     <a href="#" style="color: black;">Retro Discounts</a>
                     <a href="#" style="color: black;">Limited-Time Promotions</a>
                     <a href="#" style="color: black;">Special Event Packages</a>
@@ -952,17 +967,27 @@ new google.translate.TranslateElement({
                     <a href="./Html-files/payment2.html" style="color: black;">Contactless Payments</a>
                 </ul>
                 <form id="contactForm">
-                    <h3 style="font-family: var(--ff-philosopher);color: hsl(357, 82%,35%);font-family: var(--ff-philosopher);">Contact Us!</h3>
-                    
-                    <input type="email" id="email" name="email" placeholder="Your Email" required>
-
-                    <textarea id="message" name="message" placeholder="Your Message" required></textarea>
-
-
-
+                    <h3 style="font-family: var(--ff-philosopher); color: hsl(357, 82%, 35%);">Contact Us!</h3>
+                
+                    <div style="position: relative; margin-bottom: 15px;">
+                        <i class="fas fa-envelope" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); font-size: 14px; color: gray;"></i>
+                        <input type="email" id="email" name="email" placeholder="Your Email" required 
+                               style="padding-left: 30px;">
+                    </div>
+                
+                    <div style="position: relative; margin-bottom: 15px;">
+                        <i class="fas fa-comment" style="position: absolute; left: 10px; top: 10px; font-size: 14px; color: gray;"></i>
+                        <textarea id="message" name="message" placeholder="Your Message" required 
+                                  style="padding-left: 30px;"></textarea>
+                    </div>
+                
                     <button id="butt" type="submit" style="font-family: ui-serif;">Send Message</button>
-
                 </form>
+                
+                
+                
+                  
+                
 
             </div>
 
