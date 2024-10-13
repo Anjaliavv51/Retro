@@ -14,6 +14,7 @@ body {
   background-color: black;
 }
 /*
+
 .navbar {
   padding: fixed;
   top: 0;
@@ -25,6 +26,15 @@ body {
   transition: background-color 0.5s ease, backdrop-filter 0.5s ease;
 }
 */
+ 
+.navbar a {
+
+  text-decoration: none;
+  color: #333;
+  font-size: 1.3rem;
+  transition: color 0.3s ease,border-bottom 0.3s ease;
+
+}
 
 .navbar a {
   text-decoration: none;
@@ -40,14 +50,27 @@ body {
 }
 
 */
-
-
+ 
+ 
 .navbar.fixed-top {
-  position: fixed; 
-  top: 0;
-  width: 100%; 
-  z-index: 1030; 
+
+  position:  fixed; 
+  top:  0px;
+  width:  100%; 
+  z-index:  1030; 
+  background-color: #ffcdcd;
+
 }
+
+
+.navbar.scrolled {
+
+  background-color: rgb(176, 63, 63); 
+  backdrop-filter: blur(15px);
+  color: #fff;
+
+}
+
 .navbar.scrolled {
   background-color: rgb(176, 63, 63); 
   backdrop-filter: blur(15px);

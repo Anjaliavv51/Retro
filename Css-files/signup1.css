@@ -27,16 +27,25 @@ body {
   overflow: hidden; /* Prevents overflow */
   position:relative;
 }
-
+ 
 .main-login {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  overflow: hidden; /* Ensure nothing overflows from the flexbox */
-  gap: 20px; /* Spacing between the card and image */
-  
+
+  display:  flex;
+  justify-content:  center;
+  align-items:  center;
+  width:  100%;
+  overflow:  hidden; 
+  gap: 70px; 
+
 }
+
+.homebtn{
+  position: absolute;
+  top:30px;
+  left:25px;
+  
+} 
+
 .homebtn{
   position: absolute;
   top:30px;
@@ -59,6 +68,25 @@ body {
 }
 .homebtn a:hover::after{
   background-color:white;
+}
+
+.card-login {
+
+  width: calc(100% - 40px); /* Full width minus padding */
+  max-width: 400px; /* Max width for better layout */
+  padding: 30px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  background-color: var(--card-bg);
+  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+  display: flex; /* Flex to stack elements */
+  flex-direction: column; /* Column layout for the card */
+  overflow: hidden; /* Added to ensure no content spills out */
+  border-radius: 50px;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  
 }
 
 .card-login {
