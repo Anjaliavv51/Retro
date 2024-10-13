@@ -672,15 +672,25 @@ h1, h2, h3, h4, h5, h6 {
             <!-- Get in Touch Section -->
             <div class="col-lg-3 col-md-6">
               <div class="f_widget company_widget">
-                <h3 class="f-title f_600 t_color f_size_18">Contact US</h3>
-                <!-- <p>Don’t miss any updates of our new templates and extensions.!</p> -->
-                <form action="#" class="f_subscribe_two mailchimp" method="post">
-                  <input type="email" id="email" name="email" placeholder="Your Email" required>
-                  <textarea id="message" name="message" placeholder="Your Message" required></textarea>
-                  <button id="butt" type="submit">Send Message</button>
-                </form>
+                  <h3 class="f-title f_600 t_color f_size_18">Contact Us</h3>
+                  <form action="#" class="f_subscribe_two mailchimp" method="post" style="position: relative;">
+                      <div style="position: relative; margin-bottom: 15px;">
+                          <i class="fas fa-envelope" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); font-size: 14px; color: gray;"></i>
+                          <input type="email" id="email" name="email" placeholder="Your Email" required 
+                                 style="padding-left: 30px; width: 100%;">
+                      </div>
+          
+                      <div style="position: relative; margin-bottom: 15px;">
+                          <i class="fas fa-comment" style="position: absolute; left: 10px; top: 10px; font-size: 14px; color: gray;"></i>
+                          <textarea id="message" name="message" placeholder="Your Message" required 
+                                    style="padding-left: 30px; width: 100%;"></textarea>
+                      </div>
+          
+                      <button id="butt" type="submit">Send Message</button>
+                  </form>
               </div>
-            </div>
+          </div>
+          
             
             <!-- Our Pages Section -->
             <div class="col-lg-3 col-md-6">
