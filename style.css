@@ -37,17 +37,12 @@ body {
 /*.navbar a:hover{
   color: #fff;
   border-bottom: 1px solid #fff;
-}
-<<<<<<< HEAD
-*/
-
-=======
->>>>>>> feature/marquee-hover
+}*/
 .navbar.fixed-top {
-  position: fixed; 
+  position: fixed;
   top: 0;
-  width: 100%; 
-  z-index: 1030; 
+  width: 100%;
+  z-index: 1030;
 }
 .navbar.scrolled {
   background-color: rgb(176, 63, 63); 
@@ -394,7 +389,7 @@ body {
 
 .menu_items {
   display: flex;
-  overflow: hidden;
+  overflow-x: scroll;
 }
 
 .menu_items .items {
@@ -741,7 +736,71 @@ textarea {
   border-radius: 3px;
   color: #dddddd;
 }
+/* 
+#about .box img {
+  height: 100%;
+  width: 100%;
+} */
 
+.menu_items .items img{
+  object-fit: cover;
+}
+#about .box{
+  padding: 22px;
+  margin: 2px 15px;
+}
+
+/* responsiveness  */
+@media screen and (min-width: 1170px){
+  .menu_items{
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 1170px){
+  .service {
+    flex-direction: column;
+    text-align: center;
+}
+}
+@media screen and (max-width: 685px){
+  footer .foot-panel2{
+    display: block;
+    margin: 0 auto;
+    width: min-content;
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 322px){
+  footer .foot-panel2 #contactForm{
+    width: 18rem;
+  }
+  .intro_container h1 {
+    font-size: 3.0em;
+  }
+  .intro_container p{
+    font-size: larger;
+  }
+}
+@media screen and (max-width: 375px){
+  .intro_container{
+    padding: 63px 25px;
+  }
+}
+@media screen and (max-width: 440px){
+  #about .box {
+    margin: 2px 40px;
+  }
+  .intro_container h1 {
+    font-size: 3.0em;
+  }
+  .app_download h2 {
+    font-size: 2.5rem;
+  }
+  .app_download h4 {
+    font-size: 1.5rem;
+  }
+}
 @media screen and (max-width: 500px) {
   .menu_items .items {
     max-width: fit-content;
@@ -750,7 +809,7 @@ textarea {
 
   #about .box {
     padding: 30px;
-    margin: 2px 10px;
+    margin: 2px 40px;
     margin-bottom: 25px;
     /* float: left; */
   }
@@ -764,7 +823,6 @@ textarea {
   }
 }
 
-/* responsiveness  */
 @media (max-width: 768px) {
         .service {
             flex-direction: column;
@@ -958,7 +1016,10 @@ padding-left:2px;
 @media screen and (max-width: 440px) {
   .intro_container {
     height: fit-content;
-    padding: 100px;
+      padding: 63px 25px;
+  }
+  .h-primary{
+    padding: 40px 50px 60px 50px;
   }
 }
 
