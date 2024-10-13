@@ -522,27 +522,27 @@ body {
 
 .social-icons {
   display: flex;
+  justify-content: center;
   gap: 15px;
   align-items: center;
   margin-top: 20px;
-  margin-left: 6cm;
+  margin-left: 0;
 }
 
 .social-icons a {
   font-size: 2rem;
-  color: #ddd; /* Default color */
-  transition: transform 0.3s ease, color 0.3s ease;
+  color: #ddd;
+  transition: transform 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, text-shadow 0.3s ease;
 }
 
 .social-icons a:hover {
-  transform: scale(1.2);
-
-  color: #ead705;
   transform: scale(1.1) rotate(5deg);
-  box-shadow: 0 0 15px rgba(1, 44, 162, 0.7), 0 0 30px rgba(1, 24, 119, 0.5);
+  color: #ead705;
+  box-shadow: 0 0 15px rgba(1, 44, 162, 0.7), 
+              0 0 30px rgba(1, 24, 119, 0.5);
   text-shadow: 0 0 20px rgba(2, 10, 105, 0.7);
- 
 }
+
 .foot-panel2 {
   background-color: rgb(138, 37, 37);
   color: white;
