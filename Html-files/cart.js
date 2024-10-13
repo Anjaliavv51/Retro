@@ -93,32 +93,12 @@ const applyFirstTimeDiscount = () => {
         couponCode = generateCouponCode();
         localStorage.setItem('couponCode', couponCode);
     }
-    if (document.getElementById('couponCode')) {
-        document.getElementById('couponCode').innerHTML = `Use coupon code <span style="font-weight: bold;">${couponCode}</span> for 30% off!`;
-        
-        // Display the custom modal
-        document.getElementById('couponDisplay').innerText = couponCode; // Show the coupon code
-        document.getElementById('customAlert').style.display = "block"; // Show the modal
+    if(document.getElementById('couponCode')){
+        document.getElementById('couponCode').innerHTML = `Use coupon code <span style="font-weight: bold;"> ${couponCode} </span> for 30% off!`;
+        alert(`Congratulations! Your coupon code is ${couponCode}. You've received a 30% discount on your first order.`);
     }
+    
 }
-
-// Close the modal when the user clicks on the <span> (x)
-document.getElementById('closeModal').onclick = function() {
-    document.getElementById('customAlert').style.display = "none";
-}
-
-// Close the modal when the user clicks the OK button
-document.getElementById('okButton').onclick = function() {
-    document.getElementById('customAlert').style.display = "none";
-}
-
-// Close the modal when the user clicks anywhere outside of the modal
-window.onclick = function(event) {
-    if (event.target == document.getElementById('customAlert')) {
-        document.getElementById('customAlert').style.display = "none";
-    }
-}
-
 window.onload = applyFirstTimeDiscount;
 
 function updateBadgeCount() {
