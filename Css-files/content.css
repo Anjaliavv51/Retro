@@ -390,7 +390,6 @@ div.deals:hover{
 .foot-panel2{
     background-color: transparent;
     color:white;
-    height: 300px;
     display: flex;
     justify-content: space-evenly;
 }
@@ -413,7 +412,7 @@ div.deals:hover{
 .foot_panel4{
     background-color: transparent;
     color: white;
-    height: 160px;
+    height: auto;
     font-size: 0.9rem;
     text-align: center;
 }
