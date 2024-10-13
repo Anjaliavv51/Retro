@@ -108,6 +108,15 @@
         .switch-link a:hover {
           color: hsl(203, 30%, 26%);
         }
+        .forgot-link{
+          text-decoration: none;
+          color: #3a3a3a;
+          margin-bottom: 10px;
+        }
+        .forgot-link:hover{
+          text-decoration: underline;
+          color: #000;
+        }
       </style>
 </head>
 <body>
@@ -160,9 +169,10 @@
           <input required type="password" id="password" name="password" placeholder="Enter Password" style="font-family:var(--ff-poppins);">
         </div>
         <button type="submit" class="btn-login" style="color: black;font-family:var(--ff-poppins);">Login</button>
+        <span>or</span>
         <button id="google-login" style="color: black;font-family:var(--ff-poppins);">Login with google</button>
         <p id="error-message" style="color: red; font-family: var(--ff-poppins);"></p>
-
+        <a href="forgot-pass.html" class="forgot-link">Forgot Password ?</a>
         <p class="switch-link">Don’t have an account? <a href="signup.html">Sign Up</a></p>
       </div>
     </div>
@@ -260,7 +270,10 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
         // Display an error message if the password is too short
         document.getElementById('error-message').textContent = 'Password must be at least 8 characters.';
     } else {
-        // If both are valid, redirect to logged.html
+      // Save the login status in the local storage
+      localStorage.setItem('isLoggedIn', 'true');
+      
+      // If both are valid, redirect to logged.html
         window.location.assign('logged.html');
     }
 });
