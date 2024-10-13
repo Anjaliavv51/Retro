@@ -236,7 +236,7 @@ body{
         </div>
         <div class="right-login">
           <div class="card-login">
-            <h1 style="font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%);">SIGN UP</h1>
+            <h1 style="font-family: var(--ff-philosopher); color: hsl(203, 30%, 26%);">SIGN UP</h1>
             <form id="signup-form">
               <div class="textfield">
                 <label for="name" style="font-family:var(--ff-philosopher);color: black;">Name</label>
@@ -248,20 +248,19 @@ body{
                 <input type="email" id="email" name="email" placeholder="Enter Email / UserName" required style="font-family: var(--ff-philosopher);">
                 <span id="email-error" class="error-message"></span>
               </div>
-
-              <div class="textfield ">
+              <div class="textfield">
                 <label for="password">Password</label>
                 <input type="password" id="password" name="password" placeholder="Enter Password" title="Special characters are not allowed" required>
                 <span id="password-error" class="error-message"></span>
-                <span class="tooltiptext">Special characters such as /[<>"/]/  are not allowed</span>
-            </div>
-
-              
+                <span class="tooltiptext">Special characters such as /[<>"/]/ are not allowed</span>
+              </div>
+              <div class="btnNext">
+                <button type="submit" class="btn-login" style="font-family: var(--ff-philosopher);color: #ddd;">Register</button>
+                <button id="google-login" style="font-family: var(--ff-philosopher);color: #ddd;">Signup with Google</button>
+              </div>
             </form>
-            <div class="btnNext"><button type="submit" class="btn-login" style="font-family: var(--ff-philosopher);color: #ddd;">Register</button>
-              <button id="google-login" style="font-family: var(--ff-philosopher);color: #ddd;">Signup with Google</button></div>
           </div>
-
+    
           <p class="switch-link">Already have an account? <a href="login.html">Login</a></p>
         </div>
       </div>
@@ -331,6 +330,7 @@ body{
         animateCircles();
       </script>
       <script>
+
         window.embeddedChatbotConfig = {
         chatbotId: "dGlQ5bP-F7GodLWzgrVAx",
         domain: "www.chatbase.co"
@@ -342,6 +342,58 @@ body{
         domain="www.chatbase.co"
         defer>
         </script>
-    
+      <script>
+        // Form validation for signup page
+        document.getElementById('signup-form').addEventListener('submit', function(event) {
+          // Prevent form submission
+          event.preventDefault();
+
+          // Get input values
+          const nameInput = document.getElementById('name').value;
+          const emailInput = document.getElementById('email').value;
+          const passwordInput = document.getElementById('password').value;
+
+          // Regular expression for email validation (simple check)
+          const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+          // Password validation (at least 8 characters)
+          const isValidPassword = passwordInput.length >= 8;
+
+          // Clear previous error messages
+          document.getElementById('name-error').textContent = '';
+          document.getElementById('email-error').textContent = '';
+          document.getElementById('password-error').textContent = '';
+
+          let isValid = true;
+
+          // Validate name
+          if (!nameInput.trim()) {
+            document.getElementById('name-error').textContent = 'Name cannot be empty.';
+            isValid = false;
+          }
+
+          // Validate email format
+          if (!emailPattern.test(emailInput)) {
+            document.getElementById('email-error').textContent = 'Invalid email format.';
+            isValid = false;
+          }
+
+          // Validate password length
+          if (!isValidPassword) {
+            document.getElementById('password-error').textContent = 'Password must be at least 8 characters.';
+            isValid = false;
+          }
+
+          // If everything is valid, proceed (for now we just log the result)
+          if (isValid) {
+            // Save the login status in the local storage
+            localStorage.setItem('isLoggedIn', 'true');
+
+            // If both are valid, redirect to logged.html
+              window.location.assign('signed.html');
+          }
+        });
+      </script>
+
 </body>
 </html>
