@@ -161,7 +161,6 @@ It is an online platform which enables you to get information about your vintage
 </div>
 
 ## Forkers
-<div align='center'>
 
 [![Forkers repo roster for @Anjaliavv51/Retro](https://reporoster.com/forks/Anjaliavv51/Retro)](https://github.com/Anjaliavv51/Retro/network/members)
 
