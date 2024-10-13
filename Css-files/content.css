@@ -1,13 +1,12 @@
 * {
   margin: 0px;
   padding: 0px;
-
 }
-p{
-  color: hsl(208, 7%,46%);
+p {
+  color: hsl(208, 7%, 46%);
 }
 body {
-  background-color:black;
+  background-color: black;
   background-attachment: fixed;
 }
 
@@ -18,11 +17,10 @@ body {
   width: 100%;
   opacity: 0.4;
   z-index: -1;
-  
 }
 
-.head_container_service{
-  height:500px;
+.head_container_service {
+  height: 500px;
 }
 .head_container_service:before {
   background-color: hsl(20, 43%, 93%);
@@ -35,9 +33,8 @@ body {
   width: 100%;
   opacity: 0.4;
   z-index: -1;
-  
 }
-.upper{
+.upper {
   margin-top: -5rem;
 }
 
@@ -105,7 +102,6 @@ body {
   opacity: 0.7;
 }
 
-
 .menu_container {
   padding: 55px 70px 30px 70px;
   background-color: hsl(20, 43%, 93%);
@@ -113,7 +109,7 @@ body {
 .menu_container h2 {
   font-family: Georgia;
   font-size: 2rem;
-  color:rgb(138, 37, 37);
+  color: rgb(138, 37, 37);
   padding-left: 50px;
 }
 .mainhead {
@@ -132,7 +128,7 @@ body {
   padding-top: 30px;
   padding-bottom: 210px;
 }
-.but{
+.but {
   background-color: transparent;
   border: none;
 }
@@ -145,14 +141,14 @@ body {
   padding: 10px;
   border-radius: 10px;
   display: inline-block;
-  
+
   /* transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease; Smooth transition */
 }
-.but a:hover{
+.but a:hover {
   background-color: #ffffff;
   color: brown;
   border: 3px solid rgb(165, 42, 42);
-  transform: scale(1.01); 
+  transform: scale(1.01);
   /* animation: bounce 0.5s; */
 }
 input[type="submit"] {
@@ -165,13 +161,12 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-  background-color: brown!important;
-  color: white!important;
+  background-color: brown !important;
+  color: white !important;
   border: 3.5px solid rgb(165, 42, 42);
   transform: scale(1.01);
   /* animation: bounce 0.5s; */
 }
-
 
 .butt {
   text-decoration: none;
@@ -181,23 +176,23 @@ input[type="submit"]:hover {
   border-radius: 15px;
   display: inline-block;
   color: white;
-  transition:  0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .butt:hover {
   background-color: white !important;
- 
+
   color: brown !important;
   border: 3px solid rgb(165, 42, 42);
-  transform: scale(1.01); 
- 
+  transform: scale(1.01);
 }
 @keyframes bounce {
-  0%, 100% {
-      transform: translateY(0); 
+  0%,
+  100% {
+    transform: translateY(0);
   }
   50% {
-      transform: translateY(-10px); 
+    transform: translateY(-10px);
   }
 }
 
@@ -216,10 +211,10 @@ input[type="submit"]:hover {
   border-radius: 10px;
   text-align: center;
   font-family: "Bree Serif", serif;
- /* transition: 0.5s ease-in-out; */
+  /* transition: 0.5s ease-in-out; */
 }
-.menu_items :hover{
-  background-color:#fff4f4 ;
+.menu_items :hover {
+  background-color: #fff4f4;
 }
 
 .menu_items .items img {
@@ -260,12 +255,11 @@ input[type="submit"]:hover {
   justify-content: center;
   height: 160px;
   width: 200px;
-
 }
 
 .first_cont .items h3 {
   font-size: 1.2rem;
-  margin: 10px ;
+  margin: 10px;
 }
 
 .first_cont .items p {
@@ -275,23 +269,22 @@ input[type="submit"]:hover {
 /* service */
 .service_container {
   background-color: transparent;
-  background-blend-mode:lighten;
+  background-blend-mode: lighten;
   background-repeat: no-repeat;
   /* background-size: cover; */
- 
 }
 
-.cards{
+.cards {
   height: 480px;
   width: 480px;
   margin-left: 2rem;
 }
-.second_cont{
+.second_cont {
   display: flex;
   padding: 40px;
   justify-content: center;
 }
-.second_cont1{
+.second_cont1 {
   display: flex;
   padding: 0px 20px 100px 20px;
   justify-content: center;
@@ -300,47 +293,47 @@ input[type="submit"]:hover {
 div.deals {
   display: flex;
   border-radius: 15px;
-  padding:15px 30px;
-  margin:20px 50px;
+  padding: 15px 30px;
+  margin: 20px 50px;
   text-decoration: none;
   background-color: brown;
   border: 3px solid rgb(255, 255, 255);
   color: white !important;
   transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
 }
-div.deals:hover{
+div.deals:hover {
   background-color: #ffffff;
   color: brown !important;
   border: 3px solid rgb(165, 42, 42);
-  transform: scale(1.01); 
+  transform: scale(1.01);
   animation: bounce 0.5s;
 }
-.deals p a{
+.deals p a {
   color: white !important;
 }
-.deals p a:hover{
+.deals p a:hover {
   color: brown !important;
 }
 
-.deals:hover p a{
+.deals:hover p a {
   color: brown !important;
 }
-.deals p{
+.deals p {
   font-size: 1.1rem;
   padding-top: 2px;
   font-family: "Bree Serif", serif;
 }
-.deals i{
+.deals i {
   margin: 0px 10px;
   padding: 0px 10px;
   font-size: 2rem;
 }
 
 /* testimonal */
-.testimonalsection{
+.testimonalsection {
   padding-top: 400px;
 }
-.testimonal__container{
+.testimonal__container {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -348,104 +341,102 @@ div.deals:hover{
   /* padding: 3rem; */
   margin-top: 2rem;
 }
-.testimonal__card{
+.testimonal__card {
   text-align: center;
 
-  border:2px solid rgba(224, 224, 252, 0.678);
-  transition:border .4s background-color .4s;
+  border: 2px solid rgba(224, 224, 252, 0.678);
+  transition: border 0.4s background-color 0.4s;
   background-color: white;
   box-shadow: 0 0 10px rgba(224, 224, 252, 0.678);
   border: 1px solid rgb(186, 186, 201);
-  padding:40px 30px ;
+  padding: 40px 30px;
   margin: 5px;
-  color:rgb(107, 107, 122);
+  color: rgb(107, 107, 122);
   /* margin-left: 3rem; */
 }
-.testimonal__card:hover{
+.testimonal__card:hover {
   transform: translateY(-10px);
   transition: 0.5s;
   box-shadow: 2px 2px 20px black;
 }
-.testimonal__image{
-  width:100px;
-  height:100px;
-  border-radius:50%;
-  margin:0 auto 1.5rem;
+.testimonal__image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 0 auto 1.5rem;
 }
-.testimonal__title{
-  margin-bottom: .75rem;
+.testimonal__title {
+  margin-bottom: 0.75rem;
 }
-.testimonal__description{
+.testimonal__description {
   margin-bottom: 1.25rem;
 }
 
-
-.section__title{
+.section__title {
   text-align: center;
   font-size: 2rem;
-  color:rgb(58, 58, 66);
+  color: rgb(58, 58, 66);
 }
 
 /* footer */
-.foot-panel2{
-    background-color: transparent;
-    color:white;
-    height: 300px;
-    display: flex;
-    justify-content: space-evenly;
+.foot-panel2 {
+  background-color: transparent;
+  color: white;
+  height: 300px;
+  display: flex;
+  justify-content: space-evenly;
 }
 
-.footer-colums{
-    margin-top: 20px;
+.footer-colums {
+  margin-top: 20px;
 }
 
-.footer-colums p{
-    font-weight: 700;
+.footer-colums p {
+  font-weight: 700;
 }
 
-.footer-colums a{
-    display: block;
-    font-size: 0.85rem;
-    margin-top: 10px;
-    color: #dddddd;
+.footer-colums a {
+  display: block;
+  font-size: 0.85rem;
+  margin-top: 10px;
+  color: #dddddd;
 }
 
-.foot_panel4{
-    background-color: transparent;
-    color: white;
-    height: 160px;
-    font-size: 0.9rem;
-    text-align: center;
+.foot_panel4 {
+  background-color: transparent;
+  color: white;
+  height: 160px;
+  font-size: 0.9rem;
+  text-align: center;
 }
 
-.pages{
-    padding-top: 25px;
+.pages {
+  padding-top: 25px;
 }
 
-.copyright{
-   padding-top: 10px;
+.copyright {
+  padding-top: 10px;
 }
 
 form {
-    /*padding-top: 20px;*/
-    display: grid;
-    /*padding-bottom: 100px;*/
+  /*padding-top: 20px;*/
+  display: grid;
+  /*padding-bottom: 100px;*/
 }
 
 label {
-    font-weight: bold;
+  font-weight: bold;
 }
 
-input
- {
-    height:40px;
-    width: 100%;
-    padding: 2.5px;
-    box-sizing: border-box;
-    border-radius: 2px;
+input {
+  height: 40px;
+  width: 100%;
+  padding: 2.5px;
+  box-sizing: border-box;
+  border-radius: 2px;
 }
 
-#butt{
+#butt {
   background-color: brown;
   color: white !important;
   padding: 3px;
@@ -458,34 +449,34 @@ input
   background-color: rgb(196, 89, 89);
 }
 
-.social-icons a{
-    font-size: 1.2rem;
-    padding: 15px;
-    text-decoration: none;
-    color: brown !important;
+.social-icons a {
+  font-size: 1.2rem;
+  padding: 15px;
+  text-decoration: none;
+  color: brown !important;
 }
 
 .fa-facebook:hover {
-  color:#3B5998;
+  color: #3b5998;
 }
 
 .fa-instagram:hover {
-  color:#D62976;
+  color: #d62976;
 }
 
 .fa-twitter:hover {
-  color:#00B6F1;
+  color: #00b6f1;
 }
 
-.cart-section{
+.cart-section {
   padding: 55px 70px 30px 70px;
-  background-color:  transparent;
+  background-color: transparent;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
 
-.cart{
+.cart {
   width: 80%;
   background-color: transparent;
   text-align: center;
@@ -496,56 +487,57 @@ input
   padding: 5%;
 }
 
-.cart table,th,td{
+.cart table,
+th,
+td {
   text-align: center;
   border: 2px solid black;
   width: 75%;
 }
 
-#bill{
+#bill {
   color: rgb(196, 74, 74);
 }
 .star-button {
   background: none;
   border: none;
   cursor: pointer;
-  color: #ccc; 
+  color: #ccc;
   font-size: 15px;
   padding: 0;
 }
 
 .star-button:hover,
 .star-button:focus {
-  color: #f1c40f; 
+  color: #f1c40f;
   outline: none;
 }
 
 .star-button.rated {
-  color: #f1c40f; 
+  color: #f1c40f;
 }
 .menu_items .items {
   position: relative;
 }
 
-
 .form-control {
-        border-radius: 15px; /* Adjust the border radius */
-        padding-left: 40px; /* Space for the icon */
-    }
-  
+  border-radius: 15px; /* Adjust the border radius */
+  padding-left: 40px; /* Space for the icon */
+}
+
 .input-icon {
-        position: relative;
-    }
+  position: relative;
+}
 .input-icon i {
-        position: absolute;
-        left: 10px; /* Positioning the icon */
-        top: 50%;
-        transform: translateY(-50%); /* Center the icon vertically */
-        color: gray; /* Icon color */
-    }
-.input-icon input, 
+  position: absolute;
+  left: 10px; /* Positioning the icon */
+  top: 50%;
+  transform: translateY(-50%); /* Center the icon vertically */
+  color: gray; /* Icon color */
+}
+.input-icon input,
 .input-icon textarea {
-      padding-left: 30px; /* Adjust padding to create space for the icon */
+  padding-left: 30px; /* Adjust padding to create space for the icon */
 }
 
 #contactForm {
@@ -572,13 +564,13 @@ input
 }
 #contactForm textarea {
   height: 100px;
-  resize: none; 
+  resize: none;
 }
 
 #contactForm button {
   padding: 10px 20px;
-  background-color:rgb(196, 74, 74);
-  color:rgb(15, 14, 14);
+  background-color: rgb(196, 74, 74);
+  color: rgb(15, 14, 14);
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -594,9 +586,9 @@ input
   opacity: 0;
 }
 
-.check-mark{
+.check-mark {
   width: 17px !important;
-  height : 17px !important;
+  height: 17px !important;
   font-size: 16.5px;
 }
 
