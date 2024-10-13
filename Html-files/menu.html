@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Retro</title>
 
+
+ 
     <link rel="stylesheet" href="/Css-files/navbarstyles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -25,7 +27,209 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../Css-files/content.css">
+
+        <!-- Footer Inline Style -->
     <style>
+        .foot-panel2{
+         background-color: rgb(138, 37, 37);
+         color:white;
+         height: 300px;
+         /* height: fit-content; */
+         display: flex;
+         /* padding: 10px; */
+         justify-content: space-evenly;
+     }
+     
+     .foot-panel2 ul{
+         margin-top: 20px;
+     }
+     
+     ul p{
+         font-weight: 700;
+     }
+     
+     ul a{
+         display: block;
+         font-size: 0.85rem;
+         margin-top: 10px;
+         color: #dddddd;
+         text-decoration: none;
+     }            
+     .foot_panel4{
+         background-color: rgb(66, 16, 16);
+         color: hsl(203, 30%, 26%);
+         height: 160px;
+         font-size: 0.9rem;
+         text-align: center;
+     
+     }
+     
+     .item{
+         padding-bottom: 0px;
+     }
+     
+     .pages{
+         padding-top: 25px;
+     
+     }
+     
+     .copyright{
+        padding-top: 10px;
+     }
+     
+     form {
+         padding-top: 20px;
+         display: grid;
+         /* gap: 10px; */
+         padding-bottom: 100px;
+     }
+     
+     label {
+         font-weight: bold;
+     }
+     
+     input,
+     textarea {
+         height:30px;
+         width:max-content;
+         padding: 3px;
+         box-sizing: border-box;
+         border-radius: 4px;
+         outline: none;
+         border: #212123 1px;
+     }
+     
+     #butt{
+         background-color:rgb(66, 16, 16);
+         color: white;
+         padding: 3px;
+         border: 1px solid white ;
+         border-radius: 4px;
+         cursor: pointer;
+     }
+     
+     #butt:hover {
+         background-color: #ffffff;
+       color: brown !important;
+       border: 3px solid rgb(165, 42, 42);
+       transform: scale(1.01); 
+       animation: bounce 0.5s;
+     }
+     
+     .social-icons a{
+         font-size: 1.2rem;
+         padding: 15px;
+         text-decoration: none;
+         color: brown !important ;
+     }
+     
+     
+     
+     .instagram{
+         color: #dd4c8d;
+         cursor: pointer;
+     }
+     .twitter{
+         color:  #1DA1F2;
+         cursor: pointer;
+     }
+     
+     #author{
+     
+         padding: 3px;
+         border-radius: 3px;
+     }
+     
+     @media screen and (max-width:1120px) {
+         #about {
+             /* margin: 34px; */
+             flex-direction: column-reverse;
+         
+         }
+     
+         .service {
+             flex-direction: column;
+             padding: 5px;
+             /* box-sizing: fixed; */
+         }
+         .service .box {
+             padding: 20px 20px;
+             /* border: 2px solid rgb(224, 224, 252); */
+             text-align: center;
+             font-size: 1.3rem;
+         }
+         .service_container{
+            height: fit-content;
+            /* height: 1000px; */
+         }
+         .service .box_main h1 {
+             font-size: 3.5rem;
+         }
+     
+         .service_container:before {
+     
+             /*  
+             height: 560px;
+             */
+             /* height: 800px; */
+             /* height: fit-content; */
+             background-size: cover;
+             width: 100%;
+             /* background-repeat: no-repeat; */
+             /* justify-items: center; */
+             opacity: 0.4;
+             z-index: -1;
+             /* background-repeat: no-repeat; */
+         }
+         
+     
+         .menu_items {
+             flex-direction: column;
+             align-items: center;
+         }
+     }
+     
+     @media screen and (max-width:780px) {
+         .app_download{
+             padding: 40px 20px;
+             height:fit-content;
+         }
+     
+         
+     .foot-panel2{
+         
+         height: fit-content;
+         display: grid;
+         grid-template-columns: repeat(2, minmax(20px, 1fr));
+     
+         /* flex-direction: column; */
+         grid-template-columns: 2;
+         padding: 30px;
+         
+     }
+     
+     .foot-panel2 ul{
+         margin-top: 20px;
+     }
+     
+     input, textarea {
+         height: 30px;
+         width: 90%;
+         padding: 3px;
+         margin: 4px;
+         box-sizing: border-box;
+         border-radius: 2px;
+     }
+     #butt{
+         padding: 3px;
+         margin: 4px;
+         width: 90%;
+     }
+         
+     }
+                     </style>
+   
+   <style>
     /* Initial styling for the image */
 .menu {
   transition: transform 0.3s ease; /* Smooth transition for the zoom effect */
@@ -50,14 +254,7 @@
       flex-wrap: wrap;
       flex-direction: column;
     }
-    .foot-panel2{
-      display: flex;
-      flex-direction: column;
-    }
-    .foot_panel4{
-      display: flex;
-      flex-direction: column;
-    }
+  
 }
     </style>
     <style>
@@ -665,88 +862,81 @@ border-radius: 100px;
             </div>
     </section>
     <!-- footer -->
-    <footer style="background-color: hsl(20, 43%, 93%);">
-        <br><br><br>
+    <div class="footer" style="background-color: hsl(20, 43%, 93%);">
+        <footer>
+            <div class="foot-panel2" style="background-color:hsl(20, 43%, 93%);font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                <ul>
+                    <p style="color: hsl(357, 82%,35%);font-family: var(--ff-philosopher);text-align: left;">Our Pages</p>
+                    <a href="#" style="color: black;">Home</a>
+                    <a href="Html-files/menu.html" style="color: black;">About</a>
+                    <a href="Html-files/services.html" style="color: black;">Services</a>
+                    <a href="Html-files/contact.html" style="color: black;">Contact us</a>
+                    <a href="Html-files/cart.html" style="color: black;">Cart</a>
+                </ul>
+                <ul>
+                    <p style="color: hsl(357, 82%,35%);font-family: var(--ff-philosopher); text-align:left"> Exclusive Offers</p>
+                    <a href="#" style="color: black;">Retro Discounts</a>
+                    <a href="#" style="color: black;">Limited-Time Promotions</a>
+                    <a href="#" style="color: black;">Special Event Packages</a>
+                    <a href="#" style="color: black;">Membership Benefits</a>
+                    <a href="#" style="color: black;">Early Access to New Collections</a>
+                    <a href="#" style="color: black;">VIP Retro Events</a>
+                    <a href="#" style="color: black;">Personalized Culinary Experiences</a>
 
-        <div class="foot-panel2">
-            <ul class="footer-colums">
-                <p style="color: hsl(357, 82%,35%);font-family: var(--ff-philosopher);">Our Pages</p>
-                <a href="../index.html" style="text-decoration: none;font-family: var(--ff-poppins);color: black;">Home</a>
-                <a href="#" style="text-decoration: none;font-family: var(--ff-poppins);color: black;">About</a>
-                <a href="services.html" style="text-decoration: none;font-family: var(--ff-poppins);color: black;">Services</a>
-                <a href="contact.html" style="text-decoration: none;font-family: var(--ff-poppins);color: black;">Contact</a>
-                <a href="cart.html" style="text-decoration: none;font-family: var(--ff-poppins);color: black;">Cart</a>
-            </ul>
+                </ul>
+                <ul>
+                    <p style="color: hsl(357, 82%,35%);font-family: var(--ff-philosopher);text-align:left">Payment Products</p>
+                    <a href="./Html-files/payment2.html" style="color: black;">Secure Checkout</a>
+                    <a href="./Html-files/payment2.html" style="color: black;">Credit/Debit Cards</a>
+                    <a href="./Html-files/payment2.html" style="color: black;">Online Payment</a>
+                    <a href="./Html-files/payment2.html" style="color: black;">Mobile Wallets</a>
+                    <a href="./Html-files/payment2.html" style="color: black;">Contactless Payments</a>
+                </ul>
+                <form id="contactForm">
+                    <h3 style="font-family: var(--ff-philosopher);color: hsl(357, 82%,35%);font-family: var(--ff-philosopher);">Contact Us!</h3>
+                    
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
 
-            <ul class="footer-colums">
-                <p style="color: hsl(357, 82%,35%);font-family: var(--ff-philosopher);"> Exclusive Offers</p>
-                <a style="font-family: var(--ff-poppins);color: black;">Retro Discounts</a>
-                <a style="font-family: var(--ff-poppins);color: black;">Limited-Time Promotions</a>
-                <a style="font-family: var(--ff-poppins);color: black;">Special Event Packages</a>
-                <a style="font-family: var(--ff-poppins);color: black;">Membership Benefits</a>
-                <a style="font-family: var(--ff-poppins);color: black;">Early Access to New Collections</a>
-                <a style="font-family: var(--ff-poppins);color: black;">VIP Retro Events</a>
-                <a style="font-family: var(--ff-poppins);color: black;">Personalized Culinary Experiences</a>
+                    <textarea id="message" name="message" placeholder="Your Message" required></textarea>
 
-            </ul>
+                    <button id="butt" type="submit" style="font-family: ui-serif;">Send Message</button>
+                </form>
 
-            <ul class="footer-colums">
-                <p style="color: hsl(357, 82%,35%);font-family: var(--ff-philosopher);">Payment Products</p>
-                <a style="font-family: var(--ff-poppins);color: black;">Secure Checkout</a>
-                <a style="font-family: var(--ff-poppins);color: black;">Credit/Debit Cards</a>
-                <a style="font-family: var(--ff-poppins);color: black;">Online Payment</a>
-                <a style="font-family: var(--ff-poppins);color: black;">Mobile Wallets</a>
-                <a style="font-family: var(--ff-poppins);color: black;">Contactless Payments</a>
-            </ul>
-
-
-
-            <form id="contactForm">
-                <h3 style="font-family: var(--ff-philosopher);color: hsl(357, 82%,35%);font-family: var(--ff-philosopher);">Contact Us!</h3>
-                <input type="email" id="email" name="email" placeholder="Your Email" required>
-                <textarea id="message" name="message" placeholder="Your Message" required></textarea>
-
-                <button id="butt" type="submit"  style="font-family: var(--ff-poppins);">Send Message</button>
-            </form>
-
-        </div>
-
-
-        <div class="foot_panel4">
-            <div class="pages">
-                <h4 style="font-family: var(--ff-philosopher);color: hsl(304, 14%, 46%);">Follow Us</h4>
-
-                <div class="social-icons">
-
-
-                    <a class="fa-brands fa-facebook" href="https://facebook.com" style="color: hsl(203, 30%, 26%);"></a>
-                    <a class="fa-brands fa-instagram" href="https://instagram.com" style="color: hsl(203, 30%, 26%);"></a>
-                    <a class="fa-brands fa-x-twitter" href="https://twitter.com" style="color: hsl(203, 30%, 26%);"></a>
-
-                </div>
-                <p style="font-family: var(--ff-philosopher);margin-bottom:0;">Stay connected with us on social media for the latest updates, latest collection, and vintage adventures.
-                </p>
-                <div class="copyright">
-                  <p style="font-family: var(--ff-philosopher);">
-                    &copy; 2024 Retro . All Rights Reserved. | Developed by <span id="author">
-                        <a href="https://www.linkedin.com" target="_blank" style="text-decoration: none;">Retro Team</a>
-                    </span></p>
-
-
-
-
-                </div>
-                <div>
-                    <button id="sr" style="z-index: 1000;">
-                    <div class="circle1">
-                      <svg id="back-to-top" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
-                        <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z"></path>
-                      </svg>
-                    </div>
-                    </button>
-                </div>
             </div>
-    </footer>
+
+
+            <div class="foot_panel4" style="background-color: transparent;">
+                <div class="pages">
+                    <h4 style="font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%);">Follow Us</h4>
+
+                    <div class="social-icons">
+
+
+                        <a class="fa-brands fa-facebook" href="https://facebook.com" ></a>
+                        <a class="fa-brands fa-instagram" href="https://instagram.com" ></a>
+                        <a class="fa-brands fa-x-twitter" href="https://twitter.com" ></a>
+
+                    </div>
+                    <p style="font-family: var(--ff-philosopher);background-color: hsl(20, 43%, 93%);color: hsl(203, 30%, 26%);margin-bottom:0;">Stay connected with us on social media for the latest updates, latest collection, and vintage adventures.
+                    </p>
+                    <div class="copyright" style="font-family: var(--ff-philosopher);background-color: hsl(20, 43%, 93%);color: black;">
+
+                        &copy; 2024 Retro . All Rights Reserved. | Developed by <span id="author">
+                            <a href="https://www.linkedin.com" target="_blank" style="text-decoration: none;">Retro Team</a>
+                    </div>
+                    <div>
+                        <button id="sr" style="z-index: 1000; display: block;">
+                        <div class="circle1">
+                          <svg id="back-to-top" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
+                            <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z"></path>
+                          </svg>
+                        </div>
+                        </button>
+                    </div>
+                </div>
+        </footer>
+        <button onclick="window.print()" style="font-family:Georgia; font-size:medium; line-height: inherit;border-radius:5px ;background-color: #f9e2c4;padding:5px 5px;">Print this page</button>
+    </div>
 
     <script src="menu.js"></script>
     <script>
