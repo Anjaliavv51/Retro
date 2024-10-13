@@ -139,7 +139,7 @@
       <div class="container">
         <div class="card">
           <div class="front" style="align-content: center;font-family: var(--ff-philosopher);">
-           <b style="transform: rotate(270deg);font-size: 30px;color: hsl(203, 30%,26%);"> Login to Save your Data!</b>
+           <b style="transform: rotate(360deg);font-size: 30px;color: hsl(203, 30%,26%);"> Login to Save your Data!</b>
           </div>
           <div class="back" style="align-content: center;font-family: var(--ff-philosopher);background-color: transparent;color: hsl(203, 30%,26%);">
             <b style="font-size: 40px;">Login Here</b>  <br> Vinatge Collection is<br> waiting for You
@@ -260,7 +260,10 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
         // Display an error message if the password is too short
         document.getElementById('error-message').textContent = 'Password must be at least 8 characters.';
     } else {
-        // If both are valid, redirect to logged.html
+      // Save the login status in the local storage
+      localStorage.setItem('isLoggedIn', 'true');
+      
+      // If both are valid, redirect to logged.html
         window.location.assign('logged.html');
     }
 });

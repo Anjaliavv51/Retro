@@ -460,7 +460,8 @@ input
 
 .social-icons a{
     font-size: 1rem;
-    padding: 15px;
+    padding: 7px; 
+    margin: 7px 6px 0 8px; 
     text-decoration: none;
     color: brown !important;
 }
@@ -480,7 +481,7 @@ input
   color: #FF0000; 
 }
 .fa-snapchat:hover {
-  color: yellow; 
+  color: #FFFC00; 
 }
 
 .cart-section{
