@@ -190,3 +190,71 @@ body {
   pointer-events: none; /* Prevent interactions */
   opacity: 0.6; /* Slightly fade the button */
 }
+
+  box-shadow: 0px 10px 40px -12px black;
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 950px) {
+  .card-login {
+    width: 85%;
+  }
+
+  .left-login-image {
+    width: 30vw;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .main-login {
+    flex-direction: column;
+  }
+
+  .left-login {
+    width: 100%;
+    height: auto;
+  }
+
+  .right-login {
+    width: 100%;
+    height: auto;
+  }
+
+  .left-login-image {
+    width: 40vh;
+  }
+
+  .card-login {
+    width: 90%;
+  }
+
+  .left-login > h1 {
+    display: none;
+  }
+  .login-form{
+    width: 100%;
+    padding-top: 20Px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .home-btn a {
+    font-size: 25px;
+  }
+
+  .left-login-image {
+    width: 35vh;
+  }
+
+  .card-login {
+    width: 95%;
+  }
+
+  .textfield > input {
+    font-size: 10pt;
+  }
+
+  .btn-login, #google-login {
+    padding: 12px 0;
+  }
+}

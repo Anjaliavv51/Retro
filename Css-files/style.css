@@ -567,7 +567,7 @@ textarea {
         padding: 8px;
     }
 
-    .foot-panel2 {
+    .foot-panel-main {
         padding: 20px;
     }
 
@@ -630,19 +630,9 @@ textarea {
     }
 
     
-.foot-panel2{
-    
-    height: fit-content;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(20px, 1fr));
+  
 
-    /* flex-direction: column; */
-    grid-template-columns: 2;
-    padding: 30px;
-    
-}
-
-.foot-panel2 ul{
+.foot-panel-main ul{
     margin-top: 20px;
 }
 
@@ -777,7 +767,52 @@ input, textarea {
         height: fit-content;
         padding: 100px;
     }
+   
 }
+
+@media screen and (max-width: 780px) {
+
+    .foot-panel-main{
+        height: fit-content;
+        display:block !important;
+        align-items:center;
+        padding: 30px;
+    }
+
+    .foot-panel-main ul {
+        margin: 10px 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    .foot_panel4 {
+        text-align: center;
+        padding: 20px;
+        font-size: 0.9rem;
+        width: 100%;
+    }
+
+    .social-icons {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .social-icons a {
+        margin: 10px;
+    }
+
+    .copyright {
+        text-align: center;
+        padding-top: 20px;
+    }
+
+    .pages {
+        text-align: center;
+        padding-top: 10px;
+    }
+}
+
 
 
 fa-facebook:hover {
