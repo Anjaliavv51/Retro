@@ -39,20 +39,20 @@
         @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
         #sr {
-            display: none;
-            position: fixed;
-            bottom: 20px;
-            right: 30px;
-            z-index: 99;
-            font-size: 18px;
-            border: none;
-            outline: none;
-            background-color: transparent;
-            color: white;
-            cursor: pointer;
-            padding: 15px;
-            border-radius: 4px;
-        }
+display: none; 
+position: fixed; 
+bottom: 70px; 
+right: 15px; 
+z-index: 99; 
+font-size: 18px;
+border: none;
+outline: none;
+background-color: transparent; 
+color: rgb(17, 17, 17); 
+cursor: pointer; 
+padding: 15px; 
+border-radius: 4px; 
+}
 
         #sr:hover {
             background-color: transparent;
@@ -709,7 +709,24 @@ body{
                   </div>
                   <script src="modal.js"></script>
             </div>
-               
+<div class="foot_panel4" style="color: black; background-color: transparent;">
+    <div class="pages" style="background-color: transparent;">
+        <h3>Follow Us</h3>
+
+        <div class="social-icons">
+            <a class="fa-brands fa-facebook" href="https://facebook.com" style="color: hsl(203, 30%, 26%);"></a>
+            <a class="fa-brands fa-instagram" href="https://instagram.com" style="color: hsl(203, 30%, 26%);"></a>
+            <a class="fa-brands fa-x-twitter" href="https://twitter.com" style="color: hsl(203, 30%, 26%);"></a>
+            <a class="fa-brands fa-youtube" href="https://www.youtube.com"></a>
+            <a class="fa-brands fa-snapchat" href="https://www.snapchat.com"></a>
+        </div>
+        <p style="margin-bottom: 0;">Stay connected with us on social media for the latest updates, recipes, and foodie adventures.</p>
+        <div class="copyright" style="background-color: transparent;">
+            <!-- Add copyright information here -->
+        </div>
+    </div>
+</div>
+
             <div class="foot_panel4" style="background-color: transparent;">
                 <div class="pages">
                     <h4 style="font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%);">Follow Us</h4>
@@ -844,16 +861,29 @@ scrollToTopBtn.addEventListener("click", function() {
     document.addEventListener("DOMContentLoaded", function() {
     const preloader = document.getElementById('preloader');
     const mainContent = document.getElementById('main-content');
-
-    // Listen for the window load event
-    window.addEventListener('load', function() {
-        setTimeout(function() {
-            preloader.classList.add('hidden');
-            mainContent.classList.remove('hidden');
-            mainContent.classList.add('visible');
-        }, 3000); 
-    });
+// Listen for the window load event
+window.addEventListener('load', function() {
+    setTimeout(function() {
+        preloader.classList.add('hidden');
+        mainContent.classList.remove('hidden');
+        mainContent.classList.add('visible');
+    }, 3000); 
 });
+
+// Chatbot Configuration
+window.embeddedChatbotConfig = {
+    chatbotId: "dGlQ5bP-F7GodLWzgrVAx",
+    domain: "www.chatbase.co"
+};
+
+// Embed Chatbot Script
+var script = document.createElement('script');
+script.src = "https://www.chatbase.co/embed.min.js";
+script.setAttribute('chatbotId', "dGlQ5bP-F7GodLWzgrVAx");
+script.setAttribute('domain', "www.chatbase.co");
+script.defer = true;
+document.head.appendChild(script);
+
 
   </script>
   <script>

@@ -115,7 +115,7 @@ body {
 .mainhead {
   text-align: center;
   padding-top: 30px;
-  padding-bottom: 50px;
+  /* padding-bottom: 50px; */
 }
 .mainhead h1 {
   font-family: Georgia;
@@ -360,10 +360,13 @@ div.deals:hover {
   box-shadow: 2px 2px 20px black;
 }
 .testimonal__image {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  margin: 0 auto 1.5rem;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover; /* Ensures the image covers the entire area without distortion */
+    margin: 0 auto 1.5rem;
+}
+
 }
 .testimonal__title {
   margin-bottom: 0.75rem;
@@ -380,11 +383,11 @@ div.deals:hover {
 
 /* footer */
 .foot-panel2 {
-  background-color: transparent;
-  color: white;
-  height: 300px;
-  display: flex;
-  justify-content: space-evenly;
+    background-color: transparent;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    height: 300px; /* Retained from the first version */
 }
 
 .footer-colums {
@@ -403,12 +406,13 @@ div.deals:hover {
 }
 
 .foot_panel4 {
-  background-color: transparent;
-  color: white;
-  height: 160px;
-  font-size: 0.9rem;
-  text-align: center;
+    background-color: transparent;
+    color: white;
+    height: auto; /* Changed to auto to allow for flexibility */
+    font-size: 0.9rem;
+    text-align: center;
 }
+
 
 .pages {
   padding-top: 25px;
@@ -450,10 +454,11 @@ input {
 }
 
 .social-icons a {
-  font-size: 1.2rem;
-  padding: 15px;
-  text-decoration: none;
-  color: brown !important;
+    font-size: 1.2rem; /* Kept from the first version */
+    padding: 15px; /* Kept from the first version */
+    margin: 7px 6px 0 8px; /* Added from the second version */
+    text-decoration: none;
+    color: brown !important;
 }
 
 .fa-facebook:hover {
@@ -466,6 +471,12 @@ input {
 
 .fa-twitter:hover {
   color: #00b6f1;
+}
+.fa-youtube:hover {
+  color: #FF0000; 
+}
+.fa-snapchat:hover {
+  color: #FFFC00; 
 }
 
 .cart-section {
@@ -493,6 +504,9 @@ td {
   text-align: center;
   border: 2px solid black;
   width: 75%;
+}
+td{
+  font-size: 20px;
 }
 
 #bill {
@@ -551,16 +565,21 @@ td {
 
 #contactForm input,
 #contactForm textarea {
-  width: 50%;
+  width: 64%;
   padding: 20px;
+  font-size: 15px;
   margin: 5px;
   border-radius: 10px;
   border: none;
 }
+#contactForm input{
+  width: 76%;
+  font-size: 15px;
+}
 
 #contactForm h3 {
   height: 30px;
-  color: #141414;
+  color: hsl(357, 82%,35%);
 }
 #contactForm textarea {
   height: 100px;
