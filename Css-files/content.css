@@ -367,10 +367,11 @@ div.deals:hover{
   box-shadow: 2px 2px 20px black;
 }
 .testimonal__image{
-  width:100px;
-  height:100px;
-  border-radius:50%;
-  margin:0 auto 1.5rem;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 1.5rem;
 }
 .testimonal__title{
   margin-bottom: .75rem;
@@ -379,12 +380,12 @@ div.deals:hover{
   margin-bottom: 1.25rem;
 }
 
-
 .section__title{
   text-align: center;
   font-size: 2rem;
   color:rgb(58, 58, 66);
 }
+
 
 
 
