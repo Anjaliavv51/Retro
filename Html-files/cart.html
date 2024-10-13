@@ -255,7 +255,7 @@
       color: white;
       border: 3px solid whitesmoke;
     }
-    
+
 .social-icons a {
   font-size: 1.2rem;
   padding: 8px;
@@ -282,6 +282,86 @@
 .fa-brands.fa-x-twitter:hover {
   color: #181e20 !important;
 }
+
+  </style>
+  <style>
+    /* Modal styles */
+    .modal {
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 1000; /* Sit on top */
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgba(0, 0, 0, 0.7); /* Darker overlay for better contrast */
+      animation: fadeIn 0.5s; /* Animation for modal display */
+    }
+
+    .modal-content {
+      background-color: #ffffff; /* White background */
+      margin: 10% auto; /* 10% from the top and centered */
+      padding: 20px;
+      border-radius: 10px; /* Rounded corners */
+      width: 400px; /* Adjusted width for better visibility */
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Shadow */
+      animation: slideIn 0.5s; /* Animation for content */
+    }
+
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: #e74c3c; /* Red color on hover */
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    h2 {
+      color: #2c3e50; /* Darker text color */
+    }
+
+    #couponDisplay {
+      font-weight: bold;
+      color: #27ae60; /* Green color for coupon code */
+    }
+
+    #okButton {
+      background-color: #3498db; /* Blue */
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.3s; /* Transition for hover effect */
+    }
+
+    #okButton:hover {
+      background-color: #2980b9; /* Darker blue on hover */
+      transform: scale(1.05); /* Slightly enlarge on hover */
+    }
+
+    /* Animation keyframes */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideIn {
+      from { transform: translateY(-50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
   </style>
 </head>
 
@@ -311,6 +391,7 @@
         <div class="circle" style="background-color: rgb(104, 0, 96); left: 504px; top: 59px; scale: 0.1;"></div>
         <div class="circle" style="background-color: rgb(96, 0, 95); left: 504px; top: 59px; scale: 0.05;"></div>
     </div>
+
   <div class="head_container" style="background-color: transparent; font-family: var(--ff-philosopher);">
     <header>
       <nav class="navbar navbar-expand-lg fixed-top">
@@ -354,6 +435,7 @@
             <h1 style="color: black;font-family: var(--ff-philosopher);">C A R T</h1>
         </div>
     </div>
+
   </div>
 
   <section class="cart-section" style="background-color: transparent;">
@@ -452,11 +534,21 @@
       <div class="pages">
         <h4 style="color: hsl(203, 30%,26%);font-family: var(--ff-philosopher);">Follow Us</h4>
         <div class="social-icons">
-          <div class="social-icons">
-            <a class="fa-brands fa-facebook" href="https://facebook.com" style="color: hsl(203, 30%, 26%);"></a>
-            <a class="fa-brands fa-instagram" href="https://instagram.com" style="color: hsl(203, 30%, 26%);"></a>
-            <a class="fa-brands fa-x-twitter" href="https://twitter.com" style="color: hsl(203, 30%, 26%);"></a>
-        </div>
+
+          
+            <a class="fa-brands fa-facebook"
+                href="https://facebook.com" ></a>
+            <a class="fa-brands fa-instagram"
+                href="https://instagram.com"
+                target="_blank"></a>
+            <a class="fa-brands fa-x-twitter"
+                href="https://twitter.com" ></a>
+            <a class="fa-brands fa-youtube"
+                href="https://www.youtube.com" ></a>
+            <a class="fa-brands fa-snapchat" 
+                href="https://www.snapchat.com" ></a>
+
+
         </div>
         <p style="margin-bottom:0;font-family: var(--ff-philosopher);">Stay connected with us on social media for the
           latest updates, latest collection, and vintage adventures.
@@ -482,6 +574,18 @@
       </div>
     </div>
   </footer>
+
+    <!-- Modal HTML -->
+    <div id="customAlert" class="modal">
+      <div class="modal-content">
+          <span class="close" id="closeModal">&times;</span>
+          <h2>Congratulations!</h2>
+          <p>Your coupon code is <span id="couponDisplay" style="font-weight: bold;"></span></p>
+          <p>You've received a 30% discount on your first order.</p>
+          <button id="okButton">OK</button>
+      </div>
+    </div>
+
     <script src="cart.js"></script>
 
   </script>
@@ -591,8 +695,20 @@
         }, 3000);
       });
     });
-
   </script>
+  <script>
+    // Check if the user is logged in
+    const isLoggedIn = localStorage.getItem('isLoggedIn');
+
+    if (isLoggedIn !== 'true') {
+        // If the user is not logged in, redirect to the login page
+        alert('You must be logged in to access the cart.');
+        window.location.href = 'login.html';
+    } else {
+        // Render the cart or any other content as normal
+        document.body.innerHTML += '<p>Here is your cart content.</p>';
+    }
+</script>
 </body>
 
 </html>
