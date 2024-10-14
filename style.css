@@ -38,11 +38,10 @@ body {
   color: #fff;
   border-bottom: 1px solid #fff;
 }
-<<<<<<< HEAD
+
 */
 
-=======
->>>>>>> feature/marquee-hover
+
 .navbar.fixed-top {
   position: fixed; 
   top: 0;
@@ -222,15 +221,17 @@ body {
         gap: 20px;
     }
 
-    .box {
+    .service_item {
         text-align: center;
         flex: 1;
+        padding: 10px;
+        margin: 5px 0;
     }
 
-    .box h2 {
+    .service_item h2 {
         font-family: var(--ff-philosopher);
         color: hsl(357, 82%, 35%);
-        font-size: 1.5rem;
+        font-size: 1.7rem;
         margin-bottom: 10px;
     }
 
@@ -240,6 +241,7 @@ body {
         color: white;
         padding: 12px 30px;
         font-size: 1rem;
+        margin-top: 10px;
         text-decoration: none;
         border-radius: 10px;
         transition: background-color 0.3s ease;
@@ -326,8 +328,7 @@ body {
   border-radius: 15px;
   display: inline-block;
   color: white;
-  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease; 
-}*/
+
 
 /*
 .service .box a:hover {
@@ -670,9 +671,9 @@ textarea {
 }
 
 .social-icons a {
-  font-size: 1.2rem;
-  padding: 8px;
-  margin: 15px;
+  font-size: 1rem;
+  padding: 7px;
+  margin: 7px 6px 0 8px; 
   text-decoration: none;
   color: brown !important;
 }
@@ -695,6 +696,15 @@ textarea {
 .fa-brands.fa-x-twitter:hover {
   color: #181e20 !important;
   /* color: white; */
+}
+.fa-brands.fa-twitter:hover {
+  color:#00B6F1;
+}
+.fa-brands.fa-youtube:hover {
+  color: #FF0000; 
+}
+.fa-brands.fa-snapchat:hover {
+  color: #FFFC00; 
 }
 
 .social-icons a:hover {

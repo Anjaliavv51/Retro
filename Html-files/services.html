@@ -37,22 +37,21 @@
         <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');  
         @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');  
-#sr {
+        #sr {
 display: none; 
 position: fixed; 
-bottom: 20px; 
-right: 30px; 
+bottom: 70px; 
+right: 15px; 
 z-index: 99; 
 font-size: 18px;
 border: none;
 outline: none;
 background-color: transparent; 
-color: white; 
+color: rgb(17, 17, 17); 
 cursor: pointer; 
 padding: 15px; 
 border-radius: 4px; 
 }
-
 #sr:hover {
 background-color: transparent; 
 color: black;
@@ -286,6 +285,14 @@ body{
     padding: 1rem;
 }
 
+.items {
+    transition: transform 0.3s ease;
+}
+
+.items:hover {
+    transform: scale(1.1);
+}
+
     </style>
 
 </head>
@@ -363,39 +370,34 @@ body{
             <h1  style="font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%); margin-top: 10vh;">S E R V I C E S</h1>
 
         </div>
-            <div class="first_cont" style="gap:3rem">
-                <div class="items" style="align-content: center; background-color: #fae2cf ;">
-                    <h3
-                        style="font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%);">Vintage
-                        Vibe!</h3>
-                    <button class="but"
-                        style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);"><a
-                            href="./menu.html"
-                            style="text-decoration: none;">Take
-                            Experience</a></button>
-                </div>
-                <div class="items" style="align-content: center;  background-color: #fae2cf">
-                    <h3
-                        style="font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%);">Services
-                        for Events</h3>
-                    <button class="but"
-                        style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);"><a
-                            href="./booknow.html"
-                            style="text-decoration: none;">Book Now</a></button>
-                </div>
-                <div class="items"
-                    style="align-items: center;align-content: center;  background-color: #fae2cf ">
-                    <h3
-                        style="font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%);">Retro
-                        Delivery Subscription</h3>
-                    <button class="but"
-                        style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);"><a
-                            href="./signup.html"
-                            style="text-decoration: none;">Take
-                            Subscription</a></button>
-                </div>
-
+        <div class="first_cont">
+            <!-- First Item -->
+            <div class="items" style="text-align: center;">
+                <img src="../Images/customer-service.png" alt="Vintage Vibe" style="width: 100px; height: 100px; margin-bottom: 10px;">
+                <h3 style="font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%);">Vintage Vibe!</h3>
+                <button class="but" style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                    <a href="./menu.html" style="text-decoration: none;">Take Experience</a>
+                </button>
             </div>
+        
+            <!-- Second Item -->
+            <div class="items" style="text-align: center;">
+                <img src="../Images/booking.png" alt="Services for Events" style="width: 100px; height: 100px; margin-bottom: 10px;">
+                <h3 style="font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%);">Services for Events</h3>
+                <button class="but" style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                    <a href="./booknow.html" style="text-decoration: none;">Book Now</a>
+                </button>
+            </div>
+        
+            <!-- Third Item -->
+            <div class="items" style="text-align: center;">
+                <img src="../Images/ecommerce.png" alt="Retro Delivery Subscription" style="width: 100px; height: 100px; margin-bottom: 10px;">
+                <h3 style="font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%);">Retro Delivery Subscription</h3>
+                <button class="but" style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                    <a href="./signup.html" style="text-decoration: none;">Take Subscription</a>
+                </button>
+            </div>
+        </div>
         </div>
 
         <section class="service_container">
@@ -555,6 +557,8 @@ body{
                         style="text-decoration: none;font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">Contact</a>
                     <a href="cart.html"
                         style="text-decoration: none;font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">Cart</a>
+                        <a href="contributor.html"
+                        style="text-decoration: none;font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">Contributors</a>
                 </ul>
 
                 <ul class="footer-colums">
@@ -607,20 +611,26 @@ body{
                 </ul>
 
                 <form id="contactForm">
-                    <h3
-                        style="font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%);">Contact
-                        Us!</h3>
-                    <input type="email" id="email" name="email"
-                        placeholder="Your Email" required
-                        style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
-                    <textarea id="message" name="message"
-                        placeholder="Your Message" required
-                        style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);"></textarea>
-
-                    <button id="butt" type="submit"
-                        style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">Send
-                        Message</button>
+                    <h3 style="font-family: var(--ff-philosopher); color: hsl(203, 30%, 26%);">Contact Us!</h3>
+                
+                    <!-- Email Input with Icon -->
+                    <div style="position: relative; margin-bottom: 15px;">
+                        <i class="fas fa-envelope" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); font-size: 14px; color: hsl(208, 7%, 46%);"></i>
+                        <input type="email" id="email" name="email" placeholder="Your Email" required 
+                               style="font-family: var(--ff-poppins); color: hsl(208, 7%, 46%); padding-left: 30px; width: 100%;">
+                    </div>
+                
+                    <!-- Message Input with Icon -->
+                    <div style="position: relative; margin-bottom: 15px;">
+                        <i class="fas fa-comment" style="position: absolute; left: 10px; top: 10px; font-size: 14px; color: hsl(208, 7%, 46%);"></i>
+                        <textarea id="message" name="message" placeholder="Your Message" required 
+                                  style="font-family: var(--ff-poppins); color: hsl(208, 7%, 46%); padding-left: 30px; width: 100%;"></textarea>
+                    </div>
+                
+                    <!-- Submit Button -->
+                    <button id="butt" type="submit" style="font-family: var(--ff-poppins); color: hsl(208, 7%, 46%);">Send Message</button>
                 </form>
+                
 
             </div>
 
@@ -631,9 +641,19 @@ body{
                         Us</h4>
 
                         <div class="social-icons">
-                            <a class="fa-brands fa-facebook" href="https://facebook.com" style="color: hsl(203, 30%, 26%);"></a>
-                            <a class="fa-brands fa-instagram" href="https://instagram.com" style="color: hsl(203, 30%, 26%);"></a>
-                            <a class="fa-brands fa-x-twitter" href="https://twitter.com" style="color: hsl(203, 30%, 26%);"></a>
+
+                            <a class="fa-brands fa-facebook"
+                                href="https://facebook.com" target="_blank"></a>
+                            <a class="fa-brands fa-instagram"
+                                href="https://instagram.com"
+                                target="_blank"></a>
+                            <a class="fa-brands fa-x-twitter"
+                                href="https://twitter.com" target="_blank"></a>
+                            <a class="fa-brands fa-youtube"
+                                href="https://www.youtube.com" ></a>
+                            <a class="fa-brands fa-snapchat" 
+                                href="https://www.snapchat.com" ></a>
+
                         </div>
                     <p
                         style="margin-bottom:0;font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%);">Stay
@@ -779,6 +799,19 @@ body{
 });
     </script>
     <script src="cart.js"></script>
+    <script>
+        window.embeddedChatbotConfig = {
+        chatbotId: "dGlQ5bP-F7GodLWzgrVAx",
+        domain: "www.chatbase.co"
+        }
+        </script>
+        <script
+        src="https://www.chatbase.co/embed.min.js"
+        chatbotId="dGlQ5bP-F7GodLWzgrVAx"
+        domain="www.chatbase.co"
+        defer>
+        </script>
+    
 </body>
 
 
