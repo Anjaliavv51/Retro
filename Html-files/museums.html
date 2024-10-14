@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro Museums</title>
+    <style>
+        body {
+            background-color: hsl(20, 43%, 93%);
+            font-family: 'Arial', sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 3em;
+            margin-top: 60px;
+            color: brown;
+        }
+
+        .museum-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Ensures responsiveness */
+            gap: 30px;
+            padding: 30px;
+            justify-items: center; /* Centers the cards horizontally */
+        }
+
+        .museum-card {
+            width: 280px;
+            height: 370px;
+            background-color: #ffedd8;
+            border-radius: 20px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.4s, box-shadow 0.4s;
+            text-align: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .museum-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .museum-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-bottom: 5px solid #ffcad4;
+            transition: transform 0.4s ease;
+        }
+
+        .museum-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .museum-card p {
+            font-size: 22px;
+            margin: 10px 0 5px;
+            color: #3f3e3e;
+            font-weight: bold;
+        }
+
+        .museum-card a {
+            text-decoration: none;
+            color: #3f3e3e;
+            display: block;
+            height: 100%;
+        }
+
+        .museum-card a:hover p {
+            color: brown;
+        }
+
+        .ribbon {
+            position: absolute;
+            top: 15px;
+            left: -27px;
+            width: 120px;
+            height: 30px;
+            background-color: brown;
+            color: white;
+            text-align: center;
+            line-height: 30px;
+            font-size: 14px;
+            font-weight: bold;
+            transform: rotate(-45deg);
+        }
+
+        .museum-card:hover .ribbon {
+            background-color: brown;
+            transition: background-color 0.4s;
+        }
+
+        .title {
+            margin-top: 60px;
+        }
+
+        .price-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 6px;
+        }
+
+        .price-label {
+            font-size: 17px;
+            color: #3f3e3e;
+            margin-right: 5px;
+        }
+
+        .price {
+            font-size: 16px;
+            color: #2a9d8f;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Retro Museums</h1>
+
+    <div class="museum-container">
+        <div class="museum-card">
+            <a href="https://www.google.com/maps/place/National+Museum,+New+Delhi/@28.61181,77.2184012,17z/data=!4m15!1m8!3m7!1s0x390cfd52c71ff0eb:0x20429f292fa5eecf!2sNational+Museum,+New+Delhi!8m2!3d28.6119078!4d77.2192909!10e5!16zL20vMGMzenJq!3m5!1s0x390cfd52c71ff0eb:0x20429f292fa5eecf!8m2!3d28.6119078!4d77.2192909!16zL20vMGMzenJq?entry=ttu&g_ep=EgoyMDI0MTAwOS4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+                <img src="https://lh5.googleusercontent.com/p/AF1QipMsL2RWpWOK6iz1faIJcd_gJdEZs4n_M7gTo8Bh=w408-h408-k-no" alt="National Museum, New Delhi">
+                <p class="title">National Museum, New Delhi</p>
+                <div class="price-container">
+                    <span class="price-label">Ticket Price:</span>
+                    <span class="price">₹20</span>
+                </div>
+            </a>
+            <div class="ribbon">Featured</div>
+        </div>
+
+        <div class="museum-card">
+            <a href="https://www.google.com/maps/place/BDL+Museum+Plaza+%7C+Dr.+Bhau+Daji+Lad+Museum/@18.978994,72.8322404,17z/data=!3m1!4b1!4m6!3m5!1s0x3be7ce5b428e70af:0x79efde6c140c2e05!8m2!3d18.9789889!4d72.8348153!16s%2Fm%2F06w4mwg?entry=ttu&g_ep=EgoyMDI0MTAwOS4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+                <img src="https://lh5.googleusercontent.com/p/AF1QipPbtykRuG77_XOp52evVDv5BAa3YQvJjftv_EZR=w408-h272-k-no" alt="Dr. Bhau Daji Lad Museum, Mumbai">
+                <p class="title">Dr. Bhau Daji Lad Museum, Mumbai</p>
+                <div class="price-container">
+                    <span class="price-label">Ticket Price:</span>
+                    <span class="price">₹10</span>
+                </div>
+            </a>
+            <div class="ribbon">Popular</div>
+        </div>
+
+        <div class="museum-card">
+            <a href="https://www.google.com/maps/place/Indian+Museum/@22.5578907,88.3485519,17z/data=!3m1!4b1!4m6!3m5!1s0x3a02771160347adf:0x9fd70619f94d0bac!8m2!3d22.5578858!4d88.3511268!16zL20vMDM3NGtu?entry=ttu&g_ep=EgoyMDI0MTAwOS4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+                <img src="https://lh5.googleusercontent.com/p/AF1QipPNCfv_JgzRTqfDPkZ4shXR48NPgPbcX2PzDX3V=w408-h408-k-no" alt="Indian Museum, Kolkata">
+                <p class="title">Indian Museum, Kolkata</p>
+                <div class="price-container">
+                    <span class="price-label">Ticket Price:</span>
+                    <span class="price">₹20</span>
+                </div>
+            </a>
+            <div class="ribbon">Classic</div>
+        </div>
+
+        <div class="museum-card">
+            <a href="https://www.google.com/maps/place/Vivekananda+House/@13.0494727,80.2777625,17z/data=!3m1!4b1!4m6!3m5!1s0x3a52689cc49d64dd:0x488b6c9faaa9031!8m2!3d13.0494675!4d80.2803374!16s%2Fm%2F025w557?entry=ttu&g_ep=EgoyMDI0MTAwOS4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+                <img src="https://lh5.googleusercontent.com/p/AF1QipMBvxxqGQpCDu101Dy-UYuV-Mrg-eA4MwYiUM1q=w426-h240-k-no" alt="Vivekananda House, Chennai">
+                <p class="title">Vivekananda House, Chennai</p>
+                <div class="price-container">
+                    <span class="price-label">Ticket Price:</span>
+                    <span class="price">₹10</span>
+                </div>
+            </a>
+            <div class="ribbon">Must-Visit</div>
+        </div>
+
+        <div class="museum-card">
+            <a href="https://www.google.com/maps/place/Nehru+Science+Centre/@18.9918193,72.8181497,17z/data=!3m1!4b1!4m6!3m5!1s0x3be7b626f2261433:0xf8b02d339247653b!8m2!3d18.9918142!4d72.8207246!16s%2Fm%2F02rhsrl?entry=ttu&g_ep=EgoyMDI0MTAwOS4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+                <img src="https://lh5.googleusercontent.com/p/AF1QipPB9Yu47gjRBMSaG1rEiesBFnsAV-OwW3qtaLeD=w408-h544-k-no" alt="Nehru Science Centre, Mumbai">
+                <p class="title">Nehru Science Centre, Mumbai</p>
+                <div class="price-container">
+                    <span class="price-label">Ticket Price:</span>
+                    <span class="price">₹60</span>
+                </div>
+            </a>
+            <div class="ribbon">Explore</div>
+        </div>
+
+        <div class="museum-card">
+            <a href="https://www.google.com/maps/place/Salar+Jung+Museum/@17.371536,78.477736,17z/data=!4m10!1m2!2m1!1sSalar+Jung+Museum,+Hyderabad!3m6!1s0x3bcb9787e263d7bb:0x353b934b9b69a041!8m2!3d17.3716084!4d78.4802439!15sChxTYWxhciBKdW5nIE11c2V1bSwgSHlkZXJhYmFkWh0iG3NhbGFyIGp1bmcgbXVzZXVtIGh5ZGVyYWJhZJIBCmFydF9tdXNldW3gAQA!16zL20vMDNfMHZm?entry=ttu&g_ep=EgoyMDI0MTAwOS4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+                <img src="https://www.holidify.com/images/cmsuploads/compressed/50382227093c4ae17ef1ab_20220523165700.jpeg" alt="Salar Jung Museum, Hyderabad">
+                <p class="title">Salar Jung Museum, Hyderabad</p>
+                <div class="price-container">
+                    <span class="price-label">Ticket Price:</span>
+                    <span class="price">₹20</span>
+                </div>
+            </a>
+            <div class="ribbon">Attraction</div>
+        </div>
+
+        <div class="museum-card">
+            <a href="https://www.google.com/maps/place/Sabarmati+Ashram/@23.0615153,72.5775615,17z/data=!4m10!1m2!2m1!1sGandhi+Ashram,+Ahmedabad!3m6!1s0x395e8479e05f1901:0x16cbb1101e5729a3!8m2!3d23.0606577!4d72.5803299!15sChhHYW5kaGkgQXNocmFtLCBBaG1lZGFiYWRaGSIXZ2FuZGhpIGFzaHJhbSBhaG1lZGFiYWSSAQZhc2hyYW3gAQA!16zL20vMDRiYmNk?entry=ttu&g_ep=EgoyMDI0MTAwOS4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+                <img src="https://lh5.googleusercontent.com/p/AF1QipP6aejnuZ6ITozdmExfB-zaJOd89VevxkwbaglC=w408-h262-k-no" alt="Sabarmati Ashram, Ahmedabad">
+                <p class="title">Sabarmati Ashram, Ahmedabad</p>
+                <div class="price-container">
+                    <span class="price-label">Ticket Price:</span>
+                    <span class="price">Free</span>
+                </div>
+            </a>
+            <div class="ribbon">Educational</div>
+        </div>
+
+        <div class="museum-card">
+            <a href="https://www.google.com/maps/place/Smaranika+Tram+Museum/@22.5651862,88.347191,17z/data=!4m6!3m5!1s0x3a0277a7739ebb33:0xa73d4f0bd6295a7d!8m2!3d22.5651813!4d88.3497659!16s%2Fg%2F11csq9v9ws?entry=ttu&g_ep=EgoyMDI0MTAwOS4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+                <img src="https://lh5.googleusercontent.com/p/AF1QipN0pXG_SHjh4tElW-x8IS_fChj2WDZhnOtxn57G=w408-h306-k-no" alt="Smaranika Tram Museum, Kolkata">
+                <p class="title">Smaranika Tram Museum, Kolkata</p>
+                <div class="price-container">
+                    <span class="price-label">Ticket Price:</span>
+                    <span class="price">₹40</span>
+                </div>
+            </a>
+            <div class="ribbon">Iconic</div>
+        </div>
+</body>
+</html>
