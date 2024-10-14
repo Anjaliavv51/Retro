@@ -155,10 +155,16 @@
         height: 30px;
       }
 
+      .navbar{
+        background-color: rgba(238, 246, 253, 0.657);
+        padding:0;
+      }
+
       .navbar ul {
         overflow: hidden;
         display: flex;
         justify-content: center;
+        width:100%;
       }
 
       .navbar li {
@@ -172,6 +178,12 @@
         color: black;
         font-size: 1.3rem;
         font-family: var(--ff-philosopher);
+      }
+      .navbar li a img{
+        width:3.5rem;
+        height:3.5rem;
+        margin-top: 0;
+        margin-bottom: 0;
       }
 
       .wrapper {
@@ -530,6 +542,7 @@
     <title>Retro</title>
   </head>
   <body>
+    
     <div class="circle-container">
       <div
         class="circle"
@@ -724,13 +737,13 @@
       <header style="font-family: var(--ff-philosopher)">
         <nav class="navbar navbar-expand-lg fixed-top" id="top">
           <div class="container-fluid">
-            <a
+            <!--<a
               class="navbar-brand"
               href="../index.html"
               style="font-family: var(--ff-philosopher); color: black"
             >
               <b>Retro</b>
-            </a>
+            </a>-->
             <button
               class="navbar-toggler"
               type="button"
@@ -744,6 +757,9 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link" href="../index.html"> <img src="C:\Users\hp\Pictures\Screenshots\logo.png" width: 3.5rem ; height:3.5rem; > </a>
+              </li>
                 <li class="nav-item">
                   <a class="nav-link" href="../index.html" style="color: black"
                     >Home</a
