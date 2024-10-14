@@ -767,6 +767,7 @@
                 </div>
             </div>
     </section>
+
     <!-- footer -->
     <footer style="background-color: hsl(20, 43%, 93%);">
         <br><br><br>
@@ -782,6 +783,7 @@
                 <a href="contact.html"
                     style="text-decoration: none;font-family: var(--ff-poppins);color: black;">Contact</a>
                 <a href="cart.html" style="text-decoration: none;font-family: var(--ff-poppins);color: black;">Cart</a>
+                <a href="contributor.html" style="text-decoration: none;font-family: var(--ff-poppins);color: black;">Contributors</a>
             </ul>
 
             <ul class="footer-colums">
@@ -805,18 +807,33 @@
                 <a style="font-family: var(--ff-poppins);color: black;">Contactless Payments</a>
             </ul>
 
+<!-- Include Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+<form id="contactForm">
+    <h3 style="font-family: var(--ff-philosopher); color: hsl(357, 82%,35%); font-size: 26px; margin-bottom: 3px;">
+        Contact Us!
+    </h3>
+
+    <!-- Email Input with Icon -->
+    <div style="position: relative; margin-bottom: 15px;">
+        <i class="fas fa-envelope" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); font-size: 14px; color: hsl(208, 7%,46%);"></i>
+        <input type="email" id="email" name="email" placeholder="Your Email" required 
+               style="padding-left: 30px; width: 100%;">
+    </div>
+
+    <!-- Message Input with Icon -->
+    <div style="position: relative; margin-bottom: 15px;">
+        <i class="fas fa-comment" style="position: absolute; left: 10px; top: 10px; font-size: 14px; color: hsl(208, 7%,46%);"></i>
+        <textarea id="message" name="message" placeholder="Your Message" required 
+                  style="padding-left: 30px; width: 100%;"></textarea>
+    </div>
+
+    <!-- Submit Button -->
+    <button id="butt" type="submit" style="font-family: var(--ff-poppins);">Send Message</button>
+</form>
 
 
-            <form id="contactForm" >
-                <h3
-                    style="font-family: var(--ff-philosopher);color: hsl(357, 82%,35%);font-family: var(--ff-philosopher); font-size: 26px;
-    margin-bottom: 3px;">
-                    Contact Us!</h3>
-                <input type="email" id="email" name="email" placeholder="Your Email" required>
-                <textarea id="message" name="message" placeholder="Your Message" required></textarea>
-
-                <button id="butt" type="submit" style="font-family: var(--ff-poppins);">Send Message</button>
-            </form>
 
         </div>
 
