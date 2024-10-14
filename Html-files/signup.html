@@ -236,55 +236,35 @@ body{
         </div>
         <div class="right-login">
           <div class="card-login">
-            <h1 style="font-family: var(--ff-philosopher); color: hsl(203, 30%, 26%);">SIGN UP</h1>
+            <h1 style="font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%);">SIGN UP</h1>
             <form id="signup-form">
               <div class="textfield">
-                <label for="name" style="font-family: var(--ff-philosopher); color: black;">Name</label>
+                <label for="name" style="font-family:var(--ff-philosopher);color: black;">Name</label>
                 <input type="text" id="name" name="name" placeholder="Enter your name" required style="font-family: var(--ff-philosopher);">
                 <span id="name-error" class="error-message"></span>
               </div>
               <div class="textfield">
-                <label for="email" style="font-family: var(--ff-philosopher); color: black;">Email / Username</label>
-                <input type="email" id="email" name="email" placeholder="Enter Email / Username" required style="font-family: var(--ff-philosopher);">
+                <label for="email" style="font-family: var(--ff-philosopher);color: black;">Email / User Name</label>
+                <input type="email" id="email" name="email" placeholder="Enter Email / UserName" required style="font-family: var(--ff-philosopher);">
                 <span id="email-error" class="error-message"></span>
               </div>
-              <div class="textfield">
+
+              <div class="textfield ">
                 <label for="password">Password</label>
                 <input type="password" id="password" name="password" placeholder="Enter Password" title="Special characters are not allowed" required>
                 <span id="password-error" class="error-message"></span>
-                <span class="tooltiptext">Special characters such as /[<>"/]/ are not allowed</span>
-              </div>
+                <span class="tooltiptext">Special characters such as /[<>"/]/  are not allowed</span>
+            </div>
+
               
-              <!-- Move the buttons inside the form -->
-              <div class="btnNext">
-                <button type="submit" class="btn-login" style="font-family: var(--ff-philosopher); color: #ddd;">Register</button>
-                <button id="google-login" style="font-family: var(--ff-philosopher); color: #ddd;">Signup with Google</button>
-              </div>
             </form>
-        
-            <!-- Message container for displaying success/failure -->
-            <div class="message-container" id="message-container" style="display: none;"></div>
+            <div class="btnNext"><button type="submit" class="btn-login" style="font-family: var(--ff-philosopher);color: #ddd;">Register</button>
+              <button id="google-login" style="font-family: var(--ff-philosopher);color: #ddd;">Signup with Google</button></div>
           </div>
-        
+
           <p class="switch-link">Already have an account? <a href="login.html">Login</a></p>
         </div>
       </div>
-      <script>
-        document.getElementById('signup-form').addEventListener('submit', function(event) {
-          event.preventDefault(); // Prevents the default form submission
-          
-          // Display a success message
-          var messageContainer = document.getElementById('message-container');
-          messageContainer.innerHTML = "Registration successful!"; // Modify this text as needed
-          messageContainer.style.display = 'block';
-          messageContainer.style.color = 'green'; // Optional: Set the text color to green for success
-          
-          // Hide the message after 5 seconds
-          setTimeout(function() {
-            messageContainer.style.display = 'none';
-          }, 5000); 
-        });
-      </script>
       <script>
         const coords = { x: 0, y: 0 };
         const circles = document.querySelectorAll(".circle");
