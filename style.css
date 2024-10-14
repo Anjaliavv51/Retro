@@ -42,10 +42,11 @@ body {
 */
 .filter-container {
   margin: 20px;
+  position: relative;
 }
 
 .filter-btn, .submit-btn {
-  background-color: #007bff;
+  background-color: #ff0084;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -54,7 +55,7 @@ body {
 }
 
 .filter-btn:hover, .submit-btn:hover {
-  background-color: #0056b3;
+  background-color: blueviolet;
 }
 
 .filter-options {
@@ -62,11 +63,16 @@ body {
   margin-top: 10px;
   border: 1px solid #ddd;
   padding: 15px;
-  width: 250px;
+  width: auto;
   background-color: #f9f9f9;
+  position: absolute; /* Use absolute positioning to avoid affecting layout */
+  z-index: 1000; /* Ensure it appears above other elements */
+  top: calc(100% + 5px); /* Position below the filter button */
+  left: 0; /* Align with the left side of the filter button */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-h3 {
+h4 {
   margin: 10px 0;
 }
 
