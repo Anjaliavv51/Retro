@@ -20,8 +20,8 @@ document.getElementById('filterBtn').addEventListener('click', function() {
   document.getElementById('submitBtn').addEventListener('click', function() {
     const selectedCategories = [];
     if (document.getElementById('clothing').checked) selectedCategories.push('Clothing');
-    if (document.getElementById('electronics').checked) selectedCategories.push('Electronics');
-    if (document.getElementById('home-appliances').checked) selectedCategories.push('Home Appliances');
+    if (document.getElementById('home_decor').checked) selectedCategories.push('home_decor');
+    if (document.getElementById('food').checked) selectedCategories.push('food');
   
     const selectedPriceRange = priceRange.value;
   
