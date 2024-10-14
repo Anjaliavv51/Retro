@@ -357,8 +357,16 @@
   </div>
 
   <section class="cart-section" style="background-color: transparent;">
-    <div id="couponCode" style="font-family: var(--ff-poppins);">Use coupon code <span style="font-weight: bold;">
-        <u>3p9xLnDE</u> </span> for 30% off!</div>
+    <div id="couponCode" style="font-family: var(--ff-poppins);">
+        Use coupon code <span style="font-weight: bold;"><u>yWveBGqA</u></span> for 30% off!
+    </div>
+
+    <!-- Coupon input field -->
+    <div id="apply-coupon">
+        <label for="coupon-input" style="font-family: var(--ff-philosopher);">Enter Coupon Code:</label>
+        <input type="text" id="coupon-input" placeholder="Enter code here">
+        <button onclick="applyCoupon()" style="font-family: var(--ff-philosopher);">Apply Coupon</button>
+    </div>
 
     <div class="cart" style="background-color: transparent;font-family: var(--ff-philosopher); width: 100%;">
       <table id="cart-table">
@@ -388,15 +396,19 @@
               <div id="cart-total"><b>Total: $10.20</b></div>
             </td>
           </tr>
+          <tr>
+            <td><b>Discounted Total</b></td>
+            <td>
+              <div id="discounted-total"><b></b></div>
+            </td>
+          </tr>
         </tfoot>
-
       </table>
-
     </div>
 
     <button type="submit" onclick="applyFirstTimeDiscount()" class="butt"
       style="font-family: var(--ff-philosopher);">Order Now</button>
-  </section>
+</section>
 
   <footer>
     <div class="foot-panel2">
@@ -579,6 +591,24 @@
     });
   </script>
   <script>
+  const validCouponCode = 'yWveBGqA';
+  const discountPercentage = 0.30;
+
+  function applyCoupon() {
+      const enteredCode = document.getElementById('coupon-input').value;
+      const cartTotalElement = document.getElementById('cart-total').innerText;
+      let cartTotal = parseFloat(cartTotalElement.replace('Total: $', '')); // Extract the total
+
+      if (enteredCode === validCouponCode) {
+          const discountAmount = cartTotal * discountPercentage;
+          const discountedTotal = (cartTotal - discountAmount).toFixed(2); // Discounted total
+          document.getElementById('discounted-total').innerText = `Total after Discount: $${discountedTotal}`;
+      } else {
+          alert('Invalid Coupon Code!');
+      }
+  }
+</script>
+  <script>
     document.addEventListener("DOMContentLoaded", function () {
       const preloader = document.getElementById('preloader');
       const mainContent = document.getElementById('main-content');
@@ -593,6 +623,8 @@
     });
 
   </script>
+
+  
 </body>
 
 </html>
