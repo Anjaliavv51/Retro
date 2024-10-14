@@ -391,8 +391,6 @@ body {
 }
 
 .menu_items {
-  width: 100px;
-  height: 100px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -402,10 +400,10 @@ body {
 .menu_items .items {
   background-color: #f2f2f2;
   border: 3px solid brown;
-  padding: 25px;
   margin: 15px;
+  padding:20px;
   height: 400px;
-  width: 400px;
+  width: 300px;
   border-radius: 10px;
   text-align: center;
   font-family: "Bree Serif", serif;
