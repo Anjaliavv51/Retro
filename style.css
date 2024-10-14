@@ -391,7 +391,11 @@ body {
 }
 
 .menu_items {
+  width: 100px;
+  height: 100px;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   overflow: hidden;
 }
 
