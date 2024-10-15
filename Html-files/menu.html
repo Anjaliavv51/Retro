@@ -29,17 +29,23 @@
         rel="stylesheet">
     <link rel="stylesheet" href="../Css-files/content.css">
     <style>
-        /* Initial styling for the image */
-        .menu {
-            transition: transform 0.3s ease;
-            /* Smooth transition for the zoom effect */
-        }
+       /* Initial styling for the image */
+.menu {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Smooth transition for zoom and shadow effect */
+    transform-origin: center center;
+    /* Ensures zoom originates from the center of the image */
+    backface-visibility: hidden;
+    /* Prevents flickering */
+}
 
-        /* Zoom effect on hover */
-        .menu:hover {
-            transform: scale(1.1);
-            /* Scale the image to 110% of its original size */
-        }
+/* Zoom effect on hover */
+.menu:hover {
+    transform: scale(1.1);
+    /* Scale the image to 110% of its original size */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    /* Adds a shadow for better visual feedback */
+}
 
 
         @media (max-width: 768px) {
