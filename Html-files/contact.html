@@ -892,6 +892,16 @@ body{
 </body>
 <script>
 
+const form = document.getElementById('contact-form');
+form.addEventListener('submit', function(event) {
+    event.preventDefault();
+    // Display an alert
+    alert('Your message was sent successfully!');
+
+    // Clear the form fields
+    form.reset();
+});
+
 function redirectLogin() {
     window.location.href = "Html-files/login.html";
 }
