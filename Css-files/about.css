@@ -42,6 +42,9 @@
   }
   .navbar ul {
     overflow: hidden;
+    width:100%;
+    justify-content: space-between;
+    background-color: #ebe2e2a2;
   }
   
   .navbar li {
@@ -58,6 +61,10 @@
     text-decoration: none;
     color: white;
     font-size: 1.3rem;
+  }
+  .navbar li a img {
+    width:3.5rem;
+    height:3.5rem;
   }
   .navbarbg {
     padding: 8px 0;

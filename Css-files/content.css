@@ -58,12 +58,21 @@ body {
   overflow: hidden;
   margin: 0; /* Reset margin */
   padding: 0; /* Reset padding */
+  
+    width: 100%;         /* Ensures navbar takes up full width */
+    padding: 0;          /* Removes any padding inside the navbar */
+    margin: 0 auto;      /* Centers the navbar if it's inside a container */
+    display: flex;       /* Use flexbox for better alignment */
+    justify-content: space-between; /* Spreads items evenly */
+
+
 }
 
 .navbar li {
   float: left;
   list-style: none;
   padding: 8px 20px;
+  padding-top: 10px;;
 }
 
 .navbar li:hover {
@@ -104,8 +113,17 @@ body {
 .navbarbg li:hover {
   opacity: 0.7;
 }
+.navbar {
+    background-color: #f2e7e7b2;
+}
 
 
+.nav-item  a img{
+  width:3.5rem;
+  height:3.5rem;
+  padding:0.2%;
+  margin-top: 0;
+}
 .menu_container {
   padding: 55px 70px 30px 70px;
   background-color: hsl(20, 43%, 93%);

@@ -53,6 +53,12 @@ body {
     transition: all 0.3s ease;
 }
 
+.nav-bar-nav li a img{
+    width:3.5rem;
+    height:3.5rem;
+
+}
+
 .nav-item.dropdown .nav-link {
     text-decoration: none;
     /* No underline for dropdown toggle */
