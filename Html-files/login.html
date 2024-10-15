@@ -16,39 +16,59 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <style>
-
-      .circle{
-      z-index: 998;
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      pointer-events: none;
-      animation: colors 5s infinite;
-      position: fixed;
-      transform: translate(-50%,-50%);
+      /* General styles for the circles */
+      .circle-container {
+        position: relative;
       }
+    
+      .circle {
+        z-index: 998;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        pointer-events: none;
+        animation: colors 5s infinite;
+        position: fixed;
+        transform: translate(-50%, -50%);
+      }
+    
       .circle::before {
-      content: "";
-      position: fixed;
-      width: 50px;
-      height: 50px;
-      opacity: 0.2;
-      transform: translate(-30%,-30%);
-      border-radius: 50%;
+        content: "";
+        position: fixed;
+        width: 50px;
+        height: 50px;
+        opacity: 0.2;
+        transform: translate(-30%, -30%);
+        border-radius: 50%;
       }
-      </style>
-      <style>
-        .container {
+    
+      /* Main container */
+      .main-login {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        min-height: 100vh;
+        overflow-y: auto;
+      }
+    
+      /* Styling for left side (login info) */
+      .left-login {
+        flex: 1;
+        text-align: center;
+        padding: 20px;
+      }
+    
+      .container {
         width: 350px;
         height: 500px;
         perspective: 800px;
       }
-      
+    
       .container:hover > .card {
         cursor: pointer;
         transform: rotateY(180deg);
       }
-      
+    
       .card {
         height: 100%;
         width: 100%;
@@ -57,7 +77,7 @@
         transform-style: preserve-3d;
         border-radius: 40px;
       }
-      
+    
       .front,
       .back {
         height: 100%;
@@ -67,14 +87,14 @@
         position: absolute;
         backface-visibility: hidden;
       }
-      
+    
       .front {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
       }
-      
+    
       .back {
         background-color: #3a3a3a;
         transform: rotateY(180deg);
@@ -84,40 +104,72 @@
         align-items: center;
         gap: 5rem;
       }
-      :root{
-                  --ff-philosopher: "Philosopher", sans-serif;
-                  --ff-poppins: "Poppins", sans-serif;
-              }
-      </style>
-      <style>
-        /* Styles for the switch link */
-        .switch-link {
-          margin-top: 20px;
-          font-family: var(--ff-poppins);
-          text-align: center;
-          color: hsl(203, 30%, 26%);
+    
+
+    
+      /* Media Queries for smaller screens */
+      @media (max-width: 768px) {
+        .main-login {
+          flex-direction: column;
         }
     
-        .switch-link a {
-          color: hsl(0, 100%, 50%);
-          text-decoration: none;
-          font-weight: bold;
-          transition: color 0.3s ease;
+        .container {
+          width: 300px;
+          height: 400px;
         }
     
-        .switch-link a:hover {
-          color: hsl(203, 30%, 26%);
+        .left-login,
+        .right-login {
+          flex: unset;
+          width: 100%;
+          padding: 10px;
         }
-        .forgot-link{
-          text-decoration: none;
-          color: #3a3a3a;
-          margin-bottom: 10px;
+    
+        .card-login {
+          padding: 15px;
+          width: 100%;
         }
-        .forgot-link:hover{
-          text-decoration: underline;
-          color: #000;
+        .right-login{
+          height: 60vh;
         }
-      </style>
+    
+        .btn-login,
+        #google-login {
+          width: 100%;
+          padding: 12px;
+        }
+    
+        h1 {
+          font-size: 24px;
+        }
+      }
+    
+      @media (max-width: 480px) {
+        .container {
+          width: 250px;
+          height: 350px;
+        }
+    
+        .card-login {
+          padding: 10px;
+        }
+    
+        .textfield label {
+          font-size: 14px;
+        }
+    
+        .textfield input {
+          padding: 8px;
+        }
+    
+        .btn-login,
+        #google-login {
+          padding: 10px;
+          font-size: 14px;
+        }
+      }
+    </style>
+    
 </head>
 <body>
   <div class="circle-container">
@@ -148,10 +200,14 @@
       <div class="container">
         <div class="card">
           <div class="front" style="align-content: center;font-family: var(--ff-philosopher);">
+          <img src="../Images/Loginsave.png" alt="Icon" style="width: 150px; height: auto; margin: 20px auto 20px; display: block;">
            <b style="transform: rotate(360deg);font-size: 30px;color: hsl(203, 30%,26%);"> Login to Save your Data!</b>
           </div>
           <div class="back" style="align-content: center;font-family: var(--ff-philosopher);background-color: transparent;color: hsl(203, 30%,26%);">
-            <b style="font-size: 40px;">Login Here</b>  <br> Vinatge Collection is<br> waiting for You
+            <img src="../Images/Login.png" alt="Icon" style="width: 100px; height: auto;  display: block;">
+            <b style="font-size: 50px; margin-top: -50px;">Login Here
+            </b>
+            <b style="font-size: 20px; display: block; margin-top: -70px;">Vintage Collection is waiting for You</b>
           </div>
         </div>
       </div>
@@ -170,7 +226,7 @@
         </div>
         <button type="submit" class="btn-login" style="color: black;font-family:var(--ff-poppins);">Login</button>
         <span>or</span>
-        <button id="google-login" style="color: black;font-family:var(--ff-poppins);">Login with google</button>
+        <button id="google-login" style="color: black;font-family:var(--ff-poppins); background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48cGF0aCBkPSJNMTcuNiA5LjJsLS4xLTEuOEg5djMuNGg0LjhDMTMuNiAxMiAxMyAxMyAxMiAxMy42djIuMmgzYTguOCA4LjggMCAwIDAgMi42LTYuNnoiIGZpbGw9IiM0Mjg1RjQiIGZpbGwtcnVsZT0ibm9uemVybyIvPjxwYXRoIGQ9Ik05IDE4YzIuNCAwIDQuNS0uOCA2LTIuMmwtMy0yLjJhNS40IDUuNCAwIDAgMS04LTIuOUgxVjEzYTkgOSAwIDAgMCA4IDV6IiBmaWxsPSIjMzRBODUzIiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNNCAxMC43YTUuNCA1LjQgMCAwIDEgMC0zLjRWNUgxYTkgOSAwIDAgMCAwIDhsMy0yLjN6IiBmaWxsPSIjRkJCQzA1IiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNOSAzLjZjMS4zIDAgMi41LjQgMy40IDEuM0wxNSAyLjNBOSA5IDAgMCAwIDEgNWwzIDIuNGE1LjQgNS40IDAgMCAxIDUtMy43eiIgZmlsbD0iI0VBNDMzNSIgZmlsbC1ydWxlPSJub256ZXJvIi8+PHBhdGggZD0iTTAgMGgxOHYxOEgweiIvPjwvZz48L3N2Zz4=); background-repeat: no-repeat; background-position: 25% 50%; background-size: 30px;">Login with google</button>
         <p id="error-message" style="color: red; font-family: var(--ff-poppins);"></p>
         <a href="forgot-pass.html" class="forgot-link">Forgot Password ?</a>
         <p class="switch-link">Don’t have an account? <a href="signup.html">Sign Up</a></p>
