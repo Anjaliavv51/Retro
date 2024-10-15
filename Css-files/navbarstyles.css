@@ -58,34 +58,6 @@ body {
     /* No underline for dropdown toggle */
 }
 
-.nav-link:hover {
-    text-decoration: none;
-    /* Prevent default underline on hover */
-}
-
-.nav-link::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -5px;
-    width: 0%;
-    height: 3.5px;
-    /* Thicker underline */
-    background: transparent;
-    transition: all 0.3s ease-in-out;
-    box-shadow:
-        0 0 30px rgba(255, 159, 128, 1),
-        /* Initial glow effect with bright peach color */
-        0 0 60px rgba(255, 159, 128, 1);
-    /* Increased glow effect */
-}
-
-.nav-link:hover::after {
-    background: rgba(243, 187, 183, 1);
-    width: 100%;
-    box-shadow: 0 0 20px rgba(243, 187, 183, 1);
-}
-
 .nav-btn {
     background: none;
     border: none;
