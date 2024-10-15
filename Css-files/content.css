@@ -389,7 +389,7 @@ div.deals:hover{
 /* footer */
 .foot-panel2{
     background-color: transparent;
-    color:white;
+    /* color:white; */
     display: flex;
     justify-content: space-evenly;
 }

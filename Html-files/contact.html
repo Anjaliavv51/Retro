@@ -320,6 +320,47 @@
                 padding: 20px;
             }
         }
+
+        .foot-panel2 ul a {
+            padding: 0; /* Reset padding */
+            list-style: none; /* Remove default bullet points */
+        }
+
+        .foot-panel2 ul  a { 
+            /* /* color: black!important; */
+            text-decoration: none !important;
+            transition:transform 0.2s ease, text-decoration-color 0.2s ease; 
+            /* display: inline-block; */
+            
+
+            text-decoration: none;
+            color: #000;
+            position: relative;
+            padding-bottom: 2px;
+            
+        }
+
+        .foot-panel2 ul a::after{
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 2px;
+            background-color: brown;
+            transition: width  0.3s ease;
+            width:0;
+            
+        }
+
+        .foot-panel2 ul a:hover{
+            transform: scale(1.05);
+        }
+
+        .foot-panel2 ul a:hover::after{
+            width:100%;
+        } 
+
     </style>
 
         <style>
@@ -768,30 +809,30 @@ body{
                 <ul>
                     <p style="color: hsl(357, 82%,35%);font-family: var(--ff-philosopher);text-align: left;">Our Pages</p>
                     <a href="#" style="color: black;">Home</a>
-                    <a href="Html-files/menu.html" style="color: black;">About</a>
-                    <a href="Html-files/services.html" style="color: black;">Services</a>
-                    <a href="Html-files/contact.html" style="color: black;">Contact us</a>
-                    <a href="Html-files/cart.html" style="color: black;">Cart</a>
-                    <a href="contributor.html" style="color: black;">Contributors</a>
+                    <a href="Html-files/menu.html" >About</a>
+                    <a href="Html-files/services.html" >Services</a>
+                    <a href="Html-files/contact.html" >Contact us</a>
+                    <a href="Html-files/cart.html" >Cart</a>
+                    <a href="contributor.html" ">Contributors</a>
                 </ul>
                 <ul>
                     <p style="color: rgb(162, 16, 23);font-family: var(--ff-philosopher); text-align:left"> Exclusive Offers</p>
-                    <a href="#" style="color: black;">Retro Discounts</a>
-                    <a href="#" style="color: black;">Limited-Time Promotions</a>
-                    <a href="#" style="color: black;">Special Event Packages</a>
-                    <a href="#" style="color: black;">Membership Benefits</a>
-                    <a href="#" style="color: black;">Early Access to New Collections</a>
-                    <a href="#" style="color: black;">VIP Retro Events</a>
-                    <a href="#" style="color: black;">Personalized Culinary Experiences</a>
+                    <a href="#" >Retro Discounts</a>
+                    <a href="#" >Limited-Time Promotions</a>
+                    <a href="#" >Special Event Packages</a>
+                    <a href="#" >Membership Benefits</a>
+                    <a href="#" >Early Access to New Collections</a>
+                    <a href="#" >VIP Retro Events</a>
+                    <a href="#" >Personalized Culinary Experiences</a>
 
                 </ul>
                 <ul>
                     <p style="color: hsl(357, 82%,35%);font-family: var(--ff-philosopher);text-align:left">Payment Products</p>
-                    <a href="./Html-files/payment2.html" style="color: black;">Secure Checkout</a>
-                    <a href="./Html-files/payment2.html" style="color: black;">Credit/Debit Cards</a>
-                    <a href="./Html-files/payment2.html" style="color: black;">Online Payment</a>
-                    <a href="./Html-files/payment2.html" style="color: black;">Mobile Wallets</a>
-                    <a href="./Html-files/payment2.html" style="color: black;">Contactless Payments</a>
+                    <a href="./Html-files/payment2.html" >Secure Checkout</a>
+                    <a href="./Html-files/payment2.html" >Credit/Debit Cards</a>
+                    <a href="./Html-files/payment2.html" >Online Payment</a>
+                    <a href="./Html-files/payment2.html" >Mobile Wallets</a>
+                    <a href="./Html-files/payment2.html" >Contactless Payments</a>
                 </ul>
                 <form id="contactForm">
                     <h3 style="font-family: var(--ff-philosopher); color: hsl(357, 82%, 35%);">Contact Us!</h3>
