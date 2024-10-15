@@ -492,15 +492,23 @@ h1, h2, h3, h4, h5, h6 {
     height: 266px;
 }
 
+/* Background Animations */
+.new_footer_top .footer_bg {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 266px;
+    overflow: hidden; /* Ensure animations don't cause scrollbars */
+}
+
 .new_footer_top .footer_bg .footer_bg_one {
-    /* background: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEia0PYPxwT5ifToyP3SNZeQWfJEWrUENYA5IXM6sN5vLwAKvaJS1pQVu8mOFFUa_ET4JuHNTFAxKURFerJYHDUWXLXl1vDofYXuij45JZelYOjEFoCOn7E6Vxu0fwV7ACPzArcno1rYuVxGB7JY6G7__e4_KZW4lTYIaHSLVaVLzklZBLZnQw047oq5-Q/s16000/volks.gif") no-repeat center center; */
     width: 330px;
     height: 105px;
     background-size: 100%;
     position: absolute;
     bottom: 0;
-    left: 30%;
-    animation: myfirst 22s linear infinite;
+    right: -330px; /* Start off-screen to the right */
+    animation: moveRightToLeft 22s linear infinite;
 }
 
 .new_footer_top .footer_bg .footer_bg_two {
@@ -509,21 +517,20 @@ h1, h2, h3, h4, h5, h6 {
     height: 105px;
     background-size: 100%;
     bottom: 0;
-    left: 38%;
+    right: -330px; /* Start off-screen to the right */
     position: absolute;
-    animation: myfirst 30s linear infinite;
+    animation: moveRightToLeft 30s linear infinite;
 }
 
 /* Animation Keyframes */
-@keyframes myfirst {
-  0% {
-    left: -25%;
-  }
-  100% {
-    left: 100%;
-  }
+@keyframes moveRightToLeft {
+    0% {
+        right: -330px; /* Start from right, off-screen */
+    }
+    100% {
+        right: 100%; /* End at left side of the container */
+    }
 }
-
 
 .social-icons a {
   font-size: 1.2rem;
@@ -959,7 +966,9 @@ h1, h2, h3, h4, h5, h6 {
   domain="www.chatbase.co"
   defer>
   </script>
-
+<div class="gtranslate_wrapper"></div>
+<script>window.gtranslateSettings = {"default_language":"en","detect_browser_language":true,"wrapper_selector":".gtranslate_wrapper"}</script>
+<script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
 </body>
 
 </html>
