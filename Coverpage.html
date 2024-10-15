@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Animated Title and Explore Button</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
         * {
             margin: 0;
@@ -14,24 +15,20 @@
         body, html {
             height: 100%;
             font-family: 'Arial', sans-serif;
-        }
-
-        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             background-image: url('RETRO.png');
             background-size: cover;
             background-position: center;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+        }
+
+        .container {
             text-align: center;
-            position: relative; /* Ensure container can position children absolutely */
+            position: relative;
         }
 
         .explore-btn {
-            margin-left: 35%;
-            margin-top: 20px;
             padding: 15px 30px;
             font-size: 1.6rem;
             color: rgb(115, 45, 45);
@@ -41,7 +38,7 @@
             cursor: pointer;
             transition: all 0.3s ease-in-out;
             animation: pulse 1.5s infinite;
-            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         }
 
         .explore-btn:hover {
@@ -61,20 +58,19 @@
             }
         }
 
-        /* SVG Styles */
         svg {
-            margin-left: 35%;
-            font-family: Algerian;
             width: 100%; 
-            height: auto; /* Maintain aspect ratio */
-            max-width: 600px; /* Limit size */
+            height: auto; 
+            max-width: 600px; 
         }
+        
         svg text {
             animation: stroke 5s infinite alternate;
             stroke-width: 2;
             stroke: #582f0e;
             font-size: 100px;
         }
+        
         @keyframes stroke {
             0% {
                 fill: rgba(72,138,204,0); 
@@ -101,22 +97,57 @@
             }
         }
 
+        .small-text {
+            font-size: 1.5rem; 
+            color: rgb(136, 9, 9);
+            text-transform: uppercase;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            margin-top: 70px;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; 
+            z-index: 1; 
+            left: 0;
+            top: 0;
+            width: 100%; 
+            height: 100%; 
+            overflow: auto; 
+            background-color: rgba(0,0,0,0.4); 
+            padding-top: 60px; 
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%; 
+            max-width: 500px;
+            text-align: center;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
         @media screen and (max-width: 1095.54px) {
             svg text {
-                font-size: 100px; /* Adjust font size for smaller screens */
-               
+                font-size: 70px; /* Adjust font size for smaller screens */
             }
         }
-        .small-text {
-    font-size: 1.5rem; /* Smaller font size for "Welcome to" */
-    color: rgb(136, 9, 9);
-    text-transform: uppercase;
-    text-decoration-thickness: 50px;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    display: block;
-    margin-top: 70px;
-    margin-left: 35%;
-}
     </style>
 </head>
 <body>
@@ -129,28 +160,44 @@
             </text>
         </svg>
         
-        <button class="explore-btn" onclick="explore()">Explore</button>
+        <button class="explore-btn" aria-label="Explore Retro World" onclick="openModal()">Explore</button>
+    </div>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p>Let's explore the Retro World!</p>
+            <button onclick="redirectToHome()">Proceed to Home</button>
+        </div>
     </div>
 
     <script>
-        function explore() {
-            alert("Let's explore the Retro World!");
-             // Redirect to index.html
+        function openModal() {
+            document.getElementById("myModal").style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+        }
+
+        function redirectToHome() {
             window.location.href = "index.html";
         }
-    </script>
-    <script>
-        window.embeddedChatbotConfig = {
-        chatbotId: "dGlQ5bP-F7GodLWzgrVAx",
-        domain: "www.chatbase.co"
+
+        window.onclick = function(event) {
+            const modal = document.getElementById("myModal");
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
         }
-        </script>
-        <script
-        src="https://www.chatbase.co/embed.min.js"
-        chatbotId="dGlQ5bP-F7GodLWzgrVAx"
-        domain="www.chatbase.co"
-        defer>
-        </script>
-    
+
+        // Chatbot configuration (if needed)
+        window.embeddedChatbotConfig = {
+            chatbotId: "dGlQ5bP-F7GodLWzgrVAx",
+            domain: "www.chatbase.co"
+        };
+    </script>
+    <script src="https://www.chatbase.co/embed.min.js" defer></script>
 </body>
 </html>
