@@ -8,6 +8,11 @@ document.querySelector('.close-btn').addEventListener('click', function() {
   document.getElementById('popup').style.display = 'none';
 });
 
+document.querySelector('.popuplogo').addEventListener('click', function(event) {
+  // Redirect to the login page
+  window.location.href = 'Html-files/signup.html';  // Change to your actual login page URL
+});
+
 //email validation using a more comprehensive regex
 function validateEmail(email) {
   const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
