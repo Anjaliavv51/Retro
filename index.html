@@ -1099,13 +1099,18 @@ new google.translate.TranslateElement({
 
     <div class="app_download" style="background-color: hsl(20, 43%, 93%);">
         <h4 style="font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%);">Free Delivery!</h4>
-        <h2 style="font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%);">Download the App now!</h2>
+        <h2 class="knockout" style="font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%);">Download the App now!</h2>
         <br>
-        <p style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);text-align:left;">For best discounts and free delivery download the app now from your Google Play Store or App Store.</p>
-        <a href="https://play.google.com/store/games?device=windows"><img src="./Images/get_it_on_google_play_store.png" class="app-download-img"
-                alt="Get it on Google Play Store"></a>
-        <a href="https://www.apple.com/in/app-store/"><img src="./Images/download-on-the-app-store.png" class="app-download-img"
-                alt="Download on the Apple App Store"></a>
+        <p style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);text-align:center;">For best discounts and free delivery download the app now from your Google Play Store or App Store.</p>
+        <div style="text-align: center;">
+            <a href="https://play.google.com/store/games?device=windows">
+                <img src="./Images/get_it_on_google_play_store.png" class="app-download-img" alt="Get it on Google Play Store" style="margin: 0 10px;">
+            </a>
+            <a href="https://www.apple.com/in/app-store/">
+                <img src="./Images/download-on-the-app-store.png" class="app-download-img" alt="Download on the Apple App Store" style="margin: 0 10px;">
+            </a>
+        </div>
+        
 
     </div>
 
@@ -1114,57 +1119,68 @@ new google.translate.TranslateElement({
             <div class="foot-panel2" style="background-color:hsl(20, 43%, 93%);font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
                 <ul>
                     <p style="color: hsl(357, 82%,35%);font-family: var(--ff-philosopher);text-align: left;">Our Pages</p>
+<ul>
+    <a href="#" class="hover-underline-animation" style="color: black;">Home</a>
+    <br>
+    <a href="Html-files/menu.html" class="hover-underline-animation" style="color: black;">About</a>
+    <br>
+    <a href="Html-files/services.html" class="hover-underline-animation" style="color: black;">Services</a>
+    <br>
+    <a href="Html-files/contact.html" class="hover-underline-animation" style="color: black;">Contact us</a>
+    <br>
+    <a href="Html-files/cart.html" style="color: black;">Cart</a>
+    <br>
+    <a href="Html-files/contributor.html" style="color: black;">Contributors</a>
+</ul>
 
-                    <a href="#" >Home</a>
-                    <a href="Html-files/menu.html" >About</a>
-                    <a href="Html-files/services.html" >Services</a>
-                    <a href="Html-files/contact.html" >Contact us</a>
-                    <a href="Html-files/cart.html" >Cart</a>
-                    <a href="Html-files/reviews.html">Share Experience</a>
-                </ul>
-                <ul>
-                    <p style="color: hsl(357, 82%,35%);font-family: var(--ff-philosopher); text-align:left"> Exclusive Offers</p>
-                    <a href="#" >Retro Discounts</a>
-                    <a href="#" >Limited-Time Promotions</a>
-                    <a href="#" >Special Event Packages</a>
-                    <a href="#" >Membership Benefits</a>
-                    <a href="#" >Early Access to New Collections</a>
-                    <a href="#" >VIP Retro Events</a>
-                    <a href="#" >Personalized Culinary Experiences</a>
-     
+<ul>
+    <p style="color: hsl(357, 82%,35%);font-family: var(--ff-philosopher); text-align:left">Exclusive Offers</p>
+    <a href="#" class="hover-underline-animation" style="color: black;">Retro Discounts</a>
+    <br>
+    <a href="#" class="hover-underline-animation" style="color: black;">Limited-Time Promotions</a>
+    <br>
+    <a href="#" class="hover-underline-animation" style="color: black;">Special Event Packages</a>
+    <br>
+    <a href="#" class="hover-underline-animation" style="color: black;">Membership Benefits</a>
+    <br>
+    <a href="#" class="hover-underline-animation" style="color: black;">Early Access to New Collections</a>
+    <br>
+    <a href="#" class="hover-underline-animation" style="color: black;">VIP Retro Events</a>
+    <br>
+    <a href="#" class="hover-underline-animation" style="color: black;">Personalized Culinary Experiences</a>
+</ul>
 
-                </ul>
-                <ul>
-                    <p style="color: hsl(357, 82%,35%);font-family: var(--ff-philosopher);text-align:left">Payment Products</p>
-                    <a href="./Html-files/payment2.html" >Secure Checkout</a>
-                    <a href="./Html-files/payment2.html" >Credit/Debit Cards</a>
-                    <a href="./Html-files/payment2.html" >Online Payment</a>
-                    <a href="./Html-files/payment2.html" >Mobile Wallets</a>
-                    <a href="./Html-files/payment2.html" >Contactless Payments</a>
-                </ul>
-                <form id="contactForm">
-                    <h3 style="font-family: var(--ff-philosopher); color: hsl(357, 82%, 35%);">Contact Us!</h3>
-                
-                    <div style="position: relative; margin-bottom: 15px;">
-                        <i class="fas fa-envelope" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); font-size: 14px; color: gray;"></i>
-                        <input type="email" id="email" name="email" placeholder="Your Email" required 
-                               style="padding-left: 30px;">
-                    </div>
-                
-                    <div style="position: relative; margin-bottom: 15px;">
-                        <i class="fas fa-comment" style="position: absolute; left: 10px; top: 10px; font-size: 14px; color: gray;"></i>
-                        <textarea id="message" name="message" placeholder="Your Message" required 
-                                  style="padding-left: 30px;"></textarea>
-                    </div>
-                
-                    <button id="butt" type="submit" style="font-family: ui-serif;">Send Message</button>
-                </form>
-                
-                
-                
-                  
-                
+<ul>
+    <p style="color: hsl(357, 82%,35%);font-family: var(--ff-philosopher); text-align:left">Payment Products</p>
+    <a href="./Html-files/payment2.html" class="hover-underline-animation" style="color: black;">Secure Checkout</a>
+    <br>
+    <a href="./Html-files/payment2.html" class="hover-underline-animation" style="color: black;">Credit/Debit Cards</a>
+    <br>
+    <a href="./Html-files/payment2.html" class="hover-underline-animation" style="color: black;">Online Payment</a>
+    <br>
+    <a href="./Html-files/payment2.html" class="hover-underline-animation" style="color: black;">Mobile Wallets</a>
+    <br>
+    <a href="./Html-files/payment2.html" class="hover-underline-animation" style="color: black;">Contactless Payments</a>
+</ul>
 
+<form id="contactForm">
+    <h3 style="font-family: var(--ff-philosopher); color: hsl(357, 82%, 35%);">Contact Us!</h3>
+
+    <div style="position: relative; margin-bottom: 15px;">
+        <i class="fas fa-envelope" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); font-size: 14px; color: gray;"></i>
+        <input type="email" id="email" name="email" class="textbox-input" placeholder="Your Email" required style="padding-left: 30px;">
+    </div>
+    <div style="position: relative; margin-bottom: 15px;">
+        <i class="fas fa-comment" style="position: absolute; left: 10px; top: 10px; font-size: 14px; color: gray;"></i>
+        <textarea id="message" name="message" class="textbox-input" placeholder="Your Message" required style="padding-left: 30px;"></textarea>
+    </div>
+
+    <button id="butt" type="submit" style="font-family: ui-serif;">Send Message</button>
+</form>
+
+    <button id="butt" type="submit" class="glow-on-hover" style="font-family: ui-serif;">Send Message</button>
+</form>      
+                
             </div>
 
 
