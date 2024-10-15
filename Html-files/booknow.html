@@ -66,16 +66,14 @@
             padding: 0.5em 0;
         }
         .gallery {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            gap: 1em;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 3 columns with a minimum size of 300px */
+            gap: 3rem;
         }
         .gallery .item {
             border: 1px solid #ddd;
             border-radius: 5px;
             overflow: hidden;
-            width: 23%;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             transition: transform 0.2s;
             text-align: center;
