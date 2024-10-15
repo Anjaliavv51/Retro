@@ -667,196 +667,118 @@ body{
 <br><br><br>
 <br><br><br>
     <section>
-        <div class="position-relative overflow-hidden p-0 m-0" style="background-color: transparent;">
+        <section class="contact-section" style="background-color: transparent;">
             <div class="container">
+                <!-- Header -->
                 <div class="text-center mt-5">
-                    <h1 style="color: hsl(357, 53%, 8%); font-family: Tahoma, sans-serif;">Feel Free to Contact Us!</h1>
-                </div><br>
-
+                    <h1 style="color: hsl(357, 53%, 8%); font-family: Tahoma, sans-serif;">
+                        Feel Free to Contact Us!
+                    </h1>
+                </div>
+                <br>
+        
                 <div class="row mt-4">
                     <!-- Left Column - Contact Form -->
                     <div class="col-lg-7">
-                        <div class="card mt-2 mx-auto mb-5 p-4"
-                            style="background-color: transparent; border: 1px solid black;">
-                            <div class="card-body" style="background-color: transparent;">
-                                <div class="container" style="background-color: transparent;">
-                                    <form action="/submit" method="POST" id="contact-form" role="form">
-                                        <div class="controls">
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <div class="form-group">
-                                                        <label for="form_email" style="font-family: Georgia;">Email
-                                                            *</label>
-                                                        <div class="input-icon">
-                                                            <i class="fas fa-envelope"></i>
-                                                            <input id="form_email" type="email" name="email"
-                                                                class="form-control"
-                                                                placeholder="Please enter your email*"
-                                                                required="required"
-                                                                data-error="Valid Email is required.">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <div class="form-group">
-                                                        <label for="form_phone" style="font-family: Georgia;">Phone
-                                                            number *</label>
-                                                        <div class="input-icon">
-                                                            <i class="fas fa-phone"></i>
-                                                            <input id="form_phone" type="tel" name="phone"
-                                                                class="form-control"
-                                                                placeholder="Please enter your phone number*"
-                                                                required="required" pattern="[0-9]{10}"
-                                                                data-error="Phone number is required.">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div><br>
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <div class="form-group">
-                                                        <label for="form_email" style="font-family: Georgia;">Name
-                                                            *</label>
-                                                        <div class="input-icon">
-                                                            <i class="fas fa-user"></i>
-                                                            <input id="form_name" type="text" name="name"
-                                                                class="form-control"
-                                                                placeholder="Please enter your name*"
-                                                                required="required" data-error="Name is required.">
-                                                        </div>
-
-  
-
-<section>
-    <div class="position-relative overflow-hidden p-0 m-0" style="background-color: transparent;">
-        <div class="container">
-            <div class="text-center mt-5">
-                <h1 style="color: hsl(357, 53%, 8%); font-family: Tahoma, sans-serif;">Feel Free to Contact Us!</h1>
-            </div><br>
-
-            <div class="row mt-4">
-                <!-- Left Column - Contact Form -->
-                <div class="col-lg-7">
-                    <div class="card mt-2 mx-auto mb-5 p-4" style="background-color: transparent; border: 1px solid black;">
-                        <div class="card-body" style="background-color: transparent;">
-                            <div class="container" style="background-color: transparent;">
-                                <form action="" method="POST" id="contact-form" role="form">
+                        <div class="card mt-2 mx-auto mb-5 p-4" style="background-color: transparent; border: 1px solid black;">
+                            <div class="card-body">
+                                <form action="/submit" method="POST" id="contact-form" role="form">
                                     <div class="controls">
+                                        <!-- Name and Email Fields -->
                                         <div class="row">
-                                            <div class="col-md-6">
-                                               <div class="form-group"
-
-                                                    <label for="form_email" style="font-family: Georgia;">Name *</label>
-                                                    <div class="input-icon">
-                                                        <i class="fas fa-user"></i>
-                                                        <input id="form_email" type="email" name="email" class="form-control"
-                                                            placeholder="     Enter your Name" required="required"
-                                                            data-error="Name is required.">
-
-                                                    
-                                                 </div>
-                                             </div>
+                                            <!-- Name Field -->
                                             <div class="col-md-6">
                                                 <div class="form-group">
-
+                                                    <label for="form_name" style="font-family: Georgia;">Name *</label>
+                                                    <div class="input-icon">
+                                                        <i class="fas fa-user"></i>
+                                                        <input id="form_name" type="text" name="name" class="form-control"
+                                                            placeholder="Please enter your name*" required
+                                                            data-error="Name is required.">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Email Field -->
+                                            <div class="col-md-6">
+                                                <div class="form-group">
                                                     <label for="form_email" style="font-family: Georgia;">Email *</label>
                                                     <div class="input-icon">
                                                         <i class="fas fa-envelope"></i>
                                                         <input id="form_email" type="email" name="email" class="form-control"
-                                                            placeholder="     Enter your email" required="required"
+                                                            placeholder="Please enter your email*" required
                                                             data-error="Valid Email is required.">
-                                                
-                                                    
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div><br>
+                                        </div>
+                                        <br>
+                                        <!-- Phone Number Field -->
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label for="form_lastname" style="font-family: Georgia;">Phone number *</label>
+                                                    <label for="form_phone" style="font-family: Georgia;">Phone Number *</label>
                                                     <div class="input-icon">
-
                                                         <i class="fas fa-phone"></i>
-                                                        <input id="form_lastname" type="text" name="surname" class="form-control"
-                                                            placeholder="      Enter your Phone number" required="required"
-                                                            data-error="  Phone number is required.">
-                                                        
-
+                                                        <input id="form_phone" type="tel" name="phone" class="form-control"
+                                                            placeholder="Please enter your phone number*" required pattern="[0-9]{10}"
+                                                            data-error="Valid phone number is required.">
                                                     </div>
                                                 </div>
-                                            </div><br>
-                                            <div class="row">
-                                                <div class="col-md-12">
-                                                    <div class="form-group">
-                                                        <label for="form_message" style="font-family: Georgia;">Message
-                                                            *</label>
-
-                                                        <textarea id="form_message" name="message" class="form-control"
- features-branch
-                                                            placeholder="Write your message here."
-                                                            style="height: 100px; width: 100%;" required="required"
-
-                                                            placeholder="Write your message here." style="height: 180px; width: 70%;" required="required"
- main
-                                                            data-error="Please, leave us a message."></textarea>
-
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-4 mt-4">
-                                                    <input type="submit" class="btn btn-send btn-block"
-                                                        value="Send Message"
-                                                        style="background-color: #ffc1b7; color: black; text-align: center; font-family: var(--ff-philosopher); padding: 12px 0; border: 1px solid black; height: 50px; line-height: 26px;">
-                                                </div>
- features-branch
-
-                                            </div>
-                                            <div class="col-md-4 mt-4">
-                                                <input type="submit" class="btn btn-send btn-block"
-                                                    value="Send Message" style="background-color: #ffc1b7; color: black; text-align: center; font-family: var(--ff-philosopher); border: 1px solid black; height: 50px; line-height: 10px; ">
- main
                                             </div>
                                         </div>
-                                    </form>
-                                </div>
+                                        <br>
+                                        <!-- Message Field -->
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label for="form_message" style="font-family: Georgia;">Message *</label>
+                                                    <textarea id="form_message" name="message" class="form-control"
+                                                        placeholder="Write your message here." style="height: 100px;" required
+                                                        data-error="Please, leave us a message."></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <!-- Submit Button -->
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <input type="submit" class="btn btn-send btn-block"
+                                                    value="Send Message"
+                                                    style="background-color: #ffc1b7; color: black; text-align: center; font-family: 'Philosopher', sans-serif; padding: 12px 0; border: 1px solid black; height: 50px;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>
-
+        
                     <!-- Right Column - Google Maps -->
                     <div class="col-lg-5">
-                        <center>
-                            <iframe id="if"
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3686.5834653201455!2d88.40974607348684!3d22.482281936278092!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0273c5411d60d7%3A0x5d6e57763593194b!2sSouthern%20Cleve%20Housing%2C%2012%2C%20Bhagat%20Singh%20Nagar%2C%20Nayabad%2C%20Kolkata%2C%20West%20Bengal%20700150!5e0!3m2!1sen!2sin!4v1716043813992!5m2!1sen!2sin"
-                                style="border:0; width: 100%; height: 440px;" allowfullscreen="" loading="lazy"
-                                referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        </center>
+                        <iframe id="map"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3686.5834653201455!2d88.40974607348684!3d22.482281936278092!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0273c5411d60d7%3A0x5d6e57763593194b!2sSouthern%20Cleve%20Housing%2C%2012%2C%20Bhagat%20Singh%20Nagar%2C%20Nayabad%2C%20Kolkata%2C%20West%20Bengal%20700150!5e0!3m2!1sen!2sin!4v1716043813992!5m2!1sen!2sin"
+                            style="border:0; width: 100%; height: 440px;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
             </div>
-            <br><br>
-        </div>
-    </section>
-
+        </section>
+        
     <!-- CSS for the icon and border radius -->
-
-
-
     <div class="footer" style="background-color: hsl(20, 43%, 93%);">
-
         <footer>
-            <div class="foot-panel2"
-                style="background-color:hsl(20, 43%, 93%);font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+            <div class="foot-panel2" style="background-color:hsl(20, 43%, 93%);font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
                 <ul>
-                    <p style="color: hsl(357, 82%,35%);font-family: var(--ff-philosopher);">Our Pages</p>
+                    <p style="color: hsl(357, 82%,35%);font-family: var(--ff-philosopher);text-align: left;">Our Pages</p>
                     <a href="#" style="color: black;">Home</a>
                     <a href="Html-files/menu.html" style="color: black;">About</a>
                     <a href="Html-files/services.html" style="color: black;">Services</a>
                     <a href="Html-files/contact.html" style="color: black;">Contact us</a>
                     <a href="Html-files/cart.html" style="color: black;">Cart</a>
+                    <a href="contributor.html" style="color: black;">Contributors</a>
                 </ul>
-
                 <ul>
-                    <p style="color: hsl(357, 82%,35%);font-family: var(--ff-philosopher);"> Exclusive Offers</p>
+                    <p style="color: rgb(162, 16, 23);font-family: var(--ff-philosopher); text-align:left"> Exclusive Offers</p>
                     <a href="#" style="color: black;">Retro Discounts</a>
                     <a href="#" style="color: black;">Limited-Time Promotions</a>
                     <a href="#" style="color: black;">Special Event Packages</a>
@@ -866,233 +788,207 @@ body{
                     <a href="#" style="color: black;">Personalized Culinary Experiences</a>
 
                 </ul>
-
                 <ul>
-                    <p style="color: hsl(357, 82%,35%);font-family: var(--ff-philosopher);">Payment Products</p>
+                    <p style="color: hsl(357, 82%,35%);font-family: var(--ff-philosopher);text-align:left">Payment Products</p>
                     <a href="./Html-files/payment2.html" style="color: black;">Secure Checkout</a>
                     <a href="./Html-files/payment2.html" style="color: black;">Credit/Debit Cards</a>
                     <a href="./Html-files/payment2.html" style="color: black;">Online Payment</a>
                     <a href="./Html-files/payment2.html" style="color: black;">Mobile Wallets</a>
                     <a href="./Html-files/payment2.html" style="color: black;">Contactless Payments</a>
                 </ul>
-
-
-                <div class="row">
-                    <div class="col-12">
-                        <form id="contactForm">
-
- features-branch
-                            <h3
-                                style="font-family: var(--ff-philosopher);color: hsl(357, 82%,35%);font-family: var(--ff-philosopher);">
-                                Contact Us!</h3>
-
-<div class="row">
-    <div class="col-12">
-        <form id="contactForm" style="color: black; border: 1px solid #ccc; padding: 20px; border-radius: 10px; width: 100%; margin-left: auto;">
-            <h3 style="text-align: center; margin-bottom: 15px;">Contact Us!</h3>
-            
-            <!-- Email Input -->
-            <input type="email" id="email" name="email" placeholder="Your Email" required 
-                   style="width: 100%; padding: 8px; margin-bottom: 10px; border-radius: 10px; border: 1px solid #ccc;">
-
-            <!-- Message Textarea -->
-            <textarea id="message" name="message" placeholder="Your Message" required 
-                      style="width: 100%; padding: 8px; margin-bottom: 10px; border-radius: 10px; border: 1px solid #ccc; height: 100px;"></textarea>
-
-            <!-- Submit Button -->
-            <button id="butt" type="submit" 
-                    style="width: 100%; padding: 10px; background-color: hsl(357, 82%,35%); color: black; border: 1px; border-radius: 10px; cursor: pointer;">
-                Send Message
-            </button>
-        </form>
-    </div>
-</div>
- main
-
-                            <input type="email" id="email" name="email" placeholder="Your Email" required>
-
-                            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
-
-                            <button id="butt" type="submit" style="font-family: Garamond;">Send Message</button>
-                        </form>
+                <form id="contactForm">
+                    <h3 style="font-family: var(--ff-philosopher); color: hsl(357, 82%, 35%);">Contact Us!</h3>
+                
+                    <div style="position: relative; margin-bottom: 15px;">
+                        <i class="fas fa-envelope" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); font-size: 14px; color: gray;"></i>
+                        <input type="email" id="email" name="email" placeholder="Your Email" required 
+                               style="padding-left: 30px;">
                     </div>
-                </div>
+                
+                    <div style="position: relative; margin-bottom: 15px;">
+                        <i class="fas fa-comment" style="position: absolute; left: 10px; top: 10px; font-size: 14px; color: gray;"></i>
+                        <textarea id="message" name="message" placeholder="Your Message" required 
+                                  style="padding-left: 30px;"></textarea>
+                    </div>
+                
+                    <button id="butt" type="submit" style="font-family: ui-serif;">Send Message</button>
+                </form>
+                
+                
+                
+                  
+                
 
-
-
-
- features-branch
             </div>
 
-
-        <div class="foot_panel4" style="color: black;background-color: transparent;">
-            <div class="pages" style="background-color: transparent;">
-                <h3>Follow Us</h3>
-
-                <div class="social-icons">
-                    <a class="fa-brands fa-facebook" href="https://facebook.com" style="color: hsl(203, 30%, 26%);"></a>
-                    <a class="fa-brands fa-instagram" href="https://instagram.com" style="color: hsl(203, 30%, 26%);"></a>
-                    <a class="fa-brands fa-x-twitter" href="https://twitter.com" style="color: hsl(203, 30%, 26%);"></a>
-                </div>
-                <p style="margin-bottom:0;">Stay connected with us on social media for the latest updates, recipes, and foodie adventures.
-                </p>
-                <div class="copyright" style="background-color: transparent;">
- main
 
             <div class="foot_panel4" style="background-color: transparent;">
                 <div class="pages">
                     <h4 style="font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%);">Follow Us</h4>
 
-                    <div class="social-icons" style="background-color: hsl(20, 43%, 93%);">
-                        <a class="fa-brands fa-facebook" href="https://facebook.com"
-                            style="color: hsl(203, 30%, 26%);"></a>
-                        <a class="fa-brands fa-instagram" href="https://instagram.com"
-                            style="color: hsl(203, 30%, 26%);"></a>
-                        <a class="fa-brands fa-x-twitter" href="https://twitter.com"
-                            style="color: hsl(203, 30%, 26%);"></a>
+                    <div class="social-icons">
+
+
+                        <a class="fa-brands fa-facebook" href="https://facebook.com" ></a>
+                        <a class="fa-brands fa-instagram" href="https://instagram.com" ></a>
+                        <a class="fa-brands fa-x-twitter" href="https://twitter.com" ></a>
+                        <a class="fa-brands fa-youtube"   href="https://www.youtube.com" ></a>
+                        <a class="fa-brands fa-snapchat"  href="https://www.snapchat.com" ></a>
+
                     </div>
-                    <p
-                        style="font-family: var(--ff-philosopher);background-color: hsl(20, 43%, 93%);color: hsl(203, 30%, 26%);margin-bottom:0;">
-                        Stay connected with us on social media for the latest updates, latest collection, and vintage
-                        adventures.
+                    <p style="font-family: var(--ff-philosopher);background-color: hsl(20, 43%, 93%);color: hsl(203, 30%, 26%);margin-bottom:0;">Stay connected with us on social media for the latest updates, latest collection, and vintage adventures.
                     </p>
-                    <div class="copyright"
-                        style="font-family: var(--ff-philosopher);background-color: hsl(20, 43%, 93%);color: black;">
+                    <div class="copyright" style="font-family: var(--ff-philosopher);background-color: hsl(20, 43%, 93%);color: black;">
 
                         &copy; 2024 Retro . All Rights Reserved. | Developed by <span id="author">
-                            <a href="https://www.linkedin.com" target="_blank" style="text-decoration: none;">Retro
-                                Team</a>
+                            <a href="https://www.linkedin.com" target="_blank" style="text-decoration: none;">Retro Team</a>
                     </div>
-
-
-
-                </div>
-                <div>
-                    <button id="sr" style="z-index: 1000;">
+                    <div>
+                        <button id="sr" style="z-index: 1000; display: block;">
                         <div class="circle1">
-                            <svg id="back-to-top" xmlns="http://www.w3.org/2000/svg" width="30" height="30"
-                                fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
-                                <path
-                                    d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z">
-                                </path>
-                            </svg>
+                          <svg id="back-to-top" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
+                            <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z"></path>
+                          </svg>
                         </div>
-                    </button>
+                        </button>
+                    </div>
                 </div>
-            </div>
         </footer>
-    </div>
-    <script>
-        const coords = { x: 0, y: 0 };
-        const circles = document.querySelectorAll(".circle");
-
-        const colors = [
-            "#ffb56b",
-            "#fdaf69",
-            "#f89d63",
-            "#f59761",
-            "#ef865e",
-            "#ec805d",
-            "#e36e5c",
-            "#df685c",
-            "#d5585c",
-            "#d1525c",
-            "#c5415d",
-            "#c03b5d",
-            "#b22c5e",
-            "#ac265e",
-            "#9c155f",
-            "#950f5f",
-            "#830060",
-            "#7c0060",
-            "#680060",
-            "#60005f",
-            "#48005f",
-            "#3d005e"
-        ];
-
-        circles.forEach(function (circle, index) {
-            circle.x = 0;
-            circle.y = 0;
-            circle.style.backgroundColor = colors[index % colors.length];
-        });
-
-        window.addEventListener("mousemove", function (e) {
-            coords.x = e.clientX;
-            coords.y = e.clientY;
-
-        });
-
-        function animateCircles() {
-
-            let x = coords.x;
-            let y = coords.y;
-
-            circles.forEach(function (circle, index) {
-                circle.style.left = x - 12 + "px";
-                circle.style.top = y - 12 + "px";
-
-                circle.style.scale = (circles.length - index) / circles.length;
-
-                circle.x = x;
-                circle.y = y;
-
-                const nextCircle = circles[index + 1] || circles[0];
-                x += (nextCircle.x - x) * 0.3;
-                y += (nextCircle.y - y) * 0.3;
-            });
-
-            requestAnimationFrame(animateCircles);
-        }
-
-        animateCircles();
-    </script>
-    <script>
-        function redirectLogin() {
-            window.location.href = "Html-files/login.html";
-        }
-        function redirectSignup() {
-            window.location.href = "Html-files/signup.html";
-        }
-
-        const scrollToTopBtn = document.getElementById("sr");
-
-        window.onscroll = function () {
-            scrollFunction();
-        };
-
-        function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                scrollToTopBtn.style.display = "block";
-            } else {
-                scrollToTopBtn.style.display = "none";
-            }
-        }
-
-        scrollToTopBtn.addEventListener("click", function () {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-        });
-    </script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const preloader = document.getElementById('preloader');
-            const mainContent = document.getElementById('main-content');
-
-            window.addEventListener('load', function () {
-                setTimeout(function () {
-                    preloader.classList.add('hidden');
-                    mainContent.classList.remove('hidden');
-                    mainContent.classList.add('visible');
-                }, 3000);
-            });
-        });
-    </script>
-
-   
-
-    <script src="cart.js"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 </body>
+<script>
+
+function redirectLogin() {
+    window.location.href = "Html-files/login.html";
+}
+function redirectSignup() {
+    window.location.href = "Html-files/signup.html";
+}
+
+ // Get the button element
+const scrollToTopBtn = document.getElementById("sr");
+
+window.onscroll = function() {
+scrollFunction();
+};
+
+function scrollFunction() {
+if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+scrollToTopBtn.style.display = "block";
+} else {
+scrollToTopBtn.style.display = "none";
+}
+}
+scrollToTopBtn.addEventListener("click", function() {
+document.body.scrollTop = 0;
+document.documentElement.scrollTop = 0;
+});
+</script>
+<script>
+
+const coords = { x: 0, y: 0 };
+const circles = document.querySelectorAll(".circle");
+
+const colors = [
+  "#ffb56b",
+  "#fdaf69",
+  "#f89d63",
+  "#f59761",
+  "#ef865e",
+  "#ec805d",
+  "#e36e5c",
+  "#df685c",
+  "#d5585c",
+  "#d1525c",
+  "#c5415d",
+  "#c03b5d",
+  "#b22c5e",
+  "#ac265e",
+  "#9c155f",
+  "#950f5f",
+  "#830060",
+  "#7c0060",
+  "#680060",
+  "#60005f",
+  "#48005f",
+  "#3d005e"
+];
+
+circles.forEach(function (circle, index) {
+  circle.x = 0;
+  circle.y = 0;
+  circle.style.backgroundColor = colors[index % colors.length];
+});
+
+window.addEventListener("mousemove", function (e) {
+  coords.x = e.clientX;
+  coords.y = e.clientY;
+
+});
+
+function animateCircles() {
+
+  let x = coords.x;
+  let y = coords.y;
+
+  circles.forEach(function (circle, index) {
+    circle.style.left = x - 2 + "px";
+    circle.style.top = y - 2 + "px";
+
+    circle.style.scale = (circles.length - index) / circles.length;
+
+    circle.x = x;
+    circle.y = y;
+
+    const nextCircle = circles[index + 1] || circles[0];
+    x += (nextCircle.x - x) * 0.3;
+    y += (nextCircle.y - y) * 0.3;
+  });
+
+  requestAnimationFrame(animateCircles);
+}
+
+animateCircles();
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+const preloader = document.getElementById('preloader');
+const mainContent = document.getElementById('main-content');
+
+// Listen for the window load event
+window.addEventListener('load', function() {
+    setTimeout(function() {
+        preloader.classList.add('hidden');
+        mainContent.classList.remove('hidden');
+        mainContent.classList.add('visible');
+    }, 3000); 
+});
+});
+
+</script>
+<script>
+window.onscroll = () => {
+document.querySelector(".mountain").style.marginTop = scrollY + "px";
+
+document.querySelector(".trees").style.marginTop = scrollY / 1.5 + "px";
+
+document.querySelector(".stars").style.marginTop = scrollY * 2 + "px";
+
+document.querySelector(".stars").style.marginRight = scrollY / 2 + "px";
+
+document.querySelector(".moon").style.transform = "rotate(-" + (scrollY / 5.5) + "deg)";
+
+document.querySelector(".Home h1").style.marginTop = scrollY + "px";
+
+document.querySelector(".Home h1").style.opacity = (200 - scrollY) / 200;
+};
+</script>
+    
+    <script src="cart.js"></script>
+    
+    
+
+      
 
 </html>

@@ -108,6 +108,15 @@
         .switch-link a:hover {
           color: hsl(203, 30%, 26%);
         }
+        .forgot-link{
+          text-decoration: none;
+          color: #3a3a3a;
+          margin-bottom: 10px;
+        }
+        .forgot-link:hover{
+          text-decoration: underline;
+          color: #000;
+        }
       </style>
 </head>
 <body>
@@ -139,7 +148,7 @@
       <div class="container">
         <div class="card">
           <div class="front" style="align-content: center;font-family: var(--ff-philosopher);">
-           <b style="transform: rotate(270deg);font-size: 30px;color: hsl(203, 30%,26%);"> Login to Save your Data!</b>
+           <b style="transform: rotate(360deg);font-size: 30px;color: hsl(203, 30%,26%);"> Login to Save your Data!</b>
           </div>
           <div class="back" style="align-content: center;font-family: var(--ff-philosopher);background-color: transparent;color: hsl(203, 30%,26%);">
             <b style="font-size: 40px;">Login Here</b>  <br> Vinatge Collection is<br> waiting for You
@@ -160,9 +169,10 @@
           <input required type="password" id="password" name="password" placeholder="Enter Password" style="font-family:var(--ff-poppins);">
         </div>
         <button type="submit" class="btn-login" style="color: black;font-family:var(--ff-poppins);">Login</button>
-        <button id="google-login" style="color: black;font-family:var(--ff-poppins);">Login with google</button>
+        <span>or</span>
+        <button id="google-login" style="color: black;font-family:var(--ff-poppins); background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48cGF0aCBkPSJNMTcuNiA5LjJsLS4xLTEuOEg5djMuNGg0LjhDMTMuNiAxMiAxMyAxMyAxMiAxMy42djIuMmgzYTguOCA4LjggMCAwIDAgMi42LTYuNnoiIGZpbGw9IiM0Mjg1RjQiIGZpbGwtcnVsZT0ibm9uemVybyIvPjxwYXRoIGQ9Ik05IDE4YzIuNCAwIDQuNS0uOCA2LTIuMmwtMy0yLjJhNS40IDUuNCAwIDAgMS04LTIuOUgxVjEzYTkgOSAwIDAgMCA4IDV6IiBmaWxsPSIjMzRBODUzIiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNNCAxMC43YTUuNCA1LjQgMCAwIDEgMC0zLjRWNUgxYTkgOSAwIDAgMCAwIDhsMy0yLjN6IiBmaWxsPSIjRkJCQzA1IiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNOSAzLjZjMS4zIDAgMi41LjQgMy40IDEuM0wxNSAyLjNBOSA5IDAgMCAwIDEgNWwzIDIuNGE1LjQgNS40IDAgMCAxIDUtMy43eiIgZmlsbD0iI0VBNDMzNSIgZmlsbC1ydWxlPSJub256ZXJvIi8+PHBhdGggZD0iTTAgMGgxOHYxOEgweiIvPjwvZz48L3N2Zz4=); background-repeat: no-repeat; background-position: 25% 50%; background-size: 30px;">Login with google</button>
         <p id="error-message" style="color: red; font-family: var(--ff-poppins);"></p>
-
+        <a href="forgot-pass.html" class="forgot-link">Forgot Password ?</a>
         <p class="switch-link">Don’t have an account? <a href="signup.html">Sign Up</a></p>
       </div>
     </div>
@@ -266,5 +276,18 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
 });
 
   </script>
+  <script>
+    window.embeddedChatbotConfig = {
+    chatbotId: "dGlQ5bP-F7GodLWzgrVAx",
+    domain: "www.chatbase.co"
+    }
+    </script>
+    <script
+    src="https://www.chatbase.co/embed.min.js"
+    chatbotId="dGlQ5bP-F7GodLWzgrVAx"
+    domain="www.chatbase.co"
+    defer>
+    </script>
+
 </body>
 </html>
