@@ -43,7 +43,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
         
         <link rel="stylesheet" href="./style.css">
- 
+        
+    
     <style>
 
         .retro-heading {
@@ -932,6 +933,109 @@ new google.translate.TranslateElement({
                 alt="Download on the Apple App Store"></a>
 
     </div>
+    <title>Share Link Example</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* General body styling */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 50px;
+        }
+
+        /* Save button styling */
+        #saveBtn {
+            background-color:#f4d2ce;
+            color: rgb(203, 82, 82);
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px; /* Space between icon and text */
+            transition: background-color 0.3s;
+        }
+
+        /* Hover effect for save button */
+        #saveBtn:hover {
+            background-color:#f5c0bb;
+        }
+
+        /* Share container styling */
+        .share-container {
+            display: none; /* Hidden by default */
+            flex-direction: row;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        /* Share button styling */
+        .share-button {
+            cursor: pointer;
+        }
+
+        /* Social icon styling */
+        .share-button img {
+            width: 40px;
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Save Button -->
+    <button id="saveBtn">
+        <img src="https://static.vecteezy.com/system/resources/thumbnails/020/995/163/small_2x/3d-minimal-share-icon-publish-icon-3d-illustration-free-png.png" width="40" height="40" alt="Share Icon" />
+        Share
+    </button>
+
+    <!-- Social Media Share Options -->
+    <div id="shareContainer" class="share-container">
+        <!-- Facebook Share Button -->
+        <div class="share-button" onclick="shareOnFacebook()">
+            <img src="https://1000logos.net/wp-content/uploads/2017/02/Facebook-Logosu.png" alt="Share on Facebook">
+        </div>
+        <!-- WhatsApp Share Button -->
+        <div class="share-button" onclick="shareOnWhatsApp()">
+            <img src="https://www.macworld.com/wp-content/uploads/2023/01/whatsapp_logo_icon-3.jpg?quality=50&strip=all" alt="Share on WhatsApp">
+        </div>
+        <!-- Instagram Share Button -->
+        <div class="share-button" onclick="shareOnInstagram()">
+            <img src="https://play-lh.googleusercontent.com/VRMWkE5p3CkWhJs6nv-9ZsLAs1QOg5ob1_3qg-rckwYW7yp1fMrYZqnEFpk0IoVP4LM=w600-h300-pc0xffffff-pd" alt="Share on Instagram">
+        </div>
+    </div>
+
+    <script>
+        const urlToShare = window.location.href; // Current page URL
+
+        // Toggle visibility of share options
+        document.getElementById("saveBtn").onclick = function() {
+            const shareContainer = document.getElementById("shareContainer");
+            shareContainer.style.display = shareContainer.style.display === "none" || shareContainer.style.display === "" ? "flex" : "none";
+        };
+
+        // Function to share on Facebook
+        function shareOnFacebook() {
+            const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(urlToShare)}`;
+            window.open(facebookUrl, '_blank');
+        }
+
+        // Function to share on WhatsApp
+        function shareOnWhatsApp() {
+            const whatsappUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(urlToShare)}`;
+            window.open(whatsappUrl, '_blank');
+        }
+
+        // Function to share on Instagram (prompt only)
+        function shareOnInstagram() {
+            alert("Instagram sharing is not directly supported via links. Please use the Instagram app to share.");
+        }
+    </script>
 
     <div class="footer" style="background-color: hsl(20, 43%, 93%);">
         <footer>
@@ -988,7 +1092,7 @@ new google.translate.TranslateElement({
                 
 
             </div>
-
+         
 
             <div class="foot_panel4" style="background-color: transparent;">
                 <div class="pages">
