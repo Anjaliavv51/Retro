@@ -797,11 +797,11 @@ textarea {
 
   .foot-panel2 {
     height: fit-content;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(20px, 1fr));
+    display: flex;
+    /* grid-template-columns: repeat(2, minmax(20px, 1fr)); */
 
-    /* flex-direction: column; */
-    grid-template-columns: 2;
+    flex-direction: column;
+    /* grid-template-columns: 2; */
     padding: 30px;
   }
 
