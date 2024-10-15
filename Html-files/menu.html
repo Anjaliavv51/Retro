@@ -269,10 +269,44 @@
         .fa-brands.fa-x-twitter:hover {
             color: #181e20 !important;
         }
+    #progress-container {
+    position: fixed ;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 15px;
+    z-index: 99990;
+    /* background: #f3f3f3; */
+}
+
+#progress-bar {
+    height: 30%;
+    width: 0;
+    background: linear-gradient(90deg, rgb(255, 0, 55) 0%, rgb(190, 53, 78) 50%, rgb(249, 78, 115) 100%);
+    box-shadow: 0 0 4px rgb(255, 0, 55), 0 0 10px rgb(255, 0, 55);
+    transition: width 0.09s ease-in-out;
+    border-radius: 10px;
+}
+
     </style>
+
 </head>
 
 <body>
+
+    <div id="progress-container">
+        <div id="progress-bar"></div>
+      </div>
+
+      <script>
+            
+        window.addEventListener('scroll', function() {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById('progress-bar').style.width = scrolled + '%';
+        });
+        </script>
     <div class="circle-container">
         <div class="circle" style="background-color: rgb(255, 181, 107); left: 504px; top: 59px; scale: 1;"></div>
         <div class="circle" style="background-color: rgb(253, 175, 105); left: 504px; top: 59px; scale: 0.95;"></div>
