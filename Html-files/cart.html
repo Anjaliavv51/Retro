@@ -219,25 +219,35 @@ border-radius: 4px;
     }
 
     .decrease-quantity {
-      padding-inline: 10px;
-      background: #1454f7;
+      padding-inline: 12px;
+      background: #a52a2a;
       border: none;
       border-radius: 2px;
       font-size: 20px;
       font-weight: 500;
-      color: #cbf7e3;
+      color: white;
+      margin: 5px;
+    }
+    .decrease-quantity:hover{
+      background-color: white;
+      color: #a52a2a;
     }
 
     .increase-quantity {
-      padding-inline: 10px;
-      background: #1454f7;
+      padding-inline: 12px;
+      background: #a52a2a;
       border: none;
       border-radius: 2px;
       font-size: 20px;
       font-weight: 500;
-      color: #cbf7e3;
+      color: white;
+      margin: 5px;
     }
 
+    .increase-quantity:hover{
+      background-color: white;
+      color:#a52a2a;
+    }
     #cart-total {
       background: #a52a2a;
       padding: 3px 5px;
@@ -255,39 +265,77 @@ border-radius: 4px;
       border: 3px solid whitesmoke;
     }
 
-.social-icons a {
-  font-size: 1.2rem;
-  padding: 8px;
-  margin: 15px;
-  text-decoration: none;
-  color: brown !important;
-}
+    .social-icons a {
+      font-size: 1.2rem;
+      padding: 8px;
+      margin: 15px;
+      text-decoration: none;
+      color: brown !important;
+    }
 
-.social-icons a:hover {
-  color: brown;
-  background-color: hsl(22, 76%, 85%);
-  border-radius: 10px;
-  transform: scale(1.5); /* Increase size */
-  transition: transform 0.3s ease; /* Smooth transition effect */
-}
-.fa-brands.fa-facebook:hover {
-  color: #3B5998 !important;
-}
+    .social-icons a:hover {
+      color: brown;
+      background-color: hsl(22, 76%, 85%);
+      border-radius: 10px;
+      transform: scale(1.5); /* Increase size */
+      transition: transform 0.3s ease; /* Smooth transition effect */
+    }
+    .fa-brands.fa-facebook:hover {
+      color: #3B5998 !important;
+    }
 
-.fa-brands.fa-instagram:hover {
-  color: #D62976 !important;
-}
+    .fa-brands.fa-instagram:hover {
+      color: #D62976 !important;
+    }
 
-.fa-brands.fa-x-twitter:hover {
-  color: #181e20 !important;
-}
-@media (max-width: 768px) {
-  .foot-panel2{
-    display: flex;
-    flex-direction: column;
-    
-  }
-}
+    .fa-brands.fa-x-twitter:hover {
+      color: #181e20 !important;
+    }
+    @media (max-width: 768px) {
+      .foot-panel2{
+        display: flex;
+        flex-direction: column;
+        
+      }
+    }
+
+    .foot-panel2 .footer-colums  a { 
+      /* /* color: black!important; */
+      text-decoration: none !important;
+      transition:transform 0.2s ease, text-decoration-color 0.2s ease; 
+      /* display: inline-block; */
+            
+
+      text-decoration: none;
+      color: #000;
+      position: relative;
+      padding-bottom: 2px;
+            
+    }
+
+    .foot-panel2 .footer-colums a::after{
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      background-color: brown;
+      transition: width  0.3s ease;
+      width:0;
+            
+    }
+
+    .foot-panel2 .footer-colums a:hover{
+      transform: scale(1.05);
+    }
+
+    .foot-panel2 .footer-colums a:hover::after{
+      width:100%;
+    } 
+
+
+
 
   </style>
 </head>
@@ -412,24 +460,24 @@ border-radius: 4px;
     <div class="foot-panel2">
       <ul class="footer-colums">
         <p style="font-family: var(--ff-philosopher);">Our Pages</p>
-        <a href="../index.html" style="text-decoration: none;color: black;font-family: var(--ff-poppins);">Home</a>
-        <a href="menu.html" style="text-decoration: none;color: black;font-family: var(--ff-poppins);">About</a>
-        <a href="services.html" style="text-decoration: none;color: black;font-family: var(--ff-poppins);">Services</a>
-        <a href="contact.html" style="text-decoration: none;color: black;font-family: var(--ff-poppins);">Contact us</a>
-        <a href="cart.html" style="text-decoration: none;color: black;font-family: var(--ff-poppins);">Cart</a>
-        <a href="contributor.html" style="text-decoration: none;color: black;font-family: var(--ff-poppins);">Contributor</a>
+        <a href="../index.html" style="font-family: var(--ff-poppins);">Home</a>
+        <a href="menu.html" style="font-family: var(--ff-poppins);">About</a>
+        <a href="services.html" style="font-family: var(--ff-poppins);">Services</a>
+        <a href="contact.html" style="font-family: var(--ff-poppins);">Contact us</a>
+        <a href="cart.html" style="font-family: var(--ff-poppins);">Cart</a>
+        <a href="contributor.html" style="font-family: var(--ff-poppins);">Contributor</a>
       </ul>
 
 
       <ul class="footer-colums">
         <p style="font-family: var(--ff-philosopher);">Exclusive Offers</p>
-        <a style="color: black;font-family: var(--ff-poppins);">Retro Discounts</a>
-        <a style="color: black;font-family: var(--ff-poppins);">Limited-Time Promotions</a>
-        <a style="color: black;font-family: var(--ff-poppins);">Special Event Packages</a>
-        <a style="color: black;font-family: var(--ff-poppins);">Membership Benefits</a>
-        <a style="color: black;font-family: var(--ff-poppins);">Early Access to New Collections</a>
-        <a style="color: black;font-family: var(--ff-poppins);">VIP Retro Events</a>
-        <a style="color: black;font-family: var(--ff-poppins);">Personalized Culinary Experiences</a>
+        <a style="font-family: var(--ff-poppins);">Retro Discounts</a>
+        <a style="font-family: var(--ff-poppins);">Limited-Time Promotions</a>
+        <a style="font-family: var(--ff-poppins);">Special Event Packages</a>
+        <a style="font-family: var(--ff-poppins);">Membership Benefits</a>
+        <a style="font-family: var(--ff-poppins);">Early Access to New Collections</a>
+        <a style="font-family: var(--ff-poppins);">VIP Retro Events</a>
+        <a style="font-family: var(--ff-poppins);">Personalized Culinary Experiences</a>
 
 
       </ul>
@@ -437,11 +485,11 @@ border-radius: 4px;
 
       <ul class="footer-colums">
         <p style="font-family: var(--ff-philosopher);">Payment Products</p>
-        <a style="color: black;font-family: var(--ff-poppins);">Secure Checkout</a>
-        <a style="color: black;font-family: var(--ff-poppins);">Credit/Debit Cards</a>
-        <a style="color: black;font-family: var(--ff-poppins);">Online Payment</a>
-        <a style="color: black;font-family: var(--ff-poppins);">Mobile Wallets</a>
-        <a style="color: black;font-family: var(--ff-poppins);">Contactless Payments</a>
+        <a style="font-family: var(--ff-poppins);">Secure Checkout</a>
+        <a style="font-family: var(--ff-poppins);">Credit/Debit Cards</a>
+        <a style="font-family: var(--ff-poppins);">Online Payment</a>
+        <a style="font-family: var(--ff-poppins);">Mobile Wallets</a>
+        <a style="font-family: var(--ff-poppins);">Contactless Payments</a>
       </ul>
 
 
