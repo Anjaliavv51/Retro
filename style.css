@@ -9,22 +9,22 @@
   font-style: normal;
 }
 
-
 body {
   background-color: black;
 }
-/*
+
 .navbar {
   padding: fixed;
   top: 0;
-  width: 100%;
+  width: 90%;
   z-index: 1030;
-  padding: 15px 0;
-  /*background-color: rgba(245, 245, 245, 0.7);
+  padding: 4px 0;
+  background-color: rgba(245, 245, 245, 0.7);
   backdrop-filter: blur(8px);
   transition: background-color 0.5s ease, backdrop-filter 0.5s ease;
+  border-radius: 10px;
+  margin: 10px;
 }
-*/
 
 .navbar a {
   text-decoration: none;
@@ -40,12 +40,16 @@ body {
 }
 
 */
-
+.nav-link:hover {
+  background-color: #ff7a63;
+  border-radius: 10px;
+  padding: 4px 10px;   /* Change the text color on hover */
+}
 
 .navbar.fixed-top {
   position: fixed; 
   top: 0;
-  width: 100%; 
+  width: 98.5%; 
   z-index: 1030; 
 }
 .navbar.scrolled {
