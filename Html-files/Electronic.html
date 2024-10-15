@@ -526,6 +526,41 @@
       .card[for="c10"] {
         background-image: url(https://i.pinimg.com/474x/42/69/19/426919f03cc846b881903e3dd40a0bc6.jpg);
       }
+
+      .foot-panel2 .footer-colums  a { 
+      /* /* color: black!important; */
+      text-decoration: none !important;
+      transition:transform 0.2s ease, text-decoration-color 0.2s ease; 
+      /* display: inline-block; */
+            
+
+      text-decoration: none;
+      /* color: #000; */
+      position: relative;
+      padding-bottom: 2px;
+            
+    }
+
+    .foot-panel2 .footer-colums a::after{
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      background-color: black;
+      transition: width  0.3s ease;
+      width:0;
+            
+    }
+
+    .foot-panel2 .footer-colums a:hover{
+      transform: scale(1.05);
+    }
+
+    .foot-panel2 .footer-colums a:hover::after{
+      width:100%;
+    } 
     </style>
     <title>Retro</title>
   </head>
