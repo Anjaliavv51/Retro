@@ -250,6 +250,8 @@ body {
     .order_btn:hover {
         background-color: hsl(357, 82%, 45%);
     }
+
+    
     
 
 
@@ -392,6 +394,9 @@ body {
 
 .menu_items {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+    align-items: center;
   overflow: hidden;
 }
 
@@ -605,7 +610,7 @@ ul a {
   display: block;
   font-size: 0.85rem;
   margin-top: 10px;
-  color: #dddddd;
+  /* color: #dddddd; */
   text-decoration: none;
 }
 
@@ -808,6 +813,8 @@ textarea {
   .foot-panel2 ul {
     margin-top: 20px;
   }
+
+  
 
   input,
   textarea {
@@ -1144,7 +1151,7 @@ padding-left:2px;
   background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
   position: absolute;
   top: -2px;
-  left:-2px;
+  left: -2px;
   background-size: 400%;
   z-index: -1;
   filter: blur(5px);
@@ -1157,7 +1164,7 @@ padding-left:2px;
 }
 
 .glow-on-hover:active {
-  color: #000
+  color: #000;
 }
 
 .glow-on-hover:active:after {
@@ -1186,34 +1193,28 @@ padding-left:2px;
   100% { background-position: 0 0; }
 }
 .knockout {
-  
   vertical-align: middle;
   text-align: center;
   font-family: 'Pacifico', cursive;
-  font-size:50pt;
-  color: blue;
+  font-size: 50pt;
   color: #fff;
   background: linear-gradient(110deg, #756a40 33%, rgba(133, 62, 62, 0) 33%), linear-gradient(110deg, #71c49d 34%, #88d8b0 34%);
   background-size: 400%;
-   -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-}
-.knockout{
-    animation: Gradient 5s ease infinite;
-    -webkit-animation: Gradient 15s ease infinite;
-    -moz-animation: Gradient 5s ease infinite;
+  animation: Gradient 5s ease infinite;
+  -webkit-animation: Gradient 15s ease infinite;
+  -moz-animation: Gradient 5s ease infinite;
 }
 
 @-webkit-keyframes Gradient {
   0% {
-    background-position: 30% 50%
+    background-position: 30% 50%;
   }
   50% {
-    background-position: 25% 50%
+    background-position: 25% 50%;
   }
   100% {
-    background-position: 30% 50%
+    background-position: 30% 50%;
   }
-  
 }
-
