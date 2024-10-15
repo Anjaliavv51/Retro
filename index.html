@@ -1,18 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-
+ 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+ 
     <title>Retro</title>
-    
-    
+
+    <style>
+        @media (min-width: 992px) {
+            .navbar-expand-lg .navbar-nav {
+                margin-top: -9px; /* Add this line */
+            }
+        }
+    </style>
+     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="/Css-files/navbarstyles.css">
+    <link rel="stylesheet" href="/Css-files/popup.css">
+
     <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> -->
     
 
@@ -33,21 +43,26 @@
         <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
         
         <link rel="stylesheet" href="./style.css">
-
+ 
     <style>
+
         .retro-heading {
-          font-family: var(--ff-philosopher);
-          color: brown;
+
+          font-family:  var(--ff-philosopher);
+          color:  brown;
           z-index: 99;
-          transition: all 0.3s ease;
-        }
+          transition:  all 0.3s ease;
 
+        }
+ 
         .retro-heading:hover {
-           color: #5d095c;
-           text-shadow: 0 0 15px rgba(214, 30, 171, 0.9), 0 0 30px rgba(138, 38, 88, 0.7);
-           transform: scale(1.3); 
-        }
 
+           color:  #5d095c;
+           text-shadow:  0 0 15px rgba(214, 30, 171, 0.9), 0 0 30px rgba(138, 38, 88, 0.7);
+           transform:  scale(1.3); 
+
+        }
+ 
         .faq-container {
             margin-top: 50px;
             margin-left: auto;
@@ -97,24 +112,26 @@
   display: none;
 }
     </style>
-    <style>
+    <style> 
         /*Preloader CSS*/
 #preloader {
+     
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    top:  0;
+    left:  0;
+    width:  100%;
+    height:  100%;
     background: hsl(20, 43%, 93%); /* Light background color */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: opacity 2s ease-out, visibility 2s ease-out;
-    opacity: 1;
-    visibility: visible;
-    z-index: 9999; /* Ensure the preloader is above all other content */
-}
+    display:  flex;
+    justify-content:  center;
+    align-items:  center;
+    transition:  opacity 2s ease-out, visibility 2s ease-out;
+    opacity:  1;
+    visibility:  visible;
+    z-index:  9999; /* Ensure the preloader is above all other content */
 
+}
+ 
 
 /* When hidden, preloader transitions out */
 #preloader.hidden {
@@ -173,14 +190,14 @@
 #sr {
 display: none; 
 position: fixed; 
-bottom: 20px; 
-right: 30px; 
+bottom: 70px; 
+right: 15px; 
 z-index: 99; 
 font-size: 18px;
 border: none;
 outline: none;
 background-color: transparent; 
-color: white; 
+color: rgb(17, 17, 17); 
 cursor: pointer; 
 padding: 15px; 
 border-radius: 4px; 
@@ -415,6 +432,33 @@ p {
 
     <!--Navbar End-->
 
+
+    <!-- Registration Pop up Starts Here -->
+
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <div class="popup-left">
+                <img src="Images/popup.jpg" alt="Retro Vintage Charm">
+            </div>
+            <a href="#" class="no-thanks popuplogo" style="font-family: var(--ff-philosopher); color: black;"><b>Retro</b></a>
+            <div class="popup-right">
+                <h1>Discover the Past!</h1>
+                <p id="h2">Sign Up for Exclusive Vintage Deals</p>
+                <p>Get a <strong>30% off</strong> on your first order when you join our Retro family.</p>
+                <form id="emailForm">
+                    <input type="email" id="popup-email" placeholder="Enter your email" required>
+                    <button type="submit" class="signup-btn">Sign Up Now</button>
+                </form>
+                <a href="#" class="no-thanks close-btn">No thanks, I’ll browse with Fullprice</a>
+                <p class="terms">By signing up, you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Registration Pop up HTML ends here -->
+
+
 <!--    <nav class="navbar navbar-expand-lg fixed-top" id="top">
         <div class="container-fluid">
             <a class="navbar-brand" href="#"  style="font-family: var(--ff-philosopher);color: black;"><b>Retro</b></a>
@@ -484,26 +528,26 @@ new google.translate.TranslateElement({
             </div>
         </div>
 
-        <h1 class="h-primary center" style="font-family: var(--ff-philosopher);font-size: 35px;">"Step into the past and discover our latest additions! <br>Explore our new arrivals and uncover the charm of a bygone era!"</h1>
+        <h1 class="h-primary center" style="font-family: var(--ff-philosopher);font-size: 35px;" data-aos="fade-up">"Step into the past and discover our latest additions! <br>Explore our new arrivals and uncover the charm of a bygone era!"</h1>
 
 
         <!-- changes -->
         <div id="about">
-            <div class="box">
+            <div class="box" data-aos="fade-down">
                 <img src="Images/biryani.jpg" alt="Biryani" class="card-image">
                 <h2 class="h-secondary center" style="font-family:var(--ff-philosopher);">60s-style florals</h2>
                 <p class="center" style="font-family: var(--ff-poppins);">From aromatic curries to flavorful biryanis, our menu showcases the diversity and
                     deliciousness of Indian cuisine.
                 </p>
             </div>
-            <div class="box">
+            <div class="box" data-aos="fade-down">
                 <img src="Images/plate_mismatch.jpg" alt="Plate" class="card-image">
                 <h2 class="h-secondary center" style="font-family: var(--ff-philosopher)">60's Dinning Items</h2>
                 <p class="center" style="font-family: var(--ff-poppins);">
                     Elegant porcelain plates with delicate floral patterns. Each plate tells a story of family gatherings and special occasions.
                 </p>
             </div>
-            <div class="box">
+            <div class="box" data-aos="fade-down">
                 <img src="Images/candy.jpg" alt="Candy" class="card-image">
                 <h2 class="h-secondary center" style="font-family: var(--ff-philosopher);">Whimsical Nostalgia: The Stardust Bonbon</h2>
                 <p class="center" style="font-family: var(--ff-poppins);">The Stardust Bonbon, a sweet relic from an era when the universe was our playground.</p>
@@ -515,25 +559,27 @@ new google.translate.TranslateElement({
  <section class="service_container">
     <div class="service">
         <!-- Text Column - 60% Width -->
-        <div class="service_text column"><br>
-            <h1>Bringing happiness<br> to you</h1>
+        <div class="service_text column"  style="margin-left: auto; margin-right: auto;"><br>
+            <h1>Bringing happiness to you</h1>
             <p>Order your favourite vintage collections!</p>
         </div>
 
         <!-- Buttons Column - 40% Width -->
-        <div class="service_buttons column">
-            <div class="button_row">
-                <div class="service_item">
-                    <h2>Online Delivery</h2>
+
+        <div class="service_buttons column" style="margin-left: auto; margin-right: auto;">
+            <div class="button_row" data-aos="fade-down">
+                <div class="service_item box" data-aos="fade-down" style="height: 200px;">
+                    <h2>Online Delivery</h2><br>
                     <a href="./Html-files/menu.html" class="order_btn">Order Online</a>
                 </div>
-                <div class="service_item">
-                    <h2>Click & Collect</h2>
+                <div class="service_item box" data-aos="fade-down" style="height: 200px;">
+                    <h2>Click & Collect</h2><br>
                     <a href="./Html-files/cart.html" class="order_btn">Take out Order</a>
                 </div>
             </div>
-        </div> 
-    </div>
+        </div>
+          
+
 </section>
 
     <section class="menu_container">
@@ -547,25 +593,25 @@ new google.translate.TranslateElement({
         </div>
 
         <div class="menu_items">
-            <div class="items">
+            <div class="items" data-aos="zoom-in">
                 <img
                     src="https://www.mumbailive.com/images/media/images/thali_1635502261446jpeg?bg=08394e&crop=5328%2C2991.157894736842%2C0%2C504.42105263157896&fit=crop&fm=webp&h=432.2807017543859&height=4000&w=770&width=5328">
                 <h3 style="font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%);">Indian Thali</h3>
                 <p style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">Enjoy a thali full of traditional flavours and memotries</p>
             </div>
-            <div class="items">
+            <div class="items" data-aos="zoom-in">
                 <img
                     src="https://imgmediagumlet.lbb.in/media/2018/04/5acf822418a23c0efc21496b_1523548708582.jpg?fm=webp&w=750&h=500&dpr=1">
                 <h3 style="font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%);">Dessert</h3>
                 <p style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">Complete your meal with mouth watering delicacies</p>
             </div>
-            <div class="items">
+            <div class="items"data-aos="zoom-in">
                 <img
                     src="https://imgmediagumlet.lbb.in/media/2019/07/5d27585dc18a2b0ed5739eb5_1562859613517.jpg?fm=webp&w=750&h=500&dpr=1">
                 <h3 style="font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%);">Snacks</h3>
                 <p style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">Have a lighter version with deliciouis flavours</p>
             </div>
-            <div class="items">
+            <div class="items"data-aos="zoom-in">
                 <img src="https://static.india.com/wp-content/uploads/2017/04/Juices-Delhi.jpg">
                 <h3 style="font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%);">Juices</h3>
                 <p style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">Boost yourself up with fruit extracts</p>
@@ -625,11 +671,11 @@ new google.translate.TranslateElement({
 
               <!---------------------------------------------------- FAQ -->
                    
-              <div class="container faq-container">
+              <!-- <div class="container faq-container">
                 <h1 class="text-center mb-4">Frequently Asked Questions</h1>
-                <div class="accordion" id="faqAccordion">
+                <div class="accordion" id="faqAccordion" data-aos="zoom-in">
             
-                    <div class="accordion-item">
+                    <div class="accordion-item" >
                         <h2 class="accordion-header" id="headingOne">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                                 What is your return policy?
@@ -708,7 +754,165 @@ new google.translate.TranslateElement({
                     </div>
             
                 </div>
+            </div> -->
+            <style>
+                .retro-heading {
+                    font-family: var(--ff-philosopher);
+                    color: brown;
+                    z-index: 99;
+                    transition: all 0.3s ease;
+                }
+            
+                .retro-heading:hover {
+                    color: #5d095c;
+                    text-shadow: 0 0 15px rgba(214, 30, 171, 0.9), 0 0 30px rgba(138, 38, 88, 0.7);
+                    transform: scale(1.3); 
+                }
+            
+                .faq-container {
+                    margin-top: 15px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    background: #f9f9f9; /* Container background */
+                    border-radius: 8px; /* Rounded corners */
+                    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+                    padding: 20px; /* Padding inside the container */
+                    max-width: 76vw; /* Increased max width for the container */
+                }
+            
+                .faq-item {
+                    margin-bottom: 20px;
+                    border: 1px solid #ddd; /* Border for each FAQ item */
+                    border-radius: 5px; /* Rounded corners for each FAQ item */
+                    padding: 15px; /* Padding inside each FAQ item */
+                    background: #fff; /* Background for each FAQ item */
+                    transition: background 0.3s ease; /* Smooth background transition */
+                    position: relative; /* Position relative for arrow */
+                }
+            
+                .faq-item:hover {
+                    background: #f1f1f1; /* Background color on hover */
+                }
+            
+                .faq-question {
+                    font-family: var(--ff-poppins);
+                    font-size: 18px;
+                    font-weight: bold;
+                    cursor: pointer; /* Pointer cursor on hover */
+                    display: flex;
+                    justify-content: space-between; /* Space between text and arrow */
+                    align-items: center; /* Center vertically */
+                }
+            
+                .faq-answer {
+                    display: none;
+                    margin-top: 10px;
+                    font-family: var(--ff-poppins);
+                    font-size: 16px;
+                    color: #333;
+                }
+            
+                .faq-item:hover .faq-answer {
+                    display: block;
+                }
+            
+                .faq-arrow {
+                    transition: transform 0.3s ease; /* Smooth rotation transition */
+                }
+            
+                .faq-item .faq-arrow {
+                    transform: rotate(0deg); /* Arrow pointing down by default */
+                }
+            
+                .faq-item:hover .faq-arrow {
+                    transform: rotate(180deg); /* Arrow pointing up when hovered */
+                }
+
+            </style>
+            
+            <style>
+                :root {
+                    --ff-philosopher: "Philosopher", sans-serif;
+                    --ff-poppins: "Poppins", sans-serif;
+                }
+            </style>
+            
+            <h2 style="display: flex; justify-content: center; align-items: center; margin-top: 50px; font-weight: 500;">Frequently Asked Questions</h2>
+            <div class="faq-container" style="padding: 50px;margin-top: 50px;">
+                <div class="faq-item" style="background-color: #f5dddb;">
+                    <div class="faq-question">
+                        What is your return policy?
+                        <span class="faq-arrow">
+                            <svg width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M12 15l-8-8h16z"/>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="faq-answer">Our return policy lasts 30 days...</div>
+                </div>
+                <div class="faq-item" style="background-color: #f5c0bb;">
+                    <div class="faq-question">
+                        How do I track my order?
+                        <span class="faq-arrow">
+                            <svg width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M12 15l-8-8h16z"/>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="faq-answer">You can track your order using the tracking number...</div>
+                </div>
+                <div class="faq-item" style="background-color: #f5dddb;">
+                    <div class="faq-question">
+                        How long does shipping take?
+                        <span class="faq-arrow">
+                            <svg width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M12 15l-8-8h16z"/>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="faq-answer">Shipping typically takes 5-7 business days, depending on your location.</div>
+                </div>
+                <div class="faq-item" style="background-color: #f5c0bb;">
+                    <div class="faq-question">
+                        Can I change my order after it's been placed?
+                        <span class="faq-arrow">
+                            <svg width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M12 15l-8-8h16z"/>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="faq-answer">If your order hasn't been processed yet, you can contact us to make changes.</div>
+                </div>
+                <div class="faq-item" style="background-color: #f5dddb;">
+                    <div class="faq-question">
+                        Do you ship internationally?
+                        <span class="faq-arrow">
+                            <svg width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M12 15l-8-8h16z"/>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="faq-answer">Yes, we offer international shipping to select countries.</div>
+                </div>
+                <div class="faq-item" style="background-color: #f5c0bb;">
+                    <div class="faq-question">
+                        Do you offer discounts for bulk orders?
+                        <span class="faq-arrow">
+                            <svg width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M12 15l-8-8h16z"/>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="faq-answer">Yes, we provide discounts on bulk orders. Please contact our sales team for more details.</div>
+                </div>
+                <!-- Add more FAQ items as needed -->
             </div>
+            
+            <br> <br>
+            
+            <!-- -------------------------------------------FAQ ENDED -->
+            
+            <br> <br>
 
 
             <br> <br>
@@ -748,46 +952,55 @@ new google.translate.TranslateElement({
                     <a href="Html-files/contact.html" class="hover-underline-animation" style="color: black;">Contact us</a>
                     <br>
                     <a href="Html-files/cart.html" style="color: black;">Cart</a>
+                    <a href="Html-files/contributor.html" style="color: black;">Contributors</a>
                 </ul>
                 <ul>
-                    <p style="color: hsl(357, 82%,35%);font-family: var(--ff-philosopher); text-align:left"> Exclusive Offers</p>
-                    <a href="#" class="hover-underline-animation" style="color: black;">Retro Discounts</a>
-                    <br>
-                    <a href="#" class="hover-underline-animation" style="color: black;">Limited-Time Promotions</a>
-                    <br>
-                    <a href="#" class="hover-underline-animation" style="color: black;">Special Event Packages</a>
-                    <br>
-                    <a href="#" class="hover-underline-animation" style="color: black;">Membership Benefits</a>
-                    <br>
-                    <a href="#" class="hover-underline-animation" style="color: black;">Early Access to New Collections</a>
-                    <br>
-                    <a href="#" class="hover-underline-animation" style="color: black;">VIP Retro Events</a>
-                    <br>
-                    <a href="#" class="hover-underline-animation" style="color: black;">Personalized Culinary Experiences</a>
+<ul>
+    <p style="color: rgb(162, 16, 23); font-family: var(--ff-philosopher); text-align: left;">Exclusive Offers</p>
+    <a href="#" class="hover-underline-animation" style="color: black;">Retro Discounts</a>
+    <br>
+    <a href="#" class="hover-underline-animation" style="color: black;">Limited-Time Promotions</a>
+    <br>
+    <a href="#" class="hover-underline-animation" style="color: black;">Special Event Packages</a>
+    <br>
+    <a href="#" class="hover-underline-animation" style="color: black;">Membership Benefits</a>
+    <br>
+    <a href="#" class="hover-underline-animation" style="color: black;">Early Access to New Collections</a>
+    <br>
+    <a href="#" class="hover-underline-animation" style="color: black;">VIP Retro Events</a>
+    <br>
+    <a href="#" class="hover-underline-animation" style="color: black;">Personalized Culinary Experiences</a>
+</ul>
 
-                </ul>
-                <ul>
-                    <p style="color: hsl(357, 82%,35%);font-family: var(--ff-philosopher);text-align:left">Payment Products</p>
-                    <a href="./Html-files/payment2.html" class="hover-underline-animation" style="color: black;">Secure Checkout</a>
-                    <br> 
-                    <a href="./Html-files/payment2.html" class="hover-underline-animation" style="color: black;">Credit/Debit Cards</a>
-                    <br>
-                    <a href="./Html-files/payment2.html" class="hover-underline-animation" style="color: black;">Online Payment</a>
-                    <br>
-                    <a href="./Html-files/payment2.html" class="hover-underline-animation" style="color: black;">Mobile Wallets</a>
-                    <br>
-                    <a href="./Html-files/payment2.html" class="hover-underline-animation" style="color: black;">Contactless Payments</a>
-                </ul>
-                <form id="contactForm">
-                    <h3 style="font-family: var(--ff-philosopher);color: hsl(357, 82%,35%);font-family: var(--ff-philosopher);">Contact Us!</h3>
-                    
-                    <input type="email" id="email" name="email" class="textbox-input" placeholder="Your Email" required>
+<ul>
+    <p style="color: hsl(357, 82%, 35%); font-family: var(--ff-philosopher); text-align: left;">Payment Products</p>
+    <a href="./Html-files/payment2.html" class="hover-underline-animation" style="color: black;">Secure Checkout</a>
+    <br> 
+    <a href="./Html-files/payment2.html" class="hover-underline-animation" style="color: black;">Credit/Debit Cards</a>
+    <br>
+    <a href="./Html-files/payment2.html" class="hover-underline-animation" style="color: black;">Online Payment</a>
+    <br>
+    <a href="./Html-files/payment2.html" class="hover-underline-animation" style="color: black;">Mobile Wallets</a>
+    <br>
+    <a href="./Html-files/payment2.html" class="hover-underline-animation" style="color: black;">Contactless Payments</a>
+</ul>
 
-                    <textarea id="message" name="message" class="textbox-input" placeholder="Your Message" required></textarea>
+<form id="contactForm">
+    <h3 style="font-family: var(--ff-philosopher); color: hsl(357, 82%, 35%);">Contact Us!</h3>
 
-                    <button id="butt" type="submit" class="glow-on-hover" style="font-family: ui-serif;">Send Message</button>
-                </form>
+    <div style="position: relative; margin-bottom: 15px;">
+        <i class="fas fa-envelope" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); font-size: 14px; color: gray;"></i>
+        <input type="email" id="email" name="email" class="textbox-input" placeholder="Your Email" required style="padding-left: 30px;">
+    </div>
 
+    <div style="position: relative; margin-bottom: 15px;">
+        <i class="fas fa-comment" style="position: absolute; left: 10px; top: 10px; font-size: 14px; color: gray;"></i>
+        <textarea id="message" name="message" class="textbox-input" placeholder="Your Message" required style="padding-left: 30px;"></textarea>
+    </div>
+
+    <button id="butt" type="submit" class="glow-on-hover" style="font-family: ui-serif;">Send Message</button>
+</form>      
+                
             </div>
 
 
@@ -801,6 +1014,8 @@ new google.translate.TranslateElement({
                         <a class="fa-brands fa-facebook" href="https://facebook.com" ></a>
                         <a class="fa-brands fa-instagram" href="https://instagram.com" ></a>
                         <a class="fa-brands fa-x-twitter" href="https://twitter.com" ></a>
+                        <a class="fa-brands fa-youtube"   href="https://www.youtube.com" ></a>
+                        <a class="fa-brands fa-snapchat"  href="https://www.snapchat.com" ></a>
 
                     </div>
                     <p style="font-family: var(--ff-philosopher);background-color: hsl(20, 43%, 93%);color: hsl(203, 30%, 26%);margin-bottom:0;">Stay connected with us on social media for the latest updates, latest collection, and vintage adventures.
@@ -920,6 +1135,11 @@ scrollToTopBtn.addEventListener("click", function() {
 
     animateCircles();
   </script>
+
+    <!-- Pop Up JS starts Here  -->
+    <script src="./script/popup.js">
+    </script>
+
   <script>
     document.addEventListener("DOMContentLoaded", function() {
     const preloader = document.getElementById('preloader');
@@ -954,6 +1174,21 @@ scrollToTopBtn.addEventListener("click", function() {
 };
 </script>
 
+<script>
+    window.embeddedChatbotConfig = {
+    chatbotId: "dGlQ5bP-F7GodLWzgrVAx",
+    domain: "www.chatbase.co"
+    }
+    </script>
+    <script
+    src="https://www.chatbase.co/embed.min.js"
+    chatbotId="dGlQ5bP-F7GodLWzgrVAx"
+    domain="www.chatbase.co"
+    defer>
+    </script>
 
-
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+  </script>
 </html>

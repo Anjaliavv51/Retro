@@ -29,22 +29,21 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');  
         @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');  
-#sr {
+        #sr {
 display: none; 
 position: fixed; 
-bottom: 20px; 
-right: 30px; 
+bottom: 70px; 
+right: 15px; 
 z-index: 99; 
 font-size: 18px;
 border: none;
 outline: none;
 background-color: transparent; 
-color: white; 
+color: rgb(17, 17, 17); 
 cursor: pointer; 
 padding: 15px; 
 border-radius: 4px; 
 }
-
 #sr:hover {
 background-color: transparent; 
 color: black;
@@ -493,15 +492,23 @@ h1, h2, h3, h4, h5, h6 {
     height: 266px;
 }
 
+/* Background Animations */
+.new_footer_top .footer_bg {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 266px;
+    overflow: hidden; /* Ensure animations don't cause scrollbars */
+}
+
 .new_footer_top .footer_bg .footer_bg_one {
-    /* background: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEia0PYPxwT5ifToyP3SNZeQWfJEWrUENYA5IXM6sN5vLwAKvaJS1pQVu8mOFFUa_ET4JuHNTFAxKURFerJYHDUWXLXl1vDofYXuij45JZelYOjEFoCOn7E6Vxu0fwV7ACPzArcno1rYuVxGB7JY6G7__e4_KZW4lTYIaHSLVaVLzklZBLZnQw047oq5-Q/s16000/volks.gif") no-repeat center center; */
     width: 330px;
     height: 105px;
     background-size: 100%;
     position: absolute;
     bottom: 0;
-    left: 30%;
-    animation: myfirst 22s linear infinite;
+    right: -330px; /* Start off-screen to the right */
+    animation: moveRightToLeft 22s linear infinite;
 }
 
 .new_footer_top .footer_bg .footer_bg_two {
@@ -510,21 +517,20 @@ h1, h2, h3, h4, h5, h6 {
     height: 105px;
     background-size: 100%;
     bottom: 0;
-    left: 38%;
+    right: -330px; /* Start off-screen to the right */
     position: absolute;
-    animation: myfirst 30s linear infinite;
+    animation: moveRightToLeft 30s linear infinite;
 }
 
 /* Animation Keyframes */
-@keyframes myfirst {
-  0% {
-    left: -25%;
-  }
-  100% {
-    left: 100%;
-  }
+@keyframes moveRightToLeft {
+    0% {
+        right: -330px; /* Start from right, off-screen */
+    }
+    100% {
+        right: 100%; /* End at left side of the container */
+    }
 }
-
 
 .social-icons a {
   font-size: 1.2rem;
@@ -646,24 +652,28 @@ h1, h2, h3, h4, h5, h6 {
   </div>
 </div>
 
+<p style="margin: 0px 50px;font-size: medium;" class="about1" >At Retro, we celebrate the essence of timeless moments, where the charm of vintage design meets the warmth of nostalgia. Our love for the past inspires us to create an experience that connects the beauty of bygone eras with today’s world. Whether it's 60s-style floral patterns or classic tech from yesteryear, Retro brings back the simplicity, elegance, and innovation of those unforgettable days.
+</p>
 
 
-
-    <section class="about_container">
+    <section class="about_container" style="width:80vw;margin-top: 80px;">
      
-        <p class="about1" >At Retro, we celebrate the essence of timeless moments, where the charm of vintage design meets the warmth of nostalgia. Our love for the past inspires us to create an experience that connects the beauty of bygone eras with today’s world. Whether it's 60s-style floral patterns or classic tech from yesteryear, Retro brings back the simplicity, elegance, and innovation of those unforgettable days.
-        </p>
+        
         <div class="about2">
             <h2 class=section__titlestyle style="font-family: var(--ff-philosopher);color: hsl(357, 82%,35%);">Our Story</h2>
             <p style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">Retro was born from a desire to relive and share the joy of the past. We believe that every era has something special to offer, whether it’s the bold designs of the 60s, the innovative spirit of the 70s, or the tech revolutions of the 80s and 90s. Our journey began with a passion for collecting vintage items and a dream to create a space where people could immerse themselves in a world that captures the essence of different generations.</p>
         </div>
-        <div class="about3">
-            <h2 class=section__title>Why Choose Retro?</h2>
-            <p style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">We’re not just about products – we’re about creating a lifestyle that honors the beauty and inspiration of the past. Each item we offer is carefully selected to bring nostalgia to life, allowing you to embrace the timeless designs, flavors, and stories that have shaped history. Whether you're a vintage enthusiast or simply love the look and feel of classic designs, Retro is your gateway to a world that values tradition as much as it does innovation.</p>
-        </div>
+        
 
     </section>
 
+    <section class="about_container" style="width:80vw;margin-top: 80px;margin-bottom: 30px;">
+      <div class="about3">
+        <h2 class=section__title>Why Choose Retro?</h2>
+        <p style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">We’re not just about products – we’re about creating a lifestyle that honors the beauty and inspiration of the past. Each item we offer is carefully selected to bring nostalgia to life, allowing you to embrace the timeless designs, flavors, and stories that have shaped history. Whether you're a vintage enthusiast or simply love the look and feel of classic designs, Retro is your gateway to a world that values tradition as much as it does innovation.</p>
+      </div>
+    </section>
+    
                 
     <footer class="new_footer_area bg_color">
       <div class="new_footer_top">
@@ -672,15 +682,25 @@ h1, h2, h3, h4, h5, h6 {
             <!-- Get in Touch Section -->
             <div class="col-lg-3 col-md-6">
               <div class="f_widget company_widget">
-                <h3 class="f-title f_600 t_color f_size_18">Contact US</h3>
-                <!-- <p>Don’t miss any updates of our new templates and extensions.!</p> -->
-                <form action="#" class="f_subscribe_two mailchimp" method="post">
-                  <input type="email" id="email" name="email" placeholder="Your Email" required>
-                  <textarea id="message" name="message" placeholder="Your Message" required></textarea>
-                  <button id="butt" type="submit">Send Message</button>
-                </form>
+                  <h3 class="f-title f_600 t_color f_size_18">Contact Us</h3>
+                  <form action="#" class="f_subscribe_two mailchimp" method="post" style="position: relative;">
+                      <div style="position: relative; margin-bottom: 15px;">
+                          <i class="fas fa-envelope" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); font-size: 14px; color: gray;"></i>
+                          <input type="email" id="email" name="email" placeholder="Your Email" required 
+                                 style="padding-left: 30px; width: 100%;">
+                      </div>
+          
+                      <div style="position: relative; margin-bottom: 15px;">
+                          <i class="fas fa-comment" style="position: absolute; left: 10px; top: 10px; font-size: 14px; color: gray;"></i>
+                          <textarea id="message" name="message" placeholder="Your Message" required 
+                                    style="padding-left: 30px; width: 100%;"></textarea>
+                      </div>
+          
+                      <button id="butt" type="submit">Send Message</button>
+                  </form>
               </div>
-            </div>
+          </div>
+          
             
             <!-- Our Pages Section -->
             <div class="col-lg-3 col-md-6">
@@ -692,6 +712,7 @@ h1, h2, h3, h4, h5, h6 {
                   <li><a href="#">Services</a></li>
                   <li><a href="contact.html">Contact</a></li>
                   <li><a href="cart.html">Cart</a></li>
+                  <li><a href="contributor.html">Contributors</a></li>
                 </ul>
               </div>
             </div>
@@ -717,15 +738,36 @@ h1, h2, h3, h4, h5, h6 {
               <div class="f_widget social-widget">
                 <h3 class="f-title f_600 t_color f_size_18">Follow Us</h3>
                 <div class="social-icons">
-                  <a class="fa-brands fa-facebook" href="https://facebook.com" style="color: hsl(203, 30%, 26%);"></a>
-                  <a class="fa-brands fa-instagram" href="https://instagram.com" style="color: hsl(203, 30%, 26%);"></a>
-                  <a class="fa-brands fa-x-twitter" href="https://twitter.com" style="color: hsl(203, 30%, 26%);"></a>
-              </div>
+
+                    
+
+
+                        <a class="fa-brands fa-facebook" href="https://facebook.com" style="color: hsl(203, 30%, 26%);"></a>
+                        <a class="fa-brands fa-instagram" href="https://instagram.com" style="color: hsl(203, 30%, 26%);"></a>
+                        <a class="fa-brands fa-x-twitter" href="https://twitter.com" style="color: hsl(203, 30%, 26%);"></a>
+                        <a class="fa-brands fa-youtube"
+                        href="https://www.youtube.com" style="color: hsl(203, 30%, 26%);" ></a>
+                        <a class="fa-brands fa-snapchat" 
+                        href="https://www.snapchat.com" style="color: hsl(203, 30%, 26%);" ></a>
+                    </div>
+                </div>
+                <p style="margin-bottom:0;font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%);">Stay connected with us on social media for the latest updates, latest collection, and vintage adventures.
+                </p>
+               
+                <div>
+                    <button id="sr" style="z-index: 1000;">
+                    <div class="circle1">
+                      <svg id="back-to-top" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
+                        <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z"></path>
+                      </svg>
+                    </div>
+                    </button>
+                </div>
+
+               
                 <p>Stay connected with us on social media for the latest updates and vintage adventures.</p>
               </div>
-            </div>
-          </div>
-        </div>
+            
     
         <!-- Decorative Backgrounds -->
         <div class="footer_bg">
@@ -742,7 +784,7 @@ h1, h2, h3, h4, h5, h6 {
               <p class="mb-0 f_400">&copy; 2024 Retro. All Rights Reserved.</p>
             </div>
             <div class="col-lg-6 col-sm-5 text-right">
-              <p>Made with <i class="icon_heart"></i> by <a href="https://www.linkedin.com" target="_blank">Retro Team</a></p>
+              <p>Made with ❤️ by <a href="https://www.linkedin.com" target="_blank">Retro Team</a></p>
             </div>
           </div>
         </div>
@@ -880,6 +922,19 @@ h1, h2, h3, h4, h5, h6 {
 });
 
 </script>
+<script>
+  window.embeddedChatbotConfig = {
+  chatbotId: "dGlQ5bP-F7GodLWzgrVAx",
+  domain: "www.chatbase.co"
+  }
+  </script>
+  <script
+  src="https://www.chatbase.co/embed.min.js"
+  chatbotId="dGlQ5bP-F7GodLWzgrVAx"
+  domain="www.chatbase.co"
+  defer>
+  </script>
+
 </body>
 
 </html>
