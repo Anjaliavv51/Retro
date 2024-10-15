@@ -532,8 +532,12 @@
             background-color: #2c3e50;
         }
     </style>
+
+
+
 </head>
 <body>
+
    
     <div class="circle-container">
         <div class="circle" style="background-color: rgb(255, 181, 107); left: 504px; top: 59px; scale: 1;"></div>
@@ -579,25 +583,25 @@
                             style="color: black; font-family: var(--ff-philosopher);">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Html-files/about.html"
+                        <a class="nav-link" href="about.html"
                             style="font-family: var(--ff-philosopher); color: black;">About Us</a>
                     </li>
                     
                     <li class="nav-item">
-                        <a class="nav-link" href="Html-files/menu.html"
+                        <a class="nav-link" href="menu.html"
                             style="font-family: var(--ff-philosopher);color: black;">Collections</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="Html-files/services.html"
+                        <a class="nav-link" href="services.html"
                             style="font-family: var(--ff-philosopher);color: black;">Services</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="Html-files/contact.html" style="font-family: var(--ff-philosopher); color: black">Contact Us</a>
+                        <a class="nav-link" href="contact.html" style="font-family: var(--ff-philosopher); color: black">Contact Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Html-files/reviews.html" style="font-family: var(--ff-philosopher); color: black">Share Experience</a>
+                        <a class="nav-link" href="reviews.html" style="font-family: var(--ff-philosopher); color: black">Share Experience</a>
                     </li>
                     <li class="nav-item">
                     <a class="nav-link" href="#" style="font-family: var(--ff-philosopher); color: black;">More</a>
@@ -626,19 +630,18 @@
     </nav>
 
 
+
+
+
     <main>
-
-
         <section id="user-content" class="review-container">
             <div class="tab-container">
-                <!-- <button class="tab active" data-tab="share-content">Share Experience</button>
-                <button class="tab" data-tab="view-content">View Experiences</button> -->
-                <button class="tab" data-tab="user-stories">User Stories</button>
+                <button class="tab active" data-tab="user-stories">User Stories</button>
                 <button class="tab" data-tab="reviews">Product Reviews</button>
             </div>
 
-        <div class="content-container">
-                <div id="user-stories" class="content-section">
+            <div class="content-container">
+                <div id="user-stories" class="content-section active">
                     <h2>User Story Gallery</h2>
                     <form id="storyForm">
                         <div class="form-group">
@@ -689,101 +692,8 @@
                 <h2>Featured User Stories</h2>
                 <div id="featuredStories"></div>
             </div>
-
-            <div class="feedback-form">
-                <h2>Help Us Improve</h2>
-                <form id="feedbackForm">
-                    <div class="form-group">
-                        <label for="feedbackType">Feedback Type:</label>
-                        <select id="feedbackType" required>
-                            <option value="">Select type</option>
-                            <option value="suggestion">Suggestion</option>
-                            <option value="complaint">Complaint</option>
-                            <option value="praise">Praise</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="feedbackText">Your Feedback:</label>
-                        <textarea id="feedbackText" rows="6" required></textarea>
-                    </div>
-                    <button type="submit" class="submit-btn">Submit Feedback</button>
-                </form>
-            </div>
         </section>
     </main>
-
-        <footer>
-        <div class="foot-panel2" style="background-color:hsl(20, 43%, 93%);font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
-            <ul>
-                <p style="color: hsl(357, 82%,35%);font-family: var(--ff-philosopher);text-align: left;">Our Pages</p>
-                <a href="#" style="color: black;">Home</a>
-                <a href="Html-files/menu.html" style="color: black;">About</a>
-                <a href="Html-files/services.html" style="color: black;">Services</a>
-                <a href="Html-files/contact.html" style="color: black;">Contact us</a>
-                <a href="Html-files/cart.html" style="color: black;">Cart</a>
-            </ul>
-            <ul>
-                <p style="color: hsl(357, 82%,35%);font-family: var(--ff-philosopher); text-align:left"> Exclusive Offers</p>
-                <a href="#" style="color: black;">Retro Discounts</a>
-                <a href="#" style="color: black;">Limited-Time Promotions</a>
-                <a href="#" style="color: black;">Special Event Packages</a>
-                <a href="#" style="color: black;">Membership Benefits</a>
-                <a href="#" style="color: black;">Early Access to New Collections</a>
-                <a href="#" style="color: black;">VIP Retro Events</a>
-                <a href="#" style="color: black;">Personalized Culinary Experiences</a>
-
-            </ul>
-            <ul>
-                <p style="color: hsl(357, 82%,35%);font-family: var(--ff-philosopher);text-align:left">Payment Products</p>
-                <a href="./Html-files/payment2.html" style="color: black;">Secure Checkout</a>
-                <a href="./Html-files/payment2.html" style="color: black;">Credit/Debit Cards</a>
-                <a href="./Html-files/payment2.html" style="color: black;">Online Payment</a>
-                <a href="./Html-files/payment2.html" style="color: black;">Mobile Wallets</a>
-                <a href="./Html-files/payment2.html" style="color: black;">Contactless Payments</a>
-            </ul>
-            <form id="contactForm">
-                <h3 style="font-family: var(--ff-philosopher);color: hsl(357, 82%,35%);font-family: var(--ff-philosopher);">Contact Us!</h3>
-                
-                <input type="email" id="email" name="email" placeholder="Your Email" required>
-
-                <textarea id="message" name="message" placeholder="Your Message" required></textarea>
-
-                <button id="butt" type="submit" style="font-family: ui-serif;">Send Message</button>
-            </form>
-
-        </div>
-
-
-        <div class="foot_panel4" style="background-color: transparent;">
-            <div class="pages">
-                <h4 style="font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%);">Follow Us</h4>
-
-                <div class="social-icons">
-
-
-                    <a class="fa-brands fa-facebook" href="https://facebook.com" ></a>
-                    <a class="fa-brands fa-instagram" href="https://instagram.com" ></a>
-                    <a class="fa-brands fa-x-twitter" href="https://twitter.com" ></a>
-
-                </div>
-                <p style="font-family: var(--ff-philosopher);background-color: hsl(20, 43%, 93%);color: hsl(203, 30%, 26%);margin-bottom:0;">Stay connected with us on social media for the latest updates, latest collection, and vintage adventures.
-                </p>
-                <div class="copyright" style="font-family: var(--ff-philosopher);background-color: hsl(20, 43%, 93%);color: black;">
-
-                    &copy; 2024 Retro . All Rights Reserved. | Developed by <span id="author">
-                        <a href="https://www.linkedin.com" target="_blank" style="text-decoration: none;">Retro Team</a>
-                </div>
-                <div>
-                    <button id="sr" style="z-index: 1000; display: block;">
-                    <div class="circle1">
-                      <svg id="back-to-top" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
-                        <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z"></path>
-                      </svg>
-                    </div>
-                    </button>
-                </div>
-            </div>
-    </footer>
 
     <script>
         // Function to handle tab switching
@@ -800,45 +710,6 @@
                     document.getElementById(tabId).classList.add('active');
                 });
             });
-        }
-
-        // Function to load content from localStorage
-        function loadContent() {
-            const content = JSON.parse(localStorage.getItem('userContent')) || [];
-            const contentList = document.getElementById('contentList');
-            contentList.innerHTML = ''; // Clear existing content
-
-            content.forEach(item => {
-                if (item.status === 'approved') {
-                    const contentElement = createContentElement(item);
-                    contentList.appendChild(contentElement);
-                }
-            });
-        }
-
-        // Function to create a content element
-        function createContentElement(item) {
-            const contentElement = document.createElement('div');
-            contentElement.className = 'content-item fade-in';
-            contentElement.innerHTML = `
-                <h3>${item.title}</h3>
-                <p><strong>Location:</strong> ${item.location}</p>
-                <p><strong>Type:</strong> ${item.experienceType}</p>
-                <p><strong>Rating:</strong> ${item.rating} stars</p>
-                ${item.image ? `<img src="${item.image}" alt="${item.title}">` : ''}
-                <p>${item.text}</p>
-                <div class="social-share">
-                    <button onclick="shareOnSocial('${item.title}')">Share on Social Media</button>
-                </div>
-            `;
-            return contentElement;
-        }
-
-        // Function to save new content
-        function saveContent(item) {
-            const content = JSON.parse(localStorage.getItem('userContent')) || [];
-            content.unshift(item); // Add new content to the beginning of the array
-            localStorage.setItem('userContent', JSON.stringify(content));
         }
 
         // Function to handle story submission
@@ -930,42 +801,21 @@
         }
 
         // Function to load reviews
-function loadReviews() {
-    const reviews = JSON.parse(localStorage.getItem('productReviews')) || [];
-    const reviewListElement = document.getElementById('reviewList');
-    reviewListElement.innerHTML = '';
+        function loadReviews() {
+            const reviews = JSON.parse(localStorage.getItem('productReviews')) || [];
+            const reviewListElement = document.getElementById('reviewList');
+            reviewListElement.innerHTML = '';
 
-    reviews.forEach(review => {
-        const reviewElement = document.createElement('div');
-        reviewElement.className = 'review-item';
-        reviewElement.innerHTML = `
-            
-
-        <h3>${review.productName}</h3>
-            <p><strong>Rating:</strong> ${'★'.repeat(review.rating)}${'☆'.repeat(5 - review.rating)}</p>
-            <p>${review.reviewText}</p>
-        `;
+            reviews.forEach(review => {
+                const reviewElement = document.createElement('div');
+                reviewElement.className = 'review-item';
+                reviewElement.innerHTML = `
+                    <h3>${review.productName}</h3>
+                    <p><strong>Rating:</strong> ${'★'.repeat(review.rating)}${'☆'.repeat(5 - review.rating)}</p>
+                    <p>${review.reviewText}</p>
+                `;
                 reviewListElement.appendChild(reviewElement);
             });
-        }
-
-        // Function to handle feedback submission
-        document.getElementById('feedbackForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const feedbackType = document.getElementById('feedbackType').value;
-            const feedbackText = document.getElementById('feedbackText').value;
-
-            const newFeedback = { feedbackType, feedbackText };
-            saveFeedback(newFeedback);
-            showNotification('Feedback submitted successfully!');
-            e.target.reset();
-        });
-
-        // Function to save feedback
-        function saveFeedback(feedback) {
-            const feedbacks = JSON.parse(localStorage.getItem('userFeedback')) || [];
-            feedbacks.unshift(feedback);
-            localStorage.setItem('userFeedback', JSON.stringify(feedbacks));
         }
 
         // Function to show notification
@@ -980,47 +830,328 @@ function loadReviews() {
             }, 3000);
         }
 
-        // Function to share on social media (placeholder)
-        function shareOnSocial(title) {
-            alert(`Sharing "${title}" on social media!`);
-            // Implement actual social media sharing logic here
-        }
-
         // Initialize the page
         document.addEventListener('DOMContentLoaded', () => {
             setupTabs();
-            loadContent();
             loadStories();
             loadReviews();
         });
+    </script>
 
-        // Event listener for content form submission
-        document.getElementById('contentForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const title = document.getElementById('contentTitle').value;
-            const location = document.getElementById('contentLocation').value;
-            const experienceType = document.getElementById('contentType').value;
-            const text = document.getElementById('contentText').value;
-            const rating = document.querySelector('input[name="rating"]:checked').value;
-            const imageFile = document.getElementById('contentImage').files[0];
 
-            if (imageFile) {
-                const reader = new FileReader();
-                reader.onloadend = function() {
-                    const newContent = { title, location, experienceType, text, rating, image: reader.result, status: 'pending' };
-                    saveContent(newContent);
-                    showNotification('Experience submitted for review!');
-                    e.target.reset();
-                }
-                reader.readAsDataURL(imageFile);
-            } else {
-                const newContent = { title, location, experienceType, text, rating, status: 'pending' };
+
+
+
+<footer>
+    <div class="foot-panel2" style="background-color:hsl(20, 43%, 93%);font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+        <ul>
+            <p style="color: hsl(357, 82%,35%);font-family: var(--ff-philosopher);text-align: left;">Our Pages</p>
+            <a href="#" style="color: black;">Home</a>
+            <a href="Html-files/menu.html" style="color: black;">About</a>
+            <a href="Html-files/services.html" style="color: black;">Services</a>
+            <a href="Html-files/contact.html" style="color: black;">Contact us</a>
+            <a href="Html-files/cart.html" style="color: black;">Cart</a>
+        </ul>
+        <ul>
+            <p style="color: hsl(357, 82%,35%);font-family: var(--ff-philosopher); text-align:left"> Exclusive Offers</p>
+            <a href="#" style="color: black;">Retro Discounts</a>
+            <a href="#" style="color: black;">Limited-Time Promotions</a>
+            <a href="#" style="color: black;">Special Event Packages</a>
+            <a href="#" style="color: black;">Membership Benefits</a>
+            <a href="#" style="color: black;">Early Access to New Collections</a>
+            <a href="#" style="color: black;">VIP Retro Events</a>
+            <a href="#" style="color: black;">Personalized Culinary Experiences</a>
+
+        </ul>
+        <ul>
+            <p style="color: hsl(357, 82%,35%);font-family: var(--ff-philosopher);text-align:left">Payment Products</p>
+            <a href="./Html-files/payment2.html" style="color: black;">Secure Checkout</a>
+            <a href="./Html-files/payment2.html" style="color: black;">Credit/Debit Cards</a>
+            <a href="./Html-files/payment2.html" style="color: black;">Online Payment</a>
+            <a href="./Html-files/payment2.html" style="color: black;">Mobile Wallets</a>
+            <a href="./Html-files/payment2.html" style="color: black;">Contactless Payments</a>
+        </ul>
+        <form id="contactForm">
+            <h3 style="font-family: var(--ff-philosopher);color: hsl(357, 82%,35%);font-family: var(--ff-philosopher);">Contact Us!</h3>
+            
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+
+            <button id="butt" type="submit" style="font-family: ui-serif;">Send Message</button>
+        </form>
+
+    </div>
+
+
+    <div class="foot_panel4" style="background-color: transparent;">
+        <div class="pages">
+            <h4 style="font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%);">Follow Us</h4>
+
+            <div class="social-icons">
+
+
+                <a class="fa-brands fa-facebook" href="https://facebook.com" ></a>
+                <a class="fa-brands fa-instagram" href="https://instagram.com" ></a>
+                <a class="fa-brands fa-x-twitter" href="https://twitter.com" ></a>
+
+            </div>
+            <p style="font-family: var(--ff-philosopher);background-color: hsl(20, 43%, 93%);color: hsl(203, 30%, 26%);margin-bottom:0;">Stay connected with us on social media for the latest updates, latest collection, and vintage adventures.
+            </p>
+            <div class="copyright" style="font-family: var(--ff-philosopher);background-color: hsl(20, 43%, 93%);color: black;">
+
+                &copy; 2024 Retro . All Rights Reserved. | Developed by <span id="author">
+                    <a href="https://www.linkedin.com" target="_blank" style="text-decoration: none;">Retro Team</a>
+            </div>
+            <div>
+                <button id="sr" style="z-index: 1000; display: block;">
+                <div class="circle1">
+                  <svg id="back-to-top" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
+                    <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z"></path>
+                  </svg>
+                </div>
+                </button>
+            </div>
+        </div>
+</footer>
+
+<script>
+    // Function to handle tab switching
+    function setupTabs() {
+        const tabs = document.querySelectorAll('.tab');
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                tabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                const tabId = tab.getAttribute('data-tab');
+                document.querySelectorAll('.content-section').forEach(section => {
+                    section.classList.remove('active');
+                });
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+    }
+
+    // Function to load content from localStorage
+    function loadContent() {
+        const content = JSON.parse(localStorage.getItem('userContent')) || [];
+        const contentList = document.getElementById('contentList');
+        contentList.innerHTML = ''; // Clear existing content
+
+        content.forEach(item => {
+            if (item.status === 'approved') {
+                const contentElement = createContentElement(item);
+                contentList.appendChild(contentElement);
+            }
+        });
+    }
+
+    // Function to create a content element
+    function createContentElement(item) {
+        const contentElement = document.createElement('div');
+        contentElement.className = 'content-item fade-in';
+        contentElement.innerHTML = `
+            <h3>${item.title}</h3>
+            <p><strong>Location:</strong> ${item.location}</p>
+            <p><strong>Type:</strong> ${item.experienceType}</p>
+            <p><strong>Rating:</strong> ${item.rating} stars</p>
+            ${item.image ? `<img src="${item.image}" alt="${item.title}">` : ''}
+            <p>${item.text}</p>
+            <div class="social-share">
+                <button onclick="shareOnSocial('${item.title}')">Share on Social Media</button>
+            </div>
+        `;
+        return contentElement;
+    }
+
+    // Function to save new content
+    function saveContent(item) {
+        const content = JSON.parse(localStorage.getItem('userContent')) || [];
+        content.unshift(item); // Add new content to the beginning of the array
+        localStorage.setItem('userContent', JSON.stringify(content));
+    }
+
+    // Function to handle story submission
+    document.getElementById('storyForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const title = document.getElementById('storyTitle').value;
+        const text = document.getElementById('storyText').value;
+        const imageFile = document.getElementById('storyImage').files[0];
+
+        if (imageFile) {
+            const reader = new FileReader();
+            reader.onloadend = function() {
+                const newStory = { title, text, image: reader.result };
+                saveStory(newStory);
+                showNotification('Story submitted successfully!');
+                loadStories();
+                e.target.reset();
+            }
+            reader.readAsDataURL(imageFile);
+        }
+    });
+
+    // Function to save a new story
+    function saveStory(story) {
+        const stories = JSON.parse(localStorage.getItem('userStories')) || [];
+        stories.unshift(story);
+        localStorage.setItem('userStories', JSON.stringify(stories));
+    }
+
+    // Function to load stories
+    function loadStories() {
+        const stories = JSON.parse(localStorage.getItem('userStories')) || [];
+        const galleryElement = document.getElementById('storyGallery');
+        galleryElement.innerHTML = '';
+
+        stories.forEach(story => {
+            const storyElement = document.createElement('div');
+            storyElement.className = 'story-item';
+            storyElement.innerHTML = `
+                <h3>${story.title}</h3>
+                <img src="${story.image}" alt="${story.title}">
+                <p>${story.text}</p>
+            `;
+            galleryElement.appendChild(storyElement);
+        });
+
+        updateFeaturedStories(stories);
+    }
+
+    // Function to update featured stories
+    function updateFeaturedStories(stories) {
+        const featuredStoriesElement = document.getElementById('featuredStories');
+        featuredStoriesElement.innerHTML = '';
+
+        // Select up to 3 random stories to feature
+        const featuredStories = stories.sort(() => 0.5 - Math.random()).slice(0, 3);
+
+        featuredStories.forEach(story => {
+            const storyElement = document.createElement('div');
+            storyElement.className = 'story-item';
+            storyElement.innerHTML = `
+                <h3>${story.title}</h3>
+                <img src="${story.image}" alt="${story.title}">
+                <p>${story.text}</p>
+            `;
+            featuredStoriesElement.appendChild(storyElement);
+        });
+    }
+
+    // Function to handle review submission
+    document.getElementById('reviewForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const productName = document.getElementById('productName').value;
+        const reviewText = document.getElementById('reviewText').value;
+        const rating = document.querySelector('input[name="productRating"]:checked').value;
+
+        const newReview = { productName, reviewText, rating };
+        saveReview(newReview);
+        showNotification('Review submitted successfully!');
+        loadReviews();
+        e.target.reset();
+    });
+
+    // Function to save a new review
+    function saveReview(review) {
+        const reviews = JSON.parse(localStorage.getItem('productReviews')) || [];
+        reviews.unshift(review);
+        localStorage.setItem('productReviews', JSON.stringify(reviews));
+    }
+
+    // Function to load reviews
+function loadReviews() {
+const reviews = JSON.parse(localStorage.getItem('productReviews')) || [];
+const reviewListElement = document.getElementById('reviewList');
+reviewListElement.innerHTML = '';
+
+reviews.forEach(review => {
+    const reviewElement = document.createElement('div');
+    reviewElement.className = 'review-item';
+    reviewElement.innerHTML = `
+        
+
+    <h3>${review.productName}</h3>
+        <p><strong>Rating:</strong> ${'★'.repeat(review.rating)}${'☆'.repeat(5 - review.rating)}</p>
+        <p>${review.reviewText}</p>
+    `;
+            reviewListElement.appendChild(reviewElement);
+        });
+    }
+
+    // Function to handle feedback submission
+    document.getElementById('feedbackForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const feedbackType = document.getElementById('feedbackType').value;
+        const feedbackText = document.getElementById('feedbackText').value;
+
+        const newFeedback = { feedbackType, feedbackText };
+        saveFeedback(newFeedback);
+        showNotification('Feedback submitted successfully!');
+        e.target.reset();
+    });
+
+    // Function to save feedback
+    function saveFeedback(feedback) {
+        const feedbacks = JSON.parse(localStorage.getItem('userFeedback')) || [];
+        feedbacks.unshift(feedback);
+        localStorage.setItem('userFeedback', JSON.stringify(feedbacks));
+    }
+
+    // Function to show notification
+    function showNotification(message) {
+        const notification = document.createElement('div');
+        notification.className = 'notification';
+        notification.textContent = message;
+        document.body.appendChild(notification);
+
+        setTimeout(() => {
+            notification.remove();
+        }, 3000);
+    }
+
+    // Function to share on social media (placeholder)
+    function shareOnSocial(title) {
+        alert(`Sharing "${title}" on social media!`);
+        // Implement actual social media sharing logic here
+    }
+
+    // Initialize the page
+    document.addEventListener('DOMContentLoaded', () => {
+        setupTabs();
+        loadContent();
+        loadStories();
+        loadReviews();
+    });
+
+    // Event listener for content form submission
+    document.getElementById('contentForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const title = document.getElementById('contentTitle').value;
+        const location = document.getElementById('contentLocation').value;
+        const experienceType = document.getElementById('contentType').value;
+        const text = document.getElementById('contentText').value;
+        const rating = document.querySelector('input[name="rating"]:checked').value;
+        const imageFile = document.getElementById('contentImage').files[0];
+
+        if (imageFile) {
+            const reader = new FileReader();
+            reader.onloadend = function() {
+                const newContent = { title, location, experienceType, text, rating, image: reader.result, status: 'pending' };
                 saveContent(newContent);
                 showNotification('Experience submitted for review!');
                 e.target.reset();
             }
-        });
-    </script>
+            reader.readAsDataURL(imageFile);
+        } else {
+            const newContent = { title, location, experienceType, text, rating, status: 'pending' };
+            saveContent(newContent);
+            showNotification('Experience submitted for review!');
+            e.target.reset();
+        }
+    });
+</script>
+
 
 </body>
 </html>
