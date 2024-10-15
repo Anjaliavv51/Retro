@@ -525,68 +525,28 @@ body {
   padding-top: 10px;
 }
 
-/* .footer {
-    background-color:  rgb(224, 224, 252);;
-    height: 700px;
-} */
-
-/* .footer .container {
-    border: 2px solid rgb(22, 6, 6);
-    color: white;
-    padding: 50px;
-    margin-left: 50px;
-    margin-right: 700px;
-    font-size: 1.6rem;
-    padding-right: 50px;
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  align-items: center;
+  margin-top: 20px;
+  margin-left: 0;
 }
 
-.footer input {
-    font-size: 1.3rem;
+.social-icons a {
+  font-size: 2rem;
+  color: #ddd;
+  transition: transform 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, text-shadow 0.3s ease;
 }
 
-.footer h1 {
-    color: white;
-    font-family: 'Bree Serif', serif;
-    margin-left: 20px;
-    padding: 50px;
-    font-size: 2.5rem;
+.social-icons a:hover {
+  transform: scale(1.1) rotate(5deg);
+  color: #ead705;
+  box-shadow: 0 0 15px rgba(1, 44, 162, 0.7), 
+              0 0 30px rgba(1, 24, 119, 0.5);
+  text-shadow: 0 0 20px rgba(2, 10, 105, 0.7);
 }
-
-.footer button {
-    font-size: 1.4rem;
-    padding: 10px;
-    margin-top: 30px;
-    width: 180px;
-    font-family: 'Bree Serif', serif;
-    color: rgb(22, 6, 6);
-    border-radius: 10px;
-} */
-
-/* .footer p {
-    text-align: center;
-    font-family: 'Bree Serif', serif;
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-    color:brown;
-    /* margin-top: 30px; */
-
-/* .footer h1{
-    font-size: 1.2em;
-} */
-
-/* .footer{
-    margin-top: 15px;
-} */
-/* .foot-panel1{
-    
-    background-color: rgb(122, 37, 37);
-    color:white;
-    height: 50px;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 0.85rem;
-} */
 
 .foot-panel2 {
   background-color: rgb(138, 37, 37);
