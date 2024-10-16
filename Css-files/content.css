@@ -177,7 +177,7 @@ input[type="submit"]:hover {
   text-decoration: none;
   background-color: brown;
   border: 3px solid rgb(255, 255, 255);
-  padding: 15px;
+  padding: 9px;
   border-radius: 15px;
   display: inline-block;
   color: white;
