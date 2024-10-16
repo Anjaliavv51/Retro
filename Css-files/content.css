@@ -121,7 +121,7 @@ body {
 }
 .mainhead h1 {
   font-family: Georgia;
-  font-size: 3.8rem;
+  font-size: 3rem;
   color: white;
   padding-bottom: 20px;
 }
@@ -238,6 +238,7 @@ input[type="submit"]:hover {
 
 .first_cont {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
@@ -286,6 +287,7 @@ input[type="submit"]:hover {
 }
 .second_cont{
   display: flex;
+  flex-wrap: wrap;
   padding: 40px;
   justify-content: center;
 }
@@ -387,7 +389,7 @@ div.deals:hover{
 /* footer */
 .foot-panel2{
     background-color: transparent;
-    color:white;
+    /* color:white; */
     display: flex;
     justify-content: space-evenly;
 }
@@ -560,7 +562,6 @@ td{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 20rem;
   height: max-content;
 }
 
