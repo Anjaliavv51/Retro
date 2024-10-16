@@ -52,7 +52,7 @@ section:nth-child(even){
     text-decoration: none;
         background-color: brown;
         border: 3px solid rgb(255, 255, 255);
-        padding: 15px 5px;
+        padding: 15px 0px;
         border-radius: 15px;
         display: inline-block;
         color: white;
