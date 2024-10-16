@@ -13,18 +13,19 @@
 body {
   background-color: black;
 }
-/*
+
 .navbar {
   padding: fixed;
   top: 0;
   width: 100%;
   z-index: 1030;
   padding: 15px 0;
-  /*background-color: rgba(245, 245, 245, 0.7);
+   background-color: rgba(245, 245, 245, 0.7);
+   border-radius: 15px;
   backdrop-filter: blur(8px);
   transition: background-color 0.5s ease, backdrop-filter 0.5s ease;
 }
-*/
+
 
 .navbar a {
   text-decoration: none;
@@ -34,12 +35,12 @@ body {
 }
 
 /* Navbar link hover effect */
-/*.navbar a:hover{
+.navbar a:hover{
   color: #fff;
   border-bottom: 1px solid #fff;
 }
 
-*/
+
 
 
 .navbar.fixed-top {
