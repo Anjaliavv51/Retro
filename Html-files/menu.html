@@ -29,17 +29,23 @@
         rel="stylesheet">
     <link rel="stylesheet" href="../Css-files/content.css">
     <style>
-        /* Initial styling for the image */
-        .menu {
-            transition: transform 0.3s ease;
-            /* Smooth transition for the zoom effect */
-        }
+       /* Initial styling for the image */
+.menu {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Smooth transition for zoom and shadow effect */
+    transform-origin: center center;
+    /* Ensures zoom originates from the center of the image */
+    backface-visibility: hidden;
+    /* Prevents flickering */
+}
 
-        /* Zoom effect on hover */
-        .menu:hover {
-            transform: scale(1.1);
-            /* Scale the image to 110% of its original size */
-        }
+/* Zoom effect on hover */
+.menu:hover {
+    transform: scale(1.1);
+    /* Scale the image to 110% of its original size */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    /* Adds a shadow for better visual feedback */
+}
 
 
         @media (max-width: 768px) {
@@ -68,6 +74,47 @@
                 flex-direction: column;
             }
         }
+
+        .foot-panel2 ul a {
+            padding: 0; /* Reset padding */
+            list-style: none; /* Remove default bullet points */
+        }
+
+        .foot-panel2 ul  a { 
+            /* /* color: black!important; */
+            text-decoration: none !important;
+            transition:transform 0.2s ease, text-decoration-color 0.2s ease; 
+            /* display: inline-block; */
+            
+
+            text-decoration: none;
+            color: #000;
+            position: relative;
+            padding-bottom: 2px;
+            
+        }
+
+        .foot-panel2 ul a::after{
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 2px;
+            background-color: brown;
+            transition: width  0.3s ease;
+            width:0;
+            
+        }
+
+        .foot-panel2 ul a:hover{
+            transform: scale(1.05);
+        }
+
+        .foot-panel2 ul a:hover::after{
+            width:100%;
+        } 
+
     </style>
     <style>
         body {
@@ -776,63 +823,61 @@
             <ul class="footer-colums">
                 <p style="color: hsl(357, 82%,35%);font-family: var(--ff-philosopher);">Our Pages</p>
                 <a href="../index.html"
-                    style="text-decoration: none;font-family: var(--ff-poppins);color: black;">Home</a>
-                <a href="#" style="text-decoration: none;font-family: var(--ff-poppins);color: black;">About</a>
+                    style="font-family: var(--ff-poppins);">Home</a>
+                <a href="#" style="font-family: var(--ff-poppins);">About</a>
                 <a href="services.html"
-                    style="text-decoration: none;font-family: var(--ff-poppins);color: black;">Services</a>
+                    style="font-family: var(--ff-poppins);">Services</a>
                 <a href="contact.html"
-                    style="text-decoration: none;font-family: var(--ff-poppins);color: black;">Contact</a>
-                <a href="cart.html" style="text-decoration: none;font-family: var(--ff-poppins);color: black;">Cart</a>
-                <a href="contributor.html" style="text-decoration: none;font-family: var(--ff-poppins);color: black;">Contributors</a>
+                    style="font-family: var(--ff-poppins);">Contact</a>
+                <a href="cart.html" style="font-family: var(--ff-poppins);">Cart</a>
+                <a href="contributor.html" style="font-family: var(--ff-poppins);">Contributors</a>
             </ul>
 
             <ul class="footer-colums">
                 <p style="color: hsl(357, 82%,35%);font-family: var(--ff-philosopher);"> Exclusive Offers</p>
-                <a style="font-family: var(--ff-poppins);color: black;">Retro Discounts</a>
-                <a style="font-family: var(--ff-poppins);color: black;">Limited-Time Promotions</a>
-                <a style="font-family: var(--ff-poppins);color: black;">Special Event Packages</a>
-                <a style="font-family: var(--ff-poppins);color: black;">Membership Benefits</a>
-                <a style="font-family: var(--ff-poppins);color: black;">Early Access to New Collections</a>
-                <a style="font-family: var(--ff-poppins);color: black;">VIP Retro Events</a>
-                <a style="font-family: var(--ff-poppins);color: black;">Personalized Culinary Experiences</a>
+                <a style="font-family: var(--ff-poppins);">Retro Discounts</a>
+                <a style="font-family: var(--ff-poppins);">Limited-Time Promotions</a>
+                <a style="font-family: var(--ff-poppins);">Special Event Packages</a>
+                <a style="font-family: var(--ff-poppins);">Membership Benefits</a>
+                <a style="font-family: var(--ff-poppins);">Early Access to New Collections</a>
+                <a style="font-family: var(--ff-poppins);">VIP Retro Events</a>
+                <a style="font-family: var(--ff-poppins);">Personalized Culinary Experiences</a>
 
             </ul>
 
             <ul class="footer-colums">
                 <p style="color: hsl(357, 82%,35%);font-family: var(--ff-philosopher);">Payment Products</p>
-                <a style="font-family: var(--ff-poppins);color: black;">Secure Checkout</a>
-                <a style="font-family: var(--ff-poppins);color: black;">Credit/Debit Cards</a>
-                <a style="font-family: var(--ff-poppins);color: black;">Online Payment</a>
-                <a style="font-family: var(--ff-poppins);color: black;">Mobile Wallets</a>
-                <a style="font-family: var(--ff-poppins);color: black;">Contactless Payments</a>
+                <a style="font-family: var(--ff-poppins);">Secure Checkout</a>
+                <a style="font-family: var(--ff-poppins);">Credit/Debit Cards</a>
+                <a style="font-family: var(--ff-poppins);">Online Payment</a>
+                <a style="font-family: var(--ff-poppins);">Mobile Wallets</a>
+                <a style="font-family: var(--ff-poppins);">Contactless Payments</a>
             </ul>
+            <form id="contactForm">
+                <h3 style="font-family: var(--ff-philosopher); color: hsl(357, 82%,35%); font-size: 26px; margin-bottom: 3px;">
+                    Contact Us!
+                </h3>
+            
+                <!-- Email Input with Icon -->
+                <div style="position: relative; margin-bottom: 15px;">
+                    <i class="fas fa-envelope" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); font-size: 14px; color: hsl(208, 7%,46%);"></i>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required 
+                           style="padding-left: 30px; width: 100%;">
+                </div>
+            
+                <!-- Message Input with Icon -->
+                <div style="position: relative; margin-bottom: 15px;">
+                    <i class="fas fa-comment" style="position: absolute; left: 10px; top: 10px; font-size: 14px; color: hsl(208, 7%,46%);"></i>
+                    <textarea id="message" name="message" placeholder="Your Message" required 
+                              style="padding-left: 30px; width: 100%;"></textarea>
+                </div>
+            
+                <!-- Submit Button -->
+                <button id="butt" type="submit" style="font-family: var(--ff-poppins);">Send Message</button>
+            </form>
 
 <!-- Include Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
-<form id="contactForm">
-    <h3 style="font-family: var(--ff-philosopher); color: hsl(357, 82%,35%); font-size: 26px; margin-bottom: 3px;">
-        Contact Us!
-    </h3>
-
-    <!-- Email Input with Icon -->
-    <div style="position: relative; margin-bottom: 15px;">
-        <i class="fas fa-envelope" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); font-size: 14px; color: hsl(208, 7%,46%);"></i>
-        <input type="email" id="email" name="email" placeholder="Your Email" required 
-               style="padding-left: 30px; width: 100%;">
-    </div>
-
-    <!-- Message Input with Icon -->
-    <div style="position: relative; margin-bottom: 15px;">
-        <i class="fas fa-comment" style="position: absolute; left: 10px; top: 10px; font-size: 14px; color: hsl(208, 7%,46%);"></i>
-        <textarea id="message" name="message" placeholder="Your Message" required 
-                  style="padding-left: 30px; width: 100%;"></textarea>
-    </div>
-
-    <!-- Submit Button -->
-    <button id="butt" type="submit" style="font-family: var(--ff-poppins);">Send Message</button>
-</form>
-
 
 
         </div>
@@ -1014,7 +1059,9 @@
         // });
     </script>
     <script src="cart.js"></script>
-
+    <div class="gtranslate_wrapper"></div>
+    <script>window.gtranslateSettings = {"default_language":"en","detect_browser_language":true,"wrapper_selector":".gtranslate_wrapper"}</script>
+    <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
 </body>
 
 </html>
