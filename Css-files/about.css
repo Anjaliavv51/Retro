@@ -105,7 +105,7 @@
   }
   .mainhead h1 {
     font-family: Georgia;
-    font-size: 3.8rem;
+    font-size: 3rem;
     color: white;
     padding-bottom: 20px;
   }
@@ -334,22 +334,21 @@
   }
   
   .social-icons a {
-    font-size: 1.2rem;
-    padding: 8px;
-    margin: 15px;
+    font-size: 1rem;
+    padding: 7px; 
+    margin: 7px 6px 0 8px;
     text-decoration: none;
     /* color: white; */
   }
   
   .fa-facebook{
     color: hsl(203, 30%, 26%);
-    font-size: 1.2rem;
+    font-size: 1rem;
     padding: 8px;
     margin: 15px;
   }
   
   .fa-facebook:hover {
-    
     transform: scale(1.5);
     color:#3B5998;
     transition: transform 0.2s ease, color 0.2s ease;
@@ -357,7 +356,7 @@
   
   .fa-instagram{
     color: hsl(203, 30%, 26%);
-    font-size: 1.2rem;
+    font-size: 1rem;
     padding: 8px;
     margin: 15px;
   }
@@ -368,18 +367,39 @@
   }
   .fa-x-twitter{
     color: hsl(203, 30%, 26%);
-    font-size: 1.2rem;
+    font-size: 1rem;
     padding: 8px;
     margin: 15px;
-  
   }
-  
   .fa-x-twitter:hover {
     color:black;
     transform: scale(1.5);
     transition: transform 0.2s ease, color 0.2s ease;
   }
-  
+  .fa-youtube {
+    color: hsl(203, 30%, 26%);
+    font-size: 1rem;
+    padding: 8px;
+    margin: 15px;
+  }
+
+  .fa-youtube:hover {
+    transform: scale(1.5);
+    color: #FF0000; 
+    transition: transform 0.2s ease, color 0.2s ease;
+  }
+
+  .fa-snapchat {
+    color: hsl(203, 30%, 26%);
+    font-size: 1rem;
+    padding: 8px;
+    margin: 15px;
+  }
+  .fa-snapchat:hover {
+    transform: scale(1.5);
+    color: #FFFC00; 
+    transition: transform 0.2s ease, color 0.2s ease;
+  }
   
   .foot_panel4{
     background-color: transparent;
@@ -432,24 +452,6 @@
     background-color: rgb(196, 89, 89);
   }
   
-  .social-icons a{
-      font-size: 1.2rem;
-      padding: 15px;
-      text-decoration: none;
-      color: hsl(203, 30%, 26%);
-  }
-  
-  .fa-facebook:hover {
-    color:#3B5998;
-  }
-  
-  .fa-instagram:hover {
-    color:#D62976;
-  }
-  
-  .fa-twitter:hover {
-    color:#00B6F1;
-  }
   
   .cart-section{
     padding: 55px 70px 30px 70px;

@@ -19,14 +19,14 @@
       #sr {
 display: none; 
 position: fixed; 
-bottom: 20px; 
-right: 30px; 
+bottom: 70px; 
+right: 15px; 
 z-index: 99; 
 font-size: 18px;
 border: none;
 outline: none;
-background-color: #555; 
-color: white; 
+background-color: transparent; 
+color: rgb(17, 17, 17); 
 cursor: pointer; 
 padding: 15px; 
 border-radius: 4px; 
@@ -169,6 +169,26 @@ body{
 .area .way:nth-child(8):hover ~ .box{transform: rotateX(20deg) rotateY(0deg);}
 .area .way:nth-child(9):hover ~ .box{transform: rotateX(20deg) rotateY(-20deg);}
   </style>
+  <style>
+    /* Styles for the switch link */
+    .switch-link {
+      margin-top: 20px;
+      font-family: var(--ff-poppins);
+      text-align: center;
+      color: hsl(203, 30%, 26%);
+    }
+
+    .switch-link a {
+      color: hsl(0, 100%, 50%);
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    .switch-link a:hover {
+      color: hsl(203, 30%, 26%);
+    }
+  </style>
 </head>
 <body>
   <div class="circle-container">
@@ -200,6 +220,7 @@ body{
         <div class="left-login">
           <div class="area">
             <div class="way"></div>
+            <img src="../Images/signup.png" alt="Icon" style="width: 100px; height: auto; margin: 20px auto 20px; display: block;">
             <div class="way"></div>
             <div class="way"></div>
             <div class="way"></div>
@@ -229,18 +250,22 @@ body{
                 <span id="email-error" class="error-message"></span>
               </div>
 
-              <div class="textfield ">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" placeholder="Enter Password" title="Special characters are not allowed" required>
-                <span id="password-error" class="error-message"></span>
-                <span class="tooltiptext">Special characters such as /[<>"/]/  are not allowed</span>
+              <div class="textfield">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password">
             </div>
-
+            <div class="show-pass-container">
+                <input type="checkbox" id="showPassword">
+                <label for="showPassword">Show Password</label>
+            </div>
+            
               
             </form>
             <div class="btnNext"><button type="submit" class="btn-login" style="font-family: var(--ff-philosopher);color: #ddd;">Register</button>
               <button id="google-login" style="font-family: var(--ff-philosopher);color: #ddd;">Signup with Google</button></div>
           </div>
+
+          <p class="switch-link">Already have an account? <a href="login.html">Login</a></p>
         </div>
       </div>
       <script>
@@ -308,5 +333,33 @@ body{
     
         animateCircles();
       </script>
+      <script>
+        window.embeddedChatbotConfig = {
+        chatbotId: "dGlQ5bP-F7GodLWzgrVAx",
+        domain: "www.chatbase.co"
+        }
+        </script>
+        <script
+        src="https://www.chatbase.co/embed.min.js"
+        chatbotId="dGlQ5bP-F7GodLWzgrVAx"
+        domain="www.chatbase.co"
+        defer>
+        </script>
+        <script>
+          // JavaScript to toggle password visibility
+          const passwordField = document.getElementById('password');
+          const showPasswordCheckbox = document.getElementById('showPassword');
+      
+          showPasswordCheckbox.addEventListener('change', () => {
+              if (showPasswordCheckbox.checked) {
+                  passwordField.type = 'text';  // Show password
+              } else {
+                  passwordField.type = 'password';  // Hide password
+              }
+          });
+      </script>
+    <div class="gtranslate_wrapper"></div>
+    <script>window.gtranslateSettings = {"default_language":"en","detect_browser_language":true,"wrapper_selector":".gtranslate_wrapper"}</script>
+    <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
 </body>
 </html>
