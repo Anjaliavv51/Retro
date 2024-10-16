@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+    <title>Retro</title>
+
+    <style>
+        @media (min-width: 992px) {
+            .navbar-expand-lg .navbar-nav {
+                margin-top: -9px; /* Add this line */
+            }
+        }
+    </style>
+    
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="/Css-files/navbarstyles.css">
+    <link rel="stylesheet" href="/Css-files/popup.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> -->
+    
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" type="image/x-icon" href="./Favicon image/favicon-32x32.png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fuggles&family=Mooli&family=Oswald:wght@600&family=Roboto:wght@100;300&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script> -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./style.css">
+       
+
+    <style>
+        /* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap'); */
+
+        :root{
+            --ff-philosopher: "Philosopher", sans-serif;
+            --ff-poppins: "Poppins", sans-serif;
+            --primary-color: #800020;
+            --secondary-color: #800020;
+            --background-color: #f4f4f4;
+            --card-bg: #ffffff;
+        
+            --header-text: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpath fill='%23ffb9b0' d='M486 705.8c-109.3-21.8-223.4-32.2-335.3-19.4C99.5 692.1 49 703 0 719.8V800h843.8c-115.9-33.2-230.8-68.1-347.6-92.2C492.8 707.1 489.4 706.5 486 705.8z'/%3E%3Cpath fill='%23ffc1b7' d='M1600 0H0v719.8c49-16.8 99.5-27.8 150.7-33.5c111.9-12.7 226-2.4 335.3 19.4c3.4 0.7 6.8 1.4 10.2 2c116.8 24 231.7 59 347.6 92.2H1600V0z'/%3E%3Cpath fill='%23ffc8bf' d='M478.4 581c3.2 0.8 6.4 1.7 9.5 2.5c196.2 52.5 388.7 133.5 593.5 176.6c174.2 36.6 349.5 29.2 518.6-10.2V0H0v574.9c52.3-17.6 106.5-27.7 161.1-30.9C268.4 537.4 375.7 554.2 478.4 581z'/%3E%3Cpath fill='%23ffcfc6' d='M0 0v429.4c55.6-18.4 113.5-27.3 171.4-27.7c102.8-0.8 203.2 22.7 299.3 54.5c3 1 5.9 2 8.9 3c183.6 62 365.7 146.1 562.4 192.1c186.7 43.7 376.3 34.4 557.9-12.6V0H0z'/%3E%3Cpath fill='%23FFD6CE' d='M181.8 259.4c98.2 6 191.9 35.2 281.3 72.1c2.8 1.1 5.5 2.3 8.3 3.4c171 71.6 342.7 158.5 531.3 207.7c198.8 51.8 403.4 40.8 597.3-14.8V0H0v283.2C59 263.6 120.6 255.7 181.8 259.4z'/%3E%3Cpath fill='%23ffdcd4' d='M1600 0H0v136.3c62.3-20.9 127.7-27.5 192.2-19.2c93.6 12.1 180.5 47.7 263.3 89.6c2.6 1.3 5.1 2.6 7.7 3.9c158.4 81.1 319.7 170.9 500.3 223.2c210.5 61 430.8 49 636.6-16.6V0z'/%3E%3Cpath fill='%23ffe1d9' d='M454.9 86.3C600.7 177 751.6 269.3 924.1 325c208.6 67.4 431.3 60.8 637.9-5.3c12.8-4.1 25.4-8.4 38.1-12.9V0H288.1c56 21.3 108.7 50.6 159.7 82C450.2 83.4 452.5 84.9 454.9 86.3z'/%3E%3Cpath fill='%23ffe6df' d='M1600 0H498c118.1 85.8 243.5 164.5 386.8 216.2c191.8 69.2 400 74.7 595 21.1c40.8-11.2 81.1-25.2 120.3-41.7V0z'/%3E%3Cpath fill='%23ffebe4' d='M1397.5 154.8c47.2-10.6 93.6-25.3 138.6-43.8c21.7-8.9 43-18.8 63.9-29.5V0H643.4c62.9 41.7 129.7 78.2 202.1 107.4C1020.4 178.1 1214.2 196.1 1397.5 154.8z'/%3E%3Cpath fill='%23FFF0EA' d='M1315.3 72.4c75.3-12.6 148.9-37.1 216.8-72.4h-723C966.8 71 1144.7 101 1315.3 72.4z'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: cover;
+  
+  background-attachment: fixed;
+}
+
+        
+/* 
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 1rem;
+        } */
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        #logo-web {
+            height: 40px;
+            margin-right: 0.5rem;
+            transition: transform var(--transition-speed) ease;
+        }
+
+        #logo-web:hover {
+            transform: scale(1.1);
+        }
+
+        #logo {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 600;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+ 
+        .mode-toggle {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: transform var(--transition-speed) ease;
+        }
+
+        .mode-toggle:hover {
+            transform: rotate(30deg);
+        }
+
+        .hamburger {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            margin-top: 200px;
+        }
+
+        .review-container {
+            background-color: rgba(255, 255, 255, 0.3); 
+            border-radius: 15px;
+            box-shadow: var(--card-shadow);
+            overflow: hidden;
+            transition: transform var(--transition-speed) ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .review-container:hover {
+            transform: translateY(-10px);
+        }
+
+        .tab-container {
+            display: flex;
+            justify-content: center;
+            background-color: #ffffff;
+            padding: 1rem;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .tab {
+            padding: 0.8rem 1.5rem;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            transition: all var(--transition-speed) ease;
+            font-weight: 600;
+            position: relative;
+            overflow: hidden;
+            margin: 0 0.5rem;
+            border-radius: 25px;
+        }
+
+        .tab::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--primary-color);
+            transform: translateY(100%);
+            transition: transform var(--transition-speed) ease;
+            z-index: -1;
+            border-radius: 25px;
+        }
+
+        .tab:hover::before,
+        .tab.active::before {
+            transform: translateY(0);
+        }
+
+        .tab:hover,
+        .tab.active {
+            color: #F88379;
+            font-size: 20px;
+        }
+
+        .content-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            padding: 2rem;
+        }
+
+        .content-form, .review-form {
+            flex: 1 1 100%;
+            background-color: #f9f9f9;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: var(--card-shadow);
+            transition: all var(--transition-speed) ease;
+        }
+
+        .content-form:hover, .review-form:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--primary-color);
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-family: 'Poppins', sans-serif;
+            transition: border-color var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+        }
+
+        .star-rating {
+            display: inline-block;
+        }
+
+        .star-rating input {
+            display: none;
+        }
+
+        .star-rating label {
+            float: right;
+            padding: 0 2px;
+            font-size: 30px;
+            color: #ddd;
+            cursor: pointer;
+            transition: color var(--transition-speed) ease;
+        }
+
+        .star-rating input:checked ~ label,
+        .star-rating label:hover,
+        .star-rating label:hover ~ label {
+            color: #ffca08;
+        }
+
+        .submit-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color var(--transition-speed) ease, transform var(--transition-speed) ease;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .submit-btn:hover {
+            background-color: #F88379;
+            transform: translateY(-2px);
+        }
+
+        .content-section {
+            display: none;
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        .content-section.active {
+            display: block;
+        }
+
+        .content-item, .review-item, .story-item {
+            background-color: var(--card-background);
+            border: 1px solid #ddd;
+            border-radius: 15px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            transition: all var(--transition-speed) ease;
+            box-shadow: var(--card-shadow);
+        }
+
+        .content-item:hover, .review-item:hover, .story-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .content-item img, .review-item img, .story-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            transition: transform var(--transition-speed) ease;
+        }
+
+        .content-item img:hover, .review-item img:hover, .story-item img:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .social-share {
+            margin-top: 1rem;
+        }
+
+        .social-share button {
+            background-color: #F88379;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .social-share button:hover {
+            background-color: #F88379;
+        }
+
+        .featured-stories {
+            background-color: #ffffff;
+            padding: 2rem;
+            border-radius: 15px;
+            margin-top: 2rem;
+        }
+
+        .featured-stories h2 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .feedback-form {
+            background-color: #ffffff;
+            padding: 2rem;
+            border-radius: 15px;
+            margin-top: 2rem;
+        }
+        .foot-panel2 {
+            background-color: rgb(138, 37, 37);
+            color: white;
+            height: 300px;
+            /* height: fit-content; */
+            display: flex;
+            /* padding: 10px; */
+            justify-content: space-evenly;
+        }
+
+        .foot-panel2 ul {
+        margin-top: 20px;
+        }
+
+        ul p {
+        font-weight: 700;
+        }
+
+        ul a {
+        display: block;
+        font-size: 0.85rem;
+        margin-top: 10px;
+    color: black;
+        
+        text-decoration: none;
+        }
+
+
+        .foot_panel4 {
+        background-color: rgb(66, 16, 16);
+        color: white;
+        height: 160px;
+        font-size: 0.9rem;
+        text-align: center;
+        }
+
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+
+
+            .dropdown-close-btn {
+                display: block;
+                text-align: right;
+                color: white;
+                font-size: 1.5rem;
+                cursor: pointer;
+            }
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .dark-mode {
+            --primary-color: #2c3e50;
+            --secondary-color: #27ae60;
+            --background-color: #1a1a1a;
+            --text-color: #f4f4f4;
+            --card-background: #2c2c2c;
+            --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+   
+
+        .dark-mode .tab-container {
+            background-color: #2c2c2c;
+        }
+
+        .dark-mode .tab::before {
+            background-color: #34495e;
+        }
+
+        .dark-mode .content-form,
+        .dark-mode .review-form {
+            background-color: #2c2c2c;
+        }
+
+        .dark-mode .form-group input,
+        .dark-mode .form-group select,
+        .dark-mode .form-group textarea {
+            background-color: #3a3a3a;
+            color: #f4f4f4;
+            border-color: #4a4a4a;
+        }
+
+        .dark-mode .featured-stories {
+            background-color: #2c3e50;
+        }
+
+        .dark-mode .feedback-form {
+            background-color: #2c3e50;
+        }
+    </style>
+
+
+
+</head>
+<body>
+
+    <div class="circle-container">
+        <div class="circle" style="background-color: rgb(255, 181, 107); left: 504px; top: 59px; scale: 1;"></div>
+        <div class="circle" style="background-color: rgb(253, 175, 105); left: 504px; top: 59px; scale: 0.95;"></div>
+        <div class="circle" style="background-color: rgb(248, 157, 99); left: 504px; top: 59px; scale: 0.9;"></div>
+        <div class="circle" style="background-color: rgb(245, 151, 97); left: 504px; top: 59px; scale: 0.85;"></div>
+        <div class="circle" style="background-color: rgb(239, 134, 94); left: 504px; top: 59px; scale: 0.8;"></div>
+        <div class="circle" style="background-color: rgb(236, 128, 93); left: 504px; top: 59px; scale: 0.75;"></div>
+        <div class="circle" style="background-color: rgb(227, 110, 92); left: 504px; top: 59px; scale: 0.7;"></div>
+        <div class="circle" style="background-color: rgb(223, 104, 92); left: 504px; top: 59px; scale: 0.65;"></div>
+        <div class="circle" style="background-color: rgb(213, 88, 92); left: 504px; top: 59px; scale: 0.6;"></div>
+        <div class="circle" style="background-color: rgb(209, 82, 92); left: 504px; top: 59px; scale: 0.55;"></div>
+        <div class="circle" style="background-color: rgb(197, 65, 93); left: 504px; top: 59px; scale: 0.5;"></div>
+        <div class="circle" style="background-color: rgb(192, 59, 93); left: 504px; top: 59px; scale: 0.45;"></div>
+        <div class="circle" style="background-color: rgb(178, 44, 94); left: 504px; top: 59px; scale: 0.4;"></div>
+        <div class="circle" style="background-color: rgb(172, 38, 94); left: 504px; top: 59px; scale: 0.35;"></div>
+        <div class="circle" style="background-color: rgb(156, 21, 95); left: 504px; top: 59px; scale: 0.3;"></div>
+        <div class="circle" style="background-color: rgb(149, 15, 95); left: 504px; top: 59px; scale: 0.25;"></div>
+        <div class="circle" style="background-color: rgb(131, 0, 96); left: 504px; top: 59px; scale: 0.2;"></div>
+        <div class="circle" style="background-color: rgb(124, 0, 96); left: 504px; top: 59px; scale: 0.15;"></div>
+        <div class="circle" style="background-color: rgb(104, 0, 96); left: 504px; top: 59px; scale: 0.1;"></div>
+        <div class="circle" style="background-color: rgb(96, 0, 95); left: 504px; top: 59px; scale: 0.05;"></div>
+    </div>
+    <div id="preloader">
+        <div id="loader"></div>
+    </div>
+
+    
+    <!--Navbar Start-->
+    <nav class="navbar navbar-expand-lg fixed-top" id="top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#" style="font-family: var(--ff-philosopher); color: black;">
+                <b>Retro</b>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="../index.html"
+                            style="color: black; font-family: var(--ff-philosopher); font-size: 20px;">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html"
+                            style="font-family: var(--ff-philosopher); color: black; font-size: 20px;">About Us</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="menu.html"
+                            style="font-family: var(--ff-philosopher);color: black; font-size: 20px;">Collections</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html"
+                            style="font-family: var(--ff-philosopher);color: black; font-size: 20px;">Services</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html" style="font-family: var(--ff-philosopher); color: black;  font-size: 20px;">Contact Us</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                    <a class="nav-link" href="reviews.html" style="font-family: var(--ff-philosopher); color: black;  font-size: 20px;">Share Experience</a>
+                    </li>
+
+                </ul>
+
+                <div class="navbar-right">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" onclick="redirectLogin()"
+                                style="color: black; font-family: var(--ff-philosopher);  font-size: 20px;">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" onclick="redirectSignup()"
+                                style="color: black; font-family: var(--ff-philosopher);  font-size: 20px;">Signup</a>
+                        </li>
+                        <li class="nav-item" style="list-style-type: none;">
+                            <a class="nav-link" href="cart.html" style="color: black;  font-size: 20px;"><i
+                                    class="fa-solid fa-cart-shopping"></i>Cart</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!--Navbar End-->
+
+
+
+    <main>
+        <section id="user-content" class="review-container">
+            <div class="tab-container">
+                <button class="tab active" data-tab="user-stories">User Stories</button>
+                <button class="tab" data-tab="reviews">Product Reviews</button>
+            </div>
+
+            <div class="content-container">
+                <div id="user-stories" class="content-section active">
+                    <h2>User Story Gallery</h2>
+                    <form id="storyForm">
+                        <div class="form-group">
+                            <label for="storyTitle">Story Title:</label>
+                            <input type="text" id="storyTitle" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="storyText">Your Story:</label>
+                            <textarea id="storyText" rows="6" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="storyImage">Upload an Image:</label>
+                            <input type="file" id="storyImage" accept="image/*" required>
+                        </div>
+                        <button type="submit" class="submit-btn">Submit Story</button>
+                    </form>
+                    <div id="storyGallery" class="gallery"></div>
+                </div>
+
+                <div id="reviews" class="content-section">
+                    <h2>Product Reviews</h2>
+                    <form id="reviewForm">
+                        <div class="form-group">
+                            <label for="productName">Product Name:</label>
+                            <input type="text" id="productName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="reviewText">Your Review:</label>
+                            <textarea id="reviewText" rows="6" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="productRating">Rating:</label>
+                            <div class="star-rating">
+                                <input type="radio" id="productStar5" name="productRating" value="5" /><label for="productStar5">☆</label>
+                                <input type="radio" id="productStar4" name="productRating" value="4" /><label for="productStar4">☆</label>
+                                <input type="radio" id="productStar3" name="productRating" value="3" /><label for="productStar3">☆</label>
+                                <input type="radio" id="productStar2" name="productRating" value="2" /><label for="productStar2">☆</label>
+                                <input type="radio" id="productStar1" name="productRating" value="1" /><label for="productStar1">☆</label>
+                            </div>
+                        </div>
+                        <button type="submit" class="submit-btn">Submit Review</button>
+                    </form>
+                    <div id="reviewList"></div>
+                </div>
+            </div>
+
+            <div class="featured-stories">
+                <h2>Featured User Stories</h2>
+                <div id="featuredStories"></div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Function to handle tab switching
+        function setupTabs() {
+            const tabs = document.querySelectorAll('.tab');
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    tabs.forEach(t => t.classList.remove('active'));
+                    tab.classList.add('active');
+                    const tabId = tab.getAttribute('data-tab');
+                    document.querySelectorAll('.content-section').forEach(section => {
+                        section.classList.remove('active');
+                    });
+                    document.getElementById(tabId).classList.add('active');
+                });
+            });
+        }
+
+        // Function to handle story submission
+        document.getElementById('storyForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const title = document.getElementById('storyTitle').value;
+            const text = document.getElementById('storyText').value;
+            const imageFile = document.getElementById('storyImage').files[0];
+
+            if (imageFile) {
+                const reader = new FileReader();
+                reader.onloadend = function() {
+                    const newStory = { title, text, image: reader.result };
+                    saveStory(newStory);
+                    showNotification('Story submitted successfully!');
+                    loadStories();
+                    e.target.reset();
+                }
+                reader.readAsDataURL(imageFile);
+            }
+        });
+
+        // Function to save a new story
+        function saveStory(story) {
+            const stories = JSON.parse(localStorage.getItem('userStories')) || [];
+            stories.unshift(story);
+            localStorage.setItem('userStories', JSON.stringify(stories));
+        }
+
+        // Function to load stories
+        function loadStories() {
+            const stories = JSON.parse(localStorage.getItem('userStories')) || [];
+            const galleryElement = document.getElementById('storyGallery');
+            galleryElement.innerHTML = '';
+
+            stories.forEach(story => {
+                const storyElement = document.createElement('div');
+                storyElement.className = 'story-item';
+                storyElement.innerHTML = `
+                    <h3>${story.title}</h3>
+                    <img src="${story.image}" alt="${story.title}">
+                    <p>${story.text}</p>
+                `;
+                galleryElement.appendChild(storyElement);
+            });
+
+            updateFeaturedStories(stories);
+        }
+
+        // Function to update featured stories
+        function updateFeaturedStories(stories) {
+            const featuredStoriesElement = document.getElementById('featuredStories');
+            featuredStoriesElement.innerHTML = '';
+
+            // Select up to 3 random stories to feature
+            const featuredStories = stories.sort(() => 0.5 - Math.random()).slice(0, 3);
+
+            featuredStories.forEach(story => {
+                const storyElement = document.createElement('div');
+                storyElement.className = 'story-item';
+                storyElement.innerHTML = `
+                    <h3>${story.title}</h3>
+                    <img src="${story.image}" alt="${story.title}">
+                    <p>${story.text}</p>
+                `;
+                featuredStoriesElement.appendChild(storyElement);
+            });
+        }
+
+        // Function to handle review submission
+        document.getElementById('reviewForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const productName = document.getElementById('productName').value;
+            const reviewText = document.getElementById('reviewText').value;
+            const rating = document.querySelector('input[name="productRating"]:checked').value;
+
+            const newReview = { productName, reviewText, rating };
+            saveReview(newReview);
+            showNotification('Review submitted successfully!');
+            loadReviews();
+            e.target.reset();
+        });
+
+        // Function to save a new review
+        function saveReview(review) {
+            const reviews = JSON.parse(localStorage.getItem('productReviews')) || [];
+            reviews.unshift(review);
+            localStorage.setItem('productReviews', JSON.stringify(reviews));
+        }
+
+        // Function to load reviews
+        function loadReviews() {
+            const reviews = JSON.parse(localStorage.getItem('productReviews')) || [];
+            const reviewListElement = document.getElementById('reviewList');
+            reviewListElement.innerHTML = '';
+
+            reviews.forEach(review => {
+                const reviewElement = document.createElement('div');
+                reviewElement.className = 'review-item';
+                reviewElement.innerHTML = `
+                    <h3>${review.productName}</h3>
+                    <p><strong>Rating:</strong> ${'★'.repeat(review.rating)}${'☆'.repeat(5 - review.rating)}</p>
+                    <p>${review.reviewText}</p>
+                `;
+                reviewListElement.appendChild(reviewElement);
+            });
+        }
+
+        // Function to show notification
+        function showNotification(message) {
+            const notification = document.createElement('div');
+            notification.className = 'notification';
+            notification.textContent = message;
+            document.body.appendChild(notification);
+
+            setTimeout(() => {
+                notification.remove();
+            }, 3000);
+        }
+
+        // Initialize the page
+        document.addEventListener('DOMContentLoaded', () => {
+            setupTabs();
+            loadStories();
+            loadReviews();
+        });
+    </script>
+
+
+
+<div class="footer" style="background-color: hsl(20, 43%, 93%);">
+    <footer>
+        <div class="foot-panel2" style="background-color:hsl(20, 43%, 93%);font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+            <ul>
+                <p style="color: hsl(357, 82%,35%);font-family: var(--ff-philosopher);text-align: left;">Our Pages</p>
+
+                <a href="#" >Home</a>
+                <a href="menu.html" >About</a>
+                <a href="services.html" >Services</a>
+                <a href="contact.html" >Contact us</a>
+                <a href="cart.html" >Cart</a>
+            </ul>
+            <ul>
+                <p style="color: hsl(357, 82%,35%);font-family: var(--ff-philosopher); text-align:left"> Exclusive Offers</p>
+                <a href="#" >Retro Discounts</a>
+                <a href="#" >Limited-Time Promotions</a>
+                <a href="#" >Special Event Packages</a>
+                <a href="#" >Membership Benefits</a>
+                <a href="#" >Early Access to New Collections</a>
+                <a href="#" >VIP Retro Events</a>
+                <a href="#" >Personalized Culinary Experiences</a>
+ 
+
+            </ul>
+            <ul>
+                <p style="color: hsl(357, 82%,35%);font-family: var(--ff-philosopher);text-align:left">Payment Products</p>
+                <a href="payment2.html" >Secure Checkout</a>
+                <a href="payment2.html" >Credit/Debit Cards</a>
+                <a href="payment2.html" >Online Payment</a>
+                <a href="payment2.html" >Mobile Wallets</a>
+                <a href="payment2.html" >Contactless Payments</a>
+            </ul>
+            <form id="contactForm">
+                <h3 style="font-family: var(--ff-philosopher); color: hsl(357, 82%, 35%);">Contact Us!</h3>
+            
+                <div style="position: relative; margin-bottom: 15px;">
+                    <i class="fas fa-envelope" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); font-size: 14px; color: gray;"></i>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required 
+                           style="padding-left: 30px;">
+                </div>
+            
+                <div style="position: relative; margin-bottom: 15px;">
+                    <i class="fas fa-comment" style="position: absolute; left: 10px; top: 10px; font-size: 14px; color: gray;"></i>
+                    <textarea id="message" name="message" placeholder="Your Message" required 
+                              style="padding-left: 30px;"></textarea>
+                </div>
+            
+                <button id="butt" type="submit" style="font-family: ui-serif;">Send Message</button>
+            </form>
+            
+            
+            
+              
+            
+
+        </div>
+
+
+        <div class="foot_panel4" style="background-color: transparent;">
+            <div class="pages">
+                <h4 style="font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%);">Follow Us</h4>
+
+                <div class="social-icons">
+
+
+                    <a class="fa-brands fa-facebook" href="https://facebook.com" ></a>
+                    <a class="fa-brands fa-instagram" href="https://instagram.com" ></a>
+                    <a class="fa-brands fa-x-twitter" href="https://twitter.com" ></a>
+                    <a class="fa-brands fa-youtube"   href="https://www.youtube.com" ></a>
+                    <a class="fa-brands fa-snapchat"  href="https://www.snapchat.com" ></a>
+
+                </div>
+                <p style="font-family: var(--ff-philosopher);background-color: hsl(20, 43%, 93%);color: hsl(203, 30%, 26%);margin-bottom:0;">Stay connected with us on social media for the latest updates, latest collection, and vintage adventures.
+                </p>
+                <div class="copyright" style="font-family: var(--ff-philosopher);background-color: hsl(20, 43%, 93%);color: black;">
+
+                    &copy; 2024 Retro . All Rights Reserved. | Developed by <span id="author">
+                        <a href="https://www.linkedin.com" target="_blank" style="text-decoration: none;">Retro Team</a>
+                </div>
+                <div>
+                    <button id="sr" style="z-index: 1000; display: block;">
+                    <div class="circle1">
+                      <svg id="back-to-top" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
+                        <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z"></path>
+                      </svg>
+                    </div>
+                    </button>
+                </div>
+            </div>
+    </footer>
+    <button onclick="window.print()" style="font-family:Georgia; font-size:medium; line-height: inherit;border-radius:5px ;background-color: #f9e2c4;padding:5px 5px;">Print this page</button>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+</body>
+<script>
+
+function redirectLogin() {
+    window.location.href = "Html-files/login.html";
+}
+function redirectSignup() {
+    window.location.href = "Html-files/signup.html";
+}
+
+ // Get the button element
+const scrollToTopBtn = document.getElementById("sr");
+
+window.onscroll = function() {
+scrollFunction();
+};
+
+function scrollFunction() {
+if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+scrollToTopBtn.style.display = "block";
+} else {
+scrollToTopBtn.style.display = "none";
+}
+}
+scrollToTopBtn.addEventListener("click", function() {
+document.body.scrollTop = 0;
+document.documentElement.scrollTop = 0;
+});
+</script>
+<script>
+
+const coords = { x: 0, y: 0 };
+const circles = document.querySelectorAll(".circle");
+
+const colors = [
+  "#ffb56b",
+  "#fdaf69",
+  "#f89d63",
+  "#f59761",
+  "#ef865e",
+  "#ec805d",
+  "#e36e5c",
+  "#df685c",
+  "#d5585c",
+  "#d1525c",
+  "#c5415d",
+  "#c03b5d",
+  "#b22c5e",
+  "#ac265e",
+  "#9c155f",
+  "#950f5f",
+  "#830060",
+  "#7c0060",
+  "#680060",
+  "#60005f",
+  "#48005f",
+  "#3d005e"
+];
+
+circles.forEach(function (circle, index) {
+  circle.x = 0;
+  circle.y = 0;
+  circle.style.backgroundColor = colors[index % colors.length];
+});
+
+window.addEventListener("mousemove", function (e) {
+  coords.x = e.clientX;
+  coords.y = e.clientY;
+
+});
+
+function animateCircles() {
+
+  let x = coords.x;
+  let y = coords.y;
+
+  circles.forEach(function (circle, index) {
+    circle.style.left = x - 2 + "px";
+    circle.style.top = y - 2 + "px";
+
+    circle.style.scale = (circles.length - index) / circles.length;
+
+    circle.x = x;
+    circle.y = y;
+
+    const nextCircle = circles[index + 1] || circles[0];
+    x += (nextCircle.x - x) * 0.3;
+    y += (nextCircle.y - y) * 0.3;
+  });
+
+  requestAnimationFrame(animateCircles);
+}
+
+animateCircles();
+</script>
+
+<!-- Pop Up JS starts Here  -->
+<script src="./script/popup.js">
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+const preloader = document.getElementById('preloader');
+const mainContent = document.getElementById('main-content');
+
+// Listen for the window load event
+window.addEventListener('load', function() {
+    setTimeout(function() {
+        preloader.classList.add('hidden');
+        mainContent.classList.remove('hidden');
+        mainContent.classList.add('visible');
+    }, 3000); 
+});
+});
+
+</script>
+<script>
+window.onscroll = () => {
+document.querySelector(".mountain").style.marginTop = scrollY + "px";
+
+document.querySelector(".trees").style.marginTop = scrollY / 1.5 + "px";
+
+document.querySelector(".stars").style.marginTop = scrollY * 2 + "px";
+
+document.querySelector(".stars").style.marginRight = scrollY / 2 + "px";
+
+document.querySelector(".moon").style.transform = "rotate(-" + (scrollY / 5.5) + "deg)";
+
+document.querySelector(".Home h1").style.marginTop = scrollY + "px";
+
+document.querySelector(".Home h1").style.opacity = (200 - scrollY) / 200;
+};
+</script>
+
+
+<script
+src="https://www.chatbase.co/embed.min.js"
+chatbotId="dGlQ5bP-F7GodLWzgrVAx"
+domain="www.chatbase.co"
+defer>
+</script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+AOS.init();
+</script>
+</html>
