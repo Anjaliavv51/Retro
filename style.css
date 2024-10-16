@@ -34,14 +34,11 @@ body {
 }
 
 /* Navbar link hover effect */
-/*.navbar a:hover{
+.navbar a:hover{
   color: #fff;
   border-bottom: 1px solid #fff;
 }
-
 */
-
-
 .navbar.fixed-top {
   position: fixed; 
   top: 0;
@@ -330,7 +327,9 @@ body {
   border-radius: 15px;
   display: inline-block;
   color: white;
-
+  /* Smooth transition */
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease; 
+}*/
 
 /*
 .service .box a:hover {
@@ -1105,4 +1104,14 @@ padding-left:2px;
   margin-top: 5px;
   width: 60%;
 }
+.nav-logo{
+  margin-left: 30px;
+  margin-right: 350px;
+}
 
+@media (max-width: 768px) {
+  .nav-logo{
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
