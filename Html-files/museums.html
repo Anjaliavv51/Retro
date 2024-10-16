@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Retro</title>
+
+    <style>
+        @media (min-width: 992px) {
+            .navbar-expand-lg .navbar-nav {
+                margin-top: -9px; /* Add this line */
+            }
+        }
+    </style>
+     
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="/Css-files/navbarstyles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> -->
+    
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" type="image/x-icon" href="./Favicon image/favicon-32x32.png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fuggles&family=Mooli&family=Oswald:wght@600&family=Roboto:wght@100;300&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script> -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        
+        <link rel="stylesheet" href="./style.css">
+ 
+    <style>
+
+        .retro-heading {
+
+          font-family:  var(--ff-philosopher);
+          color:  brown;
+          z-index: 99;
+          transition:  all 0.3s ease;
+
+        }
+ 
+        .retro-heading:hover {
+
+           color:  #5d095c;
+           text-shadow:  0 0 15px rgba(214, 30, 171, 0.9), 0 0 30px rgba(138, 38, 88, 0.7);
+           transform:  scale(1.3); 
+
+        }
+ 
+        .faq-container {
+            margin-top: 50px;
+            margin-left: auto;
+            margin-right: auto;
+            background: transparent;/* Container background */
+            border-radius: 8px; /* Rounded corners */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            padding: 20px; /* Padding inside the container */
+        }
+    </style>
+
+    <style>
+        :root{
+            --ff-philosopher: "Philosopher", sans-serif;
+            --ff-poppins: "Poppins", sans-serif;
+        }
+        body{
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpath fill='%23ffb9b0' d='M486 705.8c-109.3-21.8-223.4-32.2-335.3-19.4C99.5 692.1 49 703 0 719.8V800h843.8c-115.9-33.2-230.8-68.1-347.6-92.2C492.8 707.1 489.4 706.5 486 705.8z'/%3E%3Cpath fill='%23ffc1b7' d='M1600 0H0v719.8c49-16.8 99.5-27.8 150.7-33.5c111.9-12.7 226-2.4 335.3 19.4c3.4 0.7 6.8 1.4 10.2 2c116.8 24 231.7 59 347.6 92.2H1600V0z'/%3E%3Cpath fill='%23ffc8bf' d='M478.4 581c3.2 0.8 6.4 1.7 9.5 2.5c196.2 52.5 388.7 133.5 593.5 176.6c174.2 36.6 349.5 29.2 518.6-10.2V0H0v574.9c52.3-17.6 106.5-27.7 161.1-30.9C268.4 537.4 375.7 554.2 478.4 581z'/%3E%3Cpath fill='%23ffcfc6' d='M0 0v429.4c55.6-18.4 113.5-27.3 171.4-27.7c102.8-0.8 203.2 22.7 299.3 54.5c3 1 5.9 2 8.9 3c183.6 62 365.7 146.1 562.4 192.1c186.7 43.7 376.3 34.4 557.9-12.6V0H0z'/%3E%3Cpath fill='%23FFD6CE' d='M181.8 259.4c98.2 6 191.9 35.2 281.3 72.1c2.8 1.1 5.5 2.3 8.3 3.4c171 71.6 342.7 158.5 531.3 207.7c198.8 51.8 403.4 40.8 597.3-14.8V0H0v283.2C59 263.6 120.6 255.7 181.8 259.4z'/%3E%3Cpath fill='%23ffdcd4' d='M1600 0H0v136.3c62.3-20.9 127.7-27.5 192.2-19.2c93.6 12.1 180.5 47.7 263.3 89.6c2.6 1.3 5.1 2.6 7.7 3.9c158.4 81.1 319.7 170.9 500.3 223.2c210.5 61 430.8 49 636.6-16.6V0z'/%3E%3Cpath fill='%23ffe1d9' d='M454.9 86.3C600.7 177 751.6 269.3 924.1 325c208.6 67.4 431.3 60.8 637.9-5.3c12.8-4.1 25.4-8.4 38.1-12.9V0H288.1c56 21.3 108.7 50.6 159.7 82C450.2 83.4 452.5 84.9 454.9 86.3z'/%3E%3Cpath fill='%23ffe6df' d='M1600 0H498c118.1 85.8 243.5 164.5 386.8 216.2c191.8 69.2 400 74.7 595 21.1c40.8-11.2 81.1-25.2 120.3-41.7V0z'/%3E%3Cpath fill='%23ffebe4' d='M1397.5 154.8c47.2-10.6 93.6-25.3 138.6-43.8c21.7-8.9 43-18.8 63.9-29.5V0H643.4c62.9 41.7 129.7 78.2 202.1 107.4C1020.4 178.1 1214.2 196.1 1397.5 154.8z'/%3E%3Cpath fill='%23FFF0EA' d='M1315.3 72.4c75.3-12.6 148.9-37.1 216.8-72.4h-723C966.8 71 1144.7 101 1315.3 72.4z'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: cover;
+}
+::-webkit-scrollbar {
+  width: 10px; /* Width of the scrollbar */
+}
+::-webkit-scrollbar-track {
+  background-color: #feaea5; /* Color of the track */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: linear-gradient(
+    to bottom,
+    hsl(357, 37%, 62%),
+    hsl(304, 14%, 46%)
+  );
+  border-radius: 6px; /* Rounded corners of the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(172, 38, 94); /* Color of the thumb on hover */
+}
+
+* {
+  scrollbar-width: thick; /* Width of the scrollbar */
+}
+::-webkit-scrollbar-button {
+  display: none;
+}
+    </style>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');  
+#sr {
+display: none; 
+position: fixed; 
+bottom: 70px; 
+right: 15px; 
+z-index: 99; 
+font-size: 18px;
+border: none;
+outline: none;
+background-color: transparent; 
+color: rgb(17, 17, 17); 
+cursor: pointer; 
+padding: 15px; 
+border-radius: 4px; 
+}
+
+#sr:hover {
+background-color: transparent; 
+color: black;
+border-radius: 100px;
+}
+.circle{
+   z-index: 10000;
+   width: 20px;
+   height: 20px;
+   border-radius: 50%;
+   pointer-events: none;
+    animation: colors 5s infinite;
+    position: fixed;
+  transform: translate(-50%,-50%);
+}
+.circle::before {
+    content: "";
+    position: fixed;
+  width: 50px;
+  height: 50px;
+  opacity: 0.2;
+  transform: translate(-30%,-30%);
+  border-radius: 50%;
+}
+body{
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpath fill='%23ffb9b0' d='M486 705.8c-109.3-21.8-223.4-32.2-335.3-19.4C99.5 692.1 49 703 0 719.8V800h843.8c-115.9-33.2-230.8-68.1-347.6-92.2C492.8 707.1 489.4 706.5 486 705.8z'/%3E%3Cpath fill='%23ffc1b7' d='M1600 0H0v719.8c49-16.8 99.5-27.8 150.7-33.5c111.9-12.7 226-2.4 335.3 19.4c3.4 0.7 6.8 1.4 10.2 2c116.8 24 231.7 59 347.6 92.2H1600V0z'/%3E%3Cpath fill='%23ffc8bf' d='M478.4 581c3.2 0.8 6.4 1.7 9.5 2.5c196.2 52.5 388.7 133.5 593.5 176.6c174.2 36.6 349.5 29.2 518.6-10.2V0H0v574.9c52.3-17.6 106.5-27.7 161.1-30.9C268.4 537.4 375.7 554.2 478.4 581z'/%3E%3Cpath fill='%23ffcfc6' d='M0 0v429.4c55.6-18.4 113.5-27.3 171.4-27.7c102.8-0.8 203.2 22.7 299.3 54.5c3 1 5.9 2 8.9 3c183.6 62 365.7 146.1 562.4 192.1c186.7 43.7 376.3 34.4 557.9-12.6V0H0z'/%3E%3Cpath fill='%23FFD6CE' d='M181.8 259.4c98.2 6 191.9 35.2 281.3 72.1c2.8 1.1 5.5 2.3 8.3 3.4c171 71.6 342.7 158.5 531.3 207.7c198.8 51.8 403.4 40.8 597.3-14.8V0H0v283.2C59 263.6 120.6 255.7 181.8 259.4z'/%3E%3Cpath fill='%23ffdcd4' d='M1600 0H0v136.3c62.3-20.9 127.7-27.5 192.2-19.2c93.6 12.1 180.5 47.7 263.3 89.6c2.6 1.3 5.1 2.6 7.7 3.9c158.4 81.1 319.7 170.9 500.3 223.2c210.5 61 430.8 49 636.6-16.6V0z'/%3E%3Cpath fill='%23ffe1d9' d='M454.9 86.3C600.7 177 751.6 269.3 924.1 325c208.6 67.4 431.3 60.8 637.9-5.3c12.8-4.1 25.4-8.4 38.1-12.9V0H288.1c56 21.3 108.7 50.6 159.7 82C450.2 83.4 452.5 84.9 454.9 86.3z'/%3E%3Cpath fill='%23ffe6df' d='M1600 0H498c118.1 85.8 243.5 164.5 386.8 216.2c191.8 69.2 400 74.7 595 21.1c40.8-11.2 81.1-25.2 120.3-41.7V0z'/%3E%3Cpath fill='%23ffebe4' d='M1397.5 154.8c47.2-10.6 93.6-25.3 138.6-43.8c21.7-8.9 43-18.8 63.9-29.5V0H643.4c62.9 41.7 129.7 78.2 202.1 107.4C1020.4 178.1 1214.2 196.1 1397.5 154.8z'/%3E%3Cpath fill='%23FFF0EA' d='M1315.3 72.4c75.3-12.6 148.9-37.1 216.8-72.4h-723C966.8 71 1144.7 101 1315.3 72.4z'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: cover;
+  
+  background-attachment: fixed;
+}
+::-webkit-scrollbar {
+  width: 10px; 
+}
+::-webkit-scrollbar-track {
+  background-color: #feaea5; 
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: linear-gradient(
+    to bottom,
+    hsl(357, 37%, 62%),
+    hsl(304, 14%, 46%)
+  );
+  border-radius: 6px; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(172, 38, 94); 
+}
+
+* {
+  scrollbar-width: thick; 
+}
+::-webkit-scrollbar-button {
+  display: none;
+}
+    </style>
+<style>
+.intro_container{
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #feaea5, #a65961);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+   .intro_container img{
+    position: absolute;
+    width: 100%;
+    pointer-events: none;
+}
+.layer{
+    bottom: 0;
+}
+.moon{
+    transform-origin: 50% 100%;
+}
+
+#about {
+    display: flex;
+    flex-wrap: wrap; /* Allow boxes to wrap */
+    gap: 20px; /* Space between boxes */
+    justify-content: center; /* Center align items */
+}
+
+.box {
+    background-color:transparent; /* Optional for visual separation */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: center;
+    max-width: 350px; /* Maximum width of each card */
+    flex: 1 1 280px; /* Allow boxes to grow and shrink */
+    min-width: 300px; /* Minimum width for responsiveness */
+    min-height: 480px; /* Minimum height for the card */
+}
+
+.card-image {
+    width: auto; /* Set width to auto to allow centering */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 100%; /* Ensure image does not exceed card width */
+    max-height: 200px; /* Limit the max height to prevent overflow */
+    object-fit: cover; /* Ensure the image covers the card area without distorting */
+    border-radius: 10px; /* Match border radius of the box */
+    margin: 0 auto; /* Center the image horizontally */
+}
+
+.box h2 {
+    margin-top: 10px;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    margin: 10px 0; /* Add some margin for spacing */
+}
+
+/* Additional responsive adjustments */
+@media (max-width: 600px) {
+    .box {
+        max-width: 100%; /* Allow full width on small screens */
+        min-height: auto; /* Allow height to adjust for smaller screens */
+    }
+
+    .card-image {
+        max-height: 150px; /* Adjust max height for smaller screens */
+    }
+}
+
+
+
+</style>
+</head>
+<body>
+    <!--Navbar Start-->
+    <nav class="navbar navbar-expand-lg fixed-top" id="top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#" style="font-family: var(--ff-philosopher); color: black;">
+                <b>Retro</b>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#"
+                            style="color: black; font-family: var(--ff-philosopher);">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Html-files/about.html"
+                            style="font-family: var(--ff-philosopher); color: black;">About Us</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="Html-files/menu.html"
+                            style="font-family: var(--ff-philosopher);color: black;">Collections</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="Html-files/services.html"
+                            style="font-family: var(--ff-philosopher);color: black;">Services</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="Html-files/contact.html" style="font-family: var(--ff-philosopher); color: black">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="Html-files/cart.html" style="color: black;"><i
+                                    class="fa-solid fa-cart-shopping"></i>Cart</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--Navbar End-->
+
+<!--    <nav class="navbar navbar-expand-lg fixed-top" id="top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"  style="font-family: var(--ff-philosopher);color: black;"><b>Retro</b></a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="#" style="color: black;font-family: var(--ff-philosopher);">Home</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="Html-files/about.html" style="font-family: var(--ff-philosopher);color: black;">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Html-files/contact.html" style="font-family: var(--ff-philosopher);color: black;">Contact Us</a>
+                    </li>
+-->
+                 <!-- Google Translate Element -->
+<!--                  <li class="nav-item">
+                        <div id="google_element" style="font-family: var(--ff-philosopher);color: black;" class="nav-link"></div>
+                   </li>
+                </ul>
+
+            </div>
+            <div class="d-flex p-2">
+                <li class="nav-item" style="list-style-type: none;font-family: var(--ff-philosopher);"><a class="nav-btn" onclick="redirectLogin()" style="color: black;">Login</a></li>&nbsp;&nbsp;
+                <li class="nav-item" style="list-style-type: none;font-family: var(--ff-philosopher);"><a class="nav-btn" onclick="redirectSignup()" style="color: black;">Sign Up</a></li>&nbsp;&nbsp;
+            </div>
+
+        </div>
+    </nav>
+-->
+
+    <style>
+        body {
+            background-color: hsl(20, 43%, 93%);
+            font-family: 'Arial', sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 3em;
+            margin-top: 80px;
+            color: brown;
+        }
+
+        .museum-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Ensures responsiveness */
+            gap: 30px;
+            padding: 30px;
+            justify-items: center; /* Centers the cards horizontally */
+        }
+
+        .museum-card {
+            width: 280px;
+            height: 370px;
+            background-color: #ffedd8;
+            border-radius: 20px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.4s, box-shadow 0.4s;
+            text-align: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .museum-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .museum-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-bottom: 5px solid #ffcad4;
+            transition: transform 0.4s ease;
+        }
+
+        .museum-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .museum-card p {
+            font-size: 22px;
+            margin: 10px 0 5px;
+            color: #3f3e3e;
+            font-weight: bold;
+        }
+
+        .museum-card a {
+            text-decoration: none;
+            color: #3f3e3e;
+            display: block;
+            height: 100%;
+        }
+
+        .museum-card a:hover p {
+            color: brown;
+        }
+
+        .ribbon {
+            position: absolute;
+            top: 15px;
+            left: -27px;
+            width: 120px;
+            height: 30px;
+            background-color: brown;
+            color: white;
+            text-align: center;
+            line-height: 30px;
+            font-size: 14px;
+            font-weight: bold;
+            transform: rotate(-45deg);
+        }
+
+        .museum-card:hover .ribbon {
+            background-color: brown;
+            transition: background-color 0.4s;
+        }
+
+        .title {
+            margin-top: 60px;
+        }
+
+        .price-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 6px;
+        }
+
+        .price-label {
+            font-size: 17px;
+            color: #3f3e3e;
+            margin-right: 5px;
+        }
+
+        .price {
+            font-size: 16px;
+            color: #2a9d8f;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Retro Museums</h1>
+
+    <div class="museum-container">
+        <div class="museum-card">
+            <a href="https://www.google.com/maps/place/National+Museum,+New+Delhi/@28.61181,77.2184012,17z/data=!4m15!1m8!3m7!1s0x390cfd52c71ff0eb:0x20429f292fa5eecf!2sNational+Museum,+New+Delhi!8m2!3d28.6119078!4d77.2192909!10e5!16zL20vMGMzenJq!3m5!1s0x390cfd52c71ff0eb:0x20429f292fa5eecf!8m2!3d28.6119078!4d77.2192909!16zL20vMGMzenJq?entry=ttu&g_ep=EgoyMDI0MTAwOS4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+                <img src="https://lh5.googleusercontent.com/p/AF1QipMsL2RWpWOK6iz1faIJcd_gJdEZs4n_M7gTo8Bh=w408-h408-k-no" alt="National Museum, New Delhi">
+                <p class="title">National Museum, New Delhi</p>
+                <div class="price-container">
+                    <span class="price-label">Ticket Price:</span>
+                    <span class="price">₹20</span>
+                </div>
+            </a>
+            <div class="ribbon">Featured</div>
+        </div>
+
+        <div class="museum-card">
+            <a href="https://www.google.com/maps/place/BDL+Museum+Plaza+%7C+Dr.+Bhau+Daji+Lad+Museum/@18.978994,72.8322404,17z/data=!3m1!4b1!4m6!3m5!1s0x3be7ce5b428e70af:0x79efde6c140c2e05!8m2!3d18.9789889!4d72.8348153!16s%2Fm%2F06w4mwg?entry=ttu&g_ep=EgoyMDI0MTAwOS4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+                <img src="https://lh5.googleusercontent.com/p/AF1QipPbtykRuG77_XOp52evVDv5BAa3YQvJjftv_EZR=w408-h272-k-no" alt="Dr. Bhau Daji Lad Museum, Mumbai">
+                <p class="title">Dr. Bhau Daji Lad Museum, Mumbai</p>
+                <div class="price-container">
+                    <span class="price-label">Ticket Price:</span>
+                    <span class="price">₹10</span>
+                </div>
+            </a>
+            <div class="ribbon">Popular</div>
+        </div>
+
+        <div class="museum-card">
+            <a href="https://www.google.com/maps/place/Indian+Museum/@22.5578907,88.3485519,17z/data=!3m1!4b1!4m6!3m5!1s0x3a02771160347adf:0x9fd70619f94d0bac!8m2!3d22.5578858!4d88.3511268!16zL20vMDM3NGtu?entry=ttu&g_ep=EgoyMDI0MTAwOS4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+                <img src="https://lh5.googleusercontent.com/p/AF1QipPNCfv_JgzRTqfDPkZ4shXR48NPgPbcX2PzDX3V=w408-h408-k-no" alt="Indian Museum, Kolkata">
+                <p class="title">Indian Museum, Kolkata</p>
+                <div class="price-container">
+                    <span class="price-label">Ticket Price:</span>
+                    <span class="price">₹20</span>
+                </div>
+            </a>
+            <div class="ribbon">Classic</div>
+        </div>
+
+        <div class="museum-card">
+            <a href="https://www.google.com/maps/place/Vivekananda+House/@13.0494727,80.2777625,17z/data=!3m1!4b1!4m6!3m5!1s0x3a52689cc49d64dd:0x488b6c9faaa9031!8m2!3d13.0494675!4d80.2803374!16s%2Fm%2F025w557?entry=ttu&g_ep=EgoyMDI0MTAwOS4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+                <img src="https://lh5.googleusercontent.com/p/AF1QipMBvxxqGQpCDu101Dy-UYuV-Mrg-eA4MwYiUM1q=w426-h240-k-no" alt="Vivekananda House, Chennai">
+                <p class="title">Vivekananda House, Chennai</p>
+                <div class="price-container">
+                    <span class="price-label">Ticket Price:</span>
+                    <span class="price">₹10</span>
+                </div>
+            </a>
+            <div class="ribbon">Must-Visit</div>
+        </div>
+
+        <div class="museum-card">
+            <a href="https://www.google.com/maps/place/Nehru+Science+Centre/@18.9918193,72.8181497,17z/data=!3m1!4b1!4m6!3m5!1s0x3be7b626f2261433:0xf8b02d339247653b!8m2!3d18.9918142!4d72.8207246!16s%2Fm%2F02rhsrl?entry=ttu&g_ep=EgoyMDI0MTAwOS4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+                <img src="https://lh5.googleusercontent.com/p/AF1QipPB9Yu47gjRBMSaG1rEiesBFnsAV-OwW3qtaLeD=w408-h544-k-no" alt="Nehru Science Centre, Mumbai">
+                <p class="title">Nehru Science Centre, Mumbai</p>
+                <div class="price-container">
+                    <span class="price-label">Ticket Price:</span>
+                    <span class="price">₹60</span>
+                </div>
+            </a>
+            <div class="ribbon">Explore</div>
+        </div>
+
+        <div class="museum-card">
+            <a href="https://www.google.com/maps/place/Salar+Jung+Museum/@17.371536,78.477736,17z/data=!4m10!1m2!2m1!1sSalar+Jung+Museum,+Hyderabad!3m6!1s0x3bcb9787e263d7bb:0x353b934b9b69a041!8m2!3d17.3716084!4d78.4802439!15sChxTYWxhciBKdW5nIE11c2V1bSwgSHlkZXJhYmFkWh0iG3NhbGFyIGp1bmcgbXVzZXVtIGh5ZGVyYWJhZJIBCmFydF9tdXNldW3gAQA!16zL20vMDNfMHZm?entry=ttu&g_ep=EgoyMDI0MTAwOS4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+                <img src="https://www.holidify.com/images/cmsuploads/compressed/50382227093c4ae17ef1ab_20220523165700.jpeg" alt="Salar Jung Museum, Hyderabad">
+                <p class="title">Salar Jung Museum, Hyderabad</p>
+                <div class="price-container">
+                    <span class="price-label">Ticket Price:</span>
+                    <span class="price">₹20</span>
+                </div>
+            </a>
+            <div class="ribbon">Attraction</div>
+        </div>
+
+        <div class="museum-card">
+            <a href="https://www.google.com/maps/place/Sabarmati+Ashram/@23.0615153,72.5775615,17z/data=!4m10!1m2!2m1!1sGandhi+Ashram,+Ahmedabad!3m6!1s0x395e8479e05f1901:0x16cbb1101e5729a3!8m2!3d23.0606577!4d72.5803299!15sChhHYW5kaGkgQXNocmFtLCBBaG1lZGFiYWRaGSIXZ2FuZGhpIGFzaHJhbSBhaG1lZGFiYWSSAQZhc2hyYW3gAQA!16zL20vMDRiYmNk?entry=ttu&g_ep=EgoyMDI0MTAwOS4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+                <img src="https://lh5.googleusercontent.com/p/AF1QipP6aejnuZ6ITozdmExfB-zaJOd89VevxkwbaglC=w408-h262-k-no" alt="Sabarmati Ashram, Ahmedabad">
+                <p class="title">Sabarmati Ashram, Ahmedabad</p>
+                <div class="price-container">
+                    <span class="price-label">Ticket Price:</span>
+                    <span class="price">Free</span>
+                </div>
+            </a>
+            <div class="ribbon">Educational</div>
+        </div>
+
+        <div class="museum-card">
+            <a href="https://www.google.com/maps/place/Smaranika+Tram+Museum/@22.5651862,88.347191,17z/data=!4m6!3m5!1s0x3a0277a7739ebb33:0xa73d4f0bd6295a7d!8m2!3d22.5651813!4d88.3497659!16s%2Fg%2F11csq9v9ws?entry=ttu&g_ep=EgoyMDI0MTAwOS4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+                <img src="https://lh5.googleusercontent.com/p/AF1QipN0pXG_SHjh4tElW-x8IS_fChj2WDZhnOtxn57G=w408-h306-k-no" alt="Smaranika Tram Museum, Kolkata">
+                <p class="title">Smaranika Tram Museum, Kolkata</p>
+                <div class="price-container">
+                    <span class="price-label">Ticket Price:</span>
+                    <span class="price">₹40</span>
+                </div>
+            </a>
+            <div class="ribbon">Iconic</div>
+        </div>
+</body>
+</html>
