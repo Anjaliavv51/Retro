@@ -12,6 +12,9 @@
 
 body {
   background-color: black;
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+  background-color: white; /* Default light background */
+  color: black; /* Default light text color */
 }
 /*
 .navbar {

@@ -378,9 +378,55 @@ p {
                     <li class="nav-item">
                     <a class="nav-link" href="#" style="font-family: var(--ff-philosopher); color: black;">More</a>
                     </li>
-
+                    <li class="nav-item">
+                        <a class="nav-link" id="themeToggle" style="font-family: var(--ff-philosopher); color: black;">Toggle Theme</a>
+                    </li>
                 </ul>
-
+                <style>
+                    body {
+                        transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+                        background-color: white;
+                    }
+            
+                    .dark-mode {
+                        background-color: #121212; /* Dark background */
+                        color: white; /* Light text color */
+                    }
+            
+                    .navbar {
+                        transition: background-color 0.3s; /* Smooth transition */
+                        background-color: #f8f9fa;
+                    }
+            
+                    .navbar.dark-mode {
+                        background-color: #333; /* Dark navbar background */
+                    }
+            
+                    .navbar .nav-link {
+                        color: black; /* Light navbar text color */
+                    }
+            
+                    .navbar.dark-mode .nav-link {
+                        color: white; /* Dark navbar text color */
+                    }
+            
+                    #themeToggle {
+                        cursor: pointer;
+                    }
+                </style>
+                <script>
+                    // JavaScript to toggle between light and dark themes
+                    const themeToggle = document.getElementById('themeToggle');
+                    const body = document.body;
+                    const navbar = document.querySelector('.navbar');
+            
+                    themeToggle.addEventListener('click', () => {
+                        body.classList.toggle('dark-mode');
+                        navbar.classList.toggle('dark-mode');
+                        const isDark = body.classList.contains('dark-mode');
+                        themeToggle.textContent = isDark ? 'Light Mode' : 'Dark Mode';
+                    });
+                </script>
                 <div class="navbar-right">
                     <ul class="navbar-nav">
                         <li class="nav-item">
