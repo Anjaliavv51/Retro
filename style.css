@@ -13,6 +13,128 @@
 body {
   background-color: black;
 }
+
+.form-check{
+  margin-right:1rem ;
+}
+.black{
+  color: black;
+}
+section {
+  background-color: white;
+  color: black;
+}
+#section6, #section7{
+  background-color:hsl(20, 43%, 93%) ;
+}
+.footer{
+  background-color: hsl(20, 43%, 93%);
+}
+.navbar a{
+  color: black;
+}
+.print{
+  background-color: #f9e2c4; 
+  color: #000;
+  border: 2px solid black;
+}
+
+
+
+
+[data-bs-theme='light'] {
+  background-color: #ffffff; 
+  color: #000000; 
+}
+[data-bs-theme='dark'] {
+  background-color: #000000; 
+  color: #ffffff; 
+}
+
+
+.section {
+  transition: background-color 0.3s ease; 
+}
+
+
+
+
+/* for navbar */
+[data-bs-theme='light'] .navbar {
+  background-color: #FFFFF5CC; 
+}
+/* for section */
+[data-bs-theme='light'] .section {
+  /* background:linear-gradient(to bottom, #feaea5, #a65961);  */
+  background: transparent;
+}
+[data-bs-theme='light'] #section1 {
+  background:linear-gradient(to bottom, #feaea5, #a65961); 
+}
+[data-bs-theme='light'] #section3{
+  background-color: hsl(20, 43%, 93%);
+}
+[data-bs-theme='light'] #section4 {
+  background-color: hsl(20, 43%, 93%);
+}
+/* for footer */
+[data-bs-theme='light'] .footer {
+  background-color: hsl(20, 43%, 93%); 
+}
+
+
+
+/* for navbar */
+[data-bs-theme='dark'] .navbar {
+  background-color:rgb(70, 70, 70); 
+  a{
+    color: #fff;
+  }
+}
+/* for section */
+[data-bs-theme='dark'] .section {
+  background-color: rgb(126, 125, 125); /* Dark section background */
+  h2{
+    color: #A21017;
+  }
+  p{
+    color: white;
+  }
+  .faq-container{
+    background-color: #000;
+  }
+}
+[data-bs-theme='dark'] #section1 {
+  background:linear-gradient(to bottom, #945b55, #83444d); 
+}
+[data-bs-theme='dark'] #section3{
+  background-color: rgb(193, 188, 188);
+  .service_item{
+    /* box-shadow: 10px 5px 5px black; */
+    box-shadow: 3px 3px rgb(65, 65, 65), -1em 0 .4em rgb(110, 109, 109);
+  }
+}
+[data-bs-theme='dark'] #section4 {
+  background-color: rgb(193, 188, 188);
+}
+/* for footer */
+[data-bs-theme='dark'] .footer {
+  background-color: rgb(193, 188, 188); 
+}
+[data-bs-theme='dark'] .retroItem {
+  color: #f2f2f2;
+  font-weight: bold;
+}
+[data-bs-theme='dark'] .print {
+  background-color:#000 ; 
+  color: #f9e2c4;
+  border: 2px solid #f9e2c4;
+}
+
+
+
+
+
 /*
 .navbar {
   padding: fixed;

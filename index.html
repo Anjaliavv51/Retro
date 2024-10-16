@@ -14,6 +14,9 @@
             }
         }
     </style>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
      
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -371,9 +374,16 @@ p {
     
     <!--Navbar Start-->
     <nav class="navbar navbar-expand-lg fixed-top" id="top">
+         <!-- Bootstrap 5 switch -->
+         <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" id="darkModeSwitch" checked>
+            <label class="form-check-label" for="darkModeSwitch">Dark Mode</label>
+            <script src="script.js"></script> <!-- Link to your JavaScript -->
+        </div>
         <div class="container-fluid">
-            <a class="navbar-brand" href="#" style="font-family: var(--ff-philosopher); color: black;">
+            <a class="navbar-brand" href="#" style="font-family: var(--ff-philosopher);">
                 <b>Retro</b>
+                <!-- color: black; -->
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -383,29 +393,30 @@ p {
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="#"
-                            style="color: black; font-family: var(--ff-philosopher);">Home</a>
+                            style=" font-family: var(--ff-philosopher);">Home</a>
+                            <!-- color: black; -->
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="Html-files/about.html"
-                            style="font-family: var(--ff-philosopher); color: black;">About Us</a>
+                            style="font-family: var(--ff-philosopher);">About Us</a>
                     </li>
                     
                     <li class="nav-item">
                         <a class="nav-link" href="Html-files/menu.html"
-                            style="font-family: var(--ff-philosopher);color: black;">Collections</a>
+                            style="font-family: var(--ff-philosopher);">Collections</a>
                     </li>
 
                     <li class="nav-item">
                         <a class="nav-link" href="Html-files/services.html"
-                            style="font-family: var(--ff-philosopher);color: black;">Services</a>
+                            style="font-family: var(--ff-philosopher);">Services</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="Html-files/contact.html" style="font-family: var(--ff-philosopher); color: black">Contact Us</a>
+                        <a class="nav-link" href="Html-files/contact.html" style="font-family: var(--ff-philosopher);">Contact Us</a>
                     </li>
                     
                     <li class="nav-item">
-                    <a class="nav-link" href="#" style="font-family: var(--ff-philosopher); color: black;">More</a>
+                    <a class="nav-link" href="#" style="font-family: var(--ff-philosopher);">More</a>
                     </li>
 
                 </ul>
@@ -414,14 +425,15 @@ p {
                     <ul class="navbar-nav">
                         <li class="nav-item">
                             <a class="nav-link" onclick="redirectLogin()"
-                                style="color: black; font-family: var(--ff-philosopher);">Login</a>
+                                style=" font-family: var(--ff-philosopher);">Login</a>
+                                <!-- color: black; -->
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" onclick="redirectSignup()"
-                                style="color: black; font-family: var(--ff-philosopher);">Signup</a>
+                                style=" font-family: var(--ff-philosopher);">Signup</a>
                         </li>
                         <li class="nav-item" style="list-style-type: none;">
-                            <a class="nav-link" href="Html-files/cart.html" style="color: black;"><i
+                            <a class="nav-link" href="Html-files/cart.html"><i
                                     class="fa-solid fa-cart-shopping"></i>Cart</a>
                         </li>
                     </ul>
@@ -490,16 +502,20 @@ p {
         </div>
     </nav>
 -->
-    <script src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
-<script>
-function loadGoogleTranslate() {
-new google.translate.TranslateElement({
-  pageLanguage: 'en'
-}, 'google_element');
-}
-</script>
+    <!-- Bootstrap Bundle JS (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-    <section class="intro_container">
+
+    <script src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+    <script>
+    function loadGoogleTranslate() {
+    new google.translate.TranslateElement({
+    pageLanguage: 'en'
+    }, 'google_element');
+    }
+    </script>
+
+    <section id="section1" class="section intro_container">
         <h1 class="retro-heading" style="font-family: var(--ff-philosopher);color: brown;z-index: 99;">Welcome to Retro!</h1>
         <p style="font-family: cursive;z-index: 99;color: white;font-size: x-large;">Step back in time and experience the nostalgic charm of days gone by. 
             Immerse yourself in the world of vintage tech, classic designs, and timeless memories. 
@@ -519,7 +535,7 @@ new google.translate.TranslateElement({
     window.open('Html-files/menu.html', '_blank');
 });
     </script>
-    <section class="about_us">
+    <section id="section2" class="section about_us">
         <div class="move">
             <div id="marque">
                  <a href="Html-files/cart.html"> <h1 class="poppins-light"  style="font-family: var(--ff-philosopher);">Get <span> 30% OFF </span> on your first order!</h1></a>
@@ -556,33 +572,33 @@ new google.translate.TranslateElement({
         
     </section>
 
- <section class="service_container">
-    <div class="service">
-        <!-- Text Column - 60% Width -->
-        <div class="service_text column"  style="margin-left: auto; margin-right: auto;"><br>
-            <h1>Bringing happiness to you</h1>
-            <p>Order your favourite vintage collections!</p>
-        </div>
+    <section id="section3" class="section service_container">
+        <div class="service">
+            <!-- Text Column - 60% Width -->
+            <div class="service_text column"  style="margin-left: auto; margin-right: auto;"><br>
+                <h1>Bringing happiness to you</h1>
+                <p>Order your favourite vintage collections!</p>
+            </div>
 
-        <!-- Buttons Column - 40% Width -->
+            <!-- Buttons Column - 40% Width -->
 
-        <div class="service_buttons column" style="margin-left: auto; margin-right: auto;">
-            <div class="button_row" data-aos="fade-down">
-                <div class="service_item box" data-aos="fade-down" style="height: 200px;">
-                    <h2>Online Delivery</h2><br>
-                    <a href="./Html-files/menu.html" class="order_btn">Order Online</a>
-                </div>
-                <div class="service_item box" data-aos="fade-down" style="height: 200px;">
-                    <h2>Click & Collect</h2><br>
-                    <a href="./Html-files/cart.html" class="order_btn">Take out Order</a>
+            <div class="service_buttons column" style="margin-left: auto; margin-right: auto;">
+                <div class="button_row" data-aos="fade-down">
+                    <div class="service_item box" data-aos="fade-down" style="height: 200px;">
+                        <h2>Online Delivery</h2><br>
+                        <a href="./Html-files/menu.html" class="order_btn">Order Online</a>
+                    </div>
+                    <div class="service_item box" data-aos="fade-down" style="height: 200px;">
+                        <h2>Click & Collect</h2><br>
+                        <a href="./Html-files/cart.html" class="order_btn">Take out Order</a>
+                    </div>
                 </div>
             </div>
-        </div>
-          
+            
 
-</section>
+    </section>
 
-    <section class="menu_container">
+    <section id="section4" class="section menu_container">
         <div class="mainhead">
             <h1 style="font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%);">"Get ready to explore our vintage collections!"</h1>
             <p style="font-family: var(--ff-poppins);">"Free on Order above $5000"</p>
@@ -620,7 +636,7 @@ new google.translate.TranslateElement({
         </div>
     </section>
 
-    <section class="section-meals" data-aos="fade-in" data-aos-duration="2000">
+    <section id="section5" class="section section-meals" data-aos="fade-in" data-aos-duration="2000">
         <ul class="meals-showcase clearfix">
             <li>
                 <figure class="meal-photo">
@@ -921,7 +937,8 @@ new google.translate.TranslateElement({
 
     </section>
 
-    <div class="app_download" style="background-color: hsl(20, 43%, 93%);">
+    <div class="footer app_download">
+        <!-- style="background-color: hsl(20, 43%, 93%);" -->
         <h4 style="font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%);">Free Delivery!</h4>
         <h2 style="font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%);">Download the App now!</h2>
         <br>
@@ -933,9 +950,12 @@ new google.translate.TranslateElement({
 
     </div>
 
-    <div class="footer" style="background-color: hsl(20, 43%, 93%);">
+    <div class="footer">
+        <!-- style="background-color: hsl(20, 43%, 93%);" -->
         <footer>
-            <div class="foot-panel2" style="background-color:hsl(20, 43%, 93%);font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+            <div class="footer foot-panel2" style="font-family: var(--ff-poppins);">
+                <!-- background-color:hsl(20, 43%, 93%);
+                color: hsl(208, 7%,46%); -->
                 <ul>
                     <p style="color: hsl(357, 82%,35%);font-family: var(--ff-philosopher);text-align: left;">Our Pages</p>
                     <a href="#" style="color: black;">Home</a>
@@ -1004,12 +1024,14 @@ new google.translate.TranslateElement({
                         <a class="fa-brands fa-snapchat"  href="https://www.snapchat.com" ></a>
 
                     </div>
-                    <p style="font-family: var(--ff-philosopher);background-color: hsl(20, 43%, 93%);color: hsl(203, 30%, 26%);margin-bottom:0;">Stay connected with us on social media for the latest updates, latest collection, and vintage adventures.
+                    <p class="footer" style="font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%);margin-bottom:0;">Stay connected with us on social media for the latest updates, latest collection, and vintage adventures.
+                        <!-- background-color: hsl(20, 43%, 93%); -->
                     </p>
-                    <div class="copyright" style="font-family: var(--ff-philosopher);background-color: hsl(20, 43%, 93%);color: black;">
+                    <div class="footer copyright" style="font-family: var(--ff-philosopher);color: black;">
+                        <!-- background-color: hsl(20, 43%, 93%); -->
 
                         &copy; 2024 Retro . All Rights Reserved. | Developed by <span id="author">
-                            <a href="https://www.linkedin.com" target="_blank" style="text-decoration: none;">Retro Team</a>
+                            <a class="retroItem" href="https://www.linkedin.com" target="_blank" style="text-decoration: none;">Retro Team</a>
                     </div>
                     <div>
                         <button id="sr" style="z-index: 1000; display: block;">
@@ -1022,7 +1044,8 @@ new google.translate.TranslateElement({
                     </div>
                 </div>
         </footer>
-        <button onclick="window.print()" style="font-family:Georgia; font-size:medium; line-height: inherit;border-radius:5px ;background-color: #f9e2c4;padding:5px 5px;">Print this page</button>
+        <button class="print" onclick="window.print()" style="font-family:Georgia; font-size:medium; line-height: inherit;border-radius:5px ;padding:5px 5px;">Print this page</button>
+        <!-- background-color: #f9e2c4; -->
     </div>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
