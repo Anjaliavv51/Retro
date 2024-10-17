@@ -2,14 +2,11 @@
   margin: 0px;
   padding: 0px;
 }
-
 .poppins-light {
   font-family: "Poppins", sans-serif;
   font-weight: 300;
   font-style: normal;
 }
-
-
 body {
   background-color: black;
 }
@@ -25,7 +22,6 @@ body {
   transition: background-color 0.5s ease, backdrop-filter 0.5s ease;
 }
 */
-
 .navbar a {
   text-decoration: none;
   color: #333;
@@ -37,11 +33,6 @@ body {
 /*.navbar a:hover{
   color: #fff;
   border-bottom: 1px solid #fff;
-}
-
-*/
-
-
 .navbar.fixed-top {
   position: fixed; 
   top: 0;
@@ -1105,4 +1096,9 @@ padding-left:2px;
   margin-top: 5px;
   width: 60%;
 }
-
+@media screen and (max-width:768px)
+{
+  .intro_container{
+    padding: 11px 28px;
+  }
+}
