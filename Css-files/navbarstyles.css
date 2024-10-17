@@ -33,6 +33,7 @@ body {
     color: black;
     font-weight: bold;
     transition: transform 0.3s ease;
+    font-family: var(--ff-philosopher);
 }
 
 .navbar-brand:hover {
@@ -163,5 +164,180 @@ body {
 
     .nav-item {
         margin-bottom: 1rem;
+    }
+}
+
+.dark-mode{
+    body {
+        font-family: 'Philosopher', sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    
+    /* Navbar styles */
+    .navbar {
+        background-color: black;
+        color: white;
+        padding: 1rem;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        margin: 10px 1px!important;
+        border-radius: 20px;
+    }
+    
+    .nav-right {
+        margin-left: auto;
+        /* Pushes the login/signup to the right side */
+        display: flex;
+        gap: 15px;
+        /* Space between login and signup */
+    }
+    
+    .ms-auto {
+        margin-left: auto;
+        /* Pushes to the right */
+    }
+    
+    .navbar-brand {
+        font-size: 1.5rem;
+        color: whitesmoke;
+        font-weight: bold;
+        transition: transform 0.3s ease;
+        font-family: var(--ff-philosopher)
+    }
+    
+    .navbar-brand:hover {
+        transform: scale(1.6);
+    }
+    
+    .navbar-nav .nav-item {
+        margin-right: 15px;
+    }
+    
+    .nav-link {
+        color: white;
+        font-size: 1rem;
+        font-family: var(--ff-philosopher);
+        text-decoration: none;
+        /* Remove default underline */
+        position: relative;
+        transition: all 0.3s ease;
+        font-weight: 400;
+        font-size: 21px;
+        line-height: 31px;
+    }
+    
+    .nav-item.dropdown .nav-link {
+        text-decoration: none;
+        /* No underline for dropdown toggle */
+    }
+    
+    .nav-link:hover {
+        text-decoration: none;
+        /* Prevent default underline on hover */
+    }
+    
+    .nav-link::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        width: 0%;
+        height: 3.5px;
+        /* Thicker underline */
+        background: transparent;
+        transition: all 0.3s ease-in-out;
+        box-shadow:
+            0 0 30px rgba(255, 159, 128, 1),
+            /* Initial glow effect with bright peach color */
+            0 0 60px rgba(255, 159, 128, 1);
+        /* Increased glow effect */
+    }
+    
+    .nav-link:hover::after {
+        background: rgba(243, 187, 183, 1);
+        width: 100%;
+        box-shadow: 0 0 20px rgba(243, 187, 183, 1);
+    }
+    
+    .nav-btn {
+        background: none;
+        border: none;
+        font-size: 1rem;
+        cursor: pointer;
+        color: white;
+        text-decoration: none;
+        position: relative;
+    }
+    
+    .nav-btn:hover {
+        color: #d2691e;
+    }
+    
+    .nav-btn::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        width: 0%;
+        height: 2px;
+        background: #ffb6c1;
+        /* Adjust to match background color */
+        transition: all 0.3s ease-in-out;
+        box-shadow: 0 20px #ffb6c1;
+        /* Glow effect */
+    }
+    
+    .nav-link:hover::after {
+        background: rgba(255, 159, 128, 1);
+        width: 100%;
+        box-shadow:
+            0 0 25px rgba(255, 159, 128, 1),
+            0 0 50px rgba(255, 159, 128, 1);
+        /* Glow effect with bright peach color */
+    }
+    
+    .nav-link:hover,
+    .nav-btn:hover {
+        color: hwb(327 21% 3%) !important;
+    }
+    
+    .dropdown-menu {
+        background-color: #ffe5e5;
+        border: none;
+    }
+    
+    .dropdown-item {
+        /*color: black;*/
+        font-family: var(--ff-philosopher);
+    }
+    
+    .dropdown-item:hover {
+        background-color: #f0c0a0;
+        color: #d2691e;
+    }
+    
+    /* Mobile Styles */
+    @media (max-width: 768px) {
+        .navbar-brand {
+            margin-left: 10px;
+        }
+    
+        .navbar-nav {
+            text-align: center;
+        }
+    
+        .navbar-toggler {
+            border: none;
+        }
+    
+        .navbar-toggler-icon {
+            color: white;
+        }
+    
+        .nav-item {
+            margin-bottom: 1rem;
+        }
     }
 }
