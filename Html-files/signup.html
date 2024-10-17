@@ -258,7 +258,7 @@ body{
 
               
             </form>
-            <div class="btnNext"><button type="submit" class="btn-login" style="font-family: var(--ff-philosopher);color: #ddd;">Register</button>
+            <div class="btnNext"><button type="submit" id="reg-btn" class="btn-login" style="font-family: var(--ff-philosopher);color: #ddd;">Register</button>
               <button id="google-login" style="font-family: var(--ff-philosopher);color: #ddd;">Signup with Google</button></div>
           </div>
 
@@ -329,6 +329,29 @@ body{
         }
     
         animateCircles();
+
+        //storing user details
+        document.getElementById('reg-btn').addEventListener('click', function(event) {
+          event.preventDefault(); // Prevent form submission
+      
+          // Get values from the form
+          const name = document.getElementById('name').value;
+          const email = document.getElementById('email').value;
+          const password = document.getElementById('password').value; // You may choose to hash this before storage
+      
+          // Store user details in localStorage
+          const userDetails = {
+              name: name,
+              email: email,
+              password: password // Consider security practices for storing passwords
+          };
+      
+          localStorage.setItem('userDetails', JSON.stringify(userDetails));
+      
+          // Optionally, redirect to signed page after sign-up
+          window.location.href = 'signed.html'; // Adjust the path as necessary
+      });
+      
       </script>
 </body>
 </html>
