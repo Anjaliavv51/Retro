@@ -1,22 +1,54 @@
-//CODE FOR TABLE OF ADD TO CART
 document.addEventListener('DOMContentLoaded', () => {
     loadCartFromLocalStorage();
-    updateBadgeCount() ; // update badge on load
-    if (document.getElementById('cart-items')){
+    updateBadgeCount(); // Update badge on load
+    if (document.getElementById('cart-items')) {
         document.getElementById('cart-items').addEventListener('click', (event) => {
             if (event.target.classList.contains('increase-quantity')) {
                 updateQuantity(event.target, 1);
             } else if (event.target.classList.contains('decrease-quantity')) {
                 updateQuantity(event.target, -1);
             }
+            updateCart(); // Update total price when quantity changes
         });
     }
+
+    const cartTable = document.getElementById('cart-table');
+
+    // Function to update the total individual price and bill
+    function updateCart() {
+        const cartItems = document.querySelectorAll('.cart-item');
+        let totalAmount = 0;
+
+        cartItems.forEach(item => {
+            const price = parseFloat(item.dataset.productPrice);
+            const quantityElement = item.querySelector('.quantity');
+            const quantity = parseInt(quantityElement.textContent, 10);
+            const totalIndividualPrice = price * quantity;
+
+            // Add or update the total individual price column
+            let totalCell = item.querySelector('.total-individual-price');
+            if (!totalCell) {
+                totalCell = document.createElement('td');
+                totalCell.classList.add('total-individual-price');
+                item.appendChild(totalCell);
+            }
+            totalCell.textContent = `$${totalIndividualPrice.toFixed(2)}`;
+
+            totalAmount += totalIndividualPrice;
+        });
+
+        // Update the cart total
+        document.getElementById('cart-total').textContent = `Total: $${totalAmount.toFixed(2)}`;
+    }
+
+    // Initial update on page load
+    updateCart();
 });
 
 function loadCartFromLocalStorage() {
     const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
     const cartItemsContainer = document.getElementById('cart-items');
-    if(cartItemsContainer){
+    if (cartItemsContainer) {
         cartItemsContainer.innerHTML = ''; // Clear existing items
 
         cartItems.forEach(item => {
@@ -25,7 +57,7 @@ function loadCartFromLocalStorage() {
             cartItemRow.setAttribute('data-product-id', item.id);
             cartItemRow.setAttribute('data-product-price', item.price);
             cartItemRow.innerHTML = `
-                <td>${item.name}</td>
+                <td>${item.name}</td>  <!-- Correctly load and display the name -->
                 <td>$${item.price.toFixed(2)}</td>
                 <td class="quantity">${item.quantity}</td>
                 <td>
@@ -69,23 +101,25 @@ function saveCartToLocalStorage() {
     document.querySelectorAll('.cart-item').forEach(item => {
         cartItems.push({
             id: item.getAttribute('data-product-id'),
+            name: item.querySelector('td').textContent, // Fetch the item name from the first <td>
             price: parseFloat(item.getAttribute('data-product-price')),
             quantity: parseInt(item.querySelector('.quantity').textContent)
         });
     });
     localStorage.setItem('cartItems', JSON.stringify(cartItems));
-    updateBadgeCount(); // update badge count after saving
+    updateBadgeCount(); // Update badge count after saving
 }
-//CODE FOR COUPON RECEIVED ON CLICKING ORDER NOW
-  // Function to generate a random coupon code
-  const generateCouponCode = () => {
+
+// Function to generate a random coupon code
+const generateCouponCode = () => {
     const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
     let couponCode = '';
     for (let i = 0; i < 8; i++) {
         couponCode += characters.charAt(Math.floor(Math.random() * characters.length));
     }
     return couponCode;
-}
+};
+
 // Check if it's the user's first order and apply discount
 const applyFirstTimeDiscount = () => {
     let couponCode = localStorage.getItem('couponCode');
@@ -93,12 +127,12 @@ const applyFirstTimeDiscount = () => {
         couponCode = generateCouponCode();
         localStorage.setItem('couponCode', couponCode);
     }
-    if(document.getElementById('couponCode')){
+    if (document.getElementById('couponCode')) {
         document.getElementById('couponCode').innerHTML = `Use coupon code <span style="font-weight: bold;"> ${couponCode} </span> for 30% off!`;
         alert(`Congratulations! Your coupon code is ${couponCode}. You've received a 30% discount on your first order.`);
     }
-    
-}
+};
+
 window.onload = applyFirstTimeDiscount;
 
 function updateBadgeCount() {
