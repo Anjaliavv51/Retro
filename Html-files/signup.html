@@ -220,6 +220,7 @@ body{
         <div class="left-login">
           <div class="area">
             <div class="way"></div>
+            <img src="../Images/signup.png" alt="Icon" style="width: 100px; height: auto; margin: 20px auto 20px; display: block;">
             <div class="way"></div>
             <div class="way"></div>
             <div class="way"></div>
@@ -249,13 +250,15 @@ body{
                 <span id="email-error" class="error-message"></span>
               </div>
 
-              <div class="textfield ">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" placeholder="Enter Password" title="Special characters are not allowed" required>
-                <span id="password-error" class="error-message"></span>
-                <span class="tooltiptext">Special characters such as /[<>"/]/  are not allowed</span>
+              <div class="textfield">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password">
             </div>
-
+            <div class="show-pass-container">
+                <input type="checkbox" id="showPassword">
+                <label for="showPassword">Show Password</label>
+            </div>
+            
               
             </form>
             <div class="btnNext"><button type="submit" class="btn-login" style="font-family: var(--ff-philosopher);color: #ddd;">Register</button>
@@ -342,6 +345,21 @@ body{
         domain="www.chatbase.co"
         defer>
         </script>
-    
+        <script>
+          // JavaScript to toggle password visibility
+          const passwordField = document.getElementById('password');
+          const showPasswordCheckbox = document.getElementById('showPassword');
+      
+          showPasswordCheckbox.addEventListener('change', () => {
+              if (showPasswordCheckbox.checked) {
+                  passwordField.type = 'text';  // Show password
+              } else {
+                  passwordField.type = 'password';  // Hide password
+              }
+          });
+      </script>
+    <div class="gtranslate_wrapper"></div>
+    <script>window.gtranslateSettings = {"default_language":"en","detect_browser_language":true,"wrapper_selector":".gtranslate_wrapper"}</script>
+    <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
 </body>
 </html>
