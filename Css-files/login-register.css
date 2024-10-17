@@ -149,7 +149,7 @@ body {
   border-radius: 15px;
   border: none;
   margin: 10px;   /*Margin added so that they do not overlap*/
-  background-color: #aa6a6a;
+  background-color: #be367a;
   color: rgb(190, 135, 135);
   font-size: 16px;
   cursor: pointer;
@@ -158,21 +158,13 @@ body {
 
 .btn-login:hover,
 #google-login:hover {
-  background-color: #ac7070; /* Darker shade on hover */
+  background-color: #c3709a; /* Darker shade on hover */
   transform: translateY(-3px); /* Lift effect on hover */
 }
 
 .btn-login:active,
 #google-login:active {
   transform: translateY(1px); /* Slight press effect */
-}
-
-#google-login {
-  background-color: #ad6660; /* Google red color */
-}
-
-#google-login:hover {
-  background-color: #b8938f; /* Darker Google color on hover */
 }
 
 /* Accessibility: Adding focus styles for inputs and buttons */
