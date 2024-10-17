@@ -368,13 +368,6 @@ div.deals:hover{
   transition: 0.5s;
   box-shadow: 2px 2px 20px black;
 }
-.testimonal__image{
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin: 0 auto 1.5rem;
-}
 .testimonal__title{
   margin-bottom: .75rem;
 }
