@@ -16,9 +16,7 @@
 body {
   margin: 0;
   font-family: 'Noto Sans', sans-serif;
-  background: linear-gradient(135deg, #ffb6c1, #ff69b4); 
-  background-size: cover;
-  background-attachment: fixed;
+  
   display: flex;
   justify-content: center;
   align-items: center;
