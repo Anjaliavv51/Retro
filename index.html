@@ -1209,8 +1209,8 @@ document.body.classList.add('light-mode');
                     </p>
                     <div class="footer copyright" style="font-family: var(--ff-philosopher);color: black;">
                         <!-- background-color: hsl(20, 43%, 93%); -->
-
-                        &copy; 2024 Retro . All Rights Reserved. | Developed by <span id="author">
+                     
+                        &copy;<span id="copyright"></span> Retro . All Rights Reserved. | Developed by <span id="author">
                             <a class="retroItem" href="https://www.linkedin.com" target="_blank" style="text-decoration: none;">Retro Team</a>
                     </div>
                     <div>
@@ -1383,4 +1383,8 @@ scrollToTopBtn.addEventListener("click", function() {
 <script>
     AOS.init();
   </script>
+
+<script>
+    document.getElementById("copyright").textContent = new Date().getFullYear();
+</script>  
 </html>
