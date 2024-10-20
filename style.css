@@ -250,6 +250,8 @@ body {
     .order_btn:hover {
         background-color: hsl(357, 82%, 45%);
     }
+
+    
     
 
 
@@ -392,6 +394,9 @@ body {
 
 .menu_items {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+    align-items: center;
   overflow: hidden;
 }
 
@@ -605,7 +610,7 @@ ul a {
   display: block;
   font-size: 0.85rem;
   margin-top: 10px;
-  color: #dddddd;
+  /* color: #dddddd; */
   text-decoration: none;
 }
 
@@ -808,6 +813,8 @@ textarea {
   .foot-panel2 ul {
     margin-top: 20px;
   }
+
+  
 
   input,
   textarea {
@@ -1098,3 +1105,4 @@ padding-left:2px;
   margin-top: 5px;
   width: 60%;
 }
+
