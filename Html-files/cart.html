@@ -369,40 +369,69 @@ border-radius: 4px;
 
   <div class="head_container" style="background-color: transparent; font-family: var(--ff-philosopher);">
     <header>
-      <nav class="navbar navbar-expand-lg fixed-top">
+      <nav class="navbar navbar-expand-lg fixed-top" id="top">
         <div class="container-fluid">
-          <a class="navbar-brand" href="../index.html" style="color: black;">
-            <b>Retro</b>
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" href="../index.html" style="color: black;">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="about.html" style="color: black;">About Us</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="menu.html" style="color: black;">Collections</a>
-              <li class="nav-item">
-                <a class="nav-link" href="services.html" style="color: black;">Services</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contact.html" style="color: black;">Contact us</a>
-              </li>
-              <li class="nav-item" style="list-style-type: none;">
-                <a class="nav-link" href="#" style="color: black;">
-                  <i class="fa-solid fa-cart-shopping"></i><span class="badge-count" id="badgeCount"></span>
-                </a>
-              </li>
-            </ul>
-          </div>
+            <a class="navbar-brand" href="#" style="font-family: var(--ff-philosopher); color: black;">
+                <b>Retro</b>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#"
+                            style="color: black; font-family: var(--ff-philosopher);">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Html-files/about.html"
+                            style="font-family: var(--ff-philosopher); color: black;">About Us</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="Html-files/menu.html"
+                            style="font-family: var(--ff-philosopher);color: black;">Collections</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="Html-files/services.html"
+                            style="font-family: var(--ff-philosopher);color: black;">Services</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="Html-files/contact.html" style="font-family: var(--ff-philosopher); color: black">Contact Us</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                    <a class="nav-link" href="#" style="font-family: var(--ff-philosopher); color: black;">More</a>
+                    </li>
+
+                </ul>
+
+                <div class="navbar-right">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" onclick="redirectLogin()"
+                                style="color: black; font-family: var(--ff-philosopher);">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" onclick="redirectSignup()"
+                                 style="color: black; font-family: var(--ff-philosopher);">Signup</a>
+                        </li>
+                        <li class="nav-item" style="list-style-type: none;">
+                            <a class="nav-link" href="Html-files/cart.html" style="color: black;"><i
+                                    class="fa-solid fa-cart-shopping"></i>Cart</a>
+                        </li>
+                    </ul>
+                </div>
+                <button id="darkModeToggle" class="btn btn-secondary" style="margin-left: 10px;">
+                    <i class="fas fa-sun" id="toggleIcon" style="font-size: 20px;"></i>
+                    <span id="toggleText">Light Mode</span>
+                </button>
+            </div>
         </div>
-      </nav>
+    </nav>
     </header>
   </div>
   <br><br><br><br>
