@@ -480,23 +480,31 @@ body {
 }
 
 .app_download {
-  background-color: brown;
+  background-color:crimson;
   height: 350px;
   color: white;
   padding-left: 50px;
   padding-top: 80px;
+  border: 2px solid black ;
+  border-radius:5%;
 }
 
 .app_download h4 {
   font-size: 2rem;
+  font-family:Arial, Helvetica, sans-serif;
 }
 
 .app_download h2 {
   font-size: 3.5rem;
-}
+ 
+  text-decoration: underline;
+
+} 
 
 .app_download p {
   font-size: 1.3rem;
+  font-family: cursive;
+  font-style: italic;
 }
 
 .btn a {
@@ -509,8 +517,8 @@ body {
 }
 
 .app-download-img {
-  max-height: 70px;
-
+  max-height:70px;
+   
   padding: 10px;
 }
 
@@ -525,10 +533,12 @@ body {
   padding-top: 10px;
 }
 
-/* .footer {
-    background-color:  rgb(224, 224, 252);;
+ .footer {
+    background-color:black;
     height: 700px;
-} */
+    margin-top:20px;
+    border:2px solid white;
+} 
 
 /* .footer .container {
     border: 2px solid rgb(22, 6, 6);
@@ -589,9 +599,8 @@ body {
 } */
 
 .foot-panel2 {
-  background-color: rgb(138, 37, 37);
-  color: white;
   height: 300px;
+  border:2px #000 solid ;
   /* height: fit-content; */
   display: flex;
   /* padding: 10px; */
@@ -603,16 +612,20 @@ body {
 }
 
 ul p {
-  font-weight: 700;
+  font-weight: 900;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+text-decoration:  solid underline;
+color:white;
 }
 
-ul a {
+ ul li {
   display: block;
   font-size: 0.85rem;
   margin-top: 10px;
-  /* color: #dddddd; */
   text-decoration: none;
+  color:crimson;
 }
+
 
 /* .foot-pannel3{
     background-color:rgb(66, 16, 16);
@@ -625,11 +638,13 @@ ul a {
 
 
 .foot_panel4 {
-  background-color: rgb(66, 16, 16);
-  color: white;
-  height: 160px;
+  background-color:crimson;
+  color:black;
+  height: 180px;
   font-size: 0.9rem;
+  border:#000000 solid 2px;
   text-align: center;
+  text-decoration: underline;
 }
 
 .pages {
@@ -645,6 +660,7 @@ form {
   display: grid;
   /* gap: 10px; */
   padding-bottom: 100px;
+  color:crimson;
 }
 
 label {
@@ -663,7 +679,7 @@ textarea {
 }
 
 #butt {
-  background-color: brown;
+  background-color:brown;
   color: white !important;
   padding: 3px;
   border: 1px solid white;
@@ -672,7 +688,7 @@ textarea {
 }
 
 #butt:hover {
-  background-color: rgb(196, 89, 89);
+  background-color:crimson;
 }
 
 .social-icons a {
@@ -680,7 +696,7 @@ textarea {
   padding: 7px;
   margin: 7px 6px 0 8px; 
   text-decoration: none;
-  color: brown !important;
+  color: white !important;
 }
 
 .social-icons a:hover {
