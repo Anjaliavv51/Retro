@@ -29,11 +29,11 @@ body {
 
 .main-login {
   display: flex;
-  justify-content: center;
   align-items: center;
   width: 100%;
   overflow: hidden; /* Ensure nothing overflows from the flexbox */
   gap: 20px; /* Spacing between the card and image */
+  justify-content: space-evenly;
   
 }
 .homebtn{
