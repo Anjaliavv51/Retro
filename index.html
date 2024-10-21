@@ -844,6 +844,45 @@ new google.translate.TranslateElement({
 
         </ul>
 
+        <style>
+            .section-meals {
+    padding: 20px; 
+}
+
+.meals-showcase {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center; 
+    gap: 20px;
+}
+
+.meal-photo {
+    padding: 10px; 
+    border-radius: 15px; 
+    overflow: hidden; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    background-color: transparent; 
+}
+
+.meal-photo img {
+    padding: 10px;
+    width: 100%; 
+    height: auto; 
+    border-radius: 15px; 
+    transition: border-radius 0.3s ease; 
+}
+
+.meal-photo:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 4px 15px transparent; 
+}
+
+.meal-photo:hover img {
+    border-radius: 20px; 
+}
+
+        </style>
+
 
               <!---------------------------------------------------- FAQ -->
                    
