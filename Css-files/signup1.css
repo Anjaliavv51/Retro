@@ -28,6 +28,10 @@ body {
 
 .main-login {
   display: flex;
+  .form-check{
+    /* justify-self: center; */
+    align-self: flex-start;
+  }
   justify-content: center;
   align-items: center;
   width: 100%;

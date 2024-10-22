@@ -16,7 +16,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem; /* Add spacing between sections */
+  /* gap: 0.2rem;  */
+  /* Add spacing between sections */
 }
 
 .left-login {

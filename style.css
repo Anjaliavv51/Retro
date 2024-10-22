@@ -1,6 +1,8 @@
 * {
   margin: 0px;
   padding: 0px;
+  box-sizing: border-box;
+  /* transition: 0.5s; */
 }
 
 .poppins-light {
@@ -9,14 +11,125 @@
   font-style: normal;
 }
 
+/* */
+input{
+  display: none;
+}
+.display{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* transition: 0.5s; */
+  /* background: white; */
+}
+label{
+  width: 50px;
+  height: 24px;
+  border-radius: 999px;
+  background: #f0a2a2;
+  box-shadow: 10px 10px 30px rgba(241, 102, 158, 0.916) inset;
+  cursor: pointer;
+  position: relative;
+  /* transition: 0.5s; */
+}
+.circle_mode{
+  border: solid 1px rgb(249, 246, 246);
+  width: 20px;
+  height: 20px;
+  border-radius: 99px;
+  background: white;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.05),
+  -20px -20px 30px rgba(0, 0, 0, 0.05) inset;
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translate(10%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: 0.5s;
+}
+.circle_mode svg{
+  width: 20px;
+  position: absolute;
+}
+.sun{
+  color: #FFD600;
+  margin-top: 0%;
+  opacity: 1;
+}
+.moon{
+  margin-top: -150%;
+  color: white;
+  opacity: 0;
+}
+
+
+/* input[type=checkbox]:checked + .display{
+  background: black;
+} */
+input[type=checkbox]:checked + .display label{
+  background: #70000f;
+  box-shadow: 10px 10px 30px rgba(233, 117, 130, 0.957) inset;
+}
+input[type=checkbox]:checked + .display label .circle_mode{
+  border: solid 1px rgb(12, 12, 12);
+  left:100%;
+  transform: translate(-110%, -50%);
+  /* background: #2C2C2F; */
+  background: #c14e5ee8;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5),
+  -10px -10px 30px rgba(0, 0, 0, 0.5) inset;
+}
+input[type=checkbox]:checked + .display label .circle_mode .sun{
+  margin-top: 150%;
+  opacity: 0;
+}
+input[type=checkbox]:checked + .display label .circle_mode .moon{
+  margin-top: 0%;
+  opacity: 1;
+}
+label:active .circle_mode{
+  width: 50px;
+}
+/* */
 
 body {
   background-color: black;
 }
 
 .form-check{
-  margin-right:1rem ;
+  /* margin: 0 0 0 0;
+  padding: 0 0 0 0; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 0 10px;
+  margin-right:2rem ;
+
+  background-color: #f8f9fa;
+  /* color: black; */
+  border: none;
+  border-radius: 5px;
+  padding: 6px 10px;
+  transition: background-color 0.3s, color 0.3s;
 }
+
+/* #darkModeToggle {
+  display: flex;
+  align-items: center;
+  background-color: #f8f9fa;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 12px;
+  transition: background-color 0.3s, color 0.3s;
+} */
+
+
 .black{
   color: black;
 }
