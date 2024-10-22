@@ -999,7 +999,14 @@ padding-left:2px;
   overflow: hidden;
   position: relative;
   white-space: nowrap;
-  background-color: rgb(255, 255, 255);
+}
+
+.light-mode #marque {
+    background-color: rgb(255, 255, 255);
+}
+
+.dark-mode #marque {
+    background-color: #343a40;
 }
 
 #marque h1 {
