@@ -115,6 +115,10 @@ body {
   padding: 100px 0px 100px 0px;
 }
 
+.dark-mode .about_us{
+  background-color: rgb(178, 44, 94);
+}
+
 #about {
   /* margin: 34px; */
   display: flex;
@@ -158,6 +162,9 @@ body {
   color: brown;
 }
 
+.dark-mode .h-primary{
+  color: #fff;
+}
 .h-secondary {
   font-family: "Bree Serif", serif;
   font-size: 1.5rem;
