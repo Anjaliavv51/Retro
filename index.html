@@ -601,8 +601,8 @@ document.body.classList.add('light-mode');
             <div class="popup-left">
                 <img src="Images/popup.jpg" alt="Retro Vintage Charm">
             </div>
-            <a href="#" class="no-thanks popuplogo" style="font-family: var(--ff-philosopher); color: black;"><b>Retro</b></a>
-            <div class="popup-right">
+            <a href="#" class="no-thanks popuplogo" style="font-family: var(--ff-philosopher); color: black;"><b>Retro</b></a> 
+            <div class="popup-right"> 
                 <h1>Discover the Past!</h1>
                 <p id="h2">Sign Up for Exclusive Vintage Deals</p>
                 <p>Get a <strong>30% off</strong> on your first order when you join our Retro family.</p>
@@ -615,6 +615,207 @@ document.body.classList.add('light-mode');
             </div>
         </div>
     </div>
+    
+    
+    <style>
+        /* General popup styling */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    visibility: visible;
+}
+
+.popup-content {
+    display: flex;
+    background-color: #fff;
+    max-width: 800px;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Left image section */
+.popup-left img {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    border-radius: 10px;  /* Smooth corners */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);  /* Soft shadow for depth */
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+.popup-left img:hover {
+    transform: scale(1.05) rotate(1deg);  /* Slight zoom and rotation for interactivity */
+    filter: brightness(1.1);  /* Increase brightness for a more vibrant look */
+}
+
+/* Optional: Adding a subtle border */
+.popup-left img {
+    border: 3px solid #ff6f61;  /* Colorful border to match the Retro theme */
+}
+
+/* Right content section */
+.popup-right {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #f4f4f4;
+    width: 60%;
+}
+
+/* Header styling */
+.popup-right h1 {
+    font-family: 'Philosopher', sans-serif;
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Subheader (Offer Text) */
+#h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #666;
+}
+
+/* Paragraph and terms styling */
+.popup-right p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.popup-right .terms {
+    font-size: 12px;
+    color: #888;
+}
+
+/* Logo (Retro) */
+.popuplogo {
+    display: inline-block;  /* Allows for padding and margins */
+    font-family: 'Philosopher', sans-serif;  /* Consistent font */
+    font-size: 28px;  /* Increased font size for prominence */
+    color: #ff6f61;  /* Bright color to attract attention */
+    text-align: center;  /* Centered text */
+    text-transform: uppercase;  /* Uppercase letters for emphasis */
+    letter-spacing: 2px;  /* Slight spacing for readability */
+    margin-bottom: 20px;  /* Space below the link */
+    transition: color 0.3s ease, transform 0.3s ease;  /* Smooth transition for hover effects */
+    position: relative;
+}
+
+.popuplogo:hover {
+    color: #ff4f3a;  /* Darker shade on hover */
+    transform: scale(1.05);  /* Slight zoom on hover for interactivity */
+}
+
+/* Underline effect */
+.popuplogo::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;  /* Thickness of the underline */
+    background-color: #ff6f61;  /* Color of the underline */
+    position: absolute;
+    bottom: -5px;  /* Position below the text */
+    left: 0;
+    transform: scaleX(0);  /* Initial scale for animation */
+    transition: transform 0.3s ease;  /* Smooth animation for hover */
+}
+
+.popuplogo:hover::after {
+    transform: scaleX(1);  /* Expand underline on hover */
+}
+
+/* Input field styling */
+#popup-email {
+    width: 100%;
+    padding: 14px 20px;
+    border: 2px solid #ddd;  /* Light border */
+    border-radius: 30px;  /* Rounded corners for modern look */
+    font-size: 16px;
+    font-family: 'Philosopher', sans-serif;
+    color: #333;
+    background-color: #fafafa;  /* Light background for clarity */
+    outline: none;
+    transition: all 0.3s ease;  /* Smooth transition for hover/focus */
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+#popup-email:focus {
+    border-color: #ff6f61;  /* Change border color on focus */
+    box-shadow: 0 0 8px rgba(255, 111, 97, 0.5);  /* Glow effect on focus */
+}
+
+/* Placeholder styling */
+#popup-email::placeholder {
+    color: #999;  /* Subtle placeholder color */
+    font-style: italic;
+}
+
+/* Signup button */
+.signup-btn {
+    width: 100%;
+    padding: 14px 0;
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    border-radius: 30px;  /* Matches input field's rounded design */
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.signup-btn:hover {
+    background-color: #ff4f3a;}
+
+/* Close link styling */
+.close-btn {
+    font-size: 14px;
+    color: #777;
+    text-decoration: underline;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #555;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .popup-content {
+        flex-direction: column;
+    }
+
+    .popup-left img {
+        width: 100%;
+    }
+
+    .popup-right {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .popup-right h1 {
+        font-size: 28px;
+    }
+
+    .signup-btn {
+        font-size: 16px;
+    }
+}
+
+    </style>
 
     <!-- Registration Pop up HTML ends here -->
 
