@@ -964,10 +964,12 @@ new google.translate.TranslateElement({
                     background: #fff; /* Background for each FAQ item */
                     transition: background 0.3s ease; /* Smooth background transition */
                     position: relative; /* Position relative for arrow */
+                    transition: transform 0.3s ease;
                 }
             
                 .faq-item:hover {
                     background: #f1f1f1; /* Background color on hover */
+                    transform: scale(1.05);
                 }
             
                 .faq-question {
@@ -1024,7 +1026,7 @@ new google.translate.TranslateElement({
                             </svg>
                         </span>
                     </div>
-                    <div class="faq-answer">Our return policy lasts 30 days...</div>
+                    <div class="faq-answer">Our return policy lasts 30 days.</div>
                 </div>
                 <div class="faq-item" style="background-color: #f5c0bb;">
                     <div class="faq-question">
@@ -1035,7 +1037,7 @@ new google.translate.TranslateElement({
                             </svg>
                         </span>
                     </div>
-                    <div class="faq-answer">You can track your order using the tracking number...</div>
+                    <div class="faq-answer">You can track your order using the tracking number.</div>
                 </div>
                 <div class="faq-item" style="background-color: #f5dddb;">
                     <div class="faq-question">
