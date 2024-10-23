@@ -175,7 +175,96 @@ body {
   background-color: #b8938f; /* Darker Google color on hover */
 }
 
-/* Accessibility: Adding focus styles for inputs and buttons */
+
+
+.btn-login,   
+#facbook-login {
+  width: 100%;
+  height: 45px;
+  border-radius: 15px;
+  border: none;
+  margin: 10px;   /*Margin added so that they do not overlap*/
+  background-color:#aa6a6a;;
+  color: rgb(190, 135, 135);
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions for hover and active states */
+}
+
+
+
+
+.btn-login:hover,
+#facbook-login:hover {
+  background-color: #ac7070; /* Darker shade on hover */
+  transform: translateY(-3px); /* Lift effect on hover */
+}
+
+.btn-login:active,
+#facbook-login:active {
+  transform: translateY(1px); /* Slight press effect */
+}
+
+#facbook-login {
+  background-color: #3b5998;/* Google red color */
+
+}
+
+#facbook-login:hover {
+  background-color: #3b5998; /* Darker Google color on hover */
+}
+
+#facbook-login a{
+     text-decoration: none;
+     color: #fff;
+   
+}
+
+
+
+
+.btn-login,   
+#x-login {
+  width: 100%;
+  height: 45px;
+  border-radius: 15px;
+  border: none;
+  margin: 10px;   /*Margin added so that they do not overlap*/
+  background-color:#aa6a6a;;
+  color: rgb(190, 135, 135);
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions for hover and active states */
+}
+
+
+
+
+.btn-login:hover,
+#x-login:hover {
+  background-color: #ac7070; /* Darker shade on hover */
+  transform: translateY(-3px); /* Lift effect on hover */
+}
+
+.btn-login:active,
+#x-login:active {
+  transform: translateY(1px); /* Slight press effect */
+}
+
+#x-login {
+  background-color:#000000;/* Google red color */
+}
+
+#x-login:hover {
+  background-color: 	#141313; /* Darker Google color on hover */
+}
+
+#x-login a{
+     text-decoration: none;
+     color: #fff;
+   
+}
+/* Accessibility: Adding focus styles for inputs and buttons */ 
 .textfield > input:focus {
   outline: 2px solid #a45b5b; /* Red outline for focused input */
 }
