@@ -1,0 +1,1186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro</title>
+
+    <link rel="stylesheet" href="/Css-files/navbarstyles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="shortcut icon" type="image/x-icon" href="../Favicon image/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fuggles&family=Mooli&family=Oswald:wght@600&family=Roboto:wght@100;300&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Bree+Serif&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../Css-files/content.css">
+    <style>
+        /* Initial styling for the image */
+        .menu {
+            transition: transform 0.3s ease;
+            /* Smooth transition for the zoom effect */
+        }
+
+        /* Zoom effect on hover */
+        .menu:hover {
+            transform: scale(1.1);
+            /* Scale the image to 110% of its original size */
+        }
+
+
+        @media (max-width: 768px) {
+            .items {
+                width: 100%;
+                max-width: 400px;
+            }
+
+            .mainhead h1 {
+                font-size: 30px;
+            }
+
+            .menu_items {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+            }
+
+            .foot-panel2 {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .foot_panel4 {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    </style>
+    <style>
+        body {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpath fill='%23ffb9b0' d='M486 705.8c-109.3-21.8-223.4-32.2-335.3-19.4C99.5 692.1 49 703 0 719.8V800h843.8c-115.9-33.2-230.8-68.1-347.6-92.2C492.8 707.1 489.4 706.5 486 705.8z'/%3E%3Cpath fill='%23ffc1b7' d='M1600 0H0v719.8c49-16.8 99.5-27.8 150.7-33.5c111.9-12.7 226-2.4 335.3 19.4c3.4 0.7 6.8 1.4 10.2 2c116.8 24 231.7 59 347.6 92.2H1600V0z'/%3E%3Cpath fill='%23ffc8bf' d='M478.4 581c3.2 0.8 6.4 1.7 9.5 2.5c196.2 52.5 388.7 133.5 593.5 176.6c174.2 36.6 349.5 29.2 518.6-10.2V0H0v574.9c52.3-17.6 106.5-27.7 161.1-30.9C268.4 537.4 375.7 554.2 478.4 581z'/%3E%3Cpath fill='%23ffcfc6' d='M0 0v429.4c55.6-18.4 113.5-27.3 171.4-27.7c102.8-0.8 203.2 22.7 299.3 54.5c3 1 5.9 2 8.9 3c183.6 62 365.7 146.1 562.4 192.1c186.7 43.7 376.3 34.4 557.9-12.6V0H0z'/%3E%3Cpath fill='%23FFD6CE' d='M181.8 259.4c98.2 6 191.9 35.2 281.3 72.1c2.8 1.1 5.5 2.3 8.3 3.4c171 71.6 342.7 158.5 531.3 207.7c198.8 51.8 403.4 40.8 597.3-14.8V0H0v283.2C59 263.6 120.6 255.7 181.8 259.4z'/%3E%3Cpath fill='%23ffdcd4' d='M1600 0H0v136.3c62.3-20.9 127.7-27.5 192.2-19.2c93.6 12.1 180.5 47.7 263.3 89.6c2.6 1.3 5.1 2.6 7.7 3.9c158.4 81.1 319.7 170.9 500.3 223.2c210.5 61 430.8 49 636.6-16.6V0z'/%3E%3Cpath fill='%23ffe1d9' d='M454.9 86.3C600.7 177 751.6 269.3 924.1 325c208.6 67.4 431.3 60.8 637.9-5.3c12.8-4.1 25.4-8.4 38.1-12.9V0H288.1c56 21.3 108.7 50.6 159.7 82C450.2 83.4 452.5 84.9 454.9 86.3z'/%3E%3Cpath fill='%23ffe6df' d='M1600 0H498c118.1 85.8 243.5 164.5 386.8 216.2c191.8 69.2 400 74.7 595 21.1c40.8-11.2 81.1-25.2 120.3-41.7V0z'/%3E%3Cpath fill='%23ffebe4' d='M1397.5 154.8c47.2-10.6 93.6-25.3 138.6-43.8c21.7-8.9 43-18.8 63.9-29.5V0H643.4c62.9 41.7 129.7 78.2 202.1 107.4C1020.4 178.1 1214.2 196.1 1397.5 154.8z'/%3E%3Cpath fill='%23FFF0EA' d='M1315.3 72.4c75.3-12.6 148.9-37.1 216.8-72.4h-723C966.8 71 1144.7 101 1315.3 72.4z'/%3E%3C/g%3E%3C/svg%3E");
+            background-size: cover;
+        }
+
+        :root {
+            --ff-philosopher: "Philosopher", sans-serif;
+            --ff-poppins: "Poppins", sans-serif;
+        }
+
+        img {
+            border-radius: 10px;
+        }
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        #sr {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            background-color: transparent;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 4px;
+        }
+
+        #sr:hover {
+            background-color: transparent;
+            color: black;
+            border-radius: 100px;
+        }
+
+        .circle {
+            z-index: 10000;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            pointer-events: none;
+            animation: colors 3s infinite;
+            position: fixed;
+            transform: translate(-50%, -50%);
+            border-color: black;
+            border-width: 10px;
+        }
+
+        .circle::before {
+            content: "";
+            position: fixed;
+            width: 50px;
+            height: 50px;
+            opacity: 0.2;
+            transform: translate(-30%, -30%);
+            border-radius: 50%;
+        }
+
+        /*Scrollbar*/
+        ::-webkit-scrollbar {
+            width: 10px;
+            /* Width of the scrollbar */
+        }
+
+        ::-webkit-scrollbar-track {
+            background-color: #feaea5;
+            /* Color of the track */
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            background: linear-gradient(to bottom,
+                    hsl(357, 37%, 62%),
+                    hsl(304, 14%, 46%));
+            border-radius: 6px;
+            /* Rounded corners of the thumb */
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgb(172, 38, 94);
+            /* Color of the thumb on hover */
+        }
+
+        * {
+            scrollbar-width: thick;
+            /* Width of the scrollbar */
+        }
+
+        ::-webkit-scrollbar-button {
+            display: none;
+        }
+    </style>
+    <style>
+        /*Preloader CSS*/
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: hsl(20, 43%, 93%);
+            /* Light background color */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 2s ease-out, visibility 2s ease-out;
+            opacity: 1;
+            visibility: visible;
+            z-index: 9999;
+        }
+
+
+        /* When hidden, preloader transitions out */
+        #preloader.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        #loader {
+            display: block;
+            position: relative;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid transparent;
+            border-top-color: hsl(304, 14%, 46%);
+            animation: spin 3s linear infinite;
+        }
+
+        #loader:before {
+            content: "";
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            right: 5px;
+            bottom: 5px;
+            border-radius: 50%;
+            border: 3px solid transparent;
+            border-top-color: hsl(357, 37%, 62%);
+            animation: spin 3s linear infinite;
+        }
+
+        #loader:after {
+            content: "";
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            right: 15px;
+            bottom: 15px;
+            border-radius: 50%;
+            border: 3px solid transparent;
+            border-top-color: hsl(357, 93%, 84%);
+            animation: spin 1.5s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .social-icons a {
+            font-size: 1.2rem;
+            padding: 8px;
+            margin: 15px;
+            text-decoration: none;
+            color: brown !important;
+        }
+
+        .social-icons a:hover {
+            color: brown;
+            background-color: hsl(22, 76%, 85%);
+            border-radius: 10px;
+            transform: scale(1.5);
+            /* Increase size */
+            transition: transform 0.3s ease;
+            /* Smooth transition effect */
+        }
+
+        .fa-brands.fa-facebook:hover {
+            color: #3B5998 !important;
+        }
+
+        .fa-brands.fa-instagram:hover {
+            color: #D62976 !important;
+        }
+
+        .fa-brands.fa-x-twitter:hover {
+            color: #181e20 !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="circle-container">
+        <div class="circle" style="background-color: rgb(255, 181, 107); left: 504px; top: 59px; scale: 1;"></div>
+        <div class="circle" style="background-color: rgb(253, 175, 105); left: 504px; top: 59px; scale: 0.95;"></div>
+        <div class="circle" style="background-color: rgb(248, 157, 99); left: 504px; top: 59px; scale: 0.9;"></div>
+        <div class="circle" style="background-color: rgb(245, 151, 97); left: 504px; top: 59px; scale: 0.85;"></div>
+        <div class="circle" style="background-color: rgb(239, 134, 94); left: 504px; top: 59px; scale: 0.8;"></div>
+        <div class="circle" style="background-color: rgb(236, 128, 93); left: 504px; top: 59px; scale: 0.75;"></div>
+        <div class="circle" style="background-color: rgb(227, 110, 92); left: 504px; top: 59px; scale: 0.7;"></div>
+        <div class="circle" style="background-color: rgb(223, 104, 92); left: 504px; top: 59px; scale: 0.65;"></div>
+        <div class="circle" style="background-color: rgb(213, 88, 92); left: 504px; top: 59px; scale: 0.6;"></div>
+        <div class="circle" style="background-color: rgb(209, 82, 92); left: 504px; top: 59px; scale: 0.55;"></div>
+        <div class="circle" style="background-color: rgb(197, 65, 93); left: 504px; top: 59px; scale: 0.5;"></div>
+        <div class="circle" style="background-color: rgb(192, 59, 93); left: 504px; top: 59px; scale: 0.45;"></div>
+        <div class="circle" style="background-color: rgb(178, 44, 94); left: 504px; top: 59px; scale: 0.4;"></div>
+        <div class="circle" style="background-color: rgb(172, 38, 94); left: 504px; top: 59px; scale: 0.35;"></div>
+        <div class="circle" style="background-color: rgb(156, 21, 95); left: 504px; top: 59px; scale: 0.3;"></div>
+        <div class="circle" style="background-color: rgb(149, 15, 95); left: 504px; top: 59px; scale: 0.25;"></div>
+        <div class="circle" style="background-color: rgb(131, 0, 96); left: 504px; top: 59px; scale: 0.2;"></div>
+        <div class="circle" style="background-color: rgb(124, 0, 96); left: 504px; top: 59px; scale: 0.15;"></div>
+        <div class="circle" style="background-color: rgb(104, 0, 96); left: 504px; top: 59px; scale: 0.1;"></div>
+        <div class="circle" style="background-color: rgb(96, 0, 95); left: 504px; top: 59px; scale: 0.05;"></div>
+    </div>
+    <div id="preloader">
+        <div id="loader"></div>
+    </div>
+    <div class="head_container" style="background-color: hsl(20, 43%, 93%);">
+        <header>
+
+            <nav class="navbar navbar-expand-lg fixed-top" id="top">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="../index.html" style="font-family: var(--ff-philosopher); color: black;">
+                        <b>Retro</b>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                        aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="header-items">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../index.html" style="color: black;">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html" style="color: black;">About Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" style="color: black;">Collections</a>
+                            <li class="nav-item">
+                                <a class="nav-link" href="services.html" style="color: black;">Services</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html" style="color: black;">Contact us</a>
+                            </li>
+                            <li class="nav-item" style="list-style-type: none;">
+                                <a class="nav-link" href="cart.html" style="color: black;">
+                                    <i class="fa-solid fa-cart-shopping"></i><span class="badge-count" id="badgeCount"></span>
+                                </a>
+                            </li>
+
+                        </ul>
+<!--                        <div class="nav-right ms-auto">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="login.html" style="color: black;">Login</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="signup.html" style="color: black;">Signup</a>
+                                </li>
+                            </ul>
+-->
+                        </div>
+                    </div>
+                </div>
+
+            </nav>
+        </header>
+    </div>
+
+<br><br><br><br>
+        <div class="mainhead">
+            <h1 style="font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%);">O U R &nbsp; C O L L E C T I O N
+            </h1>
+            <h1 style="font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%);">
+                <!--a href="https://rawcdn.githack.com/Anjaliavv51/Vintage-Retro-Books/294e5203b6a5b02ad6b135148d684ea993c4f5a5/index.html" 
+                style="color: black;" target="_blank"><button class="butt" style="font-family:var(--ff-philosopher);">
+                    Explore Our Vintage Books Now>></button></a-->
+            </h1>
+        </div>
+    </div>
+
+    <section class="menu_container">
+
+        <h2 style="font-family: var(--ff-philosopher);">Entertainment</h2>
+        <div class="menu_items">
+            <div class="items">
+                <div class="added-to-cart js-added-to-cart" data-product-id="1.01">
+                    <img src="../Favicon image/check-mark.png" class="check-mark">
+                    <div style="margin-top: -3px; margin-left: 3px;">Added to cart</div>
+                </div>
+                <img src="https://i.pinimg.com/564x/59/aa/2e/59aa2edd369e1017039372ad860cfb8b.jpg" class="menu"
+                    id="menu1">
+
+                <h3 style="font-family: var(--ff-philosopher);">Phonograph</h3>
+                <p style="font-family: Garamond;">$10.20</p>
+                <button class="butt add-to-cart-button" data-product-id="1.01" data-product-name="Phonograph"
+                    data-product-price="10.20" style="font-family:var(--ff-philosopher);">Order Now</button>
+
+                <div class="star-rating">
+                    <button class="star-button" onclick="rateItem(this, 1)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 2)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 3)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 4)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 5)"><i class="fas fa-star"></i></button>
+                </div>
+            </div>
+            <div class="items">
+                <div class="added-to-cart js-added-to-cart" data-product-id="1.02">
+                    <img src="../Favicon image/check-mark.png" class="check-mark">
+                    <div style="margin-top: -3px; margin-left: 3px;">Added to cart</div>
+                </div>
+                <img src="https://i.pinimg.com/736x/11/c1/c5/11c1c5ba22a14271bef63012dcaa0631.jpg" class="menu"
+                    id="menu2">
+                <h3 style="font-family: var(--ff-philosopher);">Radio</h3>
+                <p style="font-family: Garamond;">$10.20</p>
+                <button class="butt add-to-cart-button" data-product-id="1.02" data-product-name="Radio"
+                    data-product-price="10.20" style="font-family:var(--ff-philosopher);">Order Now</button>
+                <div class="star-rating">
+                    <button class="star-button" onclick="rateItem(this, 1)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 2)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 3)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 4)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 5)"><i class="fas fa-star"></i></button>
+                </div>
+
+            </div>
+            <div class="items">
+                <div class="added-to-cart js-added-to-cart" data-product-id="1.03">
+                    <img src="../Favicon image/check-mark.png" class="check-mark">
+                    <div style="margin-top: -3px; margin-left: 3px;">Added to cart</div>
+                </div>
+                <img src="https://i.pinimg.com/564x/18/b4/41/18b441458ac78e10345b720d9af453ef.jpg" class="menu"
+                    id="menu3">
+                <h3 style="font-family: var(--ff-philosopher);">Television</h3>
+                <p style="font-family: Garamond;">$10.20</p>
+                <button class="butt add-to-cart-button" data-product-id="1.03" data-product-name="Television"
+                    data-product-price="10.20" style="font-family: var(--ff-philosopher);">Order Now</button>
+                <div class="star-rating">
+                    <button class="star-button" onclick="rateItem(this, 1)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 2)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 3)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 4)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 5)"><i class="fas fa-star"></i></button>
+                </div>
+            </div>
+            <div class="items">
+                <div class="added-to-cart js-added-to-cart" data-product-id="1.04">
+                    <img src="../Favicon image/check-mark.png" class="check-mark">
+                    <div style="margin-top: -3px; margin-left: 3px;">Added to cart</div>
+                </div>
+                <img src="https://i.pinimg.com/564x/1f/58/7f/1f587fe0533c8b4671fa29685fcaa9c2.jpg" class="menu"
+                    id="menu4">
+                <h3 style="font-family: var(--ff-philosopher);">Movie Screen Carpet</h3>
+                <p style="font-family: Garamond;">$10.20</p>
+                <button class="butt add-to-cart-button" data-product-id="1.04" data-product-name="Movie Screen Carpet"
+                    data-product-price="10.20" style="font-family: var(--ff-philosopher);">Order Now</button>
+                <div class="star-rating">
+                    <button class="star-button" onclick="rateItem(this, 1)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 2)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 3)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 4)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 5)"><i class="fas fa-star"></i></button>
+                </div>
+            </div>
+
+        </div>
+        <div class="menu_items">
+            <div class="items">
+                <div class="added-to-cart js-added-to-cart" data-product-id="1.05">
+                    <img src="../Favicon image/check-mark.png" class="check-mark">
+                    <div style="margin-top: -3px; margin-left: 3px;">Added to cart</div>
+                </div>
+                <img src="https://i.pinimg.com/564x/33/10/f4/3310f46d5d8b689d844d11fc308a84f5.jpg" class="menu"
+                    id="menu5">
+                <h3 style="font-family: var(--ff-philosopher);">Toys</h3>
+                <p style="font-family: Garamond;">$10.20</p>
+                <button class="butt add-to-cart-button" data-product-id="1.05" data-product-name="Toys"
+                    data-product-price="10.20" style="font-family: var(--ff-philosopher);">Order Now</button>
+                <div class="star-rating">
+                    <button class="star-button" onclick="rateItem(this, 1)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 2)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 3)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 4)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 5)"><i class="fas fa-star"></i></button>
+                </div>
+            </div>
+            <div class="items">
+                <div class="added-to-cart js-added-to-cart" data-product-id="1.06">
+                    <img src="../Favicon image/check-mark.png" class="check-mark">
+                    <div style="margin-top: -3px; margin-left: 3px;">Added to cart</div>
+                </div>
+                <img src="https://i.pinimg.com/564x/b8/ba/6f/b8ba6fce89bff7963fa9e10d86062a29.jpg" class="menu"
+                    id="menu6">
+                <h3 style="font-family: var(--ff-philosopher);">Puppet Show</h3>
+                <p style="font-family: Garamond;">$10.20</p>
+                <button class="butt add-to-cart-button" data-product-id="1.06" data-product-name="Puppet Show"
+                    data-product-price="10.20" style="font-family: var(--ff-philosopher);">Order Now</button>
+                <div class="star-rating">
+                    <button class="star-button" onclick="rateItem(this, 1)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 2)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 3)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 4)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 5)"><i class="fas fa-star"></i></button>
+                </div>
+            </div>
+            <div class="items">
+                <div class="added-to-cart js-added-to-cart" data-product-id="1.07">
+                    <img src="../Favicon image/check-mark.png" class="check-mark">
+                    <div style="margin-top: -3px; margin-left: 3px;">Added to cart</div>
+                </div>
+                <img src="https://i.pinimg.com/564x/56/5e/b4/565eb4a4263d6020ed2133b8a4b14991.jpg" class="menu"
+                    id="menu7">
+                <h3 style="font-family: var(--ff-philosopher);">Marbles</h3>
+                <p style="font-family: Garamond;">$10.20</p>
+                <button class="butt add-to-cart-button" data-product-id="1.07" data-product-name="Marbles"
+                    data-product-price="10.20" style="font-family: var(--ff-philosopher);">Order Now</button>
+                <div class="star-rating">
+                    <button class="star-button" onclick="rateItem(this, 1)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 2)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 3)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 4)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 5)"><i class="fas fa-star"></i></button>
+                </div>
+            </div>
+            <div class="items">
+                <div class="added-to-cart js-added-to-cart" data-product-id="1.08">
+                    <img src="../Favicon image/check-mark.png" class="check-mark">
+                    <div style="margin-top: -3px; margin-left: 3px;">Added to cart</div>
+                </div>
+                <img src="https://i.pinimg.com/564x/29/cb/76/29cb764ce3d9b2407a3dfa41c8b3ceeb.jpg" class="menu"
+                    id="menu8">
+                <h3 style="font-family: var(--ff-philosopher);">Drinks</h3>
+                <p style="font-family: Garamond;">$10.20</p>
+                <button class="butt add-to-cart-button" data-product-id="1.08" data-product-name="Drinks"
+                    data-product-price="10.20" style="font-family: var(--ff-philosopher);">Order Now</button>
+                <div class="star-rating">
+                    <button class="star-button" onclick="rateItem(this, 1)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 2)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 3)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 4)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 5)"><i class="fas fa-star"></i></button>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+    <section class="menu_container">
+        <a href="Electronic.html" style="color: black;"><button class="butt"
+                style="font-family:var(--ff-philosopher);">Latest Vintage Electronics Explore Now>></button></a>
+        <br><br><br><br><br>
+        <h2 style="font-family: var(--ff-philosopher);">Gadgets</h2>
+        <div class="menu_items">
+            <div class="items">
+                <div class="added-to-cart js-added-to-cart" data-product-id="2.01">
+                    <img src="../Favicon image/check-mark.png" class="check-mark">
+                    <div style="margin-top: -3px; margin-left: 3px;">Added to cart</div>
+
+                </div>
+                <img src="https://i0.wp.com/www.printmag.com/wp-content/uploads/2011/11/2a34d8_8fd22c546762416496eb8ab0c88c3db4mv2.jpg"
+                    class="menu" id="menu16">
+
+                <h3 style="font-family: var(--ff-philosopher);">Telephone</h3>
+                <p style="font-family: Garamond;">$5.10</p>
+                <button class="butt add-to-cart-button" data-product-id="2.01" data-product-name="Telephone"
+                    data-product-price="5.10" style="font-family: var(--ff-philosopher);">Order Now</button>
+                <div class="star-rating">
+                    <button class="star-button" onclick="rateItem(this, 1)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 2)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 3)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 4)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 5)"><i class="fas fa-star"></i></button>
+                </div>
+            </div>
+            <div class="items">
+                <div class="added-to-cart js-added-to-cart" data-product-id="2.02">
+                    <img src="../Favicon image/check-mark.png" class="check-mark">
+                    <div style="margin-top: -3px; margin-left: 3px;">Added to cart</div>
+                </div>
+                <img src="https://i.pinimg.com/564x/22/dd/23/22dd2351b72eb11a7d5b040caa484188.jpg" class="menu"
+                    id="menu9">
+                <h3 style="font-family: var(--ff-philosopher);">Pager</h3>
+                <p style="font-family: Garamond;">$5.10</p>
+                <button class="butt add-to-cart-button" data-product-id="2.02" data-product-name="Pager"
+                    data-product-price="5.10" style="font-family: var(--ff-philosopher);">Order Now</button>
+                <div class="star-rating">
+                    <button class="star-button" onclick="rateItem(this, 1)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 2)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 3)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 4)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 5)"><i class="fas fa-star"></i></button>
+                </div>
+            </div>
+            <div class="items">
+                <div class="added-to-cart js-added-to-cart" data-product-id="Snacks">
+                    <img src="../Favicon image/check-mark.png" class="check-mark">
+                    <div style="margin-top: -3px; margin-left: 3px;">Added to cart</div>
+                </div>
+                <img src="https://i.pinimg.com/564x/0a/5f/a2/0a5fa201b0cdfd24323b07d9423b53ed.jpg" class="menu"
+                    id="menu10">
+                <h3 style="font-family:var(--ff-philosopher);">Camera</h3>
+                <p style="font-family: Garamond;">$5.10</p>
+                <button class="butt add-to-cart-button" data-product-id="Snacks" data-product-name="Camera"
+                    data-product-price="5.10" style="font-family: var(--ff-philosopher);">Order Now</button>
+                <div class="star-rating">
+                    <button class="star-button" onclick="rateItem(this, 1)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 2)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 3)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 4)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 5)"><i class="fas fa-star"></i></button>
+                </div>
+            </div>
+            <div class="items">
+                <div class="added-to-cart js-added-to-cart" data-product-id="2.04">
+                    <img src="../Favicon image/check-mark.png" class="check-mark">
+                    <div style="margin-top: -3px; margin-left: 3px;">Added to cart</div>
+                </div>
+                <img src="https://i.pinimg.com/564x/51/1b/f5/511bf5dad0334204d182a0828850ca35.jpg" class="menu"
+                    id="menu11">
+                <h3 style="font-family: var(--ff-philosopher);">Type Writer</h3>
+                <p style="font-family: Garamond;">$5.10</p>
+                <button class="butt add-to-cart-button" data-product-id="2.04" data-product-name="Type Writer"
+                    style="font-family: Garamond;" data-product-price="5.10"
+                    style="font-family: var(--ff-philosopher);">Order Now</button>
+                <div class="star-rating">
+                    <button class="star-button" onclick="rateItem(this, 1)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 2)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 3)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 4)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 5)"><i class="fas fa-star"></i></button>
+                </div>
+            </div>
+    </section>
+
+    <section class="menu_container">
+        <h2>Weapons & Transport</h2>
+        <div class="menu_items">
+            <div class="items">
+                <div class="added-to-cart js-added-to-cart" data-product-id="3.01">
+                    <img src="../Favicon image/check-mark.png" class="check-mark">
+                    <div style="margin-top: -3px; margin-left: 3px;">Added to cart</div>
+                </div>
+                <img src="https://i.pinimg.com/564x/ca/83/ef/ca83ef07ebddf2e5b4a6210575342737.jpg" class="menu"
+                    id="menu12">
+                <h3 style="font-family: var(--ff-philosopher);">Cross Bow</h3>
+                <p style="font-family: Garamond;">$15.80</p>
+                <button class="butt add-to-cart-button" data-product-id="3.01" data-product-name="Cross Bow"
+                    data-product-price="15.80" style="font-family:var(--ff-philosopher);">Order Now</button>
+                <div class="star-rating">
+                    <button class="star-button" onclick="rateItem(this, 1)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 2)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 3)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 4)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 5)"><i class="fas fa-star"></i></button>
+                </div>
+            </div>
+            <div class="items">
+                <div class="added-to-cart js-added-to-cart" data-product-id="3.02">
+                    <img src="../Favicon image/check-mark.png" class="check-mark">
+                    <div style="margin-top: -3px; margin-left: 3px;">Added to cart</div>
+                </div>
+                <img src="https://i.pinimg.com/564x/ec/27/3a/ec273a4e8ea84196a1bc4f3e5e0a8527.jpg" class="menu"
+                    id="menu13">
+                <h3 style="font-family: var(--ff-philosopher);">Catapult</h3>
+                <p style="font-family: Garamond;">$15.80</p>
+                <button class="butt add-to-cart-button" data-product-id="3.02" data-product-name="Catapult"
+                    style="font-family: var(--ff-philosopher);" data-product-price="15.80">Order Now</button>
+                <div class="star-rating">
+                    <button class="star-button" onclick="rateItem(this, 1)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 2)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 3)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 4)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 5)"><i class="fas fa-star"></i></button>
+                </div>
+            </div>
+            <div class="items">
+                <div class="added-to-cart js-added-to-cart" data-product-id="3.03">
+                    <img src="../Favicon image/check-mark.png" class="check-mark">
+                    <div style="margin-top: -3px; margin-left: 3px;">Added to cart</div>
+                </div>
+                <img src="https://i.pinimg.com/564x/b1/c1/1c/b1c11cfdf073f1565d1546ee18f1028a.jpg" class="menu"
+                    id="menu14">
+                <h3 style="font-family: var(--ff-philosopher);">Sedan Chair</h3>
+                <p style="font-family: Garamond;">$15.80</p>
+                <button class="butt add-to-cart-button" data-product-id="3.03" data-product-name="Sedan Chair"
+                    data-product-price="15.80" style="font-family: var(--ff-philosopher);">Order Now</button>
+                <div class="star-rating">
+                    <button class="star-button" onclick="rateItem(this, 1)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 2)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 3)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 4)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 5)"><i class="fas fa-star"></i></button>
+                </div>
+            </div>
+            <div class="items">
+                <div class="added-to-cart js-added-to-cart" data-product-id="3.04">
+                    <img src="../Favicon image/check-mark.png" class="check-mark">
+                    <div style="margin-top: -3px; margin-left: 3px;">Added to cart</div>
+                </div>
+                <img src="https://ahdictionary.com/application/resources/arts/A5palanquin.jpg" class="menu" id="menu15">
+                <h3 style="font-family:var(--ff-philosopher);">Palsnkin</h3>
+                <p style="font-family: Garamond;">$15.80</p>
+                <button class="butt add-to-cart-button" data-product-id="3.04" data-product-name="Palsnkin"
+                    data-product-price="15.80" style="font-family:var(--ff-philosopher);">Order Now</button>
+                <div class="star-rating">
+                    <button class="star-button" onclick="rateItem(this, 1)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 2)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 3)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 4)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 5)"><i class="fas fa-star"></i></button>
+                </div>
+            </div>
+    </section>
+    <section class="menu_container">
+    <h2>Accessories</h2>
+    <div class="menu_items">
+        <div class="items">
+            <div class="added-to-cart js-added-to-cart" data-product-id="4.01">
+                <img src="../Favicon image/check-mark.png" class="check-mark">
+                <div style="margin-top: -3px; margin-left: 3px;">Added to cart</div>
+            </div>
+            <img src="https://blog.yazjewels.com/wp-content/uploads/2023/05/Elsa-Sh.-necklace.png" class="menu"
+                id="menu5">
+            <h3 style="font-family: var(--ff-philosopher);">Rhinestone necklace</h3>
+            <p style="font-family: Garamond;">$16.20</p>
+            <button class="butt add-to-cart-button" data-product-id="4.01" data-product-name="Rhinestone necklace"
+                data-product-price="10.20" style="font-family: var(--ff-philosopher);">Order Now</button>
+            <div class="star-rating">
+                <button class="star-button" onclick="rateItem(this, 1)"><i class="fas fa-star"></i></button>
+                <button class="star-button" onclick="rateItem(this, 2)"><i class="fas fa-star"></i></button>
+                <button class="star-button" onclick="rateItem(this, 3)"><i class="fas fa-star"></i></button>
+                <button class="star-button" onclick="rateItem(this, 4)"><i class="fas fa-star"></i></button>
+                <button class="star-button" onclick="rateItem(this, 5)"><i class="fas fa-star"></i></button>
+            </div>
+        </div>
+                <div class="items">
+                    <div class="added-to-cart js-added-to-cart" data-product-id="4.02">
+                        <img src="../Favicon image/check-mark.png" class="check-mark">
+                        <div style="margin-top: -3px; margin-left: 3px;">Added to cart</div>
+                    </div>
+                    <img src="https://sothebys-md.brightspotcdn.com/dims4/default/e6b24fa/2147483647/strip/true/crop/2000x2000+0+0/resize/2048x2048!/quality/90/?url=http%3A%2F%2Fsothebys-brightspot.s3.amazonaws.com%2Fmedia-desk%2F95%2F95%2Fed9c7d614535a044a24f0d7f8a14%2F264n10805-c42fq-1-01.jpg" class="menu"
+                        id="menu17">
+                    <h3 style="font-family: var(--ff-philosopher);">Pipe chain Necklace</h3>
+                    <p style="font-family: Garamond;">$25.80</p>
+                    <button class="butt add-to-cart-button" data-product-id="4.02" data-product-name="Pipe chain Necklace"
+                        data-product-price="25.80" style="font-family:var(--ff-philosopher);">Order Now</button>
+                    <div class="star-rating">
+                        <button class="star-button" onclick="rateItem(this, 1)"><i class="fas fa-star"></i></button>
+                        <button class="star-button" onclick="rateItem(this, 2)"><i class="fas fa-star"></i></button>
+                        <button class="star-button" onclick="rateItem(this, 3)"><i class="fas fa-star"></i></button>
+                        <button class="star-button" onclick="rateItem(this, 4)"><i class="fas fa-star"></i></button>
+                        <button class="star-button" onclick="rateItem(this, 5)"><i class="fas fa-star"></i></button>
+                    </div>
+                </div>
+            <div class="items">
+                <div class="added-to-cart js-added-to-cart" data-product-id="4.03">
+                    <img src="../Favicon image/check-mark.png" class="check-mark">
+                    <div style="margin-top: -3px; margin-left: 3px;">Added to cart</div>
+                </div>
+                <img src="https://blog.yazjewels.com/wp-content/uploads/2023/05/YazJewels-Tank-Bracelet.png" class="menu"
+                    id="menu18">
+                <h3 style="font-family: var(--ff-philosopher); ">Tank Bracelet</h3>
+                <p style="font-family: Garamond;">$20.80</p>
+                <button class="butt add-to-cart-button" data-product-id="4.03" data-product-name="Tank Bracelet"
+                    style="font-family: var(--ff-philosopher);" data-product-price="20.80">Order Now</button>
+                <div class="star-rating">
+                    <button class="star-button" onclick="rateItem(this, 1)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 2)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 3)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 4)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 5)"><i class="fas fa-star"></i></button>
+                </div>
+            </div>
+            <div class="items">
+                <div class="added-to-cart js-added-to-cart" data-product-id="4.04">
+                    <img src="../Favicon image/check-mark.png" class="check-mark">
+                    <div style="margin-top: -3px; margin-left: 3px;">Added to cart</div>
+                </div>
+                <img src="https://www.vintage-retro.com/wp-content/uploads/2020/10/bakelite-jewelry.jpg.webp" class="menu"
+                    id="menu19">
+                <h3 style="font-family: var(--ff-philosopher);">Multi-coloured  bracelet</h3>
+                <p style="font-family: Garamond;">$17.80</p>
+                <button class="butt add-to-cart-button" data-product-id="4.04" data-product-name="Multi-coloured bracelet"
+                    data-product-price="15.80" style="font-family: var(--ff-philosopher);">Order Now</button>
+                <div class="star-rating">
+                    <button class="star-button" onclick="rateItem(this, 1)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 2)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 3)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 4)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 5)"><i class="fas fa-star"></i></button>
+                </div>
+            </div> 
+        </div>
+
+    <div class="menu_items">
+               <div class="items">
+                    <div class="added-to-cart js-added-to-cart" data-product-id="4.05">
+                        <img src="../Favicon image/check-mark.png" class="check-mark">
+                        <div style="margin-top: -3px; margin-left: 3px;">Added to cart</div>
+                    </div>
+                    <img src="https://www.langantiques.com/university/wp-content/uploads/2017/08/Tiffany_Retro_Fan_Earclips.jpg" class="menu"
+                        id="menu20">
+                    <h3 style="font-family: var(--ff-philosopher);">Tiffany &co.Fan earrings</h3>
+                    <p style="font-family: Garamond;">$15.80</p>
+                    <button class="butt add-to-cart-button" data-product-id="4.04" data-product-name="Tiffany &co.Fan earrings"
+                        data-product-price="15.80" style="font-family: var(--ff-philosopher);">Order Now</button>
+                    <div class="star-rating">
+                        <button class="star-button" onclick="rateItem(this, 1)"><i class="fas fa-star"></i></button>
+                        <button class="star-button" onclick="rateItem(this, 2)"><i class="fas fa-star"></i></button>
+                        <button class="star-button" onclick="rateItem(this, 3)"><i class="fas fa-star"></i></button>
+                        <button class="star-button" onclick="rateItem(this, 4)"><i class="fas fa-star"></i></button>
+                        <button class="star-button" onclick="rateItem(this, 5)"><i class="fas fa-star"></i></button>
+                    </div>
+                </div>
+                <div class="items">
+                    <div class="added-to-cart js-added-to-cart" data-product-id="4.06">
+                        <img src="../Favicon image/check-mark.png" class="check-mark">
+                        <div style="margin-top: -3px; margin-left: 3px;">Added to cart</div>
+                    </div>
+                    <img src="https://www.langantiques.com/university/wp-content/uploads/2017/08/Retro_Ribbon_Ruby_Earclips.jpg" class="menu"
+                        id="menu21">
+                    <h3 style="font-family: var(--ff-philosopher);">Ruby and diamond ribbon </h3>
+                    <p style="font-family: Garamond;">$17.80</p>
+                    <button class="butt add-to-cart-button" data-product-id="4.06" data-product-name="ruby and diamond ribbon "
+                        data-product-price="17.80" style="font-family: var(--ff-philosopher);">Order Now</button>
+                    <div class="star-rating">
+                        <button class="star-button" onclick="rateItem(this, 1)"><i class="fas fa-star"></i></button>
+                        <button class="star-button" onclick="rateItem(this, 2)"><i class="fas fa-star"></i></button>
+                        <button class="star-button" onclick="rateItem(this, 3)"><i class="fas fa-star"></i></button>
+                        <button class="star-button" onclick="rateItem(this, 4)"><i class="fas fa-star"></i></button>
+                        <button class="star-button" onclick="rateItem(this, 5)"><i class="fas fa-star"></i></button>
+                    </div>
+                </div>
+                <div class="items">
+                    <div class="added-to-cart js-added-to-cart" data-product-id="4.05">
+                        <img src="../Favicon image/check-mark.png" class="check-mark">
+                        <div style="margin-top: -3px; margin-left: 3px;">Added to cart</div>
+                    </div>
+                    <img src="https://blog.yazjewels.com/wp-content/uploads/2023/05/retro-brooch.png" class="menu"
+                        id="menu22">
+                    <h3 style="font-family: var(--ff-philosopher);">Ribbon and Bow Brooch</h3>
+                    <p style="font-family: Garamond;">$20.00</p>
+                    <button class="butt add-to-cart-button" data-product-id="4.04" data-product-name="Ribbon and Bow Brooch"
+                        data-product-price="20.00" style="font-family: var(--ff-philosopher);">Order Now</button>
+                    <div class="star-rating">
+                        <button class="star-button" onclick="rateItem(this, 1)"><i class="fas fa-star"></i></button>
+                        <button class="star-button" onclick="rateItem(this, 2)"><i class="fas fa-star"></i></button>
+                        <button class="star-button" onclick="rateItem(this, 3)"><i class="fas fa-star"></i></button>
+                        <button class="star-button" onclick="rateItem(this, 4)"><i class="fas fa-star"></i></button>
+                        <button class="star-button" onclick="rateItem(this, 5)"><i class="fas fa-star"></i></button>
+                    </div>
+                </div>
+                <div class="items">
+                    <div class="added-to-cart js-added-to-cart" data-product-id="4.05">
+                        <img src="../Favicon image/check-mark.png" class="check-mark">
+                        <div style="margin-top: -3px; margin-left: 3px;">Added to cart</div>
+                    </div>
+                    <img src="https://www.langantiques.com/university/wp-content/uploads/2017/08/Retro_Ballerina_Brooch_and_Earrings.jpg" class="menu"
+                        id="menu23">
+                    <h3 style="font-family: var(--ff-philosopher);">Ballerina Brooch & earrings</h3>
+                    <p style="font-family: Garamond;">$19.80</p>
+                    <button class="butt add-to-cart-button" data-product-id="4.05" data-product-name="Ballerina Brooch & earrings"
+                        data-product-price="19.80" style="font-family: var(--ff-philosopher);">Order Now</button>
+                    <div class="star-rating">
+                        <button class="star-button" onclick="rateItem(this, 1)"><i class="fas fa-star"></i></button>
+                        <button class="star-button" onclick="rateItem(this, 2)"><i class="fas fa-star"></i></button>
+                        <button class="star-button" onclick="rateItem(this, 3)"><i class="fas fa-star"></i></button>
+                        <button class="star-button" onclick="rateItem(this, 4)"><i class="fas fa-star"></i></button>
+                        <button class="star-button" onclick="rateItem(this, 5)"><i class="fas fa-star"></i></button>
+                    </div>
+                </div>  
+           </div> 
+
+        <div class="menu_items">
+            <div class="items">
+                 <div class="added-to-cart js-added-to-cart" data-product-id="4.06">
+                     <img src="../Favicon image/check-mark.png" class="check-mark">
+                     <div style="margin-top: -3px; margin-left: 3px;">Added to cart</div>
+                 </div>
+                 <img src="https://www.langantiques.com/university/wp-content/uploads/2017/08/En_Tremblant_Flower_Ring.jpg" class="menu"
+                     id="menu24">
+                 <h3 style="font-family: var(--ff-philosopher);">Floral Multi-Stone Boule Ring</h3>
+                 <p style="font-family: Garamond;">$15.80</p>
+                 <button class="butt add-to-cart-button" data-product-id="4.06" data-product-name="Floral Multi-Stone Boule Ring"
+                     data-product-price="15.80" style="font-family: var(--ff-philosopher);">Order Now</button>
+                 <div class="star-rating">
+                     <button class="star-button" onclick="rateItem(this, 1)"><i class="fas fa-star"></i></button>
+                     <button class="star-button" onclick="rateItem(this, 2)"><i class="fas fa-star"></i></button>
+                     <button class="star-button" onclick="rateItem(this, 3)"><i class="fas fa-star"></i></button>
+                     <button class="star-button" onclick="rateItem(this, 4)"><i class="fas fa-star"></i></button>
+                     <button class="star-button" onclick="rateItem(this, 5)"><i class="fas fa-star"></i></button>
+                 </div>
+             </div> 
+            <div class="items">
+                <div class="added-to-cart js-added-to-cart" data-product-id="4.07">
+                    <img src="../Favicon image/check-mark.png" class="check-mark">
+                    <div style="margin-top: -3px; margin-left: 3px;">Added to cart</div>
+                </div>
+                <img src="https://www.langantiques.com/university/wp-content/uploads/elementor/thumbs/Retro_Ruby_Diamond_Ring-q88jzmtwty6cb1lfv07rxm6we52osro3ali5r22ydk.jpg" class="menu"
+                    id="menu25">
+                <h3 style="font-family: var(--ff-philosopher);">22.0 Carat Aquamarine and Diamond Ring.</h3>
+                <p style="font-family: Garamond;">$30.80</p>
+                <button class="butt add-to-cart-button" data-product-id="4.07" data-product-name="22.0 Carat Aquamarine and Diamond Ring."
+                    data-product-price="30.80" style="font-family: var(--ff-philosopher);">Order Now</button>
+                <div class="star-rating">
+                    <button class="star-button" onclick="rateItem(this, 1)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 2)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 3)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 4)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 5)"><i class="fas fa-star"></i></button>
+                </div>
+            </div>
+            <div class="items">
+                <div class="added-to-cart js-added-to-cart" data-product-id="4.08">
+                    <img src="../Favicon image/check-mark.png" class="check-mark">
+                    <div style="margin-top: -3px; margin-left: 3px;">Added to cart</div>
+                </div>
+                <img src="https://prowatches.com/wp-content/uploads/2020/11/Longines-Heritage-Military.png" class="menu"
+                    id="menu26">
+                <h3 style="font-family: var(--ff-philosopher);"> Longines Heritage Military</h3>
+                <p style="font-family: Garamond;">$15.80</p>
+                <button class="butt add-to-cart-button" data-product-id="4.08" data-product-name=" Longines Heritage Military "
+                    data-product-price="15.80" style="font-family: var(--ff-philosopher);">Order Now</button>
+                <div class="star-rating">
+                    <button class="star-button" onclick="rateItem(this, 1)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 2)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 3)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 4)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 5)"><i class="fas fa-star"></i></button>
+                </div>
+            </div> 
+            <div class="items">
+                <div class="added-to-cart js-added-to-cart" data-product-id="4.09">
+                    <img src="../Favicon image/check-mark.png" class="check-mark">
+                    <div style="margin-top: -3px; margin-left: 3px;">Added to cart</div>
+                </div>
+                <img src="https://prowatches.com/wp-content/uploads/2020/11/Vostok-Komandirskie.png" class="menu"
+                    id="menu27">
+                <h3 style="font-family: var(--ff-philosopher);"> Vostok Komandirskie</h3>
+                <p style="font-family: Garamond;">$17.80</p>
+                <button class="butt add-to-cart-button" data-product-id="4.09" data-product-name=" Vostok Komandirskie"
+                    data-product-price="17.80" style="font-family: var(--ff-philosopher);">Order Now</button>
+                <div class="star-rating">
+                    <button class="star-button" onclick="rateItem(this, 1)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 2)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 3)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 4)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 5)"><i class="fas fa-star"></i></button>
+                </div>
+            </div> 
+        </div>      
+    </section>
+    <!-- footer -->
+    <footer style="background-color: hsl(20, 43%, 93%);">
+        <br><br><br>
+
+        <div class="foot-panel2">
+            <ul class="footer-colums">
+                <p style="color: hsl(357, 82%,35%);font-family: var(--ff-philosopher);">Our Pages</p>
+                <a href="../index.html"
+                    style="text-decoration: none;font-family: var(--ff-poppins);color: black;">Home</a>
+                <a href="#" style="text-decoration: none;font-family: var(--ff-poppins);color: black;">About</a>
+                <a href="services.html"
+                    style="text-decoration: none;font-family: var(--ff-poppins);color: black;">Services</a>
+                <a href="contact.html"
+                    style="text-decoration: none;font-family: var(--ff-poppins);color: black;">Contact</a>
+                <a href="cart.html" style="text-decoration: none;font-family: var(--ff-poppins);color: black;">Cart</a>
+                <a href="contributor.html" style="text-decoration: none;font-family: var(--ff-poppins);color: black;">Contributors</a>
+            </ul>
+
+            <ul class="footer-colums">
+                <p style="color: hsl(357, 82%,35%);font-family: var(--ff-philosopher);"> Exclusive Offers</p>
+                <a style="font-family: var(--ff-poppins);color: black;">Retro Discounts</a>
+                <a style="font-family: var(--ff-poppins);color: black;">Limited-Time Promotions</a>
+                <a style="font-family: var(--ff-poppins);color: black;">Special Event Packages</a>
+                <a style="font-family: var(--ff-poppins);color: black;">Membership Benefits</a>
+                <a style="font-family: var(--ff-poppins);color: black;">Early Access to New Collections</a>
+                <a style="font-family: var(--ff-poppins);color: black;">VIP Retro Events</a>
+                <a style="font-family: var(--ff-poppins);color: black;">Personalized Culinary Experiences</a>
+
+            </ul>
+
+            <ul class="footer-colums">
+                <p style="color: hsl(357, 82%,35%);font-family: var(--ff-philosopher);">Payment Products</p>
+                <a style="font-family: var(--ff-poppins);color: black;">Secure Checkout</a>
+                <a style="font-family: var(--ff-poppins);color: black;">Credit/Debit Cards</a>
+                <a style="font-family: var(--ff-poppins);color: black;">Online Payment</a>
+                <a style="font-family: var(--ff-poppins);color: black;">Mobile Wallets</a>
+                <a style="font-family: var(--ff-poppins);color: black;">Contactless Payments</a>
+            </ul>
+
+<!-- Include Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+<form id="contactForm">
+    <h3 style="font-family: var(--ff-philosopher); color: hsl(357, 82%,35%); font-size: 26px; margin-bottom: 3px;">
+        Contact Us!
+    </h3>
+
+    <!-- Email Input with Icon -->
+    <div style="position: relative; margin-bottom: 15px;">
+        <i class="fas fa-envelope" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); font-size: 14px; color: hsl(208, 7%,46%);"></i>
+        <input type="email" id="email" name="email" placeholder="Your Email" required 
+               style="padding-left: 30px; width: 100%;">
+    </div>
+
+    <!-- Message Input with Icon -->
+    <div style="position: relative; margin-bottom: 15px;">
+        <i class="fas fa-comment" style="position: absolute; left: 10px; top: 10px; font-size: 14px; color: hsl(208, 7%,46%);"></i>
+        <textarea id="message" name="message" placeholder="Your Message" required 
+                  style="padding-left: 30px; width: 100%;"></textarea>
+    </div>
+
+    <!-- Submit Button -->
+    <button id="butt" type="submit" style="font-family: var(--ff-poppins);">Send Message</button>
+</form>
+
+
+
+        </div>
+
+
+        <div class="foot_panel4">
+            <div class="pages">
+                <h4 style="font-family: var(--ff-philosopher);color: hsl(304, 14%, 46%);">Follow Us</h4>
+
+                <div class="social-icons">
+
+
+                <a class="fa-brands fa-facebook"
+                    href="https://facebook.com" ></a>
+                <a class="fa-brands fa-instagram"
+                    href="https://instagram.com"
+                    target="_blank"></a>
+                <a class="fa-brands fa-x-twitter"
+                    href="https://twitter.com" ></a>
+                <a class="fa-brands fa-youtube"
+                    href="https://www.youtube.com" ></a>
+                <a class="fa-brands fa-snapchat" 
+                    href="https://www.snapchat.com" ></a>
+
+                </div>
+                <p style="font-family: var(--ff-philosopher);margin-bottom:0;">Stay connected with us on social media
+                    for the latest updates, latest collection, and vintage adventures.
+                </p>
+                <div class="copyright">
+                    <p style="font-family: var(--ff-philosopher);">
+                        &copy; 2024 Retro . All Rights Reserved. | Developed by <span id="author">
+                            <a href="https://www.linkedin.com" target="_blank" style="text-decoration: none;">Retro
+                                Team</a>
+                        </span></p>
+
+
+
+
+                </div>
+                <div>
+                    <button id="sr" style="z-index: 1000;">
+                        <div class="circle1">
+                            <svg id="back-to-top" xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                                fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z">
+                                </path>
+                            </svg>
+                        </div>
+                    </button>
+                </div>
+            </div>
+    </footer>
+
+    <script src="menu.js"></script>
+    <script>
+
+        //Custom Cursor
+
+        const coords = { x: 0, y: 0 };
+        const circles = document.querySelectorAll(".circle");
+
+        const colors = [
+            "#ffb56b",
+            "#fdaf69",
+            "#f89d63",
+            "#f59761",
+            "#ef865e",
+            "#ec805d",
+            "#e36e5c",
+            "#df685c",
+            "#d5585c",
+            "#d1525c",
+            "#c5415d",
+            "#c03b5d",
+            "#b22c5e",
+            "#ac265e",
+            "#9c155f",
+            "#950f5f",
+            "#830060",
+            "#7c0060",
+            "#680060",
+            "#60005f",
+            "#48005f",
+            "#3d005e"
+        ];
+
+        circles.forEach(function (circle, index) {
+            circle.x = 0;
+            circle.y = 0;
+            circle.style.backgroundColor = colors[index % colors.length];
+        });
+
+        window.addEventListener("mousemove", function (e) {
+            coords.x = e.clientX;
+            coords.y = e.clientY;
+
+        });
+
+        function animateCircles() {
+
+            let x = coords.x;
+            let y = coords.y;
+
+            circles.forEach(function (circle, index) {
+                circle.style.left = x - 12 + "px";
+                circle.style.top = y - 12 + "px";
+
+                circle.style.scale = (circles.length - index) / circles.length;
+
+                circle.x = x;
+                circle.y = y;
+
+                const nextCircle = circles[index + 1] || circles[0];
+                x += (nextCircle.x - x) * 0.3;
+                y += (nextCircle.y - y) * 0.3;
+            });
+
+            requestAnimationFrame(animateCircles);
+        }
+
+        animateCircles();
+    </script>
+    <script>
+        function redirectLogin() {
+            window.location.href = "Html-files/login.html";
+        }
+        function redirectSignup() {
+            window.location.href = "Html-files/signup.html";
+        }
+
+        const scrollToTopBtn = document.getElementById("sr");
+
+        window.onscroll = function () {
+            scrollFunction();
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollToTopBtn.style.display = "block";
+            } else {
+                scrollToTopBtn.style.display = "none";
+            }
+        }
+        scrollToTopBtn.addEventListener("click", function () {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0;
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const preloader = document.getElementById('preloader');
+            const mainContent = document.getElementById('main-content');
+
+            window.addEventListener('load', function () {
+                setTimeout(function () {
+                    preloader.classList.add('hidden');
+                    mainContent.classList.remove('hidden');
+                    mainContent.classList.add('visible');
+                }, 3000);
+            });
+        });
+
+    </script>
+    <script>
+        const buttons = document.getElementsByClassName('butt add-to-cart-button');
+        for (let i = 0; i < buttons.length; i++) {
+            buttons[i].addEventListener('click', function () {
+                const badgeCountElement = document.getElementById('badgeCount');
+                let currentCount = parseInt(badgeCountElement.innerText);
+                badgeCountElement.innerText = currentCount + 1;
+            })
+        }
+
+        // document.getElement('add-to-cart-button').addEventListener('click', function() {
+        //     const badgeCountElement = document.getElementById('badgeCount');
+        //     let currentCount = parseInt(badgeCountElement.innerText);
+        //     badgeCountElement.innerText = currentCount + 1;
+        // });
+    </script>
+    <script src="cart.js"></script>
+
+</body>
+
+</html>
