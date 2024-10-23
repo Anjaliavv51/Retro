@@ -346,7 +346,38 @@ body{
         defer>
         </script>
         <script>
-          // JavaScript to toggle password visibility
+          document.querySelector('.btn-login').addEventListener('click', function(event) {
+  event.preventDefault(); // Prevent form default submission
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const password = document.getElementById('password').value;
+
+  // Simple form validation
+  if (!name || !email || !password) {
+    alert('Please fill out all fields.');
+  } else {
+    console.log({ name, email, password });
+    // Implement form submission logic here
+  }
+});
+if (usernameInput.value.trim() === "") {
+          usernameError.textContent = "Username is required.";
+          usernameError.style.display = "block";
+          valid = false;
+        } else {
+          usernameError.style.display = "none";
+        }
+
+        // Validate email with a regular expression
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(emailInput.value)) {
+          emailError.textContent = "Please enter a valid email address.";
+          emailError.style.display = "block";
+          valid = false;
+        } else {
+          emailError.style.display = "none";
+        }
+      // JavaScript to toggle password visibility
           const passwordField = document.getElementById('password');
           const showPasswordCheckbox = document.getElementById('showPassword');
       
