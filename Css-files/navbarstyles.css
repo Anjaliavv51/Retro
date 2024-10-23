@@ -11,12 +11,11 @@ body {
     display: flex;
     width: 100%;
     justify-content: space-between;
-    margin: 10px 1px!important;
-    border-radius: 20px;
+    margin: 20px 1px!important;
 }
 
 .nav-right {
-    margin-left: auto;
+    /* margin-left: auto; */
     /* Pushes the login/signup to the right side */
     display: flex;
     gap: 15px;
