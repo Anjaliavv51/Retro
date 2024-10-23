@@ -29,17 +29,23 @@
         rel="stylesheet">
     <link rel="stylesheet" href="../Css-files/content.css">
     <style>
-        /* Initial styling for the image */
-        .menu {
-            transition: transform 0.3s ease;
-            /* Smooth transition for the zoom effect */
-        }
+       /* Initial styling for the image */
+.menu {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Smooth transition for zoom and shadow effect */
+    transform-origin: center center;
+    /* Ensures zoom originates from the center of the image */
+    backface-visibility: hidden;
+    /* Prevents flickering */
+}
 
-        /* Zoom effect on hover */
-        .menu:hover {
-            transform: scale(1.1);
-            /* Scale the image to 110% of its original size */
-        }
+/* Zoom effect on hover */
+.menu:hover {
+    transform: scale(1.1);
+    /* Scale the image to 110% of its original size */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    /* Adds a shadow for better visual feedback */
+}
 
 
         @media (max-width: 768px) {
@@ -68,6 +74,47 @@
                 flex-direction: column;
             }
         }
+
+        .foot-panel2 ul a {
+            padding: 0; /* Reset padding */
+            list-style: none; /* Remove default bullet points */
+        }
+
+        .foot-panel2 ul  a { 
+            /* /* color: black!important; */
+            text-decoration: none !important;
+            transition:transform 0.2s ease, text-decoration-color 0.2s ease; 
+            /* display: inline-block; */
+            
+
+            text-decoration: none;
+            color: #000;
+            position: relative;
+            padding-bottom: 2px;
+            
+        }
+
+        .foot-panel2 ul a::after{
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 2px;
+            background-color: brown;
+            transition: width  0.3s ease;
+            width:0;
+            
+        }
+
+        .foot-panel2 ul a:hover{
+            transform: scale(1.05);
+        }
+
+        .foot-panel2 ul a:hover::after{
+            width:100%;
+        } 
+
     </style>
     <style>
         body {
@@ -645,7 +692,7 @@
                 </div>
                 <img src="https://i.pinimg.com/564x/ec/27/3a/ec273a4e8ea84196a1bc4f3e5e0a8527.jpg" class="menu"
                     id="menu13">
-                <h3 style="font-family: var(--ff-philosopher);">Catapult</h3>
+                <h3 style="font-family: var(--ff-philosopher); font-size: 25px">Catapult</h3>
                 <p style="font-family: Garamond;">$15.80</p>
                 <button class="butt add-to-cart-button" data-product-id="3.02" data-product-name="Catapult"
                     style="font-family: var(--ff-philosopher);" data-product-price="15.80">Order Now</button>
@@ -696,38 +743,57 @@
             </div>
     </section>
     <section class="menu_container">
-    <h2>Accessories</h2>
-    <div class="menu_items">
-        <div class="items">
-            <div class="added-to-cart js-added-to-cart" data-product-id="4.01">
-                <img src="../Favicon image/check-mark.png" class="check-mark">
-                <div style="margin-top: -3px; margin-left: 3px;">Added to cart</div>
+        <h2>Accessories</h2>
+        <div class="menu_items">
+            <div class="items">
+                <div class="added-to-cart js-added-to-cart" data-product-id="4.01">
+                    <img src="../Favicon image/check-mark.png" class="check-mark">
+                    <div style="margin-top: -3px; margin-left: 3px;">Added to cart</div>
+                </div>
+                <img src="https://blog.yazjewels.com/wp-content/uploads/2023/05/Elsa-Sh.-necklace.png" class="menu"
+                    id="menu5">
+                <h3 style="font-family: var(--ff-philosopher);">Rhinestone necklace</h3>
+                <p style="font-family: Garamond;">$16.20</p>
+                <button class="butt add-to-cart-button" data-product-id="4.01" data-product-name="Rhinestone necklace"
+                    data-product-price="10.20" style="font-family: var(--ff-philosopher);">Order Now</button>
+                <div class="star-rating">
+                    <button class="star-button" onclick="rateItem(this, 1)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 2)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 3)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 4)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 5)"><i class="fas fa-star"></i></button>
+                </div>
             </div>
-            <img src="https://blog.yazjewels.com/wp-content/uploads/2023/05/Elsa-Sh.-necklace.png" class="menu"
-                id="menu5">
-            <h3 style="font-family: var(--ff-philosopher);">Rhinestone necklace</h3>
-            <p style="font-family: Garamond;">$16.20</p>
-            <button class="butt add-to-cart-button" data-product-id="4.01" data-product-name="Rhinestone necklace"
-                data-product-price="10.20" style="font-family: var(--ff-philosopher);">Order Now</button>
-            <div class="star-rating">
-                <button class="star-button" onclick="rateItem(this, 1)"><i class="fas fa-star"></i></button>
-                <button class="star-button" onclick="rateItem(this, 2)"><i class="fas fa-star"></i></button>
-                <button class="star-button" onclick="rateItem(this, 3)"><i class="fas fa-star"></i></button>
-                <button class="star-button" onclick="rateItem(this, 4)"><i class="fas fa-star"></i></button>
-                <button class="star-button" onclick="rateItem(this, 5)"><i class="fas fa-star"></i></button>
-            </div>
-        </div>
+                    <div class="items">
+                        <div class="added-to-cart js-added-to-cart" data-product-id="4.02">
+                            <img src="../Favicon image/check-mark.png" class="check-mark">
+                            <div style="margin-top: -3px; margin-left: 3px;">Added to cart</div>
+                        </div>
+                        <img src="https://sothebys-md.brightspotcdn.com/dims4/default/e6b24fa/2147483647/strip/true/crop/2000x2000+0+0/resize/2048x2048!/quality/90/?url=http%3A%2F%2Fsothebys-brightspot.s3.amazonaws.com%2Fmedia-desk%2F95%2F95%2Fed9c7d614535a044a24f0d7f8a14%2F264n10805-c42fq-1-01.jpg" class="menu"
+                            id="menu17">
+                        <h3 style="font-family: var(--ff-philosopher);">Pipe chain Necklace</h3>
+                        <p style="font-family: Garamond;">$25.80</p>
+                        <button class="butt add-to-cart-button" data-product-id="4.02" data-product-name="Pipe chain Necklace"
+                            data-product-price="25.80" style="font-family:var(--ff-philosopher);">Order Now</button>
+                        <div class="star-rating">
+                            <button class="star-button" onclick="rateItem(this, 1)"><i class="fas fa-star"></i></button>
+                            <button class="star-button" onclick="rateItem(this, 2)"><i class="fas fa-star"></i></button>
+                            <button class="star-button" onclick="rateItem(this, 3)"><i class="fas fa-star"></i></button>
+                            <button class="star-button" onclick="rateItem(this, 4)"><i class="fas fa-star"></i></button>
+                            <button class="star-button" onclick="rateItem(this, 5)"><i class="fas fa-star"></i></button>
+                        </div>
+                    </div>
                 <div class="items">
-                    <div class="added-to-cart js-added-to-cart" data-product-id="4.02">
+                    <div class="added-to-cart js-added-to-cart" data-product-id="4.03">
                         <img src="../Favicon image/check-mark.png" class="check-mark">
                         <div style="margin-top: -3px; margin-left: 3px;">Added to cart</div>
                     </div>
-                    <img src="https://sothebys-md.brightspotcdn.com/dims4/default/e6b24fa/2147483647/strip/true/crop/2000x2000+0+0/resize/2048x2048!/quality/90/?url=http%3A%2F%2Fsothebys-brightspot.s3.amazonaws.com%2Fmedia-desk%2F95%2F95%2Fed9c7d614535a044a24f0d7f8a14%2F264n10805-c42fq-1-01.jpg" class="menu"
-                        id="menu17">
-                    <h3 style="font-family: var(--ff-philosopher);">Pipe chain Necklace</h3>
-                    <p style="font-family: Garamond;">$25.80</p>
-                    <button class="butt add-to-cart-button" data-product-id="4.02" data-product-name="Pipe chain Necklace"
-                        data-product-price="25.80" style="font-family:var(--ff-philosopher);">Order Now</button>
+                    <img src="https://blog.yazjewels.com/wp-content/uploads/2023/05/YazJewels-Tank-Bracelet.png" class="menu"
+                        id="menu18">
+                    <h3 style="font-family: var(--ff-philosopher); ">Tank Bracelet</h3>
+                    <p style="font-family: Garamond;">$20.80</p>
+                    <button class="butt add-to-cart-button" data-product-id="4.03" data-product-name="Tank Bracelet"
+                        style="font-family: var(--ff-philosopher);" data-product-price="20.80">Order Now</button>
                     <div class="star-rating">
                         <button class="star-button" onclick="rateItem(this, 1)"><i class="fas fa-star"></i></button>
                         <button class="star-button" onclick="rateItem(this, 2)"><i class="fas fa-star"></i></button>
@@ -736,57 +802,16 @@
                         <button class="star-button" onclick="rateItem(this, 5)"><i class="fas fa-star"></i></button>
                     </div>
                 </div>
-            <div class="items">
-                <div class="added-to-cart js-added-to-cart" data-product-id="4.03">
-                    <img src="../Favicon image/check-mark.png" class="check-mark">
-                    <div style="margin-top: -3px; margin-left: 3px;">Added to cart</div>
-                </div>
-                <img src="https://blog.yazjewels.com/wp-content/uploads/2023/05/YazJewels-Tank-Bracelet.png" class="menu"
-                    id="menu18">
-                <h3 style="font-family: var(--ff-philosopher); ">Tank Bracelet</h3>
-                <p style="font-family: Garamond;">$20.80</p>
-                <button class="butt add-to-cart-button" data-product-id="4.03" data-product-name="Tank Bracelet"
-                    style="font-family: var(--ff-philosopher);" data-product-price="20.80">Order Now</button>
-                <div class="star-rating">
-                    <button class="star-button" onclick="rateItem(this, 1)"><i class="fas fa-star"></i></button>
-                    <button class="star-button" onclick="rateItem(this, 2)"><i class="fas fa-star"></i></button>
-                    <button class="star-button" onclick="rateItem(this, 3)"><i class="fas fa-star"></i></button>
-                    <button class="star-button" onclick="rateItem(this, 4)"><i class="fas fa-star"></i></button>
-                    <button class="star-button" onclick="rateItem(this, 5)"><i class="fas fa-star"></i></button>
-                </div>
-            </div>
-            <div class="items">
-                <div class="added-to-cart js-added-to-cart" data-product-id="4.04">
-                    <img src="../Favicon image/check-mark.png" class="check-mark">
-                    <div style="margin-top: -3px; margin-left: 3px;">Added to cart</div>
-                </div>
-                <img src="https://www.vintage-retro.com/wp-content/uploads/2020/10/bakelite-jewelry.jpg.webp" class="menu"
-                    id="menu19">
-                <h3 style="font-family: var(--ff-philosopher);">Multi-coloured  bracelet</h3>
-                <p style="font-family: Garamond;">$17.80</p>
-                <button class="butt add-to-cart-button" data-product-id="4.04" data-product-name="Multi-coloured bracelet"
-                    data-product-price="15.80" style="font-family: var(--ff-philosopher);">Order Now</button>
-                <div class="star-rating">
-                    <button class="star-button" onclick="rateItem(this, 1)"><i class="fas fa-star"></i></button>
-                    <button class="star-button" onclick="rateItem(this, 2)"><i class="fas fa-star"></i></button>
-                    <button class="star-button" onclick="rateItem(this, 3)"><i class="fas fa-star"></i></button>
-                    <button class="star-button" onclick="rateItem(this, 4)"><i class="fas fa-star"></i></button>
-                    <button class="star-button" onclick="rateItem(this, 5)"><i class="fas fa-star"></i></button>
-                </div>
-            </div> 
-        </div>
-
-    <div class="menu_items">
-               <div class="items">
-                    <div class="added-to-cart js-added-to-cart" data-product-id="4.05">
+                <div class="items">
+                    <div class="added-to-cart js-added-to-cart" data-product-id="4.04">
                         <img src="../Favicon image/check-mark.png" class="check-mark">
                         <div style="margin-top: -3px; margin-left: 3px;">Added to cart</div>
                     </div>
-                    <img src="https://www.langantiques.com/university/wp-content/uploads/2017/08/Tiffany_Retro_Fan_Earclips.jpg" class="menu"
-                        id="menu20">
-                    <h3 style="font-family: var(--ff-philosopher);">Tiffany &co.Fan earrings</h3>
-                    <p style="font-family: Garamond;">$15.80</p>
-                    <button class="butt add-to-cart-button" data-product-id="4.04" data-product-name="Tiffany &co.Fan earrings"
+                    <img src="https://www.vintage-retro.com/wp-content/uploads/2020/10/bakelite-jewelry.jpg.webp" class="menu"
+                        id="menu19">
+                    <h3 style="font-family: var(--ff-philosopher);">Multi-coloured  bracelet</h3>
+                    <p style="font-family: Garamond;">$17.80</p>
+                    <button class="butt add-to-cart-button" data-product-id="4.04" data-product-name="Multi-coloured bracelet"
                         data-product-price="15.80" style="font-family: var(--ff-philosopher);">Order Now</button>
                     <div class="star-rating">
                         <button class="star-button" onclick="rateItem(this, 1)"><i class="fas fa-star"></i></button>
@@ -795,17 +820,154 @@
                         <button class="star-button" onclick="rateItem(this, 4)"><i class="fas fa-star"></i></button>
                         <button class="star-button" onclick="rateItem(this, 5)"><i class="fas fa-star"></i></button>
                     </div>
-                </div>
+                </div> 
+            </div>
+        <div class="menu_items">
+                   <div class="items">
+                        <div class="added-to-cart js-added-to-cart" data-product-id="4.05">
+                            <img src="../Favicon image/check-mark.png" class="check-mark">
+                            <div style="margin-top: -3px; margin-left: 3px;">Added to cart</div>
+                        </div>
+                        <img src="https://www.langantiques.com/university/wp-content/uploads/2017/08/Tiffany_Retro_Fan_Earclips.jpg" class="menu"
+                            id="menu20">
+                        <h3 style="font-family: var(--ff-philosopher);">Tiffany &co.Fan earrings</h3>
+                        <p style="font-family: Garamond;">$15.80</p>
+                        <button class="butt add-to-cart-button" data-product-id="4.04" data-product-name="Tiffany &co.Fan earrings"
+                            data-product-price="15.80" style="font-family: var(--ff-philosopher);">Order Now</button>
+                        <div class="star-rating">
+                            <button class="star-button" onclick="rateItem(this, 1)"><i class="fas fa-star"></i></button>
+                            <button class="star-button" onclick="rateItem(this, 2)"><i class="fas fa-star"></i></button>
+                            <button class="star-button" onclick="rateItem(this, 3)"><i class="fas fa-star"></i></button>
+                            <button class="star-button" onclick="rateItem(this, 4)"><i class="fas fa-star"></i></button>
+                            <button class="star-button" onclick="rateItem(this, 5)"><i class="fas fa-star"></i></button>
+                        </div>
+                    </div>
+                    <div class="items">
+                        <div class="added-to-cart js-added-to-cart" data-product-id="4.06">
+                            <img src="../Favicon image/check-mark.png" class="check-mark">
+                            <div style="margin-top: -3px; margin-left: 3px;">Added to cart</div>
+                        </div>
+                        <img src="https://www.langantiques.com/university/wp-content/uploads/2017/08/Retro_Ribbon_Ruby_Earclips.jpg" class="menu"
+                            id="menu21">
+                        <h3 style="font-family: var(--ff-philosopher);">Ruby and diamond ribbon </h3>
+                        <p style="font-family: Garamond;">$17.80</p>
+                        <button class="butt add-to-cart-button" data-product-id="4.06" data-product-name="ruby and diamond ribbon "
+                            data-product-price="17.80" style="font-family: var(--ff-philosopher);">Order Now</button>
+                        <div class="star-rating">
+                            <button class="star-button" onclick="rateItem(this, 1)"><i class="fas fa-star"></i></button>
+                            <button class="star-button" onclick="rateItem(this, 2)"><i class="fas fa-star"></i></button>
+                            <button class="star-button" onclick="rateItem(this, 3)"><i class="fas fa-star"></i></button>
+                            <button class="star-button" onclick="rateItem(this, 4)"><i class="fas fa-star"></i></button>
+                            <button class="star-button" onclick="rateItem(this, 5)"><i class="fas fa-star"></i></button>
+                        </div>
+                    </div>
+                    <div class="items">
+                        <div class="added-to-cart js-added-to-cart" data-product-id="4.05">
+                            <img src="../Favicon image/check-mark.png" class="check-mark">
+                            <div style="margin-top: -3px; margin-left: 3px;">Added to cart</div>
+                        </div>
+                        <img src="https://blog.yazjewels.com/wp-content/uploads/2023/05/retro-brooch.png" class="menu"
+                            id="menu22">
+                        <h3 style="font-family: var(--ff-philosopher);">Ribbon and Bow Brooch</h3>
+                        <p style="font-family: Garamond;">$20.00</p>
+                        <button class="butt add-to-cart-button" data-product-id="4.04" data-product-name="Ribbon and Bow Brooch"
+                            data-product-price="20.00" style="font-family: var(--ff-philosopher);">Order Now</button>
+                        <div class="star-rating">
+                            <button class="star-button" onclick="rateItem(this, 1)"><i class="fas fa-star"></i></button>
+                            <button class="star-button" onclick="rateItem(this, 2)"><i class="fas fa-star"></i></button>
+                            <button class="star-button" onclick="rateItem(this, 3)"><i class="fas fa-star"></i></button>
+                            <button class="star-button" onclick="rateItem(this, 4)"><i class="fas fa-star"></i></button>
+                            <button class="star-button" onclick="rateItem(this, 5)"><i class="fas fa-star"></i></button>
+                        </div>
+                    </div>
+                    <div class="items">
+                        <div class="added-to-cart js-added-to-cart" data-product-id="4.05">
+                            <img src="../Favicon image/check-mark.png" class="check-mark">
+                            <div style="margin-top: -3px; margin-left: 3px;">Added to cart</div>
+                        </div>
+                        <img src="https://www.langantiques.com/university/wp-content/uploads/2017/08/Retro_Ballerina_Brooch_and_Earrings.jpg" class="menu"
+                            id="menu23">
+                        <h3 style="font-family: var(--ff-philosopher);">Ballerina Brooch & earrings</h3>
+                        <p style="font-family: Garamond;">$19.80</p>
+                        <button class="butt add-to-cart-button" data-product-id="4.05" data-product-name="Ballerina Brooch & earrings"
+                            data-product-price="19.80" style="font-family: var(--ff-philosopher);">Order Now</button>
+                        <div class="star-rating">
+                            <button class="star-button" onclick="rateItem(this, 1)"><i class="fas fa-star"></i></button>
+                            <button class="star-button" onclick="rateItem(this, 2)"><i class="fas fa-star"></i></button>
+                            <button class="star-button" onclick="rateItem(this, 3)"><i class="fas fa-star"></i></button>
+                            <button class="star-button" onclick="rateItem(this, 4)"><i class="fas fa-star"></i></button>
+                            <button class="star-button" onclick="rateItem(this, 5)"><i class="fas fa-star"></i></button>
+                        </div>
+                    </div>  
+               </div> 
+            <div class="menu_items">
                 <div class="items">
-                    <div class="added-to-cart js-added-to-cart" data-product-id="4.06">
+                     <div class="added-to-cart js-added-to-cart" data-product-id="4.06">
+                         <img src="../Favicon image/check-mark.png" class="check-mark">
+                         <div style="margin-top: -3px; margin-left: 3px;">Added to cart</div>
+                     </div>
+                     <img src="https://www.langantiques.com/university/wp-content/uploads/2017/08/En_Tremblant_Flower_Ring.jpg" class="menu"
+                         id="menu24">
+                     <h3 style="font-family: var(--ff-philosopher);">Floral Multi-Stone Boule Ring</h3>
+                     <p style="font-family: Garamond;">$15.80</p>
+                     <button class="butt add-to-cart-button" data-product-id="4.06" data-product-name="Floral Multi-Stone Boule Ring"
+                         data-product-price="15.80" style="font-family: var(--ff-philosopher);">Order Now</button>
+                     <div class="star-rating">
+                         <button class="star-button" onclick="rateItem(this, 1)"><i class="fas fa-star"></i></button>
+                         <button class="star-button" onclick="rateItem(this, 2)"><i class="fas fa-star"></i></button>
+                         <button class="star-button" onclick="rateItem(this, 3)"><i class="fas fa-star"></i></button>
+                         <button class="star-button" onclick="rateItem(this, 4)"><i class="fas fa-star"></i></button>
+                         <button class="star-button" onclick="rateItem(this, 5)"><i class="fas fa-star"></i></button>
+                     </div>
+                 </div> 
+                <div class="items">
+                    <div class="added-to-cart js-added-to-cart" data-product-id="4.07">
                         <img src="../Favicon image/check-mark.png" class="check-mark">
                         <div style="margin-top: -3px; margin-left: 3px;">Added to cart</div>
                     </div>
-                    <img src="https://www.langantiques.com/university/wp-content/uploads/2017/08/Retro_Ribbon_Ruby_Earclips.jpg" class="menu"
-                        id="menu21">
-                    <h3 style="font-family: var(--ff-philosopher);">Ruby and diamond ribbon </h3>
+                    <img src="https://www.langantiques.com/university/wp-content/uploads/elementor/thumbs/Retro_Ruby_Diamond_Ring-q88jzmtwty6cb1lfv07rxm6we52osro3ali5r22ydk.jpg" class="menu"
+                        id="menu25">
+                    <h3 style="font-family: var(--ff-philosopher);"> Aquamarine&Diamond Ring.</h3>
+                    <p style="font-family: Garamond;">$30.80</p>
+                    <button class="butt add-to-cart-button" data-product-id="4.07" data-product-name=" Aquamarine&Diamond Ring."
+                        data-product-price="30.80" style="font-family: var(--ff-philosopher);">Order Now</button>
+                    <div class="star-rating">
+                        <button class="star-button" onclick="rateItem(this, 1)"><i class="fas fa-star"></i></button>
+                        <button class="star-button" onclick="rateItem(this, 2)"><i class="fas fa-star"></i></button>
+                        <button class="star-button" onclick="rateItem(this, 3)"><i class="fas fa-star"></i></button>
+                        <button class="star-button" onclick="rateItem(this, 4)"><i class="fas fa-star"></i></button>
+                        <button class="star-button" onclick="rateItem(this, 5)"><i class="fas fa-star"></i></button>
+                    </div>
+                </div>
+                <div class="items">
+                    <div class="added-to-cart js-added-to-cart" data-product-id="4.08">
+                        <img src="../Favicon image/check-mark.png" class="check-mark">
+                        <div style="margin-top: -3px; margin-left: 3px;">Added to cart</div>
+                    </div>
+                    <img src="https://prowatches.com/wp-content/uploads/2020/11/Longines-Heritage-Military.png" class="menu"
+                        id="menu26">
+                    <h3 style="font-family: var(--ff-philosopher);"> Longines Heritage Military</h3>
+                    <p style="font-family: Garamond;">$15.80</p>
+                    <button class="butt add-to-cart-button" data-product-id="4.08" data-product-name=" Longines Heritage Military "
+                        data-product-price="15.80" style="font-family: var(--ff-philosopher);">Order Now</button>
+                    <div class="star-rating">
+                        <button class="star-button" onclick="rateItem(this, 1)"><i class="fas fa-star"></i></button>
+                        <button class="star-button" onclick="rateItem(this, 2)"><i class="fas fa-star"></i></button>
+                        <button class="star-button" onclick="rateItem(this, 3)"><i class="fas fa-star"></i></button>
+                        <button class="star-button" onclick="rateItem(this, 4)"><i class="fas fa-star"></i></button>
+                        <button class="star-button" onclick="rateItem(this, 5)"><i class="fas fa-star"></i></button>
+                    </div>
+                </div> 
+                <div class="items">
+                    <div class="added-to-cart js-added-to-cart" data-product-id="4.09">
+                        <img src="../Favicon image/check-mark.png" class="check-mark">
+                        <div style="margin-top: -3px; margin-left: 3px;">Added to cart</div>
+                    </div>
+                    <img src="https://prowatches.com/wp-content/uploads/2020/11/Vostok-Komandirskie.png" class="menu"
+                        id="menu27">
+                    <h3 style="font-family: var(--ff-philosopher);"> Vostok Komandirskie</h3>
                     <p style="font-family: Garamond;">$17.80</p>
-                    <button class="butt add-to-cart-button" data-product-id="4.06" data-product-name="ruby and diamond ribbon "
+                    <button class="butt add-to-cart-button" data-product-id="4.09" data-product-name=" Vostok Komandirskie"
                         data-product-price="17.80" style="font-family: var(--ff-philosopher);">Order Now</button>
                     <div class="star-rating">
                         <button class="star-button" onclick="rateItem(this, 1)"><i class="fas fa-star"></i></button>
@@ -814,126 +976,10 @@
                         <button class="star-button" onclick="rateItem(this, 4)"><i class="fas fa-star"></i></button>
                         <button class="star-button" onclick="rateItem(this, 5)"><i class="fas fa-star"></i></button>
                     </div>
-                </div>
-                <div class="items">
-                    <div class="added-to-cart js-added-to-cart" data-product-id="4.05">
-                        <img src="../Favicon image/check-mark.png" class="check-mark">
-                        <div style="margin-top: -3px; margin-left: 3px;">Added to cart</div>
-                    </div>
-                    <img src="https://blog.yazjewels.com/wp-content/uploads/2023/05/retro-brooch.png" class="menu"
-                        id="menu22">
-                    <h3 style="font-family: var(--ff-philosopher);">Ribbon and Bow Brooch</h3>
-                    <p style="font-family: Garamond;">$20.00</p>
-                    <button class="butt add-to-cart-button" data-product-id="4.04" data-product-name="Ribbon and Bow Brooch"
-                        data-product-price="20.00" style="font-family: var(--ff-philosopher);">Order Now</button>
-                    <div class="star-rating">
-                        <button class="star-button" onclick="rateItem(this, 1)"><i class="fas fa-star"></i></button>
-                        <button class="star-button" onclick="rateItem(this, 2)"><i class="fas fa-star"></i></button>
-                        <button class="star-button" onclick="rateItem(this, 3)"><i class="fas fa-star"></i></button>
-                        <button class="star-button" onclick="rateItem(this, 4)"><i class="fas fa-star"></i></button>
-                        <button class="star-button" onclick="rateItem(this, 5)"><i class="fas fa-star"></i></button>
-                    </div>
-                </div>
-                <div class="items">
-                    <div class="added-to-cart js-added-to-cart" data-product-id="4.05">
-                        <img src="../Favicon image/check-mark.png" class="check-mark">
-                        <div style="margin-top: -3px; margin-left: 3px;">Added to cart</div>
-                    </div>
-                    <img src="https://www.langantiques.com/university/wp-content/uploads/2017/08/Retro_Ballerina_Brooch_and_Earrings.jpg" class="menu"
-                        id="menu23">
-                    <h3 style="font-family: var(--ff-philosopher);">Ballerina Brooch & earrings</h3>
-                    <p style="font-family: Garamond;">$19.80</p>
-                    <button class="butt add-to-cart-button" data-product-id="4.05" data-product-name="Ballerina Brooch & earrings"
-                        data-product-price="19.80" style="font-family: var(--ff-philosopher);">Order Now</button>
-                    <div class="star-rating">
-                        <button class="star-button" onclick="rateItem(this, 1)"><i class="fas fa-star"></i></button>
-                        <button class="star-button" onclick="rateItem(this, 2)"><i class="fas fa-star"></i></button>
-                        <button class="star-button" onclick="rateItem(this, 3)"><i class="fas fa-star"></i></button>
-                        <button class="star-button" onclick="rateItem(this, 4)"><i class="fas fa-star"></i></button>
-                        <button class="star-button" onclick="rateItem(this, 5)"><i class="fas fa-star"></i></button>
-                    </div>
-                </div>  
-           </div> 
+                </div> 
+            </div>      
+        </section>
 
-        <div class="menu_items">
-            <div class="items">
-                 <div class="added-to-cart js-added-to-cart" data-product-id="4.06">
-                     <img src="../Favicon image/check-mark.png" class="check-mark">
-                     <div style="margin-top: -3px; margin-left: 3px;">Added to cart</div>
-                 </div>
-                 <img src="https://www.langantiques.com/university/wp-content/uploads/2017/08/En_Tremblant_Flower_Ring.jpg" class="menu"
-                     id="menu24">
-                 <h3 style="font-family: var(--ff-philosopher);">Floral Multi-Stone Boule Ring</h3>
-                 <p style="font-family: Garamond;">$15.80</p>
-                 <button class="butt add-to-cart-button" data-product-id="4.06" data-product-name="Floral Multi-Stone Boule Ring"
-                     data-product-price="15.80" style="font-family: var(--ff-philosopher);">Order Now</button>
-                 <div class="star-rating">
-                     <button class="star-button" onclick="rateItem(this, 1)"><i class="fas fa-star"></i></button>
-                     <button class="star-button" onclick="rateItem(this, 2)"><i class="fas fa-star"></i></button>
-                     <button class="star-button" onclick="rateItem(this, 3)"><i class="fas fa-star"></i></button>
-                     <button class="star-button" onclick="rateItem(this, 4)"><i class="fas fa-star"></i></button>
-                     <button class="star-button" onclick="rateItem(this, 5)"><i class="fas fa-star"></i></button>
-                 </div>
-             </div> 
-            <div class="items">
-                <div class="added-to-cart js-added-to-cart" data-product-id="4.07">
-                    <img src="../Favicon image/check-mark.png" class="check-mark">
-                    <div style="margin-top: -3px; margin-left: 3px;">Added to cart</div>
-                </div>
-                <img src="https://www.langantiques.com/university/wp-content/uploads/elementor/thumbs/Retro_Ruby_Diamond_Ring-q88jzmtwty6cb1lfv07rxm6we52osro3ali5r22ydk.jpg" class="menu"
-                    id="menu25">
-                <h3 style="font-family: var(--ff-philosopher);">22.0 Carat Aquamarine and Diamond Ring.</h3>
-                <p style="font-family: Garamond;">$30.80</p>
-                <button class="butt add-to-cart-button" data-product-id="4.07" data-product-name="22.0 Carat Aquamarine and Diamond Ring."
-                    data-product-price="30.80" style="font-family: var(--ff-philosopher);">Order Now</button>
-                <div class="star-rating">
-                    <button class="star-button" onclick="rateItem(this, 1)"><i class="fas fa-star"></i></button>
-                    <button class="star-button" onclick="rateItem(this, 2)"><i class="fas fa-star"></i></button>
-                    <button class="star-button" onclick="rateItem(this, 3)"><i class="fas fa-star"></i></button>
-                    <button class="star-button" onclick="rateItem(this, 4)"><i class="fas fa-star"></i></button>
-                    <button class="star-button" onclick="rateItem(this, 5)"><i class="fas fa-star"></i></button>
-                </div>
-            </div>
-            <div class="items">
-                <div class="added-to-cart js-added-to-cart" data-product-id="4.08">
-                    <img src="../Favicon image/check-mark.png" class="check-mark">
-                    <div style="margin-top: -3px; margin-left: 3px;">Added to cart</div>
-                </div>
-                <img src="https://prowatches.com/wp-content/uploads/2020/11/Longines-Heritage-Military.png" class="menu"
-                    id="menu26">
-                <h3 style="font-family: var(--ff-philosopher);"> Longines Heritage Military</h3>
-                <p style="font-family: Garamond;">$15.80</p>
-                <button class="butt add-to-cart-button" data-product-id="4.08" data-product-name=" Longines Heritage Military "
-                    data-product-price="15.80" style="font-family: var(--ff-philosopher);">Order Now</button>
-                <div class="star-rating">
-                    <button class="star-button" onclick="rateItem(this, 1)"><i class="fas fa-star"></i></button>
-                    <button class="star-button" onclick="rateItem(this, 2)"><i class="fas fa-star"></i></button>
-                    <button class="star-button" onclick="rateItem(this, 3)"><i class="fas fa-star"></i></button>
-                    <button class="star-button" onclick="rateItem(this, 4)"><i class="fas fa-star"></i></button>
-                    <button class="star-button" onclick="rateItem(this, 5)"><i class="fas fa-star"></i></button>
-                </div>
-            </div> 
-            <div class="items">
-                <div class="added-to-cart js-added-to-cart" data-product-id="4.09">
-                    <img src="../Favicon image/check-mark.png" class="check-mark">
-                    <div style="margin-top: -3px; margin-left: 3px;">Added to cart</div>
-                </div>
-                <img src="https://prowatches.com/wp-content/uploads/2020/11/Vostok-Komandirskie.png" class="menu"
-                    id="menu27">
-                <h3 style="font-family: var(--ff-philosopher);"> Vostok Komandirskie</h3>
-                <p style="font-family: Garamond;">$17.80</p>
-                <button class="butt add-to-cart-button" data-product-id="4.09" data-product-name=" Vostok Komandirskie"
-                    data-product-price="17.80" style="font-family: var(--ff-philosopher);">Order Now</button>
-                <div class="star-rating">
-                    <button class="star-button" onclick="rateItem(this, 1)"><i class="fas fa-star"></i></button>
-                    <button class="star-button" onclick="rateItem(this, 2)"><i class="fas fa-star"></i></button>
-                    <button class="star-button" onclick="rateItem(this, 3)"><i class="fas fa-star"></i></button>
-                    <button class="star-button" onclick="rateItem(this, 4)"><i class="fas fa-star"></i></button>
-                    <button class="star-button" onclick="rateItem(this, 5)"><i class="fas fa-star"></i></button>
-                </div>
-            </div> 
-        </div>      
-    </section>
     <!-- footer -->
     <footer style="background-color: hsl(20, 43%, 93%);">
         <br><br><br>
@@ -942,63 +988,61 @@
             <ul class="footer-colums">
                 <p style="color: hsl(357, 82%,35%);font-family: var(--ff-philosopher);">Our Pages</p>
                 <a href="../index.html"
-                    style="text-decoration: none;font-family: var(--ff-poppins);color: black;">Home</a>
-                <a href="#" style="text-decoration: none;font-family: var(--ff-poppins);color: black;">About</a>
+                    style="font-family: var(--ff-poppins);">Home</a>
+                <a href="#" style="font-family: var(--ff-poppins);">About</a>
                 <a href="services.html"
-                    style="text-decoration: none;font-family: var(--ff-poppins);color: black;">Services</a>
+                    style="font-family: var(--ff-poppins);">Services</a>
                 <a href="contact.html"
-                    style="text-decoration: none;font-family: var(--ff-poppins);color: black;">Contact</a>
-                <a href="cart.html" style="text-decoration: none;font-family: var(--ff-poppins);color: black;">Cart</a>
-                <a href="contributor.html" style="text-decoration: none;font-family: var(--ff-poppins);color: black;">Contributors</a>
+                    style="font-family: var(--ff-poppins);">Contact</a>
+                <a href="cart.html" style="font-family: var(--ff-poppins);">Cart</a>
+                <a href="contributor.html" style="font-family: var(--ff-poppins);">Contributors</a>
             </ul>
 
             <ul class="footer-colums">
                 <p style="color: hsl(357, 82%,35%);font-family: var(--ff-philosopher);"> Exclusive Offers</p>
-                <a style="font-family: var(--ff-poppins);color: black;">Retro Discounts</a>
-                <a style="font-family: var(--ff-poppins);color: black;">Limited-Time Promotions</a>
-                <a style="font-family: var(--ff-poppins);color: black;">Special Event Packages</a>
-                <a style="font-family: var(--ff-poppins);color: black;">Membership Benefits</a>
-                <a style="font-family: var(--ff-poppins);color: black;">Early Access to New Collections</a>
-                <a style="font-family: var(--ff-poppins);color: black;">VIP Retro Events</a>
-                <a style="font-family: var(--ff-poppins);color: black;">Personalized Culinary Experiences</a>
+                <a style="font-family: var(--ff-poppins);">Retro Discounts</a>
+                <a style="font-family: var(--ff-poppins);">Limited-Time Promotions</a>
+                <a style="font-family: var(--ff-poppins);">Special Event Packages</a>
+                <a style="font-family: var(--ff-poppins);">Membership Benefits</a>
+                <a style="font-family: var(--ff-poppins);">Early Access to New Collections</a>
+                <a style="font-family: var(--ff-poppins);">VIP Retro Events</a>
+                <a style="font-family: var(--ff-poppins);">Personalized Culinary Experiences</a>
 
             </ul>
 
             <ul class="footer-colums">
                 <p style="color: hsl(357, 82%,35%);font-family: var(--ff-philosopher);">Payment Products</p>
-                <a style="font-family: var(--ff-poppins);color: black;">Secure Checkout</a>
-                <a style="font-family: var(--ff-poppins);color: black;">Credit/Debit Cards</a>
-                <a style="font-family: var(--ff-poppins);color: black;">Online Payment</a>
-                <a style="font-family: var(--ff-poppins);color: black;">Mobile Wallets</a>
-                <a style="font-family: var(--ff-poppins);color: black;">Contactless Payments</a>
+                <a style="font-family: var(--ff-poppins);">Secure Checkout</a>
+                <a style="font-family: var(--ff-poppins);">Credit/Debit Cards</a>
+                <a style="font-family: var(--ff-poppins);">Online Payment</a>
+                <a style="font-family: var(--ff-poppins);">Mobile Wallets</a>
+                <a style="font-family: var(--ff-poppins);">Contactless Payments</a>
             </ul>
+            <form id="contactForm">
+                <h3 style="font-family: var(--ff-philosopher); color: hsl(357, 82%,35%); font-size: 26px; margin-bottom: 3px;">
+                    Contact Us!
+                </h3>
+            
+                <!-- Email Input with Icon -->
+                <div style="position: relative; margin-bottom: 15px;">
+                    <i class="fas fa-envelope" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); font-size: 14px; color: hsl(208, 7%,46%);"></i>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required 
+                           style="padding-left: 30px; width: 100%;">
+                </div>
+            
+                <!-- Message Input with Icon -->
+                <div style="position: relative; margin-bottom: 15px;">
+                    <i class="fas fa-comment" style="position: absolute; left: 10px; top: 10px; font-size: 14px; color: hsl(208, 7%,46%);"></i>
+                    <textarea id="message" name="message" placeholder="Your Message" required 
+                              style="padding-left: 30px; width: 100%;"></textarea>
+                </div>
+            
+                <!-- Submit Button -->
+                <button id="butt" type="submit" style="font-family: var(--ff-poppins);">Send Message</button>
+            </form>
 
 <!-- Include Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
-<form id="contactForm">
-    <h3 style="font-family: var(--ff-philosopher); color: hsl(357, 82%,35%); font-size: 26px; margin-bottom: 3px;">
-        Contact Us!
-    </h3>
-
-    <!-- Email Input with Icon -->
-    <div style="position: relative; margin-bottom: 15px;">
-        <i class="fas fa-envelope" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); font-size: 14px; color: hsl(208, 7%,46%);"></i>
-        <input type="email" id="email" name="email" placeholder="Your Email" required 
-               style="padding-left: 30px; width: 100%;">
-    </div>
-
-    <!-- Message Input with Icon -->
-    <div style="position: relative; margin-bottom: 15px;">
-        <i class="fas fa-comment" style="position: absolute; left: 10px; top: 10px; font-size: 14px; color: hsl(208, 7%,46%);"></i>
-        <textarea id="message" name="message" placeholder="Your Message" required 
-                  style="padding-left: 30px; width: 100%;"></textarea>
-    </div>
-
-    <!-- Submit Button -->
-    <button id="butt" type="submit" style="font-family: var(--ff-poppins);">Send Message</button>
-</form>
-
 
 
         </div>
@@ -1180,7 +1224,9 @@
         // });
     </script>
     <script src="cart.js"></script>
-
+    <div class="gtranslate_wrapper"></div>
+    <script>window.gtranslateSettings = {"default_language":"en","detect_browser_language":true,"wrapper_selector":".gtranslate_wrapper"}</script>
+    <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
 </body>
 
 </html>
