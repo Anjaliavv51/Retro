@@ -44,6 +44,7 @@ body {
 }
 
 .nav-link {
+    border-radius: 12px;
     color: black;
     font-size: 1rem;
     font-family: var(--ff-philosopher);
@@ -51,6 +52,9 @@ body {
     /* Remove default underline */
     position: relative;
     transition: all 0.3s ease;
+}
+.nav-link:hover{
+    background-color: pink;
 }
 
 .nav-item.dropdown .nav-link {
