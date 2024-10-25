@@ -202,85 +202,112 @@
         }
 
         .foot-panel2 {
-            background-color: rgb(138, 37, 37);
-            color: white;
-            height: 300px;
-            /* height: fit-content; */
-            display: flex;
-            /* padding: 10px; */
-            justify-content: space-evenly;
-        }
+    background-color: rgb(138, 37, 37);
+    color: white;
+    height: auto; /* Adjusted to auto for dynamic content */
+    padding: 40px 20px; /* Increased padding for a larger appearance */
+    display: flex;
+    justify-content: space-between; /* Changed to space-between for better alignment */
+    flex-wrap: wrap; /* Allows content to wrap on smaller screens */
+}
 
-        .foot-panel2 ul {
-            margin-top: 20px;
-        }
+.foot-panel2 ul {
+    list-style: none; /* Ensures no default list styles */
+    padding: 0; /* Removes default padding */
+    margin: 0; /* Removes default margin */
+    flex: 1 1 200px; /* Flexible basis for responsiveness */
+    margin-top: 20px;
+}
 
-        ul p {
-            font-weight: 700;
-        }
+ul p {
+    font-weight: 700;
+    font-size: 1.1rem; /* Slightly larger font size for emphasis */
+    margin-bottom: 10px; /* Space between heading and links */
+}
 
-        ul a {
-            display: block;
-            font-size: 0.85rem;
-            margin-top: 10px;
-            color: #dddddd;
-            text-decoration: none;
-        }
+ul a {
+    display: block;
+    font-size: 0.9rem; /* Increased font size for better readability */
+    margin-top: 8px; /* Adjusted margin for spacing */
+    color: #dddddd;
+    text-decoration: none;
+    transition: color 0.3s ease; /* Smooth color transition */
+}
 
-        footer {
-            --ff-philosopher: "Philosopher", sans-serif;
-            --ff-poppins: "Poppins", sans-serif;
-        }
+ul a:hover {
+    color: #fff; /* Changes link color on hover */
+}
 
-        #contactForm {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            width: 20rem;
-            height: max-content;
-        }
+footer {
+    --ff-philosopher: "Philosopher", sans-serif;
+    --ff-poppins: "Poppins", sans-serif;
+}
 
-        #contactForm input,
-        #contactForm textarea {
-            width: 100%;
-            padding: 20px;
-            margin: 5px;
-            border-radius: 10px;
-            border: none;
-        }
+#contactForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Full width for responsiveness */
+    max-width: 400px; /* Limit maximum width */
+    margin: 0 auto; /* Center the form */
+}
 
-        #contactForm h3 {
-            height: 30px;
-            color: #141414;
-        }
+#contactForm input,
+#contactForm textarea {
+    width: 100%;
+    padding: 15px; /* Adjusted padding for better spacing */
+    margin: 8px 0; /* Increased margin for spacing */
+    border-radius: 10px;
+    border: 1px solid #ccc; /* Add border for better visibility */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: border-color 0.3s ease; /* Smooth border transition */
+}
 
-        #contactForm textarea {
-            height: 100px;
-            resize: none;
-        }
+#contactForm input:focus,
+#contactForm textarea:focus {
+    border-color: rgb(196, 74, 74); /* Highlight border on focus */
+}
 
-        #contactForm button {
-            padding: 10px 20px;
-            background-color: rgb(196, 74, 74);
-            color: rgb(15, 14, 14);
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-top: 5px;
-        }
+#contactForm h3 {
+    height: 30px;
+    color: #141414;
+    margin-bottom: 20px; /* Space below the title */
+}
 
-        .foot_panel4 {
-            background-color: rgb(66, 16, 16);
-            color: white;
-            height: 160px;
-            font-size: 0.9rem;
-            text-align: center;
-        }
+#contactForm textarea {
+    height: 120px; /* Slightly larger textarea */
+    resize: none;
+}
 
-        .pages {
-            padding-top: 25px;
-        }
+#contactForm button {
+    padding: 12px 24px; /* Increased padding for the button */
+    background-color: rgb(196, 74, 74);
+    color: white; /* Changed to white for better contrast */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+#contactForm button:hover {
+    background-color: rgb(166, 64, 64); /* Darker shade on hover */
+}
+
+.foot_panel4 {
+    background-color: rgb(66, 16, 16);
+    color: white;
+    height: auto; /* Adjusted to auto for dynamic content */
+    font-size: 0.9rem;
+    text-align: center;
+    padding: 20px; /* Added padding for space */
+}
+
+.pages {
+    padding-top: 25px;
+}
+
 
         .social-icons a {
             font-size: 1.2rem;
