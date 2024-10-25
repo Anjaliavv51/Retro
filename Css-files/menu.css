@@ -1,104 +1,121 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
 
-:root{
-    --green: rgb(139, 36, 36);;
-    --black:  rgb(139, 36, 36);;
-    --light-color:#666;
-    --box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
+:root {
+    --green: rgb(139, 36, 36);
+    --black: rgb(139, 36, 36);
+    --light-color: #666;
+    --box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
 }
 
-*{
+* {
     font-family: 'Nunito', sans-serif;
-    margin:0; padding:0;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     text-decoration: none;
-    outline: none; border:none;
+    outline: none;
+    border: none;
     text-transform: capitalize;
     transition: all .2s linear;
 }
 
-html{
+html {
     font-size: 62.5%;
     overflow-x: hidden;
     scroll-padding-top: 5.5rem;
     scroll-behavior: smooth;
 }
 
-section{
-    padding:2rem 9%;
+body {
+    background-attachment: fixed;
+    line-height: 1.6; /* Improved line height for readability */
 }
 
-section:nth-child(even){
-    background:#eee;
+section {
+    padding: 2rem 9%;
 }
 
-.sub-heading{
+section:nth-child(even) {
+    background: #eee; /* Keep existing alternating section background */
+}
+
+.sub-heading {
     text-align: center;
-    color:var(--green);
+    color: var(--green);
     font-size: 2.5rem;
     padding-top: 1rem;
     margin-bottom: 10px;
 }
 
-.heading{
+.heading {
     text-align: center;
-    color:var(--black);
+    color: var(--black);
     font-size: 3rem;
     padding-bottom: 2rem;
     text-transform: uppercase;
 }
 
-.btn{
+.btn {
     text-decoration: none;
-        background-color: brown;
-        border: 3px solid rgb(255, 255, 255);
-        padding: 15px 5px;
-        border-radius: 15px;
-        display: inline-block;
-        color: white;
-        transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease; /* Smooth transition */   
+    background-color: brown; /* Original color retained */
+    border: 3px solid rgb(255, 255, 255);
+    padding: 15px 5px;
+    border-radius: 15px;
+    display: inline-block;
+    color: white;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+    font-size: 1.5rem; /* Increased font size for better readability */
 }
 
-.btn:hover{
+.btn:hover {
     background-color: #ffffff;
-  color: brown !important;
-  border: 3px solid rgb(165, 42, 42);
-  transform: scale(1.01); 
-  animation: bounce 0.5s;
+    color: brown !important;
+    border: 3px solid rgb(165, 42, 42);
+    transform: scale(1.05); /* Slightly increase scale for emphasis */
+    animation: bounce 0.5s;
 }
 
-
-.menu .box-container{
+.menu .box-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    gap:1.5rem;
+    gap: 2rem; /* Increased gap for better spacing */
+    margin-top: 2rem; /* Space above the menu */
 }
 
-.menu .box-container .box{
+.menu .box-container .box {
     background: #fff;
-    border:.1rem solid rgba(0,0,0,.2);
+    border: .1rem solid rgba(0, 0, 0, .2);
     border-radius: .5rem;
-    box-shadow: var(--box-shadow);    
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
 }
 
-.menu .box-container .box .image{
+.menu .box-container .box:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+    box-shadow: 0 0 15px rgba(139, 36, 36, 0.5); /* More pronounced shadow */
+    border-color: rgb(139, 36, 36);
+}
+
+.menu .box-container .box .image {
     height: 25rem;
     width: 100%;
-    padding:1.5rem;
+    padding: 1.5rem;
     overflow: hidden;
     position: relative;
+    border-radius: .5rem; /* Ensured rounded corners */
 }
 
-.menu .box-container .box .image img{
+.menu .box-container .box .image img {
     height: 100%;
     width: 100%;
     border-radius: .5rem;
     object-fit: cover;
 }
 
-.menu .box-container .box .image .fa-heart{
+.menu .box-container .box .image .fa-heart {
     position: absolute;
-    top:2.5rem; right: 2.5rem;
+    top: 2.5rem;
+    right: 2.5rem;
     height: 5rem;
     width: 5rem;
     line-height: 5rem;
@@ -106,49 +123,44 @@ section:nth-child(even){
     font-size: 2rem;
     background: #fff;
     border-radius: 50%;
-    color:var(--black);
+    color: var(--black);
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
 }
 
-.menu .box-container .box .image .fa-heart:hover{
+.menu .box-container .box .image .fa-heart:hover {
     background-color: var(--green);
-    color:#fff;
+    color: #fff;
 }
 
-.menu .box-container .box .content{
-    padding:2rem;
+.menu .box-container .box .content {
+    padding: 2rem;
     padding-top: 0;
 }
- .menu .box-container .box:hover{
-  scale: 1.04;
-  box-shadow: solid  1px rgb(139, 36, 36);
-  border-color: rgb(139, 36, 36);
-} 
-.menu .box-container .box .content .stars{
+
+.menu .box-container .box .content .stars {
     padding-bottom: 1rem;
 }
 
-.menu .box-container .box .content .stars i{
-   font-size: 1.7rem;
-   color:var(--green);
+.menu .box-container .box .content .stars i {
+    font-size: 1.7rem;
+    color: var(--green);
 }
 
-.menu .box-container .box .content h3{
-    color:var(--black);
+.menu .box-container .box .content h3 {
+    color: var(--black);
     font-size: 2.5rem;
+    margin: 1rem 0; /* Added margin for spacing */
 }
 
-.menu .box-container .box .content p{
-    color:var(--light-color);
+.menu .box-container .box .content p {
+    color: var(--light-color);
     font-size: 1.6rem;
-    padding:.5rem 0;
+    padding: .5rem 0;
     line-height: 1.5;
 }
 
-.menu .box-container .box .content .price{
-    color:var(--green);
+.menu .box-container .box .content .price {
+    color: var(--green);
     margin-left: 1rem;
     font-size: 2.5rem;
-}
-body{
-  background-attachment: fixed;
 }
