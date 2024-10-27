@@ -237,36 +237,132 @@ body{
         </div>
         <div class="right-login">
           <div class="card-login">
-            <h1 style="font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%);">SIGN UP</h1>
+            <h1>SIGN UP</h1>
             <form id="signup-form">
               <div class="textfield">
-                <label for="name" style="font-family:var(--ff-philosopher);color: black;">Name</label>
-                <input type="text" id="name" name="name" placeholder="Enter your name" required style="font-family: var(--ff-philosopher);">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
                 <span id="name-error" class="error-message"></span>
               </div>
               <div class="textfield">
-                <label for="email" style="font-family: var(--ff-philosopher);color: black;">Email / User Name</label>
-                <input type="email" id="email" name="email" placeholder="Enter Email / UserName" required style="font-family: var(--ff-philosopher);">
+                <label for="email">Email / Username</label>
+                <input type="email" id="email" name="email" placeholder="Enter Email / Username" required>
                 <span id="email-error" class="error-message"></span>
               </div>
-
               <div class="textfield">
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password" placeholder="Enter your password">
-            </div>
-            <div class="show-pass-container">
+              </div>
+              <div class="show-pass-container">
                 <input type="checkbox" id="showPassword">
                 <label for="showPassword">Show Password</label>
-            </div>
-            
-              
+              </div>
             </form>
-            <div class="btnNext"><button type="submit" class="btn-login" style="font-family: var(--ff-philosopher);color: #ddd;">Register</button>
-              <button id="google-login" style="font-family: var(--ff-philosopher);color: #ddd;">Signup with Google</button></div>
+            <div class="btnNext">
+              <button type="submit" class="btn-login">Register</button>
+              <button id="google-login" class="btn-login">Signup with Google</button>
+            </div>
           </div>
-
           <p class="switch-link">Already have an account? <a href="login.html">Login</a></p>
         </div>
+        <style>
+          :root {
+            --ff-philosopher: 'Philosopher', sans-serif;
+          }
+      
+          body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f2f5;
+            font-family: Arial, sans-serif;
+          }
+      
+          .right-login {
+            max-width: 600px;
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+          }
+      
+          .card-login {
+            background-color: #f7f9fc;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            text-align: center;
+          }
+      
+          .card-login h1 {
+            font-family: var(--ff-philosopher);
+            color: hsl(203, 30%, 26%);
+            margin-bottom: 20px;
+          }
+      
+          .textfield {
+            margin-bottom: 20px;
+            text-align: left;
+          }
+      
+          .textfield label {
+            font-family: var(--ff-philosopher);
+            color: black;
+            display: block;
+            margin-bottom: 8px;
+          }
+      
+          .textfield input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-family: var(--ff-philosopher);
+            box-sizing: border-box;
+          }
+      
+          .show-pass-container {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+          }
+      
+          .show-pass-container label {
+            margin-left: 8px;
+          }
+      
+          .btnNext {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+          }
+      
+          .btn-login {
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-family: var(--ff-philosopher);
+            background-color: #333;
+            color: #ddd;
+          }
+      
+          #google-login {
+            background-color: #db4a39;
+          }
+      
+          .switch-link {
+            margin-top: 20px;
+            font-size: 0.9em;
+          }
+      
+          .switch-link a {
+            color: #007bff;
+            text-decoration: none;
+          }
+        </style>
+        
       </div>
       <script>
         const coords = { x: 0, y: 0 };
