@@ -346,18 +346,47 @@ body{
         defer>
         </script>
         <script>
-          // JavaScript to toggle password visibility
-          const passwordField = document.getElementById('password');
-          const showPasswordCheckbox = document.getElementById('showPassword');
-      
-          showPasswordCheckbox.addEventListener('change', () => {
+            // JavaScript to toggle password visibility
+            const passwordField = document.getElementById('password');
+            const showPasswordCheckbox = document.getElementById('showPassword');
+            const passwordMessage = document.getElementById('passwordMessage');
+          
+            showPasswordCheckbox.addEventListener('change', () => {
               if (showPasswordCheckbox.checked) {
-                  passwordField.type = 'text';  // Show password
+                passwordField.type = 'text';  // Show password
               } else {
-                  passwordField.type = 'password';  // Hide password
+                passwordField.type = 'password';  // Hide password
               }
-          });
-      </script>
+            });
+          
+            // Function to validate password constraints
+            function validatePassword() {
+              const password = passwordField.value;
+              const minLength = 8;
+              const hasNumber = /\d/;
+              const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/;
+          
+              let message = '';
+          
+              if (password.length < minLength) {
+                message += `Password must be at least ${minLength} characters long. `;
+              }
+              if (!hasNumber.test(password)) {
+                message += 'Password must contain at least one number. ';
+              }
+              if (!hasSpecialChar.test(password)) {
+                message += 'Password must contain at least one special character. ';
+              }
+          
+              passwordMessage.textContent = message;
+            }
+          
+            // Add event listener to password field
+            passwordField.addEventListener('input', validatePassword);
+          </script>
+          
+          <!-- Add this element to display password validation messages -->
+          <div id="passwordMessage" style="color: red;"></div>
     <div class="gtranslate_wrapper"></div>
     <script>window.gtranslateSettings = {"default_language":"en","detect_browser_language":true,"wrapper_selector":".gtranslate_wrapper"}</script>
     <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
