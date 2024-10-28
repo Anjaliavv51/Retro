@@ -479,7 +479,7 @@ p {
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" onclick="redirectSignup()"
-                                style="color: black; font-family: var(--ff-philosopher);">Signup</a>
+                                 style="color: black; font-family: var(--ff-philosopher);">Signup</a>
                         </li>
                         <li class="nav-item" style="list-style-type: none;">
                             <a class="nav-link" href="Html-files/cart.html" style="color: black;"><i
@@ -1119,6 +1119,7 @@ new google.translate.TranslateElement({
             <div class="foot-panel2" style="background-color:hsl(20, 43%, 93%);font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
                 <ul>
                     <p style="color: hsl(357, 82%,35%);font-family: var(--ff-philosopher);text-align: left;">Our Pages</p>
+
                     <ul>
                         <li><a href="#" class="hover-underline-animation" style="color: black;">Home</a></li>
                         <li><a href="Html-files/menu.html" class="hover-underline-animation" style="color: black;">About</a></li>
@@ -1356,4 +1357,8 @@ scrollToTopBtn.addEventListener("click", function() {
 <script>
     AOS.init();
   </script>
+
+<script>
+    document.getElementById("copyright").textContent = new Date().getFullYear();
+</script>  
 </html>
