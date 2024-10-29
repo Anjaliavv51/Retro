@@ -316,10 +316,53 @@
         .fa-brands.fa-x-twitter:hover {
             color: #181e20 !important;
         }
+
+
+        
+
+  .popup-modal {
+    position: fixed;
+    top: 2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffffff;
+    color: #000000;
+    padding: 18px 32.5px;
+    border-radius: 30px;
+    font-size: 16px;
+    z-index: 100000;
+    box-shadow: 0 15px 50px 0 rgba(0,0,0,.35);
+    font-size: .9rem;
+    display: flex;
+    display: none;
+    gap: .5rem;
+    align-items: center;
+    width: 40px;
+    max-width: 90%;
+    width: max-content;
+    text-align: center;
+  }
+  
+  .popup-modal.show {
+    display: flex; 
+    gap: .5rem;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .popup-modal.fade-out {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+        
     </style>
 </head>
 
 <body>
+     <div id="popup-modal" class="popup-modal">
+        <p id="popup-message"></p>
+    </div>
+    
     <div class="circle-container">
         <div class="circle" style="background-color: rgb(255, 181, 107); left: 504px; top: 59px; scale: 1;"></div>
         <div class="circle" style="background-color: rgb(253, 175, 105); left: 504px; top: 59px; scale: 0.95;"></div>
@@ -977,8 +1020,33 @@
                 const badgeCountElement = document.getElementById('badgeCount');
                 let currentCount = parseInt(badgeCountElement.innerText);
                 badgeCountElement.innerText = currentCount + 1;
+                showPopup("Item added to Cart succesfully!!");
             })
         }
+        
+        function showPopup(message,type='success') {
+            let popupModal = document.getElementById('popup-modal');
+            let popupMessage = document.getElementById('popup-message');
+            
+            if (type==='error'){
+                popupMessage.innerHTML = `<i class="fa-solid fa-circle-xmark" style="color: #dc3545"></i>   ${message}`;
+            } 
+            else {
+                popupMessage.innerHTML = `<i class="fa-solid fa-circle-check" style="color: #05a571"></i>   ${message}`;
+            }
+        
+            popupModal.classList.add('show');
+            setTimeout(() => {
+                popupModal.classList.add('fade-out');
+            }, 5000);
+        
+            setTimeout(() => {
+                popupModal.classList.remove('show', 'fade-out');
+            }, 6000); 
+        }
+
+
+
 
         // document.getElement('add-to-cart-button').addEventListener('click', function() {
         //     const badgeCountElement = document.getElementById('badgeCount');
