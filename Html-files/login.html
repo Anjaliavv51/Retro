@@ -9,15 +9,13 @@
   <link rel="stylesheet" href="../Css-files/login1.css">
   <title>Retro</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <style>
-
-      .circle{
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    .circle {
       z-index: 998;
       width: 20px;
       height: 20px;
@@ -25,30 +23,158 @@
       pointer-events: none;
       animation: colors 5s infinite;
       position: fixed;
-      transform: translate(-50%,-50%);
-      }
-      .circle::before {
+      transform: translate(-50%, -50%);
+    }
+    .circle::before {
       content: "";
       position: fixed;
       width: 50px;
       height: 50px;
       opacity: 0.2;
-      transform: translate(-30%,-30%);
+      transform: translate(-30%, -30%);
       border-radius: 50%;
+    }
+    .container {
+      width: 350px;
+      height: 500px;
+      perspective: 800px;
+    }
+    .container:hover > .card {
+      cursor: pointer;
+      transform: rotateY(180deg);
+    }
+    .card {
+      height: 100%;
+      width: 100%;
+      position: relative;
+      transition: transform 1500ms;
+      transform-style: preserve-3d;
+      border-radius: 40px;
+    }
+    .front,
+    .back {
+      height: 100%;
+      width: 100%;
+      border-radius: 2rem;
+      box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
+      position: absolute;
+      backface-visibility: hidden;
+    }
+    .front {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .back {
+      background-color: #3a3a3a;
+      transform: rotateY(180deg);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 5rem;
+    }
+    :root {
+      --ff-philosopher: "Philosopher", sans-serif;
+      --ff-poppins: "Poppins", sans-serif;
+    }
+    .switch-link {
+      margin-top: 20px;
+      font-family: var(--ff-poppins);
+      text-align: center;
+      color: hsl(203, 30%, 26%);
+    }
+    .switch-link a {
+      color: hsl(0, 100%, 50%);
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    .switch-link a:hover {
+      color: hsl(203, 30%, 26%);
+    }
+    .forgot-link {
+      text-decoration: none;
+      color: #3a3a3a;
+      margin-bottom: 10px;
+    }
+    .forgot-link:hover {
+      text-decoration: underline;
+      color: #000;
+    }
+    .show-password {
+      position: absolute;
+      margin-top: 10px;
+      right: 25px;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      font-size: 1.2em;
+      color: #000;
+    }
+  </style>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <style>
+      /* General styles for the circles */
+      .circle-container {
+        position: relative;
       }
-      </style>
-      <style>
-        .container {
+    
+      .circle {
+        z-index: 998;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        pointer-events: none;
+        animation: colors 5s infinite;
+        position: fixed;
+        transform: translate(-50%, -50%);
+      }
+    
+      .circle::before {
+        content: "";
+        position: fixed;
+        width: 50px;
+        height: 50px;
+        opacity: 0.2;
+        transform: translate(-30%, -30%);
+        border-radius: 50%;
+      }
+    
+      /* Main container */
+      .main-login {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        min-height: 100vh;
+        overflow-y: auto;
+      }
+    
+      /* Styling for left side (login info) */
+      .left-login {
+        flex: 1;
+        text-align: center;
+        padding: 20px;
+      }
+    
+      .container {
         width: 350px;
         height: 500px;
         perspective: 800px;
       }
-      
+    
       .container:hover > .card {
         cursor: pointer;
         transform: rotateY(180deg);
       }
-      
+    
       .card {
         height: 100%;
         width: 100%;
@@ -57,7 +183,7 @@
         transform-style: preserve-3d;
         border-radius: 40px;
       }
-      
+    
       .front,
       .back {
         height: 100%;
@@ -67,14 +193,14 @@
         position: absolute;
         backface-visibility: hidden;
       }
-      
+    
       .front {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
       }
-      
+    
       .back {
         background-color: #3a3a3a;
         transform: rotateY(180deg);
@@ -84,63 +210,76 @@
         align-items: center;
         gap: 5rem;
       }
-      :root{
-                  --ff-philosopher: "Philosopher", sans-serif;
-                  --ff-poppins: "Poppins", sans-serif;
-              }
-      </style>
-      <style>
-        /* Styles for the switch link */
-        .switch-link {
-          margin-top: 20px;
-          font-family: var(--ff-poppins);
-          text-align: center;
-          color: hsl(203, 30%, 26%);
+    
+
+    
+      /* Media Queries for smaller screens */
+      @media (max-width: 768px) {
+        .main-login {
+          flex-direction: column;
         }
     
-        .switch-link a {
-          color: hsl(0, 100%, 50%);
-          text-decoration: none;
-          font-weight: bold;
-          transition: color 0.3s ease;
+        .container {
+          width: 300px;
+          height: 400px;
         }
     
-        .switch-link a:hover {
-          color: hsl(203, 30%, 26%);
+        .left-login,
+        .right-login {
+          flex: unset;
+          width: 100%;
+          padding: 10px;
         }
-        .forgot-link{
-          text-decoration: none;
-          color: #3a3a3a;
-          margin-bottom: 10px;
+    
+        .card-login {
+          padding: 15px;
+          width: 100%;
         }
-        .forgot-link:hover{
-          text-decoration: underline;
-          color: #000;
+        .right-login{
+          height: 60vh;
         }
-      </style>
+    
+        .btn-login,
+        #google-login {
+          width: 100%;
+          padding: 12px;
+        }
+    
+        h1 {
+          font-size: 24px;
+        }
+      }
+    
+      @media (max-width: 480px) {
+        .container {
+          width: 250px;
+          height: 350px;
+        }
+    
+        .card-login {
+          padding: 10px;
+        }
+    
+        .textfield label {
+          font-size: 14px;
+        }
+    
+        .textfield input {
+          padding: 8px;
+        }
+    
+        .btn-login,
+        #google-login {
+          padding: 10px;
+          font-size: 14px;
+        }
+      }
+    </style>
+
 </head>
 <body>
   <div class="circle-container">
-      <div class="circle" style="background-color: rgb(255, 181, 107) !important; left: 504px; top: 59px; scale: 1;"></div>
-      <div class="circle" style="background-color: rgb(253, 175, 105) !important; left: 504px; top: 59px; scale: 0.95;"></div>
-      <div class="circle" style="background-color: rgb(248, 157, 99) !important; left: 504px; top: 59px; scale: 0.9;"></div>
-      <div class="circle" style="background-color: rgb(245, 151, 97) !important; left: 504px; top: 59px; scale: 0.85;"></div>
-      <div class="circle" style="background-color: rgb(239, 134, 94) !important; left: 504px; top: 59px; scale: 0.8;"></div>
-      <div class="circle" style="background-color: rgb(236, 128, 93) !important; left: 504px; top: 59px; scale: 0.75;"></div>
-      <div class="circle" style="background-color: rgb(227, 110, 92) !important; left: 504px; top: 59px; scale: 0.7;"></div>
-      <div class="circle" style="background-color: rgb(223, 104, 92) !important; left: 504px; top: 59px; scale: 0.65;"></div>
-      <div class="circle" style="background-color: rgb(213, 88, 92) !important; left: 504px; top: 59px; scale: 0.6;"></div>
-      <div class="circle" style="background-color: rgb(209, 82, 92) !important; left: 504px; top: 59px; scale: 0.55;"></div>
-      <div class="circle" style="background-color: rgb(197, 65, 93) !important; left: 504px; top: 59px; scale: 0.5;"></div>
-      <div class="circle" style="background-color: rgb(192, 59, 93) !important; left: 504px; top: 59px; scale: 0.45;"></div>
-      <div class="circle" style="background-color: rgb(178, 44, 94) !important; left: 504px; top: 59px; scale: 0.4;"></div>
-      <div class="circle" style="background-color: rgb(172, 38, 94) !important; left: 504px; top: 59px; scale: 0.35;"></div>
-      <div class="circle" style="background-color: rgb(156, 21, 95) !important; left: 504px; top: 59px; scale: 0.3;"></div>
-      <div class="circle" style="background-color: rgb(149, 15, 95) !important; left: 504px; top: 59px; scale: 0.25;"></div>
-      <div class="circle" style="background-color: rgb(131, 0, 96) !important; left: 504px; top: 59px; scale: 0.2;"></div>
-      <div class="circle" style="background-color: rgb(124, 0, 96) !important; left: 504px; top: 59px; scale: 0.15;"></div>
-      <div class="circle" style="background-color: rgb(104, 0, 96) !important; left: 504px; top: 59px; scale: 0.1;"></div>
-      <div class="circle" style="background-color: rgb(96, 0, 95) !important; left: 504px; top: 59px; scale: 0.05;"></div>
+    <!-- Circle elements -->
   </div>
   <div class="main-login">
     <div class="left-login" style="background-color: transparent;">
@@ -148,42 +287,44 @@
       <div class="container">
         <div class="card">
           <div class="front" style="align-content: center;font-family: var(--ff-philosopher);">
-          <img src="../Images/Loginsave.png" alt="Icon" style="width: 150px; height: auto; margin: 20px auto 20px; display: block;">
-           <b style="transform: rotate(360deg);font-size: 30px;color: hsl(203, 30%,26%);"> Login to Save your Data!</b>
+            <b style="transform: rotate(360deg);font-size: 30px;color: hsl(203, 30%,26%);"> Login to Save your Data!</b>
+            <img src="../Images/Loginsave.png" alt="Icon" style="width: 150px; height: auto; margin: 20px auto 20px; display: block;">
+            <b style="transform: rotate(360deg);font-size: 30px;color: hsl(203, 30%,26%);"> Login to Save your Data!</b>
           </div>
           <div class="back" style="align-content: center;font-family: var(--ff-philosopher);background-color: transparent;color: hsl(203, 30%,26%);">
             <img src="../Images/Login.png" alt="Icon" style="width: 100px; height: auto;  display: block;">
-            <b style="font-size: 50px; margin-top: -50px;">Login Here
-            </b>
+            <b style="font-size: 50px; margin-top: -50px;">Login Here</b>
             <b style="font-size: 20px; display: block; margin-top: -70px;">Vintage Collection is waiting for You</b>
           </div>
         </div>
       </div>
     </div>
-  <form id="loginForm" action="logged.html">
-    <div class="right-login">
-      <div class="card-login">
-        <h1 style="color: hsl(203, 30%,26%);font-family: var(--ff-philosopher);">LOGIN</h1>
-        <div class="textfield">
-          <label for="usuario" style="color: black;font-family:var(--ff-poppins);">Email / User Name</label>
-          <input required type="text" id="email" name="email" placeholder="Enter Email / UserName" style="font-family:var(--ff-poppins);">
+    <form id="loginForm" action="logged.html">
+      <div class="right-login">
+        <div class="card-login">
+          <h1 style="color: hsl(203, 30%,26%);font-family: var(--ff-philosopher);">LOGIN</h1>
+          <div class="textfield">
+            <label for="usuario" style="color: black;font-family:var(--ff-poppins);">Email / User Name</label>
+            <input required type="text" id="email" name="email" placeholder="Enter Email / UserName" style="font-family:var(--ff-poppins);">
+          </div>
+          <div class="textfield" style="position: relative;">
+            <label required for="password" style="color: black;font-family:var(--ff-poppins);">Password</label>
+            <input required type="password" id="password" name="password" placeholder="Enter Password" style="font-family:var(--ff-poppins);">
+            <span class="show-password" onclick="togglePasswordVisibility()">
+              <i class="fas fa-eye" id="togglePasswordIcon"></i>
+            </span>
+          </div>
+          <button type="submit" class="btn-login" style="color: black;font-family:var(--ff-poppins);">Login</button>
+          <span>or</span>
+          <button id="google-login" style="color: black;font-family:var(--ff-poppins); background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48cGF0aCBkPSJNMTcuNiA5LjJsLS4xLTEuOEg5djMuNGg0LjhDMTMuNiAxMiAxMyAxMyAxMiAxMy42djIuMmgzYTguOCA4LjggMCAwIDAgMi42LTYuNnoiIGZpbGw9IiM0Mjg1RjQiIGZpbGwtcnVsZT0ibm9uemVybyIvPjxwYXRoIGQ9Ik05IDE4YzIuNCAwIDQuNS0uOCA2LTIuMmwtMy0yLjJhNS40IDUuNCAwIDAgMS04LTIuOUgxVjEzYTkgOSAwIDAgMCA4IDV6IiBmaWxsPSIjMzRBODUzIiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNNCAxMC43YTUuNCA1LjQgMCAwIDEgMC0zLjRWNUgxYTkgOSAwIDAgMCAwIDhsMy0yLjN6IiBmaWxsPSIjRkJCQzA1IiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNOSAzLjZjMS4zIDAgMi41LjQgMy40IDEuM0wxNSAyLjNBOSA5IDAgMCAwIDEgNWwzIDIuNGE1LjQgNS40IDAgMCAxIDUtMy43eiIgZmlsbD0iI0VBNDMzNSIgZmlsbC1ydWxlPSJub256ZXJvIi8+PHBhdGggZD0iTTAgMGgxOHYxOEgweiIvPjwvZz48L3N2Zz4=); background-repeat: no-repeat; background-position: 25% 50%; background-size: 30px;">Login with google</button>
+          <p id="error-message" style="color: red; font-family: var(--ff-poppins);"></p>
+          <a href="forgot-pass.html" class="forgot-link">Forgot Password ?</a>
+          <p class="switch-link">Don’t have an account? <a href="signup.html">Sign Up</a></p>
         </div>
-        <div class="textfield">
-          <label required for="password" style="color: black;font-family:var(--ff-poppins);">Password</label>
-          <input required type="password" id="password" name="password" placeholder="Enter Password" style="font-family:var(--ff-poppins);">
-        </div>
-        <button type="submit" class="btn-login" style="color: black;font-family:var(--ff-poppins);">Login</button>
-        <span>or</span>
-        <button id="google-login" style="color: black;font-family:var(--ff-poppins); background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48cGF0aCBkPSJNMTcuNiA5LjJsLS4xLTEuOEg5djMuNGg0LjhDMTMuNiAxMiAxMyAxMyAxMiAxMy42djIuMmgzYTguOCA4LjggMCAwIDAgMi42LTYuNnoiIGZpbGw9IiM0Mjg1RjQiIGZpbGwtcnVsZT0ibm9uemVybyIvPjxwYXRoIGQ9Ik05IDE4YzIuNCAwIDQuNS0uOCA2LTIuMmwtMy0yLjJhNS40IDUuNCAwIDAgMS04LTIuOUgxVjEzYTkgOSAwIDAgMCA4IDV6IiBmaWxsPSIjMzRBODUzIiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNNCAxMC43YTUuNCA1LjQgMCAwIDEgMC0zLjRWNUgxYTkgOSAwIDAgMCAwIDhsMy0yLjN6IiBmaWxsPSIjRkJCQzA1IiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNOSAzLjZjMS4zIDAgMi41LjQgMy40IDEuM0wxNSAyLjNBOSA5IDAgMCAwIDEgNWwzIDIuNGE1LjQgNS40IDAgMCAxIDUtMy43eiIgZmlsbD0iI0VBNDMzNSIgZmlsbC1ydWxlPSJub256ZXJvIi8+PHBhdGggZD0iTTAgMGgxOHYxOEgweiIvPjwvZz48L3N2Zz4=); background-repeat: no-repeat; background-position: 25% 50%; background-size: 30px;">Login with google</button>
-        <p id="error-message" style="color: red; font-family: var(--ff-poppins);"></p>
-        <a href="forgot-pass.html" class="forgot-link">Forgot Password ?</a>
-        <p class="switch-link">Don’t have an account? <a href="signup.html">Sign Up</a></p>
       </div>
-    </div>
-</form>
-
+    </form>
+  </div>
   <script>
-
     const coords = { x: 0, y: 0 };
     const circles = document.querySelectorAll(".circle");
 
@@ -221,11 +362,9 @@
     window.addEventListener("mousemove", function (e) {
       coords.x = e.clientX;
       coords.y = e.clientY;
-
     });
 
     function animateCircles() {
-
       let x = coords.x;
       let y = coords.y;
 
@@ -247,44 +386,60 @@
     }
 
     animateCircles();
-    
-// Form submission event listener
-document.getElementById('loginForm').addEventListener('submit', function(event) {
-    // Prevent form submission
-    event.preventDefault();
 
-    // Get the input values
-    const emailInput = document.getElementById('email').value;
-    const passwordInput = document.getElementById('password').value;
+    // Form submission event listener
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+      // Prevent form submission
+      event.preventDefault();
 
-    // Regular expression for email validation (simple check)
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      // Get the input values
+      const emailInput = document.getElementById('email').value;
+      const passwordInput = document.getElementById('password').value;
 
-    // Password validation (at least 8 characters)
-    const isValidPassword = passwordInput.length >= 8;
+      // Regular expression for email validation (simple check)
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    // Clear previous error message
-    document.getElementById('error-message').textContent = '';
+      // Password validation (at least 8 characters)
+      const isValidPassword = passwordInput.length >= 8;
 
-    // Validate the email and password separately
-    if (!emailPattern.test(emailInput)) {
+      // Clear previous error message
+      document.getElementById('error-message').textContent = '';
+
+      // Validate the email and password separately
+      if (!emailPattern.test(emailInput)) {
         // Display an error message if the email format is incorrect
         document.getElementById('error-message').textContent = 'Invalid email format.';
-    } else if (!isValidPassword) {
+      } else if (!isValidPassword) {
         // Display an error message if the password is too short
         document.getElementById('error-message').textContent = 'Password must be at least 8 characters.';
-    } else {
+      } else {
         // If both are valid, redirect to logged.html
         window.location.assign('logged.html');
-    }
-});
+      }
+    });
 
+    // Toggle password visibility
+    function togglePasswordVisibility() {
+      const passwordField = document.getElementById('password');
+      const toggleIcon = document.getElementById('togglePasswordIcon');
+      if (passwordField.type === 'password') {
+        passwordField.type = 'text';
+        toggleIcon.classList.remove('fa-eye');
+        toggleIcon.classList.add('fa-eye-slash');
+      } else {
+        passwordField.type = 'password';
+        toggleIcon.classList.remove('fa-eye-slash');
+        toggleIcon.classList.add('fa-eye');
+      }
+    }
   </script>
   <script>
     window.embeddedChatbotConfig = {
-    chatbotId: "dGlQ5bP-F7GodLWzgrVAx",
-    domain: "www.chatbase.co"
+      chatbotId: "dGlQ5bP-F7GodLWzgrVAx",
+      domain: "www.chatbase.co"
     }
+  </script>
+  <script src="https://www.chatbase.co/embed.min.js" chatbotId="dGlQ5bP-F7GodLWzgrVAx" domain="www.chatbase.co" defer></script>
     </script>
     <script
     src="https://www.chatbase.co/embed.min.js"
@@ -292,6 +447,8 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     domain="www.chatbase.co"
     defer>
     </script>
-
+<div class="gtranslate_wrapper"></div>
+<script>window.gtranslateSettings = {"default_language":"en","detect_browser_language":true,"wrapper_selector":".gtranslate_wrapper"}</script>
+<script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
 </body>
 </html>

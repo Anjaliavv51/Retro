@@ -24,7 +24,6 @@ body {
   align-items: center;
   height: 100vh; /* Full viewport height */
   padding: 20px; /* Padding to avoid overflow */
-  overflow: hidden; /* Prevents overflow */
   position:relative;
 }
 
@@ -154,14 +153,13 @@ body {
 }
 
 /* Responsive design for smaller screens */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 980px) {
   .main-login {
     flex-direction: column;
     padding: 0 20px; /* Added padding to avoid edge overflow */
   }
 
   .card-login {
-    width: 100%; /* Full width for mobile */
     padding: 20px; /* Adjust padding */
   }
 }
