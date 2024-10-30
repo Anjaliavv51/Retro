@@ -165,3 +165,33 @@ body {
         margin-bottom: 1rem;
     }
 }
+
+/* Dark Mode Toggle Button */
+#darkModeToggle {
+    display: flex;
+    align-items: center;
+    background-color: #f8f9fa;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#darkModeToggle:hover {
+    background-color: #e2e6ea;
+}
+
+#darkModeToggle .fas {
+    margin-right: 5px;
+    font-size: 20px;
+}
+
+.dark-mode #darkModeToggle {
+    background-color: #495057;
+    color: white !important;
+}
+
+.dark-mode #darkModeToggle:hover {
+    background-color: #6c757d;
+}

@@ -316,6 +316,20 @@
         .fa-brands.fa-x-twitter:hover {
             color: #181e20 !important;
         }
+        /* Add dark mode styles */
+        .dark-mode {
+            background-color: #343a40;
+            color: white;
+        }
+        .dark-mode .navbar {
+            background-color: #343a40;
+        }
+        .dark-mode .navbar .nav-link {
+            color: white;
+        }
+        .dark-mode .navbar .nav-link:hover {
+            color: #61dafb;
+        }
     </style>
 </head>
 
@@ -391,6 +405,10 @@
                             </ul>
 -->
                         </div>
+                        <button id="darkModeToggle" class="btn btn-secondary" style="margin-left: 10px;">
+                            <i class="fas fa-sun" id="toggleIcon" style="font-size: 20px;"></i>
+                            <span id="toggleText">Light Mode</span>
+                        </button>
                     </div>
                 </div>
 
@@ -758,21 +776,6 @@
                 <a href="contact.html"
                     style="font-family: var(--ff-poppins);">Contact</a>
                 <a href="cart.html" style="font-family: var(--ff-poppins);">Cart</a>
-                <a href="contributor.html" style="font-family: var(--ff-poppins);">Contributors</a>
-            </ul>
-
-            <ul class="footer-colums">
-                <p style="color: hsl(357, 82%,35%);font-family: var(--ff-philosopher);"> Exclusive Offers</p>
-                <a style="font-family: var(--ff-poppins);">Retro Discounts</a>
-                <a style="font-family: var(--ff-poppins);">Limited-Time Promotions</a>
-                <a style="font-family: var(--ff-poppins);">Special Event Packages</a>
-                <a style="font-family: var(--ff-poppins);">Membership Benefits</a>
-                <a style="font-family: var(--ff-poppins);">Early Access to New Collections</a>
-                <a style="font-family: var(--ff-poppins);">VIP Retro Events</a>
-                <a style="font-family: var(--ff-poppins);">Personalized Culinary Experiences</a>
-
-            </ul>
-
             <ul class="footer-colums">
                 <p style="color: hsl(357, 82%,35%);font-family: var(--ff-philosopher);">Payment Products</p>
                 <a style="font-family: var(--ff-poppins);">Secure Checkout</a>
@@ -990,6 +993,28 @@
     <div class="gtranslate_wrapper"></div>
     <script>window.gtranslateSettings = {"default_language":"en","detect_browser_language":true,"wrapper_selector":".gtranslate_wrapper"}</script>
     <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+    <script>
+        document.getElementById('darkModeToggle').addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode');
+            const navbar = document.getElementById('top');
+            navbar.classList.toggle('dark-mode');
+
+            const toggleIcon = document.getElementById('toggleIcon');
+            const toggleText = document.getElementById('toggleText');
+
+            if (document.body.classList.contains('dark-mode')) {
+                toggleIcon.classList.remove('fa-sun');
+                toggleIcon.classList.add('fa-moon');
+                toggleText.textContent = ' Dark Mode';
+            } else {
+                toggleIcon.classList.remove('fa-moon');
+                toggleIcon.classList.add('fa-sun');
+                toggleText.textContent = 'Light Mode';
+            }
+        });
+
+        document.body.classList.add('light-mode');
+    </script>
 </body>
 
 </html>

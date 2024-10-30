@@ -34,8 +34,8 @@
         href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
 
         #sr {
             display: none;
@@ -365,8 +365,8 @@
     </style>
 
         <style>
-            @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');  
-            @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');  
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');  
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');  
 #sr {
 display: none; 
 position: fixed; 
@@ -550,7 +550,71 @@ body{
 .fa-brands.fa-x-twitter:hover {
   color: #181e20 !important;
 }
-        </style>
+        .navbar {
+            transition: background-color 0.3s, color 0.3s;
+        }
+        
+        .navbar .navbar-brand,
+        .navbar .nav-link {
+            font-family: var(--ff-philosopher);
+            color: black;
+        }
+        
+        .navbar .nav-link:hover {
+            color: #007bff; 
+        }
+        
+        .dark-mode {
+            background-color: #343a40; 
+            color: white; 
+        }
+        
+        .dark-mode .navbar .navbar-brand,
+        .dark-mode .navbar .nav-link {
+            color: white;
+        }
+        
+        .dark-mode .navbar .nav-link:hover {
+            color: #61dafb; 
+        }
+        
+        #darkModeToggle {
+            display: flex;
+            align-items: center; 
+            background-color: #f8f9fa; 
+            color: black; 
+            border: none;
+            border-radius: 5px;
+            padding: 8px 12px;
+            transition: background-color 0.3s, color 0.3s; 
+        }
+        
+        #darkModeToggle:hover {
+            background-color: #e2e6ea; 
+        }
+        
+        #darkModeToggle .fas {
+            margin-right: 5px; 
+            font-size: 20px;
+        }
+        
+        .dark-mode #darkModeToggle {
+            background-color: #495057; 
+            color: white !important; 
+        }
+        
+        .dark-mode #darkModeToggle:hover {
+            background-color: #6c757d; 
+        }
+        
+        .dark-mode #darkModeToggle .fas {
+            color: #f8f9fa; 
+        }
+        
+        .fas {
+            transition: color 0.3s; 
+        }
+    </style>
 
 </head>
 
@@ -616,6 +680,10 @@ body{
                                 </a>
                             </li>
                         </ul>
+                        <button id="darkModeToggle" class="btn btn-secondary" style="margin-left: 10px;">
+                            <i class="fas fa-sun" id="toggleIcon" style="font-size: 20px;"></i>
+                            <span id="toggleText">Light Mode</span>
+                        </button>
                     </div>
                 </div>
             </nav>
@@ -1033,7 +1101,28 @@ document.querySelector(".Home h1").style.opacity = (200 - scrollY) / 200;
     
     <script src="cart.js"></script>
     
-    
+    <script>
+        document.getElementById('darkModeToggle').addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode');
+            const navbar = document.querySelector('.navbar');
+            navbar.classList.toggle('dark-mode');
+
+            const toggleIcon = document.getElementById('toggleIcon');
+            const toggleText = document.getElementById('toggleText');
+
+            if (document.body.classList.contains('dark-mode')) {
+                toggleIcon.classList.remove('fa-sun');
+                toggleIcon.classList.add('fa-moon');
+                toggleText.textContent = ' Dark Mode';
+            } else {
+                toggleIcon.classList.remove('fa-moon');
+                toggleIcon.classList.add('fa-sun');
+                toggleText.textContent = 'Light Mode';
+            }
+        });
+
+        document.body.classList.add('light-mode');
+    </script>
 
       
 

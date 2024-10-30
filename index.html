@@ -564,13 +564,12 @@ p {
         transition: color 0.3s; 
     }
     </style>
-<script>document.getElementById('darkModeToggle').addEventListener('click', function() {
-   
+<script>
+document.getElementById('darkModeToggle').addEventListener('click', function() {
     document.body.classList.toggle('dark-mode');
     const navbar = document.getElementById('top');
     navbar.classList.toggle('dark-mode');
 
-   
     const toggleIcon = document.getElementById('toggleIcon');
     const toggleText = document.getElementById('toggleText');
 
@@ -585,10 +584,7 @@ p {
     }
 });
 
-
 document.body.classList.add('light-mode');
-
-
 </script>
     <!--Navbar End-->
 
@@ -781,7 +777,7 @@ new google.translate.TranslateElement({
             <div class="items" data-aos="zoom-in">
                 <img src="https://i.pinimg.com/236x/80/73/9f/80739fa37818b4739f6667358517176c.jpg">
                 <h3 style="font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%);">Mocktails</h3>
-                <p style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">Enjoy refreshing mocktails with a subtle kick of booze</p>
+                <p style="font-family: var (--ff-poppins);color: hsl(208, 7%,46%);">Enjoy refreshing mocktails with a subtle kick of booze</p>
             </div>
             <div class="items"data-aos="zoom-in">
                 <img src="https://pbs.twimg.com/media/E_g-7ziWQAU685E.jpg">
@@ -796,6 +792,10 @@ new google.translate.TranslateElement({
         </div>
     </section>
 
+    <section class="section-meals" data-aos="fade-in" data-aos-duration="2000">
+        <ul class="meals-showcase clearfix">
+            <li>
+                <figure class="meal-photo">
     <section class="section-meals" data-aos="fade-in" data-aos-duration="2000">
         <ul class="meals-showcase clearfix">
             <li>
