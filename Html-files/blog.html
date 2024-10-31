@@ -1,0 +1,1330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="/Css-files/navbarstyles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> -->
+    
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" type="image/x-icon" href="./Favicon image/favicon-32x32.png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fuggles&family=Mooli&family=Oswald:wght@600&family=Roboto:wght@100;300&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script> -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        
+        <link rel="stylesheet" href="./style.css">
+
+    <style>
+        /* :root {
+            --primary-color: #3498db;
+            --secondary-color: #2ecc71;
+            --background-color: #f4f4f4;
+            --text-color: #333;
+            --card-bg: #ffffff;
+            --header-bg: #1a1a2e;
+            --header-text: #ffffff;
+        } */
+        :root{
+            --ff-philosopher: "Philosopher", sans-serif;
+            --ff-poppins: "Poppins", sans-serif;
+            --primary-color: #800020;
+            --secondary-color: #800020;
+            --background-color: #f4f4f4;
+            --card-bg: #ffffff;
+        
+            --header-text: #ffffff;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        } */
+
+        body{
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpath fill='%23ffb9b0' d='M486 705.8c-109.3-21.8-223.4-32.2-335.3-19.4C99.5 692.1 49 703 0 719.8V800h843.8c-115.9-33.2-230.8-68.1-347.6-92.2C492.8 707.1 489.4 706.5 486 705.8z'/%3E%3Cpath fill='%23ffc1b7' d='M1600 0H0v719.8c49-16.8 99.5-27.8 150.7-33.5c111.9-12.7 226-2.4 335.3 19.4c3.4 0.7 6.8 1.4 10.2 2c116.8 24 231.7 59 347.6 92.2H1600V0z'/%3E%3Cpath fill='%23ffc8bf' d='M478.4 581c3.2 0.8 6.4 1.7 9.5 2.5c196.2 52.5 388.7 133.5 593.5 176.6c174.2 36.6 349.5 29.2 518.6-10.2V0H0v574.9c52.3-17.6 106.5-27.7 161.1-30.9C268.4 537.4 375.7 554.2 478.4 581z'/%3E%3Cpath fill='%23ffcfc6' d='M0 0v429.4c55.6-18.4 113.5-27.3 171.4-27.7c102.8-0.8 203.2 22.7 299.3 54.5c3 1 5.9 2 8.9 3c183.6 62 365.7 146.1 562.4 192.1c186.7 43.7 376.3 34.4 557.9-12.6V0H0z'/%3E%3Cpath fill='%23FFD6CE' d='M181.8 259.4c98.2 6 191.9 35.2 281.3 72.1c2.8 1.1 5.5 2.3 8.3 3.4c171 71.6 342.7 158.5 531.3 207.7c198.8 51.8 403.4 40.8 597.3-14.8V0H0v283.2C59 263.6 120.6 255.7 181.8 259.4z'/%3E%3Cpath fill='%23ffdcd4' d='M1600 0H0v136.3c62.3-20.9 127.7-27.5 192.2-19.2c93.6 12.1 180.5 47.7 263.3 89.6c2.6 1.3 5.1 2.6 7.7 3.9c158.4 81.1 319.7 170.9 500.3 223.2c210.5 61 430.8 49 636.6-16.6V0z'/%3E%3Cpath fill='%23ffe1d9' d='M454.9 86.3C600.7 177 751.6 269.3 924.1 325c208.6 67.4 431.3 60.8 637.9-5.3c12.8-4.1 25.4-8.4 38.1-12.9V0H288.1c56 21.3 108.7 50.6 159.7 82C450.2 83.4 452.5 84.9 454.9 86.3z'/%3E%3Cpath fill='%23ffe6df' d='M1600 0H498c118.1 85.8 243.5 164.5 386.8 216.2c191.8 69.2 400 74.7 595 21.1c40.8-11.2 81.1-25.2 120.3-41.7V0z'/%3E%3Cpath fill='%23ffebe4' d='M1397.5 154.8c47.2-10.6 93.6-25.3 138.6-43.8c21.7-8.9 43-18.8 63.9-29.5V0H643.4c62.9 41.7 129.7 78.2 202.1 107.4C1020.4 178.1 1214.2 196.1 1397.5 154.8z'/%3E%3Cpath fill='%23FFF0EA' d='M1315.3 72.4c75.3-12.6 148.9-37.1 216.8-72.4h-723C966.8 71 1144.7 101 1315.3 72.4z'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: cover;
+  
+  background-attachment: fixed;
+}
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background-color: var(--header-bg);
+            color: var(--header-text);
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: background-color 0.3s ease;
+        }
+
+        header.scrolled {
+            background-color: rgba(26, 26, 46, 0.9);
+            backdrop-filter: blur(10px);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        #logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--header-text);
+        }
+
+        #nav-list {
+            display: flex;
+            list-style-type: none;
+        }
+
+        #nav-list li {
+            margin-left: 2rem;
+        }
+
+        #nav-list a {
+            color: var(--header-text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        #nav-list a:hover, #nav-list a.active {
+            color: var(--secondary-color);
+        }
+
+        .hamburger {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--header-text);
+            cursor: pointer;
+        }
+
+        main {
+            margin-top: 80px;
+            padding: 2rem 0;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #F88379, #A52A2A, #722F37);
+            color: white;
+            margin-bottom: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .hero h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            animation: fadeInUp 1s ease-out 0.3s;
+            opacity: 0;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes fadeInUp {
+            from { 
+                opacity: 0; 
+                transform: translateY(20px); 
+            }
+            to { 
+                opacity: 1; 
+                transform: translateY(0); 
+            }
+        }
+
+        .cms-controls {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+
+        .cms-controls button {
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 0.7rem 1.5rem;
+            margin: 0 0.5rem;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .cms-controls button:hover {
+            background-color: #F88379;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .blog-filters {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+
+        .blog-filters select {
+            padding: 0.7rem;
+            margin: 0 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 25px;
+            background-color: white;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .blog-filters select:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+        }
+
+        .blog-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .blog-post {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .blog-post:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+
+        .blog-post h2 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+        }
+
+        .meta {
+            font-size: 0.9rem;
+            color: #777;
+            margin-bottom: 1rem;
+        }
+
+        .category {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.2rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .tags {
+            margin-bottom: 1rem;
+        }
+
+        .tag {
+            display: inline-block;
+            background-color: #e0e0e0;
+            color: #333;
+            padding: 0.2rem 0.5rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .tag:hover {
+            background-color: #d0d0d0;
+        }
+
+        .content {
+            margin-bottom: 1rem;
+        }
+
+        .read-more {
+            display: inline-block;
+            margin-top: auto;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .read-more:hover {
+            color: #F88379
+        }
+
+        .comments-section {
+            margin-top: 1.5rem;
+            border-top: 1px solid #eee;
+            padding-top: 1rem;
+        }
+
+        .comment {
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .comment:hover {
+            background-color: #f0f0f0;
+        }
+
+        .comment-form textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            resize: vertical;
+            font-family: 'Poppins', sans-serif;
+            transition: all 0.3s ease;
+        }
+
+        .comment-form textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+        }
+
+        .comment-form button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0.7rem 1.5rem;
+            border-radius: 25px;
+            cursor: pointer;
+            margin-top: 0.5rem;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .comment-form button:hover {
+            background-color: #F88379;
+            transform: translateY(-2px);
+        }
+
+        .foot-panel2 {
+            background-color: rgb(138, 37, 37);
+            color: white;
+            height: 300px;
+            /* height: fit-content; */
+            display: flex;
+            /* padding: 10px; */
+            justify-content: space-evenly;
+        }
+
+        .foot-panel2 ul {
+        margin-top: 20px;
+        }
+
+        ul p {
+        font-weight: 700;
+        }
+
+        ul a {
+        display: block;
+        font-size: 0.85rem;
+        margin-top: 10px;
+    color: black;
+        
+        text-decoration: none;
+        }
+
+
+        .foot_panel4 {
+        background-color: rgb(66, 16, 16);
+        color: white;
+        height: 160px;
+        font-size: 0.9rem;
+        text-align: center;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+            margin-left: 600px;
+        }
+
+        .social-icons a {
+            color: var(--header-text);
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: var(--secondary-color);
+        }
+
+       
+
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+
+            #nav-list {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: var(--header-bg);
+                flex-direction: column;
+                padding: 1rem 0;
+            }
+
+            #nav-list.show {
+                display: flex;
+            }
+
+            #nav-list li {
+                margin: 0.5rem 0;
+            }
+
+            .blog-container {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+        /* New styles for modals */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4);
+            animation: fadeIn 0.3s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .modal-content {
+            background-color: var(--card-bg);
+            margin: 10% auto;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            width: 80%;
+            max-width: 600px;
+            animation: slideIn 0.3s;
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .modal-content h2 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        /* Form styles */
+        .modal-form input[type="text"],
+        .modal-form textarea {
+            width: 100%;
+            padding: 0.7rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: 'Poppins', sans-serif;
+            transition: border-color 0.3s ease;
+        }
+
+        .modal-form input[type="text"]:focus,
+        .modal-form textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+        }
+
+        .modal-form button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0.7rem 1.5rem;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .modal-form button:hover {
+            background-color: #F88379;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        /* List styles for categories and tags */
+        .item-list {
+            list-style-type: none;
+            padding: 0;
+            margin-bottom: 1.5rem;
+        }
+
+        .item-list li {
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            padding: 0.7rem 1rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .item-list li:hover {
+            background-color: #f0f0f0;
+        }
+
+        .delete-btn {
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            padding: 0.3rem 0.7rem;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.8rem;
+        }
+
+        .delete-btn:hover {
+            background-color: #c0392b;
+            transform: translateY(-1px);
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+
+    <div class="circle-container">
+        <div class="circle" style="background-color: rgb(255, 181, 107); left: 504px; top: 59px; scale: 1;"></div>
+        <div class="circle" style="background-color: rgb(253, 175, 105); left: 504px; top: 59px; scale: 0.95;"></div>
+        <div class="circle" style="background-color: rgb(248, 157, 99); left: 504px; top: 59px; scale: 0.9;"></div>
+        <div class="circle" style="background-color: rgb(245, 151, 97); left: 504px; top: 59px; scale: 0.85;"></div>
+        <div class="circle" style="background-color: rgb(239, 134, 94); left: 504px; top: 59px; scale: 0.8;"></div>
+        <div class="circle" style="background-color: rgb(236, 128, 93); left: 504px; top: 59px; scale: 0.75;"></div>
+        <div class="circle" style="background-color: rgb(227, 110, 92); left: 504px; top: 59px; scale: 0.7;"></div>
+        <div class="circle" style="background-color: rgb(223, 104, 92); left: 504px; top: 59px; scale: 0.65;"></div>
+        <div class="circle" style="background-color: rgb(213, 88, 92); left: 504px; top: 59px; scale: 0.6;"></div>
+        <div class="circle" style="background-color: rgb(209, 82, 92); left: 504px; top: 59px; scale: 0.55;"></div>
+        <div class="circle" style="background-color: rgb(197, 65, 93); left: 504px; top: 59px; scale: 0.5;"></div>
+        <div class="circle" style="background-color: rgb(192, 59, 93); left: 504px; top: 59px; scale: 0.45;"></div>
+        <div class="circle" style="background-color: rgb(178, 44, 94); left: 504px; top: 59px; scale: 0.4;"></div>
+        <div class="circle" style="background-color: rgb(172, 38, 94); left: 504px; top: 59px; scale: 0.35;"></div>
+        <div class="circle" style="background-color: rgb(156, 21, 95); left: 504px; top: 59px; scale: 0.3;"></div>
+        <div class="circle" style="background-color: rgb(149, 15, 95); left: 504px; top: 59px; scale: 0.25;"></div>
+        <div class="circle" style="background-color: rgb(131, 0, 96); left: 504px; top: 59px; scale: 0.2;"></div>
+        <div class="circle" style="background-color: rgb(124, 0, 96); left: 504px; top: 59px; scale: 0.15;"></div>
+        <div class="circle" style="background-color: rgb(104, 0, 96); left: 504px; top: 59px; scale: 0.1;"></div>
+        <div class="circle" style="background-color: rgb(96, 0, 95); left: 504px; top: 59px; scale: 0.05;"></div>
+    </div>
+    <div id="preloader">
+        <div id="loader"></div>
+    </div>
+
+
+    <!--Navbar Start-->
+    <nav class="navbar navbar-expand-lg fixed-top" id="top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#" style="font-family: var(--ff-philosopher); color: black;">
+                <b>Retro</b>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="../index.html"
+                            style="color: black; font-family: var(--ff-philosopher);">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Html-files/about.html"
+                            style="font-family: var(--ff-philosopher); color: black;">About Us</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="Html-files/menu.html"
+                            style="font-family: var(--ff-philosopher);color: black;">Collections</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="Html-files/services.html"
+                            style="font-family: var(--ff-philosopher);color: black;">Services</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="Html-files/contact.html" style="font-family: var(--ff-philosopher); color: black">Contact Us</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                    <a class="nav-link" href="blog.html" style="font-family: var(--ff-philosopher); color: black;">Blog</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style="font-family: var(--ff-philosopher); color: black;">More</a>
+                        </li>
+
+                </ul>
+
+                <div class="navbar-right">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" onclick="redirectLogin()"
+                                style="color: black; font-family: var(--ff-philosopher);">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" onclick="redirectSignup()"
+                                style="color: black; font-family: var(--ff-philosopher);">Signup</a>
+                        </li>
+                        <li class="nav-item" style="list-style-type: none;">
+                            <a class="nav-link" href="Html-files/cart.html" style="color: black;"><i
+                                    class="fa-solid fa-cart-shopping"></i>Cart</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <h2>Step Into the Retroverse</h2>
+            <p>Explore the Charm of Vintage Tech, Timeless Designs, and Nostalgic!</p>
+        </section>
+
+        <div class="container">
+            <div class="cms-controls">
+                <button id="newPostBtn">New Post</button>
+                <button id="manageCategoriesBtn">Manage Categories</button>
+                <button id="manageTagsBtn">Manage Tags</button>
+            </div>
+
+            <div class="blog-filters">
+                <select id="categoryFilter">
+                    <option value="">All Categories</option>
+                </select>
+                <select id="tagFilter">
+                    <option value="">All Tags</option>
+                </select>
+            </div>
+
+            <div class="blog-container">
+                <!-- Blog posts will be dynamically generated here -->
+            </div>
+        </div>
+    </main>
+
+    
+    <div class="footer" style="background-color: hsl(20, 43%, 93%);">
+        <footer>
+            <div class="foot-panel2" style="background-color:hsl(20, 43%, 93%);font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                <ul>
+                    <p style="color: hsl(357, 82%,35%);font-family: var(--ff-philosopher);text-align: left;">Our Pages</p>
+    
+                    <a href="#" >Home</a>
+                    <a href="menu.html" >About</a>
+                    <a href="services.html" >Services</a>
+                    <a href="contact.html" >Contact us</a>
+                    <a href="cart.html" >Cart</a>
+                </ul>
+                <ul>
+                    <p style="color: hsl(357, 82%,35%);font-family: var(--ff-philosopher); text-align:left"> Exclusive Offers</p>
+                    <a href="#" >Retro Discounts</a>
+                    <a href="#" >Limited-Time Promotions</a>
+                    <a href="#" >Special Event Packages</a>
+                    <a href="#" >Membership Benefits</a>
+                    <a href="#" >Early Access to New Collections</a>
+                    <a href="#" >VIP Retro Events</a>
+                    <a href="#" >Personalized Culinary Experiences</a>
+     
+    
+                </ul>
+                <ul>
+                    <p style="color: hsl(357, 82%,35%);font-family: var(--ff-philosopher);text-align:left">Payment Products</p>
+                    <a href="payment2.html" >Secure Checkout</a>
+                    <a href="payment2.html" >Credit/Debit Cards</a>
+                    <a href="payment2.html" >Online Payment</a>
+                    <a href="payment2.html" >Mobile Wallets</a>
+                    <a href="payment2.html" >Contactless Payments</a>
+                </ul>
+                <form id="contactForm">
+                    <h3 style="font-family: var(--ff-philosopher); color: hsl(357, 82%, 35%);">Contact Us!</h3>
+                
+                    <div style="position: relative; margin-bottom: 15px;">
+                        <i class="fas fa-envelope" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); font-size: 14px; color: gray;"></i>
+                        <input type="email" id="email" name="email" placeholder="Your Email" required 
+                               style="padding-left: 30px;">
+                    </div>
+                
+                    <div style="position: relative; margin-bottom: 15px;">
+                        <i class="fas fa-comment" style="position: absolute; left: 10px; top: 10px; font-size: 14px; color: gray;"></i>
+                        <textarea id="message" name="message" placeholder="Your Message" required 
+                                  style="padding-left: 30px;"></textarea>
+                    </div>
+                
+                    <button id="butt" type="submit" style="font-family: ui-serif;">Send Message</button>
+                </form>
+                
+                
+                
+                  
+                
+    
+            </div>
+    
+    
+            <div class="foot_panel4" style="background-color: transparent;">
+                <div class="pages">
+                    <h4 style="font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%);">Follow Us</h4>
+    
+                    <div class="social-icons">
+    
+    
+                        <a class="fa-brands fa-facebook" href="https://facebook.com" ></a>
+                        <a class="fa-brands fa-instagram" href="https://instagram.com" ></a>
+                        <a class="fa-brands fa-x-twitter" href="https://twitter.com" ></a>
+                        <a class="fa-brands fa-youtube"   href="https://www.youtube.com" ></a>
+                        <a class="fa-brands fa-snapchat"  href="https://www.snapchat.com" ></a>
+    
+                    </div>
+                    <p style="font-family: var(--ff-philosopher);background-color: hsl(20, 43%, 93%);color: hsl(203, 30%, 26%);margin-bottom:0;">Stay connected with us on social media for the latest updates, latest collection, and vintage adventures.
+                    </p>
+                    <div class="copyright" style="font-family: var(--ff-philosopher);background-color: hsl(20, 43%, 93%);color: black;">
+    
+                        &copy; 2024 Retro . All Rights Reserved. | Developed by <span id="author">
+                            <a href="https://www.linkedin.com" target="_blank" style="text-decoration: none;">Retro Team</a>
+                    </div>
+                    <div>
+                        <button id="sr" style="z-index: 1000; display: block;">
+                        <div class="circle1">
+                          <svg id="back-to-top" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
+                            <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z"></path>
+                          </svg>
+                        </div>
+                        </button>
+                    </div>
+                </div>
+        </footer>
+        <button onclick="window.print()" style="font-family:Georgia; font-size:medium; line-height: inherit;border-radius:5px ;background-color: #f9e2c4;padding:5px 5px;">Print this page</button>
+    </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/2.1.3/marked.min.js"></script>
+<script>
+// Initialize data in localStorage if it doesn't exist
+if (!localStorage.getItem('blogPosts')) {
+localStorage.setItem('blogPosts', JSON.stringify([
+    {
+        id: 1,
+        title: "10 Must-Visit Destinations for 2024",
+        content: "As we enter 2024, the world of travel continues to evolve...",
+        author: "Travel Expert",
+        date: "May 15, 2024",
+        category: "Destinations",
+        tags: ["2024", "travel", "destinations"],
+        comments: []
+    },
+    // Add more sample posts here
+]));
+}
+
+if (!localStorage.getItem('categories')) {
+localStorage.setItem('categories', JSON.stringify(["Destinations", "Sustainable Travel", "Budget Travel", "Solo Travel", "Food"]));
+}
+
+if (!localStorage.getItem('tags')) {
+localStorage.setItem('tags', JSON.stringify(["2024", "travel", "destinations", "sustainable", "budget", "solo", "food"]));
+}
+
+// Function to get data from localStorage
+function getLocalData(key) {
+return JSON.parse(localStorage.getItem(key));
+}
+
+// Function to set data in localStorage
+function setLocalData(key, data) {
+localStorage.setItem(key, JSON.stringify(data));
+}
+
+function renderPosts() {
+const container = document.querySelector('.blog-container');
+container.innerHTML = '';
+const posts = getLocalData('blogPosts');
+
+posts.forEach(post => {
+    const article = document.createElement('article');
+    article.className = 'blog-post';
+    article.innerHTML = `
+        <h2>${post.title}</h2>
+        <div class="meta">Posted on ${post.date} by ${post.author}</div>
+        <div class="category">${post.category}</div>
+        <div class="tags">${post.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}</div>
+        <div class="content">
+            <p>${post.content.substring(0, 150)}...</p>
+        </div>
+        <a href="#" class="read-more" data-id="${post.id}">Read More</a>
+        <div class="comments-section">
+            <h3>Comments (${post.comments.length})</h3>
+            <div class="comments">
+                ${post.comments.slice(0, 2).map(comment => `
+                    <div class="comment">
+                        <p>${comment.text}</p>
+                        <small>${comment.date}</small>
+                    </div>
+                `).join('')}
+            </div>
+            <form class="comment-form" data-post-id="${post.id}">
+                <textarea placeholder="Add a comment"></textarea>
+                <button type="submit">Post Comment</button>
+            </form>
+        </div>
+    `;
+    container.appendChild(article);
+});
+
+// Add event listeners for read more links
+document.querySelectorAll('.read-more').forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const postId = parseInt(e.target.getAttribute('data-id'));
+        viewFullPost(postId);
+    });
+});
+
+// Add event listeners for comment forms
+document.querySelectorAll('.comment-form').forEach(form => {
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const postId = parseInt(e.target.getAttribute('data-post-id'));
+        const comment = e.target.querySelector('textarea').value;
+        addComment(postId, comment);
+        e.target.reset();
+    });
+});
+}
+
+function populateFilters() {
+const categoryFilter = document.getElementById('categoryFilter');
+const tagFilter = document.getElementById('tagFilter');
+const categories = getLocalData('categories');
+const tags = getLocalData('tags');
+
+categoryFilter.innerHTML = '<option value="">All Categories</option>';
+tagFilter.innerHTML = '<option value="">All Tags</option>';
+
+categories.forEach(category => {
+    const option = document.createElement('option');
+    option.value = category;
+    option.textContent = category;
+    categoryFilter.appendChild(option);
+});
+
+tags.forEach(tag => {
+    const option = document.createElement('option');
+    option.value = tag;
+    option.textContent = tag;
+    tagFilter.appendChild(option);
+});
+
+// Add event listeners for filters
+categoryFilter.addEventListener('change', filterPosts);
+tagFilter.addEventListener('change', filterPosts);
+}
+
+function filterPosts() {
+const selectedCategory = document.getElementById('categoryFilter').value;
+const selectedTag = document.getElementById('tagFilter').value;
+const posts = getLocalData('blogPosts');
+
+const filteredPosts = posts.filter(post => {
+    const categoryMatch = !selectedCategory || post.category === selectedCategory;
+    const tagMatch = !selectedTag || post.tags.includes(selectedTag);
+    return categoryMatch && tagMatch;
+});
+
+renderFilteredPosts(filteredPosts);
+}
+
+function renderFilteredPosts(filteredPosts) {
+const container = document.querySelector('.blog-container');
+container.innerHTML = '';
+
+filteredPosts.forEach(post => {
+    // Render filtered posts (similar to renderPosts function)
+    const article = document.createElement('article');
+    article.className = 'blog-post';
+    article.innerHTML = `
+        <h2>${post.title}</h2>
+        <div class="meta">Posted on ${post.date} by ${post.author}</div>
+        <div class="category">${post.category}</div>
+        <div class="tags">${post.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}</div>
+        <div class="content">
+            <p>${post.content.substring(0, 150)}...</p>
+        </div>
+        <a href="#" class="read-more" data-id="${post.id}">Read More</a>
+        <div class="comments-section">
+            <h3>Comments (${post.comments.length})</h3>
+            <div class="comments">
+                ${post.comments.slice(0, 2).map(comment => `
+                    <div class="comment">
+                        <p>${comment.text}</p>
+                        <small>${comment.date}</small>
+                    </div>
+                `).join('')}
+            </div>
+            <form class="comment-form" data-post-id="${post.id}">
+                <textarea placeholder="Add a comment"></textarea>
+                <button type="submit">Post Comment</button>
+            </form>
+        </div>
+    `;
+    container.appendChild(article);
+});
+
+// Re-add event listeners
+addEventListeners();
+}
+
+function viewFullPost(postId) {
+const posts = getLocalData('blogPosts');
+const post = posts.find(p => p.id === postId);
+if (post) {
+    const modal = document.createElement('div');
+    modal.className = 'modal';
+    modal.innerHTML = `
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>${post.title}</h2>
+            <div class="meta">Posted on ${post.date} by ${post.author}</div>
+            <div class="category">${post.category}</div>
+            <div class="tags">${post.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}</div>
+            <div class="content">
+                <p>${post.content}</p>
+            </div>
+            <div class="comments-section">
+                <h3>Comments (${post.comments.length})</h3>
+                <div class="comments">
+                    ${post.comments.map(comment => `
+                        <div class="comment">
+                            <p>${comment.text}</p>
+                            <small>${comment.date}</small>
+                        </div>
+                    `).join('')}
+                </div>
+                <form class="comment-form" data-post-id="${post.id}">
+                    <textarea placeholder="Add a comment"></textarea>
+                    <button type="submit">Post Comment</button>
+                </form>
+            </div>
+        </div>
+    `;
+    document.body.appendChild(modal);
+
+    // Close modal when clicking on the close button or outside the modal
+    modal.querySelector('.close').addEventListener('click', () => {
+        document.body.removeChild(modal);
+    });
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            document.body.removeChild(modal);
+        }
+    });
+
+    // Add event listener for comment form in modal
+    modal.querySelector('.comment-form').addEventListener('submit', (e) => {
+        e.preventDefault();
+        const comment = e.target.querySelector('textarea').value;
+        addComment(postId, comment);
+        e.target.reset();
+    });
+}
+}
+
+function addComment(postId, commentText) {
+const posts = getLocalData('blogPosts');
+const postIndex = posts.findIndex(p => p.id === postId);
+if (postIndex !== -1) {
+    posts[postIndex].comments.push({
+        text: commentText,
+        date: new Date().toLocaleString()
+    });
+    setLocalData('blogPosts', posts);
+    renderPosts();
+}
+}
+
+function createNewPost() {
+            const modal = document.createElement('div');
+            modal.className = 'modal';
+            modal.innerHTML = `
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Create New Post</h2>
+                    <form id="newPostForm" class="modal-form">
+                        <input type="text" id="postTitle" placeholder="Enter post title" required>
+                        <textarea id="postContent" placeholder="Enter post content" required rows="5"></textarea>
+                        <input type="text" id="postAuthor" placeholder="Enter author name" required>
+                        <input type="text" id="postCategory" placeholder="Enter post category" required>
+                        <input type="text" id="postTags" placeholder="Enter tags (comma-separated)" required>
+                        <button type="submit">Create Post</button>
+                    </form>
+                </div>
+            `;
+            document.body.appendChild(modal);
+            modal.style.display = 'block';
+
+
+// Close modal when clicking on the close button or outside the modal
+modal.querySelector('.close').addEventListener('click', () => {
+    document.body.removeChild(modal);
+});
+modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+        document.body.removeChild(modal);
+    }
+});
+
+// Add event listener for form submission
+modal.querySelector('#newPostForm').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const title = document.getElementById('postTitle').value;
+    const content = document.getElementById('postContent').value;
+    const author = document.getElementById('postAuthor').value;
+    const category = document.getElementById('postCategory').value;
+    const tags = document.getElementById('postTags').value.split(',').map(tag => tag.trim());
+
+    const posts = getLocalData('blogPosts');
+    const newPost = {
+        id: posts.length + 1,
+        title,
+        content,
+        author,
+        date: new Date().toLocaleDateString(),
+        category,
+        tags,
+        comments: []
+    };
+
+    posts.push(newPost);
+    setLocalData('blogPosts', posts);
+
+    // Update categories and tags
+    let categories = getLocalData('categories');
+    let allTags = getLocalData('tags');
+
+    if (!categories.includes(category)) {
+        categories.push(category);
+        setLocalData('categories', categories);
+    }
+
+    tags.forEach(tag => {
+        if (!allTags.includes(tag)) {
+            allTags.push(tag);
+        }
+    });
+    setLocalData('tags', allTags);
+
+    renderPosts();
+    populateFilters();
+    document.body.removeChild(modal);
+});
+}
+
+function manageCategories() {
+            const categories = getLocalData('categories');
+            const modal = document.createElement('div');
+            modal.className = 'modal';
+            modal.innerHTML = `
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Manage Categories</h2>
+                    <ul id="categoryList" class="item-list">
+                        ${categories.map(category => `<li>${category} <button class="delete-btn delete-category" data-category="${category}">Delete</button></li>`).join('')}
+                    </ul>
+                    <form id="addCategoryForm" class="modal-form">
+                        <input type="text" id="newCategory" placeholder="Enter new category" required>
+                        <button type="submit">Add Category</button>
+                    </form>
+                </div>
+            `;
+            document.body.appendChild(modal);
+            modal.style.display = 'block';
+
+// Close modal when clicking on the close button or outside the modal
+modal.querySelector('.close').addEventListener('click', () => {
+    document.body.removeChild(modal);
+});
+modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+        document.body.removeChild(modal);
+    }
+});
+
+// Add event listener for adding new category
+modal.querySelector('#addCategoryForm').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const newCategory = document.getElementById('newCategory').value;
+    if (!categories.includes(newCategory)) {
+        categories.push(newCategory);
+        setLocalData('categories', categories);
+        populateFilters();
+        document.body.removeChild(modal);
+        manageCategories(); // Reopen the modal with updated list
+                }
+            });
+
+            // Add event listeners for deleting categories
+            modal.querySelectorAll('.delete-category').forEach(button => {
+                button.addEventListener('click', (e) => {
+                    const categoryToDelete = e.target.getAttribute('data-category');
+                    const updatedCategories = categories.filter(category => category !== categoryToDelete);
+                    setLocalData('categories', updatedCategories);
+                    populateFilters();
+                    document.body.removeChild(modal);
+                    manageCategories(); // Reopen the modal with updated list
+                });
+            });
+        }
+
+        function manageTags() {
+            const tags = getLocalData('tags');
+            const modal = document.createElement('div');
+            modal.className = 'modal';
+            modal.innerHTML = `
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Manage Tags</h2>
+                    <ul id="tagList" class="item-list">
+                        ${tags.map(tag => `<li>${tag} <button class="delete-btn delete-tag" data-tag="${tag}">Delete</button></li>`).join('')}
+                    </ul>
+                    <form id="addTagForm" class="modal-form">
+                        <input type="text" id="newTag" placeholder="Enter new tag" required>
+                        <button type="submit">Add Tag</button>
+                    </form>
+                </div>
+            `;
+            document.body.appendChild(modal);
+            modal.style.display = 'block';
+            // Close modal when clicking on the close button or outside the modal
+            modal.querySelector('.close').addEventListener('click', () => {
+                document.body.removeChild(modal);
+            });
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    document.body.removeChild(modal);
+                }
+            });
+
+            // Add event listener for adding new tag
+            modal.querySelector('#addTagForm').addEventListener('submit', (e) => {
+                e.preventDefault();
+                const newTag = document.getElementById('newTag').value;
+                if (!tags.includes(newTag)) {
+                    tags.push(newTag);
+                    setLocalData('tags', tags);
+                    populateFilters();
+                    document.body.removeChild(modal);
+                    manageTags(); // Reopen the modal with updated list
+                }
+            });
+
+            // Add event listeners for deleting tags
+            modal.querySelectorAll('.delete-tag').forEach(button => {
+                button.addEventListener('click', (e) => {
+                    const tagToDelete = e.target.getAttribute('data-tag');
+                    const updatedTags = tags.filter(tag => tag !== tagToDelete);
+                    setLocalData('tags', updatedTags);
+                    populateFilters();
+                    document.body.removeChild(modal);
+                    manageTags(); // Reopen the modal with updated list
+                });
+            });
+        }
+
+        // UI Enhancements and Animations
+        function addUIEnhancements() {
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+
+            // Fade in blog posts on scroll
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('fade-in');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.blog-post').forEach(post => {
+                observer.observe(post);
+            });
+
+            // Add hover effect to blog posts
+            document.querySelectorAll('.blog-post').forEach(post => {
+                post.addEventListener('mouseenter', () => {
+                    post.style.transform = 'translateY(-5px)';
+                    post.style.boxShadow = '0 6px 12px rgba(0,0,0,0.15)';
+                });
+                post.addEventListener('mouseleave', () => {
+                    post.style.transform = 'translateY(0)';
+                    post.style.boxShadow = '0 4px 6px rgba(0,0,0,0.1)';
+                });
+            });
+
+            // Add parallax effect to hero section
+            window.addEventListener('scroll', () => {
+                const hero = document.querySelector('.hero');
+                const scrollPosition = window.pageYOffset;
+                hero.style.backgroundPositionY = `${scrollPosition * 0.5}px`;
+            });
+        }
+
+        // Mobile menu toggle
+        function setupMobileMenu() {
+            const hamburger = document.getElementById('hamburger');
+            const navList = document.getElementById('nav-list');
+
+            hamburger.addEventListener('click', () => {
+                navList.classList.toggle('show');
+            });
+        }
+
+        // Header scroll effect
+        function setupHeaderScroll() {
+            const header = document.querySelector('header');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+        }
+
+        // Initialize the blog
+        function initializeBlog() {
+            renderPosts();
+            populateFilters();
+            addUIEnhancements();
+            setupMobileMenu();
+            setupHeaderScroll();
+        }
+
+        // CMS control functions
+        document.getElementById('newPostBtn').addEventListener('click', createNewPost);
+        document.getElementById('manageCategoriesBtn').addEventListener('click', manageCategories);
+        document.getElementById('manageTagsBtn').addEventListener('click', manageTags);
+
+        // Initialize the blog when the DOM is fully loaded
+        document.addEventListener('DOMContentLoaded', initializeBlog);
+    </script>
+</body>
+</html>
