@@ -18,7 +18,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem; /* Add spacing between sections */
+  gap: 2rem;
 }
 
 .left-login {
@@ -42,11 +42,12 @@ body {
   text-decoration: none;
   color: rgb(134, 78, 112);
   position: relative;
-  transition: color 0.3s ease; /* Smooth color transition */
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .home-btn a:hover {
-  color: rgb(141, 108, 108); /* Darken color on hover */
+  color: rgb(141, 108, 108);
+  transform: scale(1.05); /* Scale effect on hover */
 }
 
 .home-btn a::after {
@@ -57,7 +58,7 @@ body {
   bottom: -5px;
   left: 0;
   background-color: transparent;
-  transition: background-color 0.3s ease; /* Smooth transition */
+  transition: background-color 0.3s ease;
 }
 
 .home-btn a:hover::after {
@@ -67,7 +68,7 @@ body {
 .left-login > h1 {
   color: #e13838;
   font-size: 2.5vw;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Soft text shadow */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .left-login-image {
@@ -89,7 +90,7 @@ body {
   height: 100vh;
   display: flex;
   justify-content: center;
-  align-items:  center;
+  align-items: center;
   animation: fadeIn 2s ease-in-out;
 }
 
@@ -114,7 +115,12 @@ body {
   border-radius: 20px;
   box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.15);
   background: rgba(236, 236, 236, 0.8);
-  backdrop-filter: blur(10px); /* Soft background blur effect */
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease; /* Add scale transition */
+}
+
+.card-login:hover {
+  transform: scale(1.02); /* Slight scale on hover */
 }
 
 .card-login > h1 {
@@ -135,11 +141,12 @@ body {
   border: 1px solid #b38484;
   padding-left: 10px;
   outline: none;
-  transition: border 0.3s ease; /* Smooth border transition */
+  transition: border 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for shadow */
 }
 
 .textfield > input:focus {
-  border: 2px solid #a76666; /* Highlight border on focus */
+  border: 2px solid #a76666;
+  box-shadow: 0 0 5px rgba(167, 102, 102, 0.5); /* Add shadow on focus */
 }
 
 .btn-login,
@@ -148,45 +155,66 @@ body {
   height: 45px;
   border-radius: 15px;
   border: none;
-  margin: 10px;   /*Margin added so that they do not overlap*/
+  margin: 10px;
   background-color: #aa6a6a;
   color: rgb(190, 135, 135);
   font-size: 16px;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions for hover and active states */
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .btn-login:hover,
 #google-login:hover {
-  background-color: #ac7070; /* Darker shade on hover */
-  transform: translateY(-3px); /* Lift effect on hover */
+  background-color: #ac7070;
+  transform: translateY(-3px);
 }
 
 .btn-login:active,
 #google-login:active {
-  transform: translateY(1px); /* Slight press effect */
+  transform: translateY(1px);
 }
 
 #google-login {
-  background-color: #ad6660; /* Google red color */
+  background-color: #ad6660;
 }
 
 #google-login:hover {
-  background-color: #b8938f; /* Darker Google color on hover */
+  background-color: #b8938f;
 }
 
 /* Accessibility: Adding focus styles for inputs and buttons */
 .textfield > input:focus {
-  outline: 2px solid #a45b5b; /* Red outline for focused input */
+  outline: 2px solid #a45b5b;
 }
 
 .btn-login:focus,
 #google-login:focus {
-  outline: 2px solid #bc8a8a; /* Red outline for focused button */
+  outline: 2px solid #bc8a8a;
 }
 
 /* Loading state for buttons */
 .loading {
-  pointer-events: none; /* Prevent interactions */
-  opacity: 0.6; /* Slightly fade the button */
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .left-login, .right-login {
+    width: 100vw;
+    height: auto; /* Allow height to adjust */
+    padding: 20px; /* Add some padding */
+  }
+  
+  .left-login-image {
+    width: 80vw; /* Adjust image size on smaller screens */
+  }
+  
+  .card-login {
+    width: 90%;
+  }
+
+  .home-btn a {
+    font-size: 24px; /* Adjust button text size */
+  }
 }
