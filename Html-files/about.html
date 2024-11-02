@@ -543,7 +543,7 @@ h1, h2, h3, h4, h5, h6 {
 .social-icons a:hover {
   color: brown;
   background-color: hsl(22, 76%, 85%);
-  border-radius: 10px;
+  border-radius: 100%;
   transform: scale(1.5); /* Increase size */
   transition: transform 0.3s ease; /* Smooth transition effect */
 }
@@ -558,6 +558,23 @@ h1, h2, h3, h4, h5, h6 {
 .fa-brands.fa-x-twitter:hover {
   color: #181e20 !important;
 }
+.fa-brands.fa-youtube:hover {
+  color: red !important;
+}
+.fa-brands.fa-snapchat:hover {
+  color: yellow !important;
+}
+a {
+  text-decoration: none;
+  color: #fff; /* Set default text color */
+  border-bottom: 2px solid transparent; /* Transparent border for the underline effect */
+  transition: border-bottom-color 0.3s; /* Smooth transition for the underline color */
+}
+
+a:hover {
+  border-bottom-color: #803e3e; /* Underline color on hover */
+}
+
 
     </style>
 </head>
@@ -674,45 +691,42 @@ h1, h2, h3, h4, h5, h6 {
       </div>
     </section>
     
-                
-    <footer class="new_footer_area bg_color">
+<!-- footer starts here-->
+    <footer class="new_footer_area" style="background-color: #d97676; padding: 10px 0;">
       <div class="new_footer_top">
         <div class="container">
           <div class="row">
-            <!-- Get in Touch Section -->
+            
+            <!-- Contact Us Section -->
             <div class="col-lg-3 col-md-6">
               <div class="f_widget company_widget">
-                  <h3 class="f-title f_600 t_color f_size_18">Contact Us</h3>
-                  <form action="#" class="f_subscribe_two mailchimp" method="post" style="position: relative;">
-                      <div style="position: relative; margin-bottom: 15px;">
-                          <i class="fas fa-envelope" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); font-size: 14px; color: gray;"></i>
-                          <input type="email" id="email" name="email" placeholder="Your Email" required 
-                                 style="padding-left: 30px; width: 100%;">
-                      </div>
-          
-                      <div style="position: relative; margin-bottom: 15px;">
-                          <i class="fas fa-comment" style="position: absolute; left: 10px; top: 10px; font-size: 14px; color: gray;"></i>
-                          <textarea id="message" name="message" placeholder="Your Message" required 
-                                    style="padding-left: 30px; width: 100%;"></textarea>
-                      </div>
-          
-                      <button id="butt" type="submit">Send Message</button>
-                  </form>
+                <h3 class="f-title f_600 t_color f_size_19" style="color: #fff;">Contact Us</h3>
+                <form action="#" method="post" class="f_subscribe_two mailchimp" style="position: relative;">
+                  <div style="position: relative; margin-bottom: 10px;">
+                    <i class="fas fa-envelope" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); font-size: 14px; color: #333;"></i>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required style="padding-left: 30px; width: 100%; height: 35px; border: none; background-color: #fff;">
+                  </div>
+                  <div style="position: relative; margin-bottom: 10px;">
+                    <i class="fas fa-comment" style="position: absolute; left: 10px; top: 10px; font-size: 14px; color: #333;"></i>
+                    <textarea id="message" name="message" placeholder="Your Message" required style="padding-left: 30px; width: 100%; height: 60px; border: none; background-color: #fff;"></textarea>
+                  </div>
+                  <button id="butt" type="submit" style="background-color: #803e3e; color: #fff; border: none; padding: 8px 20px; cursor: pointer; transition: background-color 0.3s;">Send Message</button>
+                </form>
               </div>
-          </div>
-          
-            
+            </div>
+    
             <!-- Our Pages Section -->
             <div class="col-lg-3 col-md-6">
               <div class="f_widget about-widget">
-                <h3 class="f-title f_600 t_color f_size_18">Our Pages</h3>
+                <h3 class="f-title f_600 t_color f_size_19" style="color: #fff;">Our Pages</h3>
                 <ul class="list-unstyled f_list">
-                  <li><a href="../index.html">Home</a></li>
-                  <li><a href="menu.html">About</a></li>
-                  <li><a href="#">Services</a></li>
-                  <li><a href="contact.html">Contact</a></li>
-                  <li><a href="cart.html">Cart</a></li>
-                  <li><a href="contributor.html">Contributors</a></li>
+                  <li><a href="index.html" style="color: #fff; transition: color 0.3s;">Home</a></li>
+                  <li><a href="about.html" style="color: #fff; transition: color 0.3s;">About</a></li>
+                  <li><a href="services.html" style="color: #fff; transition: color 0.3s;">Services</a></li>
+                  <li><a href="menu.html" style="color: #fff; transition: color 0.3s;">Collections</a></li>
+                  <li><a href="contact.html" style="color: #fff; transition: color 0.3s;">Contact</a></li>
+                  <li><a href="cart.html" style="color: #fff; transition: color 0.3s;">Cart</a></li>
+                  <li><a href="contributor.html" style="color: #fff; transition: color 0.3s;">Contributors</a></li>
                 </ul>
               </div>
             </div>
@@ -720,15 +734,15 @@ h1, h2, h3, h4, h5, h6 {
             <!-- Exclusive Offers Section -->
             <div class="col-lg-3 col-md-6">
               <div class="f_widget about-widget">
-                <h3 class="f-title f_600 t_color f_size_18">Exclusive Offers</h3>
+                <h3 class="f-title f_600 t_color f_size_19" style="color: #fff;">Exclusive Offers</h3>
                 <ul class="list-unstyled f_list">
-                  <li><a>Retro Discounts</a></li>
-                  <li><a>Limited-Time Promotions</a></li>
-                  <li><a>Special Event Packages</a></li>
-                  <li><a>Membership Benefits</a></li>
-                  <li><a>Early Access to New Collections</a></li>
-                  <li><a>VIP Retro Events</a></li>
-                  <li><a>Personalized Culinary Experiences</a></li>
+                  <li><a href="#" style="color: #fff; transition: color 0.3s;">Retro Discounts</a></li>
+                  <li><a href="#" style="color: #fff; transition: color 0.3s;">Limited-Time Promotions</a></li>
+                  <li><a href="#" style="color: #fff; transition: color 0.3s;">Special Event Packages</a></li>
+                  <li><a href="#" style="color: #fff; transition: color 0.3s;">Membership Benefits</a></li>
+                  <li><a href="#" style="color: #fff; transition: color 0.3s;">Early Access to New Collections</a></li>
+                  <li><a href="#" style="color: #fff; transition: color 0.3s;">VIP Retro Events</a></li>
+                  <li><a href="#" style="color: #fff; transition: color 0.3s;">Personalized Culinary Experiences</a></li>
                 </ul>
               </div>
             </div>
@@ -736,60 +750,41 @@ h1, h2, h3, h4, h5, h6 {
             <!-- Follow Us Section -->
             <div class="col-lg-3 col-md-6">
               <div class="f_widget social-widget">
-                <h3 class="f-title f_600 t_color f_size_18">Follow Us</h3>
+                <h3 class="f-title f_600 t_color f_size_19" style="color: #fff;">Follow Us</h3>
                 <div class="social-icons">
-
-                    
-
-
-                        <a class="fa-brands fa-facebook" href="https://facebook.com" style="color: hsl(203, 30%, 26%);"></a>
-                        <a class="fa-brands fa-instagram" href="https://instagram.com" style="color: hsl(203, 30%, 26%);"></a>
-                        <a class="fa-brands fa-x-twitter" href="https://twitter.com" style="color: hsl(203, 30%, 26%);"></a>
-                        <a class="fa-brands fa-youtube"
-                        href="https://www.youtube.com" style="color: hsl(203, 30%, 26%);" ></a>
-                        <a class="fa-brands fa-snapchat" 
-                        href="https://www.snapchat.com" style="color: hsl(203, 30%, 26%);" ></a>
-                    </div>
+                  <a href="https://facebook.com" class="fa-brands fa-facebook" style="color: #fff; margin-right: 10px; font-size: 24px; transition: transform 0.3s;"></a>
+                  <a href="https://instagram.com" class="fa-brands fa-instagram" style="color: #fff; margin-right: 10px; font-size: 24px; transition: transform 0.3s;"></a>
+                  <a href="https://twitter.com" class="fa-brands fa-x-twitter" style="color: #fff; margin-right: 10px; font-size: 24px; transition: transform 0.3s;"></a>
+                  <a href="https://www.youtube.com" class="fa-brands fa-youtube" style="color: #fff; margin-right: 10px; font-size: 24px; transition: transform 0.3s;"></a>
+                  <a href="https://www.snapchat.com" class="fa-brands fa-snapchat" style="color: #fff; margin-right: 10px; font-size: 24px; transition: transform 0.3s;"></a>
                 </div>
-                <p style="margin-bottom:0;font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%);">Stay connected with us on social media for the latest updates, latest collection, and vintage adventures.
-                </p>
-               
+                <p style="color: #fff; margin-top: 10px;">Stay connected with us on social media for the latest updates, collections, and vintage adventures.</p>
+                
                 <div>
-                    <button id="sr" style="z-index: 1000;">
-                    <div class="circle1">
-                      <svg id="back-to-top" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
-                        <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z"></path>
-                      </svg>
-                    </div>
-                    </button>
+                  <button id="sr" style="background: none; border: none; cursor: pointer;">
+                    <svg id="back-to-top" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16" style="transition: transform 0.3s;">
+                      <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z"></path>
+                    </svg>
+                  </button>
                 </div>
-
-               
-                <p>Stay connected with us on social media for the latest updates and vintage adventures.</p>
               </div>
-            
+            </div>
     
-        <!-- Decorative Backgrounds -->
-        <div class="footer_bg">
-          <div class="footer_bg_one"></div>
-          <div class="footer_bg_two"></div>
+          </div>
         </div>
       </div>
     
       <!-- Footer Bottom -->
-      <div class="footer_bottom">
-        <div class="container">
-          <div class="row align-items-center">
-            <div class="col-lg-6 col-sm-7">
-              <p class="mb-0 f_400">&copy; 2024 Retro. All Rights Reserved.</p>
-            </div>
-            <div class="col-lg-6 col-sm-5 text-right">
-              <p>Made with ❤️ by <a href="https://www.linkedin.com" target="_blank">Retro Team</a></p>
-            </div>
-          </div>
-        </div>
+      <div class="footer_bottom" style="padding: 5px 0; text-align: center;">
+        <p class="mb-0 f_400" style="color: #fff; font-size: 16px; margin-bottom: 5px;">Made with ❤️ by <a href="https://www.linkedin.com" target="_blank" style="color: #eee5e5;">Retro Team</a></p>
+        <p class="mb-0 f_400" style="color: #fff; font-size: 16px;">&copy; 2024 Retro. All Rights Reserved.</p>
       </div>
+    
     </footer>
+    
+    
+<!-- footer ends here -->
+    
     
 
     <script>

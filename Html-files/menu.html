@@ -134,6 +134,218 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+        a {
+  text-decoration: none;
+  color: #fff; /* Set default text color */
+  border-bottom: 2px solid transparent; /* Transparent border for the underline effect */
+  transition: border-bottom-color 0.3s; /* Smooth transition for the underline color */
+}
+
+a:hover {
+  border-bottom-color: #803e3e; /* Underline color on hover */
+}
+
+
+.new_footer_area {
+    background: hsl(203, 30%, 96%);
+    margin-top: 20px;
+}
+
+.new_footer_top {
+    padding: 80px 0px 150px;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Footer Bottom */
+.new_footer_area .footer_bottom {
+    padding-top: 5px;
+    padding-bottom: 50px;
+}
+.footer_bottom {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 20px;
+    color: #7f88a6;
+    padding: 27px 0px;
+}
+
+/* Company Widget Styling */
+.new_footer_top .company_widget p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 28px;
+    color: #6a7695;
+    margin-bottom: 20px;
+}
+.new_footer_top .company_widget .f_subscribe_two .btn_get {
+    border-width: 1px;
+    margin-top: 20px;
+}
+
+/* Contact Form Styling */
+.f_subscribe_two {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Ensure enough space between input fields */
+}
+
+.f_subscribe_two input[type="email"],
+.f_subscribe_two textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #e2e2eb;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333;
+    background-color: #f7f7f7;
+    margin-bottom: 10px; /* Spacing between inputs */
+}
+
+.f_subscribe_two input[type="email"]::placeholder,
+.f_subscribe_two textarea::placeholder {
+    color: #b3b3b3;
+}
+
+.f_subscribe_two textarea {
+    height: 120px;
+    resize: none;
+}
+
+/* Button Styling */
+.f_subscribe_two button#butt {
+    background-color: #5e2ced;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.f_subscribe_two button#butt:hover {
+    background-color: #3d1bb0;
+}
+
+/* General Hover Effects */
+a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
+    text-decoration: none;
+    outline: none;
+}
+
+/* Widget and List Styling */
+.new_footer_top .f_widget.about-widget .f_list li a:hover {
+    color: #5e2ced;
+}
+.new_footer_top .f_widget.about-widget .f_list li {
+    margin-bottom: 11px;
+}
+.f_widget.about-widget .f_list li:last-child {
+    margin-bottom: 0px;
+}
+.f_widget.about-widget .f_list li {
+    margin-bottom: 15px;
+}
+.f_widget.about-widget .f_list {
+    margin-bottom: 0px;
+}
+
+/* Social Icon Styling */
+.new_footer_top .f_social_icon a {
+    width: 44px;
+    height: 44px;
+    line-height: 43px;
+    background: transparent;
+    border: 1px solid #e2e2eb;
+    font-size: 24px;
+}
+.f_social_icon a {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    font-size: 14px;
+    line-height: 45px;
+    color: #858da8;
+    display: inline-block;
+    background: #ebeef5;
+    text-align: center;
+    transition: all 0.2s linear;
+}
+.new_footer_top .f_social_icon a:hover {
+    background: #5e2ced;
+    border-color: #5e2ced;
+    color: white;
+}
+.new_footer_top .f_social_icon a + a {
+    margin-left: 4px;
+}
+
+/* Heading and Title Styling */
+.new_footer_top .f-title {
+    margin-bottom: 30px;
+    color: #263b5e;
+}
+.f_600 {
+    font-weight: 600;
+}
+.f_size_18 {
+    font-size: 18px;
+}
+h1, h2, h3, h4, h5, h6 {
+    color: #4b505e;
+}
+.new_footer_top .f_widget.about-widget .f_list li a {
+    color: #6a7695;
+}
+
+/* Background Animations */
+.new_footer_top .footer_bg {
+    position: absolute;
+    bottom: 0;
+    /* background: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEigB8iI5tb8WSVBuVUGc9UjjB8O0708X7Fdic_4O1LT4CmLHoiwhanLXiRhe82yw0R7LgACQ2IhZaTY0hhmGi0gYp_Ynb49CVzfmXtYHUVKgXXpWvJ_oYT8cB4vzsnJLe3iCwuzj-w6PeYq_JaHmy_CoGoa6nw0FBo-2xLdOPvsLTh_fmYH2xhkaZ-OGQ/s16000/footer_bg.png") no-repeat scroll center 0; */
+    width: 100%;
+    height: 266px;
+}
+
+/* Background Animations */
+.new_footer_top .footer_bg {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 266px;
+    overflow: hidden; /* Ensure animations don't cause scrollbars */
+}
+
+.new_footer_top .footer_bg .footer_bg_one {
+    width: 330px;
+    height: 105px;
+    background-size: 100%;
+    position: absolute;
+    bottom: 0;
+    right: -330px; /* Start off-screen to the right */
+    animation: moveRightToLeft 22s ;
+}
+
+.new_footer_top .footer_bg .footer_bg_two {
+    background: url("https://cdn.pixabay.com/animation/2023/02/07/13/30/13-30-08-292_512.gif") no-repeat center center;
+    width: 330px;
+    height: 105px;
+    background-size: 100%;
+    bottom: 0;
+    right: -330px; /* Start off-screen to the right */
+    position: absolute;
+    animation: moveRightToLeft 30s ;
+}
+
+/* Animation Keyframes */
+@keyframes moveRightToLeft {
+    0% {
+        right: -330px; /* Start from right, off-screen */
+    }
+    100% {
+        right: 100%; /* End at left side of the container */
+    }
+}
         #sr {
             display: none;
             position: fixed;
@@ -298,7 +510,7 @@
         .social-icons a:hover {
             color: brown;
             background-color: hsl(22, 76%, 85%);
-            border-radius: 10px;
+            border-radius: 100%;
             transform: scale(1.5);
             /* Increase size */
             transition: transform 0.3s ease;
@@ -316,6 +528,22 @@
         .fa-brands.fa-x-twitter:hover {
             color: #181e20 !important;
         }
+        .fa-brands.fa-youtube:hover {
+  color: red !important;
+}
+.fa-brands.fa-snapchat:hover {
+  color: yellow !important;
+}
+a {
+  text-decoration: none;
+  color: #fff; /* Set default text color */
+  border-bottom: 2px solid transparent; /* Transparent border for the underline effect */
+  transition: border-bottom-color 0.3s; /* Smooth transition for the underline color */
+}
+
+a:hover {
+  border-bottom-color: #803e3e; /* Underline color on hover */
+}
     </style>
 </head>
 
@@ -742,124 +970,99 @@
                 </div>
             </div>
     </section>
-
-    <!-- footer -->
-    <footer style="background-color: hsl(20, 43%, 93%);">
-        <br><br><br>
-
-        <div class="foot-panel2">
-            <ul class="footer-colums">
-                <p style="color: hsl(357, 82%,35%);font-family: var(--ff-philosopher);">Our Pages</p>
-                <a href="../index.html"
-                    style="font-family: var(--ff-poppins);">Home</a>
-                <a href="#" style="font-family: var(--ff-poppins);">About</a>
-                <a href="services.html"
-                    style="font-family: var(--ff-poppins);">Services</a>
-                <a href="contact.html"
-                    style="font-family: var(--ff-poppins);">Contact</a>
-                <a href="cart.html" style="font-family: var(--ff-poppins);">Cart</a>
-                <a href="contributor.html" style="font-family: var(--ff-poppins);">Contributors</a>
-            </ul>
-
-            <ul class="footer-colums">
-                <p style="color: hsl(357, 82%,35%);font-family: var(--ff-philosopher);"> Exclusive Offers</p>
-                <a style="font-family: var(--ff-poppins);">Retro Discounts</a>
-                <a style="font-family: var(--ff-poppins);">Limited-Time Promotions</a>
-                <a style="font-family: var(--ff-poppins);">Special Event Packages</a>
-                <a style="font-family: var(--ff-poppins);">Membership Benefits</a>
-                <a style="font-family: var(--ff-poppins);">Early Access to New Collections</a>
-                <a style="font-family: var(--ff-poppins);">VIP Retro Events</a>
-                <a style="font-family: var(--ff-poppins);">Personalized Culinary Experiences</a>
-
-            </ul>
-
-            <ul class="footer-colums">
-                <p style="color: hsl(357, 82%,35%);font-family: var(--ff-philosopher);">Payment Products</p>
-                <a style="font-family: var(--ff-poppins);">Secure Checkout</a>
-                <a style="font-family: var(--ff-poppins);">Credit/Debit Cards</a>
-                <a style="font-family: var(--ff-poppins);">Online Payment</a>
-                <a style="font-family: var(--ff-poppins);">Mobile Wallets</a>
-                <a style="font-family: var(--ff-poppins);">Contactless Payments</a>
-            </ul>
-            <form id="contactForm">
-                <h3 style="font-family: var(--ff-philosopher); color: hsl(357, 82%,35%); font-size: 26px; margin-bottom: 3px;">
-                    Contact Us!
-                </h3>
-            
-                <!-- Email Input with Icon -->
-                <div style="position: relative; margin-bottom: 15px;">
-                    <i class="fas fa-envelope" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); font-size: 14px; color: hsl(208, 7%,46%);"></i>
-                    <input type="email" id="email" name="email" placeholder="Your Email" required 
-                           style="padding-left: 30px; width: 100%;">
+ <!-- footer starts here-->
+ <footer class="new_footer_area" style="background-color: #d97676; padding: 10px 0;">
+    <div class="new_footer_top">
+      <div class="container">
+        <div class="row">
+          
+          <!-- Contact Us Section -->
+          <div class="col-lg-3 col-md-6">
+            <div class="f_widget company_widget">
+              <h3 class="f-title f_600 t_color f_size_19" style="color: #fff;">Contact Us</h3>
+              <form action="#" method="post" class="f_subscribe_two mailchimp" style="position: relative;">
+                <div style="position: relative; margin-bottom: 10px;">
+                  <i class="fas fa-envelope" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); font-size: 14px; color: #333;"></i>
+                  <input type="email" id="email" name="email" placeholder="Your Email" required style="padding-left: 30px; width: 100%; height: 35px; border: none; background-color: #fff;">
                 </div>
-            
-                <!-- Message Input with Icon -->
-                <div style="position: relative; margin-bottom: 15px;">
-                    <i class="fas fa-comment" style="position: absolute; left: 10px; top: 10px; font-size: 14px; color: hsl(208, 7%,46%);"></i>
-                    <textarea id="message" name="message" placeholder="Your Message" required 
-                              style="padding-left: 30px; width: 100%;"></textarea>
+                <div style="position: relative; margin-bottom: 10px;">
+                  <i class="fas fa-comment" style="position: absolute; left: 10px; top: 10px; font-size: 14px; color: #333;"></i>
+                  <textarea id="message" name="message" placeholder="Your Message" required style="padding-left: 30px; width: 100%; height: 60px; border: none; background-color: #fff;"></textarea>
                 </div>
-            
-                <!-- Submit Button -->
-                <button id="butt" type="submit" style="font-family: var(--ff-poppins);">Send Message</button>
-            </form>
-
-<!-- Include Font Awesome -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
-
-        </div>
-
-
-        <div class="foot_panel4">
-            <div class="pages">
-                <h4 style="font-family: var(--ff-philosopher);color: hsl(304, 14%, 46%);">Follow Us</h4>
-
-                <div class="social-icons">
-
-
-                <a class="fa-brands fa-facebook"
-                    href="https://facebook.com" ></a>
-                <a class="fa-brands fa-instagram"
-                    href="https://instagram.com"
-                    target="_blank"></a>
-                <a class="fa-brands fa-x-twitter"
-                    href="https://twitter.com" ></a>
-                <a class="fa-brands fa-youtube"
-                    href="https://www.youtube.com" ></a>
-                <a class="fa-brands fa-snapchat" 
-                    href="https://www.snapchat.com" ></a>
-
-                </div>
-                <p style="font-family: var(--ff-philosopher);margin-bottom:0;">Stay connected with us on social media
-                    for the latest updates, latest collection, and vintage adventures.
-                </p>
-                <div class="copyright">
-                    <p style="font-family: var(--ff-philosopher);">
-                        &copy; 2024 Retro . All Rights Reserved. | Developed by <span id="author">
-                            <a href="https://www.linkedin.com" target="_blank" style="text-decoration: none;">Retro
-                                Team</a>
-                        </span></p>
-
-
-
-
-                </div>
-                <div>
-                    <button id="sr" style="z-index: 1000;">
-                        <div class="circle1">
-                            <svg id="back-to-top" xmlns="http://www.w3.org/2000/svg" width="30" height="30"
-                                fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
-                                <path
-                                    d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z">
-                                </path>
-                            </svg>
-                        </div>
-                    </button>
-                </div>
+                <button id="butt" type="submit" style="background-color: #803e3e; color: #fff; border: none; padding: 8px 20px; cursor: pointer; transition: background-color 0.3s;">Send Message</button>
+              </form>
             </div>
-    </footer>
-
+          </div>
+  
+          <!-- Our Pages Section -->
+          <div class="col-lg-3 col-md-6">
+            <div class="f_widget about-widget">
+              <h3 class="f-title f_600 t_color f_size_19" style="color: #fff;">Our Pages</h3>
+              <ul class="list-unstyled f_list">
+                <li><a href="index.html" style="color: #fff; transition: color 0.3s;">Home</a></li>
+                <li><a href="about.html" style="color: #fff; transition: color 0.3s;">About</a></li>
+                <li><a href="services.html" style="color: #fff; transition: color 0.3s;">Services</a></li>
+                <li><a href="menu.html" style="color: #fff; transition: color 0.3s;">Collections</a></li>
+                <li><a href="contact.html" style="color: #fff; transition: color 0.3s;">Contact</a></li>
+                <li><a href="cart.html" style="color: #fff; transition: color 0.3s;">Cart</a></li>
+                <li><a href="contributor.html" style="color: #fff; transition: color 0.3s;">Contributors</a></li>
+              </ul>
+            </div>
+          </div>
+  
+          <!-- Exclusive Offers Section -->
+          <div class="col-lg-3 col-md-6">
+            <div class="f_widget about-widget">
+              <h3 class="f-title f_600 t_color f_size_19" style="color: #fff;">Exclusive Offers</h3>
+              <ul class="list-unstyled f_list">
+                <li><a href="#" style="color: #fff; transition: color 0.3s;">Retro Discounts</a></li>
+                <li><a href="#" style="color: #fff; transition: color 0.3s;">Limited-Time Promotions</a></li>
+                <li><a href="#" style="color: #fff; transition: color 0.3s;">Special Event Packages</a></li>
+                <li><a href="#" style="color: #fff; transition: color 0.3s;">Membership Benefits</a></li>
+                <li><a href="#" style="color: #fff; transition: color 0.3s;">Early Access to New Collections</a></li>
+                <li><a href="#" style="color: #fff; transition: color 0.3s;">VIP Retro Events</a></li>
+                <li><a href="#" style="color: #fff; transition: color 0.3s;">Personalized Culinary Experiences</a></li>
+              </ul>
+            </div>
+          </div>
+  
+          <!-- Follow Us Section -->
+          <div class="col-lg-3 col-md-6">
+            <div class="f_widget social-widget">
+              <h3 class="f-title f_600 t_color f_size_19" style="color: #fff;">Follow Us</h3>
+              <div class="social-icons">
+                <a href="https://facebook.com" class="fa-brands fa-facebook" style="color: #fff; margin-right: 10px; font-size: 24px; transition: transform 0.3s;"></a>
+                <a href="https://instagram.com" class="fa-brands fa-instagram" style="color: #fff; margin-right: 10px; font-size: 24px; transition: transform 0.3s;"></a>
+                <a href="https://twitter.com" class="fa-brands fa-x-twitter" style="color: #fff; margin-right: 10px; font-size: 24px; transition: transform 0.3s;"></a>
+                <a href="https://www.youtube.com" class="fa-brands fa-youtube" style="color: #fff; margin-right: 10px; font-size: 24px; transition: transform 0.3s;"></a>
+                <a href="https://www.snapchat.com" class="fa-brands fa-snapchat" style="color: #fff; margin-right: 10px; font-size: 24px; transition: transform 0.3s;"></a>
+              </div>
+              <p style="color: #fff; margin-top: 10px;">Stay connected with us on social media for the latest updates, collections, and vintage adventures.</p>
+              
+              <div>
+                <button id="sr" style="background: none; border: none; cursor: pointer;">
+                  <svg id="back-to-top" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16" style="transition: transform 0.3s;">
+                    <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+  
+        </div>
+      </div>
+    </div>
+  
+    <!-- Footer Bottom -->
+    <div class="footer_bottom" style="padding: 5px 0; text-align: center;">
+      <p class="mb-0 f_400" style="color: #fff; font-size: 16px; margin-bottom: 5px;">Made with ❤️ by <a href="https://www.linkedin.com" target="_blank" style="color: #eee5e5;">Retro Team</a></p>
+      <p class="mb-0 f_400" style="color: #fff; font-size: 16px;">&copy; 2024 Retro. All Rights Reserved.</p>
+    </div>
+  
+  </footer>
+  
+  
+<!-- footer ends here -->
     <script src="menu.js"></script>
     <script>
 
