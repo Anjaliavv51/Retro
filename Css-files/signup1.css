@@ -34,36 +34,23 @@ body {
   width: 100%;
   overflow: hidden; /* Ensure nothing overflows from the flexbox */
   gap: 20px; /* Spacing between the card and image */
-  
 }
-.homebtn{
-  position: absolute;
-  top:30px;
-  left:25px;
-  
-}
-.homebtn a{
-  font-size: 30px;
-  text-decoration: none;
-}
-.homebtn a::after {
-  content: ''; /* Creates a pseudo-element */
-  position: absolute;
-  width: 100%; /* Full width of the link */
-  height: 1.5px; /* Thickness of the underline */
-  bottom: -5px;
-  left: 0;
-  background-color: transparent; /* Default background (invisible) */
-  transition: background-color 0.1s ease; /* Smooth transition */
-}
-.homebtn a:hover::after{
-  background-color:white;
+
+.right-login {
+  width: 40vw;
+  height: 100%;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
 }
 
 .card-login {
-  width: calc(100% - 40px); /* Full width minus padding */
+  width: 100%; 
   max-width: 400px; /* Max width for better layout */
-  padding: 30px;
+  padding: 20px 30px;
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   background-color: var(--card-bg);
@@ -86,9 +73,14 @@ body {
   font-size: 2.5rem; /* Larger font size for the title */
   color: var(--primary-color);
   text-align: center; /* Centered title */
-  margin-bottom: 20px;
+  font-weight: bold;
+  margin: 20px 0 10px 0;
   text-transform: uppercase; /* Uppercase for modern touch */
   letter-spacing: 1px; /* Spacing between letters */
+}
+
+#signup-form{
+  width: 80%;
 }
 
 .textfield {
@@ -124,10 +116,11 @@ body {
 }
 
 .btn-login, #google-login {
-  padding: 16px;
+  padding: 10px 16px;
   margin: 10px 0;
   background-color: var(--btn-color); 
   color: var(--btn-text-color);
+  font-size: 16px;
   font-weight: bold;
   border: none;
   border-radius: var(--border-radius);
