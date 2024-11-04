@@ -27,15 +27,11 @@ body {
 
 .main-login {
   display: flex;
-  .form-check{
-    /* justify-self: center; */
-    align-self: flex-start;
-  }
   justify-content: center;
   align-items: center;
   width: 100%;
   overflow: hidden; /* Ensure nothing overflows from the flexbox */
-  gap: 20px; /* Spacing between the card and image */
+  gap: 2rem; /* Spacing between the card and image */
   
 }
 .homebtn{
@@ -63,20 +59,16 @@ body {
 }
 
 .card-login {
-  width: calc(100% - 40px); /* Full width minus padding */
-  max-width: 400px; /* Max width for better layout */
-  padding: 30px;
-  border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
-  background-color: var(--card-bg);
-  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
-  display: flex; /* Flex to stack elements */
-  flex-direction: column; /* Column layout for the card */
-  overflow: hidden; /* Added to ensure no content spills out */
-  border-radius: 50px;
-  align-items: center;
+  width: 60%;
+  display: flex;
   justify-content: center;
-  gap: 20px;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px 35px;
+  border-radius: 20px;
+  box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.15);
+  background: rgba(236, 236, 236, 0.8);
+  backdrop-filter: blur(10px);
 }
 
 .card-login:hover {
