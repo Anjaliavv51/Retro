@@ -2,187 +2,22 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign up</title>
-    <script src="scriptsignup.js" defer type="module"></script>
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <link rel="stylesheet" href="../Css-files/signup1.css">
-    <link rel="shortcut icon" type="image/x-icon" href="../Favicon image/favicon-32x32.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <style>
-
-
-      .right-login {
-          width: 50vw;
-          height: 100vh;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          animation: fadeIn 2s ease-in-out;
-      }
-
-
-
-      @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');  
-      #sr {
-        display: none; 
-        position: fixed; 
-        bottom: 70px; 
-        right: 15px; 
-        z-index: 99; 
-        font-size: 18px;
-        border: none;
-        outline: none;
-        background-color: transparent; 
-        color: rgb(17, 17, 17); 
-        cursor: pointer; 
-        padding: 15px; 
-        border-radius: 4px; 
-      }
-
-      #sr:hover {
-        background-color: #333; 
-        border-radius: 100px;
-      }
-      .circle{
-        z-index: 998;
-        width: 20px;
-        height: 20px;
-        border-radius: 50%;
-        pointer-events: none;
-          animation: colors 5s infinite;
-          position: fixed;
-        transform: translate(-50%,-50%);
-      }
-      .circle::before {
-          content: "";
-          position: fixed;
-        width: 50px;
-        height: 50px;
-        opacity: 0.2;
-        transform: translate(-30%,-30%);
-        border-radius: 50%;
-      }
-        
-        :root{
-                    --ff-philosopher: "Philosopher", sans-serif;
-                    --ff-poppins: "Poppins", sans-serif;
-                }
-          </style>
-          <!--Tilted Text-->
-          <style>
-            .area{
-            width: 400px;
-            height: 400px;
-            position: relative;
-            display: flex;
-            flex-wrap: wrap;
-            perspective: 1000px;
-            transition: all 0.5s;
-            box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
-            border-radius: 10px;
-        }
-        .area:hover{
-            transform: scale(1.1);
-        }
-        .area .way{
-            width: 33.33%;
-            height: 33.33%;
-            z-index: 1;
-        }
-        .area .box{
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            background-color: transparent;
-            transform-style: preserve-3d;
-            transition: all 0.5s ease-out;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 10px;
-        }
-        .area .box::before{
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            transform: translateZ(-80px);
-            background-color: transparent;
-            filter: blur(10px);
-        }
-        .area .box span{
-            width: 80%;
-            text-align: center;
-            font-family: var(--ff-philosopher);
-            font-weight: 500;
-            font-size: 50px;
-            color: hsl(357, 82%,35%);
-            transform-style: preserve-3d;
-            transform: translateZ(50px);
-        }
-        .area .box span::before{
-            content: 'Retro Vibe is Good Vibe';
-            top: 0px;
-            left: 0px;
-            position: absolute;
-            color: transparent;
-            text-shadow: 0px 0px 2px rgb(90, 90, 90), 0px 0px 5px gray;
-            transform: translateZ(-40px);
-        }
-        .error-message {
-                    color: red;
-                    font-size: 0.9em;
-                }
-                .textfield {
-                    margin-bottom: 15px;
-                }
-                /* Tooltip styling */
-                .tooltip {
-                    position: relative;
-                    display: inline-block;
-                }
-                .tooltip .tooltiptext {
-                    visibility: hidden;
-                    width: 200px;
-                    background-color: #555;
-                    color: #fff;
-                    text-align: center;
-                    border-radius: 5px;
-                    padding: 5px;
-                    position: absolute;
-                    z-index: 1;
-                    bottom: 125%; /* Position above the input field */
-                    left: 50%;
-                    margin-left: -100px; /* Center the tooltip */
-                    opacity: 0;
-                    transition: opacity 0.3s;
-                }
-                .tooltip:hover .tooltiptext {
-                    visibility: visible;
-                    opacity: 1;
-                }
-                .area .way:nth-child(1):hover ~ .box{transform: rotateX(-20deg) rotateY(20deg);}
-                .area .way:nth-child(2):hover ~ .box{transform: rotateX(-20deg) rotateY(0deg);}
-                .area .way:nth-child(3):hover ~ .box{transform: rotateX(-20deg) rotateY(-20deg);}
-
-                .area .way:nth-child(4):hover ~ .box{transform: rotateX(0deg) rotateY(20deg);}
-                .area .way:nth-child(5):hover ~ .box{transform: rotateX(0deg) rotateY(0deg);}
-                .area .way:nth-child(6):hover ~ .box{transform: rotateX(0deg) rotateY(-20deg);}
-
-                .area .way:nth-child(7):hover ~ .box{transform: rotateX(20deg) rotateY(20deg);}
-                .area .way:nth-child(8):hover ~ .box{transform: rotateX(20deg) rotateY(0deg);}
-                .area .way:nth-child(9):hover ~ .box{transform: rotateX(20deg) rotateY(-20deg);}
-          </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign up</title>
+  <script src="scriptsignup.js" defer type="module"></script>
+  <link rel="stylesheet" href="../Css-files/login-register.css">
+  <link rel="shortcut icon" type="image/x-icon" href="../Favicon image/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
@@ -351,7 +186,6 @@
     .area .way:nth-child(9):hover~.box {
       transform: rotateX(20deg) rotateY(-20deg);
     }
-
   </style>
   <style>
     /* Styles for the switch link */
@@ -409,6 +243,7 @@
     <div class="circle" style="background-color: rgb(104, 0, 96); left: 504px; top: 59px; scale: 0.1;"></div>
     <div class="circle" style="background-color: rgb(96, 0, 95); left: 504px; top: 59px; scale: 0.05;"></div>
   </div>
+
   <div class="main-login">
     <div class="home-btn">
       <a href="../index.html" style="font-family: var(--ff-philosopher); color: rgb(149, 15, 95);"><b>Retro</b></a>
@@ -463,100 +298,100 @@
           <p class="switch-link">Already have an account ? <a href="login.html">Login</a></p>
         </div>
       </div>
-      <script>
-        const coords = { x: 0, y: 0 };
-        const circles = document.querySelectorAll(".circle");
-    
-        const colors = [
-          "#ffb56b",
-          "#fdaf69",
-          "#f89d63",
-          "#f59761",
-          "#ef865e",
-          "#ec805d",
-          "#e36e5c",
-          "#df685c",
-          "#d5585c",
-          "#d1525c",
-          "#c5415d",
-          "#c03b5d",
-          "#b22c5e",
-          "#ac265e",
-          "#9c155f",
-          "#950f5f",
-          "#830060",
-          "#7c0060",
-          "#680060",
-          "#60005f",
-          "#48005f",
-          "#3d005e"
-        ];
-    
-        circles.forEach(function (circle, index) {
-          circle.x = 0;
-          circle.y = 0;
-          circle.style.backgroundColor = colors[index % colors.length];
-        });
-    
-        window.addEventListener("mousemove", function (e) {
-          coords.x = e.clientX;
-          coords.y = e.clientY;
-    
-        });
-    
-        function animateCircles() {
-    
-          let x = coords.x;
-          let y = coords.y;
-    
-          circles.forEach(function (circle, index) {
-            circle.style.left = x - 12 + "px";
-            circle.style.top = y - 12 + "px";
-    
-            circle.style.scale = (circles.length - index) / circles.length;
-    
-            circle.x = x;
-            circle.y = y;
-    
-            const nextCircle = circles[index + 1] || circles[0];
-            x += (nextCircle.x - x) * 0.3;
-            y += (nextCircle.y - y) * 0.3;
-          });
-    
-          requestAnimationFrame(animateCircles);
-        }
-    
-        animateCircles();
-      </script>
-      <script>
-        window.embeddedChatbotConfig = {
-        chatbotId: "dGlQ5bP-F7GodLWzgrVAx",
-        domain: "www.chatbase.co"
-        }
-        </script>
-        <script
-        src="https://www.chatbase.co/embed.min.js"
-        chatbotId="dGlQ5bP-F7GodLWzgrVAx"
-        domain="www.chatbase.co"
-        defer>
-        </script>
-        <script>
-          // JavaScript to toggle password visibility
-          const passwordField = document.getElementById('password');
-          const showPasswordCheckbox = document.getElementById('showPassword');
-      
-          showPasswordCheckbox.addEventListener('change', () => {
-              if (showPasswordCheckbox.checked) {
-                  passwordField.type = 'text';  // Show password
-              } else {
-                  passwordField.type = 'password';  // Hide password
-              }
-          });
-      </script>
-    <div class="gtranslate_wrapper"></div>
-    <script>window.gtranslateSettings = {"default_language":"en","detect_browser_language":true,"wrapper_selector":".gtranslate_wrapper"}</script>
-    <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+    </form>
+  </div>
+  <script>
+    const coords = { x: 0, y: 0 };
+    const circles = document.querySelectorAll(".circle");
 
+    const colors = [
+      "#ffb56b",
+      "#fdaf69",
+      "#f89d63",
+      "#f59761",
+      "#ef865e",
+      "#ec805d",
+      "#e36e5c",
+      "#df685c",
+      "#d5585c",
+      "#d1525c",
+      "#c5415d",
+      "#c03b5d",
+      "#b22c5e",
+      "#ac265e",
+      "#9c155f",
+      "#950f5f",
+      "#830060",
+      "#7c0060",
+      "#680060",
+      "#60005f",
+      "#48005f",
+      "#3d005e"
+    ];
+
+    circles.forEach(function (circle, index) {
+      circle.x = 0;
+      circle.y = 0;
+      circle.style.backgroundColor = colors[index % colors.length];
+    });
+
+    window.addEventListener("mousemove", function (e) {
+      coords.x = e.clientX;
+      coords.y = e.clientY;
+
+    });
+
+    function animateCircles() {
+
+      let x = coords.x;
+      let y = coords.y;
+
+      circles.forEach(function (circle, index) {
+        circle.style.left = x - 12 + "px";
+        circle.style.top = y - 12 + "px";
+
+        circle.style.scale = (circles.length - index) / circles.length;
+
+        circle.x = x;
+        circle.y = y;
+
+        const nextCircle = circles[index + 1] || circles[0];
+        x += (nextCircle.x - x) * 0.3;
+        y += (nextCircle.y - y) * 0.3;
+      });
+
+      requestAnimationFrame(animateCircles);
+    }
+
+    animateCircles();
+  </script>
+  <script>
+    window.embeddedChatbotConfig = {
+      chatbotId: "dGlQ5bP-F7GodLWzgrVAx",
+      domain: "www.chatbase.co"
+    }
+  </script>
+  <script src="https://www.chatbase.co/embed.min.js" chatbotId="dGlQ5bP-F7GodLWzgrVAx" domain="www.chatbase.co" defer>
+  </script>
+  <script>
+    // JavaScript to toggle password visibility
+    function togglePasswordVisibility() {
+      const passwordField = document.getElementById('password');
+      const toggleIcon = document.getElementById('togglePasswordIcon');
+      if (passwordField.type === 'password') {
+        passwordField.type = 'text';
+        toggleIcon.classList.remove('fa-eye');
+        toggleIcon.classList.add('fa-eye-slash');
+      } else {
+        passwordField.type = 'password';
+        toggleIcon.classList.remove('fa-eye-slash');
+        toggleIcon.classList.add('fa-eye');
+      }
+    }
+  </script>
+  <div class="gtranslate_wrapper"></div>
+  <script>window.gtranslateSettings = { "default_language": "en", "detect_browser_language": true, "wrapper_selector": ".gtranslate_wrapper" }</script>
+  <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
 </body>
 
 </html>
