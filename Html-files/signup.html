@@ -265,16 +265,36 @@
         <div class="box">
           <span>Retro Vibe is Good Vibe</span>
         </div>
+<div class="right-login">
+  <div class="card-login">
+    <h1 style="font-family: var(--ff-philosopher); color: hsl(203, 30%, 26%);">SIGN UP</h1>
+    <form id="signup-form" action="logged.html">
+      <div class="textfield">
+        <label for="name" style="font-family: var(--ff-philosopher); color: black;">Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required style="font-family: var(--ff-philosopher);">
+        <span id="name-error" class="error-message"></span>
       </div>
-    </div>
-    <form id="loginForm" action="logged.html">
-      <div class="right-login">
-        <div class="card-login">
-          <h1 style="color: hsl(203, 30%,26%);font-family: var(--ff-philosopher);">SIGN UP</h1>
-          <div class="textfield">
-            <label for="name" style="color: black;font-family:var(--ff-poppins);">Name</label>
-            <input required type="text" id="name" name="name" placeholder="Enter your name"
-              style="font-family:var(--ff-poppins);">
+      <div class="textfield">
+        <label for="email" style="font-family: var(--ff-philosopher); color: black;">Email / User Name</label>
+        <input type="email" id="email" name="email" placeholder="Enter Email / UserName" required style="font-family: var(--ff-philosopher);">
+        <span id="email-error" class="error-message"></span>
+      </div>
+      <div class="textfield">
+        <label for="password" style="font-family: var(--ff-philosopher);">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password">
+      </div>
+      <div class="show-pass-container">
+        <input type="checkbox" id="showPassword">
+        <label for="showPassword">Show Password</label>
+      </div>
+      <div class="btnNext">
+        <button type="submit" id="reg-btn" class="btn-login" style="font-family: var(--ff-philosopher); color: #ddd;">Register</button>
+        <button id="google-login" style="font-family: var(--ff-philosopher); color: #ddd;">Signup with Google</button>
+      </div>
+    </form>
+  </div>
+</div>
+
           </div>
           <div class="textfield">
             <label for="email" style="color: black;font-family:var(--ff-poppins);">Email / User Name</label>
@@ -298,100 +318,99 @@
           <p class="switch-link">Already have an account ? <a href="login.html">Login</a></p>
         </div>
       </div>
-    </form>
-  </div>
-  <script>
-    const coords = { x: 0, y: 0 };
-    const circles = document.querySelectorAll(".circle");
+  
+</form>
+</div>
+<script>
+  const coords = { x: 0, y: 0 };
+  const circles = document.querySelectorAll(".circle");
 
-    const colors = [
-      "#ffb56b",
-      "#fdaf69",
-      "#f89d63",
-      "#f59761",
-      "#ef865e",
-      "#ec805d",
-      "#e36e5c",
-      "#df685c",
-      "#d5585c",
-      "#d1525c",
-      "#c5415d",
-      "#c03b5d",
-      "#b22c5e",
-      "#ac265e",
-      "#9c155f",
-      "#950f5f",
-      "#830060",
-      "#7c0060",
-      "#680060",
-      "#60005f",
-      "#48005f",
-      "#3d005e"
-    ];
+  const colors = [
+    "#ffb56b", "#fdaf69", "#f89d63", "#f59761", "#ef865e", "#ec805d",
+    "#e36e5c", "#df685c", "#d5585c", "#d1525c", "#c5415d", "#c03b5d",
+    "#b22c5e", "#ac265e", "#9c155f", "#950f5f", "#830060", "#7c0060",
+    "#680060", "#60005f", "#48005f", "#3d005e"
+  ];
+
+  circles.forEach(function (circle, index) {
+    circle.x = 0;
+    circle.y = 0;
+    circle.style.backgroundColor = colors[index % colors.length];
+  });
+
+  window.addEventListener("mousemove", function (e) {
+    coords.x = e.clientX;
+    coords.y = e.clientY;
+  });
+
+  function animateCircles() {
+    let x = coords.x;
+    let y = coords.y;
 
     circles.forEach(function (circle, index) {
-      circle.x = 0;
-      circle.y = 0;
-      circle.style.backgroundColor = colors[index % colors.length];
+      circle.style.left = x - 12 + "px";
+      circle.style.top = y - 12 + "px";
+      circle.style.scale = (circles.length - index) / circles.length;
+
+      circle.x = x;
+      circle.y = y;
+
+      const nextCircle = circles[index + 1] || circles[0];
+      x += (nextCircle.x - x) * 0.3;
+      y += (nextCircle.y - y) * 0.3;
     });
 
-    window.addEventListener("mousemove", function (e) {
-      coords.x = e.clientX;
-      coords.y = e.clientY;
+    requestAnimationFrame(animateCircles);
+  }
 
-    });
+  animateCircles();
 
-    function animateCircles() {
+  // Store user details on registration
+  document.getElementById('reg-btn').addEventListener('click', function(event) {
+    event.preventDefault();
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
 
-      let x = coords.x;
-      let y = coords.y;
+    const userDetails = {
+      name: name,
+      email: email,
+      password: password
+    };
 
-      circles.forEach(function (circle, index) {
-        circle.style.left = x - 12 + "px";
-        circle.style.top = y - 12 + "px";
+    localStorage.setItem('userDetails', JSON.stringify(userDetails));
+    window.location.href = 'signed.html';
+  });
+</script>
 
-        circle.style.scale = (circles.length - index) / circles.length;
+<script>
+  window.embeddedChatbotConfig = {
+    chatbotId: "dGlQ5bP-F7GodLWzgrVAx",
+    domain: "www.chatbase.co"
+  };
+</script>
+<script src="https://www.chatbase.co/embed.min.js" chatbotId="dGlQ5bP-F7GodLWzgrVAx" domain="www.chatbase.co" defer></script>
 
-        circle.x = x;
-        circle.y = y;
+<script>
+  // Toggle password visibility
+  const passwordField = document.getElementById('password');
+  const showPasswordCheckbox = document.getElementById('showPassword');
 
-        const nextCircle = circles[index + 1] || circles[0];
-        x += (nextCircle.x - x) * 0.3;
-        y += (nextCircle.y - y) * 0.3;
-      });
+  showPasswordCheckbox.addEventListener('change', () => {
+    passwordField.type = showPasswordCheckbox.checked ? 'text' : 'password';
+  });
+</script>
 
-      requestAnimationFrame(animateCircles);
-    }
+<div class="gtranslate_wrapper"></div>
+<script>
+  window.gtranslateSettings = {
+    "default_language": "en",
+    "detect_browser_language": true,
+    "wrapper_selector": ".gtranslate_wrapper"
+  };
+</script>
+<script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
 
-    animateCircles();
-  </script>
-  <script>
-    window.embeddedChatbotConfig = {
-      chatbotId: "dGlQ5bP-F7GodLWzgrVAx",
-      domain: "www.chatbase.co"
-    }
-  </script>
-  <script src="https://www.chatbase.co/embed.min.js" chatbotId="dGlQ5bP-F7GodLWzgrVAx" domain="www.chatbase.co" defer>
-  </script>
-  <script>
-    // JavaScript to toggle password visibility
-    function togglePasswordVisibility() {
-      const passwordField = document.getElementById('password');
-      const toggleIcon = document.getElementById('togglePasswordIcon');
-      if (passwordField.type === 'password') {
-        passwordField.type = 'text';
-        toggleIcon.classList.remove('fa-eye');
-        toggleIcon.classList.add('fa-eye-slash');
-      } else {
-        passwordField.type = 'password';
-        toggleIcon.classList.remove('fa-eye-slash');
-        toggleIcon.classList.add('fa-eye');
-      }
-    }
-  </script>
-  <div class="gtranslate_wrapper"></div>
-  <script>window.gtranslateSettings = { "default_language": "en", "detect_browser_language": true, "wrapper_selector": ".gtranslate_wrapper" }</script>
-  <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
 </body>
 
 </html>
