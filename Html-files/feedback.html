@@ -180,51 +180,280 @@ body{
     font-family: 'Philosopher', sans-serif;
 }
 
-.animated-header {
-    font-family: Arial, sans-serif; /* Use a basic font for testing */
-    color: #dc3545;
-    display: inline-block; /* Allow individual letters to be styled separately */
-    overflow: hidden; /* Ensures text appears only when animated */
-}
-
-/* Animation for each letter */
-.letter {
-    display: inline-block; /* Allows each letter to be animated individually */
-    opacity: 0; /* Start invisible */
-    transform: translateY(20px); /* Start slightly below */
-    animation: appear 1.0s forwards; /* Animation for appearance */
-}
-
-/* Keyframes for letter appearance */
-@keyframes appear {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
+.star-rating {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: center;
+      /* Center the stars horizontally */
+      align-items: center;
+      /* Center the stars vertically if needed */
+      margin: 0 auto;
+      /* Ensure it doesn't shift due to outer spacing */
     }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-.spacer {
-    display: inline-block; /* Allows it to take up space */
-    width: 40px; /* Adjust the width for more or less space */
-}
 
-/* Add animation delay for each letter */
-.letter:nth-child(1) { animation-delay: 0s; }
-.letter:nth-child(2) { animation-delay: 0.2s; }
-.letter:nth-child(3) { animation-delay: 0.4s; }
-.letter:nth-child(4) { animation-delay: 0.6s; }
-.letter:nth-child(5) { animation-delay: 0.8s; }
-.letter:nth-child(6) { animation-delay: 01.0s; }
-.letter:nth-child(7) { animation-delay: 01.2s; }
-.letter:nth-child(8) { animation-delay: 01.4s; }
-.letter:nth-child(9) { animation-delay: 01.6s; }
-.letter:nth-child(10) { animation-delay: 01.8s; }
-.letter:nth-child(11) { animation-delay: 2.0s; }
-.letter:nth-child(12) { animation-delay: 2.1s; }
-/* .letter:nth-child(13) { animation-delay: 1.2s; } */
+    .star-rating input {
+      display: none;
+    }
+
+    .star-rating label {
+      cursor: pointer;
+      width: 30px;
+      height: 30px;
+      margin-right: 5px;
+      background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="%23ffffff" stroke="%23000000" stroke-width="1" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 100%;
+    }
+
+    .star-rating label:hover,
+    .star-rating label:hover~label,
+    .star-rating input:checked~label {
+      background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="%23ffff00" stroke="%23000000" stroke-width="1" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>');
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #FAFCFE;
+      color: var(--primary-color);
+    }
+
+    .content {
+      max-width: 1200px;
+      margin: 40px auto;
+      /* Keep vertical margin for spacing from header and footer */
+      padding: 40px;
+      /* Add significant padding inside the content area */
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 4px 6px rgba(53, 46, 46, 0.285);
+      position: relative;
+    }
+    
+    .feedback-header {
+      background-color: transparent;
+      /* Remove the dark background */
+      position: relative;
+      /* Add this to allow absolute positioning of the image */
+      padding: 10px 20px;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: -1;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .feedback-header h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .feedback-header img {
+      max-width: 100%;
+      height: auto;
+      z-index: -1;
+      max-height: 300px;
+      /* Adjust as needed */
+      object-fit: cover;
+      margin-bottom: 20px;
+    }
+
+    .feedback-header,
+    .feedback-header img {
+      border: none !important;
+      border-bottom: none !important;
+      text-decoration: none !important;
+      outline: none !important;
+      box-shadow: none !important;
+
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    h2 {
+      font-size: 18px;
+      color: var(--secondary-color);
+      margin-top: 20px;
+    }
+
+    .tickmarks {
+      display: flex;
+      justify-content: space-between;
+      margin: 10px 0;
+      width: 100%;
+      /* Ensure tick marks take the full width of the container */
+    }
+
+    .tickmarks span {
+      display: inline-block;
+      padding: 8px 12px;
+      border: 2px solid #007bff;
+      /* Border color for the circle */
+      border-radius: 30%;
+      /* Make the span circular */
+      background-color: transparent;
+      color: #007bff;
+      font-weight: bold;
+      transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+      cursor: pointer;
+    }
+
+    /* Hover effect */
+    .tickmarks span:hover {
+      transform: scale(1.5);
+      /* Make the span larger when hovered */
+      background-color: #007bff;
+      color: white;
+      /* Change text color on hover */
+    }
+
+    input[type="range"] {
+      width: 100%;
+      margin: 10px 0;
+    }
+
+    textarea {
+      width: 100%;
+      height: 100px;
+      margin: 10px 0;
+      padding: 10px;
+      border: 1px solid var(--bg-color);
+    }
+
+    select {
+      margin: 5px 0;
+      padding: 5px;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: var(--primary-color);
+      color: white;
+      border: none;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    button:hover {
+      background-color: var(--secondary-color);
+    }
+
+    @media (min-width: 768px) {
+      .content {
+        flex-direction: row;
+      }
+
+      header,
+      main {
+        flex: 1;
+      }
+
+      .center-select {
+        display: flex;
+        justify-content: center;
+        /* Centers the selects horizontally */
+        align-items: center;
+        /* Vertically centers them if the container has a height */
+        gap: 10px;
+        /* Optional: Adds some space between the selects */
+      }
+
+      select {
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+    }
+
+    .feedback-header img {
+      transition: transform 0.3s ease, filter 0.3s ease;
+    }
+
+    .feedback-header img:hover {
+      transform: scale(1.05);
+      filter: brightness(1.1);
+    }
+
+    /* Hover effect for the content div */
+    .content {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .content:hover {
+      transform: scale(1.02);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    textarea,
+    input[type="range"] {
+      transition: transform 0.3s ease, border 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+      border: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+
+    textarea:hover,
+    input[type="range"]:hover {
+      transform: scale(1.02);
+      border: 2px solid #007bff;
+      background-color: #f0f8ff;
+      box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+    }
+
+
+    textarea:focus,
+    input[type="range"]:focus {
+      border: 2px solid #0056b3;
+      outline: none;
+      box-shadow: 0 0 8px rgba(0, 86, 179, 0.3);
+    }
+    .star-rating label {
+      transition: color 0.3s ease, transform 0.3s ease, filter 0.3s ease;
+    }
+
+    .star-rating label:hover,
+    .star-rating label:hover~label {
+      color: #ffb400;
+      transform: scale(1.2);
+      filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.1));
+    }
+
+    /* Hover effect for the feedback button */
+    #feedback-btn {
+      transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+      box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+      text-transform: uppercase;
+    }
+
+    #feedback-btn:hover {
+      background-color: #0056b3;
+      transform: scale(1.05);
+      box-shadow: 0 6px 12px rgba(0, 86, 179, 0.3);
+    }
+
+    #feedback-btn:active {
+      transform: scale(1);
+      box-shadow: 0 2px 6px rgba(0, 86, 179, 0.3);
+    }
 
 
 .social-icons a {
@@ -242,97 +471,8 @@ body{
   transform: scale(1.5); /* Increase size */
   transition: transform 0.3s ease; /* Smooth transition effect */
 }
-
-
-
- .about_container {
-    max-width: 1200px; 
-    margin: 0 auto; 
-    padding: 40px 20px; 
-    background-color: hsl(203, 30%, 96%); 
-    border-radius: 10px; 
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-} 
-/* .aboutcontainer {
-    max-width: 1200px; 
-    margin: 0 auto; 
-    padding: 40px 20px; 
-    background-color: hsl(203, 30%, 96%); 
-    border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); 
-} */
-.about_container:hover {
-  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3); /* Adds a shadow to the outer container */
-  transform: scale(1.05); /* Slightly enlarges the outer box */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
-}
-
-.about_container > * { 
-  /* Prevent hover effect on inner elements */
-  transition: none; 
-  transform: none;
-}
-
-
-.about1 {
-    font-family: var(--ff-poppins); /* Use your defined font */
-    color: hsl(208, 7%, 46%); /* Text color */
-    line-height: 1.6; /* Increase line height for readability */
-    margin-bottom: 20px; /* Spacing below this paragraph */
-}
-
-
-.about2,
-.about3 {
-    margin-bottom: 40px; /* Spacing between sections */
-}
-
-.section__title {
-    font-family: var(--ff-philosopher); /* Use your defined font */
-    color: hsl(357, 82%, 35%); /* Title color */
-    font-size: 1.8rem; /* Font size for headings */
-    margin-bottom: 15px; /* Spacing below headings */
-    border-bottom: 2px solid hsl(357, 82%, 35%); /* Underline for headings */
-    padding-bottom: 5px; /* Padding below the heading */
-}
-.section__titlestyle{
-  font-family: var(--ff-philosopher); /* Use your defined font */
-    color: hsl(357, 82%, 35%); /* Title color */
-    font-size: 1.8rem; /* Font size for headings */
-    margin-bottom: 15px; /* Spacing below headings */
-    border-bottom: 2px solid hsl(357, 82%, 35%); /* Underline for headings */
-    padding-bottom: 5px; 
-    text-align: center;
-}
-
-.about2 p,
-.about3 p {
-    font-family: var(--ff-poppins); /* Use your defined font */
-    color: hsl(208, 7%, 46%); /* Paragraph color */
-    line-height: 1.6; /* Increase line height for readability */
-    margin-bottom: 20px; /* Spacing below paragraphs */
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
-    .about_container {
-        padding: 20px; /* Adjust padding for smaller screens */
-    }
-
-    .section__title {
-        font-size: 1.5rem; /* Adjust heading size for smaller screens */
-    }
-
-    .about1, .about2 p, .about3 p {
-        font-size: 0.9rem; /* Adjust font size for paragraphs */
-    }
-}
-
-   
-
-
 .new_footer_area {
-    background: hsl(203, 30%, 96%);
+    background: radial-gradient(circle at bottom left, #FED6D6, #FFE4E1 60%, transparent 80%);
     margin-top: 20px;
 }
 
@@ -607,7 +747,7 @@ h1, h2, h3, h4, h5, h6 {
               <a class="nav-link" href="../index.html" style="color: black;">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#" style="color: black;">About Us</a>
+              <a class="nav-link" href="about.html" style="color: black;">About Us</a>
             <li class="nav-item">
               <a class="nav-link" href="menu.html" style="color: black;">Collections</a>
             </li>
@@ -617,10 +757,9 @@ h1, h2, h3, h4, h5, h6 {
             <li class="nav-item">
               <a class="nav-link" href="contact.html" style="color: black;">Contact us</a>
             </li>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="feedback.html" style="color: black;">Feedback</a>
-          </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" style="color: black;">Feedback</a>
+            </li>
           <li class="nav-item" style="list-style-type: none;">
             <a class="nav-link" href="cart.html" style="color: black;">
               <i class="fa-solid fa-cart-shopping"></i>Cart<span class="badge-count" id="badgeCount"></span>
@@ -637,46 +776,39 @@ h1, h2, h3, h4, h5, h6 {
     </nav>
   </header>
 
-  <br><br><br><br>
-  <div class="mainhead" >
-    <h1 class="animated-header" style="color: #dc3545;">
-    <span class="letter">A</span>
-    <span class="letter">B</span>
-    <span class="letter">O</span>
-    <span class="letter">U</span>
-    <span class="letter">T</span>
-    <span class="letter"> </span>
-    <span class="spacer">&nbsp;</span>
-    <span class="letter">R</span>
-    <span class="letter">E</span>
-    <span class="letter">T</span>
-    <span class="letter">R</span>
-    <span class="letter">O</span>
-    </h1>
-  </div>
-</div>
-
-<p style="margin: 0px 50px;font-size: medium;" class="about1" >At Retro, we celebrate the essence of timeless moments, where the charm of vintage design meets the warmth of nostalgia. Our love for the past inspires us to create an experience that connects the beauty of bygone eras with today’s world. Whether it's 60s-style floral patterns or classic tech from yesteryear, Retro brings back the simplicity, elegance, and innovation of those unforgettable days.
-</p>
-
-
-    <section class="about_container" style="width:80vw;margin-top: 80px;">
-     
-        
-        <div class="about2">
-            <h2 class=section__titlestyle style="font-family: var(--ff-philosopher);color: hsl(357, 82%,35%);">Our Story</h2>
-            <p style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">Retro was born from a desire to relive and share the joy of the past. We believe that every era has something special to offer, whether it’s the bold designs of the 60s, the innovative spirit of the 70s, or the tech revolutions of the 80s and 90s. Our journey began with a passion for collecting vintage items and a dream to create a space where people could immerse themselves in a world that captures the essence of different generations.</p>
+  <div class="content">
+    <header class="feedback-header">
+      <h1>Feel free to drop us your feedback.</h1>
+      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1457119/feedback-form-template.svg"
+        alt="A woman is sitting on the floor and working on a laptop (vector illustration)" />
+    </header>
+    <main>
+      <form id="feedbackForm">
+        <h2>How would you rate your overall experience?</h2>
+        <div class="star-rating">
+          <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="5 stars"></label>
+          <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="4 stars"></label>
+          <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="3 stars"></label>
+          <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="2 stars"></label>
+          <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="1 star"></label>
         </div>
-        
+        <h2>How satisfied are you overall with the support of our website?</h2>
+        <div class="tickmarks">
+          <span>0</span>
+          <span>2</span>
+          <span>4</span>
+          <span>6</span>
+          <span>8</span>
+          <span>10</span>
+        </div>
+        <input type="range" id="score" min="0" max="10" value="5">
+        <textarea id="comment" placeholder="Please tell us your reasons for giving this score here..."></textarea>
+        <button type="submit" id="feedback-btn">Send Feedback</button>
+      </form>
+    </main>
+  </div>
 
-    </section>
 
-    <section class="about_container" style="width:80vw;margin-top: 80px;margin-bottom: 30px;">
-      <div class="about3">
-        <h2 class=section__title>Why Choose Retro?</h2>
-        <p style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">We’re not just about products – we’re about creating a lifestyle that honors the beauty and inspiration of the past. Each item we offer is carefully selected to bring nostalgia to life, allowing you to embrace the timeless designs, flavors, and stories that have shaped history. Whether you're a vintage enthusiast or simply love the look and feel of classic designs, Retro is your gateway to a world that values tradition as much as it does innovation.</p>
-      </div>
-    </section>
     
                 
     <footer class="new_footer_area bg_color">
@@ -891,6 +1023,7 @@ h1, h2, h3, h4, h5, h6 {
       document.documentElement.scrollTop = 0; 
     });
     </script>
+
     <script>
       document.addEventListener("DOMContentLoaded", function() {
     const preloader = document.getElementById('preloader');
@@ -904,28 +1037,38 @@ h1, h2, h3, h4, h5, h6 {
         }, 3000); 
     });
 });
-    </script>
-    <script>
-    document.addEventListener("DOMContentLoaded", function() {
-    console.log("DOM fully loaded and parsed"); // Check if script runs
-    const header = document.querySelector('.animated-header');
-    if (!header) {
-        console.error("Animated header not found!");
-        return; // Exit if header is not found
-    }
-    const text = header.textContent; // Get the original text
-    header.textContent = ''; // Clear the original text
+  </script>
+  
+<script>
+    document.getElementById('feedbackForm').addEventListener('submit', function (event) {
+      event.preventDefault(); // Prevent form submission
 
-    text.split('').forEach((letter, index) => {
-        const span = document.createElement('span');
-        span.textContent = letter;
-        span.classList.add('letter');
-        span.style.animationDelay = `${index * 0.1}s`;
-        header.appendChild(span);
+      // Get values from the form
+      const rating = document.querySelector('input[name="rating"]:checked')?.value;
+      const score = document.getElementById('score').value;
+      const comment = document.getElementById('comment').value;
+
+      // Create feedback object
+      const feedback = {
+        rating: rating,
+        satisfactionScore: score,
+        comment: comment
+      };
+
+      // Get existing feedback from local storage
+      const feedbackList = JSON.parse(localStorage.getItem('feedbackList')) || [];
+
+      // Add the new feedback to the list
+      feedbackList.push(feedback);
+
+      // Save updated feedback list back to local storage
+      localStorage.setItem('feedbackList', JSON.stringify(feedbackList));
+      alert('Thank you for your feedback! Your response has been recorded.');
+      // Clear the form inputs
+      this.reset();
     });
-});
-
-</script>
+  </script>
+  
 <script>
   window.embeddedChatbotConfig = {
   chatbotId: "dGlQ5bP-F7GodLWzgrVAx",
@@ -938,9 +1081,11 @@ h1, h2, h3, h4, h5, h6 {
   domain="www.chatbase.co"
   defer>
   </script>
+
 <div class="gtranslate_wrapper"></div>
 <script>window.gtranslateSettings = {"default_language":"en","detect_browser_language":true,"wrapper_selector":".gtranslate_wrapper"}</script>
 <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+
 </body>
 
 </html>
