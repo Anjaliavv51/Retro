@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
 
+*{
+  box-sizing: content-box;
+}
+
 body {
   margin: 0;
   font-family: 'Noto Sans', sans-serif;
@@ -18,7 +22,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem; /* Add spacing between sections */
+  gap: 1rem; /* Add spacing between sections */
 }
 
 .left-login {
@@ -29,6 +33,7 @@ body {
   align-items: center;
   flex-direction: column;
   position: relative;
+  z-index: 1000;
 }
 
 .home-btn {
@@ -91,6 +96,7 @@ body {
   justify-content: center;
   align-items:  center;
   animation: fadeIn 2s ease-in-out;
+  z-index: 1000;
 }
 
 @keyframes fadeIn {
