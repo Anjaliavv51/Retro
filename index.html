@@ -441,7 +441,7 @@ p {
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="margin-left: 25vw;">
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="#"
                             style="color: black; font-family: var(--ff-philosopher);">Home</a>
@@ -515,12 +515,13 @@ p {
     
     .dark-mode {
         background-color: #343a40; 
-        color: white; 
+        color: white !important; 
+
     }
     
     .dark-mode .navbar .navbar-brand,
     .dark-mode .navbar .nav-link {
-        color: white;
+        color: white !important;
     }
     
     .dark-mode .navbar .nav-link:hover {
@@ -541,6 +542,7 @@ p {
     
     #darkModeToggle:hover {
         background-color: #e2e6ea; 
+        color: #fff !important;
     }
     
     #darkModeToggle .fas {
