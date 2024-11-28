@@ -422,7 +422,11 @@ body {
 .menu_items .items img {
   justify-content: center;
   height: 270px;
-  width: 250px;
+  width: 330px;
+  border-radius: 10px;
+  object-fit: cover;
+  outline:brown 3px inset;
+  outline-offset: 3px;
 }
 
 .menu_items .items h3 {
@@ -456,6 +460,7 @@ body {
   height: auto;
   transform: scale(1.15);
   opacity: 0.7;
+  transition: transform 0.5s, opacity 0.5s;
 }
 
 .meal-photo img:hover {
