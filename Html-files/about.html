@@ -226,25 +226,6 @@ body{
 .letter:nth-child(12) { animation-delay: 2.1s; }
 /* .letter:nth-child(13) { animation-delay: 1.2s; } */
 
-
-.social-icons a {
-  font-size: 1.2rem;
-  padding: 8px;
-  margin: 15px;
-  text-decoration: none;
-  color: rgb(18, 16, 16);
-}
-
-.social-icons a:hover {
-  color: brown;
-  background-color: hsl(22, 76%, 85%);
-  border-radius: 10px;
-  transform: scale(1.5); /* Increase size */
-  transition: transform 0.3s ease; /* Smooth transition effect */
-}
-
-
-
  .about_container {
     max-width: 1200px; 
     margin: 0 auto; 
@@ -413,7 +394,7 @@ body{
 }
 
 /* General Hover Effects */
-a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
+a, a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
     text-decoration: none;
     outline: none;
 }
@@ -652,7 +633,8 @@ h1, h2, h3, h4, h5, h6 {
   </div>
 </div>
 
-<p style="margin: 0px 50px;font-size: medium;" class="about1" >At Retro, we celebrate the essence of timeless moments, where the charm of vintage design meets the warmth of nostalgia. Our love for the past inspires us to create an experience that connects the beauty of bygone eras with today’s world. Whether it's 60s-style floral patterns or classic tech from yesteryear, Retro brings back the simplicity, elegance, and innovation of those unforgettable days.
+<p style="margin: 0px auto;font-size: medium;width: 80vw;
+    max-width: 1200px;" class="about1" >At Retro, we celebrate the essence of timeless moments, where the charm of vintage design meets the warmth of nostalgia. Our love for the past inspires us to create an experience that connects the beauty of bygone eras with today’s world. Whether it's 60s-style floral patterns or classic tech from yesteryear, Retro brings back the simplicity, elegance, and innovation of those unforgettable days.
 </p>
 
 
@@ -685,13 +667,13 @@ h1, h2, h3, h4, h5, h6 {
                   <h3 class="f-title f_600 t_color f_size_18">Contact Us</h3>
                   <form action="#" class="f_subscribe_two mailchimp" method="post" style="position: relative;">
                       <div style="position: relative; margin-bottom: 15px;">
-                          <i class="fas fa-envelope" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); font-size: 14px; color: gray;"></i>
+                          <i class="fas fa-envelope" style="position: absolute; left: 10px; top: 40%; transform: translateY(-50%); font-size: 14px; color: gray;"></i>
                           <input type="email" id="email" name="email" placeholder="Your Email" required 
                                  style="padding-left: 30px; width: 100%;">
                       </div>
           
                       <div style="position: relative; margin-bottom: 15px;">
-                          <i class="fas fa-comment" style="position: absolute; left: 10px; top: 10px; font-size: 14px; color: gray;"></i>
+                          <i class="fas fa-comment" style="position: absolute; left: 10px; top: 18px; font-size: 14px; color: gray;"></i>
                           <textarea id="message" name="message" placeholder="Your Message" required 
                                     style="padding-left: 30px; width: 100%;"></textarea>
                       </div>
@@ -738,10 +720,6 @@ h1, h2, h3, h4, h5, h6 {
               <div class="f_widget social-widget">
                 <h3 class="f-title f_600 t_color f_size_18">Follow Us</h3>
                 <div class="social-icons">
-
-                    
-
-
                         <a class="fa-brands fa-facebook" href="https://facebook.com" style="color: hsl(203, 30%, 26%);"></a>
                         <a class="fa-brands fa-instagram" href="https://instagram.com" style="color: hsl(203, 30%, 26%);"></a>
                         <a class="fa-brands fa-x-twitter" href="https://twitter.com" style="color: hsl(203, 30%, 26%);"></a>
