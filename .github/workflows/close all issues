@@ -1,67 +1,41 @@
-name: Close Issues
+name: Close All Open Issues
+
 on:
-  workflow_dispatch:
+  workflow_dispatch: # Allows manual triggering of this workflow
+
+permissions:
+  issues: write # Grants write permission to manage issues
 
 jobs:
-  close-issues:
+  close_issues:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Close Issue #839
-        uses: peter-evans/repository-dispatch@v1
+      - name: Close all open issues
+        uses: actions/github-script@v6
         with:
-          event-type: close_issue
-          client-payload: '{"issue_number": 839}'
+          script: |
+            const issues = await github.paginate(github.rest.issues.listForRepo, {
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open', // Fetch only open issues
+            });
 
-      - name: Close Pull Request #625
-        uses: peter-evans/repository-dispatch@v1
-        with:
-          event-type: close_pull_request
-          client-payload: '{"pull_number": 625}'
-
-      - name: Close Pull Request #615
-        uses: peter-evans/repository-dispatch@v1
-        with:
-          event-type: close_pull_request
-          client-payload: '{"pull_number": 615}'
-
-      - name: Close Issue #838
-        uses: peter-evans/repository-dispatch@v1
-        with:
-          event-type: close_issue
-          client-payload: '{"issue_number": 838}'
-
-      - name: Close Pull Request #670
-        uses: peter-evans/repository-dispatch@v1
-        with:
-          event-type: close_pull_request
-          client-payload: '{"pull_number": 670}'
-
-      - name: Close Pull Request #810
-        uses: peter-evans/repository-dispatch@v1
-        with:
-          event-type: close_pull_request
-          client-payload: '{"pull_number": 810}'
-
-      - name: Close Pull Request #626
-        uses: peter-evans/repository-dispatch@v1
-        with:
-          event-type: close_pull_request
-          client-payload: '{"pull_number": 626}'
-
-      - name: Close Pull Request #805
-        uses: peter-evans/repository-dispatch@v1
-        with:
-          event-type: close_pull_request
-          client-payload: '{"pull_number": 805}'
-
-      - name: Close Issue #836
-        uses: peter-evans/repository-dispatch@v1
-        with:
-          event-type: close_issue
-          client-payload: '{"issue_number": 836}'
-
-      - name: Close Pull Request #695
-        uses: peter-evans/repository-dispatch@v1
-        with:
-          event-type: close_pull_request
-          client-payload: '{"pull_number": 695}'
+            if (issues.length === 0) {
+              console.log("No open issues found.");
+            } else {
+              console.log(`Found ${issues.length} open issues.`);
+              for (const issue of issues) {
+                if (!issue.pull_request) { // Skip pull requests
+                  await github.rest.issues.update({
+                    owner: context.repo.owner,
+                    repo: context.repo.repo,
+                    issue_number: issue.number,
+                    state: 'closed',
+                  });
+                  console.log(`Closed issue #${issue.number}: ${issue.title}`);
+                } else {
+                  console.log(`Skipped pull request #${issue.number}`);
+                }
+              }
+            }
