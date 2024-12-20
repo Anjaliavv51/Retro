@@ -19,7 +19,7 @@ jobs:
             });
 
             for (const issue of issues) {
-              if (!issue.pull_request) { // Ensure it’s an issue, not a pull request
+              if (issue.pull_request) { // Ensure it’s an issue, not a pull request
                 await github.rest.issues.update({
                   owner: context.repo.owner,
                   repo: context.repo.repo,
