@@ -1,7 +1,7 @@
 import requests
 
 # Replace these with your details
-GITHUB_TOKEN = "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"
+#GITHUB_TOKEN = "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"
 REPO_OWNER = "Anjaliavv51"
 REPO_NAME = "Retro"
 
