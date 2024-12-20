@@ -1,30 +1,31 @@
 name: Close All Issues
 
 on:
-  workflow_dispatch: # Allows you to manually trigger the workflow
+  workflow_dispatch: # Allows the workflow to be triggered manually
 
 jobs:
   close_issues:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Close all issues
+      - name: Close all open issues
         uses: actions/github-script@v6
         with:
           script: |
             const issues = await github.paginate(github.rest.issues.listForRepo, {
               owner: context.repo.owner,
               repo: context.repo.repo,
-              state: 'open'
+              state: 'open' // Fetch only open issues
             });
 
             for (const issue of issues) {
-              if (!issue.pull_request) { // Ensure it's an issue, not a PR
+              if (!issue.pull_request) { // Ensure it’s an issue, not a pull request
                 await github.rest.issues.update({
                   owner: context.repo.owner,
                   repo: context.repo.repo,
                   issue_number: issue.number,
                   state: 'closed'
                 });
+                console.log(`Closed issue #${issue.number}: ${issue.title}`);
               }
             }
