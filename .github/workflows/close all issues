@@ -1,41 +1,32 @@
-name: Close All Open Issues
+name: Close All Issues
 
 on:
-  workflow_dispatch: # Allows manual triggering of this workflow
-
-permissions:
-  issues: write # Grants write permission to manage issues
+  workflow_dispatch:
 
 jobs:
   close_issues:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Close all open issues
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Close open issues
         uses: actions/github-script@v6
         with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            const issues = await github.paginate(github.rest.issues.listForRepo, {
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              state: 'open', // Fetch only open issues
+            const { owner, repo } = context.repo;
+            const issues = await github.rest.issues.listForRepo({
+              owner,
+              repo,
+              state: 'open'
             });
-
-            if (issues.length === 0) {
-              console.log("No open issues found.");
-            } else {
-              console.log(`Found ${issues.length} open issues.`);
-              for (const issue of issues) {
-                if (!issue.pull_request) { // Skip pull requests
-                  await github.rest.issues.update({
-                    owner: context.repo.owner,
-                    repo: context.repo.repo,
-                    issue_number: issue.number,
-                    state: 'closed',
-                  });
-                  console.log(`Closed issue #${issue.number}: ${issue.title}`);
-                } else {
-                  console.log(`Skipped pull request #${issue.number}`);
-                }
-              }
+            for (const issue of issues.data) {
+              await github.rest.issues.update({
+                owner,
+                repo,
+                issue_number: issue.number,
+                state: 'closed'
+              });
+              console.log(`Issue #${issue.number} closed.`);
             }
