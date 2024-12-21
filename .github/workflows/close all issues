@@ -1,4 +1,4 @@
-name: Close All Issues
+name: Close All Open Issues
 
 on:
   workflow_dispatch:
@@ -19,7 +19,7 @@ jobs:
             const issues = await github.rest.issues.listForRepo({
               owner,
               repo,
-              state: 'open'
+              state: 'open' // Only fetch open issues
             });
             for (const issue of issues.data) {
               await github.rest.issues.update({
