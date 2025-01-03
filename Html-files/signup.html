@@ -1,397 +1,692 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign up</title>
+    <script src="scriptsignup.js" defer type="module"></script>
+    <link rel="stylesheet" href="../Css-files/login-register.css" />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="../Favicon image/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sign up</title>
-  <script src="scriptsignup.js" defer type="module"></script>
-  <link rel="stylesheet" href="../Css-files/login-register.css">
-  <link rel="shortcut icon" type="image/x-icon" href="../Favicon image/favicon-32x32.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-    rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+      .circle {
+        z-index: 998;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        pointer-events: none;
+        animation: colors 5s infinite;
+        position: fixed;
+        transform: translate(-50%, -50%);
+      }
 
-    .circle {
-      z-index: 998;
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      pointer-events: none;
-      animation: colors 5s infinite;
-      position: fixed;
-      transform: translate(-50%, -50%);
-    }
+      .circle::before {
+        content: "";
+        position: fixed;
+        width: 50px;
+        height: 50px;
+        opacity: 0.2;
+        transform: translate(-30%, -30%);
+        border-radius: 50%;
+      }
 
-    .circle::before {
-      content: "";
-      position: fixed;
-      width: 50px;
-      height: 50px;
-      opacity: 0.2;
-      transform: translate(-30%, -30%);
-      border-radius: 50%;
-    }
+      body {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpath fill='%23ffb9b0' d='M486 705.8c-109.3-21.8-223.4-32.2-335.3-19.4C99.5 692.1 49 703 0 719.8V800h843.8c-115.9-33.2-230.8-68.1-347.6-92.2C492.8 707.1 489.4 706.5 486 705.8z'/%3E%3Cpath fill='%23ffc1b7' d='M1600 0H0v719.8c49-16.8 99.5-27.8 150.7-33.5c111.9-12.7 226-2.4 335.3 19.4c3.4 0.7 6.8 1.4 10.2 2c116.8 24 231.7 59 347.6 92.2H1600V0z'/%3E%3Cpath fill='%23ffc8bf' d='M478.4 581c3.2 0.8 6.4 1.7 9.5 2.5c196.2 52.5 388.7 133.5 593.5 176.6c174.2 36.6 349.5 29.2 518.6-10.2V0H0v574.9c52.3-17.6 106.5-27.7 161.1-30.9C268.4 537.4 375.7 554.2 478.4 581z'/%3E%3Cpath fill='%23ffcfc6' d='M0 0v429.4c55.6-18.4 113.5-27.3 171.4-27.7c102.8-0.8 203.2 22.7 299.3 54.5c3 1 5.9 2 8.9 3c183.6 62 365.7 146.1 562.4 192.1c186.7 43.7 376.3 34.4 557.9-12.6V0H0z'/%3E%3Cpath fill='%23FFD6CE' d='M181.8 259.4c98.2 6 191.9 35.2 281.3 72.1c2.8 1.1 5.5 2.3 8.3 3.4c171 71.6 342.7 158.5 531.3 207.7c198.8 51.8 403.4 40.8 597.3-14.8V0H0v283.2C59 263.6 120.6 255.7 181.8 259.4z'/%3E%3Cpath fill='%23ffdcd4' d='M1600 0H0v136.3c62.3-20.9 127.7-27.5 192.2-19.2c93.6 12.1 180.5 47.7 263.3 89.6c2.6 1.3 5.1 2.6 7.7 3.9c158.4 81.1 319.7 170.9 500.3 223.2c210.5 61 430.8 49 636.6-16.6V0z'/%3E%3Cpath fill='%23ffe1d9' d='M454.9 86.3C600.7 177 751.6 269.3 924.1 325c208.6 67.4 431.3 60.8 637.9-5.3c12.8-4.1 25.4-8.4 38.1-12.9V0H288.1c56 21.3 108.7 50.6 159.7 82C450.2 83.4 452.5 84.9 454.9 86.3z'/%3E%3Cpath fill='%23ffe6df' d='M1600 0H498c118.1 85.8 243.5 164.5 386.8 216.2c191.8 69.2 400 74.7 595 21.1c40.8-11.2 81.1-25.2 120.3-41.7V0z'/%3E%3Cpath fill='%23ffebe4' d='M1397.5 154.8c47.2-10.6 93.6-25.3 138.6-43.8c21.7-8.9 43-18.8 63.9-29.5V0H643.4c62.9 41.7 129.7 78.2 202.1 107.4C1020.4 178.1 1214.2 196.1 1397.5 154.8z'/%3E%3Cpath fill='%23FFF0EA' d='M1315.3 72.4c75.3-12.6 148.9-37.1 216.8-72.4h-723C966.8 71 1144.7 101 1315.3 72.4z'/%3E%3C/g%3E%3C/svg%3E");
+        background-size: cover;
+      }
 
-    body {
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpath fill='%23ffb9b0' d='M486 705.8c-109.3-21.8-223.4-32.2-335.3-19.4C99.5 692.1 49 703 0 719.8V800h843.8c-115.9-33.2-230.8-68.1-347.6-92.2C492.8 707.1 489.4 706.5 486 705.8z'/%3E%3Cpath fill='%23ffc1b7' d='M1600 0H0v719.8c49-16.8 99.5-27.8 150.7-33.5c111.9-12.7 226-2.4 335.3 19.4c3.4 0.7 6.8 1.4 10.2 2c116.8 24 231.7 59 347.6 92.2H1600V0z'/%3E%3Cpath fill='%23ffc8bf' d='M478.4 581c3.2 0.8 6.4 1.7 9.5 2.5c196.2 52.5 388.7 133.5 593.5 176.6c174.2 36.6 349.5 29.2 518.6-10.2V0H0v574.9c52.3-17.6 106.5-27.7 161.1-30.9C268.4 537.4 375.7 554.2 478.4 581z'/%3E%3Cpath fill='%23ffcfc6' d='M0 0v429.4c55.6-18.4 113.5-27.3 171.4-27.7c102.8-0.8 203.2 22.7 299.3 54.5c3 1 5.9 2 8.9 3c183.6 62 365.7 146.1 562.4 192.1c186.7 43.7 376.3 34.4 557.9-12.6V0H0z'/%3E%3Cpath fill='%23FFD6CE' d='M181.8 259.4c98.2 6 191.9 35.2 281.3 72.1c2.8 1.1 5.5 2.3 8.3 3.4c171 71.6 342.7 158.5 531.3 207.7c198.8 51.8 403.4 40.8 597.3-14.8V0H0v283.2C59 263.6 120.6 255.7 181.8 259.4z'/%3E%3Cpath fill='%23ffdcd4' d='M1600 0H0v136.3c62.3-20.9 127.7-27.5 192.2-19.2c93.6 12.1 180.5 47.7 263.3 89.6c2.6 1.3 5.1 2.6 7.7 3.9c158.4 81.1 319.7 170.9 500.3 223.2c210.5 61 430.8 49 636.6-16.6V0z'/%3E%3Cpath fill='%23ffe1d9' d='M454.9 86.3C600.7 177 751.6 269.3 924.1 325c208.6 67.4 431.3 60.8 637.9-5.3c12.8-4.1 25.4-8.4 38.1-12.9V0H288.1c56 21.3 108.7 50.6 159.7 82C450.2 83.4 452.5 84.9 454.9 86.3z'/%3E%3Cpath fill='%23ffe6df' d='M1600 0H498c118.1 85.8 243.5 164.5 386.8 216.2c191.8 69.2 400 74.7 595 21.1c40.8-11.2 81.1-25.2 120.3-41.7V0z'/%3E%3Cpath fill='%23ffebe4' d='M1397.5 154.8c47.2-10.6 93.6-25.3 138.6-43.8c21.7-8.9 43-18.8 63.9-29.5V0H643.4c62.9 41.7 129.7 78.2 202.1 107.4C1020.4 178.1 1214.2 196.1 1397.5 154.8z'/%3E%3Cpath fill='%23FFF0EA' d='M1315.3 72.4c75.3-12.6 148.9-37.1 216.8-72.4h-723C966.8 71 1144.7 101 1315.3 72.4z'/%3E%3C/g%3E%3C/svg%3E");
-      background-size: cover;
-    }
+      :root {
+        --ff-philosopher: "Philosopher", sans-serif;
+        --ff-poppins: "Poppins", sans-serif;
+      }
+    </style>
+    <!--Tilted Text-->
+    <style>
+      .area {
+        width: 400px;
+        height: 400px;
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        perspective: 1000px;
+        transition: all 0.5s;
+        box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
+        border-radius: 10px;
+      }
 
-    :root {
-      --ff-philosopher: "Philosopher", sans-serif;
-      --ff-poppins: "Poppins", sans-serif;
-    }
-  </style>
-  <!--Tilted Text-->
-  <style>
-    .area {
-      width: 400px;
-      height: 400px;
-      position: relative;
-      display: flex;
-      flex-wrap: wrap;
-      perspective: 1000px;
-      transition: all 0.5s;
-      box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
-      border-radius: 10px;
-    }
+      .area:hover {
+        transform: scale(1.1);
+      }
 
-    .area:hover {
-      transform: scale(1.1);
-    }
+      .area .way {
+        width: 33.33%;
+        height: 33.33%;
+        z-index: 1;
+      }
 
-    .area .way {
-      width: 33.33%;
-      height: 33.33%;
-      z-index: 1;
-    }
+      .area .box {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: transparent;
+        transform-style: preserve-3d;
+        transition: all 0.5s ease-out;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+      }
 
-    .area .box {
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      background-color: transparent;
-      transform-style: preserve-3d;
-      transition: all 0.5s ease-out;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-radius: 10px;
-    }
+      .area .box::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        transform: translateZ(-80px);
+        background-color: transparent;
+        filter: blur(10px);
+      }
 
-    .area .box::before {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      transform: translateZ(-80px);
-      background-color: transparent;
-      filter: blur(10px);
-    }
+      .area .box span {
+        width: 80%;
+        text-align: center;
+        font-family: var(--ff-philosopher);
+        font-weight: 500;
+        font-size: 50px;
+        color: hsl(357, 82%, 35%);
+        transform-style: preserve-3d;
+        transform: translateZ(50px);
+      }
 
-    .area .box span {
-      width: 80%;
-      text-align: center;
-      font-family: var(--ff-philosopher);
-      font-weight: 500;
-      font-size: 50px;
-      color: hsl(357, 82%, 35%);
-      transform-style: preserve-3d;
-      transform: translateZ(50px);
-    }
+      .area .box span::before {
+        content: "Retro Vibe is Good Vibe";
+        top: 0px;
+        left: 0px;
+        position: absolute;
+        color: transparent;
+        text-shadow: 0px 0px 2px rgb(90, 90, 90), 0px 0px 5px gray;
+        transform: translateZ(-40px);
+      }
 
-    .area .box span::before {
-      content: 'Retro Vibe is Good Vibe';
-      top: 0px;
-      left: 0px;
-      position: absolute;
-      color: transparent;
-      text-shadow: 0px 0px 2px rgb(90, 90, 90), 0px 0px 5px gray;
-      transform: translateZ(-40px);
-    }
+      /* Tooltip styling */
+      .tooltip {
+        position: relative;
+        display: inline-block;
+      }
 
-    /* Tooltip styling */
-    .tooltip {
-      position: relative;
-      display: inline-block;
-    }
+      .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 200px;
+        background-color: #555;
+        color: #fff;
+        text-align: center;
+        border-radius: 5px;
+        padding: 5px;
+        position: absolute;
+        z-index: 1;
+        bottom: 125%;
+        /* Position above the input field */
+        left: 50%;
+        margin-left: -100px;
+        /* Center the tooltip */
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
 
-    .tooltip .tooltiptext {
-      visibility: hidden;
-      width: 200px;
-      background-color: #555;
-      color: #fff;
-      text-align: center;
-      border-radius: 5px;
-      padding: 5px;
-      position: absolute;
-      z-index: 1;
-      bottom: 125%;
-      /* Position above the input field */
-      left: 50%;
-      margin-left: -100px;
-      /* Center the tooltip */
-      opacity: 0;
-      transition: opacity 0.3s;
-    }
+      .tooltip:hover .tooltiptext {
+        visibility: visible;
+        opacity: 1;
+      }
 
-    .tooltip:hover .tooltiptext {
-      visibility: visible;
-      opacity: 1;
-    }
+      .area .way:nth-child(1):hover ~ .box {
+        transform: rotateX(-20deg) rotateY(20deg);
+      }
 
-    .area .way:nth-child(1):hover~.box {
-      transform: rotateX(-20deg) rotateY(20deg);
-    }
+      .area .way:nth-child(2):hover ~ .box {
+        transform: rotateX(-20deg) rotateY(0deg);
+      }
 
-    .area .way:nth-child(2):hover~.box {
-      transform: rotateX(-20deg) rotateY(0deg);
-    }
+      .area .way:nth-child(3):hover ~ .box {
+        transform: rotateX(-20deg) rotateY(-20deg);
+      }
 
-    .area .way:nth-child(3):hover~.box {
-      transform: rotateX(-20deg) rotateY(-20deg);
-    }
+      .area .way:nth-child(4):hover ~ .box {
+        transform: rotateX(0deg) rotateY(20deg);
+      }
 
-    .area .way:nth-child(4):hover~.box {
-      transform: rotateX(0deg) rotateY(20deg);
-    }
+      .area .way:nth-child(5):hover ~ .box {
+        transform: rotateX(0deg) rotateY(0deg);
+      }
 
-    .area .way:nth-child(5):hover~.box {
-      transform: rotateX(0deg) rotateY(0deg);
-    }
+      .area .way:nth-child(6):hover ~ .box {
+        transform: rotateX(0deg) rotateY(-20deg);
+      }
 
-    .area .way:nth-child(6):hover~.box {
-      transform: rotateX(0deg) rotateY(-20deg);
-    }
+      .area .way:nth-child(7):hover ~ .box {
+        transform: rotateX(20deg) rotateY(20deg);
+      }
 
-    .area .way:nth-child(7):hover~.box {
-      transform: rotateX(20deg) rotateY(20deg);
-    }
+      .area .way:nth-child(8):hover ~ .box {
+        transform: rotateX(20deg) rotateY(0deg);
+      }
 
-    .area .way:nth-child(8):hover~.box {
-      transform: rotateX(20deg) rotateY(0deg);
-    }
+      .area .way:nth-child(9):hover ~ .box {
+        transform: rotateX(20deg) rotateY(-20deg);
+      }
+    </style>
+    <style>
+      /* Styles for the switch link */
+      .switch-link {
+        margin-top: 20px;
+        font-family: var(--ff-poppins);
+        text-align: center;
+        color: hsl(203, 30%, 26%);
+      }
 
-    .area .way:nth-child(9):hover~.box {
-      transform: rotateX(20deg) rotateY(-20deg);
-    }
-  </style>
-  <style>
-    /* Styles for the switch link */
-    .switch-link {
-      margin-top: 20px;
-      font-family: var(--ff-poppins);
-      text-align: center;
-      color: hsl(203, 30%, 26%);
-    }
+      .switch-link a {
+        color: hsl(0, 100%, 50%);
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s ease;
+      }
 
-    .switch-link a {
-      color: hsl(0, 100%, 50%);
-      text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s ease;
-    }
+      .switch-link a:hover {
+        color: hsl(203, 30%, 26%);
+      }
 
-    .switch-link a:hover {
-      color: hsl(203, 30%, 26%);
-    }
+      .show-password {
+        position: absolute;
+        margin-top: 10px;
+        right: 25px;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        font-size: 1.2em;
+        color: #000;
+      }
+    </style>
+  </head>
 
-    .show-password {
-      position: absolute;
-      margin-top: 10px;
-      right: 25px;
-      top: 50%;
-      transform: translateY(-50%);
-      cursor: pointer;
-      font-size: 1.2em;
-      color: #000;
-    }
-  </style>
-</head>
-
-<body>
-  <div class="circle-container">
-    <div class="circle" style="background-color: rgb(255, 181, 107); left: 504px; top: 59px; scale: 1;"></div>
-    <div class="circle" style="background-color: rgb(253, 175, 105); left: 504px; top: 59px; scale: 0.95;"></div>
-    <div class="circle" style="background-color: rgb(248, 157, 99); left: 504px; top: 59px; scale: 0.9;"></div>
-    <div class="circle" style="background-color: rgb(245, 151, 97); left: 504px; top: 59px; scale: 0.85;"></div>
-    <div class="circle" style="background-color: rgb(239, 134, 94); left: 504px; top: 59px; scale: 0.8;"></div>
-    <div class="circle" style="background-color: rgb(236, 128, 93); left: 504px; top: 59px; scale: 0.75;"></div>
-    <div class="circle" style="background-color: rgb(227, 110, 92); left: 504px; top: 59px; scale: 0.7;"></div>
-    <div class="circle" style="background-color: rgb(223, 104, 92); left: 504px; top: 59px; scale: 0.65;"></div>
-    <div class="circle" style="background-color: rgb(213, 88, 92); left: 504px; top: 59px; scale: 0.6;"></div>
-    <div class="circle" style="background-color: rgb(209, 82, 92); left: 504px; top: 59px; scale: 0.55;"></div>
-    <div class="circle" style="background-color: rgb(197, 65, 93); left: 504px; top: 59px; scale: 0.5;"></div>
-    <div class="circle" style="background-color: rgb(192, 59, 93); left: 504px; top: 59px; scale: 0.45;"></div>
-    <div class="circle" style="background-color: rgb(178, 44, 94); left: 504px; top: 59px; scale: 0.4;"></div>
-    <div class="circle" style="background-color: rgb(172, 38, 94); left: 504px; top: 59px; scale: 0.35;"></div>
-    <div class="circle" style="background-color: rgb(156, 21, 95); left: 504px; top: 59px; scale: 0.3;"></div>
-    <div class="circle" style="background-color: rgb(149, 15, 95); left: 504px; top: 59px; scale: 0.25;"></div>
-    <div class="circle" style="background-color: rgb(131, 0, 96); left: 504px; top: 59px; scale: 0.2;"></div>
-    <div class="circle" style="background-color: rgb(124, 0, 96); left: 504px; top: 59px; scale: 0.15;"></div>
-    <div class="circle" style="background-color: rgb(104, 0, 96); left: 504px; top: 59px; scale: 0.1;"></div>
-    <div class="circle" style="background-color: rgb(96, 0, 95); left: 504px; top: 59px; scale: 0.05;"></div>
-  </div>
-
-  <div class="main-login">
-    <div class="home-btn">
-      <a href="../index.html" style="font-family: var(--ff-philosopher); color: rgb(149, 15, 95);"><b>Retro</b></a>
+  <body>
+    <div class="circle-container">
+      <div
+        class="circle"
+        style="
+          background-color: rgb(255, 181, 107);
+          left: 504px;
+          top: 59px;
+          scale: 1;
+        "
+      ></div>
+      <div
+        class="circle"
+        style="
+          background-color: rgb(253, 175, 105);
+          left: 504px;
+          top: 59px;
+          scale: 0.95;
+        "
+      ></div>
+      <div
+        class="circle"
+        style="
+          background-color: rgb(248, 157, 99);
+          left: 504px;
+          top: 59px;
+          scale: 0.9;
+        "
+      ></div>
+      <div
+        class="circle"
+        style="
+          background-color: rgb(245, 151, 97);
+          left: 504px;
+          top: 59px;
+          scale: 0.85;
+        "
+      ></div>
+      <div
+        class="circle"
+        style="
+          background-color: rgb(239, 134, 94);
+          left: 504px;
+          top: 59px;
+          scale: 0.8;
+        "
+      ></div>
+      <div
+        class="circle"
+        style="
+          background-color: rgb(236, 128, 93);
+          left: 504px;
+          top: 59px;
+          scale: 0.75;
+        "
+      ></div>
+      <div
+        class="circle"
+        style="
+          background-color: rgb(227, 110, 92);
+          left: 504px;
+          top: 59px;
+          scale: 0.7;
+        "
+      ></div>
+      <div
+        class="circle"
+        style="
+          background-color: rgb(223, 104, 92);
+          left: 504px;
+          top: 59px;
+          scale: 0.65;
+        "
+      ></div>
+      <div
+        class="circle"
+        style="
+          background-color: rgb(213, 88, 92);
+          left: 504px;
+          top: 59px;
+          scale: 0.6;
+        "
+      ></div>
+      <div
+        class="circle"
+        style="
+          background-color: rgb(209, 82, 92);
+          left: 504px;
+          top: 59px;
+          scale: 0.55;
+        "
+      ></div>
+      <div
+        class="circle"
+        style="
+          background-color: rgb(197, 65, 93);
+          left: 504px;
+          top: 59px;
+          scale: 0.5;
+        "
+      ></div>
+      <div
+        class="circle"
+        style="
+          background-color: rgb(192, 59, 93);
+          left: 504px;
+          top: 59px;
+          scale: 0.45;
+        "
+      ></div>
+      <div
+        class="circle"
+        style="
+          background-color: rgb(178, 44, 94);
+          left: 504px;
+          top: 59px;
+          scale: 0.4;
+        "
+      ></div>
+      <div
+        class="circle"
+        style="
+          background-color: rgb(172, 38, 94);
+          left: 504px;
+          top: 59px;
+          scale: 0.35;
+        "
+      ></div>
+      <div
+        class="circle"
+        style="
+          background-color: rgb(156, 21, 95);
+          left: 504px;
+          top: 59px;
+          scale: 0.3;
+        "
+      ></div>
+      <div
+        class="circle"
+        style="
+          background-color: rgb(149, 15, 95);
+          left: 504px;
+          top: 59px;
+          scale: 0.25;
+        "
+      ></div>
+      <div
+        class="circle"
+        style="
+          background-color: rgb(131, 0, 96);
+          left: 504px;
+          top: 59px;
+          scale: 0.2;
+        "
+      ></div>
+      <div
+        class="circle"
+        style="
+          background-color: rgb(124, 0, 96);
+          left: 504px;
+          top: 59px;
+          scale: 0.15;
+        "
+      ></div>
+      <div
+        class="circle"
+        style="
+          background-color: rgb(104, 0, 96);
+          left: 504px;
+          top: 59px;
+          scale: 0.1;
+        "
+      ></div>
+      <div
+        class="circle"
+        style="
+          background-color: rgb(96, 0, 95);
+          left: 504px;
+          top: 59px;
+          scale: 0.05;
+        "
+      ></div>
     </div>
-    <div class="left-login">
-      <div class="area">
-        <div class="way"></div>
-        <img src="../Images/signup.png" alt="Icon"
-          style="width: 100px; height: auto; margin: 20px auto 20px; display: block;">
-        <div class="way"></div>
-        <div class="way"></div>
-        <div class="way"></div>
-        <div class="way"></div>
-        <div class="way"></div>
-        <div class="way"></div>
-        <div class="way"></div>
-        <div class="way"></div>
 
-        <div class="box">
-          <span>Retro Vibe is Good Vibe</span>
+    <div class="main-login">
+      <div class="home-btn">
+        <a
+          href="../index.html"
+          style="font-family: var(--ff-philosopher); color: rgb(149, 15, 95)"
+          ><b>Retro</b></a
+        >
+      </div>
+      <div class="left-login">
+        <div class="area">
+          <div class="way"></div>
+          <img
+            src="../Images/signup.png"
+            alt="Icon"
+            style="
+              width: 100px;
+              height: auto;
+              margin: 20px auto 20px;
+              display: block;
+            "
+          />
+          <div class="way"></div>
+          <div class="way"></div>
+          <div class="way"></div>
+          <div class="way"></div>
+          <div class="way"></div>
+          <div class="way"></div>
+          <div class="way"></div>
+          <div class="way"></div>
+
+          <div class="box">
+            <span>Retro Vibe is Good Vibe</span>
+          </div>
         </div>
       </div>
-    </div>
-    <form id="loginForm" action="logged.html">
-      <div class="right-login">
-        <div class="card-login">
-          <h1 style="color: hsl(203, 30%,26%);font-family: var(--ff-philosopher);">SIGN UP</h1>
-          <div class="textfield">
-            <label for="name" style="color: black;font-family:var(--ff-poppins);">Name</label>
-            <input required type="text" id="name" name="name" placeholder="Enter your name"
-              style="font-family:var(--ff-poppins);">
+      <form id="loginForm" action="logged.html">
+        <div class="right-login">
+          <div class="card-login">
+            <h1
+              style="
+                color: hsl(203, 30%, 26%);
+                font-family: var(--ff-philosopher);
+              "
+            >
+              SIGN UP
+            </h1>
+            <div class="textfield">
+              <label
+                for="name"
+                style="color: black; font-family: var(--ff-poppins)"
+                >Name</label
+              >
+              <input
+                required
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your name"
+                minlength="2"
+                maxlength="50"
+                pattern="[a-zA-Z\s\-]+"
+                style="font-family: var(--ff-poppins)"
+              />
+              <span
+                id="nameError"
+                style="color: red; font-size: 0.9em; display: block"
+              ></span>
+            </div>
+            <div class="textfield">
+              <label
+                for="email"
+                style="color: black; font-family: var(--ff-poppins)"
+                >Email / User Name</label
+              >
+              <input
+                required
+                type="text"
+                id="email"
+                name="email"
+                placeholder="Enter Email / UserName"
+                style="font-family: var(--ff-poppins)"
+              />
+            </div>
+            <div class="textfield" style="position: relative">
+              <label
+                required
+                for="password"
+                style="color: black; font-family: var(--ff-poppins)"
+                >Password</label
+              >
+              <input
+                required
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Enter Password"
+                style="font-family: var(--ff-poppins)"
+              />
+              <span class="show-password" onclick="togglePasswordVisibility()">
+                <i class="fas fa-eye" id="togglePasswordIcon"></i>
+              </span>
+            </div>
+            <button
+              type="submit"
+              class="btn-login"
+              style="color: black; font-family: var(--ff-poppins)"
+            >
+              Register
+            </button>
+            <span>or</span>
+            <button
+              id="google-login"
+              style="
+                color: black;
+                font-family: var(--ff-poppins);
+                background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48cGF0aCBkPSJNMTcuNiA5LjJsLS4xLTEuOEg5djMuNGg0LjhDMTMuNiAxMiAxMyAxMyAxMiAxMy42djIuMmgzYTguOCA4LjggMCAwIDAgMi42LTYuNnoiIGZpbGw9IiM0Mjg1RjQiIGZpbGwtcnVsZT0ibm9uemVybyIvPjxwYXRoIGQ9Ik05IDE4YzIuNCAwIDQuNS0uOCA2LTIuMmwtMy0yLjJhNS40IDUuNCAwIDAgMS04LTIuOUgxVjEzYTkgOSAwIDAgMCA4IDV6IiBmaWxsPSIjMzRBODUzIiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNNCAxMC43YTUuNCA1LjQgMCAwIDEgMC0zLjRWNUgxYTkgOSAwIDAgMCAwIDhsMy0yLjN6IiBmaWxsPSIjRkJCQzA1IiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNOSAzLjZjMS4zIDAgMi41LjQgMy40IDEuM0wxNSAyLjNBOSA5IDAgMCAwIDEgNWwzIDIuNGE1LjQgNS40IDAgMCAxIDUtMy43eiIgZmlsbD0iI0VBNDMzNSIgZmlsbC1ydWxlPSJub256ZXJvIi8+PHBhdGggZD0iTTAgMGgxOHYxOEgweiIvPjwvZz48L3N2Zz4=);
+                background-repeat: no-repeat;
+                background-position: 25% 50%;
+                background-size: 30px;
+              "
+            >
+              Signup with google
+            </button>
+            <p
+              id="error-message"
+              style="color: red; font-family: var(--ff-poppins)"
+            ></p>
+            <p class="switch-link">
+              Already have an account ? <a href="login.html">Login</a>
+            </p>
           </div>
-          <div class="textfield">
-            <label for="email" style="color: black;font-family:var(--ff-poppins);">Email / User Name</label>
-            <input required type="text" id="email" name="email" placeholder="Enter Email / UserName"
-              style="font-family:var(--ff-poppins);">
-          </div>
-          <div class="textfield" style="position: relative;">
-            <label required for="password" style="color: black;font-family:var(--ff-poppins);">Password</label>
-            <input required type="password" id="password" name="password" placeholder="Enter Password"
-              style="font-family:var(--ff-poppins);">
-            <span class="show-password" onclick="togglePasswordVisibility()">
-              <i class="fas fa-eye" id="togglePasswordIcon"></i>
-            </span>
-          </div>
-          <button type="submit" class="btn-login" style="color: black;font-family:var(--ff-poppins);">Register</button>
-          <span>or</span>
-          <button id="google-login"
-            style="color: black;font-family:var(--ff-poppins); background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48cGF0aCBkPSJNMTcuNiA5LjJsLS4xLTEuOEg5djMuNGg0LjhDMTMuNiAxMiAxMyAxMyAxMiAxMy42djIuMmgzYTguOCA4LjggMCAwIDAgMi42LTYuNnoiIGZpbGw9IiM0Mjg1RjQiIGZpbGwtcnVsZT0ibm9uemVybyIvPjxwYXRoIGQ9Ik05IDE4YzIuNCAwIDQuNS0uOCA2LTIuMmwtMy0yLjJhNS40IDUuNCAwIDAgMS04LTIuOUgxVjEzYTkgOSAwIDAgMCA4IDV6IiBmaWxsPSIjMzRBODUzIiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNNCAxMC43YTUuNCA1LjQgMCAwIDEgMC0zLjRWNUgxYTkgOSAwIDAgMCAwIDhsMy0yLjN6IiBmaWxsPSIjRkJCQzA1IiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNOSAzLjZjMS4zIDAgMi41LjQgMy40IDEuM0wxNSAyLjNBOSA5IDAgMCAwIDEgNWwzIDIuNGE1LjQgNS40IDAgMCAxIDUtMy43eiIgZmlsbD0iI0VBNDMzNSIgZmlsbC1ydWxlPSJub256ZXJvIi8+PHBhdGggZD0iTTAgMGgxOHYxOEgweiIvPjwvZz48L3N2Zz4=); background-repeat: no-repeat; background-position: 25% 50%; background-size: 30px;">Signup
-            with google</button>
-          <p id="error-message" style="color: red; font-family: var(--ff-poppins);"></p>
-          <p class="switch-link">Already have an account ? <a href="login.html">Login</a></p>
         </div>
-      </div>
-    </form>
-  </div>
-  <script>
-    const coords = { x: 0, y: 0 };
-    const circles = document.querySelectorAll(".circle");
+      </form>
+    </div>
+    <script>
+      const coords = { x: 0, y: 0 };
+      const circles = document.querySelectorAll(".circle");
 
-    const colors = [
-      "#ffb56b",
-      "#fdaf69",
-      "#f89d63",
-      "#f59761",
-      "#ef865e",
-      "#ec805d",
-      "#e36e5c",
-      "#df685c",
-      "#d5585c",
-      "#d1525c",
-      "#c5415d",
-      "#c03b5d",
-      "#b22c5e",
-      "#ac265e",
-      "#9c155f",
-      "#950f5f",
-      "#830060",
-      "#7c0060",
-      "#680060",
-      "#60005f",
-      "#48005f",
-      "#3d005e"
-    ];
-
-    circles.forEach(function (circle, index) {
-      circle.x = 0;
-      circle.y = 0;
-      circle.style.backgroundColor = colors[index % colors.length];
-    });
-
-    window.addEventListener("mousemove", function (e) {
-      coords.x = e.clientX;
-      coords.y = e.clientY;
-
-    });
-
-    function animateCircles() {
-
-      let x = coords.x;
-      let y = coords.y;
+      const colors = [
+        "#ffb56b",
+        "#fdaf69",
+        "#f89d63",
+        "#f59761",
+        "#ef865e",
+        "#ec805d",
+        "#e36e5c",
+        "#df685c",
+        "#d5585c",
+        "#d1525c",
+        "#c5415d",
+        "#c03b5d",
+        "#b22c5e",
+        "#ac265e",
+        "#9c155f",
+        "#950f5f",
+        "#830060",
+        "#7c0060",
+        "#680060",
+        "#60005f",
+        "#48005f",
+        "#3d005e",
+      ];
 
       circles.forEach(function (circle, index) {
-        circle.style.left = x - 12 + "px";
-        circle.style.top = y - 12 + "px";
-
-        circle.style.scale = (circles.length - index) / circles.length;
-
-        circle.x = x;
-        circle.y = y;
-
-        const nextCircle = circles[index + 1] || circles[0];
-        x += (nextCircle.x - x) * 0.3;
-        y += (nextCircle.y - y) * 0.3;
+        circle.x = 0;
+        circle.y = 0;
+        circle.style.backgroundColor = colors[index % colors.length];
       });
 
-      requestAnimationFrame(animateCircles);
-    }
+      window.addEventListener("mousemove", function (e) {
+        coords.x = e.clientX;
+        coords.y = e.clientY;
+      });
 
-    animateCircles();
-  </script>
-  <script>
-    window.embeddedChatbotConfig = {
-      chatbotId: "dGlQ5bP-F7GodLWzgrVAx",
-      domain: "www.chatbase.co"
-    }
-  </script>
-  <script src="https://www.chatbase.co/embed.min.js" chatbotId="dGlQ5bP-F7GodLWzgrVAx" domain="www.chatbase.co" defer>
-  </script>
-  <script>
-    // JavaScript to toggle password visibility
-    function togglePasswordVisibility() {
-      const passwordField = document.getElementById('password');
-      const toggleIcon = document.getElementById('togglePasswordIcon');
-      if (passwordField.type === 'password') {
-        passwordField.type = 'text';
-        toggleIcon.classList.remove('fa-eye');
-        toggleIcon.classList.add('fa-eye-slash');
-      } else {
-        passwordField.type = 'password';
-        toggleIcon.classList.remove('fa-eye-slash');
-        toggleIcon.classList.add('fa-eye');
+      function animateCircles() {
+        let x = coords.x;
+        let y = coords.y;
+
+        circles.forEach(function (circle, index) {
+          circle.style.left = x - 12 + "px";
+          circle.style.top = y - 12 + "px";
+
+          circle.style.scale = (circles.length - index) / circles.length;
+
+          circle.x = x;
+          circle.y = y;
+
+          const nextCircle = circles[index + 1] || circles[0];
+          x += (nextCircle.x - x) * 0.3;
+          y += (nextCircle.y - y) * 0.3;
+        });
+
+        requestAnimationFrame(animateCircles);
       }
-    }
-  </script>
-  <div class="gtranslate_wrapper"></div>
-  <script>window.gtranslateSettings = { "default_language": "en", "detect_browser_language": true, "wrapper_selector": ".gtranslate_wrapper" }</script>
-  <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
-</body>
 
+      animateCircles();
+    </script>
+    <script>
+      window.embeddedChatbotConfig = {
+        chatbotId: "dGlQ5bP-F7GodLWzgrVAx",
+        domain: "www.chatbase.co",
+      };
+    </script>
+    <script
+      src="https://www.chatbase.co/embed.min.js"
+      chatbotId="dGlQ5bP-F7GodLWzgrVAx"
+      domain="www.chatbase.co"
+      defer
+    ></script>
+    <script>
+      // JavaScript to toggle password visibility
+      function togglePasswordVisibility() {
+        const passwordField = document.getElementById("password");
+        const toggleIcon = document.getElementById("togglePasswordIcon");
+        if (passwordField.type === "password") {
+          passwordField.type = "text";
+          toggleIcon.classList.remove("fa-eye");
+          toggleIcon.classList.add("fa-eye-slash");
+        } else {
+          passwordField.type = "password";
+          toggleIcon.classList.remove("fa-eye-slash");
+          toggleIcon.classList.add("fa-eye");
+        }
+      }
+    </script>
+    <div class="gtranslate_wrapper"></div>
+    <script>
+      window.gtranslateSettings = {
+        default_language: "en",
+        detect_browser_language: true,
+        wrapper_selector: ".gtranslate_wrapper",
+      };
+    </script>
+    <script
+      src="https://cdn.gtranslate.net/widgets/latest/float.js"
+      defer
+    ></script>
+    <script>
+      // Name validation
+      document.addEventListener("DOMContentLoaded", () => {
+        const nameInput = document.getElementById("name");
+        const nameError = document.getElementById("nameError");
+
+        // Function to validate the name field
+        function validateName() {
+          const nameValue = nameInput.value.trim();
+          const nameRegex = /^[a-zA-Z\s\-]{2,50}$/; // Letters, spaces, and hyphens only (2-50 chars)
+
+          if (!nameValue) {
+            nameError.textContent = "Name is required.";
+            return false;
+          } else if (!nameRegex.test(nameValue)) {
+            nameError.textContent =
+              "Name must be 2-50 characters long and contain only letters, spaces, or hyphens.";
+            return false;
+          } else {
+            nameError.textContent = ""; // Clear error message
+            return true;
+          }
+        }
+
+        // Validate on input blur
+        nameInput.addEventListener("blur", validateName);
+
+        // Prevent form submission if name validation fails
+        const form = nameInput.closest("form");
+        if (form) {
+          form.addEventListener("submit", (event) => {
+            if (!validateName()) {
+              event.preventDefault(); // Stop form submission
+            }
+          });
+        }
+      });
+    </script>
+  </body>
 </html>
