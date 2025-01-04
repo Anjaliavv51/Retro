@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Counters</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .stats-section {
+            background-color: #f7f7f7;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .stats-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .stat {
+            flex-basis: 30%;
+            margin: 20px;
+        }
+
+        .stat-number {
+            font-size: 48px;
+            font-weight: bold;
+            color: #333;
+            transition: color 0.5s;
+        }
+
+        .stat-number.active {
+            color: #4CAF50; /* Change color when active */
+        }
+
+        .stat p {
+            font-size: 18px;
+            color: #666;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<section class="stats-section">
+    <div class="container">
+        <div class="stats-grid">
+            <div class="stat">
+                <span class="stat-number" data-target="100">0</span>
+                <p>Projects Completed</p>
+            </div>
+            <div class="stat">
+                <span class="stat-number" data-target="500">0</span>
+                <p>Happy Clients</p>
+            </div>
+            <div class="stat">
+                <span class="stat-number" data-target="2000">0</span>
+                <p>Lines of Code Written</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    const statsSection = document.querySelector('.stats-section');
+    const statNumbers = document.querySelectorAll('.stat-number');
+
+    let animationTriggered = false;
+
+    window.addEventListener('scroll', () => {
+        if (isElementInViewport(statsSection) && !animationTriggered) {
+            animationTriggered = true;
+            animateCounters(2000); // Customize duration here (in milliseconds)
+        }
+    });
+
+    function isElementInViewport(el) {
+        const rect = el.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
+
+    function animateCounters(duration) {
+        statNumbers.forEach((statNumber) => {
+            const targetValue = parseInt(statNumber.getAttribute('data-target'));
+            let currentValue = 0;
+            const startTime = performance.now();
+
+            const animation = (currentTime) => {
+                const elapsedTime = currentTime - startTime;
+                const progress = Math.min(elapsedTime / duration, 1);
+                currentValue = Math.floor(easeInOutQuad(progress) * targetValue);
+                statNumber.textContent = currentValue.toLocaleString();
+
+                if (progress < 1) {
+                    requestAnimationFrame(animation);
+                } else {
+                    statNumber.classList.add('active');
+                }
+            };
+
+            requestAnimationFrame(animation);
+        });
+    }
+
+    // Easing function for a smoother animation
+    function easeInOutQuad(t) {
+        return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+    }
+</script>
+
+</body>
+</html>
