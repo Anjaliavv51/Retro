@@ -61,7 +61,7 @@ https://github.com/user-attachments/assets/9fbd2c41-09e1-4843-88d5-5ee2e64de43d
    </tr>
    <tr>
       <td><img src="./gssoc24.png" width="200" height="auto" loading="lazy" alt="GSSoC 24"/></td>
-      <td>GirlScript Summer of Code 2024</td>
+      <td>GirlScript Summer of Code 2024'EXTD</td>
       <td>GirlScript Summer of Code is a three-month-long Open Source Program conducted every summer by GirlScript Foundation. It is an initiative to bring more beginners to Open-Source Software Development.</td>
    </tr>
     <tr>
