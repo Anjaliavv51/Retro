@@ -60,6 +60,11 @@ https://github.com/user-attachments/assets/9fbd2c41-09e1-4843-88d5-5ee2e64de43d
       <th>Event Description</th>
    </tr>
    <tr>
+        <td><img src="https://github.com/multiverseweb/Dataverse/blob/main/Documentation/images/SWOC.jpg" width="200" height="auto" loading="lazy" alt="SWOC"/></td>
+        <td><a href="https://www.socialwinterofcode.com/">Social Winter of Code Season-5 (SWOC) </a>2024-2025</td>
+       <td><p>Social Winter Of Code is the 2 month long open source program, with the aim to introduce more and more people to the world of Open source. In this program all the selected participants will get a chance to work on various exciting projects under the guidance of experienced Mentors.</p></td>
+    </tr>
+   <tr>
       <td><img src="./gssoc24.png" width="200" height="auto" loading="lazy" alt="GSSoC 24"/></td>
       <td>GirlScript Summer of Code 2024'EXTD</td>
       <td>GirlScript Summer of Code is a three-month-long Open Source Program conducted every summer by GirlScript Foundation. It is an initiative to bring more beginners to Open-Source Software Development.</td>
