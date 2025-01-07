@@ -781,7 +781,7 @@
                     <h4 style="font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%);">Follow Us</h4>
     
                     <div class="social-icons">
-    
+                        <p class="mb-0 f_400">&copy; <span id="currentYear"></span> Retro. All Rights Reserved.</p>
     
                         <a class="fa-brands fa-facebook" href="https://facebook.com" ></a>
                         <a class="fa-brands fa-instagram" href="https://instagram.com" ></a>
@@ -792,11 +792,18 @@
                     </div>
                     <p style="font-family: var(--ff-philosopher);background-color: hsl(20, 43%, 93%);color: hsl(203, 30%, 26%);margin-bottom:0;">Stay connected with us on social media for the latest updates, latest collection, and vintage adventures.
                     </p>
-                    <div class="copyright" style="font-family: var(--ff-philosopher);background-color: hsl(20, 43%, 93%);color: black;">
-    
-                        &copy; 2024 Retro . All Rights Reserved. | Developed by <span id="author">
+                    <div class="copyright" style="font-family: var(--ff-philosopher); background-color: hsl(20, 43%, 93%); color: black;">
+                        &copy; <span id="currentYear"></span> Retro. All Rights Reserved. | Developed by 
+                        <span id="author">
                             <a href="https://www.linkedin.com" target="_blank" style="text-decoration: none;">Retro Team</a>
+                        </span>
                     </div>
+                    
+                    <script>
+                        // JavaScript to dynamically set the current year
+                        document.getElementById("currentYear").textContent = new Date().getFullYear();
+                    </script>
+                    
                     <div>
                         <button id="sr" style="z-index: 1000; display: block;">
                         <div class="circle1">
@@ -814,19 +821,20 @@
 <script>
 // Initialize data in localStorage if it doesn't exist
 if (!localStorage.getItem('blogPosts')) {
-localStorage.setItem('blogPosts', JSON.stringify([
-    {
-        id: 1,
-        title: "10 Must-Visit Destinations for 2024",
-        content: "As we enter 2024, the world of travel continues to evolve...",
-        author: "Travel Expert",
-        date: "May 15, 2024",
-        category: "Destinations",
-        tags: ["2024", "travel", "destinations"],
-        comments: []
-    },
-    // Add more sample posts here
-]));
+    const currentYear = new Date().getFullYear(); // Get the current year dynamically
+    localStorage.setItem('blogPosts', JSON.stringify([
+        {
+            id: 1,
+            title: `10 Must-Visit Destinations for ${currentYear}`,
+            content: `As we enter ${currentYear}, the world of travel continues to evolve...`,
+            author: "Travel Expert",
+            date: `May 15, ${currentYear}`, // Adjust this date format if needed
+            category: "Destinations",
+            tags: [currentYear.toString(), "travel", "destinations"],
+            comments: []
+        },
+        // Add more sample posts here
+    ]));
 }
 
 if (!localStorage.getItem('categories')) {
@@ -834,8 +842,10 @@ localStorage.setItem('categories', JSON.stringify(["Destinations", "Sustainable 
 }
 
 if (!localStorage.getItem('tags')) {
-localStorage.setItem('tags', JSON.stringify(["2024", "travel", "destinations", "sustainable", "budget", "solo", "food"]));
+    const currentYear = new Date().getFullYear(); // Get the current year dynamically
+    localStorage.setItem('tags', JSON.stringify([currentYear.toString(), "travel", "destinations", "sustainable", "budget", "solo", "food"]));
 }
+
 
 // Function to get data from localStorage
 function getLocalData(key) {
@@ -1326,5 +1336,9 @@ modal.querySelector('#addCategoryForm').addEventListener('submit', (e) => {
         // Initialize the blog when the DOM is fully loaded
         document.addEventListener('DOMContentLoaded', initializeBlog);
     </script>
+    <script>
+        // Get the current year and update the span element
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+      </script>
 </body>
 </html>

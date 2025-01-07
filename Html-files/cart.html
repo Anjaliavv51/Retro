@@ -530,12 +530,19 @@ border-radius: 4px;
         <p style="margin-bottom:0;font-family: var(--ff-philosopher);">Stay connected with us on social media for the
           latest updates, latest collection, and vintage adventures.
         </p>
-        <div class="copyright" style="color: hsl(203, 30%,26%);font-family: var(--ff-philosopher);">
-          © 2024 Retro . All Rights Reserved. | <span id="author">
-            <a href="https://www.linkedin.com" target="_blank" style="text-decoration: none;">Retro Team</a>
+        <div class="copyright" style="color: hsl(203, 30%,26%); font-family: var(--ff-philosopher);">
+          &copy; <span id="currentYear"></span> Retro. All Rights Reserved. | 
+          <span id="author">
+              <a href="https://www.linkedin.com" target="_blank" style="text-decoration: none;">Retro Team</a>
           </span>
           <p></p>
-        </div>
+      </div>
+      
+      <script>
+          // JavaScript to dynamically set the current year
+          document.getElementById("currentYear").textContent = new Date().getFullYear();
+      </script>
+      
         <div>
           <button id="sr" style="z-index: 1000;">
             <div class="circle1">
