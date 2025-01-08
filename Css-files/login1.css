@@ -191,9 +191,6 @@ body {
   transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions for hover and active states */
 }
 
-
-
-
 .btn-login:hover,
 #facbook-login:hover {
   background-color: #ac7070; /* Darker shade on hover */
@@ -220,9 +217,6 @@ body {
    
 }
 
-
-
-
 .btn-login,   
 #x-login {
   width: 100%;
@@ -236,9 +230,6 @@ body {
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions for hover and active states */
 }
-
-
-
 
 .btn-login:hover,
 #x-login:hover {
