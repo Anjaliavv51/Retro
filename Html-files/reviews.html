@@ -847,13 +847,21 @@
                     <a class="fa-brands fa-snapchat"  href="https://www.snapchat.com" ></a>
 
                 </div>
-                <p style="font-family: var(--ff-philosopher);background-color: hsl(20, 43%, 93%);color: hsl(203, 30%, 26%);margin-bottom:0;">Stay connected with us on social media for the latest updates, latest collection, and vintage adventures.
-                </p>
-                <div class="copyright" style="font-family: var(--ff-philosopher);background-color: hsl(20, 43%, 93%);color: black;">
-
-                    &copy; 2024 Retro . All Rights Reserved. | Developed by <span id="author">
+                <div>
+                    <p style="font-family: var(--ff-philosopher); background-color: hsl(20, 43%, 93%); color: hsl(203, 30%, 26%); margin-bottom: 0;">
+                        Stay connected with us on social media for the latest updates, latest collection, and vintage adventures.
+                    </p>
+                    &copy; <span id="currentYear"></span> Retro. All Rights Reserved. | Developed by 
+                    <span id="author">
                         <a href="https://www.linkedin.com" target="_blank" style="text-decoration: none;">Retro Team</a>
+                    </span>
                 </div>
+                
+                <script>
+                    // JavaScript to dynamically set the current year
+                    document.getElementById("currentYear").textContent = new Date().getFullYear();
+                </script>
+                
                 <div>
                     <button id="sr" style="z-index: 1000; display: block;">
                     <div class="circle1">

@@ -836,15 +836,16 @@
                 </p>
                 <div class="copyright">
                     <p style="font-family: var(--ff-philosopher);">
-                        &copy; 2024 Retro . All Rights Reserved. | Developed by <span id="author">
-                            <a href="https://www.linkedin.com" target="_blank" style="text-decoration: none;">Retro
-                                Team</a>
-                        </span></p>
-
-
-
-
+                        &copy; <span id="currentYear"></span> Retro. All Rights Reserved. | Developed by 
+                        <span id="author">
+                            <a href="https://www.linkedin.com" target="_blank" style="text-decoration: none;">Retro Team</a>
+                        </span>
+                    </p>
                 </div>
+                <script>
+                    // Get the current year and update the span element
+                    document.getElementById('currentYear').textContent = new Date().getFullYear();
+                  </script>
                 <div>
                     <button id="sr" style="z-index: 1000;">
                         <div class="circle1">

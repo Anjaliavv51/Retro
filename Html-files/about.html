@@ -781,7 +781,7 @@ h1, h2, h3, h4, h5, h6 {
         <div class="container">
           <div class="row align-items-center">
             <div class="col-lg-6 col-sm-7">
-              <p class="mb-0 f_400">&copy; 2024 Retro. All Rights Reserved.</p>
+              <p class="mb-0 f_400">&copy; <span id="currentYear"></span> Retro. All Rights Reserved.</p>
             </div>
             <div class="col-lg-6 col-sm-5 text-right">
               <p>Made with ❤️ by <a href="https://www.linkedin.com" target="_blank">Retro Team</a></p>
@@ -921,6 +921,10 @@ h1, h2, h3, h4, h5, h6 {
     });
 });
 
+</script>
+<script>
+  // Get the current year and update the span element
+  document.getElementById('currentYear').textContent = new Date().getFullYear();
 </script>
 <script>
   window.embeddedChatbotConfig = {

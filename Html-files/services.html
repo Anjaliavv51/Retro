@@ -716,15 +716,22 @@ body{
                         updates, latest collection, and vintage adventures.
                     </p>
                     <div class="copyright">
-                        <p
-                            style="font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%);">
-                            &copy; 2024 Retro . All Rights Reserved. | <span
-                                id="author">
-                                <a href="https://www.linkedin.com"
-                                    target="_blank"
-                                    style="text-decoration: none;">Retro
-                                    Team</a>
-                            </span></p>
+                        <p style="font-family: var(--ff-philosopher); color: hsl(203, 30%, 26%);">
+                            &copy; <span id="currentYear"></span> Retro. All Rights Reserved. | 
+                            <span id="author">
+                                <a href="https://www.linkedin.com" target="_blank" style="text-decoration: none;">Retro Team</a>
+                            </span>
+                        </p>
+                        
+                        <script>
+                            // JavaScript to dynamically set the current year
+                            document.getElementById("currentYear").textContent = new Date().getFullYear();
+                        </script>
+                        
+<script>
+    // Get the current year and update the span element
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+  </script>
 
                     </div>
                     <div>
