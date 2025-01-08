@@ -11,9 +11,9 @@
 <table align="center">
     <thead align="center">
         <tr border: 1px;>
-            <td><b><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/tarikul-islam-anik/main/assets/images/Star.png" width="20" height="20"> Stars</b></td>
+            <td><b><img src="https://avatars.githubusercontent.com/u/151148266?v=4" width="20" height="20"> Stars</b></td>
             <td><b>🍴 Forks</b></td>
-            <td><b><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/tarikul-islam-anik/main/assets/images/Lady%20Beetle.png" width="20" height="20"> Issues</b></td>
+            <td><b><img src="https://avatars.githubusercontent.com/u/151148266?v=4" width="20" height="20"> Issues</b></td>
             <td><b><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/tarikul-islam-anik/main/assets/images/Check%20Mark%20Button.png" width="20" height="20"> Open PRs</b></td>
             <td><b><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/tarikul-islam-anik/main/assets/images/Cross%20Mark.png" width="20" height="20"> Closed PRs</b></td>
         </tr>
