@@ -17,6 +17,8 @@ jobs:
       - uses: EddieHubCommunity/gh-action-community/src/welcome@main
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          issue-message: "Hi there! Thanks for opening this issue @${{ github.actor }}!. We appreciate your contribution to this open-source project. We aim to respond or assign your issue as soon as possible.If belong's to SWOC program role ur self as Contributor in OS lead site Link : https://www.oslead.xyz/usertype , so that ur points will be assigned to the leaderboard."
+          issue-message: "Hi there! Thanks for opening this issue @${{ github.actor }}!. We appreciate your contribution to this open-source project. We aim to respond or assign your issue as soon as possible.If belong's to SWOC program role ur self as Contributor in OS lead site Link : https://www.oslead.xyz/usertype , so that ur points will be assigned to the leaderboard.
+New to Open Source Contribution check out the below YT video , Happy Coding🚀💻🐛
+🔗 Link : https://www.youtube.com/watch?v=3afUKB3guZA"
           pr-message: "Great job, @${{ github.actor }}! 🎉 Thank you for submitting your pull request. Your contribution is valuable and we appreciate your efforts to improve our project.We will promptly review your changes and offer feedback. Keep up the excellent work!"
         
