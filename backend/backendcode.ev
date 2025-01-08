@@ -1,5 +1,5 @@
 PORT=3000
 MONGODB_URL=mongodb://username:password@cluster0.mongodb.net/retro_db
 SECRET=retroApp_SecretKey_2024!
-CLIENT_URL=https://rococo-mooncake-0d89f7.netlify.app
+CLIENT_URL=https://vintagevibe.netlify.app/
 GITHUB_REPO=https://github.com/Anjaliavv51/Retro
