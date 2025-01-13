@@ -483,20 +483,23 @@ body {
   background-color: brown;
   height: 350px;
   color: white;
-  padding-left: 50px;
+  padding-left: 80px;
   padding-top: 80px;
 }
 
 .app_download h4 {
   font-size: 2rem;
+  padding-left: 0.5rem;
 }
 
 .app_download h2 {
   font-size: 3.5rem;
+  padding-left: 0.4rem;
 }
 
 .app_download p {
   font-size: 1.3rem;
+  padding-left: 0.7rem;
 }
 
 .btn a {
