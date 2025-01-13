@@ -15,10 +15,10 @@ app.use(cookieParser()); // Third-party middleware
 app.use(cors({ origin: [process.env.CLIENT_URL], credentials: true })); //Third-party middleware
 
 // Auth router
-app.use('/auth', authRouter);
+app.use('/api/auth', authRouter);
 
-app.use('/', (req, res) => {
-  res.status(200).json({ data: 'JWTauth server ;)' });
-});
+// app.use('/', (req, res) => {
+//   res.status(200).json({ data: 'JWTauth server ;)' });
+// });
 
 module.exports = app;
