@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="scriptlogin.js" defer type="module"></script>
   <link rel="shortcut icon" type="image/x-icon" href="../Favicon image/favicon-32x32.png">
-  <link rel="stylesheet" href="../Css-files/login1.css">
+  <link rel="stylesheet" href="../Css-files/login-register.css">
   <title>Retro</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
 
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
     .circle {
@@ -25,6 +29,7 @@
       position: fixed;
       transform: translate(-50%, -50%);
     }
+
     .circle::before {
       content: "";
       position: fixed;
@@ -34,15 +39,18 @@
       transform: translate(-30%, -30%);
       border-radius: 50%;
     }
+
     .container {
       width: 350px;
       height: 500px;
       perspective: 800px;
     }
-    .container:hover > .card {
+
+    .container:hover>.card {
       cursor: pointer;
       transform: rotateY(180deg);
     }
+
     .card {
       height: 100%;
       width: 100%;
@@ -51,6 +59,7 @@
       transform-style: preserve-3d;
       border-radius: 40px;
     }
+
     .front,
     .back {
       height: 100%;
@@ -60,12 +69,14 @@
       position: absolute;
       backface-visibility: hidden;
     }
+
     .front {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
     }
+
     .back {
       background-color: #3a3a3a;
       transform: rotateY(180deg);
@@ -75,34 +86,41 @@
       align-items: center;
       gap: 5rem;
     }
+
     :root {
       --ff-philosopher: "Philosopher", sans-serif;
       --ff-poppins: "Poppins", sans-serif;
     }
+
     .switch-link {
       margin-top: 20px;
       font-family: var(--ff-poppins);
       text-align: center;
       color: hsl(203, 30%, 26%);
     }
+
     .switch-link a {
       color: hsl(0, 100%, 50%);
       text-decoration: none;
       font-weight: bold;
       transition: color 0.3s ease;
     }
+
     .switch-link a:hover {
       color: hsl(203, 30%, 26%);
     }
+
     .forgot-link {
       text-decoration: none;
       color: #3a3a3a;
       margin-bottom: 10px;
     }
+
     .forgot-link:hover {
       text-decoration: underline;
       color: #000;
     }
+
     .show-password {
       position: absolute;
       margin-top: 10px;
@@ -115,168 +133,173 @@
     }
   </style>
 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <style>
-      /* General styles for the circles */
-      .circle-container {
-        position: relative;
-      }
-    
-      .circle {
-        z-index: 998;
-        width: 20px;
-        height: 20px;
-        border-radius: 50%;
-        pointer-events: none;
-        animation: colors 5s infinite;
-        position: fixed;
-        transform: translate(-50%, -50%);
-      }
-    
-      .circle::before {
-        content: "";
-        position: fixed;
-        width: 50px;
-        height: 50px;
-        opacity: 0.2;
-        transform: translate(-30%, -30%);
-        border-radius: 50%;
-      }
-    
-      /* Main container */
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <style>
+    /* General styles for the circles */
+    .circle-container {
+      position: relative;
+    }
+
+    .circle {
+      z-index: 998;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      pointer-events: none;
+      animation: colors 5s infinite;
+      position: fixed;
+      transform: translate(-50%, -50%);
+    }
+
+    .circle::before {
+      content: "";
+      position: fixed;
+      width: 50px;
+      height: 50px;
+      opacity: 0.2;
+      transform: translate(-30%, -30%);
+      border-radius: 50%;
+    }
+
+    /* Main container */
+    .main-login {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      min-height: 100vh;
+      overflow-y: auto;
+    }
+
+    /* Styling for left side (login info) */
+    .left-login {
+      flex: 1;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .container {
+      width: 350px;
+      height: 500px;
+      perspective: 800px;
+    }
+
+    .container:hover>.card {
+      cursor: pointer;
+      transform: rotateY(180deg);
+    }
+
+    .card {
+      height: 100%;
+      width: 100%;
+      position: relative;
+      transition: transform 1500ms;
+      transform-style: preserve-3d;
+      border-radius: 40px;
+    }
+
+    .front,
+    .back {
+      height: 100%;
+      width: 100%;
+      border-radius: 2rem;
+      box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
+      position: absolute;
+      backface-visibility: hidden;
+    }
+
+    .front {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .back {
+      background-color: #3a3a3a;
+      transform: rotateY(180deg);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 5rem;
+    }
+
+
+
+    /* Media Queries for smaller screens */
+    @media (max-width: 768px) {
       .main-login {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        min-height: 100vh;
-        overflow-y: auto;
-      }
-    
-      /* Styling for left side (login info) */
-      .left-login {
-        flex: 1;
-        text-align: center;
-        padding: 20px;
-      }
-    
-      .container {
-        width: 350px;
-        height: 500px;
-        perspective: 800px;
-      }
-    
-      .container:hover > .card {
-        cursor: pointer;
-        transform: rotateY(180deg);
-      }
-    
-      .card {
-        height: 100%;
-        width: 100%;
-        position: relative;
-        transition: transform 1500ms;
-        transform-style: preserve-3d;
-        border-radius: 40px;
-      }
-    
-      .front,
-      .back {
-        height: 100%;
-        width: 100%;
-        border-radius: 2rem;
-        box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
-        position: absolute;
-        backface-visibility: hidden;
-      }
-    
-      .front {
-        display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
       }
-    
-      .back {
-        background-color: #3a3a3a;
-        transform: rotateY(180deg);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 5rem;
-      }
-    
 
-    
-      /* Media Queries for smaller screens */
-      @media (max-width: 768px) {
-        .main-login {
-          flex-direction: column;
-        }
-    
-        .container {
-          width: 300px;
-          height: 400px;
-        }
-    
-        .left-login,
-        .right-login {
-          flex: unset;
-          width: 100%;
-          padding: 10px;
-        }
-    
-        .card-login {
-          padding: 15px;
-          width: 100%;
-        }
-        .right-login{
-          height: 60vh;
-        }
-    
-        .btn-login,
-        #google-login {
-          width: 100%;
-          padding: 12px;
-        }
-    
-        h1 {
-          font-size: 24px;
-        }
+      .container {
+        width: 300px;
+        height: 400px;
       }
-    
-      @media (max-width: 480px) {
-        .container {
-          width: 250px;
-          height: 350px;
-        }
-    
-        .card-login {
-          padding: 10px;
-        }
-    
-        .textfield label {
-          font-size: 14px;
-        }
-    
-        .textfield input {
-          padding: 8px;
-        }
-    
-        .btn-login,
-        #google-login {
-          padding: 10px;
-          font-size: 14px;
-        }
+
+      .left-login,
+      .right-login {
+        flex: unset;
+        width: 100%;
+        padding: 10px;
       }
-    </style>
+
+      .card-login {
+        padding: 15px;
+        width: 100%;
+      }
+
+      .right-login {
+        height: 60vh;
+      }
+
+      .btn-login,
+      #google-login {
+        width: 100%;
+        padding: 12px;
+      }
+
+      h1 {
+        font-size: 24px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        width: 250px;
+        height: 350px;
+      }
+
+      .card-login {
+        padding: 10px;
+      }
+
+      .textfield label {
+        font-size: 14px;
+      }
+
+      .textfield input {
+        padding: 8px;
+      }
+
+      .btn-login,
+      #google-login {
+        padding: 10px;
+        font-size: 14px;
+      }
+    }
+  </style>
 
 </head>
+
 <body>
   <div class="circle-container">
     <!-- Circle elements -->
@@ -288,10 +311,12 @@
         <div class="card">
           <div class="front" style="align-content: center;font-family: var(--ff-philosopher);">
             <b style="transform: rotate(360deg);font-size: 30px;color: hsl(203, 30%,26%);"> Login to Save your Data!</b>
-            <img src="../Images/Loginsave.png" alt="Icon" style="width: 150px; height: auto; margin: 20px auto 20px; display: block;">
+            <img src="../Images/Loginsave.png" alt="Icon"
+              style="width: 150px; height: auto; margin: 20px auto 20px; display: block;">
             <b style="transform: rotate(360deg);font-size: 30px;color: hsl(203, 30%,26%);"> Login to Save your Data!</b>
           </div>
-          <div class="back" style="align-content: center;font-family: var(--ff-philosopher);background-color: transparent;color: hsl(203, 30%,26%);">
+          <div class="back"
+            style="align-content: center;font-family: var(--ff-philosopher);background-color: transparent;color: hsl(203, 30%,26%);">
             <img src="../Images/Login.png" alt="Icon" style="width: 100px; height: auto;  display: block;">
             <b style="font-size: 50px; margin-top: -50px;">Login Here</b>
             <b style="font-size: 20px; display: block; margin-top: -70px;">Vintage Collection is waiting for You</b>
@@ -305,18 +330,22 @@
           <h1 style="color: hsl(203, 30%,26%);font-family: var(--ff-philosopher);">LOGIN</h1>
           <div class="textfield">
             <label for="usuario" style="color: black;font-family:var(--ff-poppins);">Email / User Name</label>
-            <input required type="text" id="email" name="email" placeholder="Enter Email / UserName" style="font-family:var(--ff-poppins);">
+            <input required type="text" id="email" name="email" placeholder="Enter Email / UserName"
+              style="font-family:var(--ff-poppins);">
           </div>
           <div class="textfield" style="position: relative;">
             <label required for="password" style="color: black;font-family:var(--ff-poppins);">Password</label>
-            <input required type="password" id="password" name="password" placeholder="Enter Password" style="font-family:var(--ff-poppins);">
+            <input required type="password" id="password" name="password" placeholder="Enter Password"
+              style="font-family:var(--ff-poppins);">
             <span class="show-password" onclick="togglePasswordVisibility()">
               <i class="fas fa-eye" id="togglePasswordIcon"></i>
             </span>
           </div>
           <button type="submit" class="btn-login" style="color: black;font-family:var(--ff-poppins);">Login</button>
           <span>or</span>
-          <button id="google-login" style="color: black;font-family:var(--ff-poppins); background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48cGF0aCBkPSJNMTcuNiA5LjJsLS4xLTEuOEg5djMuNGg0LjhDMTMuNiAxMiAxMyAxMyAxMiAxMy42djIuMmgzYTguOCA4LjggMCAwIDAgMi42LTYuNnoiIGZpbGw9IiM0Mjg1RjQiIGZpbGwtcnVsZT0ibm9uemVybyIvPjxwYXRoIGQ9Ik05IDE4YzIuNCAwIDQuNS0uOCA2LTIuMmwtMy0yLjJhNS40IDUuNCAwIDAgMS04LTIuOUgxVjEzYTkgOSAwIDAgMCA4IDV6IiBmaWxsPSIjMzRBODUzIiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNNCAxMC43YTUuNCA1LjQgMCAwIDEgMC0zLjRWNUgxYTkgOSAwIDAgMCAwIDhsMy0yLjN6IiBmaWxsPSIjRkJCQzA1IiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNOSAzLjZjMS4zIDAgMi41LjQgMy40IDEuM0wxNSAyLjNBOSA5IDAgMCAwIDEgNWwzIDIuNGE1LjQgNS40IDAgMCAxIDUtMy43eiIgZmlsbD0iI0VBNDMzNSIgZmlsbC1ydWxlPSJub256ZXJvIi8+PHBhdGggZD0iTTAgMGgxOHYxOEgweiIvPjwvZz48L3N2Zz4=); background-repeat: no-repeat; background-position: 25% 50%; background-size: 30px;">Login with google</button>
+          <button id="google-login"
+            style="color: black;font-family:var(--ff-poppins); background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48cGF0aCBkPSJNMTcuNiA5LjJsLS4xLTEuOEg5djMuNGg0LjhDMTMuNiAxMiAxMyAxMyAxMiAxMy42djIuMmgzYTguOCA4LjggMCAwIDAgMi42LTYuNnoiIGZpbGw9IiM0Mjg1RjQiIGZpbGwtcnVsZT0ibm9uemVybyIvPjxwYXRoIGQ9Ik05IDE4YzIuNCAwIDQuNS0uOCA2LTIuMmwtMy0yLjJhNS40IDUuNCAwIDAgMS04LTIuOUgxVjEzYTkgOSAwIDAgMCA4IDV6IiBmaWxsPSIjMzRBODUzIiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNNCAxMC43YTUuNCA1LjQgMCAwIDEgMC0zLjRWNUgxYTkgOSAwIDAgMCAwIDhsMy0yLjN6IiBmaWxsPSIjRkJCQzA1IiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNOSAzLjZjMS4zIDAgMi41LjQgMy40IDEuM0wxNSAyLjNBOSA5IDAgMCAwIDEgNWwzIDIuNGE1LjQgNS40IDAgMCAxIDUtMy43eiIgZmlsbD0iI0VBNDMzNSIgZmlsbC1ydWxlPSJub256ZXJvIi8+PHBhdGggZD0iTTAgMGgxOHYxOEgweiIvPjwvZz48L3N2Zz4=); background-repeat: no-repeat; background-position: 25% 50%; background-size: 30px;">Login
+            with google</button>
           <p id="error-message" style="color: red; font-family: var(--ff-poppins);"></p>
           <a href="forgot-pass.html" class="forgot-link">Forgot Password ?</a>
           <p class="switch-link">Don’t have an account? <a href="signup.html">Sign Up</a></p>
@@ -388,7 +417,7 @@
     animateCircles();
 
     // Form submission event listener
-    document.getElementById('loginForm').addEventListener('submit', function(event) {
+    document.getElementById('loginForm').addEventListener('submit', function (event) {
       // Prevent form submission
       event.preventDefault();
 
@@ -439,16 +468,14 @@
       domain: "www.chatbase.co"
     }
   </script>
-  <script src="https://www.chatbase.co/embed.min.js" chatbotId="dGlQ5bP-F7GodLWzgrVAx" domain="www.chatbase.co" defer></script>
-    </script>
-    <script
-    src="https://www.chatbase.co/embed.min.js"
-    chatbotId="dGlQ5bP-F7GodLWzgrVAx"
-    domain="www.chatbase.co"
-    defer>
-    </script>
-<div class="gtranslate_wrapper"></div>
-<script>window.gtranslateSettings = {"default_language":"en","detect_browser_language":true,"wrapper_selector":".gtranslate_wrapper"}</script>
-<script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+  <script src="https://www.chatbase.co/embed.min.js" chatbotId="dGlQ5bP-F7GodLWzgrVAx" domain="www.chatbase.co"
+    defer></script>
+  </script>
+  <script src="https://www.chatbase.co/embed.min.js" chatbotId="dGlQ5bP-F7GodLWzgrVAx" domain="www.chatbase.co" defer>
+  </script>
+  <div class="gtranslate_wrapper"></div>
+  <script>window.gtranslateSettings = { "default_language": "en", "detect_browser_language": true, "wrapper_selector": ".gtranslate_wrapper" }</script>
+  <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
 </body>
+
 </html>

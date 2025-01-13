@@ -14,8 +14,6 @@
             }
         }
     </style>
-     
-    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="/Css-files/navbarstyles.css">
@@ -46,11 +44,9 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="./style.css">
-
         <!-- Link to manifest file for PWA -->
         <link rel="manifest" href="/manifest.json">
-       
- 
+
     <style>
 
         .retro-heading {
@@ -463,6 +459,9 @@ p {
                         <a class="nav-link" href="Html-files/services.html"
                             style="font-family: var(--ff-philosopher);color: black;">Services</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Html-files/blog.html" style="font-family: var(--ff-philosopher); color: black">Blog</a>
+                    </li>
 
                     <li class="nav-item">
                         <a class="nav-link" href="Html-files/contact.html" style="font-family: var(--ff-philosopher); color: black">Contact Us</a>
@@ -604,7 +603,7 @@ document.body.classList.add('light-mode');
             <div class="popup-left">
                 <img src="Images/popup.jpg" alt="Retro Vintage Charm">
             </div>
-            <a href="#" class="no-thanks popuplogo" style="font-family: var(--ff-philosopher); color: black;"><b>Retro</b></a>
+            <a href="#" class="no-thanks popuplogo" style="font-family: var(--ff-philosopher); color: black;"><b class="popup-logo">Retro</b></a>
             <div class="popup-right">
                 <h1>Discover the Past!</h1>
                 <p id="h2">Sign Up for Exclusive Vintage Deals</p>
@@ -1027,7 +1026,9 @@ new google.translate.TranslateElement({
                             </svg>
                         </span>
                     </div>
-                    <div class="faq-answer">Our return policy lasts 30 days...</div>
+                    
+                    <div class="faq-answer"> <hr>
+                        Our return policy lasts 30 days...</div>
                 </div>
                 <div class="faq-item" style="background-color: #f5c0bb;">
                     <div class="faq-question">
@@ -1037,8 +1038,11 @@ new google.translate.TranslateElement({
                                 <path d="M12 15l-8-8h16z"/>
                             </svg>
                         </span>
+                        
                     </div>
-                    <div class="faq-answer">You can track your order using the tracking number...</div>
+                     
+                    <div class="faq-answer"><hr>
+                        You can track your order using the tracking number...</div>
                 </div>
                 <div class="faq-item" style="background-color: #f5dddb;">
                     <div class="faq-question">
@@ -1049,7 +1053,9 @@ new google.translate.TranslateElement({
                             </svg>
                         </span>
                     </div>
-                    <div class="faq-answer">Shipping typically takes 5-7 business days, depending on your location.</div>
+                     
+                    <div class="faq-answer"> <hr>
+                         Shipping typically takes 5-7 business days, depending on your location.</div>
                 </div>
                 <div class="faq-item" style="background-color: #f5c0bb;">
                     <div class="faq-question">
@@ -1060,7 +1066,9 @@ new google.translate.TranslateElement({
                             </svg>
                         </span>
                     </div>
-                    <div class="faq-answer">If your order hasn't been processed yet, you can contact us to make changes.</div>
+                     
+                    <div class="faq-answer"> <hr>
+                         If your order hasn't been processed yet, you can contact us to make changes.</div>
                 </div>
                 <div class="faq-item" style="background-color: #f5dddb;">
                     <div class="faq-question">
@@ -1071,7 +1079,9 @@ new google.translate.TranslateElement({
                             </svg>
                         </span>
                     </div>
-                    <div class="faq-answer">Yes, we offer international shipping to select countries.</div>
+                     
+                    <div class="faq-answer"> <hr>
+                          Yes, we offer international shipping to select countries.</div>
                 </div>
                 <div class="faq-item" style="background-color: #f5c0bb;">
                     <div class="faq-question">
@@ -1082,7 +1092,9 @@ new google.translate.TranslateElement({
                             </svg>
                         </span>
                     </div>
-                    <div class="faq-answer">Yes, we provide discounts on bulk orders. Please contact our sales team for more details.</div>
+                   
+                    <div class="faq-answer"> <hr>
+                         Yes, we provide discounts on bulk orders. Please contact our sales team for more details.</div>
                 </div>
                 <!-- Add more FAQ items as needed -->
             </div>
@@ -1381,4 +1393,23 @@ scrollToTopBtn.addEventListener("click", function() {
   });
 }
 </script>
+</script>  
+
+
+<br /><br />
+
+    <link rel="stylesheet" href="visi.css">
+
+    <!-- ############### Footer ############### -->
+    <div class="visitor-counter">
+
+      <div>Visitor</div>
+      <div class="website-counter"></div>
+
+    </div>
+
+    <script src="path/to/visitorCounter.js"></script>
+    <script src="./assets/css/visitors.css"></script>
+
+      <script src="visi.js"></script>
 </html>
