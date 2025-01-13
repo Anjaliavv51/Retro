@@ -1,0 +1,44 @@
+body {
+    background:  #f6c7c3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+  .feedback-form {
+    background: #fff;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 400px;
+  }
+
+  .rating {
+    display: flex;
+    gap: 5px;
+    cursor: pointer;
+  }
+
+  .rating i {
+    font-size: 1.5rem;
+    color: #ccc;
+  }
+
+  .rating i.active {
+    color: #f39c12;
+  }
+
+  .submit-btn {
+    background-color: rgb(138, 37, 37);
+    color: white;
+    border: none;
+  }
+
+  .submit-btn:hover {
+    background-color:rgb(125, 23, 23);
+    color: white;
+  }
+  
+  
