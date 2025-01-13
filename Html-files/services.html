@@ -340,8 +340,27 @@ body{
     .foot-panel2 .footer-colums a:hover::after{
       width:100%;
     } 
-
-
+   .navbar div a {
+    color:black;
+   }
+   .dark-mode .navbar{
+    background:rgb(30, 39, 40);
+   }
+   .dark-mode .navbar div a {
+    color:white;
+   }
+    .dark-mode .items {
+        background: linear-gradient(to bottom,rgb(152, 91, 100),rgb(231, 161, 173),pink);
+    }
+    .dark-mode .testimonal__card{
+     background: linear-gradient(to bottom,rgb(169, 98, 109),rgb(161, 101, 111),pink);
+    }
+    .dark-mode .testimonal__card p{
+        color:black;
+    }
+    .testimonal__card p{
+        color: hsl(208, 7%,46%);
+    }
     </style>
 
 </head>
@@ -378,7 +397,7 @@ body{
         <header>
             <nav class="navbar navbar-expand-lg fixed-top">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="../index.html" style="color: black;">
+                    <a class="navbar-brand" href="../index.html" >
                         <b>Retro</b>
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -389,30 +408,59 @@ body{
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link" href="../index.html" style="color: black;">Home</a>
+                                <a class="nav-link" href="../index.html" >Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="about.html" style="color: black;">About Us</a>
+                                <a class="nav-link" href="about.html" >About Us</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="menu.html" style="color: black;">Collections</a>
+                                <a class="nav-link" href="menu.html" >Collections</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#" style="color: black;">Services</a>
+                                <a class="nav-link" href="#" >Services</a>
                             <li class="nav-item">
-                                <a class="nav-link" href="contact.html" style="color: black;">Contact us</a>
+                                <a class="nav-link" href="contact.html">Contact us</a>
                             </li>
                             <li class="nav-item" style="list-style-type: none;">
-                                <a class="nav-link" href="cart.html" style="color: black;">
+                                <a class="nav-link" href="cart.html" >
                                     <i class="fa-solid fa-cart-shopping"></i><span class="badge-count" id="badgeCount"></span>
                                 </a>
                             </li>
                         </ul>
                     </div>
+                    <button id="darkModeToggle" class="btn btn-secondary" style="margin-left: 10px;">
+                        <i class="fas fa-sun" id="toggleIcon" style="font-size: 20px;"></i>
+                        <span id="toggleText">Light Mode</span>
+                    </button>
                 </div>
             </nav>
         </header>
-    
+        <script>document.getElementById('darkModeToggle').addEventListener('click', function() {
+   
+            document.body.classList.toggle('dark-mode');
+            const navbar = document.getElementById('top');
+            navbar.classList.toggle('dark-mode');
+        
+           
+            const toggleIcon = document.getElementById('toggleIcon');
+            const toggleText = document.getElementById('toggleText');
+        
+            if (document.body.classList.contains('dark-mode')) {
+                toggleIcon.classList.remove('fa-sun');
+                toggleIcon.classList.add('fa-moon');
+                toggleText.textContent = ' Dark Mode';
+            } else {
+                toggleIcon.classList.remove('fa-moon');
+                toggleIcon.classList.add('fa-sun');
+                toggleText.textContent = 'Light Mode';
+            }
+        });
+        
+        
+        document.body.classList.add('light-mode');
+        
+        
+        </script>
 
 
         <div class="mainhead">
@@ -476,7 +524,7 @@ body{
                                     style="font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%);">Riya
                                     Jain</h2>
                                 <p class="testimonal__description"
-                                    style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                    style="font-family: var(--ff-poppins);">
                                     Wide selection of items.It's nice website
                                     for vintage collection lovers.
                                 </p>
@@ -502,7 +550,7 @@ body{
                                     style="font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%);">Sudhanshu
                                     Sharma</h2>
                                 <p class="testimonal__description"
-                                    style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                    style="font-family: var(--ff-poppins);">
                                     Must purchase the items in the website. Very Nice, Good Products!
                                 </p>
 
@@ -531,7 +579,7 @@ body{
                                     style="font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%);">Angel
                                     Dravid</h2>
                                 <p class="testimonal__description"
-                                    style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                    style="font-family: var(--ff-poppins);">
                                     Good delivery and offers.Good Service.Must
                                     checkout.
                                 </p>
@@ -557,7 +605,7 @@ body{
                                     style="font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%);">Priya
                                     Sharma</h2>
                                 <p class="testimonal__description"
-                                    style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                    style="font-family: var(--ff-poppins);">
                                     Nice offer above $5000.The items are very
                                     delicious.
                                 </p>

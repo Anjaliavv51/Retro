@@ -550,6 +550,18 @@ body{
 .fa-brands.fa-x-twitter:hover {
   color: #181e20 !important;
 }
+.navbar div a {
+    color:black;
+}
+.dark-mode .navbar{
+    background-color: #232b2d;
+}
+.dark-mode .navbar div a {
+    color:white;
+}
+.dark-mode .card{
+    background: linear-gradient(to bottom,rgb(185, 127, 137),rgb(237, 146, 161),pink);
+}
         </style>
 
 </head>
@@ -586,7 +598,7 @@ body{
         <header>
             <nav class="navbar navbar-expand-lg fixed-top">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="../index.html" style="color: black;">
+                    <a class="navbar-brand" href="../index.html" >
                         <b>Retro</b>
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -597,31 +609,62 @@ body{
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link" href="../index.html" style="color: black;">Home</a>
+                                <a class="nav-link" href="../index.html" >Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="about.html" style="color: black;">About Us</a>
+                                <a class="nav-link" href="about.html">About Us</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="menu.html" style="color: black;">Collections</a>
+                                <a class="nav-link" href="menu.html" >Collections</a>
                             <li class="nav-item">
-                                <a class="nav-link" href="services.html" style="color: black;">Services</a>
+                                <a class="nav-link" href="services.html" >Services</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#" style="color: black;">Contact us</a>
+                                <a class="nav-link" href="#" >Contact us</a>
                             </li>
                             <li class="nav-item" style="list-style-type: none;">
-                                <a class="nav-link" href="cart.html" style="color: black;">
+                                <a class="nav-link" href="cart.html" >
                                     <i class="fa-solid fa-cart-shopping"></i><span class="badge-count" id="badgeCount"></span>
                                 </a>
                             </li>
                         </ul>
                     </div>
+                    <button id="darkModeToggle" class="btn btn-secondary" style="margin-left: 10px;">
+                        <i class="fas fa-sun" id="toggleIcon" style="font-size: 20px;"></i>
+                        <span id="toggleText">Light Mode</span>
+                    </button>
                 </div>
             </nav>
         </header>
     </div>
 
+    <script>document.getElementById('darkModeToggle').addEventListener('click', function() {
+   
+        document.body.classList.toggle('dark-mode');
+        const navbar = document.getElementById('top');
+        navbar.classList.toggle('dark-mode');
+    
+       
+        const toggleIcon = document.getElementById('toggleIcon');
+        const toggleText = document.getElementById('toggleText');
+    
+        if (document.body.classList.contains('dark-mode')) {
+            toggleIcon.classList.remove('fa-sun');
+            toggleIcon.classList.add('fa-moon');
+            toggleText.textContent = ' Dark Mode';
+        } else {
+            toggleIcon.classList.remove('fa-moon');
+            toggleIcon.classList.add('fa-sun');
+            toggleText.textContent = 'Light Mode';
+        }
+    });
+    
+    
+    document.body.classList.add('light-mode');
+    
+    
+    </script>
+    
 
 
     <!--
@@ -804,8 +847,16 @@ body{
         </section>
         
     <!-- CSS for the icon and border radius -->
+     <style>
+        .dark-mode .foot-panel2{
+            background: linear-gradient(to bottom,rgb(185, 127, 137),rgb(237, 146, 161),pink);
+        }
+        .dark-mode .para3{
+            background: linear-gradient(to right,rgb(185, 127, 137),rgb(237, 146, 161),pink);
+        }
+     </style>
     <div class="footer" style="background-color: hsl(20, 43%, 93%);">
-        <footer>
+        <footer class="footer2">
             <div class="foot-panel2" style="background-color:hsl(20, 43%, 93%);font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
                 <ul>
                     <p style="color: hsl(357, 82%,35%);font-family: var(--ff-philosopher);text-align: left;">Our Pages</p>
@@ -869,9 +920,9 @@ body{
                         <a class="fa-brands fa-snapchat"  href="https://www.snapchat.com" ></a>
 
                     </div>
-                    <p style="font-family: var(--ff-philosopher);background-color: hsl(20, 43%, 93%);color: hsl(203, 30%, 26%);margin-bottom:0;">Stay connected with us on social media for the latest updates, latest collection, and vintage adventures.
+                    <p class="para3" style="font-family: var(--ff-philosopher);background-color: hsl(20, 43%, 93%);color: hsl(203, 30%, 26%);margin-bottom:0;">Stay connected with us on social media for the latest updates, latest collection, and vintage adventures.
                     </p>
-                    <div class="copyright" style="font-family: var(--ff-philosopher); background-color: hsl(20, 43%, 93%); color: black;">
+                    <div class="copyright para3" style="font-family: var(--ff-philosopher); background-color: hsl(20, 43%, 93%); color: black;">
                         &copy; <span id="currentYear"></span> Retro. All Rights Reserved. | Developed by 
                         <span id="author">
                             <a href="https://www.linkedin.com" target="_blank" style="text-decoration: none;">Retro Team</a>

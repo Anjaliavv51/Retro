@@ -337,6 +337,18 @@
     font-family: "Bree Serif", serif;
     /* transition: 0.5s ease-in-out; */
 }
+.navbar div a{
+    color:black;
+}
+.dark-mode .navbar{
+    background-color: #252c2e;
+}
+.dark-mode .navbar div a{
+    color:white;
+}
+.dark-mode .menu_container{
+    background:linear-gradient(to right,rgb(193, 116, 129),rgb(207, 122, 138),rgb(220, 113, 131),rgb(245, 165, 179)) ;
+}
     </style>
 </head>
 
@@ -371,7 +383,7 @@
 
             <nav class="navbar navbar-expand-lg fixed-top" id="top">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="../index.html" style="font-family: var(--ff-philosopher); color: black;">
+                    <a class="navbar-brand" href="../index.html" style="font-family: var(--ff-philosopher); ">
                         <b>Retro</b>
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
@@ -381,21 +393,21 @@
                     <div class="collapse navbar-collapse" id="navbarContent">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="header-items">
                             <li class="nav-item">
-                                <a class="nav-link" href="../index.html" style="color: black;">Home</a>
+                                <a class="nav-link" href="../index.html" >Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="about.html" style="color: black;">About Us</a>
+                                <a class="nav-link" href="about.html" >About Us</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#" style="color: black;">Collections</a>
+                                <a class="nav-link" href="#">Collections</a>
                             <li class="nav-item">
-                                <a class="nav-link" href="services.html" style="color: black;">Services</a>
+                                <a class="nav-link" href="services.html">Services</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="contact.html" style="color: black;">Contact us</a>
+                                <a class="nav-link" href="contact.html">Contact us</a>
                             </li>
                             <li class="nav-item" style="list-style-type: none;">
-                                <a class="nav-link" href="cart.html" style="color: black;">
+                                <a class="nav-link" href="cart.html">
                                     <i class="fa-solid fa-cart-shopping"></i><span class="badge-count" id="badgeCount"></span>
                                 </a>
                             </li>
@@ -412,13 +424,42 @@
                             </ul>
 -->
                         </div>
+                        <button id="darkModeToggle" class="btn btn-secondary" style="margin-left: 10px;">
+                            <i class="fas fa-sun" id="toggleIcon" style="font-size: 20px;"></i>
+                            <span id="toggleText">Light Mode</span>
+                        </button>
                     </div>
                 </div>
 
             </nav>
         </header>
     </div>
-
+    <script>document.getElementById('darkModeToggle').addEventListener('click', function() {
+   
+        document.body.classList.toggle('dark-mode');
+        const navbar = document.getElementById('top');
+        navbar.classList.toggle('dark-mode');
+    
+       
+        const toggleIcon = document.getElementById('toggleIcon');
+        const toggleText = document.getElementById('toggleText');
+    
+        if (document.body.classList.contains('dark-mode')) {
+            toggleIcon.classList.remove('fa-sun');
+            toggleIcon.classList.add('fa-moon');
+            toggleText.textContent = ' Dark Mode';
+        } else {
+            toggleIcon.classList.remove('fa-moon');
+            toggleIcon.classList.add('fa-sun');
+            toggleText.textContent = 'Light Mode';
+        }
+    });
+    
+    
+    document.body.classList.add('light-mode');
+    
+    
+    </script>
 <br><br><br><br>
         <div class="mainhead">
             <h1 style="font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%);">O U R &nbsp; C O L L E C T I O N
@@ -764,9 +805,14 @@
                 </div>
             </div>
     </section>
-
+<style>
+    .dark-mode .footer1{
+        background :linear-gradient(to right,rgb(193, 116, 129),rgb(207, 122, 138),rgb(220, 113, 131),rgb(222, 121, 138));
+    }
+</style>
+<hr>
     <!-- footer -->
-    <footer style="background-color: hsl(20, 43%, 93%);">
+    <footer class="footer1"style="background-color: hsl(20, 43%, 93%);">
         <br><br><br>
 
         <div class="foot-panel2">
