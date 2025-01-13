@@ -40,7 +40,7 @@ https://github.com/user-attachments/assets/9fbd2c41-09e1-4843-88d5-5ee2e64de43d
 1. [Featured In](#featured-in)
 2. [About Us](#about-us)
 3. [Tech Stack](#tech-stack)
-4. [Get Started](#get-started)
+4. [Installation Instructions](#installation-instructions)
 5. [Contributing](#contributing)
 6. [Website Preview](#website-preview)
 7. [Our Contributors](#our-contributors)
@@ -92,60 +92,103 @@ It is an online platform which enables you to get information about your vintage
 
 <br><br>
 
-## <p style="font-size:3rem;"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Rocket.png" alt="Rocket" width="40" height="40" />Get Started</p>
+## <p style="font-size:4rem;"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Rocket.png" alt="Rocket" width="40" height="40" />Installation Instructions</p>
 
-### Setup and Installation
+Follow the steps below to set up and run the project locally:
 
-<p style="font-family:var(--ff-philosopher);">To contribute to the Retro repository, follow these steps:</p>
+## 1. Clone the Repository
+Clone the repository to your local machine using the following command:
+```bash
+git clone https://github.com/Anjaliavv51/Retro.git
+```
 
-1. **Fork the Repository:**
-   Click on the "Fork" button on the repository's GitHub page to create a copy of the repository in your GitHub account.
+## 2. Run the Frontend
+The frontend is a static application. To run it:
+1. Navigate to the frontend folder (if applicable) or locate the `index.html` file in the project root.
+2. Open the `index.html` file in your browser.
 
-2. **Clone the repository:**
-   Clone the forked repository to your local machine using the following command in your terminal.
+
+## 3. Run the Backend
+
+### 1. Prerequisites
+Before running the backend, ensure the following software is installed on your machine:
+- **Node.js**: Install a compatible version for the project. [Download Node.js](https://nodejs.org/)  
+- **Git**: Version control system. [Download Git](https://git-scm.com/)  
+- **pnpm**: A fast, disk-efficient Node.js package manager.  
+
+  Install pnpm globally using npm:  
+  ```bash
+  npm install -g pnpm
+  ```  
+
+  Verify the installation by checking the version:  
+  ```bash
+  pnpm --version
+  ```
+
+
+### 2. Navigate to Backend
+Change your directory to the backend folder:
+```bash
+cd backend
+```
+
+
+### 3. Create a `.env` File
+In the `backend` folder, create a `.env` file to store environment variables:
+```bash
+touch .env
+```
+
+
+### 4. Configure Environment Variables
+Add the following variables to the `.env` file:
+```env
+PORT=3000
+MONGODB_URL=ADD YOUR MONGODB ATLAS DRIVER CONNECTION STRING
+SECRET=INPUT YOUR SECRET KEY. SAMPLE: MYSECRET123
+```
+
+### 5. MongoDB URL Setup
+To get the MongoDB URL, follow these steps:
+1. **Login to MongoDB Atlas**: [MongoDB Atlas Login](https://account.mongodb.com/account/login?nds=true)
+2. **Create a New Project**:  
+   - In your MongoDB Atlas account, create a new project.  
+3. **Create a New Cluster**:  
+   - Under the newly created project, create a new cluster.  
+4. **Create a New Database**:  
+   - Inside the cluster, create a new database named `retro_db`.  
+5. **Get the Connection String**:  
+   - Click on the cluster, select **Connect**, and retrieve the connection string.  
+   - Replace `<username>` and `<db_password>` with your MongoDB Atlas credentials.  
+   Example:  
    ```bash
-   git clone https://github.com/<your-github-username>/Retro
+   mongodb+srv://<username>:<db_password>@cluster....mongodb.net/retro_db
    ```
-3. **Add a remote upstream:**
+
+
+## **4. Start the Backend**
+1. Install dependencies using `pnpm`:
    ```bash
-   git remote add upstream https://github.com/original-owner-username/Retro
+   pnpm install
    ```
-4. **Create a new branch:**
-   Create a new branch for your changes. Run the following command in your terminal.
+2. Start the backend server:
    ```bash
-   git checkout -b <your-branch-name>
+   pnpm start
    ```
-5. **Make the desired changes:**
-   Make the desired changes to the source code.
+3. The backend should now be running on `http://localhost:3000`.
 
-6. **Add your changes:**
-   Add your changes to the staging area. Run the following command in your terminal.
-   ```bash
-   git add <File1 changed> <File2 changed> ...
-   ```
-7. **Commit your changes:**
-   Commit your changes with a meaningful commit message. Run the following command in your terminal.
-   ```bash
-   git commit -m "<your-commit-message>"
-   ```
-8. **Push your changes:**
-   Push your changes to your forked repository. Run the following command in your terminal
-   ```bash
-   git push origin <your-branch-name>
-   ```
-9. **Create a Pull Request:**
-   Go to the GitHub page of your forked repository. You should see a prompt to create a pull request (PR). Click on it, compare the changes, and create the PR.
-10. **Update Branch**
-    Always remember to update the branch by clikcing below sync fork in your forked repo , which is loctaed in your github repo's.
-    ![image](https://github.com/user-attachments/assets/2ada077c-5d49-4d85-8a92-6b687b50900e)
+<br>
 
-<br><br>
+## Contributing
 
+>⚠️Before contributing to this project, be sure to read and adhere to the [Contributing Guidelines](https://github.com/Anjaliavv51/Retro/blob/main/Contributing.md).
 
+Thank you for considering contributing to [Retro](https://github.com/Anjaliavv51/Retro). We welcome and appreciate contributions from the community! 
 
-## <p style="font-family:var(--ff-philosopher);font-size:3rem;text-align:center;"> Contributing </p>
+If you find a bug, have a feature request, or would like to contribute in any way, feel free to open an issue or submit a pull request. Whether you're enhancing the technical documentaion or adding a new feature, your efforts are valued, and together we can make this project even better. Thank you for considering contributing to [Retro](https://github.com/Anjaliavv51/Retro)!
 
-<p style="font-family:var(--ff-philosopher);font-size:2rem;">We appreciate your feedback! Our goal is to make contribution to this project as easy and transparent as possible. Whether you're interested in:</p> <ul style="font-size:1.5rem;"> <li> <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/tarikul-islam-anik/main/assets/images/Lady%20Beetle.png" width="20" height="20"> <strong>Reporting a bug</strong> </li> <li> <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/tarikul-islam-anik/main/assets/images/Man%20Technologist%20Light%20Skin%20Tone.png" width="20" height="20"> <strong>Discussing the current state of the code</strong> </li> <li> <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Axe.png" width="20" height="20"> <strong>Submitting a fix</strong> </li> <li> <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/tarikul-islam-anik/main/assets/images/Rocket.png" width="20" height="20"> <strong>Proposing new features</strong> </li> </ul> <p style="font-size:1.5rem;">To get started with contributing, please follow the steps outlined in the <a href="Contributing.md" style="color: #007bff; text-decoration: none;">Contributing.md</a>.</p>
+<br>
 
 ## Website Preview📸
 <br>
