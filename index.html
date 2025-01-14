@@ -489,7 +489,7 @@ p {
                         </li>
                     </ul>
                 </div>
-                <button id="darkModeToggle" class="btn btn-secondary" style="margin-left: 10px;">
+                <button id="darkModeToggle" class="btn btn-secondary" style="margin-left: 10px;" onclick="changeImage()">
                     <i class="fas fa-sun" id="toggleIcon" style="font-size: 20px;"></i>
                     <span id="toggleText">Light Mode</span>
                 </button>
@@ -583,6 +583,12 @@ p {
     }   
     .fas {
         transition: color 0.3s; 
+    }
+    .retro-heading{
+        color:brown;
+    }
+    .dark-mode .retro-heading{
+        color:white;
     }
     </style>
 <script>document.getElementById('darkModeToggle').addEventListener('click', function() {
@@ -681,24 +687,41 @@ new google.translate.TranslateElement({
 </script>
 
     <section class="intro_container">
-        <h1 class="retro-heading" style="font-family: var(--ff-philosopher);color: brown;z-index: 99;">Welcome to Retro!</h1>
+        <h1 class="retro-heading" style="font-family: var(--ff-philosopher);z-index: 99;">Welcome to Retro!</h1>
         <p style="font-family: cursive;z-index: 99;color: white;font-size: x-large;">Step back in time and experience the nostalgic charm of days gone by. 
             Immerse yourself in the world of vintage tech, classic designs, and timeless memories. 
             Get ready to embark on a journey through the ages, where innovation meets tradition, and the past inspires the future.</p>
         <button class="btn" id="openButton" style="z-index: 99;">Order Now</button>
-        <img src="stars.png" class="stars" alt="">
+        <img id="imagee" src="stars.png" class="stars" alt="">
 
         <img src="mountain.png" class="mountain" alt="">
 
         <img src="trees.png" class="trees" alt="">
 
         <img src="layer.png" class="layer" alt="">
+         <!-- <img id="imagee" src="image.jpg" class="stars" alt="">
+
+       <img src="mountain.png" class="mountain" alt="">
+
+        <img src="trees.png" class="trees" alt="">
+
+        <img src="layer.png" class="layer" alt="">  -->
     </section>
     <script>
         document.getElementById('openButton').addEventListener('click', function() {
     // Replace 'target_page.html' with the actual path to the page you want to open
     window.open('Html-files/menu.html', '_blank');
 });
+
+function changeImage(){
+    let displayImage=document.getElementById("imagee")
+    if( displayImage.src.match('stars.png')){
+        displayImage.src='image.jpg';
+    }
+    else{
+        displayImage.src='stars.png';
+    }
+}
     </script>
     <section class="about_us">
         <div class="move">
