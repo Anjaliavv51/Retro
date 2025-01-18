@@ -5,7 +5,7 @@ body {
 }
 
 /* Navbar styles */
-.navbar {
+.navbar.light-mode {
     background-color: rgba(255, 255, 245, 0.8);
     padding: 1rem;
     display: flex;
@@ -13,6 +13,7 @@ body {
     justify-content: space-between;
     margin: 10px 1px!important;
     border-radius: 20px;
+    color: black;
 }
 
 .nav-right {
@@ -28,7 +29,7 @@ body {
     /* Pushes to the right */
 }
 
-.navbar-brand {
+.navbar.light-mode .navbar-brand {
     font-size: 1.5rem;
     color: black;
     font-weight: bold;
@@ -43,7 +44,7 @@ body {
     margin-right: 15px;
 }
 
-.nav-link {
+.navbar.light-mode .nav-link {
     color: black;
     font-size: 1rem;
     font-family: var(--ff-philosopher);
@@ -164,4 +165,81 @@ body {
     .nav-item {
         margin-bottom: 1rem;
     }
+}
+
+
+
+.navbar {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+
+
+/* DARK MODE */
+.navbar.dark-mode {
+    background-color: #343a40e0;
+    padding: 1rem;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin: 10px 1px !important;
+    border-radius: 20px;
+    color: white;
+}
+
+.navbar.dark-mode .navbar-brand {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.navbar.dark-mode .nav-link {
+    color: white;
+    font-size: 1rem;
+    font-family: var(--ff-philosopher);
+    text-decoration: none;
+    /* Remove default underline */
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+
+#darkModeToggle {
+    display: flex;
+    align-items: center;
+    background-color: #f8f9fa;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#darkModeToggle:hover {
+    background-color: #e2e6ea;
+}
+
+#darkModeToggle .fas {
+    margin-right: 5px;
+    font-size: 20px;
+}
+
+.dark-mode #darkModeToggle {
+    background-color: #495057;
+    color: white !important;
+}
+
+.dark-mode #darkModeToggle:hover {
+    background-color: #6c757d;
+    ;
+}
+
+.dark-mode #darkModeToggle .fas {
+    color: #f8f9fa;
+}
+
+
+.fas {
+    transition: color 0.3s;
 }

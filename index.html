@@ -432,7 +432,7 @@ p {
     <!--Navbar Start-->
     <nav class="navbar navbar-expand-lg fixed-top" id="top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#" style="font-family: var(--ff-philosopher); color: black;">
+            <a class="navbar-brand" href="#" style="font-family: var(--ff-philosopher);">
                 <b>Retro</b>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -443,32 +443,32 @@ p {
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="#"
-                            style="color: black; font-family: var(--ff-philosopher);">Home</a>
+                            style="font-family: var(--ff-philosopher);">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="Html-files/about.html"
-                            style="font-family: var(--ff-philosopher); color: black;">About Us</a>
+                            style="font-family: var(--ff-philosopher); ">About Us</a>
                     </li>
                     
                     <li class="nav-item">
                         <a class="nav-link" href="Html-files/menu.html"
-                            style="font-family: var(--ff-philosopher);color: black;">Collections</a>
+                            style="font-family: var(--ff-philosopher);">Collections</a>
                     </li>
 
                     <li class="nav-item">
                         <a class="nav-link" href="Html-files/services.html"
-                            style="font-family: var(--ff-philosopher);color: black;">Services</a>
+                            style="font-family: var(--ff-philosopher);">Services</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="Html-files/blog.html" style="font-family: var(--ff-philosopher); color: black">Blog</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="Html-files/contact.html" style="font-family: var(--ff-philosopher); color: black">Contact Us</a>
+                        <a class="nav-link" href="Html-files/contact.html" style="font-family: var(--ff-philosopher);">Contact Us</a>
                     </li>
                     
                     <li class="nav-item">
-                    <a class="nav-link" href="#" style="font-family: var(--ff-philosopher); color: black;">More</a>
+                    <a class="nav-link" href="#" style="font-family: var(--ff-philosopher); ">More</a>
                     </li>
 
                 </ul>
@@ -477,14 +477,14 @@ p {
                     <ul class="navbar-nav">
                         <li class="nav-item">
                             <a class="nav-link" onclick="redirectLogin()"
-                                style="color: black; font-family: var(--ff-philosopher);">Login</a>
+                                style=" font-family: var(--ff-philosopher);">Login</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" onclick="redirectSignup()"
-                                 style="color: black; font-family: var(--ff-philosopher);">Signup</a>
+                                 style="font-family: var(--ff-philosopher);">Signup</a>
                         </li>
                         <li class="nav-item" style="list-style-type: none;">
-                            <a class="nav-link" href="Html-files/cart.html" style="color: black;"><i
+                            <a class="nav-link" href="Html-files/cart.html"><i
                                     class="fa-solid fa-cart-shopping"></i>Cart</a>
                         </li>
                     </ul>
@@ -496,81 +496,15 @@ p {
             </div>
         </div>
     </nav>
-<style>
-    .navbar {
-        transition: background-color 0.3s, color 0.3s;
-    }
-    
-    .navbar .navbar-brand,
-    .navbar .nav-link {
-        font-family: var(--ff-philosopher);
-        color: black;
-    }
-    
-    .navbar .nav-link:hover {
-        color: #007bff; 
-    }
-    
-    
-    .dark-mode {
-        background-color: #343a40; 
-        color: white; 
-    }
-    
-    .dark-mode .navbar .navbar-brand,
-    .dark-mode .navbar .nav-link {
-        color: white;
-    }
-    
-    .dark-mode .navbar .nav-link:hover {
-        color: #61dafb; 
-    }
-    
-    
-    #darkModeToggle {
-        display: flex;
-        align-items: center; 
-        background-color: #f8f9fa; 
-        color: black; 
-        border: none;
-        border-radius: 5px;
-        padding: 8px 12px;
-        transition: background-color 0.3s, color 0.3s; 
-    }
-    
-    #darkModeToggle:hover {
-        background-color: #e2e6ea; 
-    }
-    
-    #darkModeToggle .fas {
-        margin-right: 5px; 
-        font-size: 20px;
-    }
-    
-    .dark-mode #darkModeToggle {
-        background-color: #495057; 
-        color: white !important; 
-    }
-    
-    .dark-mode #darkModeToggle:hover {
-        background-color: #6c757d; 
-       ;
-    }
-    
-    .dark-mode #darkModeToggle .fas {
-        color: #f8f9fa; 
-    }
-    
-   
-    .fas {
-        transition: color 0.3s; 
-    }
-    </style>
+
+
 <script>document.getElementById('darkModeToggle').addEventListener('click', function() {
    
     document.body.classList.toggle('dark-mode');
     const navbar = document.getElementById('top');
     navbar.classList.toggle('dark-mode');
+    navbar.classList.toggle('light-mode');
+    document.body.classList.toggle('light-mode');
 
    
     const toggleIcon = document.getElementById('toggleIcon');
@@ -589,6 +523,7 @@ p {
 
 
 document.body.classList.add('light-mode');
+document.getElementById('top').classList.add('light-mode');
 
 
 </script>
