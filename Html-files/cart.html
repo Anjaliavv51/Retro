@@ -334,8 +334,16 @@ border-radius: 4px;
       width:100%;
     } 
 
+.navbar div a {
+  color:black;
 
-
+}
+.dark-mode .navbar div a{
+  color:white;
+}
+.dark-mode .navbar{
+  background-color: #263033;
+}
 
   </style>
 </head>
@@ -371,7 +379,7 @@ border-radius: 4px;
     <header>
       <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container-fluid">
-          <a class="navbar-brand" href="../index.html" style="color: black;">
+          <a class="navbar-brand" href="../index.html" >
             <b>Retro</b>
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -381,30 +389,60 @@ border-radius: 4px;
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link" href="../index.html" style="color: black;">Home</a>
+                <a class="nav-link" href="../index.html" >Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="about.html" style="color: black;">About Us</a>
+                <a class="nav-link" href="about.html">About Us</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="menu.html" style="color: black;">Collections</a>
+                <a class="nav-link" href="menu.html">Collections</a>
               <li class="nav-item">
-                <a class="nav-link" href="services.html" style="color: black;">Services</a>
+                <a class="nav-link" href="services.html">Services</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="contact.html" style="color: black;">Contact us</a>
+                <a class="nav-link" href="contact.html" >Contact us</a>
               </li>
               <li class="nav-item" style="list-style-type: none;">
-                <a class="nav-link" href="#" style="color: black;">
+                <a class="nav-link" href="#" >
                   <i class="fa-solid fa-cart-shopping"></i><span class="badge-count" id="badgeCount"></span>
                 </a>
               </li>
             </ul>
           </div>
+          <button id="darkModeToggle" class="btn btn-secondary" style="margin-left: 10px;">
+            <i class="fas fa-sun" id="toggleIcon" style="font-size: 20px;"></i>
+            <span id="toggleText">Light Mode</span>
+        </button>
         </div>
       </nav>
     </header>
   </div>
+  <script>document.getElementById('darkModeToggle').addEventListener('click', function() {
+   
+    document.body.classList.toggle('dark-mode');
+    const navbar = document.getElementById('top');
+    navbar.classList.toggle('dark-mode');
+
+   
+    const toggleIcon = document.getElementById('toggleIcon');
+    const toggleText = document.getElementById('toggleText');
+
+    if (document.body.classList.contains('dark-mode')) {
+        toggleIcon.classList.remove('fa-sun');
+        toggleIcon.classList.add('fa-moon');
+        toggleText.textContent = ' Dark Mode';
+    } else {
+        toggleIcon.classList.remove('fa-moon');
+        toggleIcon.classList.add('fa-sun');
+        toggleText.textContent = 'Light Mode';
+    }
+});
+
+
+document.body.classList.add('light-mode');
+
+
+</script>
   <br><br><br><br>
         <div class="mainhead">
             <h1 style="color: black;font-family: var(--ff-philosopher);">C A R T</h1>

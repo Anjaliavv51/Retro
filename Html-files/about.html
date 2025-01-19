@@ -589,12 +589,40 @@ h1, h2, h3, h4, h5, h6 {
     <div id="preloader">
       <div id="loader"></div>
     </div>
+    <style>
+      .navbar div a{
+        color:black;
+      }
+      .dark-mode .navbar{
+        background-color: #272e31;
+        
+      }
+      .dark-mode .navbar div a {
+        color:white;
+      }
+      .dark-mode .about_container{
+        background: linear-gradient(to right,rgb(161, 95, 106),rgb(249, 167, 181));
+      }
+      .about_container .about2 p{
+        color: hsl(208, 7%,46%);
+      }
+      .about-container .about3 p{
+        color: hsl(208, 7%,46%);
+      }
+      
+      .dark-mode  .about2 p{
+        color:rgb(33, 27, 27);
+      }
+      .dark-mode .about3 p{
+        color:rgb(33, 27, 27);
+      }
+    </style>
 
 <div class="head_container_about" style="color: black;font-family: var(--ff-philosopher);">
   <header style="font-family: var(--ff-philosopher);">
     <nav class="navbar navbar-expand-lg fixed-top" id="top">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/index.html" style="font-family: var(--ff-philosopher); color: black;">
+        <a class="navbar-brand" href="/index.html" style="font-family: var(--ff-philosopher); ">
           <b>Retro</b>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -604,21 +632,21 @@ h1, h2, h3, h4, h5, h6 {
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" href="../index.html" style="color: black;">Home</a>
+              <a class="nav-link" href="../index.html" >Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#" style="color: black;">About Us</a>
+              <a class="nav-link" href="#" >About Us</a>
             <li class="nav-item">
-              <a class="nav-link" href="menu.html" style="color: black;">Collections</a>
+              <a class="nav-link" href="menu.html" >Collections</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="services.html" style="color: black;">Services</a>
+              <a class="nav-link" href="services.html" >Services</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contact.html" style="color: black;">Contact us</a>
+              <a class="nav-link" href="contact.html" >Contact us</a>
             </li>
           <li class="nav-item" style="list-style-type: none;">
-            <a class="nav-link" href="cart.html" style="color: black;">
+            <a class="nav-link" href="cart.html" >
               <i class="fa-solid fa-cart-shopping"></i>Cart<span class="badge-count" id="badgeCount"></span>
             </a>
           </li>
@@ -629,9 +657,39 @@ h1, h2, h3, h4, h5, h6 {
           </div>
       -->
         </div>
+        <button id="darkModeToggle" class="btn btn-secondary" style="margin-left: 10px;">
+          <i class="fas fa-sun" id="toggleIcon" style="font-size: 20px;"></i>
+          <span id="toggleText">Light Mode</span>
+      </button>
       </div>
     </nav>
   </header>
+  <script>document.getElementById('darkModeToggle').addEventListener('click', function() {
+   
+    document.body.classList.toggle('dark-mode');
+    const navbar = document.getElementById('top');
+    navbar.classList.toggle('dark-mode');
+
+   
+    const toggleIcon = document.getElementById('toggleIcon');
+    const toggleText = document.getElementById('toggleText');
+
+    if (document.body.classList.contains('dark-mode')) {
+        toggleIcon.classList.remove('fa-sun');
+        toggleIcon.classList.add('fa-moon');
+        toggleText.textContent = ' Dark Mode';
+    } else {
+        toggleIcon.classList.remove('fa-moon');
+        toggleIcon.classList.add('fa-sun');
+        toggleText.textContent = 'Light Mode';
+    }
+});
+
+
+document.body.classList.add('light-mode');
+
+
+</script>
 
   <br><br><br><br>
   <div class="mainhead" >
@@ -661,7 +719,7 @@ h1, h2, h3, h4, h5, h6 {
         
         <div class="about2">
             <h2 class=section__titlestyle style="font-family: var(--ff-philosopher);color: hsl(357, 82%,35%);">Our Story</h2>
-            <p style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">Retro was born from a desire to relive and share the joy of the past. We believe that every era has something special to offer, whether it’s the bold designs of the 60s, the innovative spirit of the 70s, or the tech revolutions of the 80s and 90s. Our journey began with a passion for collecting vintage items and a dream to create a space where people could immerse themselves in a world that captures the essence of different generations.</p>
+            <p class="par" style="font-family: var(--ff-poppins);">Retro was born from a desire to relive and share the joy of the past. We believe that every era has something special to offer, whether it’s the bold designs of the 60s, the innovative spirit of the 70s, or the tech revolutions of the 80s and 90s. Our journey began with a passion for collecting vintage items and a dream to create a space where people could immerse themselves in a world that captures the essence of different generations.</p>
         </div>
         
 
@@ -670,10 +728,20 @@ h1, h2, h3, h4, h5, h6 {
     <section class="about_container" style="width:80vw;margin-top: 80px;margin-bottom: 30px;">
       <div class="about3">
         <h2 class=section__title>Why Choose Retro?</h2>
-        <p style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">We’re not just about products – we’re about creating a lifestyle that honors the beauty and inspiration of the past. Each item we offer is carefully selected to bring nostalgia to life, allowing you to embrace the timeless designs, flavors, and stories that have shaped history. Whether you're a vintage enthusiast or simply love the look and feel of classic designs, Retro is your gateway to a world that values tradition as much as it does innovation.</p>
+        <p class="par" style="font-family: var(--ff-poppins);">We’re not just about products – we’re about creating a lifestyle that honors the beauty and inspiration of the past. Each item we offer is carefully selected to bring nostalgia to life, allowing you to embrace the timeless designs, flavors, and stories that have shaped history. Whether you're a vintage enthusiast or simply love the look and feel of classic designs, Retro is your gateway to a world that values tradition as much as it does innovation.</p>
       </div>
     </section>
-    
+    <style>
+      .dark-mode .new_footer_area {
+        background: linear-gradient(to right,rgb(187, 120, 131),pink,rgb(134, 86, 94));
+      }
+      .para22{
+        color: hsl(203, 30%, 26%);
+      }
+      .dark-mode .para22{
+        color:black;
+      }
+    </style>
                 
     <footer class="new_footer_area bg_color">
       <div class="new_footer_top">
@@ -751,7 +819,7 @@ h1, h2, h3, h4, h5, h6 {
                         href="https://www.snapchat.com" style="color: hsl(203, 30%, 26%);" ></a>
                     </div>
                 </div>
-                <p style="margin-bottom:0;font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%);">Stay connected with us on social media for the latest updates, latest collection, and vintage adventures.
+                <p class="para22" style="margin-bottom:0;font-family: var(--ff-philosopher);">Stay connected with us on social media for the latest updates, latest collection, and vintage adventures.
                 </p>
                
                 <div>
@@ -765,7 +833,7 @@ h1, h2, h3, h4, h5, h6 {
                 </div>
 
                
-                <p>Stay connected with us on social media for the latest updates and vintage adventures.</p>
+                <p class="para22">Stay connected with us on social media for the latest updates and vintage adventures.</p>
               </div>
             
     
