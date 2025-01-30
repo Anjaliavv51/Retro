@@ -209,50 +209,75 @@ body {
         margin-bottom: 20px;
     }
 
-    /* Buttons Column - 40% */
-    .service_buttons {
-        flex: 0 0 40%;
-    }
-
     .button_row {
-        display: flex;
-        justify-content: space-between;
-      /*border: 1px solid black;*/
-        gap: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
     }
-
+    
     .service_item {
-        text-align: center;
-        flex: 1;
-        padding: 10px;
-        margin: 5px 0;
+      text-align: center;
+      flex: 1;
+      padding: 10px;
+      margin: 5px 0;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease; /* Smooth transition for scaling, shadow, and border */
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Initial shadow */
+      overflow: hidden; /* Prevent content overflow */
+      border-radius: 8px; /* Optional rounded corners */
+      border: 2px solid transparent; /* Initial border (transparent) */
     }
-
+    
     .service_item h2 {
-        font-family: var(--ff-philosopher);
-        color: hsl(357, 82%, 35%);
-        font-size: 1.7rem;
-        margin-bottom: 10px;
+      font-family: var(--ff-philosopher);
+      color: hsl(357, 82%, 35%);
+      font-size: 1.7rem;
+      margin-bottom: 10px;
+      transition: color 0.3s ease; /* Smooth text color change on hover */
     }
-
+    
+    .service_item:hover h2 {
+      color: #b22222; /* Change title color on hover */
+    }
+    
+    .service_item img {
+      width: 100%;
+      margin-top: 70px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px; /* Optional rounded corners */
+      transition: transform 0.3s ease; /* Smooth image zoom effect */
+    }
+    
+    .service_item:hover img {
+      transform: scale(1.1); /* Zoom the image on hover */
+    }
+    
+    /* Updated order_btn styles */
     .order_btn {
-        font-family: var(--ff-poppins);
-        background-color: hsl(357, 82%, 35%);
-        color: white;
-        padding: 12px 30px;
-        font-size: 1rem;
-        margin-top: 10px;
-        text-decoration: none;
-        border-radius: 10px;
-        transition: background-color 0.3s ease;
+      font-family: var(--ff-poppins);
+      background-color: hsl(357, 82%, 35%);
+      color: white;
+      padding: 12px 30px;
+      font-size: 1rem;
+      margin-top: 10px;
+      text-decoration: none;
+      border-radius: 10px;
+      transition: background-color 0.3s ease, transform 0.3s ease; /* Added transform for hover effect */
     }
-
+    
     .order_btn:hover {
-        background-color: hsl(357, 82%, 45%);
+      background-color: hsl(357, 82%, 45%);
+      transform: scale(1.1); /* Slightly enlarge the button on hover */
+    }
+    
+    .service_item:hover {
+      transform: scale(1.5);
+      box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.2); /* Increase shadow depth on hover */
+      border: 2px solid hsl(357, 82%, 35%); /* Dark red/maroon border on hover */
     }
 
-    
-    
+  
 
 
 /*
@@ -269,20 +294,6 @@ body {
 }
 */
 
-.service_container:before {
-  background-color: transparent;
-  content: "";
-  position: absolute;
-
-  /*  
-    height: 560px;
-  height: 800px;
-  width: 100%;
-  /* justify-items: center; */
-  opacity: 0.4;
-  z-index: -1;
-  /* background-repeat: no-repeat; */
-}
 
 /*
 .service {
