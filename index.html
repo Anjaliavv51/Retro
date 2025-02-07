@@ -31,7 +31,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="shortcut icon" type="image/x-icon" href="./Favicon image/favicon-32x32.png">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <link
         href="https://fonts.googleapis.com/css2?family=Fuggles&family=Mooli&family=Oswald:wght@600&family=Roboto:wght@100;300&display=swap"
         rel="stylesheet">
@@ -44,6 +44,9 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="./style.css">
+        <!-- Link to manifest file for PWA -->
+        <link rel="manifest" href="/manifest.json">
+
     <style>
 
         .retro-heading {
@@ -1134,6 +1137,7 @@ new google.translate.TranslateElement({
                     <a href="Html-files/cart.html" >Cart</a>
                     <a href="Html-files/museums.html" >Museums</a>
                     <a href="Html-files/reviews.html">Share Experience</a>
+                    <a href="Html-files/feedback.html">Feedback</a>
                 </ul>
                 <ul>
                     <p style="color: hsl(357, 82%,35%);font-family: var(--ff-philosopher); text-align:left"> Exclusive Offers</p>
@@ -1374,6 +1378,22 @@ scrollToTopBtn.addEventListener("click", function() {
 
 <script>
     document.getElementById("copyright").textContent = new Date().getFullYear();
+</script>
+
+<!-- Script for Service Workers in PWA -->
+<script>
+    if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/service-worker.js')
+      .then((registration) => {
+        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+      })
+      .catch((error) => {
+        console.log('ServiceWorker registration failed: ', error);
+      });
+  });
+}
+</script>
 </script>  
 
 
@@ -1393,6 +1413,4 @@ scrollToTopBtn.addEventListener("click", function() {
     <script src="./assets/css/visitors.css"></script>
 
       <script src="visi.js"></script>
-
-
 </html>
