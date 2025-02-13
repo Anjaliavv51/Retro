@@ -143,6 +143,13 @@ body {
     color: #d2691e;
 }
 
+/* Add these styles for mobile menu */
+body.menu-open {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+}
+
 /* Mobile Styles */
 @media (max-width: 768px) {
     .navbar-brand {
@@ -163,5 +170,27 @@ body {
 
     .nav-item {
         margin-bottom: 1rem;
+    }
+
+    .navbar-collapse {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(255, 255, 245, 0.95);
+        padding: 80px 20px 20px;
+        overflow-y: auto;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+        z-index: 1029;
+    }
+
+    .navbar-collapse.show {
+        transform: translateX(0);
+    }
+
+    .navbar-nav {
+        height: 100%;
     }
 }
