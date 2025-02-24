@@ -12,7 +12,7 @@
             .navbar-expand-lg .navbar-nav {
                 margin-top: -9px; /* Add this line */
             }
-        }
+        } 
     </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,7 +31,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="./Favicon image/favicon-32x32.png">
     <link
         href="https://fonts.googleapis.com/css2?family=Fuggles&family=Mooli&family=Oswald:wght@600&family=Roboto:wght@100;300&display=swap"
         rel="stylesheet">
@@ -46,6 +46,7 @@
         <link rel="stylesheet" href="./style.css">
         <!-- Link to manifest file for PWA -->
         <link rel="manifest" href="/manifest.json">
+        <link rel="stylesheet" href="/dark-mode/dark-mode.css">
 
     <style>
 
@@ -131,10 +132,6 @@
             --ff-philosopher: "Philosopher", sans-serif;
             --ff-poppins: "Poppins", sans-serif;
         }
-        body{
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpath fill='%23ffb9b0' d='M486 705.8c-109.3-21.8-223.4-32.2-335.3-19.4C99.5 692.1 49 703 0 719.8V800h843.8c-115.9-33.2-230.8-68.1-347.6-92.2C492.8 707.1 489.4 706.5 486 705.8z'/%3E%3Cpath fill='%23ffc1b7' d='M1600 0H0v719.8c49-16.8 99.5-27.8 150.7-33.5c111.9-12.7 226-2.4 335.3 19.4c3.4 0.7 6.8 1.4 10.2 2c116.8 24 231.7 59 347.6 92.2H1600V0z'/%3E%3Cpath fill='%23ffc8bf' d='M478.4 581c3.2 0.8 6.4 1.7 9.5 2.5c196.2 52.5 388.7 133.5 593.5 176.6c174.2 36.6 349.5 29.2 518.6-10.2V0H0v574.9c52.3-17.6 106.5-27.7 161.1-30.9C268.4 537.4 375.7 554.2 478.4 581z'/%3E%3Cpath fill='%23ffcfc6' d='M0 0v429.4c55.6-18.4 113.5-27.3 171.4-27.7c102.8-0.8 203.2 22.7 299.3 54.5c3 1 5.9 2 8.9 3c183.6 62 365.7 146.1 562.4 192.1c186.7 43.7 376.3 34.4 557.9-12.6V0H0z'/%3E%3Cpath fill='%23FFD6CE' d='M181.8 259.4c98.2 6 191.9 35.2 281.3 72.1c2.8 1.1 5.5 2.3 8.3 3.4c171 71.6 342.7 158.5 531.3 207.7c198.8 51.8 403.4 40.8 597.3-14.8V0H0v283.2C59 263.6 120.6 255.7 181.8 259.4z'/%3E%3Cpath fill='%23ffdcd4' d='M1600 0H0v136.3c62.3-20.9 127.7-27.5 192.2-19.2c93.6 12.1 180.5 47.7 263.3 89.6c2.6 1.3 5.1 2.6 7.7 3.9c158.4 81.1 319.7 170.9 500.3 223.2c210.5 61 430.8 49 636.6-16.6V0z'/%3E%3Cpath fill='%23ffe1d9' d='M454.9 86.3C600.7 177 751.6 269.3 924.1 325c208.6 67.4 431.3 60.8 637.9-5.3c12.8-4.1 25.4-8.4 38.1-12.9V0H288.1c56 21.3 108.7 50.6 159.7 82C450.2 83.4 452.5 84.9 454.9 86.3z'/%3E%3Cpath fill='%23ffe6df' d='M1600 0H498c118.1 85.8 243.5 164.5 386.8 216.2c191.8 69.2 400 74.7 595 21.1c40.8-11.2 81.1-25.2 120.3-41.7V0z'/%3E%3Cpath fill='%23ffebe4' d='M1397.5 154.8c47.2-10.6 93.6-25.3 138.6-43.8c21.7-8.9 43-18.8 63.9-29.5V0H643.4c62.9 41.7 129.7 78.2 202.1 107.4C1020.4 178.1 1214.2 196.1 1397.5 154.8z'/%3E%3Cpath fill='%23FFF0EA' d='M1315.3 72.4c75.3-12.6 148.9-37.1 216.8-72.4h-723C966.8 71 1144.7 101 1315.3 72.4z'/%3E%3C/g%3E%3C/svg%3E");
-  background-size: cover;
-}
 ::-webkit-scrollbar {
   width: 10px; /* Width of the scrollbar */
 }
@@ -497,98 +494,9 @@ p {
         </div>
     </nav>
 <style>
-    .navbar {
-        transition: background-color 0.3s, color 0.3s;
-    }
     
-    .navbar .navbar-brand,
-    .navbar .nav-link {
-        font-family: var(--ff-philosopher);
-        color: black;
-    }
-    
-    .navbar .nav-link:hover {
-        color: #007bff; 
-    }
-    
-    
-    .dark-mode {
-        background-color: #343a40; 
-        color: white; 
-    }
-    
-    .dark-mode .navbar .navbar-brand,
-    .dark-mode .navbar .nav-link {
-        color: white;
-    }
-    
-    .dark-mode .navbar .nav-link:hover {
-        color: #61dafb; 
-    }
-    
-    
-    #darkModeToggle {
-        display: flex;
-        align-items: center; 
-        background-color: #f8f9fa; 
-        color: black; 
-        border: none;
-        border-radius: 5px;
-        padding: 8px 12px;
-        transition: background-color 0.3s, color 0.3s; 
-    }
-    
-    #darkModeToggle:hover {
-        background-color: #e2e6ea; 
-    }
-    
-    #darkModeToggle .fas {
-        margin-right: 5px; 
-        font-size: 20px;
-    }
-    
-    .dark-mode #darkModeToggle {
-        background-color: #495057; 
-        color: white !important; 
-    }
-    
-    .dark-mode #darkModeToggle:hover {
-        background-color: #6c757d; 
-       ;
-    }
-    
-    .dark-mode #darkModeToggle .fas {
-        color: #f8f9fa; 
-    }
-    
-   
-    .fas {
-        transition: color 0.3s; 
-    }
     </style>
-<script>document.getElementById('darkModeToggle').addEventListener('click', function() {
-   
-    document.body.classList.toggle('dark-mode');
-    const navbar = document.getElementById('top');
-    navbar.classList.toggle('dark-mode');
-
-   
-    const toggleIcon = document.getElementById('toggleIcon');
-    const toggleText = document.getElementById('toggleText');
-
-    if (document.body.classList.contains('dark-mode')) {
-        toggleIcon.classList.remove('fa-sun');
-        toggleIcon.classList.add('fa-moon');
-        toggleText.textContent = ' Dark Mode';
-    } else {
-        toggleIcon.classList.remove('fa-moon');
-        toggleIcon.classList.add('fa-sun');
-        toggleText.textContent = 'Light Mode';
-    }
-});
-
-
-document.body.classList.add('light-mode');
+<script>
 
 
 </script>
@@ -678,7 +586,7 @@ new google.translate.TranslateElement({
     <script>
         document.getElementById('openButton').addEventListener('click', function() {
     // Replace 'target_page.html' with the actual path to the page you want to open
-    window.open('Html-files/menu.html', '_blank');
+    window.open('Html-files/menu.html', '_blank'); 
 });
     </script>
     <section class="about_us">
@@ -718,7 +626,7 @@ new google.translate.TranslateElement({
         
     </section>
 
- <section class="service_container">
+ <section id="service" class="service_container">
     <div class="service">
         <!-- Text Column - 60% Width -->
         <div class="service_text column"  style="margin-left: auto; margin-right: auto;"><br>
@@ -744,7 +652,7 @@ new google.translate.TranslateElement({
 
 </section>
 
-    <section class="menu_container">
+    <section id="menu" class="menu_container">
         <div class="mainhead">
             <h1 style="font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%);">"Get ready to explore our vintage collections!"</h1>
             <p style="font-family: var(--ff-poppins);">"Free on Order above $5000"</p>
@@ -1015,7 +923,7 @@ new google.translate.TranslateElement({
                 }
             </style>
             
-            <h2 style="display: flex; justify-content: center; align-items: center; margin-top: 50px; font-weight: 500;">Frequently Asked Questions</h2>
+            <h2 style="display: flex; justify-content: center; align-items: center; margin-top: 50px; font-weight: 500;" class="faq">Frequently Asked Questions</h2>
             <div class="faq-container" style="padding: 50px;margin-top: 50px;">
                 <div class="faq-item" style="background-color: #f5dddb;">
                     <div class="faq-question">
@@ -1199,7 +1107,7 @@ new google.translate.TranslateElement({
                         <a class="fa-brands fa-snapchat"  href="https://www.snapchat.com" ></a>
 
                     </div>
-                    <p style="font-family: var(--ff-philosopher);background-color: hsl(20, 43%, 93%);color: hsl(203, 30%, 26%);margin-bottom:0;">Stay connected with us on social media for the latest updates, latest collection, and vintage adventures.
+                    <p class="copyright" style="font-family: var(--ff-philosopher);background-color: hsl(20, 43%, 93%);color: hsl(203, 30%, 26%);margin-bottom:0;">Stay connected with us on social media for the latest updates, latest collection, and vintage adventures.
                     </p>
                     <div class="copyright" style="font-family: var(--ff-philosopher);background-color: hsl(20, 43%, 93%);color: black;">
 
@@ -1413,4 +1321,6 @@ scrollToTopBtn.addEventListener("click", function() {
     <script src="./assets/css/visitors.css"></script>
 
       <script src="visi.js"></script>
+
+      <script src="/dark-mode/dark-mode.js"></script>
 </html>
