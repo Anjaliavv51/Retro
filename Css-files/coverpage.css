@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    background-image: url('../images/RETRO.png');
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    /* Ensure container can position children absolutely */
+}
+
+.explore-btn {
+    margin-left: 35%;
+    margin-top: 20px;
+    padding: 15px 30px;
+    font-size: 1.6rem;
+    color: rgb(115, 45, 45);
+    background-color: #ff6347;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    animation: pulse 1.5s infinite;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.explore-btn:hover {
+    background-color: #ff4500;
+    transform: scale(1.1);
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* SVG Styles */
+svg {
+    margin-left: 35%;
+    font-family: Algerian;
+    width: 100%;
+    height: auto;
+    /* Maintain aspect ratio */
+    max-width: 600px;
+    /* Limit size */
+}
+
+svg text {
+    animation: stroke 5s infinite alternate;
+    stroke-width: 2;
+    stroke: #582f0e;
+    font-size: 100px;
+}
+
+@keyframes stroke {
+    0% {
+        fill: rgba(72, 138, 204, 0);
+        stroke: #582f0e;
+        stroke-dashoffset: 25%;
+        stroke-dasharray: 0 50%;
+        stroke-width: 2;
+    }
+
+    70% {
+        fill: rgba(72, 138, 204, 0);
+        stroke: rgb(253, 137, 137);
+    }
+
+    80% {
+        fill: rgba(72, 138, 204, 0);
+        stroke: #582f0e;
+        stroke-width: 3;
+    }
+
+    100% {
+        fill: #582f0e;
+        stroke: rgb(0, 0, 0);
+        stroke-dashoffset: -25%;
+        stroke-dasharray: 50% 0;
+        stroke-width: 0;
+    }
+}
+
+@media screen and (max-width: 1095.54px) {
+    svg text {
+        font-size: 100px;
+        /* Adjust font size for smaller screens */
+
+    }
+}
+
+.small-text {
+    font-size: 1.5rem;
+    /* Smaller font size for "Welcome to" */
+    color: rgb(136, 9, 9);
+    text-transform: uppercase;
+    text-decoration-thickness: 50px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: block;
+    margin-top: 70px;
+    margin-left: 35%;
+}

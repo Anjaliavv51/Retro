@@ -18,7 +18,7 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Bree+Serif&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../Css-files/about.css">
-    <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="../Favicon image/favicon-32x32.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
@@ -26,6 +26,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/dark-mode/dark-mode.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');  
         @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');  
@@ -629,6 +631,10 @@ h1, h2, h3, h4, h5, h6 {
           </div>
       -->
         </div>
+        <button id="darkModeToggle" class="btn btn-secondary" style="margin-left: 10px;">
+          <i class="fas fa-sun" id="toggleIcon" style="font-size: 20px;"></i>
+          <span id="toggleText">Light Mode</span>
+      </button>
       </div>
     </nav>
   </header>
@@ -660,7 +666,7 @@ h1, h2, h3, h4, h5, h6 {
      
         
         <div class="about2">
-            <h2 class=section__titlestyle style="font-family: var(--ff-philosopher);color: hsl(357, 82%,35%);">Our Story</h2>
+            <h2 class="section__titlestyle" style="font-family: var(--ff-philosopher);color: hsl(357, 82%,35%);">Our Story</h2>
             <p style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">Retro was born from a desire to relive and share the joy of the past. We believe that every era has something special to offer, whether it’s the bold designs of the 60s, the innovative spirit of the 70s, or the tech revolutions of the 80s and 90s. Our journey began with a passion for collecting vintage items and a dream to create a space where people could immerse themselves in a world that captures the essence of different generations.</p>
         </div>
         
@@ -669,13 +675,13 @@ h1, h2, h3, h4, h5, h6 {
 
     <section class="about_container" style="width:80vw;margin-top: 80px;margin-bottom: 30px;">
       <div class="about3">
-        <h2 class=section__title>Why Choose Retro?</h2>
+        <h2 class="section__title">Why Choose Retro?</h2>
         <p style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">We’re not just about products – we’re about creating a lifestyle that honors the beauty and inspiration of the past. Each item we offer is carefully selected to bring nostalgia to life, allowing you to embrace the timeless designs, flavors, and stories that have shaped history. Whether you're a vintage enthusiast or simply love the look and feel of classic designs, Retro is your gateway to a world that values tradition as much as it does innovation.</p>
       </div>
     </section>
     
                 
-    <footer class="new_footer_area bg_color">
+    <footer id="abouthtml" class="new_footer_area bg_color">
       <div class="new_footer_top">
         <div class="container">
           <div class="row">
@@ -777,7 +783,7 @@ h1, h2, h3, h4, h5, h6 {
       </div>
     
       <!-- Footer Bottom -->
-      <div class="footer_bottom">
+      <div class="footer_bottom abouthtml">
         <div class="container">
           <div class="row align-items-center">
             <div class="col-lg-6 col-sm-7">
@@ -941,6 +947,7 @@ h1, h2, h3, h4, h5, h6 {
 <div class="gtranslate_wrapper"></div>
 <script>window.gtranslateSettings = {"default_language":"en","detect_browser_language":true,"wrapper_selector":".gtranslate_wrapper"}</script>
 <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+<script src="/dark-mode/dark-mode.js"></script>
 </body>
 
 </html>

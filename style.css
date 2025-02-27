@@ -46,7 +46,7 @@ body {
   position: fixed; 
   top: 0;
   width: 100%; 
-  z-index: 1030; 
+  z-index: 1030;  
 }
 .navbar.scrolled {
   background-color: rgb(176, 63, 63); 
