@@ -8,6 +8,8 @@ const cors = require('cors');
 const csrf = require('csurf');
 const rateLimit = require('express-rate-limit');
 
+const productRouter = require("./router/productRoute.js"); 
+
 // Initialize CSRF Protection
 const csrfProtect = csrf({ cookie: true });
 
@@ -33,6 +35,7 @@ app.get('/csrf-token', csrfProtect, (req, res) => {
 
 // Auth routes
 app.use('/api/auth', csrfProtect, limiter, authRouter);
+app.use("/api/products", productRouter);
 
 // Global error handler
 app.use((err, req, res, next) => {
@@ -42,5 +45,6 @@ app.use((err, req, res, next) => {
     res.status(500).json({ error: 'Something went wrong' });
   }
 });
+
 
 module.exports = app;

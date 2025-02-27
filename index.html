@@ -6,7 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
  
     <title>Retro</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #f4e1d2; /* Vintage paper background */
+            text-align: center;
+            padding: 50px;
+        }
+        .moodboard-link {
+            display: block;
+            text-decoration: none;
+            color: #353535;
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 20px;
 
+        }
+        .moodboard-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .moodboard-image {
+            margin-top: 50px;
+            width: 600px;
+            height: auto;
+            border: 10px solid #c19a6b; /* Aged paper frame */
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        .moodboard-image:hover {
+            transform: scale(1.05);
+        }
+    </style>
     <style>
         @media (min-width: 992px) {
             .navbar-expand-lg .navbar-nav {
@@ -703,9 +736,15 @@ new google.translate.TranslateElement({
                 <h3 style="font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%);">Beverages</h3>
                 <p style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">Grab the cup of joy in a world of chaos</p>
             </div>
+            <div class="moodboard-container">
+                <a href="./Html-files/mood_board.html">
+                    <img src="https://th.bing.com/th/id/OIP.eXbt4oi_dZ_vhwSMRkRcHAAAAA?rs=1&pid=ImgDetMain" alt="Vintage Mood Board" class="moodboard-image">
+                </a>
+                <u><a href="./Html-files/mood_board.html" class="moodboard-link">Create Your Mood Board</a></u>
+            </div>
         </div>
     </section>
-
+   
     <section class="section-meals" data-aos="fade-in" data-aos-duration="2000">
         <ul class="meals-showcase clearfix">
             <li>
