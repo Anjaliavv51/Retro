@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RETRO Mood Board</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: 'Times New Roman', serif;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpath fill='%23ffb9b0' d='M486 705.8c-109.3-21.8-223.4-32.2-335.3-19.4C99.5 692.1 49 703 0 719.8V800h843.8c-115.9-33.2-230.8-68.1-347.6-92.2C492.8 707.1 489.4 706.5 486 705.8z'/%3E%3Cpath fill='%23ffc1b7' d='M1600 0H0v719.8c49-16.8 99.5-27.8 150.7-33.5c111.9-12.7 226-2.4 335.3 19.4c3.4 0.7 6.8 1.4 10.2 2c116.8 24 231.7 59 347.6 92.2H1600V0z'/%3E%3Cpath fill='%23ffc8bf' d='M478.4 581c3.2 0.8 6.4 1.7 9.5 2.5c196.2 52.5 388.7 133.5 593.5 176.6c174.2 36.6 349.5 29.2 518.6-10.2V0H0v574.9c52.3-17.6 106.5-27.7 161.1-30.9C268.4 537.4 375.7 554.2 478.4 581z'/%3E%3Cpath fill='%23ffcfc6' d='M0 0v429.4c55.6-18.4 113.5-27.3 171.4-27.7c102.8-0.8 203.2 22.7 299.3 54.5c3 1 5.9 2 8.9 3c183.6 62 365.7 146.1 562.4 192.1c198.8 51.8 403.4 40.8 597.3-14.8V0H0z'/%3E%3Cpath fill='%23FFD6CE' d='M181.8 259.4c98.2 6 191.9 35.2 281.3 72.1c2.8 1.1 5.5 2.3 8.3 3.4c171 71.6 342.7 158.5 531.3 207.7c198.8 51.8 403.4 40.8 597.3-14.8V0H0v283.2C59 263.6 120.6 255.7 181.8 259.4z'/%3E%3Cpath fill='%23ffdcd4' d='M1600 0H0v136.3c62.3-20.9 127.7-27.5 192.2-19.2c93.6 12.1 180.5 47.7 263.3 89.6c2.6 1.3 5.1 2.6 7.7 3.9c158.4 81.1 319.7 170.9 500.3 223.2c210.5 61 430.8 49 636.6-16.6V0z'/%3E%3Cpath fill='%23ffe1d9' d='M454.9 86.3C600.7 177 751.6 269.3 924.1 325c208.6 67.4 431.3 60.8 637.9-5.3c12.8-4.1 25.4-8.4 38.1-12.9V0H288.1c56 21.3 108.7 50.6 159.7 82C450.2 83.4 452.5 84.9 454.9 86.3z'/%3E%3Cpath fill='%23ffe6df' d='M1600 0H498c118.1 85.8 243.5 164.5 386.8 216.2c191.8 69.2 400 74.7 595 21.1c40.8-11.2 81.1-25.2 120.3-41.7V0z'/%3E%3Cpath fill='%23ffebe4' d='M1397.5 154.8c47.2-10.6 93.6-25.3 138.6-43.8c21.7-8.9 43-18.8 63.9-29.5V0H643.4c62.9 41.7 129.7 78.2 202.1 107.4C1020.4 178.1 1214.2 196.1 1397.5 154.8z'/%3E%3Cpath fill='%23FFF0EA' d='M1315.3 72.4c75.3-12.6 148.9-37.1 216.8-72.4h-723C966.8 71 1144.7 101 1315.3 72.4z'/%3E%3C/g%3E%3C/svg%3E");
+        background-size: cover;
+        padding: 2rem;
+      }
+      .header {
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+      .header h1 {
+        font-size: 2.5rem;
+        color: #8b3a3a;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+      }
+      .controls {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-bottom: 2rem;
+      }
+      .btn {
+        background-color: #d97706;
+        color: white;
+        border: none;
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        cursor: pointer;
+      }
+      .btn:hover {
+        background-color: #b45309;
+      }
+      .mood-board {
+        background-color: white;
+        min-height: 600px;
+        border-radius: 1rem;
+        padding: 2rem;
+        position: relative;
+        width: 90%;
+        margin: auto;
+        border: 2px dashed #ccc;
+      }
+      .board-item {
+        position: absolute;
+        cursor: move;
+        transform: translate(-50%, -50%);
+      }
+      .board-item img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 0.5rem;
+      }
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h1>RETRO Mood Board Creator</h1>
+      <div class="controls">
+        <input type="file" id="imageInput" class="hidden" accept="image/*" />
+        <button
+          class="btn"
+          onclick="document.getElementById('imageInput').click()"
+        >
+          Add Image
+        </button>
+        <button class="btn" onclick="saveBoard()">Save Board</button>
+        <button class="btn" onclick="shareBoard()">Share</button>
+      </div>
+    </div>
+
+    <div class="mood-board" id="moodBoard"></div>
+
+    <script>
+      let board = document.getElementById('moodBoard');
+
+      // Handle Image Upload
+      document
+        .getElementById('imageInput')
+        .addEventListener('change', function (event) {
+          const file = event.target.files[0];
+          if (file && file.type.startsWith('image/')) {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+              addImageToBoard(e.target.result);
+            };
+            reader.readAsDataURL(file);
+          } else {
+            alert('Please select a valid image.');
+          }
+        });
+
+      // Add Image to Mood Board
+      function addImageToBoard(imageSrc) {
+        let imgElement = document.createElement('img');
+        imgElement.src = imageSrc;
+        imgElement.className = 'board-item';
+        imgElement.style.left = '50%';
+        imgElement.style.top = '50%';
+
+        let isDragging = false;
+        let offsetX, offsetY;
+
+        imgElement.addEventListener('mousedown', e => {
+          isDragging = true;
+          // Calculate offset between mouse click and image position
+          offsetX = e.clientX - imgElement.getBoundingClientRect().left;
+          offsetY = e.clientY - imgElement.getBoundingClientRect().top;
+
+          imgElement.style.zIndex = '1000'; // Bring to front while dragging
+        });
+
+        document.addEventListener('mousemove', e => {
+          if (isDragging) {
+            // Update image position based on mouse move
+            const x = e.clientX - offsetX;
+            const y = e.clientY - offsetY;
+            imgElement.style.left = `${x}px`;
+            imgElement.style.top = `${y}px`;
+          }
+        });
+
+        document.addEventListener('mouseup', () => {
+          isDragging = false;
+          imgElement.style.zIndex = ''; // Reset the z-index after dragging
+        });
+
+        // Append image to the board
+        board.appendChild(imgElement);
+      }
+
+      // Save Mood Board as Image
+      function saveBoard() {
+        html2canvas(board).then(canvas => {
+          let link = document.createElement('a');
+          link.download = 'mood-board.png';
+          link.href = canvas.toDataURL('image/png');
+          link.click();
+        });
+      }
+
+      function shareBoard() {
+        html2canvas(board).then(canvas => {
+          canvas.toBlob(blob => {
+            let url = URL.createObjectURL(blob);
+
+            // Create a temporary download link for downloading the mood board image
+            let a = document.createElement('a');
+            a.href = url;
+            a.download = 'moodboard.png';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+
+            // Create the popup container for share options
+            const popupContainer = document.createElement('div');
+            popupContainer.style.position = 'fixed';
+            popupContainer.style.top = '0';
+            popupContainer.style.left = '0';
+            popupContainer.style.width = '100%';
+            popupContainer.style.height = '100%';
+            popupContainer.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
+            popupContainer.style.display = 'flex';
+            popupContainer.style.justifyContent = 'center';
+            popupContainer.style.alignItems = 'center';
+            popupContainer.style.zIndex = '1000';
+
+            // Create the popup box
+            const popupBox = document.createElement('div');
+            popupBox.style.backgroundColor = '#fff';
+            popupBox.style.padding = '2rem';
+            popupBox.style.borderRadius = '0.5rem';
+            popupBox.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.2)';
+            popupBox.style.textAlign = 'center';
+            popupBox.style.maxWidth = '400px';
+            popupBox.style.width = '100%';
+
+            // Create the title
+            const title = document.createElement('h2');
+            title.textContent = 'Share Your Mood Board';
+            title.style.marginBottom = '1.5rem';
+            title.style.fontSize = '1.5rem';
+            title.style.color = '#333';
+
+            // WhatsApp Share Button
+            const whatsappButton = document.createElement('button');
+            whatsappButton.textContent = 'Share via WhatsApp';
+            whatsappButton.style.padding = '0.8rem 1.5rem';
+            whatsappButton.style.backgroundColor = '#25D366';
+            whatsappButton.style.color = '#fff';
+            whatsappButton.style.border = 'none';
+            whatsappButton.style.borderRadius = '0.5rem';
+            whatsappButton.style.cursor = 'pointer';
+            whatsappButton.style.marginBottom = '1rem';
+            whatsappButton.style.fontSize = '1rem';
+            whatsappButton.onclick = () => {
+              let whatsappUrl = `https://api.whatsapp.com/send?text=Check out my Mood Board! ${url}`;
+              window.open(whatsappUrl, '_blank');
+              document.body.removeChild(popupContainer); // Close the popup after sharing
+            };
+
+            // Instagram Share Button
+            const instagramButton = document.createElement('button');
+            instagramButton.textContent = 'Share via Instagram';
+            instagramButton.style.padding = '0.8rem 1.5rem';
+            instagramButton.style.backgroundColor = '#E4405F';
+            instagramButton.style.color = '#fff';
+            instagramButton.style.border = 'none';
+            instagramButton.style.borderRadius = '0.5rem';
+            instagramButton.style.cursor = 'pointer';
+            instagramButton.style.marginBottom = '1rem';
+            instagramButton.style.fontSize = '1rem';
+            instagramButton.onclick = () => {
+              let instagramLoginUrl =
+                'https://www.instagram.com/accounts/login/';
+              window.open(instagramLoginUrl, '_blank');
+              document.body.removeChild(popupContainer); // Close the popup after sharing
+            };
+
+            // Close Button
+            const closeButton = document.createElement('button');
+            closeButton.textContent = 'Close';
+            closeButton.style.padding = '0.5rem 1rem';
+            closeButton.style.backgroundColor = '#ccc';
+            closeButton.style.color = '#333';
+            closeButton.style.border = 'none';
+            closeButton.style.borderRadius = '0.5rem';
+            closeButton.style.cursor = 'pointer';
+            closeButton.onclick = () => {
+              document.body.removeChild(popupContainer); // Close the popup
+            };
+
+            // Append elements to the popup
+            popupBox.appendChild(title);
+            popupBox.appendChild(whatsappButton);
+            popupBox.appendChild(instagramButton);
+            popupBox.appendChild(closeButton);
+
+            // Append the popup to the container
+            popupContainer.appendChild(popupBox);
+
+            // Append the container to the body
+            document.body.appendChild(popupContainer);
+          }, 'image/png');
+        });
+      }
+    </script>
+  </body>
+</html>
