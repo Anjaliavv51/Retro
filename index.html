@@ -498,7 +498,38 @@ p {
     </style>
 <script>
 
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.querySelector('.navbar-toggler');
+    const navLinks = document.querySelectorAll('.nav-link');
+    const body = document.body;
+    const navbarCollapse = document.querySelector('.navbar-collapse');
+    
+    // Existing hamburger click handler
+    hamburger.addEventListener('click', function() {
+        if (this.getAttribute('aria-expanded') === 'true') {
+            body.classList.add('menu-open');
+        } else {
+            body.classList.remove('menu-open');
+        }
+    });
 
+    // Add click handler for nav links
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            if (navbarCollapse.classList.contains('show')) {
+                hamburger.click(); // Simulate click on hamburger to close menu
+            }
+        });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', function(e) {
+        const navbar = document.querySelector('.navbar');
+        if (!navbar.contains(e.target) && navbarCollapse.classList.contains('show')) {
+            hamburger.click();
+        }
+    });
+    });
 </script>
     <!--Navbar End-->
 
