@@ -1,7 +1,7 @@
-const userModel = require("../model/userSchema.js");
-const bcrypt = require("bcrypt");
+const userModel = require('../model/userSchema.js');
+const bcrypt = require('bcrypt');
 
-const emailValidator = require("email-validator");
+const emailValidator = require('email-validator');
 
 /******************************************************
  * @SIGNUP
@@ -14,12 +14,12 @@ const emailValidator = require("email-validator");
 
 const signUp = async (req, res, next) => {
   const { name, email, password, confirmPassword } = req.body;
-console.log(name , email,password,confirmPassword)
+  // console.log(name, email, password, confirmPassword);
   /// every field is required
   if (!name || !email || !password || !confirmPassword) {
     return res.status(400).json({
       success: false,
-      message: "Every field is required"
+      message: 'Every field is required',
     });
   }
 
@@ -28,7 +28,7 @@ console.log(name , email,password,confirmPassword)
   if (!validEmail) {
     return res.status(400).json({
       success: false,
-      message: "Please provide a valid email address 📩"
+      message: 'Please provide a valid email address 📩',
     });
   }
 
@@ -37,7 +37,7 @@ console.log(name , email,password,confirmPassword)
     if (password !== confirmPassword) {
       return res.status(400).json({
         success: false,
-        message: "password and confirm Password does not match ❌"
+        message: 'password and confirm Password does not match ❌',
       });
     }
 
@@ -48,19 +48,20 @@ console.log(name , email,password,confirmPassword)
     const result = await userInfo.save();
     return res.status(200).json({
       success: true,
-      data: result
+      message: 'Registered successfully',
+      data: result,
     });
   } catch (error) {
     /// send the message of the email is not unique.
     if (error.code === 11000) {
       return res.status(400).json({
         success: false,
-        message: `Account already exist with the provided email ${email} 😒`
+        message: `Account already exist with the provided email ${email} 😒`,
       });
     }
 
     return res.status(400).json({
-      message: error.message
+      message: error.message,
     });
   }
 };
@@ -76,13 +77,13 @@ console.log(name , email,password,confirmPassword)
 
 const signIn = async (req, res, next) => {
   const { email, password } = req.body;
-  console.log(email,password)
+  // console.log(email,password)
 
   // send response with error message if email or password is missing
   if (!email || !password) {
     return res.status(400).json({
       success: false,
-      message: "email and password are required"
+      message: 'email and password are required',
     });
   }
 
@@ -90,16 +91,16 @@ const signIn = async (req, res, next) => {
     // check user exist or not
     const user = await userModel
       .findOne({
-        email
+        email,
       })
-      .select("+password");
+      .select('+password');
 
     // If user is null or the password is incorrect return response with error message
     if (!user || !(await bcrypt.compare(password, user.password))) {
       // bcrypt.compare returns boolean value
       return res.status(400).json({
         success: false,
-        message: "invalid credentials"
+        message: 'invalid credentials',
       });
     }
 
@@ -108,24 +109,25 @@ const signIn = async (req, res, next) => {
     user.password = undefined;
 
     const cookieOption = {
-      secure:true,
+      secure: true,
       maxAge: 24 * 60 * 60 * 1000, //24hr
-      httpOnly: true //  not able to modify  the cookie in client side
+      httpOnly: true, //  not able to modify  the cookie in client side
     };
 
-    res.cookie("token", token, cookieOption);
+    res.cookie('token', token, cookieOption);
     res.status(200).json({
       success: true,
-      data: user
+      message: 'Login successful',
+      data: user,
+      token,
     });
   } catch (error) {
     return res.status(400).json({
       success: false,
-      message: error.message
+      message: error.message,
     });
   }
 };
-
 
 /******************************************************
  * @LOGOUT
@@ -139,19 +141,22 @@ const logout = async (req, res, next) => {
   try {
     const cookieOption = {
       expires: new Date(Date.now()), // current expiry date
-      httpOnly: true //  not able to modify  the cookie in client side
+      httpOnly: true, // cookie cannot be modified in client-side JS
+      secure: process.env.NODE_ENV === 'production', // secure cookie if in production
+      sameSite: 'None', // allows cross-site cookie sharing if needed
     };
 
-    // return response with cookie without token
-    res.cookie("token", null, cookieOption);
-    res.status(200).json({
+    // Remove the token from the cookie by setting it to null
+    res.cookie('token', null, cookieOption);
+
+    return res.status(200).json({
       success: true,
-      message: "Logged Out"
+      message: 'Logged out successfully',
     });
   } catch (error) {
-    res.stats(400).json({
+    res.status(400).json({
       success: false,
-      message: error.message
+      message: error.message,
     });
   }
 };
@@ -165,17 +170,28 @@ const logout = async (req, res, next) => {
  ******************************************************/
 
 const getUser = async (req, res, next) => {
-  const userId = req.user.id;
   try {
+    // Assuming that `req.user.id` has been set in the jwtAuth middleware
+    const userId = req.user.id;
+
+    // Find the user by ID from the database (ensure you're using the correct model)
     const user = await userModel.findById(userId);
+
+    if (!user) {
+      return res.status(404).json({
+        success: false,
+        message: 'User not found',
+      });
+    }
+
     return res.status(200).json({
       success: true,
-      data: user
+      data: user,
     });
   } catch (error) {
     return res.status(400).json({
       success: false,
-      message: error.message
+      message: error.message,
     });
   }
 };
@@ -183,8 +199,6 @@ const getUser = async (req, res, next) => {
 module.exports = {
   signUp,
   signIn,
- 
   getUser,
-  
-  logout
+  logout,
 };

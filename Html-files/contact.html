@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+ 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,6 +33,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
+
+    <link rel="stylesheet" href="/dark-mode/dark-mode.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
@@ -584,7 +586,7 @@ body{
 
     <div class="head_container" style="background-color: transparent; font-family: var(--ff-philosopher);">
         <header>
-            <nav class="navbar navbar-expand-lg fixed-top">
+            <nav style="position: relative;" class="navbar navbar-expand-lg fixed-top">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="../index.html" style="color: black;">
                         <b>Retro</b>
@@ -617,6 +619,10 @@ body{
                             </li>
                         </ul>
                     </div>
+                    <button id="darkModeToggle" class="btn btn-secondary" style="margin-left: 10px;">
+                        <i class="fas fa-sun" id="toggleIcon" style="font-size: 20px;"></i>
+                        <span id="toggleText">Light Mode</span>
+                    </button>
                 </div>
             </nav>
         </header>
@@ -839,7 +845,7 @@ body{
 
 
             <div class="foot_panel4" style="background-color: transparent;">
-                <form id="contactForm">
+                <!-- <form id="contactForm">
                     <h3 style="font-family: var(--ff-philosopher); color: hsl(357, 82%, 35%);">Contact Us!</h3>
                 
                     <div style="position: relative; margin-bottom: 15px; width: 50%;">
@@ -855,7 +861,7 @@ body{
                     </div>
                 
                     <button id="butt" type="submit" style="font-family: ui-serif;">Send Message</button>
-                </form>
+                </form> -->
                 <div class="pages">
                     <h4 style="font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%);">Follow Us</h4>
 
@@ -871,11 +877,18 @@ body{
                     </div>
                     <p style="font-family: var(--ff-philosopher);background-color: hsl(20, 43%, 93%);color: hsl(203, 30%, 26%);margin-bottom:0;">Stay connected with us on social media for the latest updates, latest collection, and vintage adventures.
                     </p>
-                    <div class="copyright" style="font-family: var(--ff-philosopher);background-color: hsl(20, 43%, 93%);color: black;">
-
-                        &copy; 2024 Retro . All Rights Reserved. | Developed by <span id="author">
+                    <div class="copyright" style="font-family: var(--ff-philosopher); background-color: hsl(20, 43%, 93%); color: black;">
+                        &copy; <span id="currentYear"></span> Retro. All Rights Reserved. | Developed by 
+                        <span id="author">
                             <a href="https://www.linkedin.com" target="_blank" style="text-decoration: none;">Retro Team</a>
+                        </span>
                     </div>
+                    
+                    <script>
+                        // JavaScript to dynamically set the current year
+                        document.getElementById("currentYear").textContent = new Date().getFullYear();
+                    </script>
+                    
                     <div>
                         <button id="sr" style="z-index: 1000; display: block;">
                         <div class="circle1">
@@ -1032,6 +1045,7 @@ document.querySelector(".Home h1").style.opacity = (200 - scrollY) / 200;
 </script>
     
     <script src="cart.js"></script>
+    <script src="/dark-mode/dark-mode.js"></script>
     
     
 

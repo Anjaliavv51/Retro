@@ -27,6 +27,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet">
+  <link rel="stylesheet" href="/dark-mode/dark-mode.css">
   <style>
     /*Preloader CSS*/
 #preloader {
@@ -401,6 +402,10 @@ border-radius: 4px;
               </li>
             </ul>
           </div>
+          <button id="darkModeToggle" class="btn btn-secondary" style="margin-left: 10px;">
+            <i class="fas fa-sun" id="toggleIcon" style="font-size: 20px;"></i>
+            <span id="toggleText">Light Mode</span>
+        </button>
         </div>
       </nav>
     </header>
@@ -530,12 +535,19 @@ border-radius: 4px;
         <p style="margin-bottom:0;font-family: var(--ff-philosopher);">Stay connected with us on social media for the
           latest updates, latest collection, and vintage adventures.
         </p>
-        <div class="copyright" style="color: hsl(203, 30%,26%);font-family: var(--ff-philosopher);">
-          © 2024 Retro . All Rights Reserved. | <span id="author">
-            <a href="https://www.linkedin.com" target="_blank" style="text-decoration: none;">Retro Team</a>
+        <div class="copyright" style="color: hsl(203, 30%,26%); font-family: var(--ff-philosopher);">
+          &copy; <span id="currentYear"></span> Retro. All Rights Reserved. | 
+          <span id="author">
+              <a href="https://www.linkedin.com" target="_blank" style="text-decoration: none;">Retro Team</a>
           </span>
           <p></p>
-        </div>
+      </div>
+      
+      <script>
+          // JavaScript to dynamically set the current year
+          document.getElementById("currentYear").textContent = new Date().getFullYear();
+      </script>
+      
         <div>
           <button id="sr" style="z-index: 1000;">
             <div class="circle1">
@@ -677,6 +689,7 @@ border-radius: 4px;
 <div class="gtranslate_wrapper"></div>
 <script>window.gtranslateSettings = {"default_language":"en","detect_browser_language":true,"wrapper_selector":".gtranslate_wrapper"}</script>
 <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+<script src="/dark-mode/dark-mode.js"></script>
 </body>
 
 </html>

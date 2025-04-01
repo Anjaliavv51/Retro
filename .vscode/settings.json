@@ -1,3 +1,5 @@
 {
-  "liveServer.settings.port": 5504
+  "liveServer.settings.port": 5504,
+  "IDX.aI.enableInlineCompletion": true,
+  "IDX.aI.enableCodebaseIndexing": true
 }

@@ -1,24 +1,31 @@
-const JWT = require("jsonwebtoken");
+const JWT = require('jsonwebtoken');
 
-// router level middleware function
+// Middleware to check for a valid JWT token
 const jwtAuth = (req, res, next) => {
-  
-  // get cookie token(jwt token generated using json.sign()) form the request
-  const token = ( req.cookies?.token) || null;
+  // Check if the token is in the cookies or the Authorization header
+  const token = req.cookies?.token || req.headers?.authorization?.split(' ')[1]; // Bearer <token>
 
-  // return response if there is no token(jwt token attached with cookie)
   if (!token) {
-    return res.status(400).json({ success: false, message: "NOT authorized" });
+    return res.status(400).json({
+      success: false,
+      message: 'Not authorized, no token provided',
+    });
   }
 
-  // verify the token
   try {
+    // Verify the token using the secret key
     const payload = JWT.verify(token, process.env.SECRET);
+
+    // Attach the payload data to the request object (i.e., user data)
     req.user = { id: payload.id, email: payload.email };
+
+    next();
   } catch (error) {
-    return res.status(400).json({ success: false, message: error.message });
+    return res.status(400).json({
+      success: false,
+      message: 'Token verification failed: ' + error.message,
+    });
   }
-  next();
 };
 
 module.exports = jwtAuth;

@@ -180,8 +180,12 @@
         </section>
     </div>
     <footer>
-        <p>&copy; 2024 Retro. All rights reserved.</p>
+        <p>&copy; <span id="currentYear"></span> Retro. All Rights Reserved.</p>
     </footer>
+    <script>
+        // Get the current year and update the span element
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+      </script>
     <script>
         window.embeddedChatbotConfig = {
         chatbotId: "dGlQ5bP-F7GodLWzgrVAx",

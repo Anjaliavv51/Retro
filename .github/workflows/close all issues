@@ -1,0 +1,32 @@
+name: Close All Open Issues
+
+on:
+  workflow_dispatch:
+
+jobs:
+  close_issues:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Close open issues
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const { owner, repo } = context.repo;
+            const issues = await github.rest.issues.listForRepo({
+              owner,
+              repo,
+              state: 'open' // Only fetch open issues
+            });
+            for (const issue of issues.data) {
+              await github.rest.issues.update({
+                owner,
+                repo,
+                issue_number: issue.number,
+                state: 'closed'
+              });
+              console.log(`Issue #${issue.number} closed.`);
+            }

@@ -1094,16 +1094,21 @@
         </p>
         <div class="copyright">
           <p style="font-family: var(--ff-philosopher); color: white">
-            &copy; 2024 Retro . All Rights Reserved. |
+            &copy; <span id="currentYear"></span> Retro. All Rights Reserved. |
             <span id="author">
-              <a
-                href="https://www.linkedin.com"
-                target="_blank"
-                style="text-decoration: none; color: white"
-                >Retro Team</a
-              >
+                <a
+                    href="https://www.linkedin.com"
+                    target="_blank"
+                    style="text-decoration: none; color: white"
+                >Retro Team</a>
             </span>
-          </p>
+        </p>
+        
+        <script>
+            // JavaScript to dynamically set the current year
+            document.getElementById("currentYear").textContent = new Date().getFullYear();
+        </script>
+        
         </div>
         <div>
           <button id="sr" style="z-index: 1000">
