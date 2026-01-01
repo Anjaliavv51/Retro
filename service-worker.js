@@ -1,76 +1,57 @@
-﻿const CACHE_NAME = 'retro-vintage-cache-v2026.11.08';
-const urlsToCache = [
+const CACHE_NAME = 'retro-vintage-cache-v2026.01.01';
+const ASSETS_TO_CACHE = [
   '/',
   '/index.html',
-  '/css/style.css',
-  '/css/rag-search.css',
-  '/js/rag-search.js',
+  '/html/about.html',
+  '/html/menu.html',
+  '/html/contact.html',
+  '/html/services.html',
+  '/html/blog.html',
+  '/html/reviews.html',
+  '/html/cart.html',
+  '/html/museums.html',
+  '/html/login.html',
+  '/html/signup.html',
+  '/html/wishlist.html',
+  '/html/feedback.html',
+  '/html/contributor.html',
+  '/html/booknow.html',
+  '/html/Electronic.html',
+  '/html/Coverpage.html',
+  '/html/db-agent.html',
   '/manifest.json',
-  '/image/favicon-192x192.png',
-  '/image/favicon-512x512.png'
-,
-  '/html/db-agent.html'
+  '/css/style.css',
+  '/js/script.js'
 ];
 
-// Install: pre-cache critical assets
 self.addEventListener('install', (event) => {
-  self.skipWaiting();
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
-      return cache.addAll(urlsToCache).catch((err) => {
-        console.warn('[SW] Cache addAll warning:', err);
-      });
+      return cache.addAll(ASSETS_TO_CACHE);
     })
   );
+  self.skipWaiting();
 });
 
-// Activate: clean up old caches immediately
 self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys().then((cacheNames) => {
       return Promise.all(
-        cacheNames.map((cacheName) => {
-          if (cacheName !== CACHE_NAME) {
-            return caches.delete(cacheName);
+        cacheNames.map((cache) => {
+          if (cache !== CACHE_NAME) {
+            return caches.delete(cache);
           }
         })
       );
-    }).then(() => self.clients.claim())
+    })
   );
+  self.clients.claim();
 });
 
-// Fetch: Network-first for HTML pages so users always get the freshest deployment
 self.addEventListener('fetch', (event) => {
-  const isHtml = event.request.mode === 'navigate' || event.request.headers.get('accept')?.includes('text/html');
-
-  if (isHtml) {
-    event.respondWith(
-      fetch(event.request)
-        .then((response) => {
-          if (response && response.status === 200) {
-            const responseClone = response.clone();
-            caches.open(CACHE_NAME).then((cache) => cache.put(event.request, responseClone));
-          }
-          return response;
-        })
-        .catch(() => caches.match(event.request))
-    );
-    return;
-  }
-
-  // Stale-while-revalidate for static assets
   event.respondWith(
-    caches.match(event.request).then((cachedResponse) => {
-      const fetchPromise = fetch(event.request).then((networkResponse) => {
-        if (networkResponse && networkResponse.status === 200) {
-          const responseClone = networkResponse.clone();
-          caches.open(CACHE_NAME).then((cache) => cache.put(event.request, responseClone));
-        }
-        return networkResponse;
-      }).catch(() => cachedResponse);
-
-      return cachedResponse || fetchPromise;
+    caches.match(event.request).then((response) => {
+      return response || fetch(event.request);
     })
   );
 });
-
