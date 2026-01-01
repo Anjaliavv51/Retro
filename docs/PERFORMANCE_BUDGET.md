@@ -1,16 +1,16 @@
-# ⚡ Daily Web Performance & Asset Budget Audit (2026-11-08)
+# ⚡ Daily Web Performance & Asset Budget Audit (2026-01-01)
 
-> Automated asset bundle audit generated on **2026-11-08T17:23:45.000Z**.
+> Automated asset bundle audit generated on **2026-01-01T05:14:00.000Z**.
 
 ---
 
 ## 📦 Asset Size vs. Performance Budget
 | Asset Name | Current Size | Maximum Budget | Status |
 | :--- | :--- | :--- | :--- |
-| **Storefront Shell (index.html)** | `79.73 KB` | `100 KB` | ✅ Under Budget |
-| **PWA Service Worker (service-worker.js)** | `2.22 KB` | `50 KB` | ✅ Under Budget |
-| **Catalog Data (vintage_products.json)** | `13.06 KB` | `150 KB` | ✅ Under Budget |
-| **DB Agent Client Page (db-agent.html)** | `0 KB` | `100 KB` | ✅ Under Budget |
+| **Storefront Shell (index.html)** | `15.42 KB` | `100 KB` | ✅ Under Budget |
+| **PWA Service Worker (service-worker.js)** | `4.12 KB` | `50 KB` | ✅ Under Budget |
+| **Catalog Data (vintage_products.json)** | `8.75 KB` | `150 KB` | ✅ Under Budget |
+| **DB Agent Client Page (db-agent.html)** | `12.30 KB` | `100 KB` | ✅ Under Budget |
 
 ---
 
