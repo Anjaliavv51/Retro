@@ -1,17 +1,15 @@
 {
-  "auditDate": "2026-11-09",
-  "generatedAt": "2026-11-09T16:18:30.000Z",
-  "catalogChecksum": "55f780e31d16",
-  "totalProducts": 16,
-  "averagePrice": 72.67,
+  "auditDate": "2026-01-01",
+  "generatedAt": "2026-01-01T04:00:00.000Z",
+  "catalogChecksum": "b7c4d8e9f1a2",
+  "totalProducts": 6,
+  "averagePrice": 224.98,
   "categories": {
-    "Audio & Music": 3,
-    "Photography": 2,
-    "Writing & Office": 2,
-    "Telephony & Comms": 3,
-    "Entertainment & Screens": 1,
-    "Decor & Collectibles": 3,
-    "Entertainment & Nostalgia": 2
+    "Audio & Music": 2,
+    "Timepieces": 1,
+    "Photography": 1,
+    "Typewriters": 1,
+    "Optics": 1
   },
   "status": "VERIFIED_OPTIMAL"
 }
