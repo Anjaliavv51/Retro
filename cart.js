@@ -7,7 +7,7 @@ function addItemToCart() {
 const addToCart = function(name, price){
     let cartItems = localStorage.getItem('cartItems');
     cartItems = cartItems ? JSON.parse(cartItems) : [];
-    if(name==null && price==null) return;
+    if(name == null || price == null) return;
     const existingItem = cartItems.find(item => item.name === name);
     if (!existingItem) {
         cartItems.push({ name, price });
@@ -17,7 +17,6 @@ const addToCart = function(name, price){
 
     updateCartDisplay();
     calculateBill();
-    
 }
 
 const updateCartDisplay = function() {
@@ -39,63 +38,32 @@ const updateCartDisplay = function() {
     });
 }
 
-
-// calculate total bill amount
 let total = 0;
-const calculateBill = ()=>{
-    itemPrices = document.querySelectorAll(".price");
-    for (p of itemPrices){
-        if (p!=null){
-            console.log(p.innerText);
-            total += parseFloat(p.innerText.replace('$',''));
+const calculateBill = () => {
+    total = 0;  // Reset total for each calculation
+    const itemPrices = document.querySelectorAll(".price");
+    itemPrices.forEach(p => {
+        if (p) {
+            total += parseFloat(p.innerText.replace('$', ''));
         }
-    }
+    });
 
-    console.log(total);
-    if(total!=0 && !isNaN(total)){
-        document.getElementById("bill").innerText = "$" + total.toFixed(2)
+    if (total !== 0 && !isNaN(total)) {
+        document.getElementById("bill").innerText = "$" + total.toFixed(2);
     }
-    
 }
 
 document.addEventListener('DOMContentLoaded', function () {
     addItemToCart();
+    updateCartDisplay();  // Update the display on page load
+    calculateBill();  // Calculate the total on page load
 });
 
-let orderBtn = document.querySelector(".butt");
-orderBtn.addEventListener("click", ()=>{
-    if(total==0){
-       alert("Please add something in the cart to place the order");
-   }
-   else{
-        
-       alert("Order placed!");
-   }
-})
-
-// Prioritizing Image Loading
-<script>
-  // Critical images
-  const criticalImages = document.querySelectorAll('.critical-image');
-
-  // Lazy load other images
-  const lazyImages = document.querySelectorAll('img[data-src]');
-
-  // Load critical images immediately
-  criticalImages.forEach(image => {
-    image.src = image.dataset.src;
-  });
-
-  // Use Intersection Observer for lazy loading
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.src = entry.target.dataset.src;
-        observer.unobserve(entry.target);
-      }
-    });
-  });
-
-  lazyImages.forEach(image => observer.observe(image));
-</script>
-
+const orderBtn = document.querySelector(".butt");
+orderBtn.addEventListener("click", () => {
+    if (total === 0) {
+        alert("Please add something in the cart to place the order");
+    } else {
+        alert("Order placed!");
+    }
+});
