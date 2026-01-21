@@ -565,20 +565,25 @@ td{
   justify-content: center;
   align-items: center;
   height: max-content;
+  position:relative;
+  width: 15rem;
 }
 
 #contactForm input,
 #contactForm textarea {
-  width: 64%;
+  background-color: #ffdaa9;
+  width: 100%;
   padding: 20px;
   font-size: 15px;
   margin: 5px;
   border-radius: 10px;
   border: none;
+  margin-bottom: 15px;
 }
 #contactForm input{
-  width: 76%;
+  width: 100%;
   font-size: 15px;
+  padding-left: 15%;
 }
 
 #contactForm h3 {
@@ -588,8 +593,22 @@ td{
 #contactForm textarea {
   height: 100px;
   resize: none; 
+  padding-left: 15%;
 }
-
+.fa-envelope{
+  position: absolute;
+  top: 21%;
+  left: 5%;
+  font-size: 14px;
+  color: gray;
+}
+.fa-comment{
+  position:absolute;
+  top:47.5%;
+  left:5%;
+  font-size: 14px;
+  color: gray;
+}
 #contactForm button {
   padding: 10px 20px;
   background-color:rgb(196, 74, 74);
