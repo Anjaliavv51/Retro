@@ -190,14 +190,6 @@ If you find a bug, have a feature request, or would like to contribute in any wa
 
 <br>
 
-## Website Preview📸
-<br>
-<img src='./home.png'>
-<img src='./about.png'>
-<img src='./collection.png'>
-
-🌐 **Visit our website:** [Retro](https://rococo-mooncake-0d89f7.netlify.app/)  
-<br>
 
  ## <h2 style="font-size:3rem;">Our Contributors <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Red%20Heart.png" alt="Red Heart" width="40" height="40" /></h2>
   <h3>Thank you for contributing to our repository</h3>
