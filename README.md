@@ -106,6 +106,16 @@ git clone https://github.com/Anjaliavv51/Retro.git
 The frontend is a static application. To run it:
 1. Navigate to the frontend folder (if applicable) or locate the `index.html` file in the project root.
 2. Open the `index.html` file in your browser.
+3. 
+
+## Website Preview📸
+<br>
+<img src='./home.png'>
+<img src='./about.png'>
+<img src='./collection.png'>
+
+🌐 **Visit our website:** [Retro](https://rococo-mooncake-0d89f7.netlify.app/)  
+<br>
 
 
 ## 3. Run the Backend
