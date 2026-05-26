@@ -1,6 +1,6 @@
 # 📖 Retro Vintage E-Commerce API Reference
 
-> Last synchronized with production routes: **2026-05-26** (2026-05-26T15:31:56.000Z)
+> Last synchronized with production routes: **2026-05-26** (2026-05-26T17:41:41.000Z)
 
 ---
 
