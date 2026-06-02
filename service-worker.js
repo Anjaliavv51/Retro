@@ -1,4 +1,4 @@
-const CACHE_NAME = 'retro-vintage-cache-v2026.06.01';
+const CACHE_NAME = 'retro-vintage-cache-v2026.06.02';
 const ASSETS_TO_CACHE = [
   '/',
   '/index.html',
