@@ -103,6 +103,10 @@ body.dark-mode {
     color: #61dafb !important; 
 }
 
+.dark-mode .navbar-toggler-icon {
+    filter: invert(1);
+}
+
 
 /* popup */
 
@@ -153,6 +157,10 @@ body.dark-mode {
 /* about -> box */
 .dark-mode p{
     color: white;
+}
+
+.dark-mode .h-primary{
+    color: white !important;
 }
 
 .dark-mode .h-secondary{
@@ -212,6 +220,18 @@ body.dark-mode {
     background-color: #110702;
 }
 
+.dark-mode .faq-item{
+    background-color: #32241d !important;
+}
+
+.dark-mode .faq-question{
+    color: white !important;
+}
+
+.dark-mode .faq-answer{
+    color: #b0b0b0 !important;
+}
+
 
 /* footer */
 
@@ -257,10 +277,41 @@ body.dark-mode {
     color: white !important;
 }
 
+.dark-mode .fa-youtube:hover{
+    color: #FF0000 !important;
+}
+
+.dark-mode .fa-snapchat:hover{
+    color: #FFFC00 !important;
+}
+
+.dark-mode .fa-facebook:hover{
+    color: #3B5998 !important;
+}
+
+.dark-mode .fa-instagram:hover{
+    color: #D62976 !important;
+}
+
+.dark-mode .fa-x-twitter:hover{
+    color: #181e20 !important;
+}
+
 .dark-mode .footer-button{
     background-color: #110702 !important;
 }
 
+.dark-mode .foot-panel2 input,
+.dark-mode .foot-panel2 textarea {
+    background-color: #343a40 !important;
+    color: white !important;
+    border: 1px solid #555 !important;
+}
+
+.dark-mode .foot-panel2 #butt {
+    background-color: brown !important;
+    color: white !important;
+}
 
 
 /* copyright */
