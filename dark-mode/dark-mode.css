@@ -167,6 +167,30 @@ body.dark-mode {
     color: #b0b0b0;
 }
 
+.dark-mode .retro-heading {
+    color: #f0e6d3 !important;
+}
+
+.dark-mode #openButton {
+    background-color: #5d3a1a !important;
+    color: white !important;
+    border-color: #8b5e3c !important;
+}
+
+.dark-mode #marque h1 {
+    background: #5e6262 !important;
+    -webkit-text-fill-color: #f0e6d3 !important;
+}
+
+.dark-mode .about_us .box {
+    background-color: #2a2a2a !important;
+    border-color: #555 !important;
+}
+
+.dark-mode .about_us .box p {
+    color: #ccc !important;
+}
+
 /* service */
 
 .dark-mode #service{
