@@ -1109,3 +1109,8 @@ padding-left:2px;
   width: 60%;
 }
 
+
+html { scroll-behavior: smooth; }
+*:focus-visible { outline: 2px solid #6366f1; outline-offset: 2px; border-radius: 4px; }
+.skeleton { background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%); background-size: 200% 100%; animation: shimmer 1.5s infinite; border-radius: 8px; }
+@keyframes shimmer { 0% { background-position: -200% 0; } 100% { background-position: 200% 0; } }
