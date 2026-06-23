@@ -319,22 +319,7 @@ body.dark-mode {
     background-color: transparent !important;
 }
 
-.dark-mode #abouthtml{
-    background-color: #110702;
-}
-.dark-mode #abouthtml h3{
-    color: #beba9d !important;
-}
-.dark-mode #abouthtml a{
-    color: white !important;
-}
-.dark-mode #abouthtml p{
-    color: white !important;
-}
 
-.dark-mode .abouthtml a{
-    color: #007bff !important;
-}
 
 
 
@@ -350,7 +335,37 @@ body.dark-mode {
     background-color: #110702;
 }
 
+.dark-mode .menu_container h2{
+    color: #beba9d !important;
+}
+
+.dark-mode .menu_container .butt{
+    background-color: #5a3d2b !important;
+    color: white !important;
+}
+
+.dark-mode .menu_container .items p{
+    color: #b0b0b0 !important;
+}
+
+.dark-mode .menu_container .items h3{
+    color: white !important;
+}
+
+.dark-mode .wishBtn{
+    background-color: #8b3a3a !important;
+    color: white !important;
+}
+
+.dark-mode .star-button{
+    color: #b0b0b0 !important;
+}
+
 .dark-mode footer{
+    background-color: #110702 !important;
+}
+
+.dark-mode .head_container{
     background-color: #110702 !important;
 }
 
