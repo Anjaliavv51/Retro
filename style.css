@@ -42,6 +42,10 @@ body {
 */
 
 
+body {
+  padding-top: 80px;
+}
+
 .navbar.fixed-top {
   position: fixed; 
   top: 0;
@@ -531,6 +535,8 @@ body {
 /* .footer {
     background-color:  rgb(224, 224, 252);;
     height: 700px;
+    clear: both;
+    overflow: hidden;
 } */
 
 /* .footer .container {
@@ -676,6 +682,11 @@ textarea {
 
 #butt:hover {
   background-color: rgb(196, 89, 89);
+}
+
+.footer {
+    clear: both;
+    overflow: hidden;
 }
 
 .social-icons a {
