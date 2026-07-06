@@ -182,3 +182,84 @@ body {
   pointer-events: none; /* Prevent interactions */
   opacity: 0.6; /* Slightly fade the button */
 }
+
+@media screen and (max-width: 768px) {
+  body {
+    overflow-y: auto;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .main-login {
+    flex-direction: column;
+    gap: 1rem;
+    height: auto;
+    padding: 80px 20px 20px;
+  }
+
+  .left-login {
+    width: 100%;
+    height: auto;
+    padding: 20px 0;
+  }
+
+  .left-login .area {
+    width: 300px;
+    height: 300px;
+  }
+
+  .left-login .area .box span {
+    font-size: 30px;
+  }
+
+  .right-login {
+    width: 100%;
+    height: auto;
+    padding: 20px 0;
+  }
+
+  .card-login {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .card-login > h1 {
+    font-size: 5vw;
+  }
+
+  .textfield > input {
+    width: 90%;
+  }
+
+  .home-btn {
+    top: 16px;
+    left: 16px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .left-login .area {
+    width: 240px;
+    height: 240px;
+  }
+
+  .left-login .area .box span {
+    font-size: 22px;
+  }
+
+  .card-login {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .textfield > input {
+    width: 88%;
+    height: 40px;
+  }
+
+  .btn-login,
+  #google-login {
+    height: 40px;
+    font-size: 14px;
+  }
+}
