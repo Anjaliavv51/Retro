@@ -241,3 +241,4 @@ This project is licensed under the MIT License. For more details, see the [LICEN
 <h3 style="font-size:2rem;">
 If you find this project helpful, please consider giving it a star! <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/tarikul-islam-anik/main/assets/images/Star.png" width="30" height="30"></p>
 </center>
+# TODO: adding a project structure map
