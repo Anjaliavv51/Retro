@@ -103,6 +103,10 @@ body.dark-mode {
     color: #61dafb !important; 
 }
 
+.dark-mode .navbar-toggler-icon {
+    filter: invert(1);
+}
+
 
 /* popup */
 
@@ -155,8 +159,36 @@ body.dark-mode {
     color: white;
 }
 
+.dark-mode .h-primary{
+    color: white !important;
+}
+
 .dark-mode .h-secondary{
     color: #b0b0b0;
+}
+
+.dark-mode .retro-heading {
+    color: #f0e6d3 !important;
+}
+
+.dark-mode #openButton {
+    background-color: #5d3a1a !important;
+    color: white !important;
+    border-color: #8b5e3c !important;
+}
+
+.dark-mode #marque h1 {
+    background: #5e6262 !important;
+    -webkit-text-fill-color: #f0e6d3 !important;
+}
+
+.dark-mode .about_us .box {
+    background-color: #2a2a2a !important;
+    border-color: #555 !important;
+}
+
+.dark-mode .about_us .box p {
+    color: #ccc !important;
 }
 
 /* service */
@@ -212,6 +244,18 @@ body.dark-mode {
     background-color: #110702;
 }
 
+.dark-mode .faq-item{
+    background-color: #32241d !important;
+}
+
+.dark-mode .faq-question{
+    color: white !important;
+}
+
+.dark-mode .faq-answer{
+    color: #b0b0b0 !important;
+}
+
 
 /* footer */
 
@@ -257,10 +301,41 @@ body.dark-mode {
     color: white !important;
 }
 
+.dark-mode .fa-youtube:hover{
+    color: #FF0000 !important;
+}
+
+.dark-mode .fa-snapchat:hover{
+    color: #FFFC00 !important;
+}
+
+.dark-mode .fa-facebook:hover{
+    color: #3B5998 !important;
+}
+
+.dark-mode .fa-instagram:hover{
+    color: #D62976 !important;
+}
+
+.dark-mode .fa-x-twitter:hover{
+    color: #181e20 !important;
+}
+
 .dark-mode .footer-button{
     background-color: #110702 !important;
 }
 
+.dark-mode .foot-panel2 input,
+.dark-mode .foot-panel2 textarea {
+    background-color: #343a40 !important;
+    color: white !important;
+    border: 1px solid #555 !important;
+}
+
+.dark-mode .foot-panel2 #butt {
+    background-color: brown !important;
+    color: white !important;
+}
 
 
 /* copyright */
