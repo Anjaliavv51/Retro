@@ -74,7 +74,6 @@ orderBtn.addEventListener("click", ()=>{
 })
 
 // Prioritizing Image Loading
-<script>
   // Critical images
   const criticalImages = document.querySelectorAll('.critical-image');
 
@@ -97,5 +96,4 @@ orderBtn.addEventListener("click", ()=>{
   });
 
   lazyImages.forEach(image => observer.observe(image));
-</script>
 
