@@ -7,7 +7,7 @@ function addItemToCart() {
 const addToCart = function(name, price){
     let cartItems = localStorage.getItem('cartItems');
     cartItems = cartItems ? JSON.parse(cartItems) : [];
-    if(name==null && price==null) return;
+    if(name==null || price==null) return;
     const existingItem = cartItems.find(item => item.name === name);
     if (!existingItem) {
         cartItems.push({ name, price });
@@ -62,16 +62,18 @@ document.addEventListener('DOMContentLoaded', function () {
     addItemToCart();
 });
 
-let orderBtn = document.querySelector(".butt");
-orderBtn.addEventListener("click", ()=>{
-    if(total==0){
-       alert("Please add something in the cart to place the order");
-   }
-   else{
-        
-       alert("Order placed!");
-   }
-})
+document.addEventListener('DOMContentLoaded', function () {
+  let orderBtn = document.querySelector(".butt");
+  if (orderBtn) {
+    orderBtn.addEventListener("click", ()=>{
+      if(total==0){
+        alert("Please add something in the cart to place the order");
+      } else {
+        alert("Order placed!");
+      }
+    });
+  }
+});
 
 // Prioritizing Image Loading
 <script>
