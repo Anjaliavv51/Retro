@@ -7,7 +7,7 @@ function addItemToCart() {
 const addToCart = function(name, price){
     let cartItems = localStorage.getItem('cartItems');
     cartItems = cartItems ? JSON.parse(cartItems) : [];
-    if(name==null && price==null) return;
+    if (!name || !price) return;
     const existingItem = cartItems.find(item => item.name === name);
     if (!existingItem) {
         cartItems.push({ name, price });
@@ -43,8 +43,8 @@ const updateCartDisplay = function() {
 // calculate total bill amount
 let total = 0;
 const calculateBill = ()=>{
-    itemPrices = document.querySelectorAll(".price");
-    for (p of itemPrices){
+    const itemPrices = document.querySelectorAll(".price");
+    for (const p of itemPrices){
         if (p!=null){
             console.log(p.innerText);
             total += parseFloat(p.innerText.replace('$',''));
