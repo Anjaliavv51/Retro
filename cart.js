@@ -41,8 +41,8 @@ const updateCartDisplay = function() {
 
 
 // calculate total bill amount
-let total = 0;
 const calculateBill = ()=>{
+    let total = 0;
     itemPrices = document.querySelectorAll(".price");
     for (p of itemPrices){
         if (p!=null){
@@ -63,39 +63,17 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 let orderBtn = document.querySelector(".butt");
-orderBtn.addEventListener("click", ()=>{
-    if(total==0){
+if (orderBtn) {
+  orderBtn.addEventListener("click", ()=>{
+    const billEl = document.getElementById("bill");
+    const billText = billEl ? billEl.innerText.replace('$','') : "0";
+    const currentTotal = parseFloat(billText) || 0;
+    if(currentTotal === 0){
        alert("Please add something in the cart to place the order");
-   }
-   else{
-        
+    }
+    else{
        alert("Order placed!");
-   }
-})
-
-// Prioritizing Image Loading
-<script>
-  // Critical images
-  const criticalImages = document.querySelectorAll('.critical-image');
-
-  // Lazy load other images
-  const lazyImages = document.querySelectorAll('img[data-src]');
-
-  // Load critical images immediately
-  criticalImages.forEach(image => {
-    image.src = image.dataset.src;
+    }
   });
-
-  // Use Intersection Observer for lazy loading
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.src = entry.target.dataset.src;
-        observer.unobserve(entry.target);
-      }
-    });
-  });
-
-  lazyImages.forEach(image => observer.observe(image));
-</script>
+}
 
