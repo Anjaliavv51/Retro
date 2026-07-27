@@ -41,10 +41,10 @@ const updateCartDisplay = function() {
 
 
 // calculate total bill amount
-let total = 0;
 const calculateBill = ()=>{
-    itemPrices = document.querySelectorAll(".price");
-    for (p of itemPrices){
+    const itemPrices = document.querySelectorAll(".price");
+    let total = 0;
+    for (const p of itemPrices){
         if (p!=null){
             console.log(p.innerText);
             total += parseFloat(p.innerText.replace('$',''));
@@ -64,7 +64,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
 let orderBtn = document.querySelector(".butt");
 orderBtn.addEventListener("click", ()=>{
-    if(total==0){
+    const totalText = document.getElementById("bill").innerText;
+    const totalVal = parseFloat(totalText.replace('$',''));
+    if(!totalVal || totalVal==0){
        alert("Please add something in the cart to place the order");
    }
    else{
@@ -74,28 +76,26 @@ orderBtn.addEventListener("click", ()=>{
 })
 
 // Prioritizing Image Loading
-<script>
-  // Critical images
-  const criticalImages = document.querySelectorAll('.critical-image');
+// Critical images
+const criticalImages = document.querySelectorAll('.critical-image');
 
-  // Lazy load other images
-  const lazyImages = document.querySelectorAll('img[data-src]');
+// Lazy load other images
+const lazyImages = document.querySelectorAll('img[data-src]');
 
-  // Load critical images immediately
-  criticalImages.forEach(image => {
-    image.src = image.dataset.src;
+// Load critical images immediately
+criticalImages.forEach(image => {
+  image.src = image.dataset.src;
+});
+
+// Use Intersection Observer for lazy loading
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.src = entry.target.dataset.src;
+      observer.unobserve(entry.target);
+    }
   });
+});
 
-  // Use Intersection Observer for lazy loading
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.src = entry.target.dataset.src;
-        observer.unobserve(entry.target);
-      }
-    });
-  });
-
-  lazyImages.forEach(image => observer.observe(image));
-</script>
+lazyImages.forEach(image => observer.observe(image));
 
