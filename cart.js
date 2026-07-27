@@ -40,18 +40,15 @@ const updateCartDisplay = function() {
 }
 
 
-// calculate total bill amount
-let total = 0;
 const calculateBill = ()=>{
-    itemPrices = document.querySelectorAll(".price");
-    for (p of itemPrices){
+    let total = 0;
+    const itemPrices = document.querySelectorAll(".price");
+    for (const p of itemPrices){
         if (p!=null){
-            console.log(p.innerText);
             total += parseFloat(p.innerText.replace('$',''));
         }
     }
 
-    console.log(total);
     if(total!=0 && !isNaN(total)){
         document.getElementById("bill").innerText = "$" + total.toFixed(2)
     }
@@ -73,29 +70,4 @@ orderBtn.addEventListener("click", ()=>{
    }
 })
 
-// Prioritizing Image Loading
-<script>
-  // Critical images
-  const criticalImages = document.querySelectorAll('.critical-image');
-
-  // Lazy load other images
-  const lazyImages = document.querySelectorAll('img[data-src]');
-
-  // Load critical images immediately
-  criticalImages.forEach(image => {
-    image.src = image.dataset.src;
-  });
-
-  // Use Intersection Observer for lazy loading
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.src = entry.target.dataset.src;
-        observer.unobserve(entry.target);
-      }
-    });
-  });
-
-  lazyImages.forEach(image => observer.observe(image));
-</script>
 
