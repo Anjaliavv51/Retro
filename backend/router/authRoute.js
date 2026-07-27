@@ -5,8 +5,6 @@ const jwtAuth = require('../middleware/jwtAuth.js');
 const {
   signUp,
   signIn,
-  forgotPassword,
-  resetPassword,
   getUser,
   logout,
 } = require('../controller/authController.js');
