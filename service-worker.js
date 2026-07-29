@@ -12,6 +12,7 @@ self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then((cache) => {
+.catch(err => console.error(err))
         return cache.addAll(urlsToCache);
       })
   );
@@ -21,6 +22,7 @@ self.addEventListener('fetch', (event) => {
   event.respondWith(
     caches.match(event.request)
       .then((response) => {
+.catch(err => console.error(err))
         return response || fetch(event.request);
       })
   );
@@ -30,6 +32,7 @@ self.addEventListener('activate', (event) => {
   const cacheWhitelist = [CACHE_NAME];
   event.waitUntil(
     caches.keys().then((cacheNames) => {
+.catch(err => console.error(err))
       return Promise.all(
         cacheNames.map((cacheName) => {
           if (!cacheWhitelist.includes(cacheName)) {
