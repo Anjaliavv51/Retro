@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function loadCartFromLocalStorage() {
-    const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+    const (function(){ try { return JSON.parse(localStorage.getItem('cartItems')); } catch { return null; } })() || [];
     const cartItemsContainer = document.getElementById('cart-items');
     if (cartItemsContainer) {
         cartItemsContainer.innerHTML = ''; // Clear existing items
@@ -136,7 +136,7 @@ const applyFirstTimeDiscount = () => {
 window.onload = applyFirstTimeDiscount;
 
 function updateBadgeCount() {
-    const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+    const (function(){ try { return JSON.parse(localStorage.getItem('cartItems')); } catch { return null; } })() || [];
     const totalQuantity = cartItems.reduce((total, item) => total + item.quantity, 0);
     document.getElementById('badgeCount').innerText = totalQuantity;
 }
