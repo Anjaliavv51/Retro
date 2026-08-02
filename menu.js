@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 alert("Item added to cart successfully");
 
                 // Retrieve existing cart items from localStorage
-                var cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+                var cartItems = (() => { try { return JSON.parse(localStorage.getItem('cartItems')) } catch { return null } })() || [];
 
                 // Add new item to the cart array
                 var newItem = { name: itemName, price: itemPrice };
