@@ -17,7 +17,7 @@ document.querySelectorAll('.add-to-cart-button').forEach(button => {
         const productName = this.getAttribute('data-product-name');
         const productPrice = parseFloat(this.getAttribute('data-product-price'));
 
-        let cartItems = (() => { try { return JSON.parse(localStorage.getItem('cartItems')) } catch { return null } })() || [];
+        let cartItems = (() => { try { return (JSON.parse(localStorage.getItem('cartItems') ?? "null") ?? null) } catch { return null } })() || [];
         
         // Check if the item already exists in the cart
         const existingItemIndex = cartItems.findIndex(item => item.id === productId);
