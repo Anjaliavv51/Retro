@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function loadCartFromLocalStorage() {
-    const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+    const cartItems = (JSON.parse(localStorage.getItem('cartItems') ?? "null") ?? null) || [];
     const cartItemsContainer = document.getElementById('cart-items');
     if (cartItemsContainer) {
         cartItemsContainer.innerHTML = ''; // Clear existing items
@@ -75,7 +75,7 @@ function loadCartFromLocalStorage() {
 function updateQuantity(button, change) {
     const cartItemRow = button.parentElement.parentElement;
     const quantityElement = cartItemRow.querySelector('.quantity');
-    const newQuantity = parseInt(quantityElement.textContent) + change;
+    const newQuantity = parseInt(quantityElement.textContent, 10) + change;
     if (newQuantity > 0) {
         quantityElement.textContent = newQuantity;
     } else {
@@ -90,7 +90,7 @@ function updateTotal() {
     let total = 0;
     cartItems.forEach(item => {
         const price = parseFloat(item.getAttribute('data-product-price'));
-        const quantity = parseInt(item.querySelector('.quantity').textContent);
+        const quantity = parseInt(item.querySelector('.quantity', 10).textContent);
         total += price * quantity;
     });
     document.getElementById('cart-total').textContent = `Total: $${total.toFixed(2)}`;
@@ -103,7 +103,7 @@ function saveCartToLocalStorage() {
             id: item.getAttribute('data-product-id'),
             name: item.querySelector('td').textContent, // Fetch the item name from the first <td>
             price: parseFloat(item.getAttribute('data-product-price')),
-            quantity: parseInt(item.querySelector('.quantity').textContent)
+            quantity: parseInt(item.querySelector('.quantity', 10).textContent)
         });
     });
     localStorage.setItem('cartItems', JSON.stringify(cartItems));
@@ -136,7 +136,7 @@ const applyFirstTimeDiscount = () => {
 window.onload = applyFirstTimeDiscount;
 
 function updateBadgeCount() {
-    const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+    const cartItems = (JSON.parse(localStorage.getItem('cartItems') ?? "null") ?? null) || [];
     const totalQuantity = cartItems.reduce((total, item) => total + item.quantity, 0);
     document.getElementById('badgeCount').innerText = totalQuantity;
 }
