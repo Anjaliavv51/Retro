@@ -8,12 +8,12 @@ document.addEventListener("DOMContentLoaded", () => {
       );
       const contributors = await response.json();
 
-      contributorsContainer.innerHTML = "";
+      contributorsContainer.textContent = "";
       contributors.forEach((contributor) => {
         const contributorCard = document.createElement("div");
         contributorCard.className = "contributor-card";
 
-        contributorCard.innerHTML = `
+        contributorCard.textContent = `
             <a href="${contributor.html_url}" target="_blank" rel="noopener noreferrer">
               <img src="${contributor.avatar_url}" alt="${contributor.login}">
             </a>
