@@ -7,7 +7,7 @@ function addItemToCart() {
 const addToCart = function(name, price){
     let cartItems = localStorage.getItem('cartItems');
     cartItems = cartItems ? JSON.parse(cartItems) : [];
-    if(name==null && price==null) return;
+    if(name=== null && price==null) return;
     const existingItem = cartItems.find(item => item.name === name);
     if (!existingItem) {
         cartItems.push({ name, price });
@@ -22,7 +22,7 @@ const addToCart = function(name, price){
 
 const updateCartDisplay = function() {
     const cartBody = document.querySelector(".items");
-    cartBody.innerHTML = '';
+    cartBody.textContent = '';
     let cartItems = localStorage.getItem('cartItems');
     cartItems = cartItems ? JSON.parse(cartItems) : [];
     
