@@ -22,7 +22,7 @@ const addToCart = function(name, price){
 
 const updateCartDisplay = function() {
     const cartBody = document.querySelector(".items");
-    cartBody.innerHTML = '';
+    cartBody.textContent = '';
     let cartItems = localStorage.getItem('cartItems');
     cartItems = cartItems ? JSON.parse(cartItems) : [];
     
