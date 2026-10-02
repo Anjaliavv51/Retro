@@ -1,0 +1,696 @@
+/* ============================================================
+   Retro AI - RAG (Retrieval-Augmented Generation) Search Styles
+   ============================================================ */
+
+:root {
+  --rag-burgundy: #7a1d2e;
+  --rag-burgundy-dark: #50101d;
+  --rag-rose-gold: #c97d75;
+  --rag-cream: #fff4ea;
+  --rag-parchment: #fdf6ec;
+  --rag-gold: #d4af37;
+  --rag-gold-glow: rgba(212, 175, 55, 0.4);
+  --rag-text-dark: #2c1a16;
+  --rag-text-muted: #6e5852;
+  --rag-border: rgba(122, 29, 46, 0.2);
+  --rag-card-bg: rgba(255, 255, 255, 0.92);
+}
+
+/* Nav Trigger Button */
+.rag-nav-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #7a1d2e 0%, #a65961 100%);
+  color: #fff !important;
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-family: var(--ff-philosopher, "Philosopher", serif);
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: 0 3px 10px rgba(122, 29, 46, 0.25);
+  margin-right: 12px;
+  text-decoration: none !important;
+}
+
+.rag-nav-trigger:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 6px 16px rgba(122, 29, 46, 0.35), 0 0 10px var(--rag-gold-glow);
+  color: #fff !important;
+  border-color: var(--rag-gold);
+}
+
+.rag-nav-trigger i {
+  color: #ffd700;
+  font-size: 0.95rem;
+  animation: ragSparkle 2.5s infinite ease-in-out;
+}
+
+.rag-pill {
+  background: rgba(212, 175, 55, 0.25);
+  border: 1px solid rgba(212, 175, 55, 0.6);
+  color: #fff;
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 8px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+@keyframes ragSparkle {
+  0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.9; }
+  50% { transform: scale(1.25) rotate(15deg); opacity: 1; filter: drop-shadow(0 0 4px gold); }
+}
+
+/* Modal Overlay */
+.rag-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(30, 15, 18, 0.72);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 100000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.rag-modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Modal Container */
+.rag-modal-container {
+  background: linear-gradient(170deg, #fffaf5 0%, #fbf1e8 100%);
+  width: 100%;
+  max-width: 860px;
+  max-height: 90vh;
+  border-radius: 20px;
+  border: 2px solid rgba(212, 175, 55, 0.45);
+  box-shadow: 0 20px 50px rgba(44, 26, 22, 0.45), 0 0 30px rgba(212, 175, 55, 0.2);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  transform: translateY(20px) scale(0.96);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  color: var(--rag-text-dark);
+}
+
+.rag-modal-overlay.active .rag-modal-container {
+  transform: translateY(0) scale(1);
+}
+
+/* Modal Header */
+.rag-modal-header {
+  padding: 20px 24px 16px;
+  background: linear-gradient(135deg, rgba(122, 29, 46, 0.06), rgba(212, 175, 55, 0.08));
+  border-bottom: 1px solid rgba(122, 29, 46, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.rag-brand-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.rag-brand-badge .rag-icon-seal {
+  width: 36px;
+  height: 36px;
+  background: linear-gradient(135deg, #7a1d2e, #a65961);
+  color: #ffd700;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  box-shadow: 0 3px 8px rgba(122, 29, 46, 0.3);
+  border: 1px solid rgba(212, 175, 55, 0.5);
+}
+
+.rag-title-group h2 {
+  font-family: var(--ff-philosopher, "Philosopher", serif);
+  margin: 0;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--rag-burgundy);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.rag-title-group p {
+  margin: 2px 0 0;
+  font-size: 0.8rem;
+  color: var(--rag-text-muted);
+  font-family: var(--ff-poppins, "Poppins", sans-serif);
+}
+
+.rag-close-btn {
+  background: transparent;
+  border: none;
+  font-size: 1.3rem;
+  color: var(--rag-text-muted);
+  cursor: pointer;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.rag-close-btn:hover {
+  background: rgba(122, 29, 46, 0.1);
+  color: var(--rag-burgundy);
+  transform: rotate(90deg);
+}
+
+/* Modal Search Section */
+.rag-search-section {
+  padding: 18px 24px;
+  background: #fff;
+  border-bottom: 1px solid rgba(122, 29, 46, 0.08);
+}
+
+.rag-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: #fdf8f4;
+  border: 2px solid #ecd3bf;
+  border-radius: 14px;
+  padding: 4px 14px;
+  transition: all 0.25s ease;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.03);
+}
+
+.rag-input-wrapper:focus-within {
+  border-color: var(--rag-burgundy);
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(122, 29, 46, 0.12), inset 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.rag-input-wrapper i.search-icon {
+  font-size: 1.1rem;
+  color: var(--rag-burgundy);
+  margin-right: 12px;
+}
+
+.rag-search-input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  font-family: var(--ff-poppins, "Poppins", sans-serif);
+  font-size: 0.95rem;
+  color: var(--rag-text-dark);
+  padding: 10px 0;
+  outline: none;
+}
+
+.rag-search-input::placeholder {
+  color: #9e857f;
+  font-style: italic;
+}
+
+.rag-submit-btn {
+  background: linear-gradient(135deg, #7a1d2e, #963847);
+  color: #fff;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 10px;
+  font-family: var(--ff-philosopher, "Philosopher", serif);
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+}
+
+.rag-submit-btn:hover {
+  background: #5a101f;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(122, 29, 46, 0.3);
+}
+
+/* Prompt Chips */
+.rag-prompt-chips {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.rag-chips-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--rag-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.rag-chip {
+  background: rgba(122, 29, 46, 0.06);
+  border: 1px solid rgba(122, 29, 46, 0.15);
+  color: #5d252f;
+  font-size: 0.8rem;
+  padding: 4px 11px;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: var(--ff-poppins, "Poppins", sans-serif);
+}
+
+.rag-chip:hover {
+  background: var(--rag-burgundy);
+  color: #fff;
+  border-color: var(--rag-burgundy);
+  transform: translateY(-1px);
+}
+
+/* Modal Body / Results Area */
+.rag-modal-body {
+  padding: 20px 24px;
+  overflow-y: auto;
+  flex: 1;
+  min-height: 280px;
+}
+
+/* Empty State / Initial State */
+.rag-empty-state {
+  text-align: center;
+  padding: 40px 20px;
+  color: var(--rag-text-muted);
+}
+
+.rag-empty-icon {
+  font-size: 3rem;
+  color: #d8b8a5;
+  margin-bottom: 14px;
+}
+
+.rag-empty-state h3 {
+  font-family: var(--ff-philosopher, "Philosopher", serif);
+  font-size: 1.3rem;
+  color: var(--rag-burgundy);
+  margin-bottom: 6px;
+}
+
+.rag-empty-state p {
+  font-size: 0.9rem;
+  max-width: 480px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+/* Loading State */
+.rag-loading-state {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.rag-loading-state.active {
+  display: flex;
+}
+
+.rag-spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid rgba(122, 29, 46, 0.15);
+  border-top-color: var(--rag-burgundy);
+  border-radius: 50%;
+  animation: ragSpin 0.9s linear infinite;
+  margin-bottom: 16px;
+}
+
+@keyframes ragSpin {
+  to { transform: rotate(360deg); }
+}
+
+.rag-loading-text {
+  font-family: var(--ff-philosopher, "Philosopher", serif);
+  font-size: 1.15rem;
+  color: var(--rag-burgundy);
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.rag-loading-subtext {
+  font-size: 0.85rem;
+  color: var(--rag-text-muted);
+  font-family: var(--ff-poppins, "Poppins", sans-serif);
+}
+
+/* Curator Response Box (Generation Output) */
+.rag-curator-box {
+  background: linear-gradient(135deg, #fffbf6 0%, #fbf3ea 100%);
+  border: 1px solid rgba(212, 175, 55, 0.45);
+  border-left: 4px solid var(--rag-burgundy);
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 14px rgba(122, 29, 46, 0.06);
+}
+
+.rag-curator-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  color: var(--rag-burgundy);
+  font-family: var(--ff-philosopher, "Philosopher", serif);
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.rag-curator-header i {
+  color: #d4af37;
+}
+
+.rag-curator-summary {
+  font-size: 0.93rem;
+  line-height: 1.6;
+  color: var(--rag-text-dark);
+  margin-bottom: 10px;
+  font-family: var(--ff-poppins, "Poppins", sans-serif);
+}
+
+.rag-curator-tip {
+  font-size: 0.84rem;
+  color: #68483e;
+  background: rgba(212, 175, 55, 0.12);
+  padding: 8px 12px;
+  border-radius: 8px;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  line-height: 1.45;
+  font-style: italic;
+}
+
+.rag-curator-tip i {
+  color: #b08d24;
+  margin-top: 2px;
+}
+
+/* Results Section Header */
+.rag-results-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(122, 29, 46, 0.1);
+}
+
+.rag-results-heading h4 {
+  margin: 0;
+  font-family: var(--ff-philosopher, "Philosopher", serif);
+  font-size: 1.15rem;
+  color: var(--rag-burgundy);
+}
+
+.rag-results-count {
+  font-size: 0.8rem;
+  color: var(--rag-text-muted);
+  font-family: var(--ff-poppins, "Poppins", sans-serif);
+}
+
+/* Recommended Products Grid */
+.rag-products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 18px;
+}
+
+.rag-product-card {
+  background: #fff;
+  border-radius: 14px;
+  border: 1px solid rgba(122, 29, 46, 0.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  position: relative;
+}
+
+.rag-product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 22px rgba(122, 29, 46, 0.15);
+  border-color: rgba(212, 175, 55, 0.6);
+}
+
+/* Card Header & Badges */
+.rag-card-image-wrap {
+  position: relative;
+  width: 100%;
+  height: 160px;
+  background: #fdf5ef;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.rag-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.rag-product-card:hover .rag-card-img {
+  transform: scale(1.08);
+}
+
+.rag-score-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: linear-gradient(135deg, #2e7d32, #1b5e20);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+  letter-spacing: 0.3px;
+}
+
+.rag-era-badge {
+  position: absolute;
+  bottom: 8px;
+  left: 10px;
+  background: rgba(44, 26, 22, 0.82);
+  color: #f7e6d8;
+  font-size: 0.68rem;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: 6px;
+  backdrop-filter: blur(4px);
+}
+
+/* Card Content */
+.rag-card-content {
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.rag-card-category {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  color: var(--rag-rose-gold);
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  margin-bottom: 4px;
+}
+
+.rag-card-title {
+  font-family: var(--ff-philosopher, "Philosopher", serif);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--rag-text-dark);
+  margin: 0 0 6px;
+  line-height: 1.25;
+}
+
+.rag-card-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.rag-card-price {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--rag-burgundy);
+  font-family: var(--ff-philosopher, "Philosopher", serif);
+}
+
+.rag-card-rating {
+  font-size: 0.8rem;
+  color: #f59e0b;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-weight: 600;
+}
+
+/* Why it matches rationale */
+.rag-match-reason {
+  background: #fdf7f0;
+  border-left: 2px solid var(--rag-gold);
+  padding: 7px 10px;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  color: #63433a;
+  border-radius: 4px;
+  margin-bottom: 12px;
+  flex: 1;
+}
+
+.rag-match-reason strong {
+  color: var(--rag-burgundy);
+  display: block;
+  margin-bottom: 2px;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+/* Action Buttons */
+.rag-card-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.rag-add-cart-btn {
+  flex: 1;
+  background: var(--rag-burgundy);
+  color: #fff;
+  border: none;
+  padding: 8px 10px;
+  border-radius: 8px;
+  font-family: var(--ff-poppins, "Poppins", sans-serif);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  transition: all 0.2s ease;
+}
+
+.rag-add-cart-btn:hover {
+  background: #54111d;
+  box-shadow: 0 3px 8px rgba(122, 29, 46, 0.3);
+}
+
+.rag-add-cart-btn.added {
+  background: #2e7d32 !important;
+}
+
+/* Related Searches Bar */
+.rag-related-bar {
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(122, 29, 46, 0.1);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.rag-related-label {
+  font-size: 0.78rem;
+  color: var(--rag-text-muted);
+  font-weight: 600;
+}
+
+.rag-related-chip {
+  background: #f4eae0;
+  color: var(--rag-burgundy);
+  border: 1px dashed rgba(122, 29, 46, 0.3);
+  font-size: 0.78rem;
+  padding: 3px 10px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.rag-related-chip:hover {
+  background: var(--rag-burgundy);
+  color: #fff;
+  border-style: solid;
+}
+
+/* Notification Toast */
+.rag-toast {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: #2e7d32;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-family: var(--ff-poppins, "Poppins", sans-serif);
+  font-size: 0.88rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 1000001;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  pointer-events: none;
+}
+
+.rag-toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .rag-modal-container {
+    max-height: 95vh;
+    border-radius: 16px;
+  }
+  .rag-products-grid {
+    grid-template-columns: 1fr;
+  }
+  .rag-nav-trigger span.rag-text {
+    display: none;
+  }
+}

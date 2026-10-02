@@ -4,7 +4,9 @@
   "description": "<div align = \"center\">",
   "main": "cart.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server/server.js",
+    "server": "node server/server.js",
+    "backend": "node backend/index.js"
   },
   "repository": {
     "type": "git",
@@ -19,6 +21,8 @@
   },
   "homepage": "https://github.com/Anjaliavv51/Retro#readme",
   "dependencies": {
-    "express": "^5.2.1"
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.2"
   }
 }

@@ -14,7 +14,7 @@ const jwtAuth = (req, res, next) => {
 
   try {
     // Verify the token using the secret key
-    const payload = JWT.verify(token, process.env.SECRET);
+    const payload = JWT.verify(token, process.env.SECRET || 'retro_default_jwt_secret_key');
 
     // Attach the payload data to the request object (i.e., user data)
     req.user = { id: payload.id, email: payload.email };

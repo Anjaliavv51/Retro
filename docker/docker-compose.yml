@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  retro-web:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: retro-website
+    ports:
+      - "8080:80"
+    restart: unless-stopped

@@ -47,7 +47,7 @@ userSchema.methods = {
   jwtToken() {
     return JWT.sign(
       { id: this._id, email: this.email },
-      process.env.SECRET,
+      process.env.SECRET || 'retro_default_jwt_secret_key',
       { expiresIn: '24h' } // 24 hours
     );
   },

@@ -1,0 +1,26 @@
+{
+  "version": 2,
+  "cleanUrls": true,
+  "routes": [
+    { "src": "/about", "dest": "/html/about.html" },
+    { "src": "/menu", "dest": "/html/menu.html" },
+    { "src": "/services", "dest": "/html/services.html" },
+    { "src": "/contact", "dest": "/html/contact.html" },
+    { "src": "/blog", "dest": "/html/blog.html" },
+    { "src": "/reviews", "dest": "/html/reviews.html" },
+    { "src": "/cart", "dest": "/html/cart.html" },
+    { "src": "/museums", "dest": "/html/museums.html" },
+    { "src": "/login", "dest": "/html/login.html" },
+    { "src": "/signup", "dest": "/html/signup.html" },
+    { "src": "/wishlist", "dest": "/html/wishlist.html" },
+    { "src": "/feedback", "dest": "/html/feedback.html" },
+    { "src": "/contributor", "dest": "/html/contributor.html" },
+    { "src": "/booknow", "dest": "/html/booknow.html" },
+    { "src": "/electronic", "dest": "/html/Electronic.html" },
+    { "src": "/coverpage", "dest": "/html/Coverpage.html" },
+    { "src": "/api/search/rag", "dest": "/api/rag-search.js" },
+    { "src": "/api/rag-search", "dest": "/api/rag-search.js" },
+    { "src": "/api/(.*)", "dest": "/api/index.js" },
+    { "handle": "filesystem" }
+  ]
+}

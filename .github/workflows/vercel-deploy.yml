@@ -1,0 +1,32 @@
+name: Deploy to Vercel Production
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    name: Deploy to Vercel
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install Dependencies
+        run: npm install --legacy-peer-deps || npm install
+
+      - name: Deploy to Vercel
+        uses: amondnet/vercel-action@v25
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID || 'team_8Tenkpk6OtCu9ZyANgwxXgwD' }}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID || 'prj_AApdMwHk6O8kM1rO3nciG43yyRxs' }}
+          vercel-args: '--prod'
+        continue-on-error: true

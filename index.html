@@ -16,8 +16,8 @@
     </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="/Css-files/navbarstyles.css">
-    <link rel="stylesheet" href="/Css-files/popup.css">
+    <link rel="stylesheet" href="css/navbarstyles.css">
+    <link rel="stylesheet" href="css/popup.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -31,7 +31,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="shortcut icon" type="image/x-icon" href="./Favicon image/favicon-32x32.png">
+    <link rel="shortcut icon" type="image/x-icon" href="image/favicon-32x32.png">
     <link
         href="https://fonts.googleapis.com/css2?family=Fuggles&family=Mooli&family=Oswald:wght@600&family=Roboto:wght@100;300&display=swap"
         rel="stylesheet">
@@ -43,10 +43,11 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="css/style.css">
         <!-- Link to manifest file for PWA -->
-        <link rel="manifest" href="/manifest.json">
-        <link rel="stylesheet" href="/dark-mode/dark-mode.css">
+        <link rel="manifest" href="manifest.json">
+        <link rel="stylesheet" href="css/dark-mode.css">
+        <link rel="stylesheet" href="css/rag-search.css">
 
     <style>
 
@@ -442,25 +443,25 @@ p {
                             style="color: black; font-family: var(--ff-philosopher);">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Html-files/about.html"
+                        <a class="nav-link" href="html/about.html"
                             style="font-family: var(--ff-philosopher); color: black;">About Us</a>
                     </li>
                     
                     <li class="nav-item">
-                        <a class="nav-link" href="Html-files/menu.html"
+                        <a class="nav-link" href="html/menu.html"
                             style="font-family: var(--ff-philosopher);color: black;">Collections</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="Html-files/services.html"
+                        <a class="nav-link" href="html/services.html"
                             style="font-family: var(--ff-philosopher);color: black;">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Html-files/blog.html" style="font-family: var(--ff-philosopher); color: black">Blog</a>
+                        <a class="nav-link" href="html/blog.html" style="font-family: var(--ff-philosopher); color: black">Blog</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="Html-files/contact.html" style="font-family: var(--ff-philosopher); color: black">Contact Us</a>
+                        <a class="nav-link" href="html/contact.html" style="font-family: var(--ff-philosopher); color: black">Contact Us</a>
                     </li>
                     
                     <li class="nav-item">
@@ -480,11 +481,16 @@ p {
                                  style="color: black; font-family: var(--ff-philosopher);">Signup</a>
                         </li>
                         <li class="nav-item" style="list-style-type: none;">
-                            <a class="nav-link" href="Html-files/cart.html" style="color: black;"><i
+                            <a class="nav-link" href="html/cart.html" style="color: black;"><i
                                     class="fa-solid fa-cart-shopping"></i>Cart</a>
                         </li>
                     </ul>
                 </div>
+                <button class="rag-nav-trigger" id="ragNavBtn" title="Search vintage products using natural language AI">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    <span class="rag-text">AI Search</span>
+                    <span class="rag-pill">RAG</span>
+                </button>
                 <button id="darkModeToggle" class="btn btn-secondary" style="margin-left: 10px;">
                     <i class="fas fa-sun" id="toggleIcon" style="font-size: 20px;"></i>
                     <span id="toggleText">Light Mode</span>
@@ -508,7 +514,7 @@ p {
     <div id="popup" class="popup">
         <div class="popup-content">
             <div class="popup-left">
-                <img src="Images/popup.jpg" alt="Retro Vintage Charm">
+                <img src="image/popup.jpg" alt="Retro Vintage Charm">
             </div>
             <a href="#" class="no-thanks popuplogo" style="font-family: var(--ff-philosopher); color: black;"><b class="popup-logo">Retro</b></a>
             <div class="popup-right">
@@ -538,10 +544,10 @@ p {
                     </li>
                     
                     <li class="nav-item">
-                        <a class="nav-link" href="Html-files/about.html" style="font-family: var(--ff-philosopher);color: black;">About</a>
+                        <a class="nav-link" href="html/about.html" style="font-family: var(--ff-philosopher);color: black;">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Html-files/contact.html" style="font-family: var(--ff-philosopher);color: black;">Contact Us</a>
+                        <a class="nav-link" href="html/contact.html" style="font-family: var(--ff-philosopher);color: black;">Contact Us</a>
                     </li>
 -->
                  <!-- Google Translate Element -->
@@ -574,26 +580,27 @@ new google.translate.TranslateElement({
             Immerse yourself in the world of vintage tech, classic designs, and timeless memories. 
             Get ready to embark on a journey through the ages, where innovation meets tradition, and the past inspires the future.</p>
         <button class="btn" id="openButton" style="z-index: 99;">Order Now</button>
-        <img src="stars.png" class="stars" alt="">
+        <button class="btn rag-nav-trigger" style="z-index: 99; margin-left: 12px; background: linear-gradient(135deg, #7a1d2e, #a65961); border: 1px solid #d4af37; box-shadow: 0 4px 15px rgba(122,29,46,0.4);"><i class="fa-solid fa-wand-magic-sparkles"></i> AI Vintage Search</button>
+        <img src="image/stars.png" class="stars" alt="">
 
-        <img src="mountain.png" class="mountain" alt="">
+        <img src="image/mountain.png" class="mountain" alt="">
 
-        <img src="trees.png" class="trees" alt="">
+        <img src="image/trees.png" class="trees" alt="">
 
-        <img src="layer.png" class="layer" alt="">
+        <img src="image/layer.png" class="layer" alt="">
     </section>
     <script>
         document.getElementById('openButton').addEventListener('click', function() {
     // Replace 'target_page.html' with the actual path to the page you want to open
-    window.open('Html-files/menu.html', '_blank'); 
+    window.open('html/menu.html', '_blank'); 
 });
     </script>
     <section class="about_us">
         <div class="move">
             <div id="marque">
-                 <a href="Html-files/cart.html"> <h1 class="poppins-light"  style="font-family: var(--ff-philosopher);">Get <span> 30% OFF </span> on your first order!</h1></a>
-                 <a href="Html-files/cart.html"><h1 class="poppins-light" style="font-family: var(--ff-philosopher);">Get <span> 30% OFF </span> on your first order!</h1></a>
-                 <a href="Html-files/cart.html"><h1 class="poppins-light" style="font-family: var(--ff-philosopher);">Get <span> 30% OFF </span> on your first order!</h1></a>
+                 <a href="html/cart.html"> <h1 class="poppins-light"  style="font-family: var(--ff-philosopher);">Get <span> 30% OFF </span> on your first order!</h1></a>
+                 <a href="html/cart.html"><h1 class="poppins-light" style="font-family: var(--ff-philosopher);">Get <span> 30% OFF </span> on your first order!</h1></a>
+                 <a href="html/cart.html"><h1 class="poppins-light" style="font-family: var(--ff-philosopher);">Get <span> 30% OFF </span> on your first order!</h1></a>
             </div>
         </div>
 
@@ -603,21 +610,21 @@ new google.translate.TranslateElement({
         <!-- changes -->
         <div id="about">
             <div class="box" data-aos="fade-down">
-                <img src="Images/biryani.jpg" alt="Biryani" class="card-image">
+                <img src="image/biryani.jpg" alt="Biryani" class="card-image">
                 <h2 class="h-secondary center" style="font-family:var(--ff-philosopher);">60s-style florals</h2>
                 <p class="center" style="font-family: var(--ff-poppins);">From aromatic curries to flavorful biryanis, our menu showcases the diversity and
                     deliciousness of Indian cuisine.
                 </p>
             </div>
             <div class="box" data-aos="fade-down">
-                <img src="Images/plate_mismatch.jpg" alt="Plate" class="card-image">
+                <img src="image/plate_mismatch.jpg" alt="Plate" class="card-image">
                 <h2 class="h-secondary center" style="font-family: var(--ff-philosopher)">60's Dinning Items</h2>
                 <p class="center" style="font-family: var(--ff-poppins);">
                     Elegant porcelain plates with delicate floral patterns. Each plate tells a story of family gatherings and special occasions.
                 </p>
             </div>
             <div class="box" data-aos="fade-down">
-                <img src="Images/candy.jpg" alt="Candy" class="card-image">
+                <img src="image/candy.jpg" alt="Candy" class="card-image">
                 <h2 class="h-secondary center" style="font-family: var(--ff-philosopher);">Whimsical Nostalgia: The Stardust Bonbon</h2>
                 <p class="center" style="font-family: var(--ff-poppins);">The Stardust Bonbon, a sweet relic from an era when the universe was our playground.</p>
             </div>
@@ -639,11 +646,11 @@ new google.translate.TranslateElement({
             <div class="button_row" data-aos="fade-down">
                 <div class="service_item box" data-aos="fade-down" style="height: 200px;">
                     <h2>Online Delivery</h2><br>
-                    <a href="./Html-files/menu.html" class="order_btn">Order Online</a>
+                    <a href="./html/menu.html" class="order_btn">Order Online</a>
                 </div>
                 <div class="service_item box" data-aos="fade-down" style="height: 200px;">
                     <h2>Click & Collect</h2><br>
-                    <a href="./Html-files/cart.html" class="order_btn">Take out Order</a>
+                    <a href="./html/cart.html" class="order_btn">Take out Order</a>
                 </div>
             </div>
         </div>
@@ -656,7 +663,7 @@ new google.translate.TranslateElement({
             <h1 style="font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%);">"Get ready to explore our vintage collections!"</h1>
             <p style="font-family: var(--ff-poppins);">"Free on Order above $5000"</p>
 
-            <button class="butt"  style="font-family: var(--ff-philosopher);" onclick="window.location.href='Html-files/menu.html'">View</button>
+            <button class="butt"  style="font-family: var(--ff-philosopher);" onclick="window.location.href='html/menu.html'">View</button>
 
 
         </div>
@@ -1024,9 +1031,9 @@ new google.translate.TranslateElement({
         <h2 style="font-family: var(--ff-philosopher);color: hsl(203, 30%, 26%);">Download the App now!</h2>
         <br>
         <p style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);text-align:left;">For best discounts and free delivery download the app now from your Google Play Store or App Store.</p>
-        <a href="https://play.google.com/store/games?device=windows"><img src="./Images/get_it_on_google_play_store.png" class="app-download-img"
+        <a href="https://play.google.com/store/games?device=windows"><img src="image/get_it_on_google_play_store.png" class="app-download-img"
                 alt="Get it on Google Play Store"></a>
-        <a href="https://www.apple.com/in/app-store/"><img src="./Images/download-on-the-app-store.png" class="app-download-img"
+        <a href="https://www.apple.com/in/app-store/"><img src="image/download-on-the-app-store.png" class="app-download-img"
                 alt="Download on the Apple App Store"></a>
 
     </div>
@@ -1038,13 +1045,13 @@ new google.translate.TranslateElement({
                     <p style="color: hsl(357, 82%,35%);font-family: var(--ff-philosopher);text-align: left;">Our Pages</p>
 
                     <a href="#" >Home</a>
-                    <a href="Html-files/menu.html" >About</a>
-                    <a href="Html-files/services.html" >Services</a>
-                    <a href="Html-files/contact.html" >Contact us</a>
-                    <a href="Html-files/cart.html" >Cart</a>
-                    <a href="Html-files/museums.html" >Museums</a>
-                    <a href="Html-files/reviews.html">Share Experience</a>
-                    <a href="Html-files/feedback.html">Feedback</a>
+                    <a href="html/menu.html" >About</a>
+                    <a href="html/services.html" >Services</a>
+                    <a href="html/contact.html" >Contact us</a>
+                    <a href="html/cart.html" >Cart</a>
+                    <a href="html/museums.html" >Museums</a>
+                    <a href="html/reviews.html">Share Experience</a>
+                    <a href="html/feedback.html">Feedback</a>
                 </ul>
                 <ul>
                     <p style="color: hsl(357, 82%,35%);font-family: var(--ff-philosopher); text-align:left"> Exclusive Offers</p>
@@ -1060,11 +1067,11 @@ new google.translate.TranslateElement({
                 </ul>
                 <ul>
                     <p style="color: hsl(357, 82%,35%);font-family: var(--ff-philosopher);text-align:left">Payment Products</p>
-                    <a href="./Html-files/payment2.html" >Secure Checkout</a>
-                    <a href="./Html-files/payment2.html" >Credit/Debit Cards</a>
-                    <a href="./Html-files/payment2.html" >Online Payment</a>
-                    <a href="./Html-files/payment2.html" >Mobile Wallets</a>
-                    <a href="./Html-files/payment2.html" >Contactless Payments</a>
+                    <a href="./html/payment2.html" >Secure Checkout</a>
+                    <a href="./html/payment2.html" >Credit/Debit Cards</a>
+                    <a href="./html/payment2.html" >Online Payment</a>
+                    <a href="./html/payment2.html" >Mobile Wallets</a>
+                    <a href="./html/payment2.html" >Contactless Payments</a>
                 </ul>
                 <form id="contactForm">
                     <h3 style="font-family: var(--ff-philosopher); color: hsl(357, 82%, 35%);">Contact Us!</h3>
@@ -1135,10 +1142,10 @@ new google.translate.TranslateElement({
 <script>
  
     function redirectLogin() {
-        window.location.href = "Html-files/login.html";
+        window.location.href = "html/login.html";
     }
     function redirectSignup() {
-        window.location.href = "Html-files/signup.html";
+        window.location.href = "html/signup.html";
     }
 
      // Get the button element
@@ -1228,7 +1235,7 @@ scrollToTopBtn.addEventListener("click", function() {
   </script>
 
     <!-- Pop Up JS starts Here  -->
-    <script src="./script/popup.js">
+    <script src="js/popup.js">
     </script>
 
   <script>
@@ -1306,7 +1313,7 @@ scrollToTopBtn.addEventListener("click", function() {
 
 <br /><br />
 
-    <link rel="stylesheet" href="visi.css">
+    <link rel="stylesheet" href="css/visi.css">
 
     <!-- ############### Footer ############### -->
     <div class="visitor-counter">
@@ -1316,10 +1323,8 @@ scrollToTopBtn.addEventListener("click", function() {
 
     </div>
 
-    <script src="path/to/visitorCounter.js"></script>
-    <script src="./assets/css/visitors.css"></script>
-
-      <script src="visi.js"></script>
-
-      <script src="/dark-mode/dark-mode.js"></script>
+    <script src="js/popup.js"></script>
+    <script src="js/visi.js"></script>
+    <script src="js/dark-mode.js"></script>
+    <script src="js/rag-search.js"></script>
 </html>

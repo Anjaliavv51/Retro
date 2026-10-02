@@ -1,0 +1,8 @@
+venv
+python
+requirements.txt
+docker
+backend
+server
+*.bat
+*.log

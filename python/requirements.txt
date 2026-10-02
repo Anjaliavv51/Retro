@@ -1,0 +1,5 @@
+pandas
+scikit-learn
+numpy
+scikit-surprise
+requests
