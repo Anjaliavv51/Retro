@@ -209,8 +209,11 @@
     const input = document.getElementById('ragSearchInput');
     const submitBtn = document.getElementById('ragSubmitBtn');
 
-    // Open triggers
-    document.querySelectorAll('.rag-nav-trigger, [data-rag-trigger]').forEach(btn => {
+    // Open triggers (Strictly for RAG Search, never intercept DB Agent navigation)
+    document.querySelectorAll('.rag-nav-trigger, [data-rag-trigger], #ragNavBtn').forEach(btn => {
+      if (btn.classList.contains('db-nav-trigger') || (btn.getAttribute('href') && btn.getAttribute('href').includes('db-agent'))) {
+        return; // Don't preventDefault on DB Agent page link
+      }
       btn.addEventListener('click', (e) => {
         e.preventDefault();
         openModal();
