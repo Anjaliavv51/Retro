@@ -12,236 +12,280 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Google Fonts -->
+  <!-- Google Fonts: Philosopher & Poppins -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
 
   <link rel="shortcut icon" type="image/x-icon" href="../image/favicon-32x32.png">
+  
+  <!-- Core Retro Stylesheets -->
   <link rel="stylesheet" href="../css/navbarstyles.css">
+  <link rel="stylesheet" href="../css/dark-mode.css">
+  <link rel="stylesheet" href="../css/rag-search.css">
   <link rel="stylesheet" href="../css/db-agent.css">
 </head>
 
 <body class="db-agent-page">
 
-  <!-- Navigation Bar -->
-  <nav class="navbar navbar-expand-lg fixed-top" id="top" style="background: rgba(28, 23, 20, 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid #4a382c;">
-    <div class="container-fluid">
-      <a class="navbar-brand text-light" href="../index.html" style="font-family: var(--db-font-serif); font-size: 1.5rem;">
-        <b style="color: #e5a95d;">Retro</b> <span style="font-size: 0.85rem; color: #b8a698; font-family: var(--db-font-sans);">| DB Agent</span>
-      </a>
-      <button class="navbar-toggler bg-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link text-light" href="../index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-light" href="about.html">About Us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-light" href="menu.html">Collections</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-light" href="blog.html">Blog</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-light" href="contact.html">Contact</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active fw-bold" href="db-agent.html" style="color: #e5a95d !important;">
-              <i class="fa-solid fa-database me-1"></i> AI DB Agent
-            </a>
-          </li>
-        </ul>
-
-        <div class="navbar-right d-flex align-items-center gap-3">
-          <a class="btn btn-sm btn-outline-warning text-light" href="login.html">Login</a>
-          <a class="nav-link text-light" href="cart.html"><i class="fa-solid fa-cart-shopping me-1"></i> Cart</a>
-        </div>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Hero Section -->
-  <section class="db-hero-section">
-    <div class="container">
-      <div class="db-title-badge">
-        <i class="fa-solid fa-microchip"></i> MongoDB Natural Language Query Agent
-      </div>
-      <h1>Ask Your Database in <span>Plain English</span></h1>
-      <p class="db-hero-subtitle">
-        Query the vintage product catalog, user records, customer reviews, and sales aggregations using natural human queries. 
-        The agent automatically constructs safe, read-only <strong>MongoDB Query Language (MQL)</strong> and executes it in real time.
-      </p>
-
-      <!-- Live Database Stats Bar -->
-      <div class="db-stats-bar">
-        <div class="db-stat-pill">
-          <i class="fa-solid fa-server"></i>
-          <div class="db-stat-info">
-            <div class="db-stat-label">Database Status</div>
-            <div class="db-stat-val" id="statDbStatus">Checking...</div>
+  <!-- Header / Navigation matching Retro Structure -->
+  <div class="head_container">
+    <header>
+      <nav class="navbar navbar-expand-lg fixed-top" id="top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="../index.html" style="font-family: var(--ff-philosopher); color: black;">
+            <b>Retro</b>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+            aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          
+          <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="header-items">
+              <li class="nav-item">
+                <a class="nav-link" href="../index.html" style="color: black;">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html" style="color: black;">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="menu.html" style="color: black;">Collections</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="services.html" style="color: black;">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="blog.html" style="color: black;">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html" style="color: black;">Contact us</a>
+              </li>
+              <li class="nav-item" style="list-style-type: none;">
+                <a class="nav-link" href="cart.html" style="color: black;">
+                  <i class="fa-solid fa-cart-shopping me-1"></i>Cart
+                </a>
+              </li>
+            </ul>
           </div>
-        </div>
 
-        <div class="db-stat-pill">
-          <i class="fa-solid fa-box-archive"></i>
-          <div class="db-stat-info">
-            <div class="db-stat-label">Catalog Products</div>
-            <div class="db-stat-val" id="statProducts">--</div>
-          </div>
-        </div>
-
-        <div class="db-stat-pill">
-          <i class="fa-solid fa-users"></i>
-          <div class="db-stat-info">
-            <div class="db-stat-label">Registered Users</div>
-            <div class="db-stat-val" id="statUsers">--</div>
-          </div>
-        </div>
-
-        <div class="db-stat-pill">
-          <i class="fa-solid fa-comments"></i>
-          <div class="db-stat-info">
-            <div class="db-stat-label">Customer Reviews</div>
-            <div class="db-stat-val" id="statReviews">--</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Natural Language Query Input Box -->
-      <div class="db-query-wrapper">
-        <div class="db-input-box">
-          <i class="fa-solid fa-magnifying-glass input-icon"></i>
-          <input 
-            type="text" 
-            id="dbQueryInput" 
-            placeholder="e.g., 'Find all audio products under $100 with rating above 4.5' or 'Average price by category'..."
-            autocomplete="off"
-          />
-          <button id="dbSubmitBtn" class="db-submit-btn">
-            <span>Query DB</span> <i class="fa-solid fa-arrow-right"></i>
+          <!-- Right Action Triggers -->
+          <button class="rag-nav-trigger" id="ragNavBtn" title="Search vintage products using natural language AI">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+            <span class="rag-text">AI Search</span>
+            <span class="rag-pill">RAG</span>
+          </button>
+          
+          <button id="darkModeToggle" class="btn btn-secondary" style="margin-left: 10px;">
+            <i class="fas fa-sun" id="toggleIcon" style="font-size: 20px;"></i>
+            <span id="toggleText">Light Mode</span>
           </button>
         </div>
+      </nav>
+    </header>
+  </div>
+
+  <!-- Main Section -->
+  <div class="container" style="padding-top: 15px;">
+    
+    <!-- Title Section matching Retro Header Style -->
+    <div class="mainhead">
+      <h1 style="font-family: var(--ff-philosopher); color: hsl(203, 30%, 26%);">
+        D B &nbsp; A G E N T
+      </h1>
+      <p class="db-subtitle">
+        Ask your vintage database questions in <strong>plain English</strong>. The agent securely translates queries into 
+        <strong>MongoDB Query Language (MQL)</strong> and executes them with read-only protection.
+      </p>
+    </div>
+
+    <!-- Live Database Stats Bar -->
+    <div class="db-stats-bar">
+      <div class="db-stat-pill">
+        <i class="fa-solid fa-server"></i>
+        <div class="db-stat-info">
+          <div class="db-stat-label">Database Status</div>
+          <div class="db-stat-val" id="statDbStatus">Checking...</div>
+        </div>
       </div>
 
-      <!-- Quick Prompt Chips -->
-      <div class="db-chips-container">
-        <div class="db-chip" data-query="Find all audio products under $100 with rating above 4.5">
-          <i class="fa-solid fa-music me-1"></i> Audio under $100 (Rating ≥ 4.5)
-        </div>
-        <div class="db-chip" data-query="Show me all 1950s products">
-          <i class="fa-solid fa-clock-rotate-left me-1"></i> 1950s Artifacts
-        </div>
-        <div class="db-chip" data-query="Top 3 most expensive cameras">
-          <i class="fa-solid fa-camera me-1"></i> Top 3 Luxury Cameras
-        </div>
-        <div class="db-chip" data-query="Average price by category">
-          <i class="fa-solid fa-chart-pie me-1"></i> Aggregation: Avg Price by Category
-        </div>
-        <div class="db-chip" data-query="How many users are registered?">
-          <i class="fa-solid fa-user-group me-1"></i> Count Users
-        </div>
-        <div class="db-chip" data-query="Reviews with 5 stars">
-          <i class="fa-solid fa-star me-1"></i> 5-Star Reviews
+      <div class="db-stat-pill">
+        <i class="fa-solid fa-box-archive"></i>
+        <div class="db-stat-info">
+          <div class="db-stat-label">Vintage Catalog</div>
+          <div class="db-stat-val" id="statProducts">--</div>
         </div>
       </div>
 
-      <!-- Loader -->
-      <div id="dbLoader" class="db-loader">
-        <div class="db-spinner"></div>
-        <p class="text-warning">Agent is parsing query semantics & executing MongoDB query...</p>
+      <div class="db-stat-pill">
+        <i class="fa-solid fa-users"></i>
+        <div class="db-stat-info">
+          <div class="db-stat-label">Registered Users</div>
+          <div class="db-stat-val" id="statUsers">--</div>
+        </div>
       </div>
 
-      <!-- Results Container -->
-      <div id="dbResultsContainer" class="db-results-container">
-        
-        <!-- Generated MQL Box -->
-        <div class="db-card">
-          <div class="db-card-header">
-            <div class="db-card-title">
-              <i class="fa-solid fa-terminal"></i> Generated MongoDB Query (MQL)
-            </div>
-            <div class="d-flex gap-2">
-              <span id="dbTargetCollectionBadge" class="db-badge db-badge-success">Collection: products</span>
-              <span id="dbRecordCountBadge" class="db-badge db-badge-success">0 Records</span>
-            </div>
-          </div>
-          <div class="db-mql-box">
-            <button id="dbCopyCodeBtn" class="db-copy-code-btn"><i class="fa-regular fa-copy"></i> Copy MQL</button>
-            <pre><code id="dbMqlCode">// Generated query will appear here</code></pre>
-          </div>
+      <div class="db-stat-pill">
+        <i class="fa-solid fa-comments"></i>
+        <div class="db-stat-info">
+          <div class="db-stat-label">Reviews</div>
+          <div class="db-stat-val" id="statReviews">--</div>
         </div>
-
-        <!-- AI Narrative Summary -->
-        <div class="db-card">
-          <div class="db-card-header">
-            <div class="db-card-title">
-              <i class="fa-solid fa-wand-magic-sparkles"></i> Agent Narrative Summary
-            </div>
-          </div>
-          <div id="dbNarrative" class="db-narrative-text">
-            Results retrieved from database.
-          </div>
-        </div>
-
-        <!-- Data Visualization (Cards or Table) -->
-        <div class="db-card">
-          <div class="db-card-header">
-            <div class="db-card-title">
-              <i class="fa-solid fa-database"></i> Query Results Data
-            </div>
-          </div>
-
-          <!-- Product Cards Grid -->
-          <div id="dbRecordsGrid" class="db-records-grid"></div>
-
-          <!-- Tabular View for Aggregations/Users/Reviews -->
-          <div id="dbTableViewWrapper" style="display: none;"></div>
-        </div>
-
       </div>
+    </div>
 
-      <!-- Database Schema Inspection Card -->
-      <div class="db-card text-start mt-5" style="max-width: 980px; margin: 0 auto;">
+    <!-- Natural Language Query Input Box -->
+    <div class="db-query-wrapper">
+      <div class="db-input-box">
+        <i class="fa-solid fa-magnifying-glass input-icon"></i>
+        <input 
+          type="text" 
+          id="dbQueryInput" 
+          placeholder="e.g. 'Find audio products under $100 with rating above 4.5' or 'Average price by category'..."
+          autocomplete="off"
+        />
+        <button id="dbSubmitBtn" class="db-submit-btn">
+          <span>Query DB</span> <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Quick Prompt Chips -->
+    <div class="db-chips-container">
+      <div class="db-chip" data-query="Find all audio products under $100 with rating above 4.5">
+        <i class="fa-solid fa-music me-1 text-danger"></i> Audio under $100 (Rating ≥ 4.5)
+      </div>
+      <div class="db-chip" data-query="Show me all 1950s products">
+        <i class="fa-solid fa-clock-rotate-left me-1 text-danger"></i> 1950s Artifacts
+      </div>
+      <div class="db-chip" data-query="Top 3 most expensive cameras">
+        <i class="fa-solid fa-camera me-1 text-danger"></i> Top 3 Luxury Cameras
+      </div>
+      <div class="db-chip" data-query="Average price by category">
+        <i class="fa-solid fa-chart-pie me-1 text-danger"></i> Aggregation: Avg Price by Category
+      </div>
+      <div class="db-chip" data-query="How many users are registered?">
+        <i class="fa-solid fa-user-group me-1 text-danger"></i> Count Users
+      </div>
+      <div class="db-chip" data-query="Reviews with 5 stars">
+        <i class="fa-solid fa-star me-1 text-warning"></i> 5-Star Reviews
+      </div>
+    </div>
+
+    <!-- Loader -->
+    <div id="dbLoader" class="db-loader">
+      <div class="db-spinner"></div>
+      <p style="color: var(--retro-burgundy); font-weight: 500;">Agent is compiling natural query into MongoDB MQL...</p>
+    </div>
+
+    <!-- Results Section -->
+    <div id="dbResultsContainer" class="db-results-container">
+      
+      <!-- Generated MQL Code Box -->
+      <div class="db-card">
         <div class="db-card-header">
-          <div class="db-card-title">
-            <i class="fa-solid fa-book-atlas"></i> Retro Database Schema Catalog
-          </div>
-          <span class="badge bg-warning text-dark">MongoDB / Mongoose</span>
-        </div>
-        <div class="row g-4">
-          <div class="col-md-4">
-            <h5 style="color: #e5a95d;"><i class="fa-solid fa-box me-1"></i> Products Collection</h5>
-            <p class="text-muted small">Fields: <code>id</code>, <code>title</code>, <code>category</code>, <code>era</code>, <code>price_num</code>, <code>rating</code>, <code>aesthetic</code>, <code>tag</code>, <code>stock</code></p>
-          </div>
-          <div class="col-md-4">
-            <h5 style="color: #e5a95d;"><i class="fa-solid fa-users me-1"></i> Users Collection</h5>
-            <p class="text-muted small">Fields: <code>name</code>, <code>email</code>, <code>role</code>, <code>createdAt</code> <em>(passwords strictly protected)</em></p>
-          </div>
-          <div class="col-md-4">
-            <h5 style="color: #e5a95d;"><i class="fa-solid fa-comment-dots me-1"></i> Reviews Collection</h5>
-            <p class="text-muted small">Fields: <code>name</code>, <code>rating</code>, <code>comment</code>, <code>date</code>, <code>productId</code></p>
+          <h3 class="db-card-title">
+            <i class="fa-solid fa-terminal"></i> Generated MongoDB Query (MQL)
+          </h3>
+          <div class="d-flex gap-2">
+            <span id="dbTargetCollectionBadge" class="db-badge db-badge-success">Collection: products</span>
+            <span id="dbRecordCountBadge" class="db-badge db-badge-success">0 Records</span>
           </div>
         </div>
+        <div class="db-mql-box">
+          <button id="dbCopyCodeBtn" class="db-copy-code-btn"><i class="fa-regular fa-copy"></i> Copy MQL</button>
+          <pre><code id="dbMqlCode">// Generated query will appear here</code></pre>
+        </div>
+      </div>
+
+      <!-- AI Narrative Summary -->
+      <div class="db-card">
+        <div class="db-card-header">
+          <h3 class="db-card-title">
+            <i class="fa-solid fa-wand-magic-sparkles"></i> Agent Narrative Summary
+          </h3>
+        </div>
+        <div id="dbNarrative" class="db-narrative-text">
+          Results retrieved from database.
+        </div>
+      </div>
+
+      <!-- Results Grid / Table -->
+      <div class="db-card">
+        <div class="db-card-header">
+          <h3 class="db-card-title">
+            <i class="fa-solid fa-database"></i> Query Results Data
+          </h3>
+        </div>
+
+        <!-- Product Cards Grid -->
+        <div id="dbRecordsGrid" class="db-records-grid"></div>
+
+        <!-- Tabular View for Aggregations/Users/Reviews -->
+        <div id="dbTableViewWrapper" style="display: none;"></div>
       </div>
 
     </div>
-  </section>
 
-  <!-- Footer -->
-  <footer class="text-center py-4 text-muted small" style="background: #0d0b09; border-top: 1px solid #33271f;">
-    <div class="container">
-      <p class="mb-1" style="color: #b8a698;">&copy; 2026 Retro Vintage. Engineered with MongoDB, Express, and AI Database Agents.</p>
-      <p class="mb-0"><a href="../index.html" class="text-warning text-decoration-none">Return to Storefront</a> &bull; <a href="menu.html" class="text-warning text-decoration-none">Collections</a> &bull; <a href="about.html" class="text-warning text-decoration-none">About</a></p>
+    <!-- Schema Inspection Card -->
+    <div class="db-card mt-5" style="max-width: 960px; margin: 0 auto 50px;">
+      <div class="db-card-header">
+        <h3 class="db-card-title">
+          <i class="fa-solid fa-book-atlas"></i> Retro Database Schema Catalog
+        </h3>
+        <span class="badge bg-danger text-light">MongoDB / Mongoose</span>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <h5 style="color: var(--retro-burgundy); font-family: var(--ff-philosopher);">
+            <i class="fa-solid fa-box me-1"></i> Products Collection
+          </h5>
+          <p class="text-muted small">
+            Fields: <code>id</code>, <code>title</code>, <code>category</code>, <code>era</code>, <code>price_num</code>, <code>rating</code>, <code>aesthetic</code>, <code>tag</code>, <code>stock</code>
+          </p>
+        </div>
+        <div class="col-md-4">
+          <h5 style="color: var(--retro-burgundy); font-family: var(--ff-philosopher);">
+            <i class="fa-solid fa-users me-1"></i> Users Collection
+          </h5>
+          <p class="text-muted small">
+            Fields: <code>name</code>, <code>email</code>, <code>role</code>, <code>createdAt</code> <em>(passwords strictly protected)</em>
+          </p>
+        </div>
+        <div class="col-md-4">
+          <h5 style="color: var(--retro-burgundy); font-family: var(--ff-philosopher);">
+            <i class="fa-solid fa-comment-dots me-1"></i> Reviews Collection
+          </h5>
+          <p class="text-muted small">
+            Fields: <code>name</code>, <code>rating</code>, <code>comment</code>, <code>date</code>, <code>productId</code>
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Standard Retro Footer -->
+  <footer style="background-color: rgba(255, 255, 245, 0.95); border-top: 1px solid rgba(139, 36, 36, 0.15); padding: 30px 0; margin-top: 50px;">
+    <div class="container text-center">
+      <div class="mb-3">
+        <a class="fa-brands fa-facebook mx-2" href="https://facebook.com" style="color: hsl(203, 30%, 26%); font-size: 1.2rem;"></a>
+        <a class="fa-brands fa-instagram mx-2" href="https://instagram.com" style="color: hsl(203, 30%, 26%); font-size: 1.2rem;"></a>
+        <a class="fa-brands fa-x-twitter mx-2" href="https://twitter.com" style="color: hsl(203, 30%, 26%); font-size: 1.2rem;"></a>
+        <a class="fa-brands fa-youtube mx-2" href="https://www.youtube.com" style="color: hsl(203, 30%, 26%); font-size: 1.2rem;"></a>
+      </div>
+      <p class="mb-1" style="font-family: var(--ff-philosopher); color: hsl(203, 30%, 26%);">
+        &copy; 2026 Retro. All Rights Reserved. Timeless Vintage Collections & AI-Powered Discovery.
+      </p>
+      <p class="mb-0 text-muted small">
+        Made with ❤️ by <a href="https://www.linkedin.com" target="_blank" style="color: var(--retro-burgundy); font-weight: 600;">Retro Team</a>
+      </p>
     </div>
   </footer>
 
+  <!-- Scripts -->
+  <script src="../js/dark-mode.js"></script>
+  <script src="../js/rag-search.js"></script>
   <script src="../js/db-agent.js"></script>
 </body>
 </html>
