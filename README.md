@@ -80,6 +80,7 @@ Blending nostalgic charm from bygone eras with modern engineering, Retro brings 
 - **🌓 Dark Mode & Nostalgic Themes**: Seamless toggle between warm vintage parchment and elegant dark mode.
 - **⚡ Vercel Serverless Architecture**: Fast global CDN distribution, edge API routing, and continuous deployment.
 - **📱 Progressive Web App (PWA) Ready**: Includes service workers and manifest configuration for offline-first resilience.
+- **🗄️ AI Database Query Agent (Text-to-MQL)**: Ask questions in plain English to query the MongoDB product catalog, user registrations, customer feedback, and statistical aggregations with read-only security.
 
 ---
 
