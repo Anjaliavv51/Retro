@@ -220,6 +220,10 @@ app.post('/api/search/rag', handleRagRequest);
 app.get('/api/rag-search', handleRagRequest);
 app.post('/api/rag-search', handleRagRequest);
 
+// 8. Retro Natural Language Database Query Agent
+const dbAgentHandler = require('./db-agent.js');
+app.all('/api/db-agent*', dbAgentHandler);
+
 // Fallback for unmatched API routes
 app.all('/api/*', (req, res) => {
   res.status(404).json({
