@@ -1,0 +1,464 @@
+/* ==========================================================================
+   Retro AI Natural Language Database Query Agent - Stylesheet
+   ========================================================================== */
+
+:root {
+  --db-bg-dark: #12100e;
+  --db-panel-bg: rgba(28, 23, 20, 0.95);
+  --db-card-bg: rgba(38, 31, 26, 0.9);
+  --db-border: #4a382c;
+  --db-border-glow: #c88a4c;
+  --db-accent-gold: #e5a95d;
+  --db-accent-amber: #d97736;
+  --db-text-main: #f5ede4;
+  --db-text-muted: #b8a698;
+  --db-code-bg: #0d0b09;
+  --db-badge-green: #2e7d32;
+  --db-font-serif: 'Philosopher', 'Cinzel', serif;
+  --db-font-sans: 'Poppins', sans-serif;
+}
+
+body.db-agent-page {
+  background: radial-gradient(circle at 50% 20%, #291d15 0%, #120e0b 80%);
+  color: var(--db-text-main);
+  font-family: var(--db-font-sans);
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.db-hero-section {
+  padding: 110px 20px 40px;
+  text-align: center;
+  position: relative;
+}
+
+.db-hero-section::before {
+  content: '';
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 280px;
+  height: 280px;
+  background: radial-gradient(circle, rgba(229, 169, 93, 0.15) 0%, transparent 70%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.db-title-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(229, 169, 93, 0.12);
+  border: 1px solid rgba(229, 169, 93, 0.4);
+  padding: 6px 18px;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--db-accent-gold);
+  margin-bottom: 16px;
+}
+
+.db-hero-section h1 {
+  font-family: var(--db-font-serif);
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin: 0 0 12px;
+  color: #fff;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+}
+
+.db-hero-section h1 span {
+  color: var(--db-accent-gold);
+  font-style: italic;
+}
+
+.db-hero-subtitle {
+  color: var(--db-text-muted);
+  font-size: 1.05rem;
+  max-width: 720px;
+  margin: 0 auto 30px;
+  line-height: 1.6;
+}
+
+/* Statistics Bar */
+.db-stats-bar {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  max-width: 880px;
+  margin: 0 auto 40px;
+}
+
+.db-stat-pill {
+  background: var(--db-card-bg);
+  border: 1px solid var(--db-border);
+  padding: 12px 22px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.db-stat-pill:hover {
+  transform: translateY(-2px);
+  border-color: var(--db-border-glow);
+}
+
+.db-stat-pill i {
+  font-size: 1.3rem;
+  color: var(--db-accent-gold);
+}
+
+.db-stat-info {
+  text-align: left;
+}
+
+.db-stat-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: var(--db-text-muted);
+  letter-spacing: 0.5px;
+}
+
+.db-stat-val {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+/* Query Input Section */
+.db-query-wrapper {
+  max-width: 880px;
+  margin: 0 auto 25px;
+  position: relative;
+}
+
+.db-input-box {
+  display: flex;
+  align-items: center;
+  background: var(--db-panel-bg);
+  border: 2px solid var(--db-border);
+  border-radius: 16px;
+  padding: 8px 12px 8px 20px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.db-input-box:focus-within {
+  border-color: var(--db-accent-gold);
+  box-shadow: 0 8px 35px rgba(229, 169, 93, 0.25);
+}
+
+.db-input-box i.input-icon {
+  font-size: 1.3rem;
+  color: var(--db-accent-gold);
+  margin-right: 14px;
+}
+
+.db-input-box input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 1.05rem;
+  font-family: var(--db-font-sans);
+}
+
+.db-input-box input::placeholder {
+  color: #7d6b5e;
+}
+
+.db-submit-btn {
+  background: linear-gradient(135deg, #d97736 0%, #9e4318 100%);
+  color: #fff;
+  border: 1px solid #ff9d5c;
+  padding: 12px 26px;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+  font-family: var(--db-font-sans);
+}
+
+.db-submit-btn:hover {
+  background: linear-gradient(135deg, #eb8742 0%, #b8501f 100%);
+  transform: scale(1.02);
+  box-shadow: 0 4px 15px rgba(217, 119, 54, 0.4);
+}
+
+/* Prompt Chips */
+.db-chips-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  max-width: 880px;
+  margin: 0 auto 40px;
+}
+
+.db-chip {
+  background: rgba(46, 37, 30, 0.85);
+  border: 1px solid var(--db-border);
+  color: var(--db-text-muted);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.82rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.db-chip:hover {
+  background: rgba(229, 169, 93, 0.15);
+  border-color: var(--db-accent-gold);
+  color: var(--db-text-main);
+  transform: translateY(-1px);
+}
+
+/* Results & Intelligence Container */
+.db-results-container {
+  max-width: 980px;
+  margin: 0 auto 60px;
+  padding: 0 20px;
+  display: none;
+}
+
+.db-results-container.active {
+  display: block;
+  animation: fadeIn 0.4s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Card Section */
+.db-card {
+  background: var(--db-panel-bg);
+  border: 1px solid var(--db-border);
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.db-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(74, 56, 44, 0.5);
+  padding-bottom: 12px;
+  margin-bottom: 18px;
+}
+
+.db-card-title {
+  font-family: var(--db-font-serif);
+  font-size: 1.3rem;
+  color: var(--db-accent-gold);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.db-badge {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.db-badge-success {
+  background: rgba(46, 125, 50, 0.2);
+  border: 1px solid #4caf50;
+  color: #81c784;
+}
+
+/* Code Output */
+.db-mql-box {
+  background: var(--db-code-bg);
+  border: 1px solid #33271f;
+  border-radius: 10px;
+  padding: 16px;
+  overflow-x: auto;
+  font-family: 'Consolas', 'Courier New', monospace;
+  font-size: 0.92rem;
+  color: #79c0ff;
+  line-height: 1.5;
+  position: relative;
+}
+
+.db-copy-code-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  color: var(--db-text-muted);
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.db-copy-code-btn:hover {
+  background: rgba(255,255,255,0.2);
+  color: #fff;
+}
+
+/* Narrative Output */
+.db-narrative-text {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--db-text-main);
+}
+
+/* Products Result Grid */
+.db-records-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.db-record-card {
+  background: var(--db-card-bg);
+  border: 1px solid var(--db-border);
+  border-radius: 12px;
+  padding: 16px;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.db-record-card:hover {
+  border-color: var(--db-border-glow);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+.db-record-img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  background: #1e1713;
+}
+
+.db-record-title {
+  font-family: var(--db-font-serif);
+  font-size: 1.15rem;
+  color: #fff;
+  margin: 0 0 6px;
+}
+
+.db-record-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: var(--db-accent-gold);
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.db-record-desc {
+  font-size: 0.82rem;
+  color: var(--db-text-muted);
+  line-height: 1.4;
+  margin-bottom: 12px;
+  flex: 1;
+}
+
+/* Table View for Users/Reviews/Aggregation */
+.db-table-responsive {
+  overflow-x: auto;
+}
+
+.db-data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.db-data-table th, .db-data-table td {
+  padding: 12px 14px;
+  text-align: left;
+  border-bottom: 1px solid rgba(74, 56, 44, 0.4);
+}
+
+.db-data-table th {
+  background: rgba(229, 169, 93, 0.08);
+  color: var(--db-accent-gold);
+  font-family: var(--db-font-serif);
+  font-size: 0.95rem;
+}
+
+.db-data-table tr:hover td {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+/* Loading Spinner */
+.db-loader {
+  display: none;
+  text-align: center;
+  padding: 30px 0;
+}
+
+.db-loader.active {
+  display: block;
+}
+
+.db-spinner {
+  width: 48px;
+  height: 48px;
+  border: 4px solid rgba(229, 169, 93, 0.2);
+  border-top-color: var(--db-accent-gold);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin: 0 auto 16px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Schema Explorer Modal / Panel */
+.db-tabs {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--db-border);
+  padding-bottom: 12px;
+}
+
+.db-tab-btn {
+  background: transparent;
+  border: 1px solid transparent;
+  color: var(--db-text-muted);
+  padding: 8px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: var(--db-font-sans);
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.db-tab-btn.active {
+  background: rgba(229, 169, 93, 0.15);
+  border-color: var(--db-accent-gold);
+  color: var(--db-accent-gold);
+}
