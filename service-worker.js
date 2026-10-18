@@ -8,6 +8,8 @@ const urlsToCache = [
   '/manifest.json',
   '/image/favicon-192x192.png',
   '/image/favicon-512x512.png'
+,
+  '/html/db-agent.html'
 ];
 
 // Install: pre-cache critical assets
