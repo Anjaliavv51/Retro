@@ -18,6 +18,8 @@
     { "src": "/booknow", "dest": "/html/booknow.html" },
     { "src": "/electronic", "dest": "/html/Electronic.html" },
     { "src": "/coverpage", "dest": "/html/Coverpage.html" },
+    { "src": "/db-agent", "dest": "/html/db-agent.html" },
+    { "src": "/api/db-agent(.*)", "dest": "/api/db-agent.js" },
     { "src": "/api/search/rag", "dest": "/api/rag-search.js" },
     { "src": "/api/rag-search", "dest": "/api/rag-search.js" },
     { "src": "/api/(.*)", "dest": "/api/index.js" },
