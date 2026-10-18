@@ -17,7 +17,8 @@
 }
 
 /* Nav Trigger Button */
-.rag-nav-trigger {
+.rag-nav-trigger,
+.db-nav-trigger {
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -36,14 +37,16 @@
   text-decoration: none !important;
 }
 
-.rag-nav-trigger:hover {
+.rag-nav-trigger:hover,
+.db-nav-trigger:hover {
   transform: translateY(-2px) scale(1.02);
   box-shadow: 0 6px 16px rgba(122, 29, 46, 0.35), 0 0 10px var(--rag-gold-glow);
   color: #fff !important;
   border-color: var(--rag-gold);
 }
 
-.rag-nav-trigger i {
+.rag-nav-trigger i,
+.db-nav-trigger i {
   color: #ffd700;
   font-size: 0.95rem;
   animation: ragSparkle 2.5s infinite ease-in-out;
