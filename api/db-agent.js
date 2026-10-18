@@ -10,10 +10,11 @@ module.exports = async (req, res) => {
     return res.status(200).end();
   }
 
-  const path = req.url || '';
+  const path = req.originalUrl || req.url || '';
+  const action = req.query?.action || '';
 
   // 1. Stats endpoint
-  if (path.includes('/stats')) {
+  if (path.includes('/stats') || action === 'stats') {
     return res.status(200).json({
       success: true,
       status: 'online',
@@ -31,7 +32,7 @@ module.exports = async (req, res) => {
   }
 
   // 2. Schema catalog
-  if (path.includes('/schema')) {
+  if (path.includes('/schema') || action === 'schema') {
     return res.status(200).json({
       success: true,
       schemas: SCHEMA_CATALOG
@@ -39,7 +40,7 @@ module.exports = async (req, res) => {
   }
 
   // 3. Examples
-  if (path.includes('/examples')) {
+  if (path.includes('/examples') || action === 'examples') {
     return res.status(200).json({
       success: true,
       examples: [
