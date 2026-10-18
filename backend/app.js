@@ -1,7 +1,17 @@
+// Node.js 26+ compatibility polyfill for legacy dependencies
+const bufferModule = require('buffer');
+if (!bufferModule.SlowBuffer) {
+  bufferModule.SlowBuffer = bufferModule.Buffer;
+}
+if (typeof SlowBuffer === 'undefined') {
+  global.SlowBuffer = bufferModule.Buffer;
+}
+
 const express = require('express');
 const app = express();
 
 const authRouter = require('./router/authRoute.js');
+const dbAgentRouter = require('./router/dbAgentRoute.js');
 const databaseconnect = require('./config/databaseConfig.js');
 const cookieParser = require('cookie-parser');
 const cors = require('cors');
@@ -36,6 +46,9 @@ app.get('/csrf-token', csrfProtect, (req, res) => {
 
 // Auth routes
 app.use('/api/auth', csrfProtect, limiter, authRouter);
+
+// Retro AI Database Agent routes
+app.use('/api/db-agent', limiter, dbAgentRouter);
 
 // Global error handler
 app.use((err, req, res, next) => {
