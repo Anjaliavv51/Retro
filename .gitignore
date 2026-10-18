@@ -23,3 +23,6 @@ user_interactions.csv
 .DS_Store
 Thumbs.db
 git.bat
+
+# Agent local cache & run summary
+scripts/maintenance-agent/last-run-summary.md
