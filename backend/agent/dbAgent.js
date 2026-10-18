@@ -4,7 +4,12 @@
  * and executes them with full read-only security guardrails.
  */
 
-const mongoose = require('mongoose');
+let mongoose;
+try {
+  mongoose = require('mongoose');
+} catch (e) {
+  mongoose = { connection: { readyState: 0 } };
+}
 const { defaultProducts, defaultReviews, defaultUsers } = require('../config/seedData.js');
 
 // Lazy-load models
