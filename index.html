@@ -486,12 +486,12 @@ p {
                         </li>
                     </ul>
                 </div>
-                <button class="rag-nav-trigger" id="ragNavBtn" title="Search vintage products using natural language AI">
+                <button class="rag-nav-trigger" id="ragNavBtn" onclick="if(window.RetroRAG) window.RetroRAG.open();" title="Search vintage products using natural language AI">
                     <i class="fa-solid fa-wand-magic-sparkles"></i>
                     <span class="rag-text">AI Search</span>
                     <span class="rag-pill">RAG</span>
                 </button>
-                <a href="html/db-agent.html" class="rag-nav-trigger" title="Natural Language Database Query Agent (Text-to-MQL)">
+                <a href="html/db-agent.html" class="db-nav-trigger" title="Natural Language Database Query Agent (Text-to-MQL)">
                     <i class="fa-solid fa-database"></i>
                     <span class="rag-text">DB Agent</span>
                     <span class="rag-pill">MQL</span>
@@ -1251,9 +1251,11 @@ scrollToTopBtn.addEventListener("click", function() {
     // Listen for the window load event
     window.addEventListener('load', function() {
         setTimeout(function() {
-            preloader.classList.add('hidden');
-            mainContent.classList.remove('hidden');
-            mainContent.classList.add('visible');
+            if (preloader) preloader.classList.add('hidden');
+            if (mainContent) {
+                mainContent.classList.remove('hidden');
+                mainContent.classList.add('visible');
+            }
         }, 3000); 
     });
 });
@@ -1313,7 +1315,6 @@ scrollToTopBtn.addEventListener("click", function() {
   });
 }
 </script>
-</script>  
 
 
 <br /><br />
@@ -1328,7 +1329,6 @@ scrollToTopBtn.addEventListener("click", function() {
 
     </div>
 
-    <script src="js/popup.js"></script>
     <script src="js/visi.js"></script>
     <script src="js/dark-mode.js"></script>
     <script src="js/rag-search.js"></script>
