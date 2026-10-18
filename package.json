@@ -7,7 +7,9 @@
     "start": "node server/server.js",
     "server": "node server/server.js",
     "backend": "node backend/index.js",
-    "test:db-agent": "node backend/test_db_agent_endpoints.js"
+    "test:db-agent": "node backend/test_db_agent_endpoints.js",
+    "agent:daily": "node scripts/maintenance-agent/runner.js",
+    "agent:dry-run": "node scripts/maintenance-agent/runner.js --dry-run"
   },
   "repository": {
     "type": "git",
