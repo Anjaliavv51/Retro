@@ -1,10 +1,10 @@
 {
   "heartbeatDate": "2026-10-19",
-  "timestamp": "2026-10-19T07:16:28.120Z",
+  "timestamp": "2026-10-19T07:25:51.077Z",
   "status": "OPERATIONAL",
   "environment": {
-    "nodeVersion": "v26.10.0",
-    "platform": "win32",
+    "nodeVersion": "v20.20.2",
+    "platform": "linux",
     "arch": "x64"
   },
   "agentStatus": {
