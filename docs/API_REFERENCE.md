@@ -1,44 +1,45 @@
-# 📡 Retro API Reference Manual
+# 📖 Retro Vintage E-Commerce API Reference
 
-Comprehensive documentation of all available serverless edge routes, backend controllers, and AI agent endpoints.
+> Last synchronized with production routes: **2026-10-19** (2026-10-19T07:16:16.501Z)
 
 ---
 
-## 🗄️ Database & AI Agent Endpoints
+## 🌟 Overview
+This documentation provides a comprehensive specification of all active RESTful APIs, database agents, and serverless handlers in the Retro project.
 
-| Method | Endpoint | Description | Auth Required |
+---
+
+## 1. 🤖 Database AI Agent Endpoints
+**Base Path**: `/api/db-agent`
+
+| Method | Endpoint / Action | Description | Sample Query / Body |
 | :--- | :--- | :--- | :--- |
-| `GET`, `POST` | `/api/db-agent/query` | Executes natural language query translated into safe MongoDB MQL. | No (Read-Only) |
-| `GET` | `/api/db-agent/schema` | Retrieves database schema introspection data for AI and admins. | No |
-| `GET` | `/api/db-agent/stats` | Reports active MongoDB connection state and collection record counts. | No |
-| `GET` | `/api/db-agent/examples` | Returns curated quick-start sample queries for the UI console. | No |
-| `GET`, `POST` | `/api/search/rag` | Retrieval-Augmented Generation product search across vintage catalog. | No |
-| `GET`, `POST` | `/api/rag-search` | Alias endpoint for RAG semantic product retrieval. | No |
+| **GET** | `/schema` | Retrieves database schema summary for products, users, and reviews | `/api/db-agent/schema` |
+| **GET** | `/examples` | Returns sample natural-language queries supported by agent | `/api/db-agent/examples` |
+| **GET** | `?query=<nl_query>` | Translates natural language query into MongoDB command and executes | `?query=Find audio under $100` |
+| **POST** | `/` | Executes JSON payload with natural language query | `{ "query": "Top 3 highest rated cameras" }` |
 
 ---
 
-## 📦 Storefront & Utility Endpoints
+## 2. 🛍️ Storefront & Products Endpoints
+**Base Path**: `/api` or local `http://localhost:5000`
 
-| Method | Endpoint | Description | Auth Required |
-| :--- | :--- | :--- | :--- |
-| `GET` | `/api/health` | Health check reporting platform, uptime, and status. | No |
-| `GET` | `/api/message` | Welcome message and platform announcement banner. | No |
-| `GET` | `/api/products` | Dynamic list of featured vintage catalog products. | No |
-| `POST` | `/api/contact` | Submits customer inquiries and generates support ticket IDs. | No |
-| `POST` | `/api/newsletter` | Enrolls customer email into vintage drops & promotions. | No |
-| `GET` | `/api/reviews` | Retrieves verified customer feedback and star ratings. | No |
-| `POST` | `/api/reviews` | Submits a new customer product review. | No |
+| Method | Endpoint | Description |
+| :--- | :--- | :--- |
+| **GET** | `/products` | Retrieves complete vintage product catalog |
+| **GET** | `/reviews` | Retrieves recent customer reviews |
+| **POST** | `/reviews` | Submits a new user product review |
+| **GET** | `/cart` | Gets session shopping cart contents |
 
 ---
 
-## 🔐 Authentication Endpoints
-
-| Method | Endpoint | Description | Auth Required |
-| :--- | :--- | :--- | :--- |
-| `POST` | `/api/auth/signup` | Registers a new user account with hashed credentials. | No |
-| `POST` | `/api/auth/signin` | Authenticates user credentials and issues JWT cookie. | No |
-| `POST` | `/api/auth/logout` | Invalidates authentication session and clears cookie. | Yes (JWT) |
-| `GET` | `/api/auth/user` | Retrieves authenticated user profile details. | Yes (JWT) |
+## 3. 🔐 Authentication & Session
+| Method | Endpoint | Description |
+| :--- | :--- | :--- |
+| **POST** | `/login` | User authentication and session token issuance |
+| **POST** | `/signup` | New vintage customer registration |
+| **GET** | `/logout` | Invalidates active user session |
 
 ---
-*Auto-generated and maintained by Retro Maintenance Agent.*
+
+*Automated sync managed by Retro Daily Maintenance Agent.*
