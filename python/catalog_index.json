@@ -1,0 +1,17 @@
+{
+  "auditDate": "2026-10-19",
+  "generatedAt": "2026-10-19T07:16:12.803Z",
+  "catalogChecksum": "55f780e31d16",
+  "totalProducts": 16,
+  "averagePrice": 72.67,
+  "categories": {
+    "Audio & Music": 3,
+    "Photography": 2,
+    "Writing & Office": 2,
+    "Telephony & Comms": 3,
+    "Entertainment & Screens": 1,
+    "Decor & Collectibles": 3,
+    "Entertainment & Nostalgia": 2
+  },
+  "status": "VERIFIED_OPTIMAL"
+}
