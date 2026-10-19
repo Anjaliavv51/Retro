@@ -17,8 +17,12 @@ module.exports = {
       }
     }
 
+    const now = new Date();
+    const dateStr = now.toISOString().split('T')[0];
+
     const testContent = `/**
  * Automated Schema Integrity & Model Validation Tests
+ * Verified by Retro Maintenance Agent: ${dateStr}
  */
 
 // Node 26 compatibility

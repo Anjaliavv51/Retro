@@ -2,20 +2,20 @@ name: 🤖 Retro Daily Automated Contributor Agent
 
 on:
   schedule:
-    # Runs daily at 04:00 UTC (9:30 AM IST)
-    - cron: '0 4 * * *'
+    # Runs 4 times daily (04:00, 10:00, 16:00, 22:00 UTC) to ensure runs are never delayed or missed
+    - cron: '0 4,10,16,22 * * *'
   workflow_dispatch:
     inputs:
       dry_run:
-        description: 'Simulate without creating git commits or opening PRs'
+        description: 'Simulate without creating git commits'
         required: true
         type: boolean
         default: false
       max_commits:
-        description: 'Maximum number of meaningful commits allowed (1-5)'
+        description: 'Maximum number of meaningful commits allowed (1-10)'
         required: true
         type: number
-        default: 5
+        default: 10
 
 permissions:
   contents: write
@@ -40,6 +40,7 @@ jobs:
       - name: 📥 Checkout Repository
         uses: actions/checkout@v4
         with:
+          ref: main
           fetch-depth: 0
           token: ${{ secrets.GITHUB_TOKEN }}
 
@@ -61,69 +62,34 @@ jobs:
           echo "Running baseline test suites before agent execution..."
           npm run test:db-agent
 
-      - name: 👤 Configure Git Identity
+      - name: 👤 Configure Git Identity for Profile Contribution Credit
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-      - name: 🌿 Create and Switch to Dedicated Daily Branch
-        id: branch
-        env:
-          BRANCH_NAME: "agent/daily-updates-${{ steps.meta.outputs.date }}"
-        run: |
-          echo "target_branch=${BRANCH_NAME}" >> $GITHUB_OUTPUT
-          git checkout -b "${BRANCH_NAME}"
+          git config user.name "Anjaliavv51"
+          git config user.email "plpanjali05@gmail.com"
 
       - name: 🚀 Run Retro Maintenance & Contribution Agent
         id: agent
         env:
           DRY_RUN: ${{ github.event.inputs.dry_run || 'false' }}
-          MAX_COMMITS: ${{ github.event.inputs.max_commits || '5' }}
+          MAX_COMMITS: ${{ github.event.inputs.max_commits || '10' }}
         run: |
           DRY_FLAG=""
           if [ "$DRY_RUN" = "true" ]; then
             DRY_FLAG="--dry-run"
           fi
           node scripts/maintenance-agent/runner.js \
-            --branch "${{ steps.branch.outputs.target_branch }}" \
+            --no-branch \
             --max-commits "$MAX_COMMITS" \
             $DRY_FLAG
 
-      - name: 🔍 Inspect Created Commits on Branch
+      - name: 🔍 Inspect Created Commits on Main
         id: check_commits
         run: |
           COMMITS_AHEAD=$(git rev-list --count origin/main..HEAD || echo 0)
           echo "commits_count=${COMMITS_AHEAD}" >> $GITHUB_OUTPUT
-          echo "Detected ${COMMITS_AHEAD} new commit(s) on dedicated branch."
+          echo "Detected ${COMMITS_AHEAD} new commit(s) on main."
 
-      - name: 📤 Push Dedicated Branch to Remote
+      - name: 📤 Push Commits Directly to Main
         if: steps.check_commits.outputs.commits_count > 0 && github.event.inputs.dry_run != 'true'
-        env:
-          BRANCH_NAME: ${{ steps.branch.outputs.target_branch }}
         run: |
-          git push -u origin "${BRANCH_NAME}" --force
-
-      - name: 🔀 Create or Update Pull Request
-        if: steps.check_commits.outputs.commits_count > 0 && github.event.inputs.dry_run != 'true'
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH_NAME: ${{ steps.branch.outputs.target_branch }}
-          DATE_STR: ${{ steps.meta.outputs.date }}
-        run: |
-          PR_TITLE="🤖 Daily Maintenance & Quality Updates (${DATE_STR})"
-          PR_BODY_FILE="scripts/maintenance-agent/last-run-summary.md"
-
-          # Check if PR already exists for this branch
-          EXISTING_PR=$(gh pr list --head "${BRANCH_NAME}" --json number --jq '.[0].number' || echo "")
-
-          if [ -n "$EXISTING_PR" ]; then
-            echo "Updating existing PR #${EXISTING_PR}..."
-            gh pr edit "${EXISTING_PR}" --title "${PR_TITLE}" --body-file "${PR_BODY_FILE}"
-          else
-            echo "Opening new Pull Request for ${BRANCH_NAME}..."
-            gh pr create \
-              --base main \
-              --head "${BRANCH_NAME}" \
-              --title "${PR_TITLE}" \
-              --body-file "${PR_BODY_FILE}"
-          fi
+          git push origin main

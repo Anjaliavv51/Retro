@@ -26,9 +26,14 @@ function resolveGit() {
     execSync('git --version', { stdio: 'ignore' });
     return 'git';
   } catch (e) {
-    const winGit = 'C:\\Users\\plpan\\AppData\\Local\\GitHubDesktop\\app-3.6.6\\resources\\app\\git\\cmd\\git.exe';
-    if (fs.existsSync(winGit)) {
-      return `"${winGit}"`;
+    const localAppData = process.env.LOCALAPPDATA || 'C:\\Users\\plpan\\AppData\\Local';
+    const ghDesktop = path.join(localAppData, 'GitHubDesktop');
+    if (fs.existsSync(ghDesktop)) {
+      const apps = fs.readdirSync(ghDesktop).filter(f => f.startsWith('app-')).sort().reverse();
+      for (const app of apps) {
+        const gitPath = path.join(ghDesktop, app, 'resources', 'app', 'git', 'cmd', 'git.exe');
+        if (fs.existsSync(gitPath)) return `"${gitPath}"`;
+      }
     }
     return 'git';
   }
@@ -50,14 +55,14 @@ function parseArgs() {
   const args = process.argv.slice(2);
   const options = {
     dryRun: args.includes('--dry-run'),
-    maxCommits: 5,
+    maxCommits: 10,
     branch: '',
     noBranch: args.includes('--no-branch')
   };
 
   const maxIndex = args.indexOf('--max-commits');
   if (maxIndex !== -1 && args[maxIndex + 1]) {
-    options.maxCommits = parseInt(args[maxIndex + 1], 10) || 5;
+    options.maxCommits = parseInt(args[maxIndex + 1], 10) || 10;
   }
 
   const branchIndex = args.indexOf('--branch');
@@ -65,7 +70,7 @@ function parseArgs() {
     options.branch = args[branchIndex + 1];
   } else {
     const today = new Date().toISOString().split('T')[0];
-    options.branch = `agent/daily-updates-${today}`;
+    options.branch = options.noBranch ? 'main' : `agent/daily-updates-${today}`;
   }
 
   return options;
@@ -187,7 +192,7 @@ async function main() {
         let commitHash = 'dry-run';
         if (!opts.dryRun) {
           runCommand(`${GIT} add "${result.file}"`);
-          runCommand(`${GIT} commit -m "${result.commitMessage}"`);
+          runCommand(`${GIT} commit --author="Anjaliavv51 <plpanjali05@gmail.com>" -m "${result.commitMessage}"`);
           commitHash = runCommand(`${GIT} rev-parse --short HEAD`);
           console.log(`  🎉 Created commit ${commitHash} for ${result.file}`);
         } else {
