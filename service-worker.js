@@ -1,4 +1,4 @@
-const CACHE_NAME = 'retro-vintage-cache-v2026.10.26';
+const CACHE_NAME = 'retro-vintage-cache-v2026.10.27';
 const urlsToCache = [
   '/',
   '/index.html',
