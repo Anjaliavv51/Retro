@@ -1,35 +1,4 @@
-# Dependencies
-node_modules/
-venv/
-package-lock.json
-
-# Environment and Secrets
-.env*
-!.env.example
-
-# Python
-__pycache__/
-*.py[cod]
-*$py.class
-*.db
-user_interactions.csv
-
-# Vercel local cache
-.vercel
-
-# IDE & OS
-.vscode/
-.idea/
-.DS_Store
-Thumbs.db
-git.bat
-
-# Agent local cache & run summary
-scripts/maintenance-agent/last-run-summary.md
-
+﻿node_modules/
+server/node_modules/
 .env
-.env.local
-.env.*.local
-*.key
-*.pem
-scratch/
+dist/

@@ -1,12 +1,5 @@
-.git
-.github
-.vscode
-.idea
-venv
-node_modules
-backend/node_modules
+﻿node_modules
 server/node_modules
-python
-docker
-*.bat
-*.log
+.git
+.env
+dist
