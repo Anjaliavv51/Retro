@@ -1,4 +1,31 @@
-﻿node_modules/
+﻿# Dependencies
+node_modules/
+**/node_modules/
 server/node_modules/
+backend/node_modules/
+
+# Python Virtual Environments & Cache
+venv/
+.venv/
+env/
+__pycache__/
+*.py[cod]
+python/__pycache__/
+
+# Environment & Secrets
 .env
+.env.*
+!.env.example
+
+# Build Artifacts
 dist/
+build/
+.vercel/
+
+# Data & Logs
+*.log
+*.csv
+user_interactions.csv
+
+# Local helper scripts
+git.bat

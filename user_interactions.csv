@@ -1,0 +1,9 @@
+user_id,item_id,interaction
+1,prod-1,5
+1,1.02,4
+2,prod-3,5
+2,2.04,4
+3,prod-4,5
+3,2.03,4
+4,prod-1,4
+4,prod-2,5
