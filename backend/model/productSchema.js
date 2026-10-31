@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+﻿const mongoose = require('mongoose');
 
 const productSchema = new mongoose.Schema(
   {
@@ -81,4 +81,8 @@ productSchema.index({
 });
 
 const productModel = mongoose.models.Product || mongoose.model('Product', productSchema);
-module.exports = productModel;
+module.exports =
+// Added index for performance
+if (typeof productSchema !== 'undefined') { productSchema.index({ category: 1, isAvailable: 1 }); }
+ productModel;
+
