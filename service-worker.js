@@ -1,4 +1,4 @@
-const CACHE_NAME = 'retro-vintage-cache-v2026.10.31';
+﻿const CACHE_NAME = 'retro-vintage-cache-v3';
 const urlsToCache = [
   '/',
   '/index.html',
@@ -73,3 +73,4 @@ self.addEventListener('fetch', (event) => {
     })
   );
 });
+
