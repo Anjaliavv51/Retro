@@ -1,3 +1,4 @@
+﻿const compression = require('compression');
 // Node.js 26+ compatibility polyfill for legacy dependencies
 const bufferModule = require('buffer');
 if (!bufferModule.SlowBuffer) {
@@ -9,6 +10,7 @@ if (typeof SlowBuffer === 'undefined') {
 
 const express = require('express');
 const app = express();
+app.use(compression());
 
 const authRouter = require('./router/authRoute.js');
 const dbAgentRouter = require('./router/dbAgentRoute.js');
@@ -60,3 +62,4 @@ app.use((err, req, res, next) => {
 });
 
 module.exports = app;
+
