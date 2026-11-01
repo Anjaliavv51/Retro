@@ -24,8 +24,8 @@ build/
 
 # Data & Logs
 *.log
-*.csv
-user_interactions.csv
+
+
 
 # Local helper scripts
 git.bat
