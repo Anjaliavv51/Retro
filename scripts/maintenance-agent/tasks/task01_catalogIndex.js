@@ -18,7 +18,7 @@ module.exports = {
 
     const raw = fs.readFileSync(CATALOG_PATH, 'utf8');
     const products = JSON.parse(raw);
-    const now = new Date();
+    const now = (opts && opts.timestamp) ? new Date(opts.timestamp) : new Date();
     const dateStr = now.toISOString().split('T')[0];
 
     // Compute metrics

@@ -41,9 +41,9 @@ function resolveGit() {
 
 const GIT = resolveGit();
 
-function runCommand(cmd, cwd = REPO_ROOT) {
+function runCommand(cmd, cwd = REPO_ROOT, extraEnv = {}) {
   try {
-    return execSync(cmd, { cwd, encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe'] }).trim();
+    return execSync(cmd, { cwd, encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe'], env: { ...process.env, ...extraEnv } }).trim();
   } catch (err) {
     const errorDetails = (err.stdout || '') + (err.stderr || '') + (err.message || '');
     throw new Error(`Command failed: ${cmd}\n${errorDetails}`);
@@ -57,7 +57,8 @@ function parseArgs() {
     dryRun: args.includes('--dry-run'),
     maxCommits: 10,
     branch: '',
-    noBranch: args.includes('--no-branch')
+    noBranch: args.includes('--no-branch'),
+    timestamp: ''
   };
 
   const maxIndex = args.indexOf('--max-commits');
@@ -65,11 +66,16 @@ function parseArgs() {
     options.maxCommits = parseInt(args[maxIndex + 1], 10) || 10;
   }
 
+  const timestampIndex = args.indexOf('--timestamp');
+  if (timestampIndex !== -1 && args[timestampIndex + 1]) {
+    options.timestamp = args[timestampIndex + 1];
+  }
+
   const branchIndex = args.indexOf('--branch');
   if (branchIndex !== -1 && args[branchIndex + 1]) {
     options.branch = args[branchIndex + 1];
   } else {
-    const today = new Date().toISOString().split('T')[0];
+    const today = (options.timestamp ? new Date(options.timestamp) : new Date()).toISOString().split('T')[0];
     options.branch = options.noBranch ? 'main' : `agent/daily-updates-${today}`;
   }
 
@@ -78,7 +84,7 @@ function parseArgs() {
 
 async function main() {
   const opts = parseArgs();
-  const startTime = new Date();
+  const startTime = opts.timestamp ? new Date(opts.timestamp) : new Date();
   console.log('====================================================');
   console.log('🤖 Retro Daily Contribution & Quality Agent Starting');
   console.log(`🕒 Timestamp: ${startTime.toISOString()}`);
@@ -192,7 +198,12 @@ async function main() {
         let commitHash = 'dry-run';
         if (!opts.dryRun) {
           runCommand(`${GIT} add "${result.file}"`);
-          runCommand(`${GIT} commit --author="Anjaliavv51 <plpanjali05@gmail.com>" -m "${result.commitMessage}"`);
+          const commitEnv = {};
+          if (opts.timestamp) {
+            commitEnv.GIT_AUTHOR_DATE = opts.timestamp;
+            commitEnv.GIT_COMMITTER_DATE = opts.timestamp;
+          }
+          runCommand(`${GIT} commit --author="Anjaliavv51 <plpanjali05@gmail.com>" -m "${result.commitMessage}"`, REPO_ROOT, commitEnv);
           commitHash = runCommand(`${GIT} rev-parse --short HEAD`);
           console.log(`  🎉 Created commit ${commitHash} for ${result.file}`);
         } else {

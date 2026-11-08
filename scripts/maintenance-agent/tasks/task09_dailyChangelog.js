@@ -10,7 +10,7 @@ module.exports = {
   description: 'Maintains chronological audit logs of automated daily maintenance activities.',
 
   async run(opts = {}) {
-    const now = new Date();
+    const now = (opts && opts.timestamp) ? new Date(opts.timestamp) : new Date();
     const dateStr = now.toISOString().split('T')[0];
     const logHeader = `## [${dateStr}] - Daily Maintenance Cycle`;
 

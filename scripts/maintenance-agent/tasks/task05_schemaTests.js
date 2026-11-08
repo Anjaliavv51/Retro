@@ -17,7 +17,7 @@ module.exports = {
       }
     }
 
-    const now = new Date();
+    const now = (opts && opts.timestamp) ? new Date(opts.timestamp) : new Date();
     const dateStr = now.toISOString().split('T')[0];
 
     const testContent = `/**

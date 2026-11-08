@@ -10,7 +10,7 @@ module.exports = {
   description: 'Calculates static file sizes for storefront assets and checks against performance budgets.',
 
   async run(opts = {}) {
-    const now = new Date();
+    const now = (opts && opts.timestamp) ? new Date(opts.timestamp) : new Date();
     const dateStr = now.toISOString().split('T')[0];
 
     const targets = [

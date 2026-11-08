@@ -10,7 +10,7 @@ module.exports = {
   description: 'Evaluates endpoint response health, runs query translation checks, and logs daily health metrics.',
 
   async run(opts = {}) {
-    const now = new Date();
+    const now = (opts && opts.timestamp) ? new Date(opts.timestamp) : new Date();
     const dateStr = now.toISOString().split('T')[0];
 
     const content = `# 🩺 Daily API Endpoint Health & Reliability Report (${dateStr})

@@ -11,7 +11,7 @@ module.exports = {
   description: 'Audits root and backend dependencies, checks version constraints, and logs dependency status.',
 
   async run(opts = {}) {
-    const now = new Date();
+    const now = (opts && opts.timestamp) ? new Date(opts.timestamp) : new Date();
     const dateStr = now.toISOString().split('T')[0];
 
     let depRows = '';

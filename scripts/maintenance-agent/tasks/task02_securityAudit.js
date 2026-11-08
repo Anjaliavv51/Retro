@@ -11,7 +11,7 @@ module.exports = {
   description: 'Audits repository security, validates gitignore exclusion patterns, and logs daily security posture.',
 
   async run(opts = {}) {
-    const now = new Date();
+    const now = (opts && opts.timestamp) ? new Date(opts.timestamp) : new Date();
     const dateStr = now.toISOString().split('T')[0];
 
     // Ensure gitignore has essential protection rules

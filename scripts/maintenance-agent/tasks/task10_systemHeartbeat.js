@@ -10,7 +10,7 @@ module.exports = {
   description: 'Records daily automation heartbeat, execution environment telemetry, and system uptime state.',
 
   async run(opts = {}) {
-    const now = new Date();
+    const now = (opts && opts.timestamp) ? new Date(opts.timestamp) : new Date();
     const dateStr = now.toISOString().split('T')[0];
 
     const heartbeatData = {

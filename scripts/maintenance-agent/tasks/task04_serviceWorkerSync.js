@@ -15,7 +15,7 @@ module.exports = {
     }
 
     let swContent = fs.readFileSync(SW_PATH, 'utf8');
-    const now = new Date();
+    const now = (opts && opts.timestamp) ? new Date(opts.timestamp) : new Date();
     const dateTag = now.toISOString().split('T')[0].replace(/-/g, '.');
     const versionRegex = /const CACHE_NAME = ['"][^'"]+['"];/;
     const newVersionLine = `const CACHE_NAME = 'retro-vintage-cache-v${dateTag}';`;

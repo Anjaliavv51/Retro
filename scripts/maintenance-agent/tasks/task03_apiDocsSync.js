@@ -10,7 +10,7 @@ module.exports = {
   description: 'Synchronizes API documentation with active Express routes and Vercel serverless endpoints.',
 
   async run(opts = {}) {
-    const now = new Date();
+    const now = (opts && opts.timestamp) ? new Date(opts.timestamp) : new Date();
     const dateStr = now.toISOString().split('T')[0];
 
     const content = `# 📖 Retro Vintage E-Commerce API Reference
