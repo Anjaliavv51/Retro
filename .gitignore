@@ -1,4 +1,4 @@
-﻿# Dependencies
+# Dependencies
 node_modules/
 **/node_modules/
 server/node_modules/
@@ -29,3 +29,9 @@ build/
 
 # Local helper scripts
 git.bat
+
+.env.local
+.env.*.local
+*.key
+*.pem
+scratch/

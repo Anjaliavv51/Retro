@@ -166,8 +166,8 @@ async function main() {
             }
           }
 
-          // Regression check
-          if (passed) {
+          // Regression check on code files
+          if (passed && (result.file.endsWith('.js') || result.file.startsWith('backend/'))) {
             try {
               runCommand('node backend/test_db_agent_endpoints.js');
             } catch (e) {
