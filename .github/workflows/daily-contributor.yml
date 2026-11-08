@@ -2,8 +2,8 @@ name: 🤖 Retro Daily Automated Contributor Agent
 
 on:
   schedule:
-    # Runs 4 times daily (04:00, 10:00, 16:00, 22:00 UTC) to ensure runs are never delayed or missed
-    - cron: '0 4,10,16,22 * * *'
+    # Runs 4 times daily (04:18, 10:18, 16:18, 22:18 UTC) at non-zero minutes to prevent GitHub queue drops
+    - cron: '18 4,10,16,22 * * *'
   workflow_dispatch:
     inputs:
       dry_run:

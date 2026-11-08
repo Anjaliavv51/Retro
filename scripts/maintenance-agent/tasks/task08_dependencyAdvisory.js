@@ -16,7 +16,7 @@ module.exports = {
 
     let depRows = '';
     if (fs.existsSync(PKG_PATH)) {
-      const pkg = JSON.parse(fs.readFileSync(PKG_PATH, 'utf8'));
+      const pkg = JSON.parse(fs.readFileSync(PKG_PATH, 'utf8').replace(/^\uFEFF/, ''));
       const deps = { ...(pkg.dependencies || {}), ...(pkg.devDependencies || {}) };
       Object.keys(deps).sort().forEach(name => {
         depRows += `| \`${name}\` | \`${deps[name]}\` | ✅ Active / Stable |\n`;

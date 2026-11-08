@@ -80,9 +80,8 @@ productSchema.index({
   tag: 'text',
 });
 
+productSchema.index({ category: 1, isAvailable: 1 });
+
 const productModel = mongoose.models.Product || mongoose.model('Product', productSchema);
-module.exports =
-// Added index for performance
-if (typeof productSchema !== 'undefined') { productSchema.index({ category: 1, isAvailable: 1 }); }
- productModel;
+module.exports = productModel;
 

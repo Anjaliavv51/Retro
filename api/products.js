@@ -1,7 +1,4 @@
-﻿module.exports =
-// Added index for performance
-if (typeof productSchema !== 'undefined') { productSchema.index({ category: 1, isAvailable: 1 }); }
- (req, res) => {
+﻿module.exports = (req, res) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
   const products = [
     { id: "prod-1", title: "Vintage Gramophone", category: "Audio", price: "$299.99", rating: 4.9, image: "image/gramophone.png", tag: "Best Seller" },
