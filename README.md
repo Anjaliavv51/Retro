@@ -3,6 +3,7 @@
 # 🕰️ RETRO
 ### *Timeless Vintage Collections & AI-Powered Retro Discovery*
 
+
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-retro--vintage--two.vercel.app-7a1d2e?style=for-the-badge&logo=vercel&logoColor=white)](https://retro-vintage-two.vercel.app)
 [![Vercel Deployment](https://img.shields.io/badge/Vercel-Deployed-black?style=for-the-badge&logo=vercel)](https://retro-vintage-two.vercel.app)
 [![GitHub license](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](LICENSE.txt)
