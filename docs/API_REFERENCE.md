@@ -1,6 +1,6 @@
 # 📖 Retro Vintage E-Commerce API Reference
 
-> Last synchronized with production routes: **2026-10-31** (2026-10-31T14:05:27.000Z)
+> Last synchronized with production routes: **2026-11-09** (2026-11-09T04:01:38.494Z)
 
 ---
 
@@ -22,7 +22,7 @@ This documentation provides a comprehensive specification of all active RESTful 
 ---
 
 ## 2. 🛍️ Storefront & Products Endpoints
-**Base Path**: `/api`
+**Base Path**: `/api` or local `http://localhost:5000`
 
 | Method | Endpoint | Description |
 | :--- | :--- | :--- |
@@ -30,3 +30,16 @@ This documentation provides a comprehensive specification of all active RESTful 
 | **GET** | `/reviews` | Retrieves recent customer reviews |
 | **POST** | `/reviews` | Submits a new user product review |
 | **GET** | `/cart` | Gets session shopping cart contents |
+
+---
+
+## 3. 🔐 Authentication & Session
+| Method | Endpoint | Description |
+| :--- | :--- | :--- |
+| **POST** | `/login` | User authentication and session token issuance |
+| **POST** | `/signup` | New vintage customer registration |
+| **GET** | `/logout` | Invalidates active user session |
+
+---
+
+*Automated sync managed by Retro Daily Maintenance Agent.*
