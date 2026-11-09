@@ -1,4 +1,4 @@
-﻿let compression;
+let compression;
 try {
   compression = require('compression');
 } catch (e) {

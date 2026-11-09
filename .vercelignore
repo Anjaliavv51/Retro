@@ -1,8 +1,7 @@
 venv
-python
 requirements.txt
 docker
-backend
 server
+backend/node_modules
 *.bat
 *.log

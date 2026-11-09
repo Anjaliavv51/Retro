@@ -1,5 +1,22 @@
-const { processDbAgentQuery, SCHEMA_CATALOG } = require('../backend/agent/dbAgent.js');
-const { defaultProducts, defaultReviews, defaultUsers } = require('../backend/config/seedData.js');
+let processDbAgentQuery, SCHEMA_CATALOG;
+let defaultProducts = [], defaultReviews = [], defaultUsers = [];
+
+try {
+  const dbAgentModule = require('../backend/agent/dbAgent.js');
+  processDbAgentQuery = dbAgentModule.processDbAgentQuery;
+  SCHEMA_CATALOG = dbAgentModule.SCHEMA_CATALOG;
+} catch (e) {
+  console.warn('[Vercel db-agent] DB agent module load fallback:', e.message);
+}
+
+try {
+  const seedModule = require('../backend/config/seedData.js');
+  defaultProducts = seedModule.defaultProducts || [];
+  defaultReviews = seedModule.defaultReviews || [];
+  defaultUsers = seedModule.defaultUsers || [];
+} catch (e) {
+  console.warn('[Vercel db-agent] Seed data module load fallback:', e.message);
+}
 
 module.exports = async (req, res) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
