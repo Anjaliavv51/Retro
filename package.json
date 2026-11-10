@@ -8,7 +8,8 @@
                     "server":  "node server/server.js",
                     "backend":  "node backend/index.js",
                     "test:db-agent":  "node backend/test_db_agent_endpoints.js",
-                    "agent:daily":  "node scripts/maintenance-agent/runner.js",
+                    "agent:daily":  "node scripts/maintenance-agent/runner.js --no-branch",
+                    "agent:branch":  "node scripts/maintenance-agent/runner.js",
                     "agent:dry-run":  "node scripts/maintenance-agent/runner.js --dry-run"
                 },
     "repository":  {
